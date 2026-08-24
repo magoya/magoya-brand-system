@@ -70,3 +70,57 @@
 3. Los tres números de E14 siguen sin fuente. La disidencia de negocio no se puede resolver con dato, solo con preferencia.
 
 **Corrección de cifra:** son 344 slots en total, de los cuales 339 son de texto con límite y 5 son de gráfico/tabla (sin límite de caracteres por diseño).
+
+## G1 — Evidencia · prueba a ciegas B (material crudo real: Master Script v6)
+
+Una IA con **solo** `https://brand.magoya.com/ai/claude.md` y el material de la CEO. Declaró sus
+fuentes: solo `brand.magoya.com` + el checklist de GitHub. Tenía skills y memoria local a mano y
+**declaró no haberlas abierto** — la corrida es válida.
+
+### Lo que funcionó (importante: el reencuadre de G0 ya funciona a medias)
+
+| # | Hallazgo | Tipo | Confianza |
+|---|---|---|---|
+| 35 | El flujo copiá-pegá funciona de verdad: `selector.json → templates/index.json → <ID>.txt` es un camino sin ambigüedad, y el `max_caracteres_aprox` por slot le permitió validar cada texto antes de renderizar. 0 desbordes, 0 imágenes rotas, 0 hex fuera de tokens, geometría intacta | E | alta |
+| 36 | **El aviso anti-resumen se activó en la vida real**: su primer fetch devolvió exactamente el resumen sin links que el aviso anticipa. La mitigación de la v1.5 era necesaria y sirvió | E | alta |
+| 37 | **Declaró los huecos en vez de rellenar**: marcó las 5 métricas de la CEO como no verificables, **se negó a usar el 95% de retención** (pendiente en `facts.json`), dejó `[PENDIENTE]`/`[XX]` en los casos, y detectó que "25 organizaciones" **contradice** los 17 clientes aprobados. También reescribió el título más débil por su cuenta | E | alta |
+| 38 | Línea de base de declaración de huecos (la instrumentación que pedía el analista): **11 bloques declarados** en una pasada, 7 de dato/contenido y 4 de bloqueo del sistema | E | alta |
+
+### Contradicciones del spec — verificadas por mí una por una
+
+| # | Contradicción | Verificación | Tipo |
+|---|---|---|---|
+| 39 | `constraints.json` exige "exactamente un golpe de lima por slide", pero **M2, L1, C1, A1, E2 y M1 tienen CERO lima**. Las plantillas oficiales no pueden cumplir su propio constraint sin tocar geometría. Y el checklist #5 lo perdona ("falla si hay dos o más"): los dos documentos no dicen lo mismo | `grep` de lima en las 6 plantillas = 0 | E |
+| 40 | `selector.json` dice que M3 tiene **CUATRO** pasos y "llená los cuatro, no borres ninguno"; `templates/index.json` dice "**Tres** próximos pasos concretos" | confirmado en ambos archivos | E |
+| 41 | Checklist #1 (cualquier hex de `tokens.json` es válido) y #2 (prohibido todo hue 20–65° salvo `#FFC67B`) no pueden ser ciertos a la vez: `tokens.json` incluye `#E0A33A`, **hue 38°** | calculado: 38.0° | E |
+| 42 | El manifiesto tenía **239** archivos y se publicaba **247** en 6 lugares. Causado por mi propio cambio de bajar `assets/refs` (que eran 404). El validador no lo detectó porque cruzaba estructura, no prosa | corregido + chequeo nuevo en `validar.py` | E |
+| 43 | La portada M2 es prácticamente 100% verde profundo y el checklist #6 falla la pieza 100% verde. El chip de M2 viene en sentence case y el checklist #14 lo falla; corregirlo pide tracking, que es tipografía bloqueada. **Sin salida dentro de las reglas** | reportado, no re-verificado | E |
+| 44 | `constraints.json` dice que ningún texto cruza el margen interior del 7% (92.5cqw), pero las cajas de B3 terminan en 94.5cqw y las de G1 en 93.1cqw | medido en navegador por el agente | E |
+| 45 | `fondos_permitidos` de slides nombra `#133825`, pero M2 usa `#0C2117`. Los dos están en tokens | reportado | E |
+
+### Módulos que faltan — confirma y amplía el hallazgo 32
+
+| # | Hallazgo | Tipo |
+|---|---|---|
+| 46 | **No hay módulo para 3 pilares**, que es un beat clásico de deck comercial: E2 pide 6 ítems en 2 columnas, B1 tiene 3 pero está documentado para "los tres modelos de trabajo". Tuvo que elegir contra el selector y declararlo | E |
+| 47 | **Y repurposar un módulo trae un defecto invisible**: el golpe de lima de B1 está en la card del medio, "el modelo que estás proponiendo". Usado para pilares, eso destaca **Confidence sin ningún motivo semántico**, y no se puede mover porque es geometría | E |
+| 48 | Tampoco hay módulo para **5 métricas** (C1 tope 4, C4 son 3 — y el Master Script trae 5) ni para **4 casos**: G1 y G2 traen logos de cliente `data-locked`, así que el 3er y 4to caso exigen romper un lock. Paró, entregó 2 y documentó el bloqueo en el HTML | E |
+| 49 | Dos pedidos de la CEO son **imposibles dentro del sistema** y no hay dónde leerlo antes de intentarlo: "métricas interactivas" (las plantillas son HTML posicionado con salida a pptx) y "dark mode preferido" (`constraints.json` limita fondos a blanco, sage y `#133825` solo en apertura/cierre) | E |
+
+### Lo que tuvo que asumir porque no está escrito
+
+| # | Hueco | Tipo |
+|---|---|---|
+| 50 | Desde qué número arranca la numeración de páginas: el starter dice "correlativo en 2 dígitos desde la primera slide de contenido" y no dice desde cuál | E |
+| 51 | El idioma. Nunca se dice quién es el destinatario; asumió inglés por `BRAND.md` | E |
+| 52 | **Si la CEO cuenta como fuente aprobada.** `facts.json` dice "lo que no está acá NO existe" y a la vez "si falta un dato, pedíselo al usuario". La CEO *es* la fuente última, pero sus números llegaron de segunda mano y uno contradice un dato aprobado. No supo si dejar la slide marcada o bloquearla entera | E |
+| 53 | Repurposó los slots `t5/t8/t11` de B1 (que son "Learn more ↗") como línea de prueba por pilar. Respeta `max_caracteres` y la regla de voz, pero cambió la intención del slot por decisión propia | E |
+
+**Las dos veces que no supo cómo seguir** (son huecos de spec, no del material): la slide de 5 métricas
+con una que contradice un dato aprobado, y el conflicto "hacé 4 casos" vs. "no toques los `data-locked`".
+
+### El hallazgo que ordena G2
+
+**El validador determinístico da 0 fallas y al mismo tiempo hay 7 contradicciones reales del spec.**
+`validar.py` cruza estructura (¿resuelven los links, tienen límite los slots) y no **consistencia entre
+reglas en prosa de distintos documentos**. La prueba a ciegas es el único instrumento que las encontró.
