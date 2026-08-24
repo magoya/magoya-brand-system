@@ -193,7 +193,7 @@
   {
    "id": "A5",
    "nombre": "Título + ícono semántico grande",
-   "cuando_usarlo": "abrir un capítulo temático. El ícono",
+   "cuando_usarlo": "abrir un capítulo temático. El ícono representa el concepto del título (satélite = teledetección), no decora. Uno solo, del set agro, en negro sobre claro.",
    "url": "https://brand.magoya.com/ai/templates/A5.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/A5.txt",
    "slots": [
@@ -1197,7 +1197,7 @@
   {
    "id": "E3",
    "nombre": "Tabla comparativa de scope — Lean vs Recommended",
-   "cuando_usarlo": "primera de las dos slides de escenarios de inversión:",
+   "cuando_usarlo": "primera de las dos slides de escenarios de inversión: quién está en el equipo en cada opción. La columna recomendada va en sage y su total en lima.",
    "url": "https://brand.magoya.com/ai/templates/E3.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/E3.txt",
    "slots": [
@@ -1232,7 +1232,7 @@
   {
    "id": "E4",
    "nombre": "Escenarios de inversión — timing + números",
-   "cuando_usarlo": "segunda slide de escenarios:",
+   "cuando_usarlo": "segunda slide de escenarios: cuánto dura y cuánto cuesta cada opción. La recomendada va en verde profundo con el total en lima. Nunca mezclar scope y plata en la misma slide.",
    "url": "https://brand.magoya.com/ai/templates/E4.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/E4.txt",
    "slots": [
@@ -1842,7 +1842,7 @@
   {
    "id": "F4",
    "nombre": "Artefactos de proceso (wireframe · prototipo · output de discovery)",
-   "cuando_usarlo": "cuando hay que mostrar",
+   "cuando_usarlo": "cuando hay que mostrar cómo se hace producto, no contarlo. Reemplazá los bloques grises por capturas reales del proyecto; el marco y el rótulo se quedan igual.",
    "url": "https://brand.magoya.com/ai/templates/F4.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/F4.txt",
    "slots": [
@@ -1886,7 +1886,7 @@
   {
    "id": "G1",
    "nombre": "Caso estructurado — challenge · team · adaptation · results",
-   "cuando_usarlo": "el caso de éxito canónico. Los chips dejan visibles el",
+   "cuando_usarlo": "el caso de éxito canónico. Los chips dejan visibles el company challenge y el urgent need; las cuatro columnas siempre en el mismo orden y la de resultados con métricas, no adjetivos.",
    "url": "https://brand.magoya.com/ai/templates/G1.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/G1.txt",
    "slots": [
@@ -2255,7 +2255,7 @@
   {
    "id": "I1",
    "nombre": "Personaje + display al palo",
-   "cuando_usarlo": "statement conceptual sin foto. El personaje se recorta contra el borde derecho, ocupa ~47% del ancho y va sobre lienzo plano —",
+   "cuando_usarlo": "statement conceptual sin foto. El personaje se recorta contra el borde derecho, ocupa ~47% del ancho y va sobre lienzo plano — nunca sobre foto, y no convive con iconografía.",
    "url": "https://brand.magoya.com/ai/templates/I1.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/I1.txt",
    "slots": [
@@ -2352,7 +2352,7 @@
   {
    "id": "J2",
    "nombre": "Quote sobre foto B&N + scrim",
-   "cuando_usarlo": "cuando el testimonio tiene que poner cara. Retrato en B&amp;N a sangre, scrim verde profundo y la frase que carga el sentido en lima.",
+   "cuando_usarlo": "cuando el testimonio tiene que poner cara. Retrato en B&N a sangre, scrim verde profundo y la frase que carga el sentido en lima.",
    "url": "https://brand.magoya.com/ai/templates/J2.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/J2.txt",
    "slots": [
@@ -2389,7 +2389,7 @@
   {
    "id": "J3",
    "nombre": "Equipo — retratos B&N + rol",
-   "cuando_usarlo": "presentar el pod concreto de la propuesta, con nombre y rol reales. Los retratos van siempre en B&amp;N.",
+   "cuando_usarlo": "presentar el pod concreto de la propuesta, con nombre y rol reales. Los retratos van siempre en B&N. Pendiente: Camila López Colmano y Varina Baldi ya tienen su retrato real (cami-agtech-bw.jpg, varu-baldi-bw.jpg); Francisco Facal todavía repite varu-ceo-bw.jpg — falta su sesión real.",
    "url": "https://brand.magoya.com/ai/templates/J3.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/J3.txt",
    "slots": [
@@ -2461,7 +2461,7 @@
   {
    "id": "K1",
    "nombre": "Stack tecnológico por capa (logos reales en gris)",
-   "cuando_usarlo": "validación técnica frente a un CTO. Logos reales de",
+   "cuando_usarlo": "validación técnica frente a un CTO. Logos reales de assets/logos/partners/, siempre en gris y agrupados por capa: sin logo, la capa no se menciona.",
    "url": "https://brand.magoya.com/ai/templates/K1.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/K1.txt",
    "slots": [
@@ -2519,7 +2519,7 @@
   {
    "id": "K2",
    "nombre": "Capacidades de IA (logos de modelos + qué hacemos con ellos)",
-   "cuando_usarlo": "cuando la conversación entra en IA y hay que ser explícito. Cada fila nombra una capacidad concreta, no \"AI-powered\". Los logos de",
+   "cuando_usarlo": "cuando la conversación entra en IA y hay que ser explícito. Cada fila nombra una capacidad concreta, no \"AI-powered\". Los logos de assets/studio/icons/ai/ vienen monocromos: van en negro sobre claro.",
    "url": "https://brand.magoya.com/ai/templates/K2.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/K2.txt",
    "slots": [
@@ -2598,7 +2598,7 @@
   {
    "id": "L1",
    "nombre": "Logo wall de clientes (12 logos, grilla pareja)",
-   "cuando_usarlo": "prueba social después de la portada o antes del cierre. Logos",
+   "cuando_usarlo": "prueba social después de la portada o antes del cierre. Logos siempre reales y en gris, grilla pareja de 6×2. Jamás placeholders ni logos a color.",
    "url": "https://brand.magoya.com/ai/templates/L1.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/L1.txt",
    "slots": [

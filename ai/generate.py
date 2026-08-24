@@ -33,9 +33,19 @@ for fid in 'ABCDEFGHIJKLM':
     m = re.search(rf'id="fam-{fid.lower()}"[^>]*><h2>([^<]+)</h2><span class="sub">([^<]+)</span>', s)
     if m: fams.append({'id': fid, 'nombre': m.group(1).replace('&amp;','&'), 'que_cubre': m.group(2)})
 mods = []
-for m in re.finditer(r'data-mod="([A-M]\d+)".*?<span class="nm">([^<]+)</span>.*?<b>Cuándo usarlo:</b>\s*([^<]+)<', s, re.S):
+def _texto(html):
+    """Saca los tags inline y deja el texto. El regex anterior cortaba en el primer
+    <b>, y 9 de 41 modulos perdian el cuando_usarlo a mitad de oracion — L1 se quedaba
+    con 61 de 146 caracteres y perdia justo 'logos siempre reales y en gris'."""
+    t = re.sub(r'<[^>]+>', '', html)
+    t = (t.replace('&amp;', '&').replace('&lt;', '<').replace('&gt;', '>')
+          .replace('&nbsp;', ' ').replace('&times;', '×').replace('&middot;', '·'))
+    return ' '.join(t.split())
+
+# el cuando_usarlo termina donde cierra su <p>: hasta ahi se lee todo, tags incluidos
+for m in re.finditer(r'data-mod="([A-M]\d+)".*?<span class="nm">([^<]+)</span>.*?<b>Cuándo usarlo:</b>(.*?)</p>', s, re.S):
     mods.append({'id': m.group(1), 'nombre': m.group(2).replace('&amp;','&'),
-                 'cuando_usarlo': ' '.join(m.group(3).split())})
+                 'cuando_usarlo': _texto(m.group(3))})
 
 # ---------- 2b. layouts exactos: extraer el DSL del exportador ----------
 i0 = s.find('var C=')

@@ -31,13 +31,13 @@
   {
    "id": "K1",
    "nombre": "Stack tecnológico por capa (logos reales en gris)",
-   "cuando_usarlo": "validación técnica frente a un CTO. Logos reales de",
+   "cuando_usarlo": "validación técnica frente a un CTO. Logos reales de assets/logos/partners/, siempre en gris y agrupados por capa: sin logo, la capa no se menciona.",
    "layout_src": "SPEC.K1=function(p){\n  var s=[bg(C.sage)].concat(chrome(p),[\n    T('The stack we work in',{x:7.5,y:11.5,w:50,h:7,s:4.2,b:true,tight:true})],\n    chip(65.5,12,'No new vendor to onboard',C.em7,27));\n  var cols=[['Product surfaces',['react.svg','nextjs.svg']],\n            ['Services & data',['nodejs.svg','django.svg','postgresql.svg','mongodb.svg']],\n            ['Cloud',['aws.svg','google-cloud.svg','azure.svg']],\n            ['Delivery & ML ops',['docker.svg','kubernetes.svg','terraform.svg','jupyter.svg']]];\n  cols.forEach(function(c,i){var x=7.5+i*21.8,y=21,w=20.2,h=26;\n    s.push(card(x,y,w,h,C.w,C.hair));\n    s.push(T(c[0].toUpperCase(),{x:x+1.6,y:y+2,w:w-3.2,h:3,s:1.15,b:true,c:C.g600,cs:1,lh:1.2}));\n    s=s.concat(logoRow(c[1].map(function(f){return PT+f;}),x+1.6,y+7,w-3.2,3.6,2,1.2,1.6));});\n  return s;};"
   },
   {
    "id": "K2",
    "nombre": "Capacidades de IA (logos de modelos + qué hacemos con ellos)",
-   "cuando_usarlo": "cuando la conversación entra en IA y hay que ser explícito. Cada fila nombra una capacidad concreta, no \"AI-powered\". Los logos de",
+   "cuando_usarlo": "cuando la conversación entra en IA y hay que ser explícito. Cada fila nombra una capacidad concreta, no \"AI-powered\". Los logos de assets/studio/icons/ai/ vienen monocromos: van en negro sobre claro.",
    "layout_src": "SPEC.K2=function(p){\n  var s=[bg(C.w)].concat(chrome(p),[\n    T('What we ship with AI',{x:7.5,y:11.5,w:50,h:7,s:4.2,b:true,tight:true}),rule(82.5,13.5,10)]);\n  var d=[['openai.svg','Agronomic copilots',\"Conversational assistants over the client's own agronomy, in WhatsApp and in-product.\"],\n         ['anthropic.svg','Retrieval over field data','RAG on trial results, labels and protocols — answers with the source attached.'],\n         ['huggingface.svg','Vision on crop imagery','Disease and weed detection from phone, drone and satellite captures.'],\n         ['ollama.svg','On-premise inference','Local models when the data cannot leave the client’s environment.']];\n  d.forEach(function(c,i){var x=7.5+(i%2)*44,y=22+Math.floor(i/2)*13.5;\n    s.push(IMG({src:AI+c[0],x:x,y:y,w:2.8,h:2.8,fit:'contain'}));\n    s.push(T(c[1],{x:x+4.2,y:y-.2,w:36,h:3,s:1.7,b:true,tight:true}));\n    s.push(T(c[2],{x:x+4.2,y:y+3,w:36,h:7,s:1.3,c:C.g600,lh:1.35}));});\n  return s;};\n\n/* --- L · clientes --- */;"
   }
  ],

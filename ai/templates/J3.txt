@@ -16,7 +16,7 @@
 </style>
 <!--
 PLANTILLA OFICIAL MAGOYA — módulo J3 (Equipo — retratos B&amp;N + rol)
-Cuándo usarlo: presentar el pod concreto de la propuesta, con nombre y rol reales. Los retratos van siempre en B&amp;amp;N.
+Cuándo usarlo: presentar el pod concreto de la propuesta, con nombre y rol reales. Los retratos van siempre en B&amp;N. Pendiente: Camila López Colmano y Varina Baldi ya tienen su retrato real (cami-agtech-bw.jpg, varu-baldi-bw.jpg); Francisco Facal todavía repite varu-ceo-bw.jpg — falta su sesión real.
 
 ATENCION — TODO EL TEXTO Y LAS CIFRAS DE ESTA PLANTILLA SON EJEMPLO.
 Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos

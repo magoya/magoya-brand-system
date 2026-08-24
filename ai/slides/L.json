@@ -31,7 +31,7 @@
   {
    "id": "L1",
    "nombre": "Logo wall de clientes (12 logos, grilla pareja)",
-   "cuando_usarlo": "prueba social después de la portada o antes del cierre. Logos",
+   "cuando_usarlo": "prueba social después de la portada o antes del cierre. Logos siempre reales y en gris, grilla pareja de 6×2. Jamás placeholders ni logos a color.",
    "layout_src": "SPEC.L1=function(p){\n  var s=[bg(C.w)].concat(chrome(p),[\n    T('Nine years inside agribusiness',{x:7.5,y:11.5,w:46,h:11,s:4.2,b:true,tight:true,lh:1.08}),\n    T('5+',{x:70,y:12,w:22.5,h:5,s:3.4,b:true,tight:true,al:'right'}),\n    T('years of average relationship',{x:66,y:16.6,w:26.5,h:3,s:1.4,c:C.g600,al:'right'})]);\n  var names=['apeel-sciences','bunge','corteva','syngenta','climate-fieldview','precision-planting',\n             'bayer-crop-science','indigo','gdm','biome-makers','sound-agriculture','xarvio'];\n  return s.concat(logoRow(names.map(function(n){return CL+n+'.svg';}),7.5,26,85,5,6,2.8,7));};\n\n/* --- M · portada & cierre --- */;"
   }
  ],

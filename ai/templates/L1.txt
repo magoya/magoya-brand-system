@@ -16,7 +16,7 @@
 </style>
 <!--
 PLANTILLA OFICIAL MAGOYA — módulo L1 (Logo wall de clientes (12 logos, grilla pareja))
-Cuándo usarlo: prueba social después de la portada o antes del cierre. Logos
+Cuándo usarlo: prueba social después de la portada o antes del cierre. Logos siempre reales y en gris, grilla pareja de 6×2. Jamás placeholders ni logos a color.
 
 ATENCION — TODO EL TEXTO Y LAS CIFRAS DE ESTA PLANTILLA SON EJEMPLO.
 Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos

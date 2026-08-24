@@ -16,7 +16,7 @@
 </style>
 <!--
 PLANTILLA OFICIAL MAGOYA — módulo I1 (Personaje + display al palo)
-Cuándo usarlo: statement conceptual sin foto. El personaje se recorta contra el borde derecho, ocupa ~47% del ancho y va sobre lienzo plano —
+Cuándo usarlo: statement conceptual sin foto. El personaje se recorta contra el borde derecho, ocupa ~47% del ancho y va sobre lienzo plano — nunca sobre foto, y no convive con iconografía.
 
 ATENCION — TODO EL TEXTO Y LAS CIFRAS DE ESTA PLANTILLA SON EJEMPLO.
 Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos

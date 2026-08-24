@@ -16,7 +16,7 @@
 </style>
 <!--
 PLANTILLA OFICIAL MAGOYA — módulo J2 (Quote sobre foto B&amp;N + scrim)
-Cuándo usarlo: cuando el testimonio tiene que poner cara. Retrato en B&amp;amp;N a sangre, scrim verde profundo y la frase que carga el sentido en lima.
+Cuándo usarlo: cuando el testimonio tiene que poner cara. Retrato en B&amp;N a sangre, scrim verde profundo y la frase que carga el sentido en lima.
 
 ATENCION — TODO EL TEXTO Y LAS CIFRAS DE ESTA PLANTILLA SON EJEMPLO.
 Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos

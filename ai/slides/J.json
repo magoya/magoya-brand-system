@@ -37,13 +37,13 @@
   {
    "id": "J2",
    "nombre": "Quote sobre foto B&N + scrim",
-   "cuando_usarlo": "cuando el testimonio tiene que poner cara. Retrato en B&amp;N a sangre, scrim verde profundo y la frase que carga el sentido en lima.",
+   "cuando_usarlo": "cuando el testimonio tiene que poner cara. Retrato en B&N a sangre, scrim verde profundo y la frase que carga el sentido en lima.",
    "layout_src": "SPEC.J2=function(p){return [bg(C.g950),\n  IMG({src:PH+'cami-agtech-bw.jpg',x:0,y:0,w:100,h:56.25,fit:'cover',gray:true}),\n  R({x:0,y:0,w:100,h:56.25,fill:C.g950,alpha:30})].concat(chrome(p,true),[\n  T('“They did not join to deliver a project. They joined to own the outcome with us.”',\n    {x:7.5,y:28,w:60,h:14,s:2.6,b:true,c:C.cr50,lh:1.38}),\n  R({x:7.5,y:42.6,w:24,h:.7,fill:C.lime,radius:.35}),\n  T('Camila López Colmano',{x:7.5,y:45,w:40,h:3,s:1.7,b:true,c:C.cr50}),\n  T('AgTech Expert',{x:7.5,y:47.8,w:40,h:3,s:1.45,c:C.cr300})]);};"
   },
   {
    "id": "J3",
    "nombre": "Equipo — retratos B&N + rol",
-   "cuando_usarlo": "presentar el pod concreto de la propuesta, con nombre y rol reales. Los retratos van siempre en B&amp;N.",
+   "cuando_usarlo": "presentar el pod concreto de la propuesta, con nombre y rol reales. Los retratos van siempre en B&N. Pendiente: Camila López Colmano y Varina Baldi ya tienen su retrato real (cami-agtech-bw.jpg, varu-baldi-bw.jpg); Francisco Facal todavía repite varu-ceo-bw.jpg — falta su sesión real.",
    "layout_src": "SPEC.J3=function(p){\n  var s=[bg(C.w)].concat(chrome(p),[\n    T('The team you actually get',{x:7.5,y:11.5,w:44,h:8,s:4.2,b:true,tight:true}),\n    T('Named people, not a bench. The pod grows with agronomy and QA from the same team.',\n      {x:66,y:12,w:26,h:7,s:1.45,c:C.g600,lh:1.35})]);\n  var t=[['Varina Baldi','Founder & CEO','varu-baldi-bw.jpg'],['Francisco Facal','Solutions Architecture','varu-ceo-bw.jpg'],\n         ['Camila López Colmano','AgTech Expert','cami-agtech-bw.jpg']];\n  t.forEach(function(c,i){var x=7.5+i*29.5,w=26.9;\n    s.push(IMG({src:PH+c[2],x:x,y:18,w:w,h:26,fit:'cover',gray:true}));\n    s.push(T(c[0],{x:x,y:44.8,w:w,h:3,s:1.6,b:true,tight:true}));\n    s.push(T(c[1],{x:x,y:47.7,w:w,h:3,s:1.3,c:C.g600}));});\n  return s;};\n\n/* --- K · tecnología & IA --- */;"
   }
  ],

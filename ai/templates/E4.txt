@@ -16,7 +16,7 @@
 </style>
 <!--
 PLANTILLA OFICIAL MAGOYA — módulo E4 (Escenarios de inversión — timing + números)
-Cuándo usarlo: segunda slide de escenarios:
+Cuándo usarlo: segunda slide de escenarios: cuánto dura y cuánto cuesta cada opción. La recomendada va en verde profundo con el total en lima. Nunca mezclar scope y plata en la misma slide.
 
 ATENCION — TODO EL TEXTO Y LAS CIFRAS DE ESTA PLANTILLA SON EJEMPLO.
 Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos

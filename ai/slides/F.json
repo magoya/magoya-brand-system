@@ -49,7 +49,7 @@
   {
    "id": "F4",
    "nombre": "Artefactos de proceso (wireframe · prototipo · output de discovery)",
-   "cuando_usarlo": "cuando hay que mostrar",
+   "cuando_usarlo": "cuando hay que mostrar cómo se hace producto, no contarlo. Reemplazá los bloques grises por capturas reales del proyecto; el marco y el rótulo se quedan igual.",
    "layout_src": "SPEC.F4=function(p){\n  var s=[bg(C.sage)].concat(chrome(p),[T('What comes out of a discovery',{x:7.5,y:11.5,w:70,h:7,s:4.2,b:true,tight:true})]);\n  var caps=['01 · Wireframes','02 · Clickable prototype','03 · Prioritised backlog'];\n  for(var i=0;i<3;i++){var x=7.5+i*29.5,y=21,w=27,h=28.2;\n    s.push(card(x,y,w,h,C.w,C.hair));\n    s.push(R({x:x,y:y,w:w,h:2.4,fill:C.g100}));\n    for(var k=0;k<3;k++)s.push(R({x:x+1.2+k*1.2,y:y+.9,w:.65,h:.65,fill:C.g300,radius:.32}));\n    if(i===0){s.push(R({x:x+1.6,y:y+4,w:16,h:1.7,fill:C.g200,radius:.3}));\n      s.push(R({x:x+1.6,y:y+6.6,w:w-3.2,h:5.4,fill:C.g100,radius:.3}));\n      s.push(R({x:x+1.6,y:y+13,w:19,h:.9,fill:C.g200,radius:.3}));\n      s.push(R({x:x+1.6,y:y+14.6,w:10,h:.9,fill:C.g200,radius:.3}));}\n    else if(i===1){s.push(R({x:x+1.6,y:y+4,w:16,h:1.7,fill:C.g900,radius:.3}));\n      s.push(R({x:x+1.6,y:y+6.6,w:(w-4)/2,h:5.4,fill:C.g100,radius:.3}));\n      s.push(R({x:x+2.4+(w-4)/2,y:y+6.6,w:(w-4)/2,h:5.4,fill:C.lime,radius:.3}));\n      s.push(R({x:x+1.6,y:y+13,w:19,h:.9,fill:C.g200,radius:.3}));}\n    else{s.push(R({x:x+1.6,y:y+4,w:16,h:1.7,fill:C.g200,radius:.3}));\n      [0,1,2,3,4].forEach(function(k){s.push(R({x:x+1.6,y:y+6.8+k*2,w:(k%2?18:w-3.2),h:.9,fill:C.g200,radius:.3}));});}\n    s.push(T(caps[i],{x:x+1.6,y:y+h-3.4,w:w-3.2,h:2.4,s:1.15,b:true,c:C.g600,cs:1}));}\n  return s;};\n\n/* --- G · casos de éxito --- */;"
   }
  ],

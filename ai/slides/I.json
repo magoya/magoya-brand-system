@@ -31,7 +31,7 @@
   {
    "id": "I1",
    "nombre": "Personaje + display al palo",
-   "cuando_usarlo": "statement conceptual sin foto. El personaje se recorta contra el borde derecho, ocupa ~47% del ancho y va sobre lienzo plano —",
+   "cuando_usarlo": "statement conceptual sin foto. El personaje se recorta contra el borde derecho, ocupa ~47% del ancho y va sobre lienzo plano — nunca sobre foto, y no convive con iconografía.",
    "layout_src": "SPEC.I1=function(p){return [bg(C.w),\n  IMG({src:A+'illus/char-jumping.svg',x:57,y:7.5,w:48.7,h:50})].concat(chrome(p),[\n  T('CLARITY · CONFIDENCE · COMMITMENT',{x:7.5,y:26,w:48,h:2.6,s:1.5,b:true,c:C.em7,cs:1.8}),\n  T('Complexity in,\\na clear plan out.',{x:7.5,y:30.5,w:48,h:16,s:5.2,b:true,tight:true,lh:1.05})]);};"
   },
   {

@@ -16,7 +16,7 @@
 </style>
 <!--
 PLANTILLA OFICIAL MAGOYA — módulo F4 (Artefactos de proceso (wireframe · prototipo · output de discovery))
-Cuándo usarlo: cuando hay que mostrar
+Cuándo usarlo: cuando hay que mostrar cómo se hace producto, no contarlo. Reemplazá los bloques grises por capturas reales del proyecto; el marco y el rótulo se quedan igual.
 
 ATENCION — TODO EL TEXTO Y LAS CIFRAS DE ESTA PLANTILLA SON EJEMPLO.
 Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos

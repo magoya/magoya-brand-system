@@ -16,7 +16,7 @@
 </style>
 <!--
 PLANTILLA OFICIAL MAGOYA — módulo K1 (Stack tecnológico por capa (logos reales en gris))
-Cuándo usarlo: validación técnica frente a un CTO. Logos reales de
+Cuándo usarlo: validación técnica frente a un CTO. Logos reales de assets/logos/partners/, siempre en gris y agrupados por capa: sin logo, la capa no se menciona.
 
 ATENCION — TODO EL TEXTO Y LAS CIFRAS DE ESTA PLANTILLA SON EJEMPLO.
 Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos

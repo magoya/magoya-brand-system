@@ -55,7 +55,7 @@
   {
    "id": "A5",
    "nombre": "Título + ícono semántico grande",
-   "cuando_usarlo": "abrir un capítulo temático. El ícono",
+   "cuando_usarlo": "abrir un capítulo temático. El ícono representa el concepto del título (satélite = teledetección), no decora. Uno solo, del set agro, en negro sobre claro.",
    "layout_src": "SPEC.A5=function(p){return [bg(C.sage)].concat(chrome(p),[\n  T('REMOTE SENSING',{x:7.5,y:13,w:50,h:2.6,s:1.5,b:true,c:C.em7,cs:1.8}),\n  T('Satellite data that reaches the agronomist, not the archive.',{x:7.5,y:17.5,w:50,h:18,s:4.8,b:true,tight:true,lh:1.08}),\n  rule(7.5,37.5,14),\n  IMG({src:AG+'satelite.svg',x:63.5,y:15,w:26,h:26,tint:'#161616'})]);};\n\n/* --- B · servicios --- */;"
   }
  ],

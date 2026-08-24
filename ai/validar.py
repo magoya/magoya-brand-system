@@ -32,11 +32,16 @@ def check_selector():
     sel = cargar('ai/selector.json')
     idx = cargar('ai/templates/index.json')
     ids = {m['id'] for m in idx['modulos']}
-    usados = set()
+    # OJO: 'usa' es el camino primario y 'alternativa' viene condicionada a criterio de
+    # diseño ("si hay foto potente"). Contarlas juntas ocultaba que 10 modulos solo se
+    # alcanzan por criterio, que es justo lo que el selector promete evitar.
+    primarios, alternos = set(), set()
     for fila in sel['decision']:
-        for campo in ('usa', 'alternativa'):
-            for m in re.findall(r'\b([A-M]\d{1,2})\b', str(fila.get(campo, ''))):
-                usados.add(m)
+        for m in re.findall(r'\b([A-M]\d{1,2})\b', str(fila.get('usa', ''))):
+            primarios.add(m)
+        for m in re.findall(r'\b([A-M]\d{1,2})\b', str(fila.get('alternativa', ''))):
+            alternos.add(m)
+    usados = primarios | alternos
     faltan = sorted(usados - ids)
     if faltan:
         fallas.append('selector.json apunta a módulos que no existen en templates/index.json: %s' % ', '.join(faltan))
@@ -45,8 +50,15 @@ def check_selector():
 
     sin_ruta = sorted(ids - usados)
     if sin_ruta:
-        huecos.append('%d módulos no son alcanzables desde el selector (una IA no tiene cómo elegirlos): %s'
+        fallas.append('%d módulos no son alcanzables desde el selector: %s'
                       % (len(sin_ruta), ', '.join(sin_ruta)))
+    solo_criterio = sorted(alternos - primarios)
+    if solo_criterio:
+        huecos.append('%d módulos solo se alcanzan por una cláusula "alternativa" condicionada a '
+                      'criterio de diseño, que es lo que el selector promete evitar: %s'
+                      % (len(solo_criterio), ', '.join(solo_criterio)))
+    else:
+        ok.append('selector: los %d módulos tienen camino primario' % len(primarios))
 
 
 # ─── 2. slots: todos con límite, ninguno con cifra inventada ─────────────────
@@ -244,9 +256,60 @@ def check_conteo_assets():
     else:
         ok.append('conteo de assets: %d, consistente en todas las entradas' % real)
 
+
+# ─── 10. reglas del checklist que son aritmética, no criterio ────────────────
+def check_reglas_auditables():
+    plantillas = sorted(glob.glob('ai/templates/[A-M]*.html'))
+    if not plantillas:
+        return
+
+    # #5 · golpe de lima. La plantilla es dueña de la regla (decisión de la Mesa, G2):
+    # el techo es "como máximo uno", así que lo que falla es tener DOS o más.
+    dos_o_mas = []
+    for f in plantillas:
+        n = len(re.findall(r'A2FF00', io.open(f, encoding='utf-8').read(), re.I))
+        if n > 1:
+            dos_o_mas.append('%s=%d' % (os.path.basename(f)[:-5], n))
+    if dos_o_mas:
+        fallas.append('%d plantillas tienen más de un golpe de lima (el techo es uno): %s'
+                      % (len(dos_o_mas), ', '.join(dos_o_mas)))
+    else:
+        ok.append('lima: ninguna plantilla pasa de un golpe (%d plantillas)' % len(plantillas))
+
+    # #7 · niveles tipográficos. Techo declarado por la plantilla, no por el checklist.
+    TECHO = 7
+    pasados = []
+    for f in plantillas:
+        n = len(set(re.findall(r'font-size:([0-9.]+)cqw', io.open(f, encoding='utf-8').read())))
+        if n > TECHO:
+            pasados.append('%s=%d' % (os.path.basename(f)[:-5], n))
+    if pasados:
+        fallas.append('%d plantillas pasan el techo de %d niveles tipográficos: %s'
+                      % (len(pasados), TECHO, ', '.join(pasados)))
+    else:
+        ok.append('tipografía: ninguna plantilla pasa los %d niveles' % TECHO)
+
+    # #2 · el hue prohibido necesitaba un calificador de saturación: sin él, 11 de los
+    # hexes de tokens.json (toda la familia crema) caían en el rango 20-65°.
+    import colorsys
+    tok = io.open('tokens.json', encoding='utf-8').read()
+    sospechosos = []
+    for hexs in set(re.findall(r'#([0-9A-Fa-f]{6})', tok)):
+        r, g, b = (int(hexs[i:i+2], 16) / 255 for i in (0, 2, 4))
+        h, l, s = colorsys.rgb_to_hls(r, g, b)
+        if 20 <= h * 360 <= 65 and s > 0.40:
+            sospechosos.append('#%s (hue %.0f°, sat %.0f%%)' % (hexs.upper(), h * 360, s * 100))
+    permitidos = {'#FFC67B'}
+    malos = [x for x in sospechosos if x.split()[0] not in permitidos]
+    if malos:
+        huecos.append('%d colores de tokens.json caen en el rango prohibido 20-65° con saturación '
+                      'alta y no están en la excepción: %s' % (len(malos), ', '.join(sorted(malos))))
+    else:
+        ok.append('color: ningún token saturado en el rango naranja/amarillo fuera de la excepción')
+
 for fn in (check_selector, check_slots, check_pendientes, check_cobertura,
            check_nomenclatura, check_links, check_peso, check_conteo_assets,
-           check_drift):
+           check_reglas_auditables, check_drift):
     try:
         fn()
     except Exception as e:
