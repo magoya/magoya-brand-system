@@ -124,3 +124,38 @@ con una que contradice un dato aprobado, y el conflicto "hacé 4 casos" vs. "no 
 **El validador determinístico da 0 fallas y al mismo tiempo hay 7 contradicciones reales del spec.**
 `validar.py` cruza estructura (¿resuelven los links, tienen límite los slots) y no **consistencia entre
 reglas en prosa de distintos documentos**. La prueba a ciegas es el único instrumento que las encontró.
+
+## G1 — Evidencia · prueba a ciegas A (solo la URL, sin material)
+
+Declaró fuentes: solo `brand.magoya.com` + el checklist de GitHub. Ninguna memoria local.
+
+| # | Hallazgo | Verificación mía | Tipo |
+|---|---|---|---|
+| 54 | **El límite de 3 niveles tipográficos es incumplible con las plantillas oficiales.** Conté los `font-size` distintos: **M1=4, A1=3, F2=5, L1=5, M3=7**. El chequeo #7 falla con 4+. O sea que 4 de 5 plantillas fallan el checklist oficial recién sacadas de la caja, y la regla 1 prohíbe corregirlo | confirmado, y peor de lo reportado | E |
+| 55 | **El 75/25 no se puede sostener slide por slide**: la portada M1 es una foto tapada al 70% por un scrim verde profundo. `BRAND.md` dice que la proporción es obligatoria "en todo lo que se produce" y el checklist la audita "por pieza". Asumió que se mide sobre el deck completo — **es la asunción más grande del deck y no está dicha en ninguna parte** | razonamiento verificable | E |
+| 56 | **Tres `cuando_usarlo` prometen control editorial que la geometría bloqueada niega.** A1: "la frase que carga el sentido va en lima" — A1 no tiene un solo elemento lima. B1: "el ícono en lima marca el modelo que estás proponiendo" — está hardcodeado en la card 2 y es `data-locked`. B3: "el destacado va en lima" — clavado en la celda *Data & AI*. Le costó rehacer una slide entera | coincide con el hallazgo 47, e independientemente | E |
+| 57 | **El selector parchó un bug en vez de arreglarlo**: `index.json` dice que M3 tiene tres pasos, la plantilla tiene cuatro, y `selector.json` lo corrige explícitamente. Funciona, pero quien lea solo `index.json` se equivoca | confirmado (hallazgo 40) | E |
+| 58 | **El chequeo #15 (espaciado base-4) es inauditable en slides**: la escala está en píxeles y las plantillas en `cqw`, sin factor de conversión documentado. El chequeo no se puede verificar sobre el formato al que más aplica. Lo declaró como no verificado en vez de decir que pasaba | correcto — el chequeo lo agregué yo sin resolver esto | E |
+| 59 | **La numeración de página produce un deck donde la tercera slide dice "02"**: M1 y A1 no tienen slot de número, y la regla dice "correlativo desde la primera slide de contenido". No hay forma de saber la convención real desde la documentación | confirmado (hallazgo 50) | E |
+| 60 | **El ejemplo de la plantilla oficial le enseña lo contrario al checklist**: el chip de M1 viene "Partnership proposal · 2026" en sentence case, y el chequeo #14 falla el chip en sentence case | confirmado (hallazgo 43, otra plantilla) | E |
+| 61 | **L1 no puede cumplir su propia regla**: `assets.json` pide "tamaño óptico parejo" pero L1 usa 12 cajas idénticas con `object-fit:contain`, así que el tamaño depende del aspect ratio de cada SVG — Syngenta y Bunge dominan, Bayer Crop Science y GDM quedan chicos. Se ve en el render | reportado | E |
+| 62 | **Hay slots dimensionados para un copy que la propia voz de marca prohíbe escribir**: las cards de F2 miden 28,2cqw con caption para 11 líneas, y `BRAND.md` pide oraciones cortas. Con voz Magoya real (3-4 líneas) queda un tercio de card vacío. Alargó a 4-5 líneas: "relleno con disfraz". Mismo problema en B3 | reportado | E |
+| 63 | **El checklist tiene 16 filas pero se titula "Quince chequeos"**, y `constraints.json` (×1), `metodo.md` (×2) y `llms-full.txt` (×4) dicen "15 chequeos". Peor: **la fila 16 está separada por una línea vacía, o sea fuera de la tabla markdown** — no renderiza como fila. Es mi edición | confirmado | E |
+| 64 | **"17 clientes" es el número de logos, no de clientes**: los pendientes de `BRAND.md` mencionan que faltan los vectoriales de ProducePay, HabiTerre e IntelinAir — tres clientes reales sin logo. La cifra aprobada probablemente subcuenta | confirmado en BRAND.md | E |
+| 65 | El `cuando_usarlo` de L1 en `index.json` **está cortado a la mitad**: termina en "…o antes del cierre. Logos" | confirmado literal | E |
+| 66 | **Publicar como Artifact rompe la pieza en silencio y no está documentado**: el CSP del artifact bloquea `brand.magoya.com`, así que un deck pegado tal cual sale sin foto de portada, sin wordmark y sin los 12 logos; y el artifact se publica sin `<head>` propio, así que se pierde el `meta charset` y el punto medio del chip sale mojibake. Propone un `ai/presets/claude-artifact.md` de dos líneas | reportado, mecanismo verosímil | E |
+| 67 | El único lugar donde **no supo cómo seguir** fue el idioma: `BRAND.md` reparte español/inglés/portugués por tipo de uso, pero no dice en qué idioma va un deck comercial. Es la única decisión que tomó sin respaldo, y la que más cambia la pieza | E |
+
+### Distinción crítica que salió del cruce entre las dos pruebas
+
+| # | Hallazgo | Tipo |
+|---|---|---|
+| 68 | **Declarar el hueco no es lo mismo que negarse a entregarlo.** La prueba B marcó las 5 métricas de la CEO como no verificables **en su reporte** pero las dejó escritas en la slide; la prueba A, que leyó ese archivo por accidente, las detectó como cifras que `facts.json` prohíbe. O sea: la declaración fue precisa y la pieza igual salió con el dato. La métrica de éxito tiene que separar **detección** de **contención** | E | alta |
+
+### Defecto de mi diseño de prueba (lo registro para el protocolo semanal)
+
+Los dos agentes a ciegas trabajaron en `/Users/facu/Claude` y **uno sobreescribió el script del otro**.
+No invalidó los resultados (A verificó que su deck salió intacto y declaró no haber adoptado nada), y
+de hecho produjo el hallazgo 68 por accidente. Pero el protocolo tiene que darle a cada agente a
+ciegas un directorio aislado (`isolation: worktree`). Va como cambio obligatorio a
+`.ai/agente-validacion-ia.md`.
