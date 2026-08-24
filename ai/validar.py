@@ -225,8 +225,28 @@ def check_peso():
     ok.append('peso: llms-full.txt %.0fKB' % (os.path.getsize('llms-full.txt') / 1024))
 
 
+
+# ─── 9. el conteo de assets publicado coincide con el manifiesto ─────────────
+def check_conteo_assets():
+    real = sum(len(c['archivos']) for c in cargar('ai/assets.json')['carpetas'])
+    mal = []
+    for f in ['ai/facts.json', 'ai/claude.md', 'ai/chatgpt.md', 'ai/gemini.md',
+              'ai/generic.md', 'llms.txt', 'llms-full.txt']:
+        if not os.path.exists(f):
+            continue
+        s = io.open(f, encoding='utf-8', errors='ignore').read()
+        for n in set(re.findall(r'(\d{2,4})\s*(?:archivos|assets)\b', s)):
+            if int(n) != real:
+                mal.append('%s dice %s' % (f, n))
+    if mal:
+        fallas.append('el manifiesto tiene %d archivos pero se publica otro número en: %s'
+                      % (real, ', '.join(sorted(set(mal)))))
+    else:
+        ok.append('conteo de assets: %d, consistente en todas las entradas' % real)
+
 for fn in (check_selector, check_slots, check_pendientes, check_cobertura,
-           check_nomenclatura, check_links, check_peso, check_drift):
+           check_nomenclatura, check_links, check_peso, check_conteo_assets,
+           check_drift):
     try:
         fn()
     except Exception as e:

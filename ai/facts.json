@@ -11,7 +11,7 @@
  "cifras_aprobadas": [
   {"cifra": "17 clientes reales", "fuente": "logos.html — los logos existen en assets/logos/clients/"},
   {"cifra": "14 partners de stack tecnológico", "fuente": "logos.html — assets/logos/partners/"},
-  {"cifra": "41 módulos de presentación · 58 íconos · 247 assets", "fuente": "el propio brand system", "uso": "solo para hablar del sistema, no de la compañía"}
+  {"cifra": "41 módulos de presentación · 58 íconos · 239 assets", "fuente": "el propio brand system", "uso": "solo para hablar del sistema, no de la compañía"}
  ],
  "clientes_nombrables": {
   "regla": "solo los que tienen logo real en assets/logos/clients/ — la lista completa y vigente está en ai/assets.json (carpeta assets/logos/clients)",
