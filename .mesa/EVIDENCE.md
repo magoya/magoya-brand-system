@@ -39,3 +39,34 @@
 - n=1 en decks de cliente real: toda la clasificación de vueltas sale de la propuesta JD. Con un segundo deck de cuenta grande clasificado, el hallazgo 17 pasa de inferencia a evidencia.
 - **No hay transcript ni doc crudo en disco.** Se leyó el *resumen* del Master Script y de las 16 reuniones en `PLAN.md:12-26`, no las fuentes. No se puede verificar si la CEO manda narrativa o bullets, y eso cambia por completo qué tiene que hacer la capa en el primer paso.
 - Quién agregó las 5 slides: sin registro. Si fue Facu de cabeza, es el paso invisible más caro y hay que escribirlo; si lo pidieron Varu/Pato, el hueco es de sincronización con el Master Script, no de criterio.
+
+## G1 — Evidencia · analista-datos (benchmark y medición)
+
+| # | Hallazgo | Fuente | Tipo | Confianza |
+|---|---|---|---|---|
+| 24 | El mecanismo del mercado es **clasificador con catálogo cerrado**, no elección libre. Presenton (el único auditable, ~9.6k★) hace outline y después fuerza por JSON-schema un índice de layout por slide, con reglas duras sobre la **forma del dato** ("tabla numérica de n columnas → layout de n-1 charts", "no elijas layout con imagen si no hay imagen") | [generate_presentation_structure.py](https://github.com/presenton/presenton/blob/main/servers/fastapi/utils/llm_calls/generate_presentation_structure.py) | E | alta |
+| 25 | Ese selector está indexado por **forma del dato**; el de Magoya por **intención retórica**. Son dos ejes distintos y el de forma es el que se puede verificar sin criterio | derivado de 24 | I | alta |
+| 26 | **Rellenar es el default del estado del arte**: en todo el backend de Presenton hay 3 menciones de grounding, todas "no inventes citas/valores", y cuando falta un asset inyecta un placeholder **en silencio**. Gamma y Beautiful.ai también eligen de catálogo cerrado por reglas, no freeform | mismo repo · [Gamma](https://gamma.app/explore/content/guides/gamma-flexible-card-layout-presentations) · [Beautiful.ai](https://www.beautiful.ai/smart-slides) | E | alta |
+| 27 | Abstenerse sigue sin resolverse en la industria: los modelos de razonamiento **pierden 24% de abstención** vs. sus pares no-razonadores, y lo único que la sube sin costo de precisión es un **system prompt dirigido** → ahí hay diferencial real y barato | [AbstentionBench, arXiv 2506.09038](https://arxiv.org/html/2506.09038v1) (20 modelos, 35k queries) | E | alta |
+| 28 | **Las fórmulas de legibilidad sobre texto de slide son humo.** El deck JD ya tiene oraciones sanas (12,8 palabras) y las fórmulas piden ≥100 palabras de prosa corrida; los bullets sin verbo cuentan como oraciones cortísimas e inflan el score. La copy en español de IA en campo ya da FH 84,1 / INFLESZ 80,1 ("fácil") | medición sobre `john-deere-pilot-proposal/index.html` · [Redish sobre límites de las fórmulas](https://redish.net/wp-content/uploads/Redish_on_Readability_Formulas.pdf) | E | alta |
+| 29 | **La métrica que sí decide es el test de títulos, y es auditable: solo 2 de 12 títulos del deck JD son aserciones** (sujeto + verbo + claim). Los otros 10 son etiquetas de tema; leídos solos no reconstruyen el pedido | medición sobre el deck JD | E | alta |
+| 30 | Base experimental del criterio: assertion-evidence mide mejor comprensión, mejor recall diferido y menor carga cognitiva que topic-subtopic | [Garner & Alley, Penn State, n=110-111](https://writing.engr.psu.edu/ae_comprehension.pdf) · [ASEE](https://peer.asee.org/assertion-evidence-slides-appear-to-lead-to-better-comprehension-and-recall-of-more-complex-concepts.pdf) | E | alta |
+| 31 | **El selector alcanza 31 de 41 módulos por camino primario.** Los otros 10 (A5, B2, D3, E4, G2, H2, H3, I2, J2, M2) solo se llegan por una cláusula `alternativa` condicionada a criterio de diseño ("si hay foto potente", "si es conceptual y pide personaje") — exactamente lo que el selector promete evitar en su propio `que_es` | `ai/selector.json` | E | alta |
+| 32 | **≥8 tipos de contenido real no tienen fila en el selector**: resumen ejecutivo de dos bloques con links, objetivos del proyecto, journey de dos niveles (el de JD son 3 etapas × 5 sub-pasos, E1 es plano), criterios de éxito con métrica, **cinco** cifras (C1=4, C4=3, el Master Script slide 4 tiene 5), cartera de varios casos en un slide (G1 es uno, el slide 7 son 4), equipo como workstreams con capacidad "6 → 10" (J3 es personas), y apéndice/fuentes | `ai/selector.json` vs. `PLAN.md` §1a y decks reales | E | alta |
+| 33 | **`grep -iE 'falta\|hueco\|pendiente\|sin dato'` en `selector.json` = 0 hits.** El selector no tiene camino para "no tengo el dato": solo mapea contenido que existe | `ai/selector.json` | E | alta |
+| 34 | **El catálogo está dimensionado más liviano que el contenido que entra**: mediana de presupuesto 694 caracteres/módulo contra mediana real de 1.062 caracteres/slide; solo **12 de 41 módulos** tienen presupuesto para la mediana real | conteo sobre HTML renderizado (orden de magnitud, incluye labels) | I | media |
+
+**Métrica de éxito propuesta por el analista** (reemplaza al criterio difuso de G0):
+
+| | Hoy | Objetivo |
+|---|---|---|
+| Títulos-aserción en slides de contenido | **17%** (2/12, deck JD jul'26) | ≥80% en el primer deck real que pase por la capa |
+| Vueltas de reconciliación | **27 commits** apply/feedback/fix (E8) | ≤10 en el próximo deck de cuenta grande |
+| Densidad (guardarraíl) | mediana 135 palabras/slide | mediana ≤110 |
+
+**Instrumentación que no existe y hay que empezar a medir** (el analista lo llama el hallazgo grave):
+1. **Precisión y recall de la declaración de huecos**: por deck, cuántos huecos declaró la IA vs. cuántos apareció después el humano. Sin este número **el reencuadre de G0 no es evaluable**, y hoy no hay ningún registro.
+2. Fit-rate de primera pasada: % de slides que entra en el presupuesto del módulo elegido sin tocar la fuente.
+3. Los tres números de E14 siguen sin fuente. La disidencia de negocio no se puede resolver con dato, solo con preferencia.
+
+**Corrección de cifra:** son 344 slots en total, de los cuales 339 son de texto con límite y 5 son de gráfico/tabla (sin límite de caracteres por diseño).
