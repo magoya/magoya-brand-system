@@ -28,9 +28,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>
@@ -48,7 +53,7 @@ REGLAS PARA LA IA (no negociables):
 <p class="t" data-slot="t7" data-rol="subtitulo" style="left:31.1cqw;top:26cqw;width:16.6cqw;height:4cqw;font-size:1.267cqw;font-weight:800;color:#161616;text-align:left;line-height:1.2;letter-spacing:-0.03em">Align</p>
 <p class="t" data-slot="t8" data-rol="caption" style="left:31.1cqw;top:30.5cqw;width:16.6cqw;height:14cqw;font-size:0.933cqw;font-weight:400;color:#666666;text-align:left;line-height:1.35">One plan, shared metrics and a scope both teams can defend.</p>
 <div class="r" style="left:51.1cqw;top:21cqw;width:20.2cqw;height:28.2cqw;background:#FFFFFF;border:1.0px solid #E7E7E2;border-radius:1.4cqw"></div>
-<div class="r" style="left:51.1cqw;top:21cqw;width:20.2cqw;height:0.5cqw;background:#A2FF00"></div>
+<div class="r" data-accent="lima" style="left:51.1cqw;top:21cqw;width:20.2cqw;height:0.5cqw;background:#A2FF00"></div>
 <p class="t" data-slot="t9" data-rol="kicker" style="left:52.9cqw;top:23.2cqw;width:16.6cqw;height:2.2cqw;font-size:0.767cqw;font-weight:800;color:#666666;text-align:left;line-height:1.2;letter-spacing:0.1175em">PHASE 03</p>
 <p class="t" data-slot="t10" data-rol="subtitulo" style="left:52.9cqw;top:26cqw;width:16.6cqw;height:4cqw;font-size:1.267cqw;font-weight:800;color:#161616;text-align:left;line-height:1.2;letter-spacing:-0.03em">Execute</p>
 <p class="t" data-slot="t11" data-rol="caption" style="left:52.9cqw;top:30.5cqw;width:16.6cqw;height:14cqw;font-size:0.933cqw;font-weight:400;color:#666666;text-align:left;line-height:1.35">The embedded senior pod ships in your rituals, with your definition of done.</p>

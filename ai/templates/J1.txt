@@ -28,9 +28,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>
@@ -38,7 +43,7 @@ REGLAS PARA LA IA (no negociables):
 <div class="r" style="left:0cqw;top:0cqw;width:100cqw;height:56.25cqw;background:#EEF2EC"></div>
 <div class="r" style="left:21cqw;top:10cqw;width:58cqw;height:36.5cqw;background:#FFFFFF;border-radius:1.4cqw"></div>
 <p class="t" data-slot="t1" data-rol="subtitulo" style="left:24.2cqw;top:13.2cqw;width:51.6cqw;height:16cqw;font-size:1.467cqw;font-weight:800;color:#161616;text-align:left;line-height:1.42">“Magoya’s expertise in UX, digital ag platform development and agronomic know-how, combined with their understanding of farmer and retail needs, made our transformation possible.”</p>
-<div class="r" style="left:24.2cqw;top:32cqw;width:12cqw;height:0.65cqw;background:#A2FF00;border-radius:0.32cqw"></div>
+<div class="r" data-accent="lima" style="left:24.2cqw;top:32cqw;width:12cqw;height:0.65cqw;background:#A2FF00;border-radius:0.32cqw"></div>
 <p class="t" data-slot="t2" data-rol="caption" style="left:24.2cqw;top:35.4cqw;width:40cqw;height:3cqw;font-size:0.967cqw;font-weight:800;color:#161616;text-align:left;line-height:1.2">Varina Baldi</p>
 <p class="t" data-slot="t3" data-rol="caption" style="left:24.2cqw;top:38.2cqw;width:40cqw;height:3cqw;font-size:0.967cqw;font-weight:400;color:#666666;text-align:left;line-height:1.2">Founder &amp; CEO</p>
 </div>

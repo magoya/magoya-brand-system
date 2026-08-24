@@ -1,0 +1,28 @@
+{
+ "que_es": "Ley de precedencia: qué documento gana cuando dos reglas oficiales de este sistema se contradicen. Existe para que ninguna IA ni ninguna persona tenga que elegir. Si encontrás una contradicción, aplicá esta ley, entregá la pieza, y reportá la contradicción — pero no la resuelvas por criterio propio.",
+ "version": "1.0 · 2026-08-19",
+ "por_que_existe": "Una auditoría a ciegas encontró 16 contradicciones entre documentos oficiales del sistema: reglas que ninguna plantilla puede cumplir, instrucciones que prometen control que la geometría no permite, y números distintos en dos archivos. Mientras existan, la IA tiene que decidir — y decidir es exactamente lo que este sistema promete que nadie tenga que hacer.",
+
+ "orden": [
+  {"n": 1, "gana": "la plantilla oficial de ai/templates/", "por_que": "es una pieza real que ya funcionó. La geometría, los colores y la tipografía que trae son la marca, no una sugerencia.", "consecuencia": "si un chequeo o un constraint contradice a una plantilla, el que está mal es el chequeo. Reportalo, no adaptes la plantilla."},
+  {"n": 2, "gana": "ai/facts.json", "por_que": "es la única fuente de datos reales de la empresa. Nada la sobreescribe, ni la CEO de segunda mano.", "consecuencia": "un dato que no está acá no se publica como real, aunque venga en el material que te pasaron. Ver contrato_de_entrega."},
+  {"n": 3, "gana": "tokens.json", "por_que": "son los valores exactos.", "consecuencia": "ningún hex, radio o peso suelto que no salga de acá."},
+  {"n": 4, "gana": "ai/constraints.json", "por_que": "son los mínimos y máximos que no requieren criterio.", "consecuencia": "si contradice a una plantilla, gana la plantilla (regla 1) y el constraint se corrige."},
+  {"n": 5, "gana": "BRAND.md", "por_que": "es la doctrina: explica el por qué.", "consecuencia": "cuando la doctrina y un número chocan, el número gana para ejecutar y la doctrina gana para decidir si la pieza tiene sentido."},
+  {"n": 6, "gana": ".ai/checklist.md", "por_que": "es el gate de salida, no la fuente.", "consecuencia": "un chequeo que ninguna plantilla oficial pasa es un chequeo mal escrito."},
+  {"n": 7, "gana": "el campo cuando_usarlo de ai/templates/index.json", "por_que": "es orientación editorial, lo último en la cadena.", "consecuencia": "si promete control sobre un elemento que la plantilla no deja mover (por ejemplo 'el destacado va en lima' en un módulo sin lima elegible), la instrucción está mal. Hacé lo que permite la plantilla y reportalo."}
+ ],
+
+ "contrato_de_entrega": {
+  "que_resuelve": "Declarar un hueco no es lo mismo que negarse a entregarlo. En la auditoría, una IA marcó cinco cifras como no verificables en su reporte y las dejó escritas en la slide igual. El reporte estaba impecable y la pieza salía con el dato prohibido.",
+  "reglas": [
+   "Un dato que no está en facts.json NO se escribe en la pieza. Va como [PENDIENTE] visible, nunca como el número que te pasaron.",
+   "Si el material de origen trae un dato que CONTRADICE a facts.json, la slide no sale: se entrega con el slot en [PENDIENTE] y la contradicción explícita en el pedido a humanos.",
+   "Toda entrega lleva un bloque 'PEDIDO A HUMANOS' con una línea por hueco: qué dato falta, a quién se le pide, y qué slide se desbloquea con eso.",
+   "Si la pieza tiene aunque sea un [PENDIENTE], se entrega marcada como BORRADOR. Una pieza sin ningún hueco es la única que puede salir como final."
+  ],
+  "verificacion": "python3 ai/validar.py --pieza <archivo.html> corre esto sobre el HTML entregado, no sobre el repo."
+ },
+
+ "como_reportar_una_contradiccion": "Anotala en .ai/VALIDACION-IA.md bajo 'Necesita tu decisión', con los dos archivos que se contradicen y qué dice cada uno. El agente semanal de validación las junta y las lleva a una persona. No las arregles por criterio propio."
+}

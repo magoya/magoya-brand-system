@@ -74,10 +74,16 @@
   "labels_de_boton": "sentence case",
   "nomenclatura_ia": "en español SIEMPRE 'IA', nunca 'AI': 'IA en campo', 'Integrar con IA', 'capacidades de IA', 'Datos & IA'. 'AI' solo se escribe en copy en inglés (decks US) y en nombres propios ajenos ('Data & AI', 'AI Studio'). Los nombres de archivo y las URLs del sistema siguen en 'ai-' por compatibilidad (ai-en-campo.html, /ai/) — eso NO se copia al texto de la pieza."
  },
- "verificacion": "los 15 chequeos de .ai/checklist.md — este archivo agrega los números; el checklist dice cómo auditarlos",
+ "verificacion": "los 16 chequeos de .ai/checklist.md — este archivo agrega los números; el checklist dice cómo auditarlos",
  "pendiente_de_definir": [
   "mínimos tipográficos para web/app (px por nivel) — hoy solo existe la escala de slides",
   "clearspace numérico de los avatares (hoy solo el wordmark lo tiene)",
   "margen mínimo de piezas impresas (one-pager/flyer) en mm"
- ]
+ ],
+ "proporcion_75_25": {
+  "unidad": "el deck completo, NO la slide",
+  "por_que": "la portada oficial M1 es una foto tapada al ~70% por scrim verde profundo: medida por slide, la propia portada de la marca falla su propia regla. Medida sobre el deck, cierra.",
+  "como_se_mide": "sumá el área de fondo oscuro/verde de todas las slides y dividí por el área total del deck. Apertura y cierre en verde pleno son la excepción esperada, no el default",
+  "en_piezas_sueltas": "una pieza que no es parte de un deck sí se mide sola"
+ }
 }

@@ -1,6 +1,6 @@
 # Plan — Capa de narrativa: de material crudo a deck bien contado
 
-**Estado general**: 🟡 en curso · **Gate abierto**: G1 (G0 cerrado, esperando checkpoint) · **Última actualización**: 2026-08-19
+**Estado general**: 🟡 en curso · **Gate abierto**: G3 (G0, G1 y G2 cerrados; el concepto 2 ejecutado) · **Última actualización**: 2026-08-19
 
 ## Problema (G0)
 
@@ -29,9 +29,9 @@ Línea de base = puntaje de la prueba a ciegas. Sin ese número no hay con qué 
 | Gate | Estado | Entregable | Owner | Fecha | Nota |
 |---|---|---|---|---|---|
 | G0 Encuadre | **cerrado** | problema + criterio | pm | 2026-08-19 | reencuadrado: el problema está aguas arriba |
-| G1 Evidencia | **abierto** | EVIDENCE.md + línea de base | investigador, analista-datos | | la prueba a ciegas es el dato que falta |
-| G2 Conceptos | pendiente | 3 direcciones + recomendación | pm, arquitectura, dominio | | |
-| G3 Challenge | pendiente | tensiones + cambios obligatorios | challenger-mercado, red-team, usuario-no-adopta, negocio | | |
+| G1 Evidencia | **cerrado** | 68 hallazgos + línea de base | investigador, analista-datos | 2026-08-19 | 2 pruebas a ciegas: 16 contradicciones con el validador en 0 fallas |
+| G2 Conceptos | **cerrado** | 3 direcciones + recomendación | pm, arquitectura | 2026-08-19 | ejecutado el concepto 2 completo (D3) |
+| G3 Challenge | **abierto** | tensiones + cambios obligatorios | challenger-mercado, red-team, usuario-no-adopta, negocio | | pendiente sobre el techo tipográfico nuevo y data-accent |
 | G4 Baja | pendiente | flujo de decisión en baja | flujos | | ver nota de adaptación |
 | G5 Alta | pendiente | los archivos reales de la capa | interfaz | | ver nota de adaptación |
 | G6 Handoff | pendiente | spec de la capa | spec, arquitectura | | |

@@ -28,9 +28,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>

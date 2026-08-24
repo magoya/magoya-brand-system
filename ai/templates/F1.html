@@ -28,9 +28,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>
@@ -46,7 +51,7 @@ REGLAS PARA LA IA (no negociables):
 <div class="r" style="left:24.5cqw;top:30cqw;width:1.5cqw;height:1.5cqw;background:#133825;border-radius:0.75cqw"></div>
 <p class="t" data-slot="t5" data-rol="caption" style="left:24.5cqw;top:32.5cqw;width:15cqw;height:2.4cqw;font-size:1.0cqw;font-weight:800;color:#161616;text-align:left;line-height:1.1">Ideation</p>
 <p class="t" data-slot="t6" data-rol="caption" style="left:24.5cqw;top:34.9cqw;width:15cqw;height:4.5cqw;font-size:0.833cqw;font-weight:400;color:#666666;text-align:left;line-height:1.25">Concepts and priorities</p>
-<div class="r" style="left:41.5cqw;top:30cqw;width:1.5cqw;height:1.5cqw;background:#A2FF00;border-radius:0.75cqw"></div>
+<div class="r" data-accent="lima" style="left:41.5cqw;top:30cqw;width:1.5cqw;height:1.5cqw;background:#A2FF00;border-radius:0.75cqw"></div>
 <p class="t" data-slot="t7" data-rol="caption" style="left:41.5cqw;top:32.5cqw;width:15cqw;height:2.4cqw;font-size:1.0cqw;font-weight:800;color:#161616;text-align:left;line-height:1.1">Prototyping</p>
 <p class="t" data-slot="t8" data-rol="caption" style="left:41.5cqw;top:34.9cqw;width:15cqw;height:4.5cqw;font-size:0.833cqw;font-weight:400;color:#666666;text-align:left;line-height:1.25">Tested with real growers</p>
 <div class="r" style="left:58.5cqw;top:30cqw;width:1.5cqw;height:1.5cqw;background:#133825;border-radius:0.75cqw"></div>

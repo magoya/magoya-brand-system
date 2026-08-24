@@ -28,9 +28,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>
@@ -54,6 +59,6 @@ REGLAS PARA LA IA (no negociables):
 <p class="t" data-slot="t10" data-rol="caption" style="left:34cqw;top:42.8cqw;width:38cqw;height:2.4cqw;font-size:0.9cqw;font-weight:800;color:#161616;text-align:left;line-height:1.2">Scope removed before build</p>
 <p class="t" data-slot="t11" data-rol="kicker" style="left:74cqw;top:42.8cqw;width:18cqw;height:2.4cqw;font-size:0.9cqw;font-weight:800;color:#666666;text-align:right;line-height:1.2">[XX]</p>
 <div class="r" style="left:34cqw;top:45.8cqw;width:58cqw;height:1cqw;background:#DFDFDF;border-radius:0.5cqw"></div>
-<div class="r" style="left:34cqw;top:45.8cqw;width:17.98cqw;height:1cqw;background:#A2FF00;border-radius:0.5cqw"></div>
+<div class="r" data-accent="lima" style="left:34cqw;top:45.8cqw;width:17.98cqw;height:1cqw;background:#A2FF00;border-radius:0.5cqw"></div>
 </div>
 </body></html>

@@ -28,9 +28,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>
@@ -40,7 +45,7 @@ REGLAS PARA LA IA (no negociables):
 <p class="t" data-slot="t1" data-rol="numero_de_pagina" style="left:76.5cqw;top:3.5cqw;width:16cqw;height:2.2cqw;font-size:0.767cqw;font-weight:800;color:#AAAAAA;text-align:right;line-height:1.2;letter-spacing:0.0994em">NN</p>
 <p class="t" data-slot="t2" data-rol="kicker" style="left:7.5cqw;top:13cqw;width:50cqw;height:2.6cqw;font-size:1.0cqw;font-weight:800;color:#009145;text-align:left;line-height:1.2;letter-spacing:0.1247em">REMOTE SENSING</p>
 <p class="t" data-slot="t3" data-rol="display" style="left:7.5cqw;top:17.5cqw;width:50cqw;height:18cqw;font-size:3.2cqw;font-weight:800;color:#161616;text-align:left;line-height:1.08;letter-spacing:-0.03em">Satellite data that reaches the agronomist, not the archive.</p>
-<div class="r" style="left:7.5cqw;top:37.5cqw;width:14cqw;height:0.8cqw;background:#A2FF00;border-radius:0.4cqw"></div>
+<div class="r" data-accent="lima" style="left:7.5cqw;top:37.5cqw;width:14cqw;height:0.8cqw;background:#A2FF00;border-radius:0.4cqw"></div>
 <div class="im" data-asset="assets/studio/icons/agro/satelite.svg" data-locked="brand" style="left:63.5cqw;top:15cqw;width:26cqw;height:26cqw;background:#161616;-webkit-mask-image:url(https://brand.magoya.com/assets/studio/icons/agro/satelite.svg);mask-image:url(https://brand.magoya.com/assets/studio/icons/agro/satelite.svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:fill;mask-size:fill;-webkit-mask-position:center;mask-position:center"></div>
 </div>
 </body></html>

@@ -28,9 +28,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>
@@ -50,7 +55,7 @@ REGLAS PARA LA IA (no negociables):
 <p class="t" data-slot="t8" data-rol="caption" style="left:38.7cqw;top:28.5cqw;width:22.6cqw;height:8cqw;font-size:0.933cqw;font-weight:400;color:#DCD0C4;text-align:left;line-height:1.35">How it works: shared responsibilities inside your product development process.</p>
 <p class="t" data-slot="t9" data-rol="caption" style="left:38.7cqw;top:36cqw;width:22.6cqw;height:7cqw;font-size:0.933cqw;font-weight:400;color:#DCD0C4;text-align:left;line-height:1.35">Best for: scaling an existing team with AgTech fluency.</p>
 <div class="r" style="left:38.7cqw;top:43cqw;width:22.6cqw;height:0.1cqw;background:#235F40"></div>
-<p class="t" data-slot="t10" data-rol="caption" style="left:38.7cqw;top:44.4cqw;width:22.6cqw;height:3cqw;font-size:1.0cqw;font-weight:800;color:#A2FF00;text-align:left;line-height:1.2">Monthly per role · 3-month cycles</p>
+<p class="t" data-slot="t10" data-rol="caption" data-accent="lima" style="left:38.7cqw;top:44.4cqw;width:22.6cqw;height:3cqw;font-size:1.0cqw;font-weight:800;color:#A2FF00;text-align:left;line-height:1.2">Monthly per role · 3-month cycles</p>
 <div class="r" style="left:65.5cqw;top:20.5cqw;width:27cqw;height:28.5cqw;background:#EEF2EC;border-radius:1.4cqw"></div>
 <p class="t" data-slot="t11" data-rol="subtitulo" style="left:67.7cqw;top:22.7cqw;width:22.6cqw;height:5cqw;font-size:1.4cqw;font-weight:800;color:#161616;text-align:left;line-height:1.05;letter-spacing:-0.03em">Staff Augmentation</p>
 <p class="t" data-slot="t12" data-rol="caption" style="left:67.7cqw;top:28.5cqw;width:22.6cqw;height:8cqw;font-size:0.933cqw;font-weight:400;color:#666666;text-align:left;line-height:1.35">How it works: we provide the talent; you keep your processes and management.</p>

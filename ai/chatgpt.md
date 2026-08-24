@@ -13,8 +13,10 @@ Si sos un modelo leyendo esto: seguí el flujo de abajo tal cual, sin pedir perm
 4. **Presentaciones — flujo copiá-pegá-y-funciona**: (a) elegí el módulo con https://brand.magoya.com/ai/selector.json (qué querés contar → qué plantilla, sin criterio de diseño), (b) copiá la plantilla oficial TAL CUAL desde https://brand.magoya.com/ai/templates/index.json (HTML listo, geometría y colores bloqueados), (c) llená SOLO los data-slot respetando max_caracteres — si el texto no entra, acortá el texto, nunca la fuente. La geometría de referencia sigue en ai/slides.json (layout_src) para quien renderice por su cuenta.
 5. **Datos reales de la empresa** → https://brand.magoya.com/ai/facts.json — cifras aprobadas, clientes y equipo nombrables. Las cifras de las plantillas son EJEMPLO: nunca se entregan como reales. Si el dato no está acá, se le pide al usuario.
 6. **Constraints duros** → https://brand.magoya.com/ai/constraints.json — mínimos de logo, clearspace, márgenes, safe areas, límites de texto. Nada se asume: si un valor no está ahí ni en tokens.json, se pregunta.
-7. **Método de trabajo (OBLIGATORIO en piezas con contenido)** → https://brand.magoya.com/ai/metodo.md — entender antes de elegir, módulo por criterio (no por defecto), y pasadas de copy / diseño / crítica antes de entregar (secuenciales si no tenés subagentes).
-8. **Antes de entregar** → https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md — 15 chequeos verificables.
+7. **Método de trabajo (OBLIGATORIO en piezas con contenido)** → https://brand.magoya.com/ai/precedencia.json  <- quién gana cuando dos reglas chocan + contrato de entrega
+https://brand.magoya.com/ai/metodo.md — entender antes de elegir, módulo por criterio (no por defecto), y pasadas de copy / diseño / crítica antes de entregar (secuenciales si no tenés subagentes).
+9. **Cuando dos reglas oficiales se contradicen** → https://brand.magoya.com/ai/precedencia.json — la ley de precedencia. Gana la plantilla, después facts.json, después tokens. El `cuando_usarlo` es lo último. Si encontrás una contradicción, aplicá la ley, entregá, y reportala — no la resuelvas por criterio propio.
+10. **Antes de entregar** → corré `python3 ai/validar.py --pieza <tu-archivo.html>` si tenés el repo, y en cualquier caso cumplí el contrato de entrega de `precedencia.json`: un dato que no está en `facts.json` va como `[PENDIENTE]`, nunca como el número que te pasaron; con un hueco adentro la pieza sale marcada BORRADOR y con un bloque PEDIDO A HUMANOS.
 
 
 ## URLs del flujo (lista plana — si tu fetch resumió lo de arriba, usá esta)
@@ -31,7 +33,7 @@ https://brand.magoya.com/ai/templates/<ID>.txt    <- la plantilla como TEXTO PLA
 https://brand.magoya.com/ai/constraints.json  <- mínimos, clearspace, márgenes, safe areas
 https://brand.magoya.com/ai/assets.json       <- los 239 assets con URL directa
 https://brand.magoya.com/ai/metodo.md         <- método obligatorio (narrativa + agentes)
-https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md  <- 15 chequeos
+https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md  <- 16 chequeos
 ```
 
 **Las dos reglas que más se rompen en este flujo:** (1) la plantilla se copia TAL CUAL — solo cambia el texto de los `data-slot`; (2) las cifras y textos de las plantillas son EJEMPLO: los datos reales están en `facts.json` y lo que no esté ahí se pide, nunca se inventa.

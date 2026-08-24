@@ -68,7 +68,11 @@ def render(mid, shapes):
                 st += f';border:{round(sh.get("lw",1)*1.33,1)}px solid #{sh["line"]}'
             if sh.get('radius'):
                 st += f';border-radius:{cq(sh["radius"])}'
-            body.append(f'<div class="r" style="{st}"></div>')
+            # el golpe de lima deja de ser geometría anónima: pasa a ser miembro de un
+            # grupo elegible. La instrucción "el destacado va en lima" era inejecutable
+            # porque el rect no tenía ningún marcador — ahora se puede mover de miembro.
+            acc = ' data-accent="lima"' if str(sh.get('fill', '')).upper() == 'A2FF00' else ''
+            body.append(f'<div class="r"{acc} style="{st}"></div>')
         elif k == 't':
             tno += 1
             sid = f't{tno}'
@@ -76,6 +80,7 @@ def render(mid, shapes):
             st = pos + f';font-size:{fs(s)}'
             st += f';font-weight:{800 if sh.get("b") else 400}'
             st += f';color:#{sh.get("c") or "161616"}'
+            acc_t = ' data-accent="lima"' if str(sh.get('c', '')).upper() == 'A2FF00' else ''
             st += f';text-align:{sh.get("al","left")}'
             va = sh.get('va', 'top')
             if va != 'top':
@@ -105,7 +110,7 @@ def render(mid, shapes):
             slots.append({'slot': sid, 'rol': role, 'texto_ejemplo': str(text)[:160],
                           'max_caracteres_aprox': int(cpl * lines * 0.9),
                           'max_lineas': lines})
-            body.append(f'<p class="t" data-slot="{sid}" data-rol="{role}" style="{st}">{esc(text)}</p>')
+            body.append(f'<p class="t" data-slot="{sid}" data-rol="{role}"{acc_t} style="{st}">{esc(text)}</p>')
         elif k == 'i':
             src = sh.get('src', '')
             url = src if src.startswith('http') else f'{BASE}/{src}'
@@ -174,9 +179,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>

@@ -28,9 +28,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>
@@ -43,7 +48,7 @@ REGLAS PARA LA IA (no negociables):
 <div class="r" style="left:44cqw;top:18.15cqw;width:48.5cqw;height:0.12cqw;background:#E7E7E2"></div>
 <p class="t" data-slot="t4" data-rol="subtitulo" style="left:45.2cqw;top:13.9cqw;width:6.5cqw;height:3cqw;font-size:1.467cqw;font-weight:800;color:#009145;text-align:left;line-height:1.2">01</p>
 <p class="t" data-slot="t5" data-rol="caption" style="left:52.5cqw;top:14.2cqw;width:38.5cqw;height:4cqw;font-size:1.067cqw;font-weight:400;color:#161616;text-align:left;line-height:1.2">Who we are — and how we embed</p>
-<div class="r" style="left:44cqw;top:18.7cqw;width:48.5cqw;height:5.7cqw;background:#A2FF00;border-radius:0.7cqw"></div>
+<div class="r" data-accent="lima" style="left:44cqw;top:18.7cqw;width:48.5cqw;height:5.7cqw;background:#A2FF00;border-radius:0.7cqw"></div>
 <p class="t" data-slot="t6" data-rol="subtitulo" style="left:45.2cqw;top:20.1cqw;width:6.5cqw;height:3cqw;font-size:1.467cqw;font-weight:800;color:#161616;text-align:left;line-height:1.2">02</p>
 <p class="t" data-slot="t7" data-rol="caption" style="left:52.5cqw;top:20.4cqw;width:38.5cqw;height:4cqw;font-size:1.067cqw;font-weight:800;color:#161616;text-align:left;line-height:1.2">What we&#x27;ve built in AgTech</p>
 <div class="r" style="left:44cqw;top:30.55cqw;width:48.5cqw;height:0.12cqw;background:#E7E7E2"></div>

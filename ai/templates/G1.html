@@ -28,9 +28,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>
@@ -53,7 +58,7 @@ REGLAS PARA LA IA (no negociables):
 <div class="r" style="left:51.1cqw;top:31cqw;width:20.2cqw;height:0.42cqw;background:#161616"></div>
 <p class="t" data-slot="t9" data-rol="kicker" style="left:51.1cqw;top:32.6cqw;width:20.2cqw;height:2.2cqw;font-size:0.733cqw;font-weight:800;color:#666666;text-align:left;line-height:1.2;letter-spacing:0.0945em">ADAPTATION</p>
 <p class="t" data-slot="t10" data-rol="caption" style="left:51.1cqw;top:35.4cqw;width:20.2cqw;height:12cqw;font-size:0.88cqw;font-weight:400;color:#161616;text-align:left;line-height:1.4">We joined their rituals and their QA gates, and moved AI into sprint 1 instead of phase 2.</p>
-<div class="r" style="left:72.9cqw;top:31cqw;width:20.2cqw;height:0.42cqw;background:#A2FF00"></div>
+<div class="r" data-accent="lima" style="left:72.9cqw;top:31cqw;width:20.2cqw;height:0.42cqw;background:#A2FF00"></div>
 <p class="t" data-slot="t11" data-rol="kicker" style="left:72.9cqw;top:32.6cqw;width:20.2cqw;height:2.2cqw;font-size:0.733cqw;font-weight:800;color:#666666;text-align:left;line-height:1.2;letter-spacing:0.0945em">RESULTS</p>
 <p class="t" data-slot="t12" data-rol="titulo" style="left:72.9cqw;top:35.4cqw;width:20.2cqw;height:4cqw;font-size:2.0cqw;font-weight:800;color:#161616;text-align:left;line-height:1.2;letter-spacing:-0.03em">[XX]</p>
 <p class="t" data-slot="t13" data-rol="caption" style="left:72.9cqw;top:39cqw;width:20.2cqw;height:2.4cqw;font-size:0.84cqw;font-weight:800;color:#666666;text-align:left;line-height:1.2">faster time-to-field</p>

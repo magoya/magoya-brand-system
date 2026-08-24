@@ -28,9 +28,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>
@@ -38,7 +43,7 @@ REGLAS PARA LA IA (no negociables):
 <div class="r" style="left:0cqw;top:0cqw;width:100cqw;height:56.25cqw;background:#0C2117"></div>
 <div class="im" data-asset="assets/motif-semis.svg" data-locked="brand" style="left:0cqw;top:41.25cqw;width:100cqw;height:15cqw;background:#ECE3DB;-webkit-mask-image:url(https://brand.magoya.com/assets/motif-semis.svg);mask-image:url(https://brand.magoya.com/assets/motif-semis.svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:cover;mask-size:cover;-webkit-mask-position:center;mask-position:center"></div>
 <img class="im" src="https://brand.magoya.com/assets/magoya-wordmark-cream.svg" data-locked="brand" style="left:7.5cqw;top:7cqw;width:11cqw;height:3.007cqw;object-fit:fill" alt="">
-<p class="t" data-slot="t1" data-rol="display" style="left:7.5cqw;top:14cqw;width:30cqw;height:12cqw;font-size:8.0cqw;font-weight:800;color:#A2FF00;text-align:left;line-height:0.9;letter-spacing:-0.03em">[XX]</p>
+<p class="t" data-slot="t1" data-rol="display" data-accent="lima" style="left:7.5cqw;top:14cqw;width:30cqw;height:12cqw;font-size:8.0cqw;font-weight:800;color:#A2FF00;text-align:left;line-height:0.9;letter-spacing:-0.03em">[XX]</p>
 <p class="t" data-slot="t2" data-rol="display" style="left:7.5cqw;top:26cqw;width:60cqw;height:13cqw;font-size:3.733cqw;font-weight:800;color:#F6F1EB;text-align:left;line-height:1.05;letter-spacing:-0.03em">What we&#x27;ve built
 in AgTech</p>
 </div>

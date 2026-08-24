@@ -9,8 +9,9 @@ fuentes, que no haya slots sin límite y que el copy en español no diga "AI".
 No opina de diseño y no inventa valores: si falta una definición, la reporta
 como hueco para que la decida una persona.
 
-    python3 ai/validar.py            # local, sin red
-    python3 ai/validar.py --red      # además verifica cada URL publicada
+    python3 ai/validar.py                    # la capa, local
+    python3 ai/validar.py --red              # además verifica cada URL publicada
+    python3 ai/validar.py --pieza deck.html  # una pieza entregada: contrato de entrega
 """
 import io, json, os, re, subprocess, sys, glob
 from collections import Counter
@@ -265,16 +266,21 @@ def check_reglas_auditables():
 
     # #5 · golpe de lima. La plantilla es dueña de la regla (decisión de la Mesa, G2):
     # el techo es "como máximo uno", así que lo que falla es tener DOS o más.
-    dos_o_mas = []
+    # se cuenta el atributo data-accent, no el hex: el header de instrucciones que va
+    # dentro de cada plantilla menciona #A2FF00 y contaminaría el conteo.
+    dos_o_mas, con_acento = [], 0
     for f in plantillas:
-        n = len(re.findall(r'A2FF00', io.open(f, encoding='utf-8').read(), re.I))
+        n = len(re.findall(r'data-accent="lima"\s+(?:style|data-)', io.open(f, encoding='utf-8').read()))
+        if n:
+            con_acento += 1
         if n > 1:
             dos_o_mas.append('%s=%d' % (os.path.basename(f)[:-5], n))
     if dos_o_mas:
         fallas.append('%d plantillas tienen más de un golpe de lima (el techo es uno): %s'
                       % (len(dos_o_mas), ', '.join(dos_o_mas)))
     else:
-        ok.append('lima: ninguna plantilla pasa de un golpe (%d plantillas)' % len(plantillas))
+        ok.append('lima: %d de %d plantillas llevan acento, ninguna más de uno'
+                  % (con_acento, len(plantillas)))
 
     # #7 · niveles tipográficos. Techo declarado por la plantilla, no por el checklist.
     TECHO = 7
@@ -306,6 +312,80 @@ def check_reglas_auditables():
                       'alta y no están en la excepción: %s' % (len(malos), ', '.join(sorted(malos))))
     else:
         ok.append('color: ningún token saturado en el rango naranja/amarillo fuera de la excepción')
+
+
+# ─── modo pieza: valida un HTML entregado, no el repo ───────────────────────
+def validar_pieza(path):
+    """El hallazgo que motivó esto: en la auditoría una IA declaró cinco cifras como no
+    verificables en su reporte y las dejó escritas en la slide. Declarar no es contener."""
+    s = io.open(path, encoding='utf-8', errors='ignore').read()
+    texto = re.sub(r'<!--.*?-->', ' ', s, flags=re.S)          # los comentarios traen instrucciones, no copy
+    texto = re.sub(r'<(script|style)[^>]*>.*?</\1>', ' ', texto, flags=re.S)
+    texto = re.sub(r'<[^>]+>', ' ', texto)
+    # el texto de un hueco declarado describe qué falta: no es una afirmación de la pieza
+    texto = re.sub(r'\[(PENDIENTE|XX)[^\]]*\]', ' ', texto)
+
+    pendientes = len(re.findall(r'\[PENDIENTE\]|\[XX\]', s))
+    borrador = 'BORRADOR' in s.upper()
+    pedido = bool(re.search(r'PEDIDO A HUMANOS', s, re.I))
+
+    # cifras aprobadas: lo que está en facts.json puede viajar
+    hechos = io.open('ai/facts.json', encoding='utf-8').read()
+    aprobadas = set(re.findall(r'\b(\d[\d.,]*)\b', hechos))
+
+    # dos formas de afirmar una cifra, y las dos tienen que estar respaldadas:
+    #   con unidad  -> "68%", "3x", "40k"
+    #   cardinal    -> "21 AgTech domains", "10 countries". Esta era la que se escapaba:
+    #                  el deck de la auditoría publicó cuatro cifras así, sin unidad.
+    sueltas = []
+    for m in re.finditer(r'\b(\d[\d.,]*)\s*(%|x|×|k|K|M|\+)(?![\w.])', texto):
+        if m.group(1) not in aprobadas:
+            sueltas.append(m.group(0).strip())
+    for m in re.finditer(r'(?<![\d.,])(\d{1,4})\s+([A-Za-zÁÉÍÓÚÑáéíóúñ][\w-]{2,})', texto):
+        num, palabra = m.group(1), m.group(2)
+        if re.fullmatch(r'0\d', num):
+            continue                      # 01, 02…: numeración de página o de paso
+        if num in aprobadas:
+            continue
+        sueltas.append('%s %s' % (num, palabra))
+
+    print('=' * 72)
+    print('PIEZA: %s' % path)
+    print('=' * 72)
+    if sueltas:
+        print('\n[FALLA] %d cifras afirmadas que no están en facts.json: %s'
+              % (len(sueltas), ', '.join(sorted(set(sueltas))[:12])))
+        print('        Ninguna de estas puede viajar en la pieza. Van como [PENDIENTE].')
+    else:
+        print('\n[OK] no hay cifras sin respaldo en facts.json')
+
+    if pendientes and not borrador:
+        print('\n[FALLA] la pieza tiene %d huecos ([PENDIENTE]/[XX]) y NO está marcada como '
+              'BORRADOR. Con un hueco adentro no puede salir como final.' % pendientes)
+    elif pendientes:
+        print('\n[OK] %d huecos declarados y la pieza está marcada como BORRADOR' % pendientes)
+    else:
+        print('\n[OK] sin huecos: la pieza puede salir como final')
+
+    if pendientes and not pedido:
+        print('\n[FALLA] hay huecos pero falta el bloque "PEDIDO A HUMANOS" con qué dato falta '
+              'y a quién se le pide.')
+    elif pendientes:
+        print('\n[OK] el pedido a humanos está presente')
+
+    ok_total = not sueltas and not (pendientes and not borrador) and not (pendientes and not pedido)
+    print('\n' + '-' * 72)
+    print('la pieza %s' % ('PUEDE entregarse' if ok_total else 'NO puede entregarse todavía'))
+    return 0 if ok_total else 1
+
+
+if '--pieza' in sys.argv:
+    i = sys.argv.index('--pieza')
+    if i + 1 >= len(sys.argv):
+        print('uso: python3 ai/validar.py --pieza <archivo.html>')
+        sys.exit(2)
+    sys.exit(validar_pieza(sys.argv[i + 1]))
+
 
 for fn in (check_selector, check_slots, check_pendientes, check_cobertura,
            check_nomenclatura, check_links, check_peso, check_conteo_assets,

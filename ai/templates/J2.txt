@@ -28,9 +28,14 @@ REGLAS PARA LA IA (no negociables):
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
    entra, acortá el texto — nunca achiques la fuente ni muevas la caja.
-3. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
+3b. Los elementos data-accent="lima" son el golpe de lima de la slide. Podés MOVER
+   el acento a otro elemento del mismo grupo (sacale el atributo a uno y ponéselo a
+   otro, junto con el color #A2FF00) cuando el destacado semántico sea otro — por
+   ejemplo si estás proponiendo el modelo de la card 1 y no el de la card 2. Regla:
+   como máximo UNO por slide, y cero es válido. Lo que no se cambia es la geometría.
+4. Los elementos data-locked="brand" (wordmark, logos, íconos, motivos) no se
    tocan, no se reemplazan, no se mueven.
-4. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
+5. Las imágenes data-reemplazable aceptan otra foto REAL respetando su regla.
 5. El texto "NN" del número de página se reemplaza por el número real (2 dígitos).
 -->
 </head><body>
@@ -41,7 +46,7 @@ REGLAS PARA LA IA (no negociables):
 <img class="im" src="https://brand.magoya.com/assets/magoya-wordmark-cream.svg" data-locked="brand" style="left:7.5cqw;top:3.2cqw;width:11cqw;height:3.007cqw;object-fit:fill" alt="">
 <p class="t" data-slot="t1" data-rol="numero_de_pagina" style="left:76.5cqw;top:3.5cqw;width:16cqw;height:2.2cqw;font-size:0.767cqw;font-weight:800;color:#C4B5A6;text-align:right;line-height:1.2;letter-spacing:0.0994em">NN</p>
 <p class="t" data-slot="t2" data-rol="titulo" style="left:7.5cqw;top:28cqw;width:60cqw;height:14cqw;font-size:1.733cqw;font-weight:800;color:#F6F1EB;text-align:left;line-height:1.38">“They did not join to deliver a project. They joined to own the outcome with us.”</p>
-<div class="r" style="left:7.5cqw;top:42.6cqw;width:24cqw;height:0.7cqw;background:#A2FF00;border-radius:0.35cqw"></div>
+<div class="r" data-accent="lima" style="left:7.5cqw;top:42.6cqw;width:24cqw;height:0.7cqw;background:#A2FF00;border-radius:0.35cqw"></div>
 <p class="t" data-slot="t3" data-rol="subtitulo" style="left:7.5cqw;top:45cqw;width:40cqw;height:3cqw;font-size:1.133cqw;font-weight:800;color:#F6F1EB;text-align:left;line-height:1.2">Camila López Colmano</p>
 <p class="t" data-slot="t4" data-rol="caption" style="left:7.5cqw;top:47.8cqw;width:40cqw;height:3cqw;font-size:0.967cqw;font-weight:400;color:#C4B5A6;text-align:left;line-height:1.2">AgTech Expert</p>
 </div>

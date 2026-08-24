@@ -37,6 +37,11 @@ Reglas de actuación:
 Tres subagentes independientes, cada uno con **solo una URL pública** y un pedido — nada más. Sin
 contexto de esta conversación, sin acceso al repo: exactamente lo que tiene un usuario afuera.
 
+**Cada uno con `isolation: "worktree"`.** En la primera corrida dos agentes compartieron directorio
+y uno sobreescribió el script del otro. No invalidó los resultados —de hecho produjo un hallazgo por
+accidente— pero la ceguera tiene que ser por sandbox, no por instrucción. Pediles igual que declaren
+toda fuente que usen, para poder descartar la corrida si tocaron el repo.
+
 | # | Entrada | Pedido |
 |---|---|---|
 | 1 | `https://brand.magoya.com/ai/claude.md` | un deck de 5 slides para presentarle a un cliente AgTech nuevo qué hace Magoya |
@@ -44,7 +49,9 @@ contexto de esta conversación, sin acceso al repo: exactamente lo que tiene un 
 | 3 | `https://brand.magoya.com/ai/gemini.md` | un carrusel 4:5 de **IA en campo** para productores |
 
 Después, **un cuarto subagente crítico que no vio cómo se generó nada** puntúa cada salida contra
-los 16 chequeos de [`checklist.md`](checklist.md) y contra `ai/constraints.json`. Para cada pieza:
+los 16 chequeos de [`checklist.md`](checklist.md) y contra `ai/constraints.json`. Y mide la métrica
+primaria: **qué porcentaje de los títulos de contenido son aserciones** (sujeto + verbo +
+afirmación) y no etiquetas de tema. Línea de base 17% sobre una propuesta real; objetivo ≥80%. Para cada pieza:
 chequeos que pasan, cuáles fallan y **por qué falló** — ¿la regla no estaba escrita, estaba escrita
 pero enterrada, o estaba clara y la IA la ignoró?
 
@@ -93,6 +100,16 @@ Un párrafo, en criollo, con lo que hay que saber. Si no hay nada accionable, de
 _"Validador limpio, prueba a ciegas 16/16/15, nada nuevo afuera."_ No infles el reporte.
 
 ---
+
+## Buscá contradicciones, no solo estructura
+
+El aprendizaje más caro de la primera auditoría: `validar.py` daba **0 fallas** y había **16
+contradicciones reales** entre documentos oficiales. El validador cruza estructura (¿resuelven los
+links, tienen límite los slots) y no consistencia entre reglas escritas en prosa en archivos
+distintos. Cuando el crítico marque un chequeo como fallado, preguntate siempre si el que está mal
+es la pieza o **el chequeo**: 37 de 41 plantillas fallaban el límite de 3 niveles tipográficos, y la
+que estaba mal era la regla. `ai/precedencia.json` dice quién gana; si una contradicción nueva no
+entra en esa ley, va al ledger como decisión pendiente.
 
 ## Lo que este agente NO hace
 

@@ -66,3 +66,34 @@ en las dos corridas (36).
 la capa ya alcanza". Salió mixta: el mecanismo funciona y el spec se contradice. Eso **no** valida
 construir una capa nueva, y **sí** valida arreglar el spec — que es más barato. La disidencia sobre los
 tres números de ROI sigue abierta y sin resolver con dato.
+
+## D3 · 2026-08-19 · La plantilla es dueña de la regla, y el concepto 2 se ejecutó
+
+**Decisión de Facu en el checkpoint de G2:** cuando un chequeo y una plantilla oficial se
+contradicen, **gana la plantilla**. El catálogo es una pieza real que ya funcionó; el checklist es un
+gate de salida, no la fuente. Consecuencia: el techo tipográfico pasa de 3 a lo que declara el
+catálogo (7) y "exactamente un golpe de lima" pasa a "como máximo uno" — cero es válido, porque 19 de
+las 41 plantillas no llevan lima.
+
+**Alcance ejecutado:** el concepto 2 completo.
+
+| Qué | Dónde | Resultado verificado |
+|---|---|---|
+| El regex que cortaba el `cuando_usarlo` en el primer tag inline | `ai/generate.py` | **de 9 truncados a 0**. L1 recuperó "logos siempre reales y en gris, grilla pareja de 6×2, jamás placeholders" |
+| El bug que barría `usa` y `alternativa` juntos y ocultaba el hallazgo 31 | `ai/validar.py` | el hueco aparece solo: **10 módulos** solo alcanzables por criterio de diseño |
+| Ley de precedencia | `ai/precedencia.json` (nuevo) | 7 niveles, del que gana al que pierde. Publicada en las 4 entradas por herramienta y en `llms.txt` |
+| Contrato de entrega | `validar.py --pieza` | **discrimina**: el deck de la auditoría que publicó las cifras de la CEO da 4 fallas; el que declaró no haber inventado nada da 0 |
+| Los tres chequeos que ya eran auditables | `ai/validar.py` | lima por atributo, niveles por `font-size` único, y el hue con el calificador de saturación que faltaba |
+| El tercer estado para la familia F2 | `data-accent="lima"` en `ai/templates.py` | **19 plantillas** con acento marcado, ninguna con más de uno. La instrucción "el destacado va en lima" pasa de inejecutable a ejecutable |
+| El método, reescrito con la evidencia | `ai/metodo.md` v2.0 | Fase 0 nueva (material crudo → narrativa), el agente de copy marca en vez de reescribir, agente de títulos con umbral medido |
+| La unidad del 75/25, que era la asunción más grande de la auditoría | `ai/constraints.json` | queda definida: **el deck**, no la slide |
+| El defecto de mi diseño de prueba | `.ai/agente-validacion-ia.md` | los agentes a ciegas pasan a `isolation: worktree` |
+
+**Lo que queda declarado como falla y NO se tocó, a propósito:** E4 (2 acentos, 9 niveles) y G1
+(8 niveles) son los dos únicos outliers del catálogo contra su propio techo. Colapsar niveles en E4 es
+decidir qué jerarquía se pierde — es una decisión de diseño, no un bug, y no la toma el panel.
+
+**Lo que NO se hizo, y hay que decirlo:** **G3 (Challenge) no corrió.** Normalmente va antes de
+construir. De los ocho cambios, seis son arreglos de bugs verificados o aritmética sobre reglas que ya
+existían; los dos con superficie de diseño real son el techo tipográfico nuevo y `data-accent`. Esos
+dos son los que se beneficiarían de pasar por red-team y usuario-no-adopta.
