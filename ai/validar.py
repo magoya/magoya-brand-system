@@ -355,6 +355,55 @@ def check_reglas_auditables():
 
 
 # ─── modo pieza: valida un HTML entregado, no el repo ───────────────────────
+
+def _ritmo(path):
+    """Mide la composición del deck entregado: la falla que ninguna regla del sistema
+    detectaba. Un deck puede cumplir todo y salir soso — eso pasó en una prueba real
+    donde la IA puso módulos de peso 'texto' con lienzo blanco y sage uno atrás del otro."""
+    s = io.open(path, encoding='utf-8', errors='ignore').read()
+    usados = re.findall(r'data-modulo="([A-M]\d{1,2})"', s)
+    if len(usados) < 3:
+        return []
+    perf = {m['id']: m.get('perfil', {}) for m in cargar('ai/templates/index.json')['modulos']}
+    pesos = [perf.get(m, {}).get('peso', '?') for m in usados]
+    lienzos = [perf.get(m, {}).get('lienzo', '?') for m in usados]
+    problemas = []
+
+    def corridas(xs, valor):
+        mejor = act = 0
+        for x in xs:
+            act = act + 1 if x == valor else 0
+            mejor = max(mejor, act)
+        return mejor
+
+    if corridas(pesos, 'texto') >= 3:
+        problemas.append('%d slides seguidas de peso "texto". Alguna de esas ideas rinde mejor en un '
+                         'módulo visual: mirá el campo perfil de templates/index.json' % corridas(pesos, 'texto'))
+    for l in set(lienzos):
+        if l != '?' and corridas(lienzos, l) > 3:
+            problemas.append('%d slides seguidas con lienzo "%s". El lienzo cambia al menos cada 3'
+                             % (corridas(lienzos, l), l))
+    visuales = pesos.count('visual')
+    if visuales < len(usados) / 3:
+        problemas.append('solo %d de %d slides son de peso "visual" (mínimo 1 de cada 3). El catálogo '
+                         'tiene 19 módulos visuales' % (visuales, len(usados)))
+    if len(set(lienzos)) < 2:
+        problemas.append('el deck entero usa un solo lienzo (%s)' % lienzos[0])
+    repes = [usados[i] for i in range(1, len(usados)) if usados[i] == usados[i-1]]
+    if repes:
+        problemas.append('módulos repetidos en slides consecutivas: %s' % ', '.join(sorted(set(repes))))
+
+    print('\n--- composición ---')
+    print('secuencia: %s' % ' → '.join('%s(%s/%s)' % (m, (perf.get(m,{}).get('peso','?'))[:3],
+          (perf.get(m,{}).get('lienzo','?'))[:5]) for m in usados))
+    if problemas:
+        for p in problemas:
+            print('[FALLA] %s' % p)
+    else:
+        print('[OK] ritmo: %d slides, %d visuales, %d lienzos distintos'
+              % (len(usados), visuales, len(set(lienzos))))
+    return problemas
+
 def validar_pieza(path):
     """El hallazgo que motivó esto: en la auditoría una IA declaró cinco cifras como no
     verificables en su reporte y las dejó escritas en la slide. Declarar no es contener."""
@@ -413,7 +462,9 @@ def validar_pieza(path):
     elif pendientes:
         print('\n[OK] el pedido a humanos está presente')
 
-    ok_total = not sueltas and not (pendientes and not borrador) and not (pendientes and not pedido)
+    prob_ritmo = _ritmo(path)
+    ok_total = (not sueltas and not (pendientes and not borrador)
+                and not (pendientes and not pedido) and not prob_ritmo)
     print('\n' + '-' * 72)
     print('la pieza %s' % ('PUEDE entregarse' if ok_total else 'NO puede entregarse todavía'))
     return 0 if ok_total else 1

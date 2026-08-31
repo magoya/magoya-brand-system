@@ -44,6 +44,34 @@ un transcript, un documento de otra persona, un deck viejo para reciclar, o los 
   que parece una lista es un caso de éxito? ¿ese párrafo es un statement esperando a ser una frase?
 - El deck más corto que cuente la historia completa, gana. Una idea por slide.
 
+## Fase 1b — Componer la secuencia (no solo elegir módulos)
+
+Elegir bien cada módulo no alcanza: **el selector mapea contenido → módulo fila por fila y nadie
+gobierna la secuencia.** Un deck puede cumplir todas las reglas del sistema y salir soso. Pasó en una
+prueba real: la IA eligió módulos de peso `texto` con lienzo blanco y sage uno atrás del otro, y el
+deck no tenía nada mal según ninguna regla.
+
+Cada módulo de `ai/templates/index.json` trae un campo **`perfil`** con su `lienzo` (blanco, sage,
+verde-profundo, foto), su `peso` (visual / mixto / texto), su presupuesto de texto y qué recursos
+visuales tiene. Está derivado de la plantilla real, no escrito a mano. Miralo **después** de elegir
+los módulos por contenido, y ajustá:
+
+- Nunca **3 slides seguidas** de peso `texto`.
+- El lienzo cambia al menos cada 3 slides.
+- Al menos **1 de cada 3** slides de peso `visual`. El catálogo tiene 19.
+- Apertura y cierre en verde-profundo o foto; el medio en claro.
+
+> ### Si te queda soso, cambiá de módulo — no agregues adorno
+>
+> Esto es una regla, no un consejo. Cuando un deck se lee plano, la salida **no** es inventar una
+> carátula con más onda, meter un degradado, agrandar algo o sumar un recurso decorativo: eso saca la
+> pieza del sistema y se nota. La variedad ya está en el catálogo. Volvé a la lista de módulos, mirá
+> el `perfil`, y **cambiá de módulo el beat que está aplanando el deck.** El mismo contenido en un
+> módulo visual cuenta lo mismo y respira distinto.
+>
+> Se verifica: `python3 ai/validar.py --pieza <tu-archivo.html>` mide la secuencia de lienzos y pesos
+> y te dice dónde se aplana.
+
 ## Fase 2 — Las tres pasadas (agentes si tu plataforma los tiene)
 
 Nunca entregues la primera versión. Si podés desplegar subagentes, desplegalos; si no, hacé las
@@ -83,6 +111,7 @@ python3 ai/validar.py --pieza <tu-archivo.html>
 | Títulos-aserción en slides de contenido | ≥80% | contalos: sujeto + verbo + afirmación |
 | La historia leída solo de títulos | cierra | leelos en orden, sin el cuerpo |
 | Densidad | mediana ≤110 palabras por slide | contá palabras visibles |
+| Ritmo | sin 3 seguidas de peso `texto`, 1 de cada 3 visual | `validar.py --pieza` lo mide |
 | Slide prescindible | ninguno | si borrás un slide y la historia no pierde nada, borralo |
 | El dato más fuerte | en el slide más fuerte | si la mejor cifra está en un bullet, movela |
 
@@ -103,6 +132,7 @@ selector, qué agregaste que no venía en el material, y qué encontró el crít
 
 ## Changelog
 
+- **2.1** (2026-08-19): Fase 1b — componer la secuencia, con el campo `perfil` de cada módulo (lienzo y peso, derivados de la plantilla) y la regla anti-adorno: si el deck queda soso se cambia de módulo, no se decora. Sale de un feedback real: la IA eligió módulos de texto con lienzo blanco y sage uno atrás del otro, cumplió todas las reglas, y cuando le señalaron que estaba soso agregó carátulas decorativas.
 - **2.0** (2026-08-19): Fase 0 nueva (del material crudo a la narrativa, con registro de lo que
   agregás y búsqueda de contradicciones antes de diseñar) · el agente de copy marca en vez de
   reescribir · agente de títulos con umbral medido (17% → 80%) · contrato de entrega y

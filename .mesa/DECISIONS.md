@@ -97,3 +97,38 @@ decidir qué jerarquía se pierde — es una decisión de diseño, no un bug, y 
 construir. De los ocho cambios, seis son arreglos de bugs verificados o aritmética sobre reglas que ya
 existían; los dos con superficie de diseño real son el techo tipográfico nuevo y `data-accent`. Esos
 dos son los que se beneficiarían de pasar por red-team y usuario-no-adopta.
+
+## D4 · 2026-08-19 · La composición del deck es un paso, y se mide
+
+**Origen:** feedback de campo de Pato en el primer uso real de la capa (hallazgos 69-74).
+
+**El diagnóstico.** No era que la IA eligiera mal los módulos: era que **nada gobernaba la
+secuencia.** El selector resuelve "qué módulo para este contenido" fila por fila; el ritmo del deck no
+tenía dueño. Y la única regla que existía —"nunca dos slides seguidas del mismo módulo"— el deck la
+cumplía. Es exactamente la misma clase de defecto que documentamos en D2: una regla escrita en prosa,
+enterrada en un bullet, sin nada que la verifique.
+
+**Lo que se hizo.**
+
+1. **Cada módulo publica su `perfil`**, derivado de la plantilla real y no escrito a mano: `lienzo`
+   (blanco/sage/verde-profundo/foto), `peso` (visual/mixto/texto), presupuesto de texto y recursos
+   visuales. Es el eje que le faltaba a la IA para componer.
+2. **`como_componer_el_deck` en `index.json`**, con cinco reglas verificables: nunca 3 seguidas de
+   peso texto, el lienzo cambia cada 3, 1 de cada 3 visual, apertura y cierre oscuros, y la de módulo
+   repetido que ya existía.
+3. **Fase 1b nueva en `metodo.md`** — componer la secuencia es un paso, no un subproducto de elegir
+   módulos.
+4. **La regla anti-adorno, que ataca la segunda falla:** *si te queda soso, cambiá de módulo, no
+   agregues adorno.* Está en `metodo.md` como bloque destacado, en `selector.json` y en
+   `como_componer_el_deck`. Era el hueco por el que la IA se fue a inventar carátulas.
+5. **El instrumento:** `validar.py --pieza` mide la secuencia de lienzos y pesos desde los
+   `data-modulo` del HTML entregado. **Validado contra los dos decks de la auditoría: falla el que se
+   lee soso, pasa el otro.** Sin esto sería otra regla en prosa sin verificar, que es la clase de
+   fallo que este proyecto ya documentó.
+
+**Lo que este hallazgo dice del método de la Mesa.** Las dos pruebas a ciegas encontraron 16
+contradicciones y **ninguna encontró esto**, porque las dos evaluaban *conformidad* (¿cumple las
+reglas?) y no *calidad* (¿está bien contado?). El crítico del protocolo semanal puntúa contra el
+checklist, y el checklist no tenía nada de ritmo. **Un panel que solo mide conformidad no detecta lo
+soso.** El bloque 2 del protocolo semanal necesita una pregunta más: *¿esta pieza te daría vergüenza
+mandarla?* — y el chequeo de composición ahora la vuelve parcialmente objetiva.

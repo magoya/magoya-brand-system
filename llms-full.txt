@@ -346,41 +346,147 @@ Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.a
  "reglas_de_seleccion": [
   "Una idea por slide. Si tu contenido tiene dos ideas, son dos filas de esta tabla.",
   "El dato más fuerte del deck merece el módulo más fuerte (C3 antes que una fila de bullets).",
+  "El deck más corto que cuenta la historia completa, gana. No rellenes con módulos porque existen.",
   "Alterná ritmo: nunca dos slides seguidas del mismo módulo, y alterná lado con los pares espejo (H1/H2, I1/I2).",
-  "El deck más corto que cuenta la historia completa, gana. No rellenes con módulos porque existen."
+  "Esa regla NO alcanza: un deck puede cumplirla y salir soso. Después de elegir los módulos por contenido, componé la secuencia con el campo \"perfil\" de cada módulo en templates/index.json (lienzo y peso) y las reglas de \"como_componer_el_deck\". Nunca 3 seguidas de peso texto, el lienzo cambia cada 3, y 1 de cada 3 slides es de peso visual.",
+  "Si el deck te queda soso NO agregues adorno ni inventes una carátula: cambiá de módulo el beat que lo aplana. La variedad sale del catálogo."
  ],
  "decision": [
-  {"tenes": "el inicio del deck", "usa": "M1", "alternativa": "M2 si no hay foto que aporte o el deck ya abre con foto"},
-  {"tenes": "una sola frase fuerte / la idea central", "usa": "A1", "alternativa": "H3 si a mitad del deck y hay foto potente · I1 si es conceptual y pide personaje"},
-  {"tenes": "una frase fuerte que necesita contexto o aclaración", "usa": "A2"},
-  {"tenes": "la agenda de la reunión (decks de 10+ slides)", "usa": "A3"},
-  {"tenes": "un cambio de bloque/capítulo", "usa": "A4", "alternativa": "A5 si el capítulo tiene un tema con ícono claro (ej. remote sensing)"},
-  {"tenes": "los modelos o formas de trabajar (3 opciones)", "usa": "B1", "alternativa": "B2 si la diferencia es comercial/facturación y hay una recomendada"},
-  {"tenes": "un resumen de capacidades del equipo (5-6 items)", "usa": "B3"},
-  {"tenes": "credenciales de la compañía en números (4 cifras)", "usa": "C1"},
-  {"tenes": "resultados de UN producto (3 métricas)", "usa": "C2"},
-  {"tenes": "UN dato que es el argumento entero", "usa": "C3"},
-  {"tenes": "tres cifras que cuentan una sola historia", "usa": "C4"},
-  {"tenes": "una serie temporal (evolución de una métrica)", "usa": "D1", "alternativa": "D3 si la tendencia es larga o hay baseline de comparación"},
-  {"tenes": "dos series/cohortes a comparar en el mismo eje", "usa": "D2"},
-  {"tenes": "una proporción principal + avances secundarios", "usa": "D4"},
-  {"tenes": "una secuencia de pasos donde el cliente está en uno (4-5 pasos)", "usa": "E1"},
-  {"tenes": "argumentos de diferenciación (hasta 6, sin números)", "usa": "E2"},
-  {"tenes": "escenarios de inversión / pricing por alcance", "usa": "E3", "alternativa": "E4 a continuación con timing y números — van juntas y en ese orden"},
-  {"tenes": "el plan en el tiempo (hasta 5 hitos)", "usa": "F1"},
-  {"tenes": "el método/proceso propio (4 fases)", "usa": "F2"},
-  {"tenes": "interacción entre actores y sistemas", "usa": "F3"},
-  {"tenes": "artefactos de trabajo para mostrar (wireframes, prototipos)", "usa": "F4"},
-  {"tenes": "un caso de éxito completo", "usa": "G1", "alternativa": "G2 si el contexto ya se explicó y solo van resultados antes/después"},
-  {"tenes": "contexto de mercado con foto", "usa": "H1", "alternativa": "H2 como espejo para alternar el lado"},
-  {"tenes": "rango geográfico o de cultivos", "usa": "H4"},
-  {"tenes": "un statement conceptual sin foto", "usa": "I1", "alternativa": "I2 como espejo, o si el protagonista es un dato"},
-  {"tenes": "un testimonio", "usa": "J1", "alternativa": "J2 si hay retrato real del autor (B&N + scrim)"},
-  {"tenes": "el equipo concreto de la propuesta", "usa": "J3"},
-  {"tenes": "validación técnica del stack (audiencia CTO)", "usa": "K1"},
-  {"tenes": "capacidades de IA con herramientas concretas", "usa": "K2"},
-  {"tenes": "prueba social (clientes)", "usa": "L1"},
-  {"tenes": "el cierre con próximos pasos", "usa": "M3", "nota": "siempre es la última slide; la plantilla M3 tiene CUATRO pasos numerados (t5-t12) y UN solo CTA — llená los cuatro, no borres ninguno"}
+  {
+   "tenes": "el inicio del deck",
+   "usa": "M1",
+   "alternativa": "M2 si no hay foto que aporte o el deck ya abre con foto"
+  },
+  {
+   "tenes": "una sola frase fuerte / la idea central",
+   "usa": "A1",
+   "alternativa": "H3 si a mitad del deck y hay foto potente · I1 si es conceptual y pide personaje"
+  },
+  {
+   "tenes": "una frase fuerte que necesita contexto o aclaración",
+   "usa": "A2"
+  },
+  {
+   "tenes": "la agenda de la reunión (decks de 10+ slides)",
+   "usa": "A3"
+  },
+  {
+   "tenes": "un cambio de bloque/capítulo",
+   "usa": "A4",
+   "alternativa": "A5 si el capítulo tiene un tema con ícono claro (ej. remote sensing)"
+  },
+  {
+   "tenes": "los modelos o formas de trabajar (3 opciones)",
+   "usa": "B1",
+   "alternativa": "B2 si la diferencia es comercial/facturación y hay una recomendada"
+  },
+  {
+   "tenes": "un resumen de capacidades del equipo (5-6 items)",
+   "usa": "B3"
+  },
+  {
+   "tenes": "credenciales de la compañía en números (4 cifras)",
+   "usa": "C1"
+  },
+  {
+   "tenes": "resultados de UN producto (3 métricas)",
+   "usa": "C2"
+  },
+  {
+   "tenes": "UN dato que es el argumento entero",
+   "usa": "C3"
+  },
+  {
+   "tenes": "tres cifras que cuentan una sola historia",
+   "usa": "C4"
+  },
+  {
+   "tenes": "una serie temporal (evolución de una métrica)",
+   "usa": "D1",
+   "alternativa": "D3 si la tendencia es larga o hay baseline de comparación"
+  },
+  {
+   "tenes": "dos series/cohortes a comparar en el mismo eje",
+   "usa": "D2"
+  },
+  {
+   "tenes": "una proporción principal + avances secundarios",
+   "usa": "D4"
+  },
+  {
+   "tenes": "una secuencia de pasos donde el cliente está en uno (4-5 pasos)",
+   "usa": "E1"
+  },
+  {
+   "tenes": "argumentos de diferenciación (hasta 6, sin números)",
+   "usa": "E2"
+  },
+  {
+   "tenes": "escenarios de inversión / pricing por alcance",
+   "usa": "E3",
+   "alternativa": "E4 a continuación con timing y números — van juntas y en ese orden"
+  },
+  {
+   "tenes": "el plan en el tiempo (hasta 5 hitos)",
+   "usa": "F1"
+  },
+  {
+   "tenes": "el método/proceso propio (4 fases)",
+   "usa": "F2"
+  },
+  {
+   "tenes": "interacción entre actores y sistemas",
+   "usa": "F3"
+  },
+  {
+   "tenes": "artefactos de trabajo para mostrar (wireframes, prototipos)",
+   "usa": "F4"
+  },
+  {
+   "tenes": "un caso de éxito completo",
+   "usa": "G1",
+   "alternativa": "G2 si el contexto ya se explicó y solo van resultados antes/después"
+  },
+  {
+   "tenes": "contexto de mercado con foto",
+   "usa": "H1",
+   "alternativa": "H2 como espejo para alternar el lado"
+  },
+  {
+   "tenes": "rango geográfico o de cultivos",
+   "usa": "H4"
+  },
+  {
+   "tenes": "un statement conceptual sin foto",
+   "usa": "I1",
+   "alternativa": "I2 como espejo, o si el protagonista es un dato"
+  },
+  {
+   "tenes": "un testimonio",
+   "usa": "J1",
+   "alternativa": "J2 si hay retrato real del autor (B&N + scrim)"
+  },
+  {
+   "tenes": "el equipo concreto de la propuesta",
+   "usa": "J3"
+  },
+  {
+   "tenes": "validación técnica del stack (audiencia CTO)",
+   "usa": "K1"
+  },
+  {
+   "tenes": "capacidades de IA con herramientas concretas",
+   "usa": "K2"
+  },
+  {
+   "tenes": "prueba social (clientes)",
+   "usa": "L1"
+  },
+  {
+   "tenes": "el cierre con próximos pasos",
+   "usa": "M3",
+   "nota": "siempre es la última slide; la plantilla M3 tiene CUATRO pasos numerados (t5-t12) y UN solo CTA — llená los cuatro, no borres ninguno"
+  }
  ],
  "plantillas": "https://brand.magoya.com/ai/templates/index.json",
  "geometria_fuente": "https://brand.magoya.com/ai/slides.json"
@@ -483,6 +589,34 @@ un transcript, un documento de otra persona, un deck viejo para reciclar, o los 
   que parece una lista es un caso de éxito? ¿ese párrafo es un statement esperando a ser una frase?
 - El deck más corto que cuente la historia completa, gana. Una idea por slide.
 
+## Fase 1b — Componer la secuencia (no solo elegir módulos)
+
+Elegir bien cada módulo no alcanza: **el selector mapea contenido → módulo fila por fila y nadie
+gobierna la secuencia.** Un deck puede cumplir todas las reglas del sistema y salir soso. Pasó en una
+prueba real: la IA eligió módulos de peso `texto` con lienzo blanco y sage uno atrás del otro, y el
+deck no tenía nada mal según ninguna regla.
+
+Cada módulo de `ai/templates/index.json` trae un campo **`perfil`** con su `lienzo` (blanco, sage,
+verde-profundo, foto), su `peso` (visual / mixto / texto), su presupuesto de texto y qué recursos
+visuales tiene. Está derivado de la plantilla real, no escrito a mano. Miralo **después** de elegir
+los módulos por contenido, y ajustá:
+
+- Nunca **3 slides seguidas** de peso `texto`.
+- El lienzo cambia al menos cada 3 slides.
+- Al menos **1 de cada 3** slides de peso `visual`. El catálogo tiene 19.
+- Apertura y cierre en verde-profundo o foto; el medio en claro.
+
+> ### Si te queda soso, cambiá de módulo — no agregues adorno
+>
+> Esto es una regla, no un consejo. Cuando un deck se lee plano, la salida **no** es inventar una
+> carátula con más onda, meter un degradado, agrandar algo o sumar un recurso decorativo: eso saca la
+> pieza del sistema y se nota. La variedad ya está en el catálogo. Volvé a la lista de módulos, mirá
+> el `perfil`, y **cambiá de módulo el beat que está aplanando el deck.** El mismo contenido en un
+> módulo visual cuenta lo mismo y respira distinto.
+>
+> Se verifica: `python3 ai/validar.py --pieza <tu-archivo.html>` mide la secuencia de lienzos y pesos
+> y te dice dónde se aplana.
+
 ## Fase 2 — Las tres pasadas (agentes si tu plataforma los tiene)
 
 Nunca entregues la primera versión. Si podés desplegar subagentes, desplegalos; si no, hacé las
@@ -522,6 +656,7 @@ python3 ai/validar.py --pieza <tu-archivo.html>
 | Títulos-aserción en slides de contenido | ≥80% | contalos: sujeto + verbo + afirmación |
 | La historia leída solo de títulos | cierra | leelos en orden, sin el cuerpo |
 | Densidad | mediana ≤110 palabras por slide | contá palabras visibles |
+| Ritmo | sin 3 seguidas de peso `texto`, 1 de cada 3 visual | `validar.py --pieza` lo mide |
 | Slide prescindible | ninguno | si borrás un slide y la historia no pierde nada, borralo |
 | El dato más fuerte | en el slide más fuerte | si la mejor cifra está en un bullet, movela |
 
@@ -542,6 +677,7 @@ selector, qué agregaste que no venía en el material, y qué encontró el crít
 
 ## Changelog
 
+- **2.1** (2026-08-19): Fase 1b — componer la secuencia, con el campo `perfil` de cada módulo (lienzo y peso, derivados de la plantilla) y la regla anti-adorno: si el deck queda soso se cambia de módulo, no se decora. Sale de un feedback real: la IA eligió módulos de texto con lienzo blanco y sage uno atrás del otro, cumplió todas las reglas, y cuando le señalaron que estaba soso agregó carátulas decorativas.
 - **2.0** (2026-08-19): Fase 0 nueva (del material crudo a la narrativa, con registro de lo que
   agregás y búsqueda de contradicciones antes de diseñar) · el agente de copy marca en vez de
   reescribir · agente de títulos con umbral medido (17% → 80%) · contrato de entrega y

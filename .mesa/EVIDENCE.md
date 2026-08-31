@@ -159,3 +159,18 @@ No invalidó los resultados (A verificó que su deck salió intacto y declaró n
 de hecho produjo el hallazgo 68 por accidente. Pero el protocolo tiene que darle a cada agente a
 ciegas un directorio aislado (`isolation: worktree`). Va como cambio obligatorio a
 `.ai/agente-validacion-ia.md`.
+
+## G1 — Evidencia de campo · el primer uso real (Pato, 2026-08-19)
+
+Vale más que las dos pruebas a ciegas juntas: es el **primer deck real que pasó por la capa** (negocio
+había registrado en E10 que eran cero) y falló de una forma que **ninguno de nuestros instrumentos
+detectaba**.
+
+| # | Hallazgo | Tipo | Confianza |
+|---|---|---|---|
+| 69 | La IA produjo un deck **soso** y lo admitió al ser confrontada: *"the mix I chose leans on the text-heavy ones (white and sage canvases back to back), and the brand book has rhythm rules and more visual modules precisely to avoid that"*. O sea: **la regla existía y no estaba en el camino que la IA recorre** — la leyó recién cuando el usuario la empujó | E | alta |
+| 70 | **La única regla de ritmo del sistema era "nunca dos slides seguidas del mismo módulo"** (bullet 3 de 4 en `reglas_de_seleccion`). Necesaria pero insuficiente: el deck la cumplía. Nada gobernaba el lienzo ni el peso visual, y nada lo medía | E | alta |
+| 71 | **El catálogo sí tiene variedad, medida: 21 lienzos blancos, 14 sage, 3 verde-profundo, 3 foto; 19 módulos de peso visual contra 15 de texto.** El problema no era falta de módulos: era que el selector mapea contenido → módulo fila por fila y **nadie gobierna la secuencia** | E | alta |
+| 72 | **Segunda falla, peor que la primera:** al señalarle que estaba soso, la IA agregó *"carátulas con más onda"* — "un desastre". Reachó por **decoración** en vez de cambiar de módulo. El sistema no tenía ninguna regla que dijera que la variedad sale del catálogo y no de decorar | E | alta |
+| 73 | El costo real: el usuario **abandonó** y se fue a otro chat con otro modelo, en vez de iterar. Confirma la lectura de negocio de que el costo se paga en vueltas — pero acá la vuelta ni siquiera ocurrió | E | alta |
+| 74 | Corriendo el chequeo nuevo sobre los dos decks de la auditoría: el de 9 slides **falla** (3 seguidas de peso texto, cierre G1→G2→M3 todo texto sobre blanco y sage) y el de 5 slides **pasa** (2 visuales, 3 lienzos). La medición coincide con el juicio humano en los dos casos | E | alta |

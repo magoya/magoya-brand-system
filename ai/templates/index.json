@@ -35,7 +35,14 @@
      "max_caracteres_aprox": 97,
      "max_lineas": 4
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 289,
+    "recursos": {},
+    "peso": "mixto"
+   }
   },
   {
    "id": "A2",
@@ -65,7 +72,14 @@
      "max_caracteres_aprox": 564,
      "max_lineas": 11
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 724,
+    "recursos": {},
+    "peso": "texto"
+   }
   },
   {
    "id": "A3",
@@ -165,7 +179,14 @@
      "max_caracteres_aprox": 172,
      "max_lineas": 3
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 1069,
+    "recursos": {},
+    "peso": "texto"
+   }
   },
   {
    "id": "A4",
@@ -188,7 +209,16 @@
      "max_caracteres_aprox": 75,
      "max_lineas": 3
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "verde-profundo",
+    "recursos_visuales": 3,
+    "presupuesto_texto": 80,
+    "recursos": {
+     "motivo": 3
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "A5",
@@ -218,7 +248,16 @@
      "max_caracteres_aprox": 121,
      "max_lineas": 5
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 3,
+    "presupuesto_texto": 347,
+    "recursos": {
+     "iconos": 3
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "B1",
@@ -304,7 +343,17 @@
      "max_caracteres_aprox": 77,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 12,
+    "presupuesto_texto": 1362,
+    "recursos": {
+     "iconos": 9,
+     "grafico": 3
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "B2",
@@ -411,7 +460,14 @@
      "max_caracteres_aprox": 72,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 1819,
+    "recursos": {},
+    "peso": "texto"
+   }
   },
   {
    "id": "B3",
@@ -518,7 +574,16 @@
      "max_caracteres_aprox": 151,
      "max_lineas": 4
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 18,
+    "presupuesto_texto": 1387,
+    "recursos": {
+     "iconos": 18
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "C1",
@@ -597,7 +662,14 @@
      "max_caracteres_aprox": 171,
      "max_lineas": 5
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 847,
+    "recursos": {},
+    "peso": "texto"
+   }
   },
   {
    "id": "C2",
@@ -662,7 +734,14 @@
      "max_caracteres_aprox": 171,
      "max_lineas": 5
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 633,
+    "recursos": {},
+    "peso": "mixto"
+   }
   },
   {
    "id": "C3",
@@ -692,7 +771,14 @@
      "max_caracteres_aprox": 183,
      "max_lineas": 3
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "verde-profundo",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 253,
+    "recursos": {},
+    "peso": "visual"
+   }
   },
   {
    "id": "C4",
@@ -757,7 +843,14 @@
      "max_caracteres_aprox": 189,
      "max_lineas": 5
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 769,
+    "recursos": {},
+    "peso": "texto"
+   }
   },
   {
    "id": "D1",
@@ -793,7 +886,16 @@
      "texto_ejemplo": "tipo bar",
      "nota": "reemplazar por barras/lineas hechas con divs .r usando la paleta; datos de ejemplo en el comentario"
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 4,
+    "presupuesto_texto": 552,
+    "recursos": {
+     "grafico": 4
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "D2",
@@ -843,7 +945,16 @@
      "max_caracteres_aprox": 63,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 4,
+    "presupuesto_texto": 590,
+    "recursos": {
+     "grafico": 4
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "D3",
@@ -900,7 +1011,16 @@
      "max_caracteres_aprox": 88,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 4,
+    "presupuesto_texto": 554,
+    "recursos": {
+     "grafico": 4
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "D4",
@@ -992,7 +1112,16 @@
      "max_caracteres_aprox": 63,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 4,
+    "presupuesto_texto": 999,
+    "recursos": {
+     "grafico": 4
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "E1",
@@ -1071,7 +1200,14 @@
      "max_caracteres_aprox": 172,
      "max_lineas": 3
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 832,
+    "recursos": {},
+    "peso": "texto"
+   }
   },
   {
    "id": "E2",
@@ -1192,7 +1328,14 @@
      "max_caracteres_aprox": 159,
      "max_lineas": 3
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 1279,
+    "recursos": {},
+    "peso": "texto"
+   }
   },
   {
    "id": "E3",
@@ -1227,7 +1370,14 @@
      "rol": "tabla",
      "texto_ejemplo": "tabla de datos"
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 249,
+    "recursos": {},
+    "peso": "mixto"
+   }
   },
   {
    "id": "E4",
@@ -1453,7 +1603,14 @@
      "max_caracteres_aprox": 115,
      "max_lineas": 4
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 1948,
+    "recursos": {},
+    "peso": "texto"
+   }
   },
   {
    "id": "F1",
@@ -1546,7 +1703,14 @@
      "max_caracteres_aprox": 115,
      "max_lineas": 4
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 908,
+    "recursos": {},
+    "peso": "texto"
+   }
   },
   {
    "id": "F2",
@@ -1653,7 +1817,14 @@
      "max_caracteres_aprox": 306,
      "max_lineas": 11
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 1763,
+    "recursos": {},
+    "peso": "texto"
+   }
   },
   {
    "id": "F3",
@@ -1837,7 +2008,14 @@
      "max_caracteres_aprox": 115,
      "max_lineas": 4
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 2517,
+    "recursos": {},
+    "peso": "texto"
+   }
   },
   {
    "id": "F4",
@@ -1881,7 +2059,14 @@
      "max_caracteres_aprox": 99,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 442,
+    "recursos": {},
+    "peso": "mixto"
+   }
   },
   {
    "id": "G1",
@@ -1995,7 +2180,16 @@
      "max_caracteres_aprox": 75,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 1,
+    "presupuesto_texto": 2021,
+    "recursos": {
+     "logos": 1
+    },
+    "peso": "texto"
+   }
   },
   {
    "id": "G2",
@@ -2095,7 +2289,16 @@
      "max_caracteres_aprox": 9,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 1,
+    "presupuesto_texto": 1221,
+    "recursos": {
+     "logos": 1
+    },
+    "peso": "texto"
+   }
   },
   {
    "id": "H1",
@@ -2139,7 +2342,16 @@
      "max_caracteres_aprox": 137,
      "max_lineas": 3
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 1,
+    "presupuesto_texto": 768,
+    "recursos": {
+     "foto": 1
+    },
+    "peso": "texto"
+   }
   },
   {
    "id": "H2",
@@ -2176,7 +2388,16 @@
      "max_caracteres_aprox": 279,
      "max_lineas": 5
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 1,
+    "presupuesto_texto": 576,
+    "recursos": {
+     "foto": 1
+    },
+    "peso": "mixto"
+   }
   },
   {
    "id": "H3",
@@ -2206,7 +2427,16 @@
      "max_caracteres_aprox": 252,
      "max_lineas": 4
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "foto",
+    "recursos_visuales": 1,
+    "presupuesto_texto": 396,
+    "recursos": {
+     "foto": 1
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "H4",
@@ -2250,7 +2480,16 @@
      "max_caracteres_aprox": 135,
      "max_lineas": 3
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 3,
+    "presupuesto_texto": 568,
+    "recursos": {
+     "foto": 3
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "I1",
@@ -2280,7 +2519,16 @@
      "max_caracteres_aprox": 86,
      "max_lineas": 4
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 1,
+    "presupuesto_texto": 305,
+    "recursos": {
+     "ilustracion": 1
+    },
+    "peso": "mixto"
+   }
   },
   {
    "id": "I2",
@@ -2317,7 +2565,17 @@
      "max_caracteres_aprox": 241,
      "max_lineas": 4
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 2,
+    "presupuesto_texto": 431,
+    "recursos": {
+     "ilustracion": 1,
+     "grafico": 1
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "J1",
@@ -2347,7 +2605,14 @@
      "max_caracteres_aprox": 131,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 652,
+    "recursos": {},
+    "peso": "mixto"
+   }
   },
   {
    "id": "J2",
@@ -2384,7 +2649,16 @@
      "max_caracteres_aprox": 131,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "foto",
+    "recursos_visuales": 1,
+    "presupuesto_texto": 584,
+    "recursos": {
+     "foto": 1
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "J3",
@@ -2456,7 +2730,16 @@
      "max_caracteres_aprox": 99,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 3,
+    "presupuesto_texto": 872,
+    "recursos": {
+     "foto": 3
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "K1",
@@ -2514,7 +2797,16 @@
      "max_caracteres_aprox": 105,
      "max_lineas": 3
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 13,
+    "presupuesto_texto": 694,
+    "recursos": {
+     "logos": 13
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "K2",
@@ -2593,7 +2885,16 @@
      "max_caracteres_aprox": 333,
      "max_lineas": 5
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 4,
+    "presupuesto_texto": 1853,
+    "recursos": {
+     "iconos": 4
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "L1",
@@ -2630,7 +2931,16 @@
      "max_caracteres_aprox": 90,
      "max_lineas": 2
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "blanco",
+    "recursos_visuales": 12,
+    "presupuesto_texto": 249,
+    "recursos": {
+     "logos": 12
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "M1",
@@ -2660,7 +2970,16 @@
      "max_caracteres_aprox": 189,
      "max_lineas": 3
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "foto",
+    "recursos_visuales": 1,
+    "presupuesto_texto": 438,
+    "recursos": {
+     "foto": 1
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "M2",
@@ -2690,7 +3009,16 @@
      "max_caracteres_aprox": 241,
      "max_lineas": 4
     }
-   ]
+   ],
+   "perfil": {
+    "lienzo": "verde-profundo",
+    "recursos_visuales": 1,
+    "presupuesto_texto": 487,
+    "recursos": {
+     "motivo": 1
+    },
+    "peso": "visual"
+   }
   },
   {
    "id": "M3",
@@ -2783,7 +3111,61 @@
      "max_caracteres_aprox": 153,
      "max_lineas": 3
     }
+   ],
+   "perfil": {
+    "lienzo": "sage",
+    "recursos_visuales": 0,
+    "presupuesto_texto": 1220,
+    "recursos": {},
+    "peso": "texto"
+   }
+  }
+ ],
+ "como_componer_el_deck": {
+  "por_que": "El selector mapea contenido → módulo fila por fila, y nadie gobierna la SECUENCIA. Un deck puede cumplir todas las reglas del sistema y salir soso: es lo que pasó en una prueba real: la IA eligió módulos de peso \"texto\" con lienzo blanco y sage uno atrás del otro. El catálogo SÍ tiene variedad — usala.",
+  "el_perfil_de_cada_modulo": "cada módulo trae un campo \"perfil\" con lienzo, peso (visual/mixto/texto), presupuesto de texto y qué recursos visuales tiene. Está derivado de la plantilla real, no escrito a mano. Usalo para componer, no para elegir qué contar.",
+  "reglas_de_composicion": [
+   "Nunca 3 slides seguidas de peso \"texto\". Si tu historia te lleva ahí, alguna de esas ideas rinde mejor en un módulo visual.",
+   "El lienzo cambia al menos cada 3 slides: no más de 3 seguidas del mismo (blanco, sage, verde-profundo o foto).",
+   "Al menos 1 de cada 3 slides lleva peso \"visual\".",
+   "Apertura y cierre en verde-profundo o foto. El medio en claro. Todo verde se lee como una sola pieza repetida, no como un recorrido.",
+   "Nunca dos slides seguidas del mismo módulo, y alterná lado con los pares espejo (H1/H2, I1/I2)."
+  ],
+  "si_te_queda_soso": "NO agregues adorno y NO inventes una carátula con más onda: eso saca la pieza del sistema. La variedad sale del catálogo. Volvé a la lista de módulos, mirá el campo \"perfil\", y cambiá de MÓDULO el beat que está aplanando el deck — el mismo contenido en un módulo visual cuenta lo mismo y respira distinto.",
+  "inventario": {
+   "por_lienzo": {
+    "blanco": 21,
+    "verde-profundo": 3,
+    "sage": 14,
+    "foto": 3
+   },
+   "por_peso": {
+    "mixto": 7,
+    "texto": 15,
+    "visual": 19
+   },
+   "mediana_de_presupuesto_de_texto": 694,
+   "visuales": [
+    "A4",
+    "A5",
+    "B1",
+    "B3",
+    "C3",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "H3",
+    "H4",
+    "I2",
+    "J2",
+    "J3",
+    "K1",
+    "K2",
+    "L1",
+    "M1",
+    "M2"
    ]
   }
- ]
+ }
 }

@@ -111,6 +111,49 @@ CATDOC = {
  # assets/refs NO va en el manifiesto: está gitignored, así que sus URLs dan 404
  # en brand.magoya.com. Es material fuente y BRAND.md ya dice que no se publica.
 }
+# ─── perfil de composición por módulo ───────────────────────────────────────
+# Derivado de las plantillas ya generadas, nunca a mano: es el eje que le faltaba
+# a la IA para componer un deck con ritmo. Sin esto, el selector mapea contenido →
+# módulo fila por fila y nadie gobierna la SECUENCIA: el resultado es un deck que
+# cumple todas las reglas y sale soso (feedback real, 2026-08-19).
+def perfil_de_modulos(idx_modulos):
+    import glob as _glob
+    CANVAS = {'FFFFFF': 'blanco', 'EEF2EC': 'sage', 'F6F1EB': 'crema',
+              '133825': 'verde-profundo', '0C2117': 'verde-profundo',
+              '0A1F14': 'verde-profundo', '161616': 'negro'}
+    presupuesto = {m['id']: sum(int(s.get('max_caracteres_aprox') or 0) for s in m['slots'])
+                   for m in idx_modulos}
+    perfiles = {}
+    for f in sorted(_glob.glob('ai/templates/[A-M]*.html')):
+        mid = f.split('/')[-1][:-5]
+        s = open(f, encoding='utf-8').read()
+        cuerpo = s[s.find('<div class="slide"'):]
+        m = re.search(r'width:100cqw;height:56\.25cqw;background:#([0-9A-Fa-f]{6})', cuerpo)
+        lienzo = CANVAS.get(m.group(1).upper(), 'otro') if m else 'sin-fondo'
+        rec = {'foto':        len(re.findall(r'class="im"[^>]*(?:photos/|pieces/)', cuerpo)),
+               'ilustracion': len(re.findall(r'illus/', cuerpo)),
+               'motivo':      len(re.findall(r'motif', cuerpo)),
+               'logos':       len(re.findall(r'logos/', cuerpo)),
+               'iconos':      len(re.findall(r'/icons/', cuerpo)),
+               'grafico':     len(re.findall(r'GRAFICO|dashed|chart', cuerpo, re.I))}
+        if rec['foto'] and re.search(r'class="im"[^>]*width:(?:9\d|100)cqw', cuerpo):
+            lienzo = 'foto'
+        visual = sum(rec.values())
+        perfiles[mid] = {'lienzo': lienzo, 'recursos_visuales': visual,
+                         'presupuesto_texto': presupuesto.get(mid, 0),
+                         'recursos': {k: v for k, v in rec.items() if v}}
+    chars = sorted(p['presupuesto_texto'] for p in perfiles.values())
+    med = chars[len(chars) // 2] if chars else 0
+    for p in perfiles.values():
+        if p['recursos_visuales'] >= 2 or p['lienzo'] in ('foto', 'verde-profundo', 'negro'):
+            p['peso'] = 'visual'
+        elif p['presupuesto_texto'] >= med:
+            p['peso'] = 'texto'
+        else:
+            p['peso'] = 'mixto'
+    return perfiles, med
+
+
 tree = {}
 NO_PUBLICABLE = ('assets/refs',)   # gitignored: sus URLs darían 404 en el sitio
 for root, dirs, files in os.walk('assets'):
@@ -142,6 +185,47 @@ print(f'assets.json: {total} archivos en {len(carpetas)} carpetas')
 import subprocess as _sp
 r = _sp.run(['python3', 'ai/templates.py'], capture_output=True, text=True)
 print(r.stdout.strip() or r.stderr.strip()[:300])
+
+# ---------- 4b. perfil de composicion: el eje que le faltaba a la IA ----------
+_idx = json.load(open('ai/templates/index.json'))
+_perf, _med = perfil_de_modulos(_idx['modulos'])
+for _m in _idx['modulos']:
+    _m['perfil'] = _perf.get(_m['id'], {})
+_idx['como_componer_el_deck'] = {
+ 'por_que': ('El selector mapea contenido → módulo fila por fila, y nadie gobierna la SECUENCIA. '
+             'Un deck puede cumplir todas las reglas del sistema y salir soso: es lo que pasó en una '
+             'prueba real: la IA eligió módulos de peso "texto" con lienzo blanco y sage uno atrás del '
+             'otro. El catálogo SÍ tiene variedad — usala.'),
+ 'el_perfil_de_cada_modulo': ('cada módulo trae un campo "perfil" con lienzo, peso (visual/mixto/texto), '
+             'presupuesto de texto y qué recursos visuales tiene. Está derivado de la plantilla real, '
+             'no escrito a mano. Usalo para componer, no para elegir qué contar.'),
+ 'reglas_de_composicion': [
+   'Nunca 3 slides seguidas de peso "texto". Si tu historia te lleva ahí, alguna de esas ideas rinde mejor en un módulo visual.',
+   'El lienzo cambia al menos cada 3 slides: no más de 3 seguidas del mismo (blanco, sage, verde-profundo o foto).',
+   'Al menos 1 de cada 3 slides lleva peso "visual".',
+   'Apertura y cierre en verde-profundo o foto. El medio en claro. Todo verde se lee como una sola pieza repetida, no como un recorrido.',
+   'Nunca dos slides seguidas del mismo módulo, y alterná lado con los pares espejo (H1/H2, I1/I2).',
+ ],
+ 'si_te_queda_soso': ('NO agregues adorno y NO inventes una carátula con más onda: eso saca la pieza del '
+             'sistema. La variedad sale del catálogo. Volvé a la lista de módulos, mirá el campo "perfil", '
+             'y cambiá de MÓDULO el beat que está aplanando el deck — el mismo contenido en un módulo '
+             'visual cuenta lo mismo y respira distinto.'),
+ 'inventario': {
+   'por_lienzo': {},
+   'por_peso': {},
+   'mediana_de_presupuesto_de_texto': _med,
+ },
+}
+import collections as _col
+_idx['como_componer_el_deck']['inventario']['por_lienzo'] = dict(
+    _col.Counter(p['lienzo'] for p in _perf.values()))
+_idx['como_componer_el_deck']['inventario']['por_peso'] = dict(
+    _col.Counter(p['peso'] for p in _perf.values()))
+_idx['como_componer_el_deck']['inventario']['visuales'] = sorted(
+    k for k, p in _perf.items() if p['peso'] == 'visual')
+json.dump(_idx, open('ai/templates/index.json', 'w'), ensure_ascii=False, indent=1)
+print('perfil de composicion: %d modulos · lienzos %s' % (len(_perf),
+      _idx['como_componer_el_deck']['inventario']['por_lienzo']))
 
 # ---------- 5. llms-full.txt: todo en un fetch ----------
 parts = []
