@@ -174,3 +174,34 @@ detectaba**.
 | 72 | **Segunda falla, peor que la primera:** al señalarle que estaba soso, la IA agregó *"carátulas con más onda"* — "un desastre". Reachó por **decoración** en vez de cambiar de módulo. El sistema no tenía ninguna regla que dijera que la variedad sale del catálogo y no de decorar | E | alta |
 | 73 | El costo real: el usuario **abandonó** y se fue a otro chat con otro modelo, en vez de iterar. Confirma la lectura de negocio de que el costo se paga en vueltas — pero acá la vuelta ni siquiera ocurrió | E | alta |
 | 74 | Corriendo el chequeo nuevo sobre los dos decks de la auditoría: el de 9 slides **falla** (3 seguidas de peso texto, cierre G1→G2→M3 todo texto sobre blanco y sage) y el de 5 slides **pasa** (2 visuales, 3 lienzos). La medición coincide con el juicio humano en los dos casos | E | alta |
+
+## G3 — Challenge · red-team y usuario-no-adopta
+
+Las dos voces convergieron en lo mismo desde ángulos opuestos: **el chequeo de composición certifica
+como bueno el deck que hizo abandonar al primer usuario.** Verifiqué cada traza corriéndola.
+
+| # | Hallazgo | Verificación mía | Tipo |
+|---|---|---|---|
+| 75 | **La secuencia `M2→F3→E4→K2→F2→B2→B3→G2→M2` pasa el chequeo**: `[OK] ritmo: 9 slides, 4 visuales, 3 lienzos distintos · la pieza PUEDE entregarse`. Son **13.482 caracteres de presupuesto**, ~250 palabras por slide contra el guardarraíl de ≤110. Es **peor** que el deck de Pato y tiene ritmo certificado | corrida, sale exactamente eso | E |
+| 76 | **`peso` ignora el texto por construcción**: K2 tiene **1.853 caracteres** (el segundo más alto del catálogo, 2,7× la mediana) y está etiquetado `visual` porque tiene 4 íconos. La derivación es `visual si recursos>=2 or lienzo oscuro`, y `presupuesto_texto` no entra nunca | confirmado: K2 peso=visual chars=1853 | E |
+| 77 | **La regla que más ataca lo soso es la única que no se implementó**: "apertura y cierre en verde-profundo o foto" existe en prosa y no en el chequeo. Una secuencia `A3→L1→E2→K1→I2→C1` —sin una sola slide oscura, o sea literalmente "white and sage back to back"— pasa | confirmado, no está en `_ritmo` | E |
+| 78 | **Un deck de 2 slides no imprime nada y dice "PUEDE entregarse"**: `len(usados) < 3` devuelve en silencio. Lo mismo un deck sin `data-modulo`, o con el atributo en minúscula. **Bajar dos slides del denominador da vuelta la cuota visual** | corrida, sale "PUEDE entregarse" sin medir | E |
+| 79 | **Se rellena con logos y el incentivo lo premia**: L1 (12 logos) y K1 (13 logos) son peso `visual`, y `motif`/`chart` también cuentan como recurso — o sea que **decorar sube el peso**. Una secuencia puede pasar con sus 4 "visuales" siendo dos veces la misma pared de logos más la portada y la contraportada obligatorias: **cero slides de contenido con visual** | E |
+| 80 | **No hay verificación de fidelidad entre el `data-modulo` declarado y la plantilla oficial.** El camino más corto al verde es **editar un atributo**, no cambiar de módulo. Y una carátula decorativa inventada con `data-modulo="M2"` pegado pasa igual: la segunda falla de Pato, la que él llamó "un desastre", **sigue 100% sin detección** | E |
+| 81 | La cuota visual es **no monótona**: para n=4 exige 50%, para n=9 el 33%, y en n=20 tolera 13 slides de texto. En decks cortos la portada y la contraportada obligatorias ya la saturan, así que la regla queda vacía | E |
+| 82 | **`llms-full.txt` trae la regla anti-adorno y NO trae el campo `perfil`.** Y `ai/claude.md` recomienda ese archivo como "empezá acá si dudás". O sea: el punto de entrada recomendado tiene la regla y no el dato con el que se ejecuta | confirmado: "lienzo blanco" aparece 3 veces, todas en prosa | E |
+| 83 | **Reproduje en el arreglo el defecto que documenté en D2.** Cuatro archivos oficiales siguen diciendo lo viejo: `BRAND.md:121` y `.ai/checklist.md:27` dicen "lienzo blanco o sage, un golpe de lima por slide" — contra D3 ("como máximo uno") y contra la regla nueva de apertura y cierre oscuros. Y `metodo.md` se titula v2.0 con una entrada 2.1 en el changelog | confirmado línea por línea | E |
+| 84 | **Apilé un bullet en vez de reescribir**: `selector.json` tiene una regla que dice literalmente "esa regla NO alcanza" sobre la regla anterior. Son 6 bullets donde debería haber uno coherente | confirmado | E |
+| 85 | **El contrato de entrega casi garantiza que el primer deck real salga inentregable**: con `facts.json` teniendo 3 cifras aprobadas y ninguna del deal, cada número va a `[PENDIENTE]` y la pieza sale sellada BORRADOR. Un deck con quince `[PENDIENTE]` no lo manda nadie — y eso hace abandonar más rápido que lo soso | I | alta |
+| 86 | **Condición mínima de adopción, textual del que no adopta:** ver la secuencia propuesta —módulo, lienzo, peso, y de dónde sale cada dato— **antes** de que se renderice una sola slide, y que el veredicto lo diga la misma IA en el chat. *"Si para saber si la pieza sirve tengo que clonar un repo y abrir una terminal, no lo voy a saber nunca."* | E |
+
+### El peor escenario, y es el argumento más fuerte de toda la Mesa
+
+Una IA compone la secuencia del hallazgo 75, corre el validador, obtiene verde, y lo dice en el chat:
+*el sistema de marca validó la composición*. Facu, que ya se comió la vuelta de Pato, **no vuelve a
+mirar la secuencia porque ahora hay un número que la mide.** Sale un muro de 13.000 caracteres que
+abre y cierra con la misma portada repetida y cuya única variedad son 13 logos mostrados dos veces.
+El cliente no dice "está soso": no contesta. Nadie relaciona ese silencio con el gate que pasó.
+
+**Construir una métrica que da verde sobre exactamente el deck que hizo abandonar al primer usuario
+real es peor que no tener métrica.**
