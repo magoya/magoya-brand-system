@@ -118,7 +118,7 @@ Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. *
 - **Hero canónico** (la pieza que define la marca): foto aérea + scrim verde + wordmark crema arriba-izq + CTA lima arriba-der + display ExtraBold abajo-izq con una frase en lima.
 - **Feed 1:1** — 3 recetas rotativas: foto (statement sobre aérea) · crema (aviso + avatar de comunidad) · dark (dato lima + personaje recortado). En redes, **display y cifras al ~70% del ancho**: grande o nada.
 - **Story 9:16**: foto arriba + bloque verde abajo con display y CTA lima. **Banner de LinkedIn**: foto del equipo en B&N + scrim negro degradado + wordmark crema + filete verde digital al borde (misma receta que la fotografía de personas). **Avatar de perfil**: cara (comunidad) / m (corporativo).
-- **Slides**: lienzos blanco/sage, como máximo un golpe de lima por slide (cero es válido: 19 de las 41 plantillas no llevan), margen interior 7% (`slides.html`, 41 módulos en 13 familias, exportables a .pptx). **Piezas comerciales**: one-pager madre + flyers derivados (`pieces.html`).
+- **Slides**: el lienzo lo trae la plantilla (blanco, sage, verde profundo o foto — ver `perfil.lienzo`), como máximo un golpe de lima por slide (cero es válido: 19 de las 41 plantillas no llevan), margen interior 7% (`slides.html`, 41 módulos en 13 familias, exportables a .pptx). **Piezas comerciales**: one-pager madre + flyers derivados (`pieces.html`).
 - **Export**: slides 16:9 1920×1080 · feed 1080×1080 · carrusel retrato 4:5 1080×1350 · story 1080×1920 (zona segura 96px) · favicon = avatar "m" 16/32/180/512px sin padding · print A4 sangrado 3mm, CMYK con prueba de color.
 
 ## 11. Merch & indumentaria

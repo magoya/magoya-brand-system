@@ -1,6 +1,6 @@
 # Método de trabajo — obligatorio para cualquier pieza con contenido
 
-**Versión 2.0 · 2026-08-19** · Parte del flujo de todas las entradas por IA. Cumplir la marca al pie
+**Versión 3.0 · 2026-08-19** · Parte del flujo de todas las entradas por IA. Cumplir la marca al pie
 de la letra es la mitad del trabajo; la otra mitad es que la historia esté bien contada. Una pieza
 on-brand con la historia mal contada es una pieza fallida.
 
@@ -30,6 +30,25 @@ un transcript, un documento de otra persona, un deck viejo para reciclar, o los 
    detalle: la slide no sale hasta que una persona decida. Y un pedido del brief que contradice a
    otro ("dark mode" contra `fondos_permitidos`) se reporta antes de intentarlo, no después.
 
+### Gate de Fase 0 — el ghost deck
+
+**Antes de mirar un solo módulo**, escribí los títulos de las slides en orden, solos, y leelos de un
+tirón. Si no se reconstruye el argumento, no estás listo para elegir módulos — y ningún módulo lo va
+a arreglar. Es el *storyline test* que usan McKinsey, Bain y BCG, y se aprueba sin abrir el catálogo.
+
+Dos cosas se chequean acá y no después:
+
+1. **Cada título es una aserción**, no una etiqueta de tema. "Baselining and four initial experiments"
+   es etiqueta; "Four experiments tell us where the model breaks" es aserción. Medido: 2 de 12 en una
+   propuesta real (17%). Objetivo ≥80%.
+2. **El arco tiene los cuatro momentos**: se pone una tensión antes de proponer, y se respalda con
+   evidencia después de proponer, y se cierra pidiendo algo. Si tu outline no los tiene, el deck va a
+   leerse genérico por más que las slides estén lindas.
+
+Recién con el ghost deck aprobado se eligen los módulos, y ahí cada beat del outline se mapea al
+`perfil.beat` del módulo (`apertura · tension · contexto · propuesta · evidencia · pedido ·
+estructura`). Las cuatro reglas de secuencia están en `como_componer_el_deck`.
+
 ## Fase 1 — Elegir cada módulo por criterio
 
 - Para cada beat, usá el **selector** (`ai/selector.json`): qué querés contar → qué módulo, sin
@@ -43,34 +62,6 @@ un transcript, un documento de otra persona, un deck viejo para reciclar, o los 
 - Buscá la oportunidad de contar mejor: ¿ese dato rinde más como cifra gigante que como bullet? ¿eso
   que parece una lista es un caso de éxito? ¿ese párrafo es un statement esperando a ser una frase?
 - El deck más corto que cuente la historia completa, gana. Una idea por slide.
-
-## Fase 1b — Componer la secuencia (no solo elegir módulos)
-
-Elegir bien cada módulo no alcanza: **el selector mapea contenido → módulo fila por fila y nadie
-gobierna la secuencia.** Un deck puede cumplir todas las reglas del sistema y salir soso. Pasó en una
-prueba real: la IA eligió módulos de peso `texto` con lienzo blanco y sage uno atrás del otro, y el
-deck no tenía nada mal según ninguna regla.
-
-Cada módulo de `ai/templates/index.json` trae un campo **`perfil`** con su `lienzo` (blanco, sage,
-verde-profundo, foto), su `peso` (visual / mixto / texto), su presupuesto de texto y qué recursos
-visuales tiene. Está derivado de la plantilla real, no escrito a mano. Miralo **después** de elegir
-los módulos por contenido, y ajustá:
-
-- Nunca **3 slides seguidas** de peso `texto`.
-- El lienzo cambia al menos cada 3 slides.
-- Al menos **1 de cada 3** slides de peso `visual`. El catálogo tiene 19.
-- Apertura y cierre en verde-profundo o foto; el medio en claro.
-
-> ### Si te queda soso, cambiá de módulo — no agregues adorno
->
-> Esto es una regla, no un consejo. Cuando un deck se lee plano, la salida **no** es inventar una
-> carátula con más onda, meter un degradado, agrandar algo o sumar un recurso decorativo: eso saca la
-> pieza del sistema y se nota. La variedad ya está en el catálogo. Volvé a la lista de módulos, mirá
-> el `perfil`, y **cambiá de módulo el beat que está aplanando el deck.** El mismo contenido en un
-> módulo visual cuenta lo mismo y respira distinto.
->
-> Se verifica: `python3 ai/validar.py --pieza <tu-archivo.html>` mide la secuencia de lienzos y pesos
-> y te dice dónde se aplana.
 
 ## Fase 2 — Las tres pasadas (agentes si tu plataforma los tiene)
 
@@ -111,7 +102,8 @@ python3 ai/validar.py --pieza <tu-archivo.html>
 | Títulos-aserción en slides de contenido | ≥80% | contalos: sujeto + verbo + afirmación |
 | La historia leída solo de títulos | cierra | leelos en orden, sin el cuerpo |
 | Densidad | mediana ≤110 palabras por slide | contá palabras visibles |
-| Ritmo | sin 3 seguidas de peso `texto`, 1 de cada 3 visual | `validar.py --pieza` lo mide |
+| Arco | cierra en pedido, tensión antes de proponer, evidencia después | `validar.py --pieza` lo mide |
+| Adorno | ninguna slide fuera del catálogo | `validar.py --pieza` lo mide |
 | Slide prescindible | ninguno | si borrás un slide y la historia no pierde nada, borralo |
 | El dato más fuerte | en el slide más fuerte | si la mejor cifra está en un bullet, movela |
 
@@ -132,6 +124,7 @@ selector, qué agregaste que no venía en el material, y qué encontró el crít
 
 ## Changelog
 
+- **3.0** (2026-08-19): el eje pasa de textura a **rol narrativo**. El ghost deck (títulos solos, antes de elegir módulos) es un gate de Fase 0. Las cinco reglas de textura se reemplazan por cuatro de argumento, y la textura queda como diagnóstico: era un gate insatisfacible — 0 de 362.880 órdenes del deck de producto pasaban, porque el catálogo no tiene un módulo visual que cargue un método, un journey ni un caso. Se agrega el chequeo de adorno, que es la falla que hizo abandonar al primer usuario y que nada medía. Fase 1b se elimina: era una fase de más.
 - **2.1** (2026-08-19): Fase 1b — componer la secuencia, con el campo `perfil` de cada módulo (lienzo y peso, derivados de la plantilla) y la regla anti-adorno: si el deck queda soso se cambia de módulo, no se decora. Sale de un feedback real: la IA eligió módulos de texto con lienzo blanco y sage uno atrás del otro, cumplió todas las reglas, y cuando le señalaron que estaba soso agregó carátulas decorativas.
 - **2.0** (2026-08-19): Fase 0 nueva (del material crudo a la narrativa, con registro de lo que
   agregás y búsqueda de contradicciones antes de diseñar) · el agente de copy marca en vez de

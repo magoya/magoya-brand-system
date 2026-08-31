@@ -154,6 +154,40 @@ def perfil_de_modulos(idx_modulos):
     return perfiles, med
 
 
+# ─── rol narrativo (beat) por módulo ────────────────────────────────────────
+# El eje que gobierna el mercado (Sequoia, Storydoc, el ghost deck de McKinsey) es el
+# ROL en el argumento, no la textura. Se deriva de lo que cada módulo ya declara que
+# carga estructuralmente — la regla de derivación va publicada, para que sea auditable
+# y corregible, no una opinión escondida en el código.
+BEAT_POR_MODULO = {
+ 'M1': 'apertura', 'M2': 'apertura', 'M3': 'pedido',
+ 'A3': 'estructura', 'A4': 'estructura', 'A5': 'estructura',
+ 'A1': 'tension', 'H3': 'tension', 'I1': 'tension', 'I2': 'tension',
+ 'A2': 'contexto', 'H1': 'contexto', 'H2': 'contexto', 'H4': 'contexto',
+ 'B1': 'propuesta', 'B2': 'propuesta', 'B3': 'propuesta',
+ 'E1': 'propuesta', 'E2': 'propuesta',
+ 'F1': 'propuesta', 'F2': 'propuesta', 'F3': 'propuesta', 'F4': 'propuesta',
+ 'J3': 'propuesta', 'K2': 'propuesta',
+ 'C1': 'evidencia', 'C2': 'evidencia', 'C3': 'evidencia', 'C4': 'evidencia',
+ 'D1': 'evidencia', 'D2': 'evidencia', 'D3': 'evidencia', 'D4': 'evidencia',
+ 'G1': 'evidencia', 'G2': 'evidencia',
+ 'J1': 'evidencia', 'J2': 'evidencia', 'K1': 'evidencia', 'L1': 'evidencia',
+ 'E3': 'pedido', 'E4': 'pedido',
+}
+COMO_SE_DERIVO = {
+ 'apertura':   'su cuando_usarlo dice que es portada',
+ 'pedido':     'cierra el deck o pone el ask comercial (escenarios de inversión)',
+ 'estructura': 'da aire u orientación, no argumenta (agenda, divisor, título de capítulo)',
+ 'tension':    'statement que reencuadra: una sola idea que carga el sentido',
+ 'contexto':   'sitúa el mercado o aclara el statement antes de proponer',
+ 'propuesta':  'qué hacemos, cómo lo hacemos y con quién (servicios, método, journey, pod)',
+ 'evidencia':  'respalda con cifra, gráfico, caso o tercero',
+}
+A_REVISAR = {'A1': ('A1 es el único ambiguo: su cuando_usarlo dice "abrir un bloque con una sola '
+  'idea", que puede ser tensión o propuesta según el bloque. Se derivó como tensión porque la frase '
+  'que carga el sentido suele reencuadrar. Si en la práctica se usa para proponer, corregilo acá.')}
+
+
 tree = {}
 NO_PUBLICABLE = ('assets/refs',)   # gitignored: sus URLs darían 404 en el sitio
 for root, dirs, files in os.walk('assets'):
@@ -191,38 +225,51 @@ _idx = json.load(open('ai/templates/index.json'))
 _perf, _med = perfil_de_modulos(_idx['modulos'])
 for _m in _idx['modulos']:
     _m['perfil'] = _perf.get(_m['id'], {})
+for _m in _idx['modulos']:
+    _m['perfil']['beat'] = BEAT_POR_MODULO.get(_m['id'], 'revisar')
+import collections as _c2
+_idx['roles_narrativos'] = {
+ 'que_es': ('El rol de cada módulo en el argumento. Es el eje que gobierna la secuencia; la textura '
+            '(lienzo, peso visual) es consecuencia, no causa. Viene de cómo lo gobierna el mercado: '
+            'Sequoia ordena sus 10 slides por rol, y el ghost deck de McKinsey se aprueba leyendo '
+            'solo los títulos, en orden, sin las slides.'),
+ 'como_se_derivo': COMO_SE_DERIVO,
+ 'a_revisar': A_REVISAR,
+ 'inventario': dict(_c2.Counter(m['perfil']['beat'] for m in _idx['modulos'])),
+}
 _idx['como_componer_el_deck'] = {
  'por_que': ('El selector mapea contenido → módulo fila por fila, y nadie gobierna la SECUENCIA. '
-             'Un deck puede cumplir todas las reglas del sistema y salir soso: es lo que pasó en una '
-             'prueba real: la IA eligió módulos de peso "texto" con lienzo blanco y sage uno atrás del '
-             'otro. El catálogo SÍ tiene variedad — usala.'),
- 'el_perfil_de_cada_modulo': ('cada módulo trae un campo "perfil" con lienzo, peso (visual/mixto/texto), '
-             'presupuesto de texto y qué recursos visuales tiene. Está derivado de la plantilla real, '
-             'no escrito a mano. Usalo para componer, no para elegir qué contar.'),
- 'reglas_de_composicion': [
-   'Nunca 3 slides seguidas de peso "texto". Si tu historia te lleva ahí, alguna de esas ideas rinde mejor en un módulo visual.',
-   'El lienzo cambia al menos cada 3 slides: no más de 3 seguidas del mismo (blanco, sage, verde-profundo o foto).',
-   'Al menos 1 de cada 3 slides lleva peso "visual".',
-   'Apertura y cierre en verde-profundo o foto. El medio en claro. Todo verde se lee como una sola pieza repetida, no como un recorrido.',
-   'Nunca dos slides seguidas del mismo módulo, y alterná lado con los pares espejo (H1/H2, I1/I2).',
+             'Un deck puede cumplir todas las reglas de marca y salir soso. Pasó en una prueba real. '
+             'Lo que gobierna la secuencia es el ROL de cada slide en el argumento (campo perfil.beat), '
+             'no su textura: la textura es consecuencia.'),
+ 'las_cuatro_reglas': [
+   'La última slide es beat "pedido". No se cierra sin pedir algo.',
+   'Antes del primer beat "propuesta" tiene que haber al menos un beat "tension". No se propone sin haber puesto el problema.',
+   'Después del primer beat "propuesta" tiene que haber al menos un beat "evidencia". No se afirma sin respaldar.',
+   'No más de 3 beats iguales seguidos. Cuatro slides de propuesta seguidas es un catálogo, no un argumento.',
  ],
- 'si_te_queda_soso': ('NO agregues adorno y NO inventes una carátula con más onda: eso saca la pieza del '
-             'sistema. La variedad sale del catálogo. Volvé a la lista de módulos, mirá el campo "perfil", '
-             'y cambiá de MÓDULO el beat que está aplanando el deck — el mismo contenido en un módulo '
-             'visual cuenta lo mismo y respira distinto.'),
+ 'si_una_regla_no_se_puede_cumplir': ('decilo explícito en la entrega, con el motivo. Una excepción '
+             'declarada es aceptable; una regla incumplida en silencio no. Ejemplo real: el resumen '
+             'ejecutivo no tiene CTA, así que no puede cerrar en "pedido" — eso se declara.'),
+ 'textura_es_diagnostico_no_regla': ('El campo perfil trae lienzo y peso (visual/mixto/texto) para que '
+             'puedas ver si el deck se aplana. NO es un gate: fue uno y se retiró, porque el catálogo '
+             'no tiene todavía un módulo visual que cargue un método, un journey ni un caso, así que '
+             'un deck de producto no podía cumplirlo (0 de 362.880 órdenes posibles). Miralo, no lo '
+             'persigas. Si te queda denso, lo correcto es DECIRLO, no forzar la secuencia.'),
+ 'si_te_queda_soso': ('NO agregues adorno y NO inventes una carátula: hay meta-análisis de que los '
+             'detalles decorativos bajan comprensión y recall (seductive details, 177 effect sizes). '
+             'Primero revisá el argumento con las cuatro reglas de arriba — soso casi siempre es '
+             '"propone sin tensión" o "cuatro propuestas seguidas", no falta de color. Si el argumento '
+             'está bien y sigue denso, es que falta un módulo en el catálogo: reportalo.'),
  'inventario': {
-   'por_lienzo': {},
-   'por_peso': {},
+   'por_beat': dict(_c2.Counter(m['perfil']['beat'] for m in _idx['modulos'])),
+   'por_lienzo': dict(_c2.Counter(m['perfil']['lienzo'] for m in _idx['modulos'])),
+   'por_peso': dict(_c2.Counter(m['perfil']['peso'] for m in _idx['modulos'])),
    'mediana_de_presupuesto_de_texto': _med,
+   'sin_portador_visual': ('los beats "propuesta" que cargan método, journey o caso (F2, F3, E1, G1) '
+             'son todos peso texto y no tienen recambio visual en el catálogo. Es un hueco conocido.'),
  },
 }
-import collections as _col
-_idx['como_componer_el_deck']['inventario']['por_lienzo'] = dict(
-    _col.Counter(p['lienzo'] for p in _perf.values()))
-_idx['como_componer_el_deck']['inventario']['por_peso'] = dict(
-    _col.Counter(p['peso'] for p in _perf.values()))
-_idx['como_componer_el_deck']['inventario']['visuales'] = sorted(
-    k for k, p in _perf.items() if p['peso'] == 'visual')
 json.dump(_idx, open('ai/templates/index.json', 'w'), ensure_ascii=False, indent=1)
 print('perfil de composicion: %d modulos · lienzos %s' % (len(_perf),
       _idx['como_componer_el_deck']['inventario']['por_lienzo']))
@@ -237,9 +284,15 @@ tpl = json.load(open('ai/templates/index.json'))
 lines = ['\n\n# ===== PLANTILLAS LISTAS (llenar slots, NO tocar geometria) =====\n',
          tpl['que_es'], '']
 for m in tpl['modulos']:
-    lines.append(f"- {m['id']} · {m['nombre']} -> {m['url']} · slots: " +
+    _p = m.get('perfil', {})
+    lines.append(f"- {m['id']} · {m['nombre']} · beat: {_p.get('beat','?')} · lienzo: "
+                 f"{_p.get('lienzo','?')} · peso: {_p.get('peso','?')} -> {m['url']} · slots: " +
                  ', '.join(f"{s['slot']}({s['rol']},max {s.get('max_caracteres_aprox','?')}ch)" for s in m['slots'][:6]))
 parts.append('\n'.join(lines))
+parts.append('\n\n# ===== COMO COMPONER EL DECK (el arco manda, la textura es consecuencia) =====\n\n'
+             + json.dumps(tpl['como_componer_el_deck'], ensure_ascii=False, indent=1)
+             + '\n\n' + json.dumps(tpl['roles_narrativos'], ensure_ascii=False, indent=1))
+parts.append('\n\n# ===== PRECEDENCIA (quien gana cuando dos reglas chocan) =====\n\n' + open('ai/precedencia.json').read())
 parts.append('\n\n# ===== METODO DE TRABAJO (obligatorio) =====\n\n' + open('ai/metodo.md').read())
 parts.append('\n\n# ===== CHECKLIST DE ENTREGA =====\n\n' + open('.ai/checklist.md').read())
 open('llms-full.txt', 'w').write('\n'.join(parts))

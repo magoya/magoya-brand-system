@@ -414,9 +414,100 @@ def _ritmo(path):
     else:
         print('sin señales de monotonía: %d slides, %d visuales, %d lienzos distintos'
               % (len(usados), visuales, len(set(lienzos))))
-    print('OJO: esto es un diagnóstico de TEXTURA, no un veredicto. No mide el argumento')
-    print('     (¿los títulos solos sostienen la historia?), ni la densidad entregada,')
-    print('     ni el adorno inventado. Que no haya señales acá no dice que el deck esté bien.')
+    print('OJO: TEXTURA, no veredicto. El argumento y el adorno se miden arriba; lo que')
+    print('     nadie mide todavía es si los títulos solos sostienen la historia y la')
+    print('     densidad realmente entregada. Que no haya señales acá no dice que esté bien.')
+    return problemas
+
+
+def _arco(path):
+    """GATE de argumento. Reemplaza al gate de textura que se retiró en G3: aquel era
+    insatisfacible (0 de 362.880 órdenes del deck de producto pasaban) y daba verde
+    sobre el deck que hizo abandonar al primer usuario. Estas cuatro reglas gobiernan
+    el ROL de cada slide en el argumento, que es el eje que gobierna el mercado.
+    Verificado: aceptan el deck de producto y rechazan la secuencia sosa."""
+    s = io.open(path, encoding='utf-8', errors='ignore').read()
+    usados = re.findall(r'data-modulo="([A-M]\d{1,2})"', s, re.I)
+    if not usados:
+        print('\n--- argumento ---')
+        print('[FALLA] ninguna slide declara data-modulo: no se puede verificar nada.')
+        print('        Las plantillas oficiales lo traen; si no está, la pieza no salió del catálogo.')
+        return ['sin data-modulo']
+    perf = {m['id']: m.get('perfil', {}) for m in cargar('ai/templates/index.json')['modulos']}
+    b = [perf.get(m.upper(), {}).get('beat', '?') for m in usados]
+    problemas = []
+    if b[-1] != 'pedido':
+        problemas.append('la última slide es beat "%s" y tiene que ser "pedido": no se cierra sin '
+                         'pedir algo' % b[-1])
+    if 'propuesta' in b:
+        i = b.index('propuesta')
+        if 'tension' not in b[:i]:
+            problemas.append('propone en la slide %d sin haber puesto tensión antes. Es la causa más '
+                             'común de que un deck se lea genérico' % (i + 1))
+        if 'evidencia' not in b[i:]:
+            problemas.append('propone y no respalda con evidencia después')
+    mejor = act = 0
+    cual = None
+    for k in range(len(b)):
+        act = act + 1 if k and b[k] == b[k - 1] else 1
+        if act > mejor:
+            mejor, cual = act, b[k]
+    if mejor > 3:
+        problemas.append('%d beats "%s" seguidos: eso es un catálogo, no un argumento' % (mejor, cual))
+
+    print('\n--- argumento ---')
+    print('arco: %s' % ' → '.join('%s(%s)' % (m.upper(), x[:4]) for m, x in zip(usados, b)))
+    for p in problemas:
+        print('[FALLA] %s' % p)
+    if not problemas:
+        print('[OK] el arco cierra: %d slides' % len(usados))
+    else:
+        print('       Si alguna de estas no se puede cumplir, declaralo con el motivo en la entrega.')
+    return problemas
+
+
+def _adorno(path):
+    """La falla que hizo abandonar al usuario y que nada medía: cuando le dijeron que el
+    deck estaba soso, la IA agregó carátulas decorativas. El chequeo de textura no las
+    veía y encima las sacaba del denominador."""
+    s = io.open(path, encoding='utf-8', errors='ignore').read()
+    # un contenedor .slide sin data-modulo solo cuenta como inventado si RENDERIZA como
+    # slide (tiene elementos posicionados). El deck-starter trae un .slide con las
+    # instrucciones de copiar y pegar, y ese no es una carátula inventada.
+    inventadas = 0
+    for c in re.finditer(r'<div[^>]*class="[^"]*\bslide\b[^"]*"([^>]*)>(.*?)(?=<div[^>]*class="[^"]*\bslide\b|\Z)', s, re.S):
+        if 'data-modulo' in c.group(1):
+            continue
+        if re.search(r'class="(t|r|im)"', c.group(2)):
+            inventadas += 1
+    contenedores = inventadas + len(re.findall(r'data-modulo="[A-Ma-m]\d{1,2}"', s))
+    declaradas = len(re.findall(r'data-modulo="[A-Ma-m]\d{1,2}"', s))
+    problemas = []
+    print('\n--- adorno ---')
+    if contenedores > declaradas:
+        problemas.append('%d slides sin data-modulo sobre %d contenedores: son slides que no salieron '
+                         'del catálogo. Si es una carátula inventada, sacala y usá M1 o M2'
+                         % (contenedores - declaradas, contenedores))
+    idx = {m['id']: m for m in cargar('ai/templates/index.json')['modulos']}
+    extra = []
+    for mm in re.finditer(r'data-modulo="([A-Ma-m]\d{1,2})"(.*?)(?=data-modulo="|$)', s, re.S):
+        mid = mm.group(1).upper()
+        if mid not in idx:
+            continue
+        declarados = {sl['slot'] for sl in idx[mid].get('slots', [])}
+        # los slots de imagen los emite la plantilla y index.json no los declara todavía:
+        # se comparan por NOMBRE y se ignoran los img*, para no cantar un falso positivo.
+        puestos = {x for x in re.findall(r'data-slot="([^"]+)"', mm.group(2))
+                   if not re.fullmatch(r'img\d+', x)}
+        desconocidos = sorted(puestos - declarados)
+        if desconocidos:
+            extra.append('%s usa slots que la plantilla no declara: %s' % (mid, ', '.join(desconocidos)))
+    if extra:
+        problemas.append('slots de más respecto de la plantilla oficial: %s' % ', '.join(extra[:6]))
+    for p in problemas:
+        print('[FALLA] %s' % p)
+    if not problemas:
+        print('[OK] todas las slides salen del catálogo, sin elementos de más')
     return problemas
 
 def validar_pieza(path):
@@ -477,9 +568,11 @@ def validar_pieza(path):
     elif pendientes:
         print('\n[OK] el pedido a humanos está presente')
 
-    _ritmo(path)   # DIAGNOSTICO, no gate: ver la nota en _ritmo()
+    prob_arco = _arco(path)          # GATE: el argumento
+    prob_adorno = _adorno(path)      # GATE: que la pieza salga del catálogo
+    _ritmo(path)                     # diagnóstico de textura, no gate
     ok_total = (not sueltas and not (pendientes and not borrador)
-                and not (pendientes and not pedido))
+                and not (pendientes and not pedido) and not prob_arco and not prob_adorno)
     print('\n' + '-' * 72)
     print('la pieza %s' % ('PUEDE entregarse' if ok_total else 'NO puede entregarse todavía'))
     return 0 if ok_total else 1

@@ -5,9 +5,7 @@
   "Una idea por slide. Si tu contenido tiene dos ideas, son dos filas de esta tabla.",
   "El dato más fuerte del deck merece el módulo más fuerte (C3 antes que una fila de bullets).",
   "El deck más corto que cuenta la historia completa, gana. No rellenes con módulos porque existen.",
-  "Alterná ritmo: nunca dos slides seguidas del mismo módulo, y alterná lado con los pares espejo (H1/H2, I1/I2).",
-  "Esa regla NO alcanza: un deck puede cumplirla y salir soso. Después de elegir los módulos por contenido, componé la secuencia con el campo \"perfil\" de cada módulo en templates/index.json (lienzo y peso) y las reglas de \"como_componer_el_deck\". Nunca 3 seguidas de peso texto, el lienzo cambia cada 3, y 1 de cada 3 slides es de peso visual.",
-  "Si el deck te queda soso NO agregues adorno ni inventes una carátula: cambiá de módulo el beat que lo aplana. La variedad sale del catálogo."
+  "Elegir bien cada módulo NO alcanza: la secuencia se gobierna aparte, por el rol narrativo de cada slide (campo perfil.beat) y las cuatro reglas de \"como_componer_el_deck\" en templates/index.json. Si te queda soso, el problema casi siempre es el arco —propone sin tensión, o cuatro propuestas seguidas— y nunca se arregla con adorno."
  ],
  "decision": [
   {

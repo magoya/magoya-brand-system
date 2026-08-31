@@ -181,3 +181,48 @@ salir con una cuenta neta de reglas y de archivos igual o menor. Empezando por d
 detecté como mío: `BRAND.md:121` y `.ai/checklist.md:27` siguen diciendo lo viejo (H83), `llms-full.txt`
 trae la regla sin el dato (H82), y `selector.json` tiene un bullet que dice "esa regla NO alcanza"
 sobre el anterior (H84).
+
+## D6 · 2026-08-19 · Ejecutado: el eje es el rol narrativo, con cuenta neta menor
+
+Alcance elegido por Facu: puntos 1, 2 y 3 de D5, más deshacer mi ruido. Y la condición de la
+disidencia se cumplió — **el sistema tiene menos reglas que antes, no más**:
+
+| | Antes | Ahora |
+|---|---|---|
+| Reglas de selección | 6 (con un bullet que decía "esa regla NO alcanza" sobre el anterior) | **4** |
+| Reglas de composición | 5, de textura, insatisfacibles | **4**, de argumento |
+| Fases del método | 5 | **4** (Fase 1b era una fase de más) |
+| Archivos en `ai/` | 14 | **14** (el `beat` vive en `index.json`, no en un archivo nuevo) |
+
+**1 · `beat` por módulo.** Los 41 módulos declaran su rol en el argumento: `apertura` 2, `tension` 4,
+`contexto` 4, `propuesta` 11, `evidencia` 14, `pedido` 3, `estructura` 3. La regla de derivación va
+publicada en `roles_narrativos.como_se_derivo` para que sea auditable, y **A1 queda marcado como el
+único ambiguo** — no lo resolví por mí, lo dejé señalado para que lo corrija quien lo use.
+
+**Las cuatro reglas nuevas, y la prueba de que son el eje correcto:**
+
+| Deck | Reglas viejas (textura) | Reglas nuevas (argumento) |
+|---|---|---|
+| de producto (`M1·A1·A3·F2·E1·F4·G1·J3·M3`) | **0 de 362.880 órdenes pasaban** | **pasa** |
+| la secuencia sosa que el gate certificaba | `[OK] ritmo` | **falla con 3 razones**: cierra en apertura, propone sin tensión, 4 propuestas seguidas |
+| el de 5 slides de la prueba a ciegas | pasaba | **pasa**, con arco limpio apertura→tensión→propuesta→evidencia→pedido |
+| el de 9 slides de la otra prueba | pasaba | **falla**: propone en la slide 2 sin tensión — y es el diagnóstico correcto de por qué un deck de credenciales se lee genérico |
+
+**2 · El ghost deck es un gate de Fase 0**, antes de mirar un módulo: los títulos solos tienen que
+sostener el argumento. Es el *storyline test* de McKinsey/Bain/BCG y se aprueba sin abrir el catálogo.
+
+**3 · El adorno se mide** — la falla que hizo abandonar al usuario y que nada detectaba. Cuenta
+contenedores de slide que renderizan y no declaran `data-modulo`, y slots que la plantilla no declara.
+Probado contra una carátula inventada de verdad: la agarra. Y dos falsos positivos que encontré
+probándolo contra un deck real (el bloque de instrucciones del starter, y los slots `img*` que la
+plantilla emite y `index.json` no declara) están corregidos.
+
+**Mi ruido, deshecho:** `BRAND.md:121` y `.ai/checklist.md:27` ya no dicen "lienzo blanco o sage";
+`llms-full.txt` ahora **sí trae el `beat` de los 41 módulos** más las reglas de secuencia y la
+precedencia (74KB, lejos del techo de truncamiento); y `selector.json` tiene una sola regla sobre
+secuencia en vez de tres apiladas.
+
+**Lo que sigue, elegido por Facu: G4/G5 sobre los módulos que el catálogo debe.** Es la causa raíz de
+que la IA decorara (H88, H89): F2, F3, E1 y G1 cargan método, journey y caso, son todos peso texto, y
+no tienen recambio visual. Mientras eso no exista, un deck de producto va a ser denso y **lo correcto
+es declararlo, no forzar la secuencia** — así quedó escrito en `como_componer_el_deck`.
