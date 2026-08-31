@@ -169,9 +169,12 @@ ENUNCIA_REGLA = ('nunca AI', "nunca 'AI'", 'Nunca "AI', 'IA, no AI', 'escribe "A
 
 def check_nomenclatura():
     malos = []
+    # los SVG de assets/pieces llevan copy VISIBLE y quedaban fuera del barrido: la pieza
+    # patrón del 4:5 publicaba "AI EN CAMPO" en el kicker y ninguna corrida lo vio.
     objetivo = sorted(set(glob.glob('*.html') + glob.glob('ai/*.json') + glob.glob('ai/*.md')
                           + ['llms.txt', 'llms-full.txt', 'BRAND.md', '.ai/checklist.md']
-                          + glob.glob('ai/templates/*.txt')))
+                          + glob.glob('ai/templates/*.txt')
+                          + glob.glob('assets/pieces/*.svg') + glob.glob('assets/studio/*.svg')))
     for f in objetivo:
         if not os.path.exists(f):
             continue
@@ -357,9 +360,18 @@ def check_reglas_auditables():
 # ─── modo pieza: valida un HTML entregado, no el repo ───────────────────────
 
 def _ritmo(path):
-    """Mide la composición del deck entregado: la falla que ninguna regla del sistema
-    detectaba. Un deck puede cumplir todo y salir soso — eso pasó en una prueba real
-    donde la IA puso módulos de peso 'texto' con lienzo blanco y sage uno atrás del otro."""
+    """DIAGNOSTICO, NO GATE. Imprime la composición para que una persona la mire.
+
+    Fue un gate y se retiró en G3 de la Mesa, por tres razones verificadas:
+      1. Es insatisfacible para una clase real de deck: 0 de 362.880 órdenes del deck
+         de producto canónico pasaban las cinco reglas, porque el catálogo no tiene un
+         módulo visual que cargue un método, un journey ni un caso.
+      2. Daba verde sobre secuencias peores que la que hizo abandonar al primer usuario
+         real: M2-F3-E4-K2-F2-B2-B3-G2-M2 son 13.482 caracteres y salía [OK].
+      3. El eje era cosmético. El mercado gobierna la secuencia por ROL NARRATIVO
+         (Sequoia, Storydoc, ghost deck de McKinsey), no por lienzo y peso.
+    Una métrica que da verde sobre el deck que hizo abandonar es peor que no tenerla.
+    """
     s = io.open(path, encoding='utf-8', errors='ignore').read()
     usados = re.findall(r'data-modulo="([A-M]\d{1,2})"', s)
     if len(usados) < 3:
@@ -398,10 +410,13 @@ def _ritmo(path):
           (perf.get(m,{}).get('lienzo','?'))[:5]) for m in usados))
     if problemas:
         for p in problemas:
-            print('[FALLA] %s' % p)
+            print('[MIRÁ] %s' % p)
     else:
-        print('[OK] ritmo: %d slides, %d visuales, %d lienzos distintos'
+        print('sin señales de monotonía: %d slides, %d visuales, %d lienzos distintos'
               % (len(usados), visuales, len(set(lienzos))))
+    print('OJO: esto es un diagnóstico de TEXTURA, no un veredicto. No mide el argumento')
+    print('     (¿los títulos solos sostienen la historia?), ni la densidad entregada,')
+    print('     ni el adorno inventado. Que no haya señales acá no dice que el deck esté bien.')
     return problemas
 
 def validar_pieza(path):
@@ -462,9 +477,9 @@ def validar_pieza(path):
     elif pendientes:
         print('\n[OK] el pedido a humanos está presente')
 
-    prob_ritmo = _ritmo(path)
+    _ritmo(path)   # DIAGNOSTICO, no gate: ver la nota en _ritmo()
     ok_total = (not sueltas and not (pendientes and not borrador)
-                and not (pendientes and not pedido) and not prob_ritmo)
+                and not (pendientes and not pedido))
     print('\n' + '-' * 72)
     print('la pieza %s' % ('PUEDE entregarse' if ok_total else 'NO puede entregarse todavía'))
     return 0 if ok_total else 1

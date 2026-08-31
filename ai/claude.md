@@ -36,7 +36,7 @@ https://brand.magoya.com/ai/templates/<ID>.txt    <- la plantilla como TEXTO PLA
 https://brand.magoya.com/ai/constraints.json  <- mínimos, clearspace, márgenes, safe areas
 https://brand.magoya.com/ai/assets.json       <- los 239 assets con URL directa
 https://brand.magoya.com/ai/metodo.md         <- método obligatorio (narrativa + agentes)
-https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md  <- 16 chequeos
+https://brand.magoya.com/.ai/checklist.md  <- 16 chequeos
 ```
 
 **Las dos reglas que más se rompen en este flujo:** (1) la plantilla se copia TAL CUAL — solo cambia el texto de los `data-slot`; (2) las cifras y textos de las plantillas son EJEMPLO: los datos reales están en `facts.json` y lo que no esté ahí se pide, nunca se inventa.
