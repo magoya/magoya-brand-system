@@ -132,3 +132,52 @@ reglas?) y no *calidad* (¿está bien contado?). El crítico del protocolo seman
 checklist, y el checklist no tenía nada de ritmo. **Un panel que solo mide conformidad no detecta lo
 soso.** El bloque 2 del protocolo semanal necesita una pregunta más: *¿esta pieza te daría vergüenza
 mandarla?* — y el chequeo de composición ahora la vuelve parcialmente objetiva.
+
+## D5 · 2026-08-19 · G3: se retira el gate de composición y cambia el eje
+
+**Las cuatro voces convergieron desde ángulos distintos, y todas contra D4.** Verifiqué cada traza
+corriéndola; ninguna quedó en opinión.
+
+**La decisión inmediata, ya ejecutada.** El chequeo de ritmo **deja de ser un gate** y pasa a ser un
+diagnóstico que imprime la composición y declara explícitamente qué NO mide. Tres razones, todas
+verificadas:
+
+1. **Es insatisfacible para una clase real de deck.** 0 de 362.860 órdenes del deck de producto
+   canónico pasaban las cinco reglas (H87), porque el catálogo no tiene un módulo visual que cargue
+   un método, un journey ni un caso (H88).
+2. **Daba verde sobre secuencias peores que la que hizo abandonar al primer usuario** (H75).
+3. **Yo mismo lo cerré afirmando "cinco reglas verificables" y eran cuatro** — y el deck que usé como
+   prueba de que la medición coincidía con el juicio humano viola la quinta y sale `[OK]` (H98).
+
+Una métrica que da verde sobre el deck que hizo abandonar es peor que no tener métrica. Retirarla no
+es un paso atrás: es sacar una afirmación falsa de circulación.
+
+**El eje era el equivocado, y esto es el hallazgo central del gate.** El mercado —Sequoia, Storydoc,
+el ghost deck de McKinsey— gobierna la secuencia por **rol narrativo**; nosotros elegimos **textura**
+(lienzo y peso visual). Solapamiento cero. Textura es consecuencia; argumento es causa. Y nuestro
+propio umbral ("1 de cada 3 visual") es **más bajo que la fuente que citamos** para justificarlo:
+Garner & Alley pide aserción + evidencia visual en cada slide (H102).
+
+**Lo que queda decidido como dirección** (el alcance lo elige Facu, no el panel):
+
+| # | Qué | Por qué, con el hallazgo |
+|---|---|---|
+| 1 | **`beat` por módulo** (contexto / tensión / propuesta / evidencia / pedido) como eje primario, y `selector.json` gana la columna de rol que hoy no tiene | H97: es el eje que gobierna el mercado, y es verificable porque el tag vive en las 41 filas del catálogo, no en el copy |
+| 2 | **El ghost deck va ANTES de elegir módulos**: los títulos solos tienen que sostener el argumento y eso se aprueba primero | H100: el deck aprobado tiene 1 de 5 títulos con verbo. La Fase 1b compone ritmo sobre un orden cuyo argumento nunca se testeó |
+| 3 | **El adorno se mide**: contenedores de slide contra slides con `data-modulo`, y nodos fuera de los slots declarados | H104: hoy el chequeo es ciego a la peor falla y encima la saca del denominador. Base empírica en H103 |
+| 4 | **`peso` tiene que mirar el texto**, y la densidad entregada se mide sobre la pieza, no sobre el presupuesto | H76: K2 con 1.853 caracteres está etiquetado `visual` por 4 íconos |
+| 5 | **El veredicto lo da la IA en el chat, antes de renderizar** — la secuencia propuesta con módulo, rol, y de dónde sale cada dato | H86, textual del que no adopta: *"si para saber si la pieza sirve tengo que clonar un repo y abrir una terminal, no lo voy a saber nunca"* |
+| 6 | **La audiencia entra como variable de primer nivel**, codificando la matriz que ya existe | H92: `VOICE-RESEARCH §4.2` la tiene escrita y admite que los aciertos son "por intuición del autor, no regla del sistema". En todo el spec la palabra aparece una vez |
+| 7 | **Se mide el archivo entregado, no el master** | H90: `build_pdf.py` saca la slide de inversión completa en una variante, y el PDF es la pieza que el prospecto se queda |
+| 8 | **El contrato de entrega se afloja**: distinguir "falta el dato" de "el dato contradice". Lo segundo bloquea; lo primero marca sin sellar la pieza entera | H85: un deck con quince `[PENDIENTE]` sellado BORRADOR no lo manda nadie, y eso hace abandonar más rápido que lo soso |
+| 9 | **El catálogo le debe módulos al sistema**: portadores visuales de método, journey y caso; cierres para los otros 3 momentos comerciales; una fila para el calendario del cliente | H88, H93, H94. Es trabajo de diseño en `slides.html`, no del panel |
+| 10 | **Léxico por cuenta en `facts.json`** | H95: Doug barrió *adoption → utilization* en dos commits y el sistema no tiene dónde guardar eso |
+
+**Disidencia registrada (usuario-no-adopta), y es la que más me preocupa.** Sostiene que el problema
+es **exceso de reglas, no falta**: el camino obligatorio ya son 12 archivos y ~5.000 líneas, y D4
+agregó cinco reglas al fondo de un JSON de 3.171 líneas. Si los puntos 1 a 10 se ejecutan sumando
+archivos, la próxima IA tampoco los va a leer. **No se promedia:** cualquier implementación tiene que
+salir con una cuenta neta de reglas y de archivos igual o menor. Empezando por deshacer lo que ya
+detecté como mío: `BRAND.md:121` y `.ai/checklist.md:27` siguen diciendo lo viejo (H83), `llms-full.txt`
+trae la regla sin el dato (H82), y `selector.json` tiene un bullet que dice "esa regla NO alcanza"
+sobre el anterior (H84).

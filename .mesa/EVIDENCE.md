@@ -220,3 +220,16 @@ real es peor que no tener métrica.**
 | 94 | **El calendario del cliente no tiene fila en el selector y entró por una vuelta de feedback.** En JD es un beat entero (banda Sep→May con Safrinha contra el timeline del piloto, "The season won't wait" justificando los 12 meses) y lo produjo el commit `dca5848`, no la primera pasada. F1 es un carril de 5 hitos, peso texto | E |
 | 95 | **El léxico del cliente tampoco.** Doug barrió *adoption → utilization* en todo el deck en dos commits. `facts.json` gobierna cifras, clientes y equipo — **no tiene una sola clave de vocabulario por cuenta**. Y esto sí se mide: contar commits que solo cambian un término de punta a punta | E |
 | 96 | Honestidad del que emitió: la variable "renovación" está inferida de un memory file, no de un artefacto, porque `renovacion-fv` no existe como pieza. No la firma | E |
+
+## G3 — Challenge · challenger-mercado
+
+| # | Hallazgo | Verificación mía | Tipo |
+|---|---|---|---|
+| 97 | **El mercado gobierna la secuencia por ROL NARRATIVO, no por textura.** Sequoia/Slidebean publica 10 slides ordenadas por rol (Problem → Solution → Why Now), Storydoc genera una secuencia fija por función, y McKinsey/Bain/BCG lo formalizan como *ghost deck* + *storyline test*: leer solo los títulos, en orden, sin las slides. Nuestro eje gobierna textura. **Solapamiento cero: elegimos el eje cosmético** | E |
+| 98 | **Son cuatro reglas medidas, no cinco, y D4 cerró el gate afirmando "cinco reglas verificables".** La regla de apertura y cierre no tiene instrumento. Peor: **el deck que yo usé como referencia de que "la medición coincide con el juicio humano" (hallazgo 74) cierra en `M3(tex/sage)`, viola esa regla, y el checker imprime `[OK] ritmo`** | confirmado por inspección de mi propio output | E |
+| 99 | El mercado además gobierna el cierre **por función** (Conclusion, el pedido), no por color. La regla 4 estaba mal formulada de origen | I |
+| 100 | El deck que el chequeo aprueba tiene **1 de 5 títulos con verbo finito** (el mismo test que midió 2/12 en JD): puede salir verde y seguir sin argumento | E |
+| 101 | En herramientas de IA el ritmo **no tiene dueño en ninguna**: Plus AI ofrece layout elegible slide por slide y ninguna regla de secuencia. No es que lo hacemos peor: es que nadie lo hace, y el sustituto gratis que sí gobierna algo gobierna el argumento | E |
+| 102 | **Nuestro umbral es más bajo que nuestra propia fuente.** Garner & Alley (ya citado en E30, n=110-111) pide headline-aserción + evidencia visual en **cada** slide. Nosotros codificamos "1 de cada 3 visual" | E |
+| 103 | **El adorno tiene base empírica que no estábamos citando**: meta-análisis del *seductive details effect*, 177 effect sizes sobre 50 estudios, efecto negativo en comprensión, recall y transferencia ([Sundararajan & Adesope 2020](https://link.springer.com/article/10.1007/s10648-020-09522-4)) | E |
+| 104 | **El chequeo es ciego a la peor de las dos fallas y encima la premia**: `_ritmo` solo cuenta lo que matchea `data-modulo`, así que una carátula inventada no se mide **y además sale del denominador del ritmo** | E |
