@@ -212,18 +212,58 @@ def check_links():
 
     if CON_RED:
         import urllib.request
-        rotos = []
-        for u in sorted(urls):
+        import urllib.error
+        import ssl
+        from concurrent.futures import ThreadPoolExecutor
+
+        # Un python sin bundle de CA (macOS sin `Install Certificates.command`, sin certifi)
+        # hace fallar TODAS las URLs con SSL_CERTIFICATE_VERIFY_FAILED. Eso no es un link roto:
+        # es el entorno. Buscamos un bundle antes de salir a la red.
+        candidatos = [os.environ.get('SSL_CERT_FILE')]
+        try:
+            import certifi
+            candidatos.append(certifi.where())
+        except ImportError:
+            pass
+        candidatos.append('/etc/ssl/cert.pem')
+
+        ctx = None
+        for cafile in candidatos:
+            if cafile and os.path.exists(cafile):
+                try:
+                    ctx = ssl.create_default_context(cafile=cafile)
+                    break
+                except Exception:
+                    continue
+
+        def probe(u):
             try:
-                req = urllib.request.Request(u, method='HEAD')
-                with urllib.request.urlopen(req, timeout=12) as r:
-                    if r.status >= 400:
-                        rotos.append('%s → %d' % (u, r.status))
+                req = urllib.request.Request(u, method='HEAD',
+                                             headers={'User-Agent': 'magoya-brand-validar/1.0'})
+                with urllib.request.urlopen(req, timeout=12, context=ctx) as r:
+                    return None if r.status < 400 else ('http', '%s → %d' % (u, r.status))
+            except urllib.error.HTTPError as e:
+                return ('http', '%s → %d' % (u, e.code))
             except Exception as e:
-                rotos.append('%s → %s' % (u, type(e).__name__))
+                return ('entorno', '%s → %s: %s' % (u, type(e).__name__, e))
+
+        with ThreadPoolExecutor(max_workers=12) as pool:
+            res = [r for r in pool.map(probe, sorted(urls)) if r]
+        rotos = sorted(m for tipo, m in res if tipo == 'http')
+        sin_red = sorted(m for tipo, m in res if tipo == 'entorno')
+
         if rotos:
-            fallas.append('%d URLs no responden en brand.magoya.com: %s' % (len(rotos), ', '.join(rotos[:8])))
-        else:
+            fallas.append('%d URLs no responden en brand.magoya.com: %s'
+                          % (len(rotos), ', '.join(rotos[:8])))
+        # Si TODO falla por entorno (sin CA, sin salida a internet), no hay medición: decilo así,
+        # no como 353 links rotos.
+        if sin_red and len(sin_red) == len(urls):
+            huecos.append('no se pudo verificar ninguna URL: el entorno no llega a brand.magoya.com '
+                          '(%s). Instalá los certificados de tu Python o corré sin --red' % sin_red[0])
+        elif sin_red:
+            fallas.append('%d URLs fallan por error de red/TLS: %s'
+                          % (len(sin_red), ', '.join(sin_red[:5])))
+        elif not rotos:
             ok.append('red: las %d URLs responden 200' % len(urls))
 
 
