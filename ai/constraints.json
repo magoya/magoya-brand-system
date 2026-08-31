@@ -76,7 +76,7 @@
  },
  "verificacion": "los 16 chequeos de .ai/checklist.md — este archivo agrega los números; el checklist dice cómo auditarlos",
  "pendiente_de_definir": [
-  "mínimos tipográficos para web/app (px por nivel) — hoy solo existe la escala de slides",
+  "mínimos tipográficos para web/app (px por nivel): el mínimo legible de cada nivel. OJO: la escala SÍ existe — tokens.json tiene typography.scale en rem (xs→7xl) para web y slideScale en pt para slides. Lo que falta es el piso en px, no la escala",
   "clearspace numérico de los avatares (hoy solo el wordmark lo tiene)",
   "margen mínimo de piezas impresas (one-pager/flyer) en mm"
  ],

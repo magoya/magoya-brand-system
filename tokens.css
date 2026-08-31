@@ -122,8 +122,8 @@
   /* ---------- 3. ESCALAS NO-COLOR ---------- */
 
   /* Tipografía — Manrope variable */
-  --font-display: "Manrope", system-ui, sans-serif;
-  --font-body:    "Manrope", system-ui, sans-serif;
+  --font-display: "Manrope", Arial, sans-serif;
+  --font-body:    "Manrope", Arial, sans-serif;
   --font-mono:    ui-monospace, "SF Mono", Menlo, monospace;
 
   /* Escala tipográfica (ratio 1.25 / major third) */

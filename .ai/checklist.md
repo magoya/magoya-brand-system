@@ -24,7 +24,7 @@ Dieciséis chequeos verificables. Todos tienen que dar **sí** antes de publicar
 | 16 | **IA, no AI** | Buscá `AI` como palabra suelta en todo el copy | Una pieza en español escribe "AI" (AI en campo, Integrar con AI, capacidades de AI) en vez de **IA**. Solo se admite "AI" en copy en inglés y en nombres propios ajenos ("Data & AI", "AI Studio") |
 ## Extras según el formato
 
-- **Slides**: margen interior 7% del ancho, escala 126/84/56/42pt sobre 1920px, un golpe de lima por slide, lienzo blanco o sage `#EEF2EC`.
+- **Slides**: margen interior 7% del ancho, escala 126/84/56/42pt sobre 1920px, como máximo un golpe de lima por slide (ver chequeo 5), lienzo blanco o sage `#EEF2EC`.
 - **Redes**: display y cifras al ~70% del ancho. Story 1080×1920 con zona segura de 96px arriba y abajo. Feed 1080×1080.
 - **Logo**: mínimo 90px en pantalla / 24mm impreso; por debajo va el avatar "m". Clearspace = altura de la letra "m". Nunca estirado, rotado, sombreado ni en lima.
 - **Copy**: sin superlativos ni frases grandilocuentes; labels de botón en sentence case; kickers en MAYÚSCULAS con tracking +0.12em.
