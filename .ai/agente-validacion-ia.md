@@ -59,7 +59,20 @@ Esa última columna es el producto real del bloque: distingue un hueco del spec 
 fetch de un límite del modelo. Solo el primero se arregla acá.
 
 Rotá el pedido cada corrida (una landing, un one-pager comercial, una tabla de precios, un banner
-de LinkedIn) para no optimizar contra un solo caso.
+de LinkedIn) para no optimizar contra un solo caso. Ya se usaron: deck ×2 (2026-08-24), y one-pager
+A4 · landing · carrusel 4:5 (2026-08-31).
+
+**Congelá el push mientras las pruebas están en el aire, y pedí la hora de cada fetch.** El
+2026-08-31 otra sesión pusheó a mitad de corrida y Pages rebuildeó con dos de las tres pruebas
+todavía leyendo: los puntajes de esa corrida no se pueden comparar con los de la siguiente porque
+midieron dos versiones distintas del sistema. Antes de lanzar los agentes, mirá si hay otra sesión
+trabajando en el repo (`git log --since='2 hours ago'`, worktrees abiertos) y no pushees nada hasta
+que las tres terminen.
+
+**Y no confíes en el worktree para la ceguera: aísla el filesystem, no el contexto.** En la misma
+corrida el harness le inyectó a un agente el `MEMORY.md` del usuario, y otro vio la pieza de un
+tercero a través del panel de browser compartido. Los tres lo declararon porque se los pediste
+explícitamente — seguí pidiéndolo, es lo único que lo detecta.
 
 ## Bloque 3 — Investigación externa
 
