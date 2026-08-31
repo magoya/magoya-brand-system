@@ -205,3 +205,18 @@ El cliente no dice "está soso": no contesta. Nadie relaciona ese silencio con e
 
 **Construir una métrica que da verde sobre exactamente el deck que hizo abandonar al primer usuario
 real es peor que no tener métrica.**
+
+## G3 — Challenge · dominio (las variables que el panel no podía ver)
+
+| # | Hallazgo | Verificación mía | Tipo |
+|---|---|---|---|
+| 87 | **Las cinco reglas son insatisfacibles para un deck de producto.** El deck canónico `M1·A1·A3·F2·E1·F4·G1·J3·M3` falla, y por fuerza bruta: **0 de 362.880 órdenes posibles pasan.** Ni uno | corrido: `0 de 5040` con extremos fijos, `0 de 362880` sin fijar | E |
+| 88 | **La causa es estructural, no de orden: el catálogo no tiene un solo módulo visual que cargue un método, un journey o un caso.** F2 (método, 1.763 car.), E1 (journey, 832), G1 (caso, 2.021) y F3 (interacción de actores, 2.517, el más pesado) son todos peso `texto` y **no tienen recambio**. Los 19 visuales son portadas, divisores, cards de servicio, gráficos, fotos, quotes, retratos y muros de logos | confirmado módulo por módulo | E |
+| 89 | **Por eso la IA decoró.** Mi regla anti-adorno dice "no decores, cambiá de módulo" y para esta clase de deck **no hay a qué cambiar**. Decorar era el único movimiento que le quedaba. La falla que Facu llamó "un desastre" es una consecuencia del catálogo, no una desobediencia del modelo | I | alta |
+| 90 | **El archivo que se mide no es el que se entrega.** `build_pdf.py:85-91` saca la slide 10 completa para la variante `no-investment` y borra el total para `no-pricing`; apaga nav y barra de progreso y reescribe links a absolutos porque el PDF se lee desde un mail. Y el PDF **es** la pieza definitiva: *"The PDF is the artifact a prospect keeps after the call"*. `validar.py --pieza` recibe un solo path | E |
+| 91 | El sistema está escrito para un deck **narrado** y lo que viaja es uno **leído**: `selector.json` dice "el deck más corto que cuenta la historia completa, gana", y en los 7 repos no hay **una sola speaker note** | E |
+| 92 | **El eje de audiencia ya está escrito y sin codificar.** `VOICE-RESEARCH.md §4.2` tiene una matriz con registro, prueba que pide y "formato que NO funciona" por audiencia, y dice textual que K1/K2 aciertan con el par técnico y H2 con el productor *"por intuición del autor, no regla del sistema"*. En todo el spec la palabra audiencia aparece **una vez**, de pasada | E |
+| 93 | **El sistema solo sabe producir un cierre, y hay cuatro.** Primer contacto cierra en 6 preguntas abiertas sin precio ni fecha; propuesta en inversión + fecha; benchmark en corrections/confidence/sources; y el resumen ejecutivo **no tiene CTA** y no es un deck (páginas carta, cero `class="slide"`). El selector tiene **una** fila de cierre: 1 de 5 beats finales reales tiene fila | E |
+| 94 | **El calendario del cliente no tiene fila en el selector y entró por una vuelta de feedback.** En JD es un beat entero (banda Sep→May con Safrinha contra el timeline del piloto, "The season won't wait" justificando los 12 meses) y lo produjo el commit `dca5848`, no la primera pasada. F1 es un carril de 5 hitos, peso texto | E |
+| 95 | **El léxico del cliente tampoco.** Doug barrió *adoption → utilization* en todo el deck en dos commits. `facts.json` gobierna cifras, clientes y equipo — **no tiene una sola clave de vocabulario por cuenta**. Y esto sí se mide: contar commits que solo cambian un término de punta a punta | E |
+| 96 | Honestidad del que emitió: la variable "renovación" está inferida de un memory file, no de un artefacto, porque `renovacion-fv` no existe como pieza. No la firma | E |
