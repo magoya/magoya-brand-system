@@ -82,6 +82,13 @@ Dos familias, cada una con su regla:
 
 ## 7. Convivencia de recursos
 
+> **La lista de recursos gráficos es EXCLUYENTE.** Los recursos del sistema son estos y nada más:
+> foto aérea, foto B&N de personas, personaje ilustrado, paño de semicírculos, marca a mano, ícono
+> del set. **Lo que no está en esta lista no existe** — no se inventa un recurso nuevo para llenar
+> un hueco de composición, ni para "darle más onda" a una pieza que quedó plana. Si te falta algo,
+> falta un módulo en el catálogo: reportalo, no lo dibujes. (Dos piezas reales inventaron recursos
+> por este hueco: una red de nodos y una carátula decorativa.)
+
 La marca tiene seis recursos gráficos. La regla que los ordena: **máximo dos por pieza además de la tipografía** — uno protagonista y otro que acompaña en segundo plano. Con tres o más deja de ser Magoya y se vuelve ruido.
 
 | Combinar… | Foto aérea | Foto B&N | Personaje | Paño ○ | Marca a mano | Ícono |

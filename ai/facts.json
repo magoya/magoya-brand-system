@@ -5,25 +5,67 @@
   "nombre": "Magoya",
   "que_hace": "Estudio de estrategia y desarrollo de producto digital para agribusiness (AgTech). Equipos senior embebidos en el equipo del cliente.",
   "activa_desde": 2017,
-  "pilares": ["Clarity", "Confidence", "Commitment"],
+  "pilares": [
+   "Clarity",
+   "Confidence",
+   "Commitment"
+  ],
   "sub_marca": "IA en campo (contenido educativo de IA para productores; manual propio en ai-en-campo.html)"
  },
  "cifras_aprobadas": [
-  {"cifra": "17 clientes reales", "fuente": "logos.html — los logos existen en assets/logos/clients/"},
-  {"cifra": "14 partners de stack tecnológico", "fuente": "logos.html — assets/logos/partners/"},
-  {"cifra": "41 módulos de presentación · 58 íconos · 239 assets", "fuente": "el propio brand system", "uso": "solo para hablar del sistema, no de la compañía"}
+  {
+   "cifra": "17 clientes reales",
+   "fuente": "logos.html — los logos existen en assets/logos/clients/"
+  },
+  {
+   "cifra": "14 partners de stack tecnológico",
+   "fuente": "logos.html — assets/logos/partners/"
+  },
+  {
+   "cifra": "41 módulos de presentación · 58 íconos · 239 assets",
+   "fuente": "el propio brand system",
+   "uso": "solo para hablar del sistema, no de la compañía"
+  }
  ],
  "clientes_nombrables": {
   "regla": "solo los que tienen logo real en assets/logos/clients/ — la lista completa y vigente está en ai/assets.json (carpeta assets/logos/clients)",
-  "destacados_en_piezas_del_sistema": ["Apeel Sciences", "Corteva", "Syngenta", "Bayer Crop Science", "Bunge", "Precision Planting"]
+  "destacados_en_piezas_del_sistema": [
+   "Apeel Sciences",
+   "Corteva",
+   "Syngenta",
+   "Bayer Crop Science",
+   "Bunge",
+   "Precision Planting"
+  ]
  },
  "equipo_nombrable": {
   "regla": "solo personas con foto real en assets/photos/ y rol confirmado",
-  "en_el_sistema": ["Camila López Colmano — AgTech Expert", "Leo Dopacio", "Varina Baldi — Founder & CEO"]
+  "en_el_sistema": [
+   "Camila López Colmano — AgTech Expert",
+   "Leo Dopacio",
+   "Varina Baldi — Founder & CEO"
+  ]
  },
  "pendiente_de_aprobar": [
-  {"cifra": "95% de retención de clientes", "estado": "usada históricamente en el sistema — confirmar vigencia con Varu antes de usarla en una pieza nueva"},
-  {"cifra": "15 retailers / 44 growers en 2 meses", "estado": "métrica de UN caso — solo usable con el caso correcto y confirmación"},
-  {"dato": "cantidad de proyectos entregados, tamaño del equipo, mercados activos", "estado": "sin fuente aprobada — pedir siempre"}
- ]
+  {
+   "cifra": "95% de retención de clientes",
+   "estado": "usada históricamente en el sistema — confirmar vigencia con Varu antes de usarla en una pieza nueva"
+  },
+  {
+   "cifra": "15 retailers / 44 growers en 2 meses",
+   "estado": "métrica de UN caso — solo usable con el caso correcto y confirmación"
+  },
+  {
+   "dato": "cantidad de proyectos entregados, tamaño del equipo, mercados activos",
+   "estado": "sin fuente aprobada — pedir siempre"
+  }
+ ],
+ "derivados_del_tiempo": {
+  "que_es": "Claims que se calculan con la fecha de hoy y por lo tanto envejecen solos. NO los hardcodees en una pieza: recalculalos al generar. \"Nine years, one focus\" es correcto hoy y miente en 2027.",
+  "activa_desde": 2017,
+  "como_se_calculan": {
+   "años_de_actividad": "año actual − 2017",
+   "texto_en_ingles": "\"{N} years\" · en español \"{N} años\""
+  }
+ }
 }

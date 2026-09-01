@@ -40,7 +40,8 @@
    "#FFFFFF",
    "sage #EEF2EC",
    "#133825 solo en apertura/cierre/citas"
-  ]
+  ],
+  "margen_7_vs_eje_7_5": "No se contradicen y conviene saber por qué: 7% (134px) es el margen MÍNIMO que nada puede cruzar; 7.5% (144px) es el eje de trabajo donde las plantillas alinean el contenido. O sea 134 es el piso legal y 144 es dónde apoya la grilla. Si construís desde cero, usá 144 y cumplís los dos."
  },
  "redes": {
   "feed": {
@@ -74,7 +75,7 @@
   "labels_de_boton": "sentence case",
   "nomenclatura_ia": "en español SIEMPRE 'IA', nunca 'AI': 'IA en campo', 'Integrar con IA', 'capacidades de IA', 'Datos & IA'. 'AI' solo se escribe en copy en inglés (decks US) y en nombres propios ajenos ('Data & AI', 'AI Studio'). Los nombres de archivo y las URLs del sistema siguen en 'ai-' por compatibilidad (ai-en-campo.html, /ai/) — eso NO se copia al texto de la pieza."
  },
- "verificacion": "los 16 chequeos de .ai/checklist.md — este archivo agrega los números; el checklist dice cómo auditarlos",
+ "verificacion": "los 17 chequeos de .ai/checklist.md — este archivo agrega los números; el checklist dice cómo auditarlos",
  "pendiente_de_definir": [
   "mínimos tipográficos para web/app (px por nivel): el mínimo legible de cada nivel. OJO: la escala SÍ existe — tokens.json tiene typography.scale en rem (xs→7xl) para web y slideScale en pt para slides. Lo que falta es el piso en px, no la escala",
   "clearspace numérico de los avatares (hoy solo el wordmark lo tiene)",

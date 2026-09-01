@@ -43,7 +43,7 @@ Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md` y `tokens.j
 
 - [.ai/brand-prompt.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/brand-prompt.md): el prompt de sistema canónico y autocontenido (~540 palabras). Pegarlo como system prompt, custom instructions o project instructions y la salida ya sale on-brand sin adjuntar nada más.
 - [.ai/brand-prompt-short.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/brand-prompt-short.md): versión de ~120 palabras para pegar al inicio de un chat suelto.
-- [.ai/checklist.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md): 16 chequeos verificables para auditar una pieza generada por IA antes de publicarla.
+- [.ai/checklist.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md): 17 chequeos verificables para auditar una pieza generada por IA antes de publicarla.
 - [ai/precedencia.json](https://brand.magoya.com/ai/precedencia.json): ley de precedencia — qué documento gana cuando dos reglas oficiales del sistema se contradicen, más el contrato de entrega (qué puede salir con un hueco adentro y qué no).
 - [ai/metodo.md](https://brand.magoya.com/ai/metodo.md): el método de trabajo obligatorio para piezas con contenido — entender antes de elegir, módulos por criterio (no por defecto), y agentes de copy / diseño / crítica antes de entregar.
 - [AI-INTEGRATION.md](https://brand.magoya.com/AI-INTEGRATION.md): guía de setup por herramienta (Claude Projects, Claude Code, Claude Design, Custom GPT, Cursor, Copilot, chat genérico) con tabla de verificación y troubleshooting.
@@ -149,6 +149,13 @@ Dos familias, cada una con su regla:
 - ✗ RETIRADOS: motivos de líneas (caminos concéntricos `assets/illus/camino-*.svg`, estratos `assets/motif-estratos.svg`), la banda festoneada, el **subrayado** a mano (`flourish-underline.svg` — no cubría bien la palabra completa y el trazo no tenía fuerza; reemplazado por texto en lima), personajes con rostro/monoline/stock, y la metáfora del **puzzle** (brand viejo — su reemplazo narrativo es el paño de semicírculos (crecimiento)). ✗ Naranja y amarillo del brand viejo. Los archivos retirados quedan en disco como historial: **no se usan en piezas nuevas y no tienen ficha en la librería.**
 
 ## 7. Convivencia de recursos
+
+> **La lista de recursos gráficos es EXCLUYENTE.** Los recursos del sistema son estos y nada más:
+> foto aérea, foto B&N de personas, personaje ilustrado, paño de semicírculos, marca a mano, ícono
+> del set. **Lo que no está en esta lista no existe** — no se inventa un recurso nuevo para llenar
+> un hueco de composición, ni para "darle más onda" a una pieza que quedó plana. Si te falta algo,
+> falta un módulo en el catálogo: reportalo, no lo dibujes. (Dos piezas reales inventaron recursos
+> por este hueco: una red de nodos y una carátula decorativa.)
 
 La marca tiene seis recursos gráficos. La regla que los ordena: **máximo dos por pieza además de la tipografía** — uno protagonista y otro que acompaña en segundo plano. Con tres o más deja de ser Magoya y se vuelve ruido.
 
@@ -288,7 +295,8 @@ Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.a
    "#FFFFFF",
    "sage #EEF2EC",
    "#133825 solo en apertura/cierre/citas"
-  ]
+  ],
+  "margen_7_vs_eje_7_5": "No se contradicen y conviene saber por qué: 7% (134px) es el margen MÍNIMO que nada puede cruzar; 7.5% (144px) es el eje de trabajo donde las plantillas alinean el contenido. O sea 134 es el piso legal y 144 es dónde apoya la grilla. Si construís desde cero, usá 144 y cumplís los dos."
  },
  "redes": {
   "feed": {
@@ -322,7 +330,7 @@ Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.a
   "labels_de_boton": "sentence case",
   "nomenclatura_ia": "en español SIEMPRE 'IA', nunca 'AI': 'IA en campo', 'Integrar con IA', 'capacidades de IA', 'Datos & IA'. 'AI' solo se escribe en copy en inglés (decks US) y en nombres propios ajenos ('Data & AI', 'AI Studio'). Los nombres de archivo y las URLs del sistema siguen en 'ai-' por compatibilidad (ai-en-campo.html, /ai/) — eso NO se copia al texto de la pieza."
  },
- "verificacion": "los 16 chequeos de .ai/checklist.md — este archivo agrega los números; el checklist dice cómo auditarlos",
+ "verificacion": "los 17 chequeos de .ai/checklist.md — este archivo agrega los números; el checklist dice cómo auditarlos",
  "pendiente_de_definir": [
   "mínimos tipográficos para web/app (px por nivel): el mínimo legible de cada nivel. OJO: la escala SÍ existe — tokens.json tiene typography.scale en rem (xs→7xl) para web y slideScale en pt para slides. Lo que falta es el piso en px, no la escala",
   "clearspace numérico de los avatares (hoy solo el wordmark lo tiene)",
@@ -730,7 +738,7 @@ pasadas actuando cada rol por separado.
 
 ## Fase 3 — Criterio de entrega
 
-**Técnico.** Los 16 chequeos de `.ai/checklist.md`, más:
+**Técnico.** Los 17 chequeos de `.ai/checklist.md`, más:
 
 ```
 python3 ai/validar.py --pieza <tu-archivo.html>
@@ -783,7 +791,7 @@ selector, qué agregaste que no venía en el material, y qué encontró el crít
 
 # Checklist de validación — piezas, código o copy generados por IA
 
-Dieciséis chequeos verificables. Todos tienen que dar **sí** antes de publicar. Si alguno falla, corregí y volvé a correr la lista completa.
+Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar. Si alguno falla, corregí y volvé a correr la lista completa.
 
 > **Quién manda cuando dos reglas se contradicen.** La plantilla oficial gana: es una pieza real que ya funcionó. Si un chequeo de esta lista contradice a una plantilla de `ai/templates/`, el que está mal es el chequeo — reportalo, no adaptes la plantilla. El orden completo está en `ai/precedencia.json`.
 
@@ -805,6 +813,7 @@ Dieciséis chequeos verificables. Todos tienen que dar **sí** antes de publicar
 | 14 | **Chips: solo texto, sin punto** | Mirá cada chip/pill de la pieza | Un chip lleva un punto/bullet (•) delante del texto, un ícono adentro, o texto en sentence case — el chip es SOLO texto uppercase; la pill ya delimita, el punto es ruido |
 | 15 | **Espaciado en escala y un eje** | Extraé los margin/padding/gap y compará contra la escala base-4 de `tokens.json`; mirá el eje de alineación | Hay valores fuera de la escala (5, 10, 14, 18…), bloques a menos de 24 de aire entre sí, más de un eje de alineación en la pieza, filas cuyos elementos no comparten centro vertical, o paddings con 4 valores distintos |
 | 16 | **IA, no AI** | Buscá `AI` como palabra suelta en todo el copy | Una pieza en español escribe "AI" (AI en campo, Integrar con AI, capacidades de AI) en vez de **IA**. Solo se admite "AI" en copy en inglés y en nombres propios ajenos ("Data & AI", "AI Studio") |
+| 17 | **Wordmark: variante, tamaño, posición y letterforms** | Comparalo contra la plantilla: variante correcta (interiores **black**, portada y cierre **cream**), 211px de ancho, x=7.5% e y=3.2% **del ancho** del lienzo (144 y 61px sobre 1920). Y comparalo contra el asset canónico de `assets/`, no contra el nombre del archivo | La variante no corresponde al lienzo (deep en un interior), el tamaño no es 211px, la posición se midió contra el alto en vez del ancho, o las letterforms no son las del asset canónico. **Una pieza real pasó los 16 chequeos con el wordmark en variante, tamaño y posición equivocados: es el único elemento que el manual llama "LA firma de la marca" y era el único sin auditoría** |
 ## Extras según el formato
 
 - **Slides**: margen interior 7% del ancho, escala 126/84/56/42pt sobre 1920px, como máximo un golpe de lima por slide (ver chequeo 5), y el lienzo que traiga la plantilla: blanco, sage `#EEF2EC`, verde profundo o foto.

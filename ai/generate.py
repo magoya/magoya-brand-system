@@ -95,7 +95,7 @@ CATDOC = {
  'assets/photos': ('Fotografía real del equipo y de campo', 'Personas SIEMPRE en B&N + un acento de color. Foto aérea con scrim verde profundo. Nunca stock.'),
  'assets/photos/merch': ('Fotos reales de merch', 'Verde profundo + crema, bordado discreto.'),
  'assets/logos': ('Wordmarks propios en variantes', 'Ver reglas del logo en BRAND.md sección 2.'),
- 'assets/logos/clients': ('Logos REALES de clientes', 'Los únicos logos permitidos en un logo wall. En grilla: escala de grises, tamaño óptico parejo.'),
+ 'assets/logos/clients': ('Logos REALES de clientes', 'Los únicos logos permitidos en un logo wall. OJO: los SVG son a COLOR y traen la imagen embebida como raster dentro de un <pattern>, asi que NO se pasan a gris cambiando fill ni recolorando paths: hay que aplicar un filtro (CSS filter:grayscale(1) o un feColorMatrix). El sistema los exige en escala de grises y con tamano optico parejo — el archivo no viene asi. Una pieza real los puso a color sin darse cuenta.'),
  'assets/logos/partners': ('Logos reales del stack tecnológico', 'Se muestran en su color oficial.'),
  'assets/motif': ('', ''),
  'assets/downloads': ('Entregables listos: firma de email animada/estática, membrete', 'La firma de email lleva SIEMPRE el wordmark, nunca los avatares.'),

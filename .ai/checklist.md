@@ -1,6 +1,6 @@
 # Checklist de validación — piezas, código o copy generados por IA
 
-Dieciséis chequeos verificables. Todos tienen que dar **sí** antes de publicar. Si alguno falla, corregí y volvé a correr la lista completa.
+Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar. Si alguno falla, corregí y volvé a correr la lista completa.
 
 > **Quién manda cuando dos reglas se contradicen.** La plantilla oficial gana: es una pieza real que ya funcionó. Si un chequeo de esta lista contradice a una plantilla de `ai/templates/`, el que está mal es el chequeo — reportalo, no adaptes la plantilla. El orden completo está en `ai/precedencia.json`.
 
@@ -22,6 +22,7 @@ Dieciséis chequeos verificables. Todos tienen que dar **sí** antes de publicar
 | 14 | **Chips: solo texto, sin punto** | Mirá cada chip/pill de la pieza | Un chip lleva un punto/bullet (•) delante del texto, un ícono adentro, o texto en sentence case — el chip es SOLO texto uppercase; la pill ya delimita, el punto es ruido |
 | 15 | **Espaciado en escala y un eje** | Extraé los margin/padding/gap y compará contra la escala base-4 de `tokens.json`; mirá el eje de alineación | Hay valores fuera de la escala (5, 10, 14, 18…), bloques a menos de 24 de aire entre sí, más de un eje de alineación en la pieza, filas cuyos elementos no comparten centro vertical, o paddings con 4 valores distintos |
 | 16 | **IA, no AI** | Buscá `AI` como palabra suelta en todo el copy | Una pieza en español escribe "AI" (AI en campo, Integrar con AI, capacidades de AI) en vez de **IA**. Solo se admite "AI" en copy en inglés y en nombres propios ajenos ("Data & AI", "AI Studio") |
+| 17 | **Wordmark: variante, tamaño, posición y letterforms** | Comparalo contra la plantilla: variante correcta (interiores **black**, portada y cierre **cream**), 211px de ancho, x=7.5% e y=3.2% **del ancho** del lienzo (144 y 61px sobre 1920). Y comparalo contra el asset canónico de `assets/`, no contra el nombre del archivo | La variante no corresponde al lienzo (deep en un interior), el tamaño no es 211px, la posición se midió contra el alto en vez del ancho, o las letterforms no son las del asset canónico. **Una pieza real pasó los 16 chequeos con el wordmark en variante, tamaño y posición equivocados: es el único elemento que el manual llama "LA firma de la marca" y era el único sin auditoría** |
 ## Extras según el formato
 
 - **Slides**: margen interior 7% del ancho, escala 126/84/56/42pt sobre 1920px, como máximo un golpe de lima por slide (ver chequeo 5), y el lienzo que traiga la plantilla: blanco, sage `#EEF2EC`, verde profundo o foto.

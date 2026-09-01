@@ -463,7 +463,7 @@
   {
    "carpeta": "assets/logos/clients",
    "descripcion": "Logos REALES de clientes",
-   "reglas": "Los únicos logos permitidos en un logo wall. En grilla: escala de grises, tamaño óptico parejo.",
+   "reglas": "Los únicos logos permitidos en un logo wall. OJO: los SVG son a COLOR y traen la imagen embebida como raster dentro de un <pattern>, asi que NO se pasan a gris cambiando fill ni recolorando paths: hay que aplicar un filtro (CSS filter:grayscale(1) o un feColorMatrix). El sistema los exige en escala de grises y con tamano optico parejo — el archivo no viene asi. Una pieza real los puso a color sin darse cuenta.",
    "archivos": [
     "https://brand.magoya.com/assets/logos/clients/agro-sustentable.svg",
     "https://brand.magoya.com/assets/logos/clients/apeel-sciences.svg",

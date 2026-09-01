@@ -165,6 +165,46 @@ fetch. Esta corrida no se puede comparar con la siguiente porque el sitio se rep
 
 ---
 
+## 2026-09-01 · corrida real: deck comercial v3 → v4 (feedback de la mesa de Pato)
+
+Tercer uso real y el mejor input que recibió el sistema. Veredicto de esa mesa: **el sistema
+funciona** — una IA llevó una pieza real de "casi on-brand" a 14/16 auditorías usando solo lo
+publicado, sin inventar tokens. Las fricciones no eran de diseño.
+
+**Arreglado en esta pasada** (siete, ninguna necesitaba decisión humana):
+
+| # | Qué decía el feedback | Qué verifiqué | Qué quedó |
+|---|---|---|---|
+| 2.1 | dos escalas tipográficas sin regla de frontera | `typography.scale` (rem) y `slideScale` (pt) conviven sin decir cuál va cuándo. Una pieza real se construyó entera con la equivocada | `typography.cual_escala_uso`: slides → slideScale, todo lo demás → scale |
+| 2.2 | margen 7% vs eje 7.5% | los dos existen y nada explica el vínculo | `margen_7_vs_eje_7_5`: 134 es el piso legal, 144 el eje de trabajo. Desde cero usá 144 y cumplís los dos |
+| 2.3 | "máximo 3 niveles" contra slides de 7 | `tokens.json` decía "Máximo 3 niveles por pieza" y precede al checklist, así que arreglar el checklist no alcanzaba | la regla ahora distingue pieza a mano (3) de plantilla (el techo de la plantilla) |
+| 2.4 | unidades ambiguas: "y: 3.2" | **era peor que lo reportado.** La plantilla pone `top:3.2cqw` = 61px, o sea **3.2% del ANCHO**. Medido contra el alto da 34px | el constraint ahora dice "ambas son % del ancho, NO del alto" con los px resueltos |
+| 2.5 | el checklist no audita el logo propio | **0 menciones de "wordmark" en los 17 chequeos**. El elemento que el manual llama "LA firma" era el único sin auditoría | **auditoría 17: variante, tamaño, posición y letterforms contra el asset canónico** |
+| 2.6 | logos de clientes: el sistema dice gris, los archivos son a color | **peor que lo reportado**: son raster embebido dentro de un `<pattern>`, así que no se pasan a gris cambiando `fill` ni recolorando paths — hace falta un filtro | la regla del manifiesto ahora lo dice, con el cómo |
+| 2.7 | la lista de recursos no se declara cerrada | 0 cláusulas de exclusividad en `BRAND.md`, contra `facts.json` que sí la tiene | cláusula copiada: la lista es EXCLUYENTE, lo que no está no existe, y si falta algo falta un módulo |
+| 2.9 | claims que envejecen solos | "Nine years" es correcto hoy y miente en 2027 | `facts.json.derivados_del_tiempo` con la fórmula para recalcular |
+
+**Y el guardián del bug que encontró un humano a ojo.** Chequeo 11 nuevo: todas las variantes del
+wordmark tienen que compartir geometría. Fira ya, y encontró **tres dibujos distintos**, no dos:
+el set publicado (`black/cream/deep/green`, 8 paths, 139×38), `cream-prod` (1 path, 60×15.96) y
+`animado` (8 paths pero otra geometría). Ningún archivo del sistema advertía nada.
+
+**Necesita tu decisión** (las dos que el sistema no puede resolver solo):
+1. **Cuál de los tres wordmarks es la marca vigente.** Es el fix más urgente de la lista: es un bug
+   activo que afecta a todo consumidor, humano o IA. Con eso republico el set y borro el resto.
+2. **Poblar `facts.json`** con las cifras del doc de origen, y definir **dueño y canal** para
+   propagar aprobaciones. El método exige propagar y no dice cómo — el feedback tiene razón: la
+   obligación existe y el camino no. Sin esto ninguna pieza comercial sale de borrador.
+
+**Queda para G4** (diseño, no spec): módulo **cierre-statement** —ya hay prototipo, es la slide 10
+del deck sin la red de nodos— y el mini-capítulo de **componentes interactivos** (chip selected,
+hover, focus, rail), que hoy cada pieza inventa.
+
+**Lo que esa mesa admitió no haber visto sola** y vale más que el resto: el wordmark viejo lo detectó
+Facu, y a la red de nodos la degradó a "ratificable" en vez de aplicarle el estándar de `facts.json`
+—no está en el sistema, no existe—. Las dos lecciones están incorporadas: la cláusula de lista
+cerrada (2.7) es exactamente ese estándar, y la auditoría 17 es el chequeo que faltaba.
+
 ## 2026-08-19 · línea de base
 
 **Validador:** 0 fallas · 3 huecos · 7 ok — primera corrida, con los arreglos de abajo ya aplicados.

@@ -89,7 +89,7 @@ pasadas actuando cada rol por separado.
 
 ## Fase 3 — Criterio de entrega
 
-**Técnico.** Los 16 chequeos de `.ai/checklist.md`, más:
+**Técnico.** Los 17 chequeos de `.ai/checklist.md`, más:
 
 ```
 python3 ai/validar.py --pieza <tu-archivo.html>

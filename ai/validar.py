@@ -586,9 +586,38 @@ if '--pieza' in sys.argv:
     sys.exit(validar_pieza(sys.argv[i + 1]))
 
 
+
+# ─── 11. el wordmark: una sola geometría ────────────────────────────────────
+def check_wordmark():
+    """El bug que motivó esto: assets/ tenía dos dibujos distintos del wordmark
+    (cream/black/deep/green compartían uno, y cream-prod era otro con 1 path en vez
+    de 8 y otra proporción). El sitio servía uno de los dos y no había forma de saber
+    cuál era el vigente. Una pieza real hotlinkeó el equivocado durante dos versiones
+    y lo detectó un humano a ojo — ningún archivo del sistema lo advertía."""
+    import hashlib
+    firmas = {}
+    for f in sorted(glob.glob('assets/*wordmark*.svg')):
+        s = io.open(f, encoding='utf-8', errors='ignore').read()
+        paths = ''.join(re.findall(r'\sd="([^"]+)"', s))
+        if not paths:
+            continue
+        h = hashlib.md5(paths.encode()).hexdigest()[:10]
+        vb = re.search(r'viewBox="([^"]+)"', s)
+        firmas.setdefault(h, []).append('%s (%s, %d paths)'
+            % (os.path.basename(f), vb.group(1) if vb else 's/viewBox', s.count('<path')))
+    if len(firmas) > 1:
+        grupos = ' || '.join('geometría %s: %s' % (h, ', '.join(fs)) for h, fs in firmas.items())
+        fallas.append('hay %d dibujos DISTINTOS del wordmark en assets/ y el sitio sirve uno sin '
+                      'decir cuál es el vigente. Toda pieza que hotlinkee hereda el que esté '
+                      'publicado. Una persona tiene que decidir cuál es la marca vigente y hay que '
+                      'borrar o renombrar el resto. %s' % (len(firmas), grupos))
+    elif firmas:
+        ok.append('wordmark: %d variantes, todas la misma geometría'
+                  % sum(len(x) for x in firmas.values()))
+
 for fn in (check_selector, check_slots, check_pendientes, check_cobertura,
            check_nomenclatura, check_links, check_peso, check_conteo_assets,
-           check_reglas_auditables, check_drift):
+           check_reglas_auditables, check_wordmark, check_drift):
     try:
         fn()
     except Exception as e:
