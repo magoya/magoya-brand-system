@@ -1,0 +1,254 @@
+{
+ "que_es": "Los tres decks que más se piden, YA COMPUESTOS. La secuencia, los lienzos y el arco están resueltos y validados: no hay que elegir módulos ni componer. Cambiás el texto entre corchetes y listo.",
+ "por_que": "Medición de la primera semana de uso real: cero piezas salieron bien con \"usuario X + link\". El sistema publicaba reglas y el usuario tenía que tomar decisiones de diseño que no sabe tomar. Esto le quita las decisiones.",
+ "como_se_usa": [
+  "Elegí el deck que corresponde al momento (ver \"cuando\" de cada uno).",
+  "Bajá el .html y abrilo. Cada texto entre corchetes dice qué va ahí y cuántos caracteres entran.",
+  "Cambiá SOLO el texto. Un [XX] es un dato que hay que pedir, nunca completar.",
+  "Si sacás o agregás una slide, revisá el arco (ver reglas_del_arco)."
+ ],
+ "reglas_del_arco": [
+  "La última slide es beat \"pedido\". No se cierra sin pedir algo.",
+  "Antes del primer beat \"propuesta\" tiene que haber al menos un beat \"tension\". No se propone sin haber puesto el problema.",
+  "Después del primer beat \"propuesta\" tiene que haber al menos un beat \"evidencia\". No se afirma sin respaldar.",
+  "No más de 3 beats iguales seguidos. Cuatro slides de propuesta seguidas es un catálogo, no un argumento."
+ ],
+ "version": "2026-09-02",
+ "decks": {
+  "credenciales": {
+   "titulo": "Credenciales · qué hace Magoya",
+   "cuando_usarlo": "primer contacto con un cliente nuevo que todavía no sabe qué hacemos",
+   "url": "https://brand.magoya.com/ai/decks/credenciales.html",
+   "slides": 8,
+   "arco": "M1(apertura) → A1(tension) → B1(propuesta) → F2(propuesta) → C1(evidencia) → L1(evidencia) → G1(evidencia) → M3(pedido)",
+   "composicion": [
+    {
+     "orden": 1,
+     "modulo": "M1",
+     "beat": "apertura",
+     "lienzo": "foto",
+     "por_que": "abre con el negocio del cliente en pantalla antes de la primera palabra",
+     "plantilla": "https://brand.magoya.com/ai/templates/M1.html"
+    },
+    {
+     "orden": 2,
+     "modulo": "A1",
+     "beat": "tension",
+     "lienzo": "blanco",
+     "por_que": "la tensión: el problema que la audiencia reconoce y que nadie le resolvió",
+     "plantilla": "https://brand.magoya.com/ai/templates/A1.html"
+    },
+    {
+     "orden": 3,
+     "modulo": "B1",
+     "beat": "propuesta",
+     "lienzo": "sage",
+     "por_que": "la propuesta: los tres modelos de trabajo",
+     "plantilla": "https://brand.magoya.com/ai/templates/B1.html"
+    },
+    {
+     "orden": 4,
+     "modulo": "F2",
+     "beat": "propuesta",
+     "lienzo": "sage",
+     "por_que": "cómo trabajamos, una frase por fase",
+     "plantilla": "https://brand.magoya.com/ai/templates/F2.html"
+    },
+    {
+     "orden": 5,
+     "modulo": "C1",
+     "beat": "evidencia",
+     "lienzo": "blanco",
+     "por_que": "las credenciales en números",
+     "plantilla": "https://brand.magoya.com/ai/templates/C1.html"
+    },
+    {
+     "orden": 6,
+     "modulo": "L1",
+     "beat": "evidencia",
+     "lienzo": "blanco",
+     "por_que": "prueba social: los clientes reales",
+     "plantilla": "https://brand.magoya.com/ai/templates/L1.html"
+    },
+    {
+     "orden": 7,
+     "modulo": "G1",
+     "beat": "evidencia",
+     "lienzo": "blanco",
+     "por_que": "un caso completo, para que el argumento aterrice",
+     "plantilla": "https://brand.magoya.com/ai/templates/G1.html"
+    },
+    {
+     "orden": 8,
+     "modulo": "M3",
+     "beat": "pedido",
+     "lienzo": "sage",
+     "por_que": "el pedido",
+     "plantilla": "https://brand.magoya.com/ai/templates/M3.html"
+    }
+   ]
+  },
+  "propuesta-piloto": {
+   "titulo": "Propuesta de piloto · con escenarios e inversión",
+   "cuando_usarlo": "ya hubo conversación y hay que proponer un piloto concreto con precio",
+   "url": "https://brand.magoya.com/ai/decks/propuesta-piloto.html",
+   "slides": 9,
+   "arco": "M1(apertura) → A1(tension) → H1(contexto) → F2(propuesta) → F1(propuesta) → G1(evidencia) → E3(pedido) → E4(pedido) → M3(pedido)",
+   "composicion": [
+    {
+     "orden": 1,
+     "modulo": "M1",
+     "beat": "apertura",
+     "lienzo": "foto",
+     "por_que": "portada con el contexto de la cuenta",
+     "plantilla": "https://brand.magoya.com/ai/templates/M1.html"
+    },
+    {
+     "orden": 2,
+     "modulo": "A1",
+     "beat": "tension",
+     "lienzo": "blanco",
+     "por_que": "la tensión: el problema puntual que este piloto ataca",
+     "plantilla": "https://brand.magoya.com/ai/templates/A1.html"
+    },
+    {
+     "orden": 3,
+     "modulo": "H1",
+     "beat": "contexto",
+     "lienzo": "blanco",
+     "por_que": "el contexto de mercado que hace que sea ahora y no en seis meses",
+     "plantilla": "https://brand.magoya.com/ai/templates/H1.html"
+    },
+    {
+     "orden": 4,
+     "modulo": "F2",
+     "beat": "propuesta",
+     "lienzo": "sage",
+     "por_que": "el método con el que lo vamos a atacar",
+     "plantilla": "https://brand.magoya.com/ai/templates/F2.html"
+    },
+    {
+     "orden": 5,
+     "modulo": "F1",
+     "beat": "propuesta",
+     "lienzo": "blanco",
+     "por_que": "el timeline del piloto, de dónde arranca a dónde termina",
+     "plantilla": "https://brand.magoya.com/ai/templates/F1.html"
+    },
+    {
+     "orden": 6,
+     "modulo": "G1",
+     "beat": "evidencia",
+     "lienzo": "blanco",
+     "por_que": "un caso comparable: ya lo hicimos con otro",
+     "plantilla": "https://brand.magoya.com/ai/templates/G1.html"
+    },
+    {
+     "orden": 7,
+     "modulo": "E3",
+     "beat": "pedido",
+     "lienzo": "blanco",
+     "por_que": "el scope: quién está en el equipo en cada escenario",
+     "plantilla": "https://brand.magoya.com/ai/templates/E3.html"
+    },
+    {
+     "orden": 8,
+     "modulo": "E4",
+     "beat": "pedido",
+     "lienzo": "blanco",
+     "por_que": "la inversión: cuánto dura y cuánto cuesta cada escenario",
+     "plantilla": "https://brand.magoya.com/ai/templates/E4.html"
+    },
+    {
+     "orden": 9,
+     "modulo": "M3",
+     "beat": "pedido",
+     "lienzo": "sage",
+     "por_que": "el pedido con los próximos pasos",
+     "plantilla": "https://brand.magoya.com/ai/templates/M3.html"
+    }
+   ]
+  },
+  "cierre-de-proyecto": {
+   "titulo": "Cierre de proyecto · resultados para el sponsor",
+   "cuando_usarlo": "terminó una etapa y hay que mostrarle al sponsor qué se logró",
+   "url": "https://brand.magoya.com/ai/decks/cierre-de-proyecto.html",
+   "slides": 9,
+   "arco": "M1(apertura) → A2(contexto) → C1(evidencia) → D1(evidencia) → A4(estructura) → D4(evidencia) → J1(evidencia) → G2(evidencia) → M3(pedido)",
+   "composicion": [
+    {
+     "orden": 1,
+     "modulo": "M1",
+     "beat": "apertura",
+     "lienzo": "foto",
+     "por_que": "portada",
+     "plantilla": "https://brand.magoya.com/ai/templates/M1.html"
+    },
+    {
+     "orden": 2,
+     "modulo": "A2",
+     "beat": "contexto",
+     "lienzo": "blanco",
+     "por_que": "de dónde partimos: el contexto acordado al arrancar",
+     "plantilla": "https://brand.magoya.com/ai/templates/A2.html"
+    },
+    {
+     "orden": 3,
+     "modulo": "C1",
+     "beat": "evidencia",
+     "lienzo": "blanco",
+     "por_que": "los resultados en números",
+     "plantilla": "https://brand.magoya.com/ai/templates/C1.html"
+    },
+    {
+     "orden": 4,
+     "modulo": "D1",
+     "beat": "evidencia",
+     "lienzo": "blanco",
+     "por_que": "la evolución en el tiempo de la métrica principal",
+     "plantilla": "https://brand.magoya.com/ai/templates/D1.html"
+    },
+    {
+     "orden": 5,
+     "modulo": "A4",
+     "beat": "estructura",
+     "lienzo": "verde-profundo",
+     "por_que": "respiro entre bloques, para que los datos no se lean como un muro",
+     "plantilla": "https://brand.magoya.com/ai/templates/A4.html"
+    },
+    {
+     "orden": 6,
+     "modulo": "D4",
+     "beat": "evidencia",
+     "lienzo": "sage",
+     "por_que": "el detalle: una proporción principal y los avances secundarios",
+     "plantilla": "https://brand.magoya.com/ai/templates/D4.html"
+    },
+    {
+     "orden": 7,
+     "modulo": "J1",
+     "beat": "evidencia",
+     "lienzo": "sage",
+     "por_que": "la voz del cliente sobre el trabajo",
+     "plantilla": "https://brand.magoya.com/ai/templates/J1.html"
+    },
+    {
+     "orden": 8,
+     "modulo": "G2",
+     "beat": "evidencia",
+     "lienzo": "sage",
+     "por_que": "antes y después, cerrado",
+     "plantilla": "https://brand.magoya.com/ai/templates/G2.html"
+    },
+    {
+     "orden": 9,
+     "modulo": "M3",
+     "beat": "pedido",
+     "lienzo": "sage",
+     "por_que": "el pedido: la etapa que sigue",
+     "plantilla": "https://brand.magoya.com/ai/templates/M3.html"
+    }
+   ]
+  }
+ }
+}

@@ -274,6 +274,10 @@ json.dump(_idx, open('ai/templates/index.json', 'w'), ensure_ascii=False, indent
 print('perfil de composicion: %d modulos · lienzos %s' % (len(_perf),
       _idx['como_componer_el_deck']['inventario']['por_lienzo']))
 
+# ---------- 4c. los tres decks armados ----------
+_d = _sp.run(['python3', 'ai/decks.py'], capture_output=True, text=True)
+print(_d.stdout.strip().splitlines()[-1] if _d.stdout.strip() else _d.stderr.strip()[:200])
+
 # ---------- 5. llms-full.txt: todo en un fetch ----------
 parts = []
 parts.append(open('llms.txt').read())

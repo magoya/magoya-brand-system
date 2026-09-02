@@ -7,6 +7,14 @@ Si sos Claude leyendo esto: seguí el flujo de abajo, todas las URLs son públic
 
 ## Flujo (en este orden)
 
+0. **¿Necesitás un deck? Mirá primero si ya está armado** → https://brand.magoya.com/ai/decks/index.json
+   Hay tres decks COMPLETOS y validados: **credenciales** (primer contacto), **propuesta-piloto**
+   (con escenarios e inversión) y **cierre-de-proyecto** (resultados para el sponsor). La secuencia,
+   los lienzos y el arco ya están resueltos: **no hay que elegir módulos ni componer nada.** Bajás el
+   .html, cambiás el texto que está entre corchetes, y listo. Cada corchete dice qué va ahí y cuántos
+   caracteres entran. Los `[XX]` son datos que hay que PEDIR, no completar.
+   Usá los 41 módulos de abajo **solo si el deck que necesitás no es ninguno de esos tres.**
+
 1. **Doctrina** → https://brand.magoya.com/BRAND.md
 2. **Valores exactos** → https://brand.magoya.com/tokens.json
 3. **Tokens CSS** (si vas a escribir código) → https://brand.magoya.com/tokens.css — usá las custom properties, nunca hex sueltos.
@@ -14,10 +22,8 @@ Si sos Claude leyendo esto: seguí el flujo de abajo, todas las URLs son públic
 5. **Datos reales de la empresa** → https://brand.magoya.com/ai/facts.json — cifras aprobadas, clientes y equipo nombrables. Las cifras de las plantillas son EJEMPLO: nunca se entregan como reales. Si el dato no está acá, se le pide al usuario.
 6. **Presentaciones — flujo copiá-pegá-y-funciona**: (a) elegí el módulo con https://brand.magoya.com/ai/selector.json (qué querés contar → qué plantilla, sin criterio de diseño), (b) copiá la plantilla oficial TAL CUAL desde https://brand.magoya.com/ai/templates/index.json (HTML listo, geometría y colores bloqueados), (c) llená SOLO los data-slot respetando max_caracteres — si el texto no entra, acortá el texto, nunca la fuente. La geometría de referencia sigue en ai/slides.json (layout_src) para quien renderice por su cuenta.
 7. **Constraints duros** → https://brand.magoya.com/ai/constraints.json — mínimos de logo, clearspace, márgenes, safe areas, límites de texto. Nada se asume: si un valor no está ahí ni en tokens.json, se pregunta.
-8. **Método de trabajo (OBLIGATORIO en piezas con contenido)** → https://brand.magoya.com/ai/templates/index.json  <- ojo el campo "perfil" de cada modulo y "como_componer_el_deck":
-                                                     el selector elige QUE contar, el perfil ordena la SECUENCIA
-https://brand.magoya.com/ai/precedencia.json  <- quién gana cuando dos reglas chocan + contrato de entrega
-https://brand.magoya.com/ai/metodo.md — entender antes de elegir, módulo por criterio (no por defecto), y agentes de copy / diseño / crítica antes de entregar. Si tu plataforma soporta subagentes, desplegalos; si no, hacé las pasadas por rol.
+8. **Método de trabajo (OBLIGATORIO en piezas con contenido)** → https://brand.magoya.com/ai/metodo.md — el ghost deck antes de elegir módulos, el módulo por criterio y no por defecto, y las pasadas de títulos / copy / diseño / crítica antes de entregar. Si tu plataforma soporta subagentes, desplegalos; si no, hacé las pasadas por rol.
+   La SECUENCIA del deck se gobierna con el campo `perfil.beat` de cada módulo y las cuatro reglas de `como_componer_el_deck`, los dos en https://brand.magoya.com/ai/templates/index.json — el selector elige QUÉ contar, el beat ordena en qué orden.
 9. **Cuando dos reglas oficiales se contradicen** → https://brand.magoya.com/ai/precedencia.json — la ley de precedencia. Gana la plantilla, después facts.json, después tokens. El `cuando_usarlo` es lo último. Si encontrás una contradicción, aplicá la ley, entregá, y reportala — no la resuelvas por criterio propio.
 10. **Antes de entregar** → corré `python3 ai/validar.py --pieza <tu-archivo.html>` si tenés el repo, y en cualquier caso cumplí el contrato de entrega de `precedencia.json`: un dato que no está en `facts.json` va como `[PENDIENTE]`, nunca como el número que te pasaron; con un hueco adentro la pieza sale marcada BORRADOR y con un bloque PEDIDO A HUMANOS.
 
@@ -25,6 +31,7 @@ https://brand.magoya.com/ai/metodo.md — entender antes de elegir, módulo por 
 ## URLs del flujo (lista plana — si tu fetch resumió lo de arriba, usá esta)
 
 ```
+https://brand.magoya.com/ai/decks/index.json  <- TRES DECKS YA ARMADOS: empezá acá si es un deck
 https://brand.magoya.com/llms-full.txt        <- TODO en un solo fetch (empezá acá si dudás)
 https://brand.magoya.com/BRAND.md             <- doctrina
 https://brand.magoya.com/tokens.json          <- valores exactos

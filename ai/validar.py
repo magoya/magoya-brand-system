@@ -514,7 +514,9 @@ def validar_pieza(path):
     """El hallazgo que motivó esto: en la auditoría una IA declaró cinco cifras como no
     verificables en su reporte y las dejó escritas en la slide. Declarar no es contener."""
     s = io.open(path, encoding='utf-8', errors='ignore').read()
-    texto = re.sub(r'<!--.*?-->', ' ', s, flags=re.S)          # los comentarios traen instrucciones, no copy
+    # el bloque PEDIDO A HUMANOS habla SOBRE la pieza, no es contenido de la pieza
+    texto = re.sub(r'<div[^>]*data-pedido-a-humanos.*?</body>', '</body>', s, flags=re.S)
+    texto = re.sub(r'<!--.*?-->', ' ', texto, flags=re.S)      # los comentarios traen instrucciones, no copy
     texto = re.sub(r'<(script|style)[^>]*>.*?</\1>', ' ', texto, flags=re.S)
     texto = re.sub(r'<[^>]+>', ' ', texto)
     # el texto de un hueco declarado describe qué falta: no es una afirmación de la pieza

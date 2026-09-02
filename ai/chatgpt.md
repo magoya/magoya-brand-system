@@ -7,6 +7,14 @@ Si sos un modelo leyendo esto: seguí el flujo de abajo tal cual, sin pedir perm
 
 ## Flujo (en este orden)
 
+0. **¿Necesitás un deck? Mirá primero si ya está armado** → https://brand.magoya.com/ai/decks/index.json
+   Hay tres decks COMPLETOS y validados: **credenciales** (primer contacto), **propuesta-piloto**
+   (con escenarios e inversión) y **cierre-de-proyecto** (resultados para el sponsor). La secuencia,
+   los lienzos y el arco ya están resueltos: **no hay que elegir módulos ni componer nada.** Bajás el
+   .html, cambiás el texto que está entre corchetes, y listo. Cada corchete dice qué va ahí y cuántos
+   caracteres entran. Los `[XX]` son datos que hay que PEDIR, no completar.
+   Usá los 41 módulos de abajo **solo si el deck que necesitás no es ninguno de esos tres.**
+
 1. **Doctrina** → https://brand.magoya.com/BRAND.md — todas las reglas de la marca. Si solo vas a leer un archivo, es este.
 2. **Valores exactos** → https://brand.magoya.com/tokens.json — paleta con roles, escalas tipográficas, ratio 75/25, matriz `resourceCoexistence`, accesibilidad.
 3. **Assets** → https://brand.magoya.com/ai/assets.json — manifiesto de TODOS los archivos (239): wordmarks, avatares, 58 íconos, ilustraciones, fotos, logos reales de clientes; cada uno con URL directa y su regla de uso.
@@ -24,6 +32,7 @@ https://brand.magoya.com/ai/metodo.md — entender antes de elegir, módulo por 
 ## URLs del flujo (lista plana — si tu fetch resumió lo de arriba, usá esta)
 
 ```
+https://brand.magoya.com/ai/decks/index.json  <- TRES DECKS YA ARMADOS: empezá acá si es un deck
 https://brand.magoya.com/llms-full.txt        <- TODO en un solo fetch (empezá acá si dudás)
 https://brand.magoya.com/BRAND.md             <- doctrina
 https://brand.magoya.com/tokens.json          <- valores exactos
