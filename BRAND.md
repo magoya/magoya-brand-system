@@ -42,7 +42,7 @@ Los Pantone son el **match más cercano por distancia RGB** contra la librería 
 
 **El verde ilustración (`#33DB4E`) se unificó con el verde digital el 6 de agosto de 2026** — eran demasiado parecidos como para convivir como dos colores distintos. El token `--leaf-500` sigue en `tokens.css` como alias de `--emerald-500` por compatibilidad; no es un verde distinto.
 
-**Regla central: "El negro construye, el verde hace crecer."** Neutros ≈75% de cada pieza, verde ≈25%, un solo movimiento verde dominante. Nunca pieza 100% negra ni 100% verde.
+**Regla central: "El negro construye, el verde hace crecer."** Neutros ≈75%, verde ≈25%, un solo movimiento verde dominante. **La unidad de medición es el deck completo, no la slide** (una pieza suelta sí se mide sola): la portada oficial M1 es una foto tapada al ~70% por scrim, así que medida slide por slide la propia portada de la marca falla su propia regla — ver `proporcion_75_25` en `ai/constraints.json`. Nunca pieza 100% negra ni 100% verde.
 
 **Proporción exacta (confirmada por Varu el 5 de agosto de 2026 como obligatoria — "cualquier diseño que hagas tiene que mantener estas proporciones", deja de ser guía y pasa a ser regla):**
 

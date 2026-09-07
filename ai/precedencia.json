@@ -19,10 +19,11 @@
    "Un dato que no está en facts.json NO se escribe en la pieza. Va como [PENDIENTE] visible, nunca como el número que te pasaron.",
    "Si el material de origen trae un dato que CONTRADICE a facts.json, la slide no sale: se entrega con el slot en [PENDIENTE] y la contradicción explícita en el pedido a humanos.",
    "Toda entrega lleva un bloque 'PEDIDO A HUMANOS' con una línea por hueco: qué dato falta, a quién se le pide, y qué slide se desbloquea con eso.",
-   "Si la pieza tiene aunque sea un [PENDIENTE], se entrega marcada como BORRADOR. Una pieza sin ningún hueco es la única que puede salir como final."
+   "Si la pieza tiene aunque sea un [PENDIENTE], se entrega marcada como BORRADOR. Una pieza sin ningún hueco es la única que puede salir como final.",
+  "El bloque PEDIDO A HUMANOS se marca con el atributo data-pedido-a-humanos en su contenedor, como hacen los tres decks de ai/decks/. validar.py --pieza usa esa marca para no contar como cifra afirmada lo que el bloque escribe SOBRE la pieza: sin la marca, tu propia declaración de huecos te cuenta en contra."
   ],
-  "verificacion": "python3 ai/validar.py --pieza <archivo.html> corre esto sobre el HTML entregado, no sobre el repo."
+  "verificacion": "python3 ai/validar.py --pieza <archivo.html> corre sobre el HTML entregado, no sobre el repo — pero necesitás el script, así que solo se puede si tenés el repo clonado. Si llegaste por URL y no lo tenés, el contrato igual te obliga: [PENDIENTE], BORRADOR y pedido a humanos se cumplen a mano."
  },
 
- "como_reportar_una_contradiccion": "Anotala en .ai/VALIDACION-IA.md bajo 'Necesita tu decisión', con los dos archivos que se contradicen y qué dice cada uno. El agente semanal de validación las junta y las lleva a una persona. No las arregles por criterio propio."
+ "como_reportar_una_contradiccion": "Si tenés el repo: anotala en .ai/VALIDACION-IA.md bajo 'Necesita tu decisión', con los dos archivos que se contradicen y qué dice cada uno; el agente semanal las junta y las lleva a una persona. Si llegaste por URL y no podés escribir en el repo —que es el caso normal— la contradicción va en el bloque PEDIDO A HUMANOS de la pieza que estás entregando, con los dos archivos y la cita de cada lado: ese bloque ES el canal, y la persona que recibe la pieza la lleva al ledger. Lo que no se hace nunca es resolverla por criterio propio ni dejarla sin registrar porque no tenías dónde escribirla."
 }

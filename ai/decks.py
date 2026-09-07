@@ -215,6 +215,18 @@ def armar(nombre, spec, hechos):
     return html, mapa
 
 
+def fecha_de_version(ruta, catalogo):
+    """Conserva la fecha publicada si el resto del catálogo no cambió."""
+    try:
+        previo = json.loads(io.open(ruta, encoding='utf-8').read())
+    except Exception:
+        return datetime.date.today().isoformat()
+    anterior = previo.pop('version', None)
+    if previo == {k: v for k, v in catalogo.items() if k != 'version'} and anterior:
+        return anterior
+    return datetime.date.today().isoformat()
+
+
 def main():
     os.makedirs(SALIDA, exist_ok=True)
     hechos = hechos_aprobados()
@@ -232,7 +244,7 @@ def main():
        'Si sacás o agregás una slide, revisá el arco (ver reglas_del_arco).',
      ],
      'reglas_del_arco': IDX['como_componer_el_deck']['las_cuatro_reglas'],
-     'version': datetime.date.today().isoformat(),
+     'version': None,   # se resuelve al final: fecha del último CAMBIO, no de la última corrida
      'decks': {},
     }
     for nombre, spec in DECKS.items():
@@ -249,6 +261,11 @@ def main():
         }
         print('%-22s %d slides · %s' % (nombre, len(mapa),
               ' → '.join(x['modulo'] for x in mapa)))
+    # `version` es la fecha del último cambio de contenido, NO la de la última corrida:
+    # con today() acá el chequeo de drift de validar.py reportaba una falla todos los días
+    # siguientes a la generación, aunque nada hubiera cambiado. Un falso positivo diario
+    # tapa uno de verdad.
+    catalogo['version'] = fecha_de_version('%s/index.json' % SALIDA, catalogo)
     io.open('%s/index.json' % SALIDA, 'w', encoding='utf-8').write(
         json.dumps(catalogo, ensure_ascii=False, indent=1) + '\n')
     print('%s/index.json · %d decks' % (SALIDA, len(DECKS)))

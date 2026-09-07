@@ -4,7 +4,7 @@
 
 Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md` y `tokens.json`, y aplicá el prompt de sistema de `.ai/brand-prompt.md`. Las once reglas que más se rompen, para tenerlas antes de abrir cualquier link:
 
-1. Tipografía **Manrope** (variable 200–800), fallback Arial. Display peso 800, tracking −0.03em. Máximo 3 niveles tipográficos por pieza.
+1. Tipografía **Manrope** (variable 200–800), fallback Arial. Display peso 800, tracking −0.03em. Máximo 3 niveles tipográficos en una pieza escrita a mano; si la pieza sale de una plantilla del catálogo, el techo es el de esa plantilla (7 roles nombrados).
 2. **75/25**: neutros (blanco/sage/negro/crema) ≈75% de la pieza, verdes ≈25%, un solo movimiento verde dominante. Nunca una pieza 100% negra ni 100% verde.
 3. Lima **#A2FF00** = energía en dosis única (un CTA *o* un display *o* un motivo por pieza). **Nunca como texto sobre fondo claro** (1.25:1).
 4. Verde digital **#00DE68** = identidad (wordmark y avatares). Como texto solo sobre fondo oscuro; sobre blanco se usa **#009145** y solo ≥24px bold. Lima ≠ logo.
@@ -111,7 +111,7 @@ Los Pantone son el **match más cercano por distancia RGB** contra la librería 
 
 **El verde ilustración (`#33DB4E`) se unificó con el verde digital el 6 de agosto de 2026** — eran demasiado parecidos como para convivir como dos colores distintos. El token `--leaf-500` sigue en `tokens.css` como alias de `--emerald-500` por compatibilidad; no es un verde distinto.
 
-**Regla central: "El negro construye, el verde hace crecer."** Neutros ≈75% de cada pieza, verde ≈25%, un solo movimiento verde dominante. Nunca pieza 100% negra ni 100% verde.
+**Regla central: "El negro construye, el verde hace crecer."** Neutros ≈75%, verde ≈25%, un solo movimiento verde dominante. **La unidad de medición es el deck completo, no la slide** (una pieza suelta sí se mide sola): la portada oficial M1 es una foto tapada al ~70% por scrim, así que medida slide por slide la propia portada de la marca falla su propia regla — ver `proporcion_75_25` en `ai/constraints.json`. Nunca pieza 100% negra ni 100% verde.
 
 **Proporción exacta (confirmada por Varu el 5 de agosto de 2026 como obligatoria — "cualquier diseño que hagas tiene que mantener estas proporciones", deja de ser guía y pasa a ser regla):**
 
@@ -291,7 +291,7 @@ Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.a
    "posicion": "x 76.5% · y 3.5%, alineado a la derecha",
    "formato": "dos dígitos (07)"
   },
-  "golpes_de_lima": "exactamente uno por slide (CTA o dato o fila destacada — nunca dos)",
+  "golpes_de_lima": "como máximo UNO por slide (CTA o dato o fila destacada — nunca dos), y CERO es válido: el acento es un techo, no una cuota. 19 de las 41 plantillas oficiales no llevan lima.",
   "fondos_permitidos": [
    "#FFFFFF",
    "sage #EEF2EC",
@@ -558,6 +558,7 @@ Plantillas HTML oficiales de los 41 módulos, generadas del exportador real. Se 
   "Después del primer beat \"propuesta\" tiene que haber al menos un beat \"evidencia\". No se afirma sin respaldar.",
   "No más de 3 beats iguales seguidos. Cuatro slides de propuesta seguidas es un catálogo, no un argumento."
  ],
+ "cuando_NO_aplican": "Las cuatro gobiernan la SECUENCIA. En una pieza de una sola slide no hay secuencia y no aplican ninguna: pedirle a una slide que sea a la vez tensión, propuesta, evidencia y pedido es insatisfacible. Lo que sí aplica siempre es el contrato de entrega de ai/precedencia.json. validar.py --pieza ya las saltea cuando hay una sola slide.",
  "si_una_regla_no_se_puede_cumplir": "decilo explícito en la entrega, con el motivo. Una excepción declarada es aceptable; una regla incumplida en silencio no. Ejemplo real: el resumen ejecutivo no tiene CTA, así que no puede cerrar en \"pedido\" — eso se declara.",
  "textura_es_diagnostico_no_regla": "El campo perfil trae lienzo y peso (visual/mixto/texto) para que puedas ver si el deck se aplana. NO es un gate: fue uno y se retiró, porque el catálogo no tiene todavía un módulo visual que cargue un método, un journey ni un caso, así que un deck de producto no podía cumplirlo (0 de 362.880 órdenes posibles). Miralo, no lo persigas. Si te queda denso, lo correcto es DECIRLO, no forzar la secuencia.",
  "si_te_queda_soso": "NO agregues adorno y NO inventes una carátula: hay meta-análisis de que los detalles decorativos bajan comprensión y recall (seductive details, 177 effect sizes). Primero revisá el argumento con las cuatro reglas de arriba — soso casi siempre es \"propone sin tensión\" o \"cuatro propuestas seguidas\", no falta de color. Si el argumento está bien y sigue denso, es que falta un módulo en el catálogo: reportalo.",
@@ -636,12 +637,13 @@ Plantillas HTML oficiales de los 41 módulos, generadas del exportador real. Se 
    "Un dato que no está en facts.json NO se escribe en la pieza. Va como [PENDIENTE] visible, nunca como el número que te pasaron.",
    "Si el material de origen trae un dato que CONTRADICE a facts.json, la slide no sale: se entrega con el slot en [PENDIENTE] y la contradicción explícita en el pedido a humanos.",
    "Toda entrega lleva un bloque 'PEDIDO A HUMANOS' con una línea por hueco: qué dato falta, a quién se le pide, y qué slide se desbloquea con eso.",
-   "Si la pieza tiene aunque sea un [PENDIENTE], se entrega marcada como BORRADOR. Una pieza sin ningún hueco es la única que puede salir como final."
+   "Si la pieza tiene aunque sea un [PENDIENTE], se entrega marcada como BORRADOR. Una pieza sin ningún hueco es la única que puede salir como final.",
+  "El bloque PEDIDO A HUMANOS se marca con el atributo data-pedido-a-humanos en su contenedor, como hacen los tres decks de ai/decks/. validar.py --pieza usa esa marca para no contar como cifra afirmada lo que el bloque escribe SOBRE la pieza: sin la marca, tu propia declaración de huecos te cuenta en contra."
   ],
-  "verificacion": "python3 ai/validar.py --pieza <archivo.html> corre esto sobre el HTML entregado, no sobre el repo."
+  "verificacion": "python3 ai/validar.py --pieza <archivo.html> corre sobre el HTML entregado, no sobre el repo — pero necesitás el script, así que solo se puede si tenés el repo clonado. Si llegaste por URL y no lo tenés, el contrato igual te obliga: [PENDIENTE], BORRADOR y pedido a humanos se cumplen a mano."
  },
 
- "como_reportar_una_contradiccion": "Anotala en .ai/VALIDACION-IA.md bajo 'Necesita tu decisión', con los dos archivos que se contradicen y qué dice cada uno. El agente semanal de validación las junta y las lleva a una persona. No las arregles por criterio propio."
+ "como_reportar_una_contradiccion": "Si tenés el repo: anotala en .ai/VALIDACION-IA.md bajo 'Necesita tu decisión', con los dos archivos que se contradicen y qué dice cada uno; el agente semanal las junta y las lleva a una persona. Si llegaste por URL y no podés escribir en el repo —que es el caso normal— la contradicción va en el bloque PEDIDO A HUMANOS de la pieza que estás entregando, con los dos archivos y la cita de cada lado: ese bloque ES el canal, y la persona que recibe la pieza la lleva al ledger. Lo que no se hace nunca es resolverla por criterio propio ni dejarla sin registrar porque no tenías dónde escribirla."
 }
 
 
@@ -804,7 +806,7 @@ Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar
 | 4 | **`#00DE68` como texto solo sobre oscuro** | Revisá cada uso de `#00DE68` en `color:` | Se usa como texto sobre blanco o crema en vez de `#009145` |
 | 5 | **Como máximo un golpe de lima** | Contá los elementos en lima: CTA, display, motivo, ícono destacado, marca a mano. Automatizable: contar `A2FF00` por slide | Hay **dos o más** elementos lima compitiendo en la misma pieza. Cero lima es válido: 19 de las 41 plantillas oficiales no llevan lima, y el acento es un techo, no una cuota |
 | 6 | **Balance 75/25** | Estimá superficie: neutros (blanco/sage/negro/crema) vs. verdes | Los verdes pasan de ~25%, o la pieza es 100% negra o 100% verde |
-| 7 | **Manrope, y la jerarquía declarada** | Revisá `font-family`. Para slides, contá los `font-size` únicos y compará contra el techo del catálogo (7). Para piezas nuevas de redes o web, el techo sigue siendo 3 | Aparece otra tipografía (Inter, Poppins, system-ui suelto). O una slide pasa los 7 niveles. O una pieza nueva que no viene de plantilla pasa los 3. **Nota:** las plantillas oficiales van de 2 a 9 niveles porque cada nivel tiene un rol declarado (kicker, display, bajada, caption, dato, label, pie); el límite de 3 era para piezas escritas a mano |
+| 7 | **Manrope, y la jerarquía declarada** | Revisá `font-family`. Para slides, contá los `font-size` únicos y compará contra el techo del catálogo (7). Para piezas nuevas de redes o web, el techo sigue siendo 3 | Aparece otra tipografía (Inter, Poppins, system-ui suelto). O una slide pasa los 7 niveles. O una pieza nueva que no viene de plantilla pasa los 3. **Nota:** el techo de las plantillas es **7**, uno por rol declarado (kicker, display, bajada, caption, dato, label, pie); el límite de 3 era para piezas escritas a mano. Dos plantillas del catálogo lo pasan y están **declaradas en falla**, no autorizadas: E4 (9 niveles) y G1 (8) — colapsar niveles ahí es una decisión de diseño pendiente (`.mesa/DECISIONS.md`, D3). Que existan en el catálogo no las convierte en permiso |
 | 8 | **Cero emojis** | Buscá caracteres emoji en títulos, cuerpo, bullets y labels | Hay cualquier emoji que no sea 👈 👉 👇 apuntando a un CTA, o una bandera de país |
 | 9 | **Cero gradientes** | Buscá `gradient`, `blur`, `box-shadow` de brillo, glass, 3D | Hay algún gradiente que no sea el scrim verde profundo 55–86% sobre foto aérea |
 | 10 | **Máximo 2 recursos gráficos** | Contá: foto aérea, foto B&N, personaje, paño de semicírculos, marca a mano, ícono. La cifra gigante y la tipografía no cuentan — son la voz | Hay 3 o más además de la tipografía, o convive un par prohibido: dos fotos, foto + personaje, foto aérea + paño, personaje + ícono (matriz completa en `resourceCoexistence` de `tokens.json`) |

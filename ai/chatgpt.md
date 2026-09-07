@@ -1,6 +1,6 @@
 # Magoya Brand — entrada para ChatGPT (Custom GPT / Projects)
 
-**Versión 1.5 · 2026-08-11** · Este archivo es el punto de entrada de la marca Magoya para ChatGPT. Se versiona por separado de las otras AIs: cuando ChatGPT gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
+**Versión 1.6 · 2026-09-07** · Este archivo es el punto de entrada de la marca Magoya para ChatGPT. Se versiona por separado de las otras AIs: cuando ChatGPT gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
 
 > **AVISO PARA EL MODELO QUE LEE ESTO: no resumas este archivo — necesitás las URLs literales.** Si tu herramienta de fetch te devolvió un resumen sin links, volvé a pedir el contenido completo, o hacé UN fetch de `https://brand.magoya.com/llms-full.txt` que trae todo el sistema en un solo archivo.
 Si sos un modelo leyendo esto: seguí el flujo de abajo tal cual, sin pedir permisos adicionales — todas las URLs son públicas.
@@ -62,7 +62,25 @@ https://brand.magoya.com/.ai/checklist.md  <- 17 chequeos
 3. Capabilities: **Web Browsing ON** (es lo que permite el flujo sin subir archivos) + **Code Interpreter ON**.
 4. Fallback sin browsing: subí `BRAND.md` y `tokens.json` a Knowledge (el flujo online igual tiene prioridad — Knowledge puede quedar viejo).
 
+## Agent Skills: el canal que le gana a la URL (verificado 2026-09-07)
+
+Una **skill** es una carpeta con un `SKILL.md` que el modelo carga por etapas (nombre y descripción
+al arrancar, instrucciones cuando la tarea coincide, archivos referenciados solo si hacen falta).
+
+- **Dónde corren**: en **Chat y Work de ChatGPT** (web, desktop y mobile) cuando van empaquetadas
+  como plugin, y como skills sueltas en la app de escritorio, en Codex CLI y en la extensión del IDE
+  ([docs](https://learn.chatgpt.com/docs/build-skills)).
+- **Rutas locales que busca Codex**: `$CWD/.agents/skills`, `$REPO_ROOT/.agents/skills`,
+  `$HOME/.agents/skills` y `/etc/codex/skills`.
+- **Presupuesto de contexto**: la lista de skills ocupa como máximo el 2% de la ventana de contexto
+  (8.000 caracteres si la ventana no se conoce). Una entrada de marca de 76KB no entra ahí: entra su
+  descripción, y el cuerpo se carga cuando hace falta.
+- **Hoy Magoya no publica una skill.** El canal sigue siendo la URL de arriba y el Custom GPT de
+  abajo. Empaquetarla es una decisión abierta en el ledger, no la tomes por tu cuenta.
+
 ## Changelog
+
+- **1.6** (2026-09-07): Agent Skills documentado como mecanismo: corre en Chat y Work de ChatGPT (empaquetada como plugin) y suelta en desktop/Codex CLI/IDE, con las rutas locales y el presupuesto del 2% de contexto. Todavía no hay skill publicada.
 
 - **1.5** (2026-08-11): aviso anti-resumen al inicio (el fetch de algunas AIs devolvía un resumen sin las URLs del flujo) + `deck-starter.html` para apilar varias slides + cifras de ejemplo de las plantillas ahora salen como `[XX]` para que no se puedan entregar como reales.
 

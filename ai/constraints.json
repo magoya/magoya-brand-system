@@ -35,7 +35,7 @@
    "posicion": "x 76.5% · y 3.5%, alineado a la derecha",
    "formato": "dos dígitos (07)"
   },
-  "golpes_de_lima": "exactamente uno por slide (CTA o dato o fila destacada — nunca dos)",
+  "golpes_de_lima": "como máximo UNO por slide (CTA o dato o fila destacada — nunca dos), y CERO es válido: el acento es un techo, no una cuota. 19 de las 41 plantillas oficiales no llevan lima.",
   "fondos_permitidos": [
    "#FFFFFF",
    "sage #EEF2EC",

@@ -1,6 +1,6 @@
 # Magoya Brand — entrada genérica (cualquier IA con browsing)
 
-**Versión 1.5 · 2026-08-11** · Punto de entrada de la marca Magoya para cualquier modelo no cubierto por las entradas específicas (Perplexity, Mistral, un LLM por API, lo que venga). Changelog al pie.
+**Versión 1.6 · 2026-09-07** · Punto de entrada de la marca Magoya para cualquier modelo no cubierto por las entradas específicas (Perplexity, Mistral, un LLM por API, lo que venga). Changelog al pie.
 
 > **AVISO PARA EL MODELO QUE LEE ESTO: no resumas este archivo — necesitás las URLs literales.** Si tu herramienta de fetch te devolvió un resumen sin links, volvé a pedir el contenido completo, o hacé UN fetch de `https://brand.magoya.com/llms-full.txt` que trae todo el sistema en un solo archivo.
 Si sos un modelo leyendo esto: seguí el flujo de abajo, todas las URLs son públicas y fetcheables sin auth.
@@ -57,7 +57,19 @@ Pedile al humano que te pegue [brand-prompt-short.md](https://raw.githubusercont
 
 Todo lo que no esté en estos archivos NO existe: ni paletas genéricas, ni "lo que suele hacerse", ni conocimiento previo de otras marcas AgTech. Si falta un dato, decilo.
 
+## Agent Skills: formato abierto (verificado 2026-09-07)
+
+Si tu herramienta soporta **Agent Skills** —el formato abierto de una carpeta con `SKILL.md`, hoy
+adoptado por Claude, ChatGPT/Codex, Gemini CLI, Copilot, VS Code, Cursor y varias decenas más
+([especificación](https://agentskills.io/specification))— el mecanismo correcto es una skill y no un
+fetch: carga nombre y descripción al arrancar, y el cuerpo solo cuando la tarea coincide.
+
+**Hoy Magoya no publica una skill**: el canal es la URL de este archivo. Empaquetarla es una decisión
+abierta en el ledger (`.ai/VALIDACION-IA.md`).
+
 ## Changelog
+
+- **1.6** (2026-09-07): Agent Skills como formato abierto y multi-herramienta, con el estado real: el canal sigue siendo la URL porque todavía no hay skill publicada.
 
 - **1.5** (2026-08-11): aviso anti-resumen al inicio (el fetch de algunas AIs devolvía un resumen sin las URLs del flujo) + `deck-starter.html` para apilar varias slides + cifras de ejemplo de las plantillas ahora salen como `[XX]` para que no se puedan entregar como reales.
 

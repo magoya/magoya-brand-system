@@ -248,6 +248,10 @@ _idx['como_componer_el_deck'] = {
    'Después del primer beat "propuesta" tiene que haber al menos un beat "evidencia". No se afirma sin respaldar.',
    'No más de 3 beats iguales seguidos. Cuatro slides de propuesta seguidas es un catálogo, no un argumento.',
  ],
+ 'cuando_NO_aplican': ('Las cuatro gobiernan la SECUENCIA. En una pieza de una sola slide no hay '
+             'secuencia y no aplican ninguna: pedirle a una slide que sea a la vez tensión, propuesta, '
+             'evidencia y pedido es insatisfacible. Lo que sí aplica siempre es el contrato de entrega '
+             'de ai/precedencia.json. validar.py --pieza ya las saltea cuando hay una sola slide.'),
  'si_una_regla_no_se_puede_cumplir': ('decilo explícito en la entrega, con el motivo. Una excepción '
              'declarada es aceptable; una regla incumplida en silencio no. Ejemplo real: el resumen '
              'ejecutivo no tiene CTA, así que no puede cerrar en "pedido" — eso se declara.'),

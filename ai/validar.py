@@ -433,6 +433,15 @@ def _arco(path):
         print('[FALLA] ninguna slide declara data-modulo: no se puede verificar nada.')
         print('        Las plantillas oficiales lo traen; si no está, la pieza no salió del catálogo.')
         return ['sin data-modulo']
+    if len(usados) == 1:
+        # Un arco necesita secuencia. En una pieza de una sola slide las cuatro reglas son
+        # insatisfacibles a la vez (la única slide tendría que ser pedido, tensión y evidencia),
+        # y una tabla de precios de una página disparaba tres fallas imposibles de arreglar.
+        print('\n--- argumento ---')
+        print('[N/A] una sola slide (%s): el arco gobierna la SECUENCIA y acá no hay secuencia.'
+              % usados[0].upper())
+        print('      Lo que sí aplica es el contrato de entrega, que se mide arriba.')
+        return []
     perf = {m['id']: m.get('perfil', {}) for m in cargar('ai/templates/index.json')['modulos']}
     b = [perf.get(m.upper(), {}).get('beat', '?') for m in usados]
     problemas = []
@@ -510,12 +519,37 @@ def _adorno(path):
         print('[OK] todas las slides salen del catálogo, sin elementos de más')
     return problemas
 
+def _solo_slides(s):
+    """Devuelve el HTML de cada <div class="slide">, cerrando bien los div anidados.
+    Con un regex perezoso hasta </body> la hoja de estado que va después de la última
+    slide entraba igual y sus líneas ("Slide 05 (C1): 4 cifra(s)") se contaban como
+    cifras afirmadas: los tres decks oficiales reprobaban su propio contrato."""
+    fuera = []
+    for m in re.finditer(r'<div[^>]*class="slide"', s):
+        i, prof = m.start(), 0
+        for t in re.finditer(r'<div\b|</div>', s[i:]):
+            prof += 1 if t.group(0) == '<div' else -1
+            if prof == 0:
+                fuera.append(s[i:i + t.end()])
+                break
+        else:
+            fuera.append(s[i:])
+    return fuera
+
+
 def validar_pieza(path):
     """El hallazgo que motivó esto: en la auditoría una IA declaró cinco cifras como no
     verificables en su reporte y las dejó escritas en la slide. Declarar no es contener."""
     s = io.open(path, encoding='utf-8', errors='ignore').read()
+    # Las cifras se cuentan SOLO dentro de las slides. Todo lo que está afuera —el <title>,
+    # el header de instrucciones de la plantilla, el aviso de BORRADOR, el pedido a humanos y
+    # las notas de decisiones— habla SOBRE la pieza y no es contenido entregable. Sin esto, el
+    # nombre del propio módulo ("B2 — 3 boxes de modelo comercial") contaba como cifra afirmada
+    # y toda pieza salida de esa plantilla fallaba por un dato que nunca escribió.
+    slides = _solo_slides(s)
+    texto = '\n'.join(slides) if slides else s
     # el bloque PEDIDO A HUMANOS habla SOBRE la pieza, no es contenido de la pieza
-    texto = re.sub(r'<div[^>]*data-pedido-a-humanos.*?</body>', '</body>', s, flags=re.S)
+    texto = re.sub(r'<div[^>]*data-pedido-a-humanos.*?</body>', '</body>', texto, flags=re.S)
     texto = re.sub(r'<!--.*?-->', ' ', texto, flags=re.S)      # los comentarios traen instrucciones, no copy
     texto = re.sub(r'<(script|style)[^>]*>.*?</\1>', ' ', texto, flags=re.S)
     texto = re.sub(r'<[^>]+>', ' ', texto)

@@ -1,6 +1,6 @@
 # Magoya Brand — entrada para Gemini (gemini.google.com / AI Studio / Gems)
 
-**Versión 1.5 · 2026-08-11** · Punto de entrada de la marca Magoya para Gemini. Se versiona por separado de las otras AIs (changelog al pie).
+**Versión 1.6 · 2026-09-07** · Punto de entrada de la marca Magoya para Gemini. Se versiona por separado de las otras AIs (changelog al pie).
 
 > **AVISO PARA EL MODELO QUE LEE ESTO: no resumas este archivo — necesitás las URLs literales.** Si tu herramienta de fetch te devolvió un resumen sin links, volvé a pedir el contenido completo, o hacé UN fetch de `https://brand.magoya.com/llms-full.txt` que trae todo el sistema en un solo archivo.
 Si sos un modelo leyendo esto: seguí el flujo de abajo, todas las URLs son públicas.
@@ -60,7 +60,22 @@ https://brand.magoya.com/.ai/checklist.md  <- 17 chequeos
 - **Gem**: creá un Gem "Magoya Brand" con la instrucción: *"Antes de cualquier tarea de marca, leé https://brand.magoya.com/ai/gemini.md y seguí su flujo al pie de la letra. Esos archivos son la única fuente de verdad."*
 - **AI Studio / API**: mismo texto como system instruction; si tu integración tiene URL context tool, dale esta URL directamente.
 
+## Agent Skills: existe en la CLI, NO en la app (verificado 2026-09-07)
+
+Una **skill** es una carpeta con un `SKILL.md` que se carga por etapas (nombre y descripción al
+arrancar, el cuerpo cuando la tarea coincide).
+
+- **Gemini CLI sí**: skills en `~/.gemini/skills/`, `~/.agents/skills/`, `.gemini/skills/` o
+  `.agents/skills/` del workspace ([docs](https://geminicli.com/docs/cli/skills/)). Cuando se activa,
+  el cuerpo del `SKILL.md` entra en la conversación.
+- **La app de Gemini y los Gems no.** Ahí no hay skills: **la URL de este archivo sigue siendo el
+  único canal**, y por eso el flujo de arriba no se reemplaza. Si estás en gemini.google.com, seguí
+  el flujo tal cual.
+- **Hoy Magoya no publica una skill.** Empaquetarla es una decisión abierta en el ledger.
+
 ## Changelog
+
+- **1.6** (2026-09-07): Agent Skills en Gemini CLI (con las cuatro rutas), y queda dicho explícito que la app y los Gems NO las soportan: ahí la URL sigue siendo el único canal.
 
 - **1.5** (2026-08-11): aviso anti-resumen al inicio (el fetch de algunas AIs devolvía un resumen sin las URLs del flujo) + `deck-starter.html` para apilar varias slides + cifras de ejemplo de las plantillas ahora salen como `[XX]` para que no se puedan entregar como reales.
 

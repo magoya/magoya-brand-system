@@ -1,6 +1,6 @@
 # Magoya Brand — entrada para Claude (claude.ai / Claude Code / API)
 
-**Versión 1.5 · 2026-08-11** · Punto de entrada de la marca Magoya para Claude. Se versiona por separado de las otras AIs: cuando Claude gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
+**Versión 1.6 · 2026-09-07** · Punto de entrada de la marca Magoya para Claude. Se versiona por separado de las otras AIs: cuando Claude gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
 
 > **AVISO PARA EL MODELO QUE LEE ESTO: no resumas este archivo — necesitás las URLs literales.** Si tu herramienta de fetch te devolvió un resumen sin links, volvé a pedir el contenido completo, o hacé UN fetch de `https://brand.magoya.com/llms-full.txt` que trae todo el sistema en un solo archivo.
 Si sos Claude leyendo esto: seguí el flujo de abajo, todas las URLs son públicas y fetcheables sin auth.
@@ -59,7 +59,23 @@ https://brand.magoya.com/.ai/checklist.md  <- 17 chequeos
 - **claude.ai Projects**: pegá en las instrucciones del proyecto: *"Antes de cualquier tarea de marca, fetch https://brand.magoya.com/ai/claude.md y seguí su flujo."* + el preset [claude-project-instructions.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/presets/claude-project-instructions.md) como refuerzo. Knowledge opcional como fallback offline: BRAND.md, tokens.json, tokens.css.
 - **Claude Code**: copiá el preset a `CLAUDE.md` del proyecto.
 
+## Agent Skills: el canal que le gana a la URL (verificado 2026-09-07)
+
+Una **skill** es una carpeta con un `SKILL.md` (metadata + instrucciones) que el agente carga en tres
+etapas: al arrancar solo lee nombre y descripción, el cuerpo entra cuando la tarea coincide, y los
+archivos referenciados recién cuando los necesita. Eso es lo contrario de `llms-full.txt`, que entra
+entero en cada conversación.
+
+- **Claude Code / claude.ai**: skills en `.claude/skills/` del proyecto o `~/.claude/skills/`
+  ([docs](https://code.claude.com/docs/en/skills)). La distribución soportada es un **plugin
+  marketplace**, que es un repo de git: `/plugin marketplace add <owner/repo>` y después
+  `/plugin install <nombre>@<marketplace>`. Este brand system YA es un repo, así que el canal existe.
+- **Hoy Magoya no publica una skill.** El canal sigue siendo la URL de arriba. Empaquetarla es una
+  decisión abierta en el ledger (`.ai/VALIDACION-IA.md`), no la tomes por tu cuenta.
+
 ## Changelog
+
+- **1.6** (2026-09-07): Agent Skills documentado como mecanismo (progressive disclosure + plugin marketplace como canal de distribución). Todavía no hay skill publicada: el canal sigue siendo la URL.
 
 - **1.5** (2026-08-11): aviso anti-resumen al inicio (el fetch de algunas AIs devolvía un resumen sin las URLs del flujo) + `deck-starter.html` para apilar varias slides + cifras de ejemplo de las plantillas ahora salen como `[XX]` para que no se puedan entregar como reales.
 

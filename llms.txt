@@ -4,7 +4,7 @@
 
 Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md` y `tokens.json`, y aplicá el prompt de sistema de `.ai/brand-prompt.md`. Las once reglas que más se rompen, para tenerlas antes de abrir cualquier link:
 
-1. Tipografía **Manrope** (variable 200–800), fallback Arial. Display peso 800, tracking −0.03em. Máximo 3 niveles tipográficos por pieza.
+1. Tipografía **Manrope** (variable 200–800), fallback Arial. Display peso 800, tracking −0.03em. Máximo 3 niveles tipográficos en una pieza escrita a mano; si la pieza sale de una plantilla del catálogo, el techo es el de esa plantilla (7 roles nombrados).
 2. **75/25**: neutros (blanco/sage/negro/crema) ≈75% de la pieza, verdes ≈25%, un solo movimiento verde dominante. Nunca una pieza 100% negra ni 100% verde.
 3. Lima **#A2FF00** = energía en dosis única (un CTA *o* un display *o* un motivo por pieza). **Nunca como texto sobre fondo claro** (1.25:1).
 4. Verde digital **#00DE68** = identidad (wordmark y avatares). Como texto solo sobre fondo oscuro; sobre blanco se usa **#009145** y solo ≥24px bold. Lima ≠ logo.
