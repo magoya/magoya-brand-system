@@ -176,8 +176,17 @@ def armar(nombre, spec, hechos):
              '  Cambiá SOLO el texto que está entre corchetes. El [XX] es un dato que\n'
              '  tenés que pedir: está en %s/ai/facts.json o no existe todavía —\n'
              '  no lo completes con algo verosímil.\n\n'
-             '  NO muevas ni cambies posiciones, tamaños, colores ni tipografía: la\n'
-             '  geometría ES la marca. Los elementos data-locked no se tocan.\n\n'
+             '  Y "dato" no quiere decir solo número: un nombre de servicio, un claim o\n'
+             '  una oferta que no estén en facts.json tampoco se escriben. Van al pedido\n'
+             '  a humanos, aunque no lleven una cifra adentro.\n\n'
+             '  NO muevas ni cambies posiciones, tamaños ni tipografía: la geometría ES\n'
+             '  la marca. Los elementos data-locked no se tocan.\n\n'
+             '  La ÚNICA excepción (regla 3b de las plantillas, que también vale acá):\n'
+             '  los elementos data-accent="lima" son el golpe de lima de la slide, y\n'
+             '  podés MOVER el acento a otro elemento del mismo grupo — sacale el\n'
+             '  atributo a uno y ponéselo a otro, junto con el color #A2FF00 — cuando el\n'
+             '  destacado semántico sea otro. Como máximo UNO por slide, y cero es\n'
+             '  válido. Lo que no se mueve es la geometría.\n\n'
              '  La secuencia ya está decidida y validada. Si sacás o agregás una slide,\n'
              '  verificá el arco: la última tiene que pedir algo, y antes de proponer\n'
              '  tiene que haber una tensión.\n-->\n' % (spec['titulo'], spec['cuando'], BASE))
@@ -215,8 +224,13 @@ def armar(nombre, spec, hechos):
     return html, mapa
 
 
-def fecha_de_version(ruta, catalogo):
-    """Conserva la fecha publicada si el resto del catálogo no cambió."""
+def fecha_de_version(ruta, catalogo, hubo_cambio):
+    """Conserva la fecha publicada solo si NADA cambió: ni el catálogo ni el HTML de
+    ningún deck. `hubo_cambio` lo trae main(), que ya comparó cada .html contra el
+    que estaba en disco — sin eso, un cambio en el header de los decks salía sin
+    mover la versión que los consumidores miran."""
+    if hubo_cambio:
+        return datetime.date.today().isoformat()
     try:
         previo = json.loads(io.open(ruta, encoding='utf-8').read())
     except Exception:
@@ -247,9 +261,14 @@ def main():
      'version': None,   # se resuelve al final: fecha del último CAMBIO, no de la última corrida
      'decks': {},
     }
+    hubo_cambio = False
     for nombre, spec in DECKS.items():
         html, mapa = armar(nombre, spec, hechos)
         ruta = '%s/%s.html' % (SALIDA, nombre)
+        try:
+            hubo_cambio = hubo_cambio or io.open(ruta, encoding='utf-8').read() != html
+        except IOError:
+            hubo_cambio = True
         io.open(ruta, 'w', encoding='utf-8').write(html)
         catalogo['decks'][nombre] = {
           'titulo': spec['titulo'],
@@ -265,7 +284,7 @@ def main():
     # con today() acá el chequeo de drift de validar.py reportaba una falla todos los días
     # siguientes a la generación, aunque nada hubiera cambiado. Un falso positivo diario
     # tapa uno de verdad.
-    catalogo['version'] = fecha_de_version('%s/index.json' % SALIDA, catalogo)
+    catalogo['version'] = fecha_de_version('%s/index.json' % SALIDA, catalogo, hubo_cambio)
     io.open('%s/index.json' % SALIDA, 'w', encoding='utf-8').write(
         json.dumps(catalogo, ensure_ascii=False, indent=1) + '\n')
     print('%s/index.json · %d decks' % (SALIDA, len(DECKS)))
