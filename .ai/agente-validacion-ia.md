@@ -37,7 +37,7 @@ Reglas de actuación:
 Tres subagentes independientes, cada uno con **solo una URL pública** y un pedido — nada más. Sin
 contexto de esta conversación, sin acceso al repo: exactamente lo que tiene un usuario afuera.
 
-**Cada uno con `isolation: "worktree"`.** En la primera corrida dos agentes compartieron directorio
+**Cada uno con `isolation: "worktree"` Y con un directorio de salida exclusivo.** En la primera corrida dos agentes compartieron directorio
 y uno sobreescribió el script del otro. No invalidó los resultados —de hecho produjo un hallazgo por
 accidente— pero la ceguera tiene que ser por sandbox, no por instrucción. Pediles igual que declaren
 toda fuente que usen, para poder descartar la corrida si tocaron el repo.
@@ -58,9 +58,21 @@ pero enterrada, o estaba clara y la IA la ignoró?
 Esa última columna es el producto real del bloque: distingue un hueco del spec de un problema de
 fetch de un límite del modelo. Solo el primero se arregla acá.
 
-Rotá el pedido cada corrida (una landing, un one-pager comercial, una tabla de precios, un banner
-de LinkedIn) para no optimizar contra un solo caso. Ya se usaron: deck ×2 (2026-08-24), y one-pager
-A4 · landing · carrusel 4:5 (2026-08-31).
+Rotá el pedido cada corrida (una landing, un one-pager comercial, un banner de LinkedIn, un carrusel)
+para no optimizar contra un solo caso. Ya se usaron: deck ×2 (2026-08-24); one-pager A4 · landing ·
+carrusel 4:5 (2026-08-31); deck · post de LinkedIn · tabla de precios (2026-09-07). Se puede repetir
+un pedido a propósito cuando la parte del sistema que ejercita es nueva — el deck se repitió porque
+`ai/decks/` tenía cinco días— pero decilo en el ledger.
+
+**Tres instrucciones que la corrida del 2026-09-07 mostró que hacen falta, textuales:**
+
+- **Cada agente escribe SOLO en su propio directorio** (`.../ciegas/pN/`). Los tres compartieron el
+  scratchpad y el segundo vio la pieza del primero. El worktree aísla el repo, no el directorio de
+  trabajo.
+- **Prohibido renderizar la pieza en un navegador**: verificar leyendo el HTML. Una corrida se colgó
+  diez minutos ahí y hubo que relanzarla entera.
+- **La hoja de estado se escribe ANTES de pulir la pieza.** Con eso, una corrida que se cuelga igual
+  deja su registro.
 
 **Congelá el push mientras las pruebas están en el aire, y pedí la hora de cada fetch.** El
 2026-08-31 otra sesión pusheó a mitad de corrida y Pages rebuildeó con dos de las tres pruebas

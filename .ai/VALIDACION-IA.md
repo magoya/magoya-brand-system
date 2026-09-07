@@ -8,6 +8,189 @@ pasa una pieza hecha por una IA que solo recibió un link. Todo lo demás es dia
 
 ---
 
+## 2026-09-07
+
+**Validador:** 4 fallas · 5 huecos · 8 ok al abrir; **3 fallas · 5 huecos · 8 ok al cerrar.** La
+única falla mecánica era el drift, y era **un falso positivo que iba a repetirse todos los días**:
+`ai/decks/index.json` estampaba `date.today()`, así que regenerar cambiaba el archivo aunque nada
+hubiera cambiado. Las otras tres (E4 con dos acentos, E4=9 y G1=8 niveles, los tres wordmarks
+distintos) están declaradas a propósito en `.mesa/DECISIONS.md` y esperan una persona.
+
+**Prueba a ciegas:** deck de 5 slides — **11/13 (3 N/A)** · post de LinkedIn — **3/3 (13 N/A)** ·
+tabla de precios — **12/12 (4 N/A)**. Títulos-aserción: **60% · n/a (100% por analogía) · 100%**
+(base 17%, objetivo 80%). Pedidos rotados: el post y la tabla de precios son nuevos; el deck se
+repitió a propósito porque `ai/decks/` es de hace cinco días y nunca se había probado a ciegas.
+
+**Los puntajes no se comparan con los de la corrida anterior y hay que decirlo**: los N/A cambian el
+denominador según el formato. Un post de texto plano deja 13 de los 16 chequeos sin aplicar, y saca
+3/3 publicando una afirmación de capacidad sin ningún respaldo. Ese es el hallazgo, no el puntaje.
+
+**Lo que la corrida dice del sistema, y es lo que importa:**
+
+1. **El checklist es visual y el riesgo es textual.** De 16 chequeos, uno solo mira el copy, y mira
+   ortografía. Las dos piezas que publicaron algo que no debían sacaron puntaje perfecto.
+2. **El contrato de entrega solo sabe contar cifras.** Dice "un **dato** que no está en `facts.json`
+   no se escribe", y toda su maquinaria es numérica: `[XX]` está definido como marcador de cifras y
+   el pedido a humanos enumera "N cifra(s)". **Dos IAs independientes leyeron el mismo párrafo igual
+   y las dos entregaron "Staff Augmentation"**, que `BRAND.md` marca pendiente de validación. Cuando
+   dos agentes que no se hablaron leen igual un texto, el que está mal es el texto.
+3. **El camino corto esconde reglas.** La regla 3b —mover el acento lima— está en las 41 plantillas
+   y no estaba en el deck armado, que es adonde `claude.md` paso 0 manda primero. La prueba del deck
+   razonó al revés por eso; la que leyó la plantilla suelta lo hizo bien.
+4. **La pieza más obediente no es la más segura.** Ver abajo.
+
+**La más peligrosa es el deck, y no es la que se ve rota.** Es un recorte literal del deck oficial:
+geometría idéntica tag por tag, 19 assets reales en 200, wordmark correcto, un golpe de lima por
+slide, arco verificado. **Pasa cualquier revisión visual que le haga un humano.** Tiene un solo
+corchete —el nombre del cliente— y el bloque de entrega dice "cuando no quede ningún corchete, borrá
+este bloque y el deck sale como final". Lo que sale sin corchete es **una oferta comercial que nadie
+aprobó**: noventa minutos con el equipo de producto y agronomía, entregable escrito, "trabajemos
+juntos o no", más un cronograma de cuatro semanas. No está en `facts.json`, ni en `BRAND.md`, ni en
+el `texto_ejemplo` de M3 (que ofrece otra cosa: un discovery pago de seis semanas). Y el pedido a
+humanos **no lo lista entre sus cinco huecos**. La tabla de precios comete el mismo error de fondo y
+es inofensiva, porque le faltan los tres números que son el objeto de la pieza.
+
+**Por qué falló cada chequeo.** Solo tres fallas duras, las tres en el deck y las tres en el bloque
+que escribió de cero (el único que no sale de una plantilla): **2 por (C) la regla estaba clara y la
+IA la ignoró** —`#9fb3a6` fuera de paleta y espaciado 40/18/20/22 fuera de la escala, con la regla
+escrita en tres archivos y el checklist nombrando literalmente el 18— y **1 defecto del chequeo**.
+Alrededor, **1 por (B)** —"ninguna afirmación de valor viaja sin cifra, nombre de cliente, plazo o
+captura" existe en `BRAND.md` §1 y no existe como chequeo ni como constraint: el gate no la mira— y
+**3 por (A)**, que son las que se arreglan acá y están abajo.
+
+**Arreglado y commiteado** (`d9236f1`, `08f7df3` — ninguno inventa un valor de marca):
+
+- **El chequeo de drift iba a dar falla todos los días.** `version` es ahora la fecha del último
+  cambio de contenido, no la de la última corrida. Y compara también el HTML de cada deck, no solo
+  el catálogo: verificado en las dos direcciones.
+- **`validar.py --pieza` reprobaba a los tres decks oficiales por cifras que nunca escribieron.**
+  Contaba como "cifra afirmada" todo lo que estaba fuera de las slides: el `<title>`, el header de
+  instrucciones y la hoja de estado ("Slide 05 (C1): 4 cifra(s)"). Toda pieza salida de B2 fallaba
+  por el nombre del propio módulo ("B2 — 3 boxes"). Ahora cuenta solo dentro de `<div class="slide">`.
+- **El gate de arco corría sobre piezas de una sola slide**, donde las cuatro reglas son
+  insatisfacibles a la vez: la tabla de precios se llevó tres fallas imposibles de arreglar.
+- **"Máximo 3 niveles tipográficos" seguía plano** en `tokens.json`, `llms.txt` y los dos prompts
+  canónicos, mientras `BRAND.md` y el checklist ya distinguían pieza a mano de plantilla. **Las tres
+  pruebas chocaron con esto.** Y el checklist decía "las plantillas oficiales van de 2 a 9 niveles",
+  que se lee como permiso: E4 y G1 están declaradas en falla, no autorizadas.
+- **`.ai/brand-prompt.md` estaba desactualizado y es el más peligroso de todos**, porque `llms.txt`
+  lo ofrece como "canónico y autocontenido: pegalo y la salida ya sale on-brand sin adjuntar nada
+  más". Tenía la voz que `BRAND.md` retractó ("no whimsical" volvió a ilustración), el vocabulario
+  propio en inglés contra la regla de mínimo de inglés en castellano, y **cero mención de
+  `facts.json`, `[PENDIENTE]` o BORRADOR**. Quien lo pegaba solo publicaba cifras inventadas. Ahora
+  lleva la voz canónica y el contrato completo; la versión corta también.
+- **Cuatro chequeos que ninguna plantilla oficial podía pasar** (`precedencia.json` orden 6): el 2
+  (hue 20-65° sin piso de saturación mete siete colores oficiales adentro — el piso del 40% ya
+  estaba en `validar.py`), el 9 (el `box-shadow` del contenedor lo traen las 41 plantillas), el 15
+  (un solo eje, y M3 tiene dos columnas) y el 17 (ponía el wordmark a y=3.2% siempre, y así **la
+  portada oficial falla el chequeo que el sistema llama el más importante**: M1 va a y=7%).
+- **La regla 3b no estaba en los decks armados**, solo en las 41 plantillas sueltas. Y el header de
+  los decks hablaba solo de `[XX]`: ahora dice que "dato" incluye un nombre de servicio, un claim o
+  una oferta.
+- **Tres desambiguaciones que dos pruebas independientes pidieron:** el lima pasa de "exactamente
+  uno por slide" a techo con cero válido (`constraints.json` contradecía al checklist y a las
+  plantillas); el canal para reportar contradicciones mandaba escribir en `.ai/VALIDACION-IA.md`,
+  que una IA llegada por URL no puede escribir, y ahora el bloque PEDIDO A HUMANOS de la propia
+  pieza **es** el canal; y `data-pedido-a-humanos` —que el validador honra y usan los tres decks—
+  no estaba documentado en ningún lado, así que declarar los huecos te contaba en contra.
+- **La unidad del 75/25** (el deck, no la slide) ya estaba resuelta en `constraints.json` y
+  `BRAND.md` seguía diciendo "cada pieza".
+
+**Necesita tu decisión** (ninguna se inventa acá; siguen abiertas todas las de la corrida anterior):
+
+1. **`facts.json` no tiene un campo de capacidades.** El pedido de la prueba 2 era "anunciá una
+   capacidad concreta del equipo" y **el sistema no puede responder qué capacidades hay**: tiene
+   empresa, cifras, clientes y equipo. La pieza terminó escribiendo sobre la única capacidad
+   deducible y mandando el resto a preguntar. ¿Qué capacidades se pueden anunciar?
+2. **Falta el marcador de lo NO numérico.** `[XX]` y `[PENDIENTE]` son de cifras; un nombre de
+   servicio, un claim de posicionamiento o una oferta comercial no tienen instrumento. Es la causa
+   raíz de lo más peligroso de esta corrida. ¿Se extiende `[PENDIENTE]` a texto, o va un marcador
+   nuevo?
+3. **"Staff Augmentation" sigue como pendiente de validación en `BRAND.md`** y está en el
+   `texto_ejemplo` de B1, que es la slide de propuesta del deck de credenciales. Las dos IAs que
+   tocaron esa plantilla lo publicaron. ¿Se valida o se saca del ejemplo?
+4. **El bloque PEDIDO A HUMANOS es el único elemento que el sistema EXIGE y no especifica.** No hay
+   plantilla, geometría, escala ni token. Las dos fallas duras del deck están las dos ahí adentro, y
+   `#9fb3a6` —el gris que usan los tres decks oficiales en ese bloque— **no está en `tokens.json`**
+   y no hay token de "texto sutil sobre oscuro" para reemplazarlo. (Abierta desde la corrida
+   anterior, ahora con la evidencia de por qué cuesta.)
+5. **El deck armado no dice qué recortar.** El usuario pidió 5 slides y el deck que matchea tiene 8.
+   El sistema autoriza recortar ("revisá el arco") y no dice qué sale. La IA eligió sola, y eligió
+   bien por la razón equivocada: sacó las dos slides que no podía llenar con datos aprobados. Es
+   exactamente la decisión de diseño que estos decks existen para quitarle al usuario. ¿Se publican
+   variantes de 5, o una regla de prioridad de recorte?
+6. **La ley de precedencia sigue sin cubrir los documentos que el sistema manda usar:** `ai/claude.md`
+   (el punto de entrada, lo único que el usuario entrega), `ai/metodo.md` (declarado OBLIGATORIO y
+   donde vive la métrica de títulos), `.ai/brand-prompt.md` y `VOICE-RESEARCH.md` (que trae datos de
+   compañía como "~50 personas"). Las tres pruebas chocaron con esto por separado.
+7. **El aviso anti-resumen no alcanza, y ahora está medido.** `WebFetch` sobre `ai/claude.md`
+   devolvió un resumen sin las URLs literales — la falla exacta que el aviso de la v1.5 intenta
+   evitar. **El aviso no sirve porque la herramienta resume el archivo incluyendo el aviso.** La
+   prueba solo salió adelante bajándolo crudo con `curl`; un usuario que no elige su herramienta de
+   fetch se queda trabado en el paso 0.
+8. **El selector sigue sin una sola fila para lo que no es slide**: cero para post, carrusel,
+   one-pager, landing, banner o tabla de precios de tres opciones (el pricing existe solo para dos
+   escenarios, E3/E4). Es la abierta n°6 de la corrida anterior y no se movió.
+
+**Del mundo afuera** (solo lo que cambia una decisión):
+
+- **Agent Skills dejó de ser una cosa de Claude: es un formato abierto y multi-herramienta.** Una
+  carpeta con `SKILL.md` que carga por etapas —nombre y descripción al arrancar, el cuerpo cuando la
+  tarea coincide, los archivos referenciados solo si hacen falta—, hoy leída por Claude, ChatGPT y
+  Codex, Gemini CLI, Copilot, VS Code, Cursor y varias decenas más
+  ([especificación](https://agentskills.io/specification)). Es exactamente la arquitectura que
+  Atlassian midió como 92% más barata que el markdown "todo junto", que es lo que hace
+  `llms-full.txt`. Verificado por herramienta: en **ChatGPT** corren en Chat y Work (web, desktop y
+  mobile) empaquetadas como plugin, y sueltas en desktop, Codex CLI e IDE, con las skills ocupando
+  como máximo el 2% de la ventana de contexto
+  ([docs](https://learn.chatgpt.com/docs/build-skills)); en **Claude** la distribución soportada es
+  un plugin marketplace, que es un repo de git —y este brand system ya es uno—; en **Gemini** solo
+  la CLI, **la app y los Gems no**, así que ahí la URL sigue siendo el único canal; en **Copilot**
+  desde `.github/skills`, `.claude/skills` o `.agents/skills`. Las cinco entradas por herramienta
+  quedaron actualizadas con esto (1.6, copilot 1.2) y con el estado real: **Magoya todavía no
+  publica una skill**.
+- **Atlassian genera todos los formatos desde un solo modelo de contenido**: el contenido del MCP,
+  la skill del design system, los DESIGN.md. O sea: la arquitectura de acá —fuentes, `generate.py`,
+  capa publicada— es la correcta, y lo que falta es **un target de salida más**, no un rediseño.
+- **DTCG sigue en 2025.10** (hay un draft de julio de 2026) y la adoptaron Figma, Penpot, Sketch,
+  Tokens Studio, Style Dictionary y Terrazzo. No cambia la decisión abierta sobre el `$schema` de
+  `tokens.json`, la encarece: cada vez más consumidores esperan `$value`/`$type`.
+- **Carbon MCP sigue en preview público y Polaris no tiene MCP de primera parte** (hay servidores de
+  comunidad y una skill de Polaris para Claude Code). Nadie resolvió mejor que acá el problema de
+  "una persona que no sabe diseño con un link".
+
+**Propuesta para la próxima** (3, por impacto):
+
+1. **Un chequeo de contenido, porque el riesgo se mudó al texto.** El checklist mira superficie
+   visual y las dos piezas que publicaron algo que no debían pasaron limpias. El chequeo 18 sería
+   la regla que ya existe enterrada en `BRAND.md` §1: ninguna afirmación de valor viaja sin cifra,
+   nombre de cliente, plazo o captura — y una lista de lo que no está aprobado (capacidades, ofertas,
+   nombres de servicio). Junto con el marcador de lo no numérico (decisión 2), es lo único que frena
+   la falla más cara de esta corrida.
+2. **Publicar el brand system como skill, generada desde las mismas fuentes.** Es un target más de
+   `generate.py`, no un rediseño, y sirve a las cuatro herramientas de una. Antes de moverlo, medirlo
+   en casa como quedó propuesto la corrida pasada: misma pieza por URL y por skill, contando tokens y
+   turnos. Si el gap se parece al 92% de Atlassian, la decisión deja de ser teórica.
+3. **Mover la lista plana de URLs al principio de las cinco entradas.** El aviso anti-resumen está
+   arriba y no funciona, porque el fetch resume el archivo entero, aviso incluido. Una lista de URLs
+   al inicio sobrevive mejor a un resumen que un párrafo pidiendo que no te resuman.
+
+**Cambios al protocolo, con la evidencia de esta corrida:**
+
+- **Un directorio exclusivo por agente a ciegas.** Los tres compartieron el scratchpad y el segundo
+  vio el `credenciales.html` del primero. El worktree aísla el repo y no el directorio de trabajo.
+- **Prohibirles renderizar la pieza en un navegador.** La primera corrida de la prueba del deck se
+  colgó diez minutos verificando el render y hubo que relanzarla; con la instrucción de verificar
+  leyendo el HTML, terminó.
+- **Pedir la hoja de estado ANTES de pulir la pieza.** Con eso, la corrida que se colgó igual habría
+  dejado su registro.
+- **La contaminación de contexto se repitió y las tres la declararon:** memoria del usuario con datos
+  de marca y clientes, y en un caso **una cifra de contrato real** — justo el dato que a esa prueba
+  le faltaba. No la usó, y esa es la mejor evidencia de que el contrato de entrega funciona cuando
+  hay un instrumento.
+
+---
+
 ## 2026-08-31
 
 **Validador:** 2 fallas · 6 huecos · 7 ok. Empezó en 3 fallas: la tercera era un falso positivo
