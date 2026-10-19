@@ -1,8 +1,27 @@
-> Fuente: Magoya Brand Playbook (octubre de 2026), Partes 2 y 3 (slides 34–46). Si algo de este archivo difiere del playbook, prevalece el playbook.
+> **Voz y tono: la fuente es la Guía editorial de Magoya ("Manual voz y tono MAGOYA V2", octubre de 2026), en `.ai/verbal/guia-editorial.md`.** Este archivo resume las Partes 2 y 3 del Magoya Brand Playbook (octubre de 2026, slides 34–46), que siguen siendo la fuente de la identidad, el posicionamiento y los territorios. Para la voz, el estilo y la adaptación editorial, si algo de acá difiere de la guía, prevalece la guía; para la identidad y la estrategia, prevalece el playbook.
 
 # Magoya · Voz (capa verbal B)
 
 Qué se construye primero, qué defiende la marca, con qué personalidad lo dice y cómo suena. Página navegable: `voz.html`. Definición, territorios y rasgos completos en `.ai/verbal/estrategia.md`.
+
+## 0. La voz aplicada (Guía editorial V2, resumen)
+
+Resumen de las secciones de voz de la guía. El texto completo, con el peso de cada regla ([OBLIGATORIO], [PRINCIPIO] o [RECOMENDACIÓN]), está en `.ai/verbal/guia-editorial.md`.
+
+**La voz en la práctica (guía §1).**
+- **Convicción sin soberbia.** Seguridad para hablar, reconocimiento de las incertidumbres, espacio para construir juntos. Sin sentencias absolutas.
+- **Positivos y constructivos.** Un problema se señala con claridad, pero el mensaje no termina en una crítica o en un "no": suma una alternativa, un aprendizaje, una pregunta útil o una vía de mejora. No exige ocultar riesgos ni maquillar diagnósticos.
+- **Partners, no espectadores.** Partimos de lo que el cliente ya tiene y hablamos desde el trabajo compartido, con mirada integral: negocio, producto, tecnología, personas y operación.
+- **Claros, específicos y honestos.** Lenguaje preciso y ejemplos verificables. Si algo no se sabe, se dice. Se traduce la complejidad sin eliminar la profundidad técnica necesaria.
+- **Uso y valor.** Al contar resultados, primero el valor generado y el uso sostenido, no solo el lanzamiento. La adopción es parte del uso, no su sinónimo. No culpamos al usuario.
+
+**Cómo se construyen los mensajes (guía §2).** Se parte de evidencia (observaciones, experiencias, datos, razonamiento o fuentes confiables). Un análisis, una hipótesis, una tendencia o una pregunta también sirven, identificados como tales. Para relatar un caso: contexto observado → problema o hipótesis → enfoque o intervención → resultado o aprendizaje. Generalizar es legítimo cuando el patrón se apoya en casos y lo dice. Las reglas de cifras, clientes y confidencialidad están en la Parte II de la guía y en `ai/facts.json`.
+
+**Estilo (guía §3).** Frases claras, verbos concretos y párrafos legibles; la brevedad ayuda pero no es un límite rígido de palabras, y la densidad se ajusta al canal y a la audiencia. Evitar fórmulas repetitivas ("no es X, es Y", tríadas vacías, preguntas retóricas genéricas, guiones largos, frases de consultoría intercambiables), salvo que la contraposición sea realmente útil o sea un statement aprobado del playbook.
+
+**Personalidad, ejes y principios de expresión (guía §3).** Los cuatro rasgos (Estratega, Responsable, Curiosa, Franca), los doce ejes y los siete principios de expresión verbal del playbook, en la redacción de la guía: cuando difieren del texto del playbook de las secciones 4 y 8, la voz aplicada es la de la guía (`guia-editorial.md`). Ver secciones 4 y 8 de este archivo y `.ai/verbal/estrategia.md` §17.
+
+**Adaptación (guía §4).** La identidad no cambia por país; se ajustan cercanía, registro, ejemplos, nivel técnico e intensidad comercial para Argentina, Brasil y Estados Unidos. Los diales numéricos (sección 9) son una referencia orientativa, no parámetros mecánicos. Negocio y producto necesitan problema, oportunidad y resultado; customer success, uso, retención y acompañamiento; los interlocutores técnicos, profundidad para evaluar arquitectura, integración, riesgos y viabilidad. Las distribuciones 70/30 y 50/30/20 son guías de planificación de contenidos, no restricciones que deban forzarse en cada texto.
 
 ## 1. Qué se construye primero (slide 35)
 
@@ -26,7 +45,7 @@ Una marca es una construcción de largo plazo. Las asociaciones a la marca por p
 
 **Riesgo.** "Mostrarnos grandes" se cae si se apoya en adjetivos. Un procurement de Bayer o Deere chequea headcount y en ese caso "global" sin respaldo resta credibilidad. Lo que nos hace grandes tiene que contarse con pruebas: clientes, años de relación, geografías, casos en producción.
 
-(Las menciones a "dev shop" de esta tabla describen cómo nos ven hoy; como descriptor de Magoya, "dev shop" está vetado: ver `.ai/verbal/lenguaje.md`.)
+(Las menciones a "dev shop" de esta tabla describen cómo nos ven hoy. Para definir a Magoya, "dev shop" es una etiqueta reductora que se evita; no es una palabra vetada en cualquier contexto: ver `.ai/verbal/lenguaje.md` y la guía editorial §3.)
 
 ## 3. Prioridad en los territorios de posicionamiento (slide 37)
 
@@ -39,6 +58,8 @@ Construir la asociación de Magoya con el uso es la prioridad.
 | Hands-on | **20%** | "Ejecutamos lo que proponemos." | Magoya ejecuta en todo el ciclo: estrategia, diseño y desarrollo, adopción y uso, y puede entrar por cualquiera de esas partes. Pone a prueba su propio diagnóstico: lo construye, lo valida, lo itera y se queda hasta ver el resultado, trabajando dentro del problema junto al equipo del cliente. Solo propone lo que sabe construir, y el valor se ve en semanas. |
 
 **Regla.** Magoya construye en los 3 territorios, pero el peso de los mensajes se reparte en 50% para Uso, 30% para Integración y 20% para Hands-on.
+
+**Cómo se aplica (guía editorial §4).** El 50/30/20 es una guía de planificación de contenidos: se mira sobre un calendario, una campaña o un conjunto de piezas, no se fuerza en cada texto.
 
 ## 4. Rasgos de personalidad y qué ecualizan (slide 38)
 
@@ -116,9 +137,9 @@ Cómo se expresa la marca hacia afuera. Posición = la casilla que marca el play
 | Transparente · Diplomática | 2 | La expresión de la marca es honesta. |
 | Personal · Institucional | 2 | Magoya se expresa de manera cercana y no rígida. |
 
-## 9. Los cinco diales (slide 44)
+## 9. Los cinco diales (slide 44) · orientativos
 
-**El default es Magoya global. El ajuste por país es la excepción, no la regla.** Escala 1 a 5.
+**El default es Magoya global. El ajuste por país es la excepción, no la regla.** Escala 1 a 5. **Los diales son una referencia orientativa, no parámetros mecánicos** (guía editorial §4): sirven para ajustar cercanía, registro, nivel técnico e intensidad comercial, no para puntuar un texto.
 
 | Dial | En 1 | En 5 | Default | AR | BR | US | Por qué |
 |---|---|---|---|---|---|---|---|

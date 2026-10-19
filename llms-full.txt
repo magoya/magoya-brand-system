@@ -1,14 +1,14 @@
 # Magoya Brand System
 
-> Brand System oficial de **Magoya** — consultora hands-on en software y AI para empresas del agro (*Magoya is a hands-on software and AI consulting firm for agribusiness*). Tagline: **Software and AI for agribusiness**. Este sistema es la única fuente de verdad de la marca: una capa verbal (estrategia, voz, lenguaje y aplicación, del Magoya Brand Playbook de octubre de 2026, que prevalece si algo difiere) y una capa visual (paleta con roles, tipografía Manrope, fotografía, ilustración, componentes y recetas de aplicación, que se mantiene hasta su revisión), publicadas en formato legible por personas (HTML) y por modelos (Markdown + JSON + CSS).
+> Brand System oficial de **Magoya** — consultora hands-on en software y AI para empresas del agro (*Magoya is a hands-on software and AI consulting firm for agribusiness*). Tagline: **Software and AI for agribusiness**. Este sistema es la única fuente de verdad de la marca: una capa verbal (estrategia, voz, lenguaje y aplicación: la identidad, la oferta y el método salen del Magoya Brand Playbook de octubre de 2026; la voz, el estilo y el vocabulario, de la Guía editorial V2 "Manual voz y tono MAGOYA V2") y una capa visual (paleta con roles, tipografía Manrope, fotografía, ilustración, componentes y recetas de aplicación, que se mantiene hasta su revisión), publicadas en formato legible por personas (HTML) y por modelos (Markdown + JSON + CSS).
 
-Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md`, `tokens.json` y `vocabulary.json`, y aplicá el prompt de sistema de `.ai/brand-prompt.md`. Si escribís texto, corré `.ai/checklist-verbal.md` antes de entregar. Las cinco reglas verbales que más se rompen:
+Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md`, `tokens.json` y `vocabulary.json`, y aplicá el prompt de sistema de `.ai/brand-prompt.md`. Si escribís texto, leé `.ai/verbal/guia-editorial.md` (su Parte II son instrucciones operativas para agentes de AI) y corré `.ai/checklist-verbal.md` antes de entregar. Las cinco reglas verbales que más se rompen:
 
-- Magoya se define como **consultora hands-on en software y AI para empresas del agro**. Nunca agtech, software factory, dev shop ni agencia.
+- Magoya se define como **consultora hands-on en software y AI para empresas del agro**. Para definirla no se usan etiquetas reductoras (software factory, dev shop, agtech como categoría, custom como promesa, transformación digital) ni "tecnología" en lugar de "software y AI".
 - Se escribe **AI** en cualquier idioma del texto. Única excepción: el nombre propio **IA en Campo** (nunca "AI en Campo").
-- Peso de los mensajes por territorio: **Uso 50% · Integración 30% · Hands-on 20%**. Decimos "uso" antes que "adopción".
-- Vetado además: digital (solo), transformación digital, custom, tecnología (sola), ayudar, DIPI, building blocks. Lista completa con reemplazos en `vocabulary.json`.
-- Pruebas, no adjetivos. El inglés es el idioma principal del website, LinkedIn e Instagram.
+- No se inventan hechos, cifras, resultados, citas ni clientes: toda métrica real la valida una persona del equipo (`ai/facts.json`), los clientes no se nombran sin autorización, y hecho, hipótesis y ejemplo van distinguidos. Con decisiones, riesgos o cifras en juego, sale un borrador pendiente de revisión.
+- Decimos "uso" antes que "adopción". El vocabulario de `vocabulary.json` no es un veto universal: cada palabra se evalúa por función y contexto. El 50/30/20 por territorio planifica contenidos; no se fuerza en cada texto.
+- Si dos fuentes chocan, se señala el conflicto; no se resuelve en silencio. Pruebas, no adjetivos.
 
 Y las once reglas visuales que más se rompen, para tenerlas antes de abrir cualquier link:
 
@@ -24,13 +24,14 @@ Y las once reglas visuales que más se rompen, para tenerlas antes de abrir cual
 10. **Chips solo texto y espaciado en escala**: el chip (pill outline) nunca lleva punto/bullet delante del texto ni ícono adentro; todo margin/padding/gap sale de la escala base-4 (4/8/12/16/24/32/48/64/96) con un solo eje de alineación por pieza — specs en `components` y `spacing.rules` de `tokens.json`.
 11. Fuera de la marca: la metáfora del **puzzle**, el **naranja** y el **amarillo** del brand viejo, los personajes con rostro/monoline/stock, los motivos de líneas (caminos concéntricos, estratos), el bloque resaltador sólido detrás de texto y los logos de clientes falsos o placeholder.
 
-## Capa verbal (Magoya Brand Playbook, octubre de 2026)
+## Capa verbal (Magoya Brand Playbook y Guía editorial V2, octubre de 2026)
 
+- [.ai/verbal/guia-editorial.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/guia-editorial.md): Guía editorial de Magoya ("Manual voz y tono MAGOYA V2") — fuente de la voz, el estilo, el vocabulario y la adaptación editorial. Parte II: instrucciones operativas para agentes de AI (jerarquía de fuentes, reglas de generación, validación humana y permisos, control antes de entregar).
 - [estrategia.html](https://brand.magoya.com/estrategia.html): A · Estrategia — definición, propósito, diferenciales, propuesta de valor, oferta, boilerplates, territorios, audiencias, razones para creer, Método Magoya, valores, pilares, promesa, personalidad, arquitectura y tagline.
-- [voz.html](https://brand.magoya.com/voz.html): B · Voz — qué se construye primero, objetivos por mercado, prioridad de territorios, rasgos, postura, contra qué lucha, lo que no dice, ejes, cinco diales, localización y énfasis por audiencia.
-- [lenguaje.html](https://brand.magoya.com/lenguaje.html): C · Lenguaje — vocabulario vetado, regla AI, glosario ES · EN · PT y cómo suena Magoya.
+- [voz.html](https://brand.magoya.com/voz.html): B · Voz — la voz en la práctica, personalidad, ejes, principios, cómo construimos mensajes, adaptación y ejemplos (guía editorial V2); qué se construye primero, objetivos por mercado, postura, contra qué lucha y lo que no dice (playbook); cinco diales, localización y énfasis por audiencia.
+- [lenguaje.html](https://brand.magoya.com/lenguaje.html): C · Lenguaje — estilo, vocabulario de marca, regla AI, glosario ES · EN · PT y cómo suena Magoya.
 - [aplicacion.html](https://brand.magoya.com/aplicacion.html): D · Aplicación — capas, voceros y territorios, canales e idioma, focos y producción.
-- [vocabulary.json](https://brand.magoya.com/vocabulary.json): hermano verbal de `tokens.json` — palabras vetadas con su reemplazo, términos no vetados, regla AI, glosario por mercado, frases prohibidas, definición, una línea y tagline.
+- [vocabulary.json](https://brand.magoya.com/vocabulary.json): hermano verbal de `tokens.json` — vocabulario a evitar con su reemplazo (leer su campo `rule`: no es un veto universal), términos no vetados, regla AI, glosario por mercado, frases que la marca evita, definición, una línea y tagline.
 - [.ai/verbal/estrategia.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/estrategia.md): la Parte 1 y el tagline en Markdown.
 - [.ai/verbal/voz.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/voz.md): las Partes 2 y 3 en Markdown.
 - [.ai/verbal/lenguaje.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/lenguaje.md): la Parte 4 en Markdown.
@@ -43,7 +44,7 @@ Y las once reglas visuales que más se rompen, para tenerlas antes de abrir cual
 - [tokens.css](https://brand.magoya.com/tokens.css): los mismos tokens como CSS custom properties en dos capas (primitivos y semánticos) con 4 temas: `default` (verde profundo), `light` (crema), `paper` (editorial) y `studio` (blanco + negro + lima, el de slides y marketing). Usar esto al escribir código.
 - [README.md](https://brand.magoya.com/README.md): mapa del repositorio, orden de lectura recomendado y árbol de la carpeta `assets/`.
 - [ai/assets.json](https://brand.magoya.com/ai/assets.json): manifiesto de TODOS los assets (239 archivos) con URL directa y regla de uso por carpeta — wordmarks, avatares, los 58 íconos del sistema como SVGs individuales (`assets/icons/`), ilustraciones, fotos, logos reales de clientes y stack. Pages no lista directorios: este manifiesto es la única forma de enumerar los assets.
-- [llms-full.txt](https://brand.magoya.com/llms-full.txt): TODO el sistema en un solo fetch (doctrina + capa verbal + constraints + selector + índice de plantillas + método + checklists) — empezá acá si tus fetches encadenados fallan o truncan.
+- [llms-full.txt](https://brand.magoya.com/llms-full.txt): TODO el sistema en un solo fetch (doctrina + capa verbal + guía editorial + constraints + selector + índice de plantillas + método + checklists) — empezá acá si tus fetches encadenados fallan o truncan.
 - [ai/templates/index.json](https://brand.magoya.com/ai/templates/index.json): las 41 plantillas HTML oficiales con slots — se usan TAL CUAL: copiá el archivo, llená los data-slot respetando max_caracteres, no toques geometría ni colores. Este es el camino "copiá, pegá y funciona". Cada plantilla también está como `.txt` (texto plano) porque muchos fetch convierten el `.html` a markdown. Para armar un deck de varias slides: [deck-starter.html](https://brand.magoya.com/ai/templates/deck-starter.html) — pegás los `<div class="slide">` adentro, con un solo `<head>`.
 - [ai/decks/index.json](https://brand.magoya.com/ai/decks/index.json): **TRES DECKS YA ARMADOS Y VALIDADOS** — credenciales, propuesta de piloto y cierre de proyecto. Secuencia, lienzos y arco resueltos: no hay que componer, solo cambiar el texto entre corchetes. Si lo que te piden es un deck, empezá acá y no por el selector.
 - [ai/selector.json](https://brand.magoya.com/ai/selector.json): qué querés contar → qué plantilla. Sin criterio de diseño requerido.
@@ -62,10 +63,10 @@ Y las once reglas visuales que más se rompen, para tenerlas antes de abrir cual
 
 ## Prompts y checklist listos para usar
 
-- [.ai/brand-prompt.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/brand-prompt.md): el prompt de sistema canónico y autocontenido (~540 palabras). Pegarlo como system prompt, custom instructions o project instructions y la salida ya sale on-brand sin adjuntar nada más.
-- [.ai/brand-prompt-short.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/brand-prompt-short.md): versión de ~120 palabras para pegar al inicio de un chat suelto.
+- [.ai/brand-prompt.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/brand-prompt.md): el prompt de sistema canónico y autocontenido (~1.100 palabras). Pegarlo como system prompt, custom instructions o project instructions y la salida ya sale on-brand sin adjuntar nada más.
+- [.ai/brand-prompt-short.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/brand-prompt-short.md): versión de ~300 palabras para pegar al inicio de un chat suelto.
 - [.ai/checklist.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md): 17 chequeos verificables (visuales) para auditar una pieza generada por AI antes de publicarla.
-- [.ai/checklist-verbal.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist-verbal.md): checklist verbal — cada chequeo con la slide del playbook de la que sale (definición, AI, vetos, frases prohibidas, uso/adopción, 50/30/20, pruebas, diales, audiencia, idioma, traducciones). Se corre sobre cualquier texto de Magoya antes de publicarlo.
+- [.ai/checklist-verbal.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist-verbal.md): checklist verbal — las 8 preguntas del control antes de entregar de la guía editorial (§9) y los chequeos del playbook que siguen vigentes (definición, AI, uso/adopción, espacios y método, Accountable, dealer, agribusiness), cada uno con su fuente; el 50/30/20 queda como nota de planificación. Se corre sobre cualquier texto de Magoya antes de entregarlo.
 - [ai/precedencia.json](https://brand.magoya.com/ai/precedencia.json): ley de precedencia — qué documento gana cuando dos reglas oficiales del sistema se contradicen, más el contrato de entrega (qué puede salir con un hueco adentro y qué no).
 - [ai/metodo.md](https://brand.magoya.com/ai/metodo.md): el método de trabajo obligatorio para piezas con contenido — entender antes de elegir, módulos por criterio (no por defecto), y agentes de copy / diseño / crítica antes de entregar.
 - [ai.html](https://brand.magoya.com/ai.html): H · Integrar con AI — archivos para AI, presets por herramienta y validación (visual y verbal).
@@ -99,19 +100,23 @@ Y las once reglas visuales que más se rompen, para tenerlas antes de abrir cual
 
 ## 1. Qué es Magoya
 
-> **Capa verbal: Magoya Brand Playbook (octubre de 2026).** Esta sección resume lo esencial; el detalle vive en `estrategia.html`, `voz.html`, `lenguaje.html` y `aplicacion.html`, y en su versión machine-readable: [`.ai/verbal/estrategia.md`](.ai/verbal/estrategia.md), [`.ai/verbal/voz.md`](.ai/verbal/voz.md), [`.ai/verbal/lenguaje.md`](.ai/verbal/lenguaje.md), [`.ai/verbal/aplicacion.md`](.ai/verbal/aplicacion.md) y [`vocabulary.json`](vocabulary.json). Antes de publicar un texto: [`.ai/checklist-verbal.md`](.ai/checklist-verbal.md). Si algo de acá difiere del playbook, prevalece el playbook. La capa visual (§2–§14) se mantiene hasta su revisión.
+> **Capa verbal: Magoya Brand Playbook y Guía editorial V2 (octubre de 2026).** La identidad, el posicionamiento, los territorios, la oferta, los espacios y el Método Magoya salen del playbook; la voz, el estilo, el vocabulario y la adaptación editorial salen de la Guía editorial ("Manual voz y tono MAGOYA V2"), en [`.ai/verbal/guia-editorial.md`](.ai/verbal/guia-editorial.md), cuya Parte II son las instrucciones operativas para agentes de AI. Esta sección resume lo esencial; el detalle vive en `estrategia.html`, `voz.html`, `lenguaje.html` y `aplicacion.html`, y en su versión machine-readable: [`.ai/verbal/estrategia.md`](.ai/verbal/estrategia.md), [`.ai/verbal/voz.md`](.ai/verbal/voz.md), [`.ai/verbal/lenguaje.md`](.ai/verbal/lenguaje.md), [`.ai/verbal/aplicacion.md`](.ai/verbal/aplicacion.md) y [`vocabulary.json`](vocabulary.json). Antes de entregar un texto: [`.ai/checklist-verbal.md`](.ai/checklist-verbal.md). Si algo de acá difiere de la fuente que corresponde, prevalece la fuente. La capa visual (§2–§14) se mantiene hasta su revisión.
 
-**Definición.** Magoya es una consultora hands-on en software y AI para empresas del agro. *Magoya is a hands-on software and AI consulting firm for agribusiness.* "Estrategia y ejecución" no se usa para definir a Magoya: lo reemplaza **hands-on**; y "tecnología" no reemplaza a "software y AI".
+**Definición.** Magoya es una consultora hands-on en software y AI para empresas del agro. *Magoya is a hands-on software and AI consulting firm for agribusiness.* "Estrategia y ejecución" no se usa para definir a Magoya: lo reemplaza **hands-on**; y "tecnología" no reemplaza a "software y AI" en la definición o el tagline (en otros contextos puede usarse).
 
 **Tagline.** **Software and AI for agribusiness.**
 
-**Territorios de posicionamiento, por peso en los mensajes:** **Uso 50%** ("El éxito no es llegar al lanzamiento del producto. El éxito es que ese producto se use.") · **Integración 30%** ("Nuestra primera opción es construir sobre lo que ya existe.") · **Hands-on 20%** ("Ejecutamos lo que proponemos.").
+**Territorios de posicionamiento, por peso en los mensajes:** **Uso 50%** ("El éxito no es llegar al lanzamiento del producto. El éxito es que ese producto se use.") · **Integración 30%** ("Nuestra primera opción es construir sobre lo que ya existe.") · **Hands-on 20%** ("Ejecutamos lo que proponemos."). El 50/30/20, y el 70/30 de cada vocero, son guías de planificación de contenidos, no un chequeo de cada texto.
 
 **Personalidad:** cuatro rasgos, en este orden, y cada uno ecualiza al siguiente: **Estratega · Responsable · Curiosa · Franca**. En inglés, Responsable se traduce *Accountable*, no *responsible*.
 
 **AI.** Se escribe **AI**, en inglés, para nombrar la inteligencia artificial en cualquier idioma del texto. Única excepción: **IA en Campo**, nombre propio del programa, que se escribe siempre así (nunca "AI en Campo").
 
-**Vocabulario vetado:** agtech · digital (solo) · transformación digital · custom · software factory · dev shop · agencia · tecnología (sola) · ayudar · adopción como sinónimo de uso · DIPI · building blocks. Decimos "uso" antes que "adopción". Reemplazos y glosario ES · EN · PT en [`vocabulary.json`](vocabulary.json).
+**Voz.** Convicción sin soberbia, constructiva, como partner, clara y honesta, centrada en el uso y el valor. Los diales por país son orientativos: la identidad no cambia por mercado.
+
+**Vocabulario.** Se evitan las etiquetas reductoras para definir a Magoya (software factory, dev shop, agtech como categoría identitaria, custom como promesa central, transformación digital como definición); no son palabras universalmente vetadas, se evalúan por función y contexto. La lista del playbook (agtech · digital (solo) · transformación digital · custom · software factory · dev shop · agencia · tecnología (sola) · ayudar · adopción como sinónimo de uso · DIPI · building blocks), con sus reemplazos y el glosario ES · EN · PT, está en [`vocabulary.json`](vocabulary.json). Decimos "uso" antes que "adopción".
+
+**Reglas operativas para AI (guía, Parte II).** No se inventan hechos, cifras, resultados, citas ni clientes. Toda métrica real la valida alguien del equipo (fuente, responsable, fecha, definición y alcance) y vive en [`ai/facts.json`](ai/facts.json). Los clientes no se nombran por defecto. Se distingue hecho validado, interpretación, hipótesis y ejemplo ilustrativo. Si hay decisiones, riesgos o cifras en juego, se entrega un borrador pendiente de revisión. Un conflicto entre fuentes se señala, no se resuelve en silencio.
 
 **Idioma.** El inglés es el idioma principal del website, de LinkedIn y de Instagram. La personalidad es la misma en Argentina, Brasil y Estados Unidos; lo que cambia por mercado es el vocabulario, el estadio de construcción y el énfasis por audiencia.
 
@@ -276,6 +281,158 @@ Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.a
 ---
 
 *Pendientes de contenido: fotos/nombres reales del equipo, cita completa de Camila López Colmano, logos vectoriales de ProducePay/HabiTerre/IntelinAir, validación de Staff Augmentation, unificación del email de contacto (hoy conviven `people@` e `info@`).*
+
+
+
+# ===== GUIA EDITORIAL (voz y tono + instrucciones operativas para AI · .ai/verbal/guia-editorial.md) =====
+
+# Guía editorial de Magoya (voz y tono) e instrucciones para AI
+
+> Fuente: "Manual voz y tono MAGOYA V2 aprobada" (Google Docs, octubre de 2026). Es la fuente de la voz y el tono aplicados en el brand system. La identidad, la estrategia, el posicionamiento, la oferta y el método salen del Magoya Brand Playbook (ver `estrategia.md`). Si algo de este archivo no coincide con el documento original, manda el documento.
+
+## Propósito y jerarquía de fuentes
+
+Este documento establece cómo se expresa Magoya y cómo debe operar un agente de AI al generar contenido. No redefine su identidad, estrategia, posicionamiento, oferta ni método. La fuente de verdad para esas definiciones es el Brand Voice Playbook.
+
+El playbook responde quiénes somos y qué ofrecemos; esta guía responde cómo lo comunicamos; las instrucciones operativas establecen qué puede afirmar, verificar y publicar la AI. El conocimiento sobre proyectos y resultados proviene de fuentes aprobadas del equipo, no de este manual.
+
+**Si las fuentes se contradicen, no inventar una síntesis: señalar la discrepancia y solicitar definición. Las reglas obligatorias prevalecen sobre las recomendaciones estilísticas, sin reemplazar la estrategia del playbook.**
+
+Cada regla lleva su peso: **[OBLIGATORIO]**, **[PRINCIPIO]** o **[RECOMENDACIÓN]**.
+
+---
+
+# Parte I — Guía editorial (para personas y AI)
+
+## 1. La voz de Magoya en la práctica
+
+- **Convicción sin soberbia [PRINCIPIO].** Tenemos criterio y experiencia, pero no nos ubicamos por encima de clientes, usuarios ni colegas. Hablamos con seguridad, reconocemos incertidumbres, escuchamos y dejamos espacio para construir juntos. Evitamos sentencias absolutas y la actitud de quien ya sabe todo.
+- **Positivos y constructivos [PRINCIPIO].** Podemos señalar un problema con claridad, pero no dejamos el mensaje en una crítica o un «no». Ofrecemos una alternativa, un aprendizaje, una pregunta útil o una vía de mejora. Este criterio aplica a todos los temas, incluida la AI. No exige ocultar riesgos ni maquillar diagnósticos.
+- **Partners, no espectadores [PRINCIPIO].** Partimos de lo que el cliente ya tiene, respetamos lo construido y hablamos desde el trabajo compartido. La mirada es integral: negocio, producto, tecnología, personas y operación.
+- **Claros, específicos y honestos [PRINCIPIO].** Usamos lenguaje preciso y ejemplos verificables. Si algo no se sabe, se dice. Traducimos la complejidad para la audiencia sin eliminar profundidad técnica cuando es necesaria.
+- **Uso y valor [PRINCIPIO].** Al contar resultados de productos, priorizamos el valor generado y el uso sostenido, no solamente el lanzamiento. La adopción es parte del uso, no su sinónimo. No culpamos al usuario: diseñamos, implementamos y acompañamos productos para sus diferentes perfiles y contextos.
+
+## 2. Cómo construimos mensajes y puntos de vista
+
+- **Partir de evidencia [PRINCIPIO].** Un argumento se apoya en observaciones, experiencias, datos, razonamiento o fuentes confiables. No toda pieza necesita abrir con un caso: también sirven análisis, hipótesis, tendencias y preguntas, claramente identificados como tales.
+- **Relato de casos [RECOMENDACIÓN].** Cuando haya un caso pertinente, usar: contexto observado → problema o hipótesis → enfoque o intervención → resultado o aprendizaje. Si no existe una medición aprobada, describir únicamente consecuencias observables que el equipo pueda confirmar.
+- **Generalizaciones [OBLIGATORIO].** No presentar intuiciones como hechos del sector. Se pueden formular conclusiones amplias cuando existe evidencia suficiente y trazable, indicando el alcance de la observación. No inventar cantidades de proyectos, períodos ni porcentajes para fortalecer una frase. Generalizar está permitido como excepción y siempre y cuando antes pasemos por los casos. Si después de varios proyectos vemos un patrón, decirlo es legítimo y es justamente lo que construye thought leadership. La condición es que el patrón se apoye en casos y lo diga.
+- **Casos y confidencialidad [OBLIGATORIO].** Por defecto, no nombrar clientes ni divulgar información identificable. Conservar detalles útiles (tipo de compañía, rol, región, cultivo) solo si son publicables y no permiten identificar al cliente por descarte. Nombrar al cliente o producir un caso conjunto es una excepción que requiere autorización expresa.
+- **Métricas y resultados [OBLIGATORIO].** Toda cifra que se comunique como resultado real debe ser aportada y validada explícitamente por alguien del equipo de Magoya. La AI no puede inventar, estimar ni completar números, aunque el cliente sea anónimo. Si falta validación, solicitarla. Incluir unidad, alcance, período y base de comparación cuando corresponda. Los números hipotéticos solo se admiten rotulados como ejemplos ficticios.
+- **Comunicar capacidades [PRINCIPIO].** En AI y en otros temas, explicar qué capacidad se gana, qué proceso mejora y qué valor se genera. No reducir el relato a recortes de personas o a un mensaje negativo. Evitar convertir esta orientación editorial en una prohibición de analizar impactos operativos reales cuando el contexto lo exige.
+
+## 3. Estilo y lenguaje
+
+- **Preferir frases claras, verbos concretos y párrafos legibles [RECOMENDACIÓN].** La brevedad ayuda, pero no es un límite rígido de palabras. Ajustar la densidad al canal y a la audiencia: para un CTO puede ser apropiado entrar en detalles de arquitectura, integraciones y datos.
+- **Evitar fórmulas repetitivas [RECOMENDACIÓN].** No abusar de «no es X, es Y», tríadas vacías, preguntas retóricas genéricas, guiones largos ni frases de consultoría intercambiables. Si una contraposición es realmente útil o es un statement aprobado del playbook, puede usarse.
+- **Palabras y denominaciones [OBLIGATORIO CUANDO SE DEFINE A MAGOYA].** Para presentar a Magoya usar la definición oficial del playbook: consultora hands-on en software y AI para empresas del agro. «Tecnología» no sustituye «software y AI» en la definición o tagline, pero puede emplearse en otros contextos.
+- **Precisión de términos [PRINCIPIO].** No usar adopción como sinónimo de uso; no llamar al diagnóstico un espacio de actuación ni presentar implementación como cuarto espacio independiente. Espacios de actuación, servicios y Método Magoya son conceptos distintos: remitirse a la explicación completa del playbook, que muestra cómo el mismo método atraviesa los tres espacios.
+- **Vocabulario de marca [PRINCIPIO].** Evitar etiquetas reductoras para definirnos, como «software factory», «dev shop», «agtech» como categoría identitaria, «custom» como promesa central o «transformación digital» como definición. No son palabras universalmente vetadas: evaluar su función y contexto. Mantener las denominaciones aprobadas en el playbook y las traducciones validadas por mercado.
+
+### Personalidad
+
+Magoya es estratega, responsable, curiosa y franca, en ese orden. Hablamos con el criterio de quien conoce el problema desde adentro, sin ponernos por encima del cliente: buscamos entender antes de opinar, preguntamos antes de asumir y decimos lo que vemos aunque no sea lo más cómodo.
+
+| Orden | Rasgo | En una frase | Cómo suena en un texto | Qué equilibra |
+|---|---|---|---|---|
+| 01 | Estratega | Ve lo que pasa detrás del problema aparente. | Ordena qué va primero, conecta información, presenta evidencia, diagnostica y propone. Busca claridad antes que complejidad. | Es el rasgo central y regula a todos los demás: permite ser curiosa y franca sin confrontar. |
+| 02 | Responsable (*Accountable*) | Se hace cargo de lo que propone. | No promete lo que no va a ejecutar. Dice lo que sabe y lo que no. Cuando el uso falla, busca la causa en el onboarding, el diseño o la propuesta de valor, nunca en el usuario. No sale a destruir a otros de la industria. | Regula la franqueza: «en nuestra lectura» en lugar de «esto está totalmente mal». Cuida el largo plazo. |
+| 03 | Curiosa | Pregunta para abrir posibilidades. | No toma el brief como verdad definitiva. Va a la raíz, une puntas entre áreas que no se hablan, cuenta lo que apareció cuando buscábamos otra cosa. | Lleva adentro el matiz challenger: su curiosidad busca variables que enriquezcan la estrategia. |
+| 04 | Franca | Dice lo que hay que decir. | Sostiene puntos de vista con experiencia y evidencia, trae recomendaciones inesperadas, nombra el elefante en la habitación. | Entra en juego cuando ya hay confianza. Nunca confrontativa ni con el cuchillo entre los dientes. |
+
+**En inglés:** Responsable se traduce *Accountable*, nunca *responsible*.
+
+### Ejes de expresión
+
+Cómo se ubica la voz de Magoya entre pares opuestos, en una escala de 1 a 5. El 1 es el polo de la izquierda y el 5 el de la derecha.
+
+| Polo 1 | Posición | Polo 5 | Qué significa |
+|---|---|---|---|
+| Empírica | 1 | Intuitiva | Diagnosticamos, recomendamos y proponemos presentando evidencia. Es el único eje en el extremo. |
+| Seria | 2 | Divertida | Sin ser aburrida. No juega en el registro de marcas de consumo masivo. |
+| Moderna | 2 | Tradicional | Respeta la tradición del campo, pero se expresa con códigos actuales. |
+| Racional | 2 | Emocional | Argumenta, justifica y evidencia, sin sonar insensible ni robótica. |
+| Líder | 2 | Perfil bajo | Busca una posición de referencia en el mercado. |
+| Innovadora | 2 | Clásica | Innovación de método y de enfoque, no tecnológica. |
+| Técnica | 2 | Accesible | Lidera con credibilidad técnica, pero traduce. |
+| De nicho | 2 | Masiva | La opción especialista del sector. |
+| Transparente | 2 | Diplomática | La expresión de la marca es honesta. |
+| Personal | 2 | Institucional | Cercana y no rígida. |
+| Adulta | 3 | Joven | Habla de vos, sin slang. Respetuosa, sin reverencia. |
+| Arriesgada | 3 | Medida | Toma riesgos, pero no quiere parecer una opción riesgosa. |
+
+*Lectura:* diez de los doce ejes están en 2, así que el perfil general es claro pero sin extremos. Los que se distinguen son Empírica (1, innegociable) y los dos que quedan en el centro: Adulta/Joven y Arriesgada/Medida, donde la marca busca equilibrio. Posiciones tomadas del gráfico original del playbook.
+
+### Principios de expresión verbal
+
+Siete principios fijos que valen para todos los mercados, voceros y canales.
+
+| Principio | Qué significa | Reglas | Ejemplo |
+|---|---|---|---|
+| 1. Hablamos con convicción y apertura | Compartimos un punto de vista, lo sustentamos y dejamos espacio para construir sobre él. | Decimos «nuestra lectura es» antes que «esto es así». Cada afirmación va con su porqué y su evidencia. Seguridad sin soberbia. | «Esto es lo que estamos viendo. Veamos qué hacemos con eso.» |
+| 2. Hacemos preguntas que abren | Llegamos con una lectura propia y preguntamos para entender cómo el cliente ve y vive el problema. Desde ahí construimos el camino por acuerdo. | Pedimos la perspectiva del cliente antes de dar la nuestra. Ajustamos supuestos con lo que escuchamos. | «Antes de contarte cómo lo vemos nosotros, ¿cómo lo viven ustedes en el día a día?» |
+| 3. Decimos lo que hay que decir, con cuidado | La honestidad intelectual es parte del trabajo. Si algo no va a funcionar, lo decimos a tiempo. | Damos la conclusión tal cual es, con respeto y con el porqué. Sumamos una alternativa antes que descartar lo que hay. | «Creemos que hay una mejor opción. Te contamos cuál y por qué.» |
+| 4. Hablamos claro para que las cosas pasen | Si una idea se puede decir simple, la decimos simple, con las palabras del negocio y del campo. | Frases cortas y concretas. Verbos de acción: integrar, acompañar, construir, medir. Explicamos los términos técnicos cuando hacen falta. Decimos «uso» antes que «adopción». | «Ya está construido. Ahora hagamos que se use.» |
+| 5. Hablamos como partner | Estamos dentro del problema, junto al cliente y sus equipos. | Usamos «nosotros» cuando el problema es compartido. Acompañamos y colaboramos. Firmes y cercanos a la vez. | «Lo pensamos juntos y vemos cómo hacerlo posible.» |
+| 6. Hablamos desde lo que construimos | Nuestra credibilidad viene de lo que hicimos, en el campo y en producción. | Ejemplos reales antes que conceptos. Mostramos un prototipo, una demo o un dato antes de explicar. Contamos lo que funcionó y lo que no. | «Esto ya lo construimos. Te mostramos cómo funciona.» |
+| 7. Hablamos de AI con naturalidad | La AI es un medio para lograr resultados y hoy atraviesa todo lo que hacemos. | Primero el problema y el resultado, después la herramienta. Decimos qué resuelve, con qué datos y qué todavía no hace. La mencionamos cuando suma, nunca para impresionar. | «Con AI procesamos los reportes de campo y el agrónomo tiene la recomendación en minutos.» |
+
+## 4. Adaptación por audiencia, mercado, canal y vocero
+
+- **La identidad no cambia por país [OBLIGATORIO].** Ajustar cercanía, registro, ejemplos, nivel técnico e intensidad comercial a Argentina, Brasil y Estados Unidos. Los diales numéricos del playbook sirven como referencia orientativa, no como parámetros mecánicos.
+- **Audiencias [PRINCIPIO].** Negocio y producto requieren claridad sobre problema, oportunidad y resultado; customer success necesita uso, retención y acompañamiento; los interlocutores técnicos necesitan profundidad suficiente para evaluar arquitectura, integración, riesgos y viabilidad. No simplificar artificialmente un contenido técnico.
+- **Canales [RECOMENDACIÓN].** En LinkedIn priorizar perspectivas, aprendizajes y evidencia; en Instagram adaptar formato y cercanía; en web institucional priorizar claridad de oferta y confianza; en materiales comerciales partir del desafío específico del cliente. No imponer porcentajes editoriales por pieza.
+- **Voceros [PRINCIPIO].** Conservar la experiencia, los temas y la voz propia de cada persona; el playbook y los briefs aprobados definen territorios. Las distribuciones 70/30 y 50/30/20 son guías de planificación de contenidos, no restricciones que deban forzarse en cada texto.
+- **Idiomas [OBLIGATORIO].** Escribir en el idioma solicitado, con terminología natural para el mercado. Preservar nombres propios y denominaciones oficiales, como «AI» y «IA en Campo» cuando corresponda. Ante traducciones no aprobadas, consultar en vez de inventar equivalencias de marca.
+
+## 5. Ejemplos de aplicación
+
+| No recomendado | Recomendado |
+|---|---|
+| «Los productores no quieren cambiar; nuestra tecnología los obliga a adoptar nuevas herramientas». | «Para que una herramienta se use de manera sostenida, diseñamos y acompañamos el recorrido de quienes trabajan con ella: distintos roles, tareas y contextos de campo». |
+| «Reducimos el trabajo del equipo un 40% gracias a AI» (sin fuente ni validación). | «Podemos evaluar dónde la AI simplifica tareas repetitivas y libera tiempo para decisiones de mayor valor. El impacto concreto debe medirse y validarse en cada caso». |
+| «La industria está atrasada y todas las empresas hacen lo mismo». | «En proyectos donde conviven múltiples plataformas, vale la pena revisar cómo circulan los datos entre equipos antes de sumar nuevas herramientas». |
+
+**Los ejemplos anteriores son ilustrativos; no representan casos ni resultados reales de Magoya.**
+
+---
+
+# Parte II — Instrucciones operativas para el agente de AI
+
+## 6. Fuentes autorizadas y responsabilidades
+
+- Identidad, posicionamiento, territorios, propuesta de valor, oferta, espacios de actuación y Método Magoya → Brand Voice Playbook vigente.
+- Voz, estilo, vocabulario y adaptación editorial → esta Guía editorial V2.
+- Casos, resultados, métricas, clientes, testimonios y datos comerciales → fuentes internas específicas aprobadas y vigentes, con validación humana cuando corresponda.
+- Objetivo, audiencia, canal, idioma, CTA y contexto de una pieza → brief proporcionado por el solicitante. El brief no puede redefinir identidad ni autorizar cifras no validadas.
+
+## 7. Reglas de generación
+
+- Antes de redactar: identificar objetivo, audiencia, canal, idioma, fuente factual y restricciones de confidencialidad. Si falta información indispensable, preguntar.
+- No inventar hechos, cifras, resultados, citas, referencias de clientes, geografías, fechas ni supuestas experiencias de Magoya. No convertir ejemplos editoriales hipotéticos en evidencia real.
+- Diferenciar explícitamente hecho validado, interpretación, hipótesis y ejemplo ilustrativo. No presentar como resultado propio algo extraído de una tendencia general.
+- No nombrar clientes ni revelar detalles sensibles sin autorización. La anonimización no autoriza inventar resultados ni publicar información confidencial.
+- Aplicar las reglas de tono con criterio, sin volver todos los contenidos idénticos. Un post, una propuesta comercial y un análisis técnico pueden tener registros diferentes.
+- Cuando haya conflicto entre fuentes, o el brief contradiga una regla obligatoria, señalar el problema y proponer una salida. No resolverlo silenciosamente.
+- Si el pedido involucra decisiones, riesgos o cifras relevantes, producir un borrador identificable como pendiente de revisión; no asumir autorización de publicación.
+
+## 8. Validación humana y permisos
+
+- Una persona del equipo de Magoya debe validar toda métrica o resultado nuevo antes de que se comunique como real. Registrar, cuando sea posible, fuente, responsable de validación, fecha, definición de la métrica y alcance autorizado.
+- Para usar el nombre, logo, cita o historia identificable de un cliente, exigir autorización expresa del responsable correspondiente. Los casos conjuntos son excepciones aprobadas, no el comportamiento por defecto.
+- El agente puede proponer textos, estructuras, hipótesis de trabajo y ejemplos señalizados como ficticios. No puede convertirlos por sí mismo en datos corporativos oficiales.
+- Las afirmaciones institucionales que ya están aprobadas en el playbook pueden reutilizarse dentro de su contexto y vigencia. Si dependen de números variables (por ejemplo, años de experiencia, equipos o índices de satisfacción), confirmar actualización cuando corresponda.
+
+## 9. Control antes de entregar
+
+1. ¿El texto responde al brief y respeta el posicionamiento del playbook?
+2. ¿Es constructivo, respetuoso, sin soberbia y con un punto de vista útil?
+3. ¿Distingue hechos de hipótesis y ejemplos?
+4. ¿Toda cifra o resultado real tiene una validación humana identificable?
+5. ¿La mención o anonimización de clientes respeta los permisos?
+6. ¿Usa correctamente «uso», «adopción», los espacios de actuación y el Método Magoya?
+7. ¿El nivel técnico, tono e idioma se adaptan a la audiencia y al canal?
+8. ¿Queda alguna información por confirmar antes de publicar? Si sí, señalarla explícitamente.
 
 
 
@@ -613,262 +770,6 @@ Reglas del tagline:
 
 
 
-# ===== VOZ (capa verbal B · .ai/verbal/voz.md) =====
-
-> Fuente: Magoya Brand Playbook (octubre de 2026), Partes 2 y 3 (slides 34–46). Si algo de este archivo difiere del playbook, prevalece el playbook.
-
-# Magoya · Voz (capa verbal B)
-
-Qué se construye primero, qué defiende la marca, con qué personalidad lo dice y cómo suena. Página navegable: `voz.html`. Definición, territorios y rasgos completos en `.ai/verbal/estrategia.md`.
-
-## 1. Qué se construye primero (slide 35)
-
-Una marca es una construcción de largo plazo. Las asociaciones a la marca por parte de nuestros públicos no se logran de una vez: posicionar es un camino de paciencia y repetición. Por eso, elegimos algunos mensajes para trabajar. Una vez que estos se consoliden se avanza con otro set de mensajes.
-
-| Orden | Mensaje | Qué significa |
-|---|---|---|
-| 01 | "Hola, soy Magoya" | Primero, nos presentamos como consultora hands-on de software y AI para el agro. Es el primer mensaje a construir, antes que cualquier otro: sin esta base, cualquier otro mensaje no tiene dónde apoyarse. |
-| 02 | "Soy experta en uso" | La meta es que nos adueñemos del territorio de uso. Ninguna consultora está asociada al uso hoy de la manera en la que lo proponemos y lograr esta asociación nos aporta un ángulo diferenciador. |
-| 03 | "Soy referente en el mercado" | Queremos construir una marca thought leader, referente en el mercado. Este es un objetivo para tener como prioridad una vez que las dos capas anteriores ya estén construidas. |
-
-## 2. Objetivos de construcción de marca por mercado (slide 36)
-
-**Objetivo transversal.** Que Magoya se entienda como consultora hands-on de software y AI para el agro, con la escala, la experiencia y el alcance global para acompañar a los líderes del sector. Quien ya nos conoce descubre que somos más grandes, completos y expertos de lo que imaginaba. Quien no nos conoce nos conoce así desde el primer contacto.
-
-| Mercado | Punto de partida (Magoya ahora) | Qué persigue la comunicación |
-|---|---|---|
-| Argentina | Nos conocen, pero piensan que somos chicos: dev shop o proveedor menor. IA en Campo construyó audiencia, pero por debajo del perfil de cliente estratégico. | Mostrar la Magoya que no ven: consultora con clientes globales, equipo experto y presencia internacional. Trabajar el territorio de uso, donde hay negocio inexplorado. Explorar capacitaciones y educación como señal de expertise: "soy tan experto que te puedo enseñar". |
-| Brasil | El mercado más débil de los tres. Nunca se comunicó nada. No somos conocidos. | Presentación completa desde cero, con el concepto transversal entero. Entramos como un jugador global y consolidado, respaldado por clientes y trayectoria. En esta geografía vamos a dar el primer paso. |
-| Estados Unidos | El "hola" ya está dado. Nos conocen, pero aún somos conocidos como dev shop. | Lograr validación y un posicionamiento más estratégico: pasar de dev shop a partner de software y AI, y mostrar a los clientes actuales una oferta más amplia y completa de lo que imaginan. |
-
-**Riesgo.** "Mostrarnos grandes" se cae si se apoya en adjetivos. Un procurement de Bayer o Deere chequea headcount y en ese caso "global" sin respaldo resta credibilidad. Lo que nos hace grandes tiene que contarse con pruebas: clientes, años de relación, geografías, casos en producción.
-
-(Las menciones a "dev shop" de esta tabla describen cómo nos ven hoy; como descriptor de Magoya, "dev shop" está vetado: ver `.ai/verbal/lenguaje.md`.)
-
-## 3. Prioridad en los territorios de posicionamiento (slide 37)
-
-Construir la asociación de Magoya con el uso es la prioridad.
-
-| Territorio | Peso | Frase | Qué demuestra |
-|---|---|---|---|
-| Uso (prioritario) | **50%** | "El éxito no es llegar al lanzamiento del producto. El éxito es que ese producto se use." | Magoya es capaz de lograr que un producto no sólo se construya y llegue al lanzamiento, sino que se adopte, se use de forma sostenida y se mejore en función del contexto real del campo. |
-| Integración | **30%** | "Nuestra primera opción es construir sobre lo que ya existe." | Magoya sabe conectar herramientas y sistemas sin romper lo que existe ni frenar el roadmap durante meses. Es capaz de hacer un diagnóstico previo, tomar decisiones de arquitectura, construir sobre lo que ya funciona y no reinventar la rueda. Magoya tiene una mirada integral y puede conectar a los equipos. |
-| Hands-on | **20%** | "Ejecutamos lo que proponemos." | Magoya ejecuta en todo el ciclo: estrategia, diseño y desarrollo, adopción y uso, y puede entrar por cualquiera de esas partes. Pone a prueba su propio diagnóstico: lo construye, lo valida, lo itera y se queda hasta ver el resultado, trabajando dentro del problema junto al equipo del cliente. Solo propone lo que sabe construir, y el valor se ve en semanas. |
-
-**Regla.** Magoya construye en los 3 territorios, pero el peso de los mensajes se reparte en 50% para Uso, 30% para Integración y 20% para Hands-on.
-
-## 4. Rasgos de personalidad y qué ecualizan (slide 38)
-
-La personalidad de Magoya se describe en estos 4 rasgos. El orden importa: cada uno ecualiza al siguiente.
-
-| Orden | Rasgo | Qué implica | Qué ecualiza |
-|---|---|---|---|
-| 01 | Estratega | Es el rasgo central: atraviesa todo lo que Magoya hace y dice. Es analítica, ve lo que está detrás del problema. Conecta información, identifica patrones, busca claridad. Ordena qué va primero. Lee al otro: entiende cuándo y cómo hacer las cosas. Presenta evidencia. Diagnostica. Propone soluciones. | Es el rasgo que ecualiza al resto de la personalidad. Por ejemplo: un estratega puede ser curioso y franco sin que eso implique confrontación. |
-| 02 | Responsable | "Donde pone la promesa, pone el acto": consistencia entre lo que dice y lo que hace. Acompaña hasta el final. No habla de lo que no sabe; si tiene que estudiar algo, lo estudia. No sale a "destruir" a otros en la industria aunque pueda. Cumple con las promesas. | Ecualiza la franqueza: es lo que evita llegar pateando la mesa. "En mi opinión" en vez de "este está totalmente equivocado". No destruye, cuida el largo plazo. |
-| 03 | Curiosa | Es profunda. No acepta los pedidos como verdades: sigue hasta la raíz del problema. Une puntas entre partes de la organización que no se hablan. Descubre oportunidades: "me pediste esto y apareció otra cosa". | Lleva adentro el matiz challenger. No es cualquier curiosidad: es la que busca variables para enriquecer la estrategia. |
-| 04 | Franca | Con honestidad intelectual: dice lo que considera mejor para el cliente. Sostiene puntos de vista, trae recomendaciones inesperadas. Cuestiona sin confrontar: habla del elefante en el cuarto, invita a hacerse cargo de la realidad. | La franqueza entra en juego cuando ya hay confianza. No es confrontativa ni "cuchillo entre los dientes". |
-
-En inglés, **Responsable = Accountable**, no responsible (slide 30).
-
-## 5. La postura de Magoya (slide 39)
-
-Desde dónde habla Magoya. Lo que defiende. **Magoya está del lado de entender, hacer y acompañar.**
-
-| Postura | Qué significa |
-|---|---|
-| Es parte del ecosistema, no habla desde afuera | No entra a decir que todo está mal. Es parte del problema y propone la solución. |
-| Tiene respeto por lo logrado | El cliente llegó hasta acá: Magoya es humilde y respetuosa. |
-| Trabaja desde donde está el cliente | Si hay que hacer algo nuevo, se pregunta qué se puede evolucionar antes de refundar. No pretende empezar de cero. Lo que ya existe es el punto de partida, no el enemigo. |
-| Propone una práctica fáctica, no intuitiva | Lo que sugiere es basado en evidencia y en datos medibles. Las opiniones son fundadas y se demuestran. Muestra todas las opciones, incluso las que no son viables ahora. |
-| Piensa que el lanzamiento es sólo el principio | Esta postura se apoya en la mirada que construye el territorio de posicionamiento Uso. |
-
-## 6. Contra qué lucha Magoya (slide 40)
-
-Estos son nuestros archienemigos declarados. Nos sirven como punto de partida para escribir los puntos de vista de la marca.
-
-1. Medir el éxito en el lanzamiento y no en el uso.
-2. Proponer la misma solución para todos.
-3. Entregar un producto y no acompañar su implementación.
-4. Resolver sin la convicción de que va a ser útil.
-5. El "ya sé cómo resolverlo" antes de entender el problema.
-6. Reinventar la rueda, o decir que todo lo que el cliente tiene no sirve.
-7. La sobrepromesa y las soluciones mágicas.
-8. Equipos que no miden. Consultoras que no hacen.
-9. Culpar al usuario cuando la tecnología no se adapta a él.
-10. La soberbia: "Ya sé todo".
-11. Enamorarse de un producto que no resuelve un problema real.
-12. Hacer desde cero cuando se puede redefinir lo que existe. Patear todo y tener que desarmar para empezar.
-
-**Estamos fundamentalmente opuestos** al arquetipo del mago: ese que piensa que "al usuario no le importa cómo se resuelven las cosas". Nosotros estamos a favor de evidenciar, de mostrar, de fundamentar, de educar.
-
-## 7. Lo que Magoya no dice (slide 41)
-
-La slide las presenta como "siete frases prohibidas en la marca". Textualmente son estos enunciados; se evitan todos.
-
-| Frase prohibida | Por qué |
-|---|---|
-| "Lo que tenés no sirve" · "Hay que hacerlo todo de nuevo" | Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe. |
-| "Sólo nosotros podemos resolverlo" | Decir eso es soberbia. Magoya no compite con altanería ni destruyendo a los demás. |
-| "Esto se hace así" | No creemos en las verdades únicas, sin contexto. La marca no tiene fórmulas o recetas estándar. |
-| "Transformamos" | Si bien nuestro propósito es ambicioso, usamos la palabra "transformar" de manera interna, no queremos sobreprometer impacto. Además, la palabra transformación arrastra peso del concepto de "transformación digital" que está quemado. |
-| "Esta tecnología es fácil de aplicar" · "Estos problemas son fáciles de resolver" | Es el mito del mago, nuestro archienemigo central. Nada de soluciones mágicas porque achican el trabajo propio y suenan a quien no conoce el agro. |
-| "El problema es del cliente o del usuario" | Magoya no culpa a otros y propone la solución. Nunca señala culpables. |
-
-## 8. Ejes de expresión (slide 43)
-
-Cómo se expresa la marca hacia afuera. Posición = la casilla que marca el playbook en una escala de 1 a 5 (1 = el polo izquierdo, 5 = el derecho).
-
-| Eje | Posición (1–5) | Cómo se expresa Magoya |
-|---|---|---|
-| Seria · Divertida | 2 | Magoya no es McDonald's o M&M's. Pero no quiere decir que sea una marca aburrida. |
-| Moderna · Tradicional | 2 | Se respeta la tradición del campo. Aún así, la marca se expresa de manera moderna. |
-| Racional · Emocional | 2 | Porque argumenta, justifica, evidencia. Aún así, no es insensible o robótica. |
-| Adulta · Joven | 3 | Magoya es mayor de edad. Habla de vos, no en slang. Es respetuosa, pero sin reverencia. |
-| Líder · Perfil bajo | 2 | Magoya busca ocupar una posición de referencia en el mercado. |
-| Arriesgada · Medida | 3 | Tomamos riesgo pero no queremos vernos como una práctica u opción arriesgada. |
-| Innovadora · Clásica | 2 | La nuestra es innovación metodológica y de enfoque, no tecnológica. |
-| Empírica · Intuitiva | 1 | Diagnosticamos, recomendamos y proponemos presentando evidencia. |
-| Técnica · Accesible | 2 | Lideramos con credibilidad técnica, pero somos traductores. |
-| De nicho · Masiva | 2 | Somos la opción especialista en nuestro sector. |
-| Transparente · Diplomática | 2 | La expresión de la marca es honesta. |
-| Personal · Institucional | 2 | Magoya se expresa de manera cercana y no rígida. |
-
-## 9. Los cinco diales (slide 44)
-
-**El default es Magoya global. El ajuste por país es la excepción, no la regla.** Escala 1 a 5.
-
-| Dial | En 1 | En 5 | Default | AR | BR | US | Por qué |
-|---|---|---|---|---|---|---|---|
-| Provocación | Complaciente | Confrontativa | 4 | 4 | 3 | 3 | En Argentina se pisa más fuerte; en Brasil y Estados Unidos conviene tener un registro más institucional. Cuando la marca puede, avanza. |
-| Densidad técnica | De negocio | Técnica | 2 | 2 | 2 | 2 | Magoya tiene que mostrar que entiende el negocio del cliente. Lo técnico es el respaldo, no la entrada: si se entra muy técnico, la comparación pasa a ser de specs y no es un territorio en el que queremos jugar. |
-| Cercanía | Institucional | Coloquial | 2 | 4 | 2 | 2 | Tenemos registro de consultora: institucional sin ser frío. Argentina va a 4 ya que es culturalmente más picante. |
-| Venta explícita | Educador | Comercial | 4 | 4 | 3 | 4 | El educador muestra el camino completo; el comercial dice "tenés este problema, yo te lo resuelvo". Magoya vende consultivamente, pero no regala el roadmap. |
-| Marca de origen | Invisible | Explícita | 1 | 2 | 1 | 1 | El objetivo es que la marca no dependa de la nacionalidad para posicionarse. Usar el origen como argumento de costo cierra la puerta a vender valor. No se niega el origen, pero no se lo lleva al frente. |
-
-## 10. Localización (slide 45)
-
-**No hay un tono distinto por mercado.** La personalidad de la marca Magoya es la misma en Argentina, Brasil y Estados Unidos.
-
-Lo que sí cambia por mercado:
-1. **El vocabulario.** Un glosario por territorio, con la preferencia de uso de la marca y el contexto de cuándo dos términos son sinónimos y cuándo no (ver `vocabulary.json` y `.ai/verbal/lenguaje.md`).
-2. **El estadio de construcción.** En Argentina tiene más historia y hay que trabajar en reposicionar, en Estados Unidos la marca tiene que construir las asociaciones correctas y en Brasil hay que empezar de cero.
-3. **El énfasis por audiencia.** Hay que entender cuál de los territorios se pone adelante según quién esté enfrente.
-
-## 11. Énfasis por audiencia y contexto (slide 46)
-
-| Audiencia | Qué rasgos pesan más | Qué se pone adelante | Qué pasa si se equivoca el énfasis |
-|---|---|---|---|
-| Negocio y C-suite | Estratega y curiosa | Visión estratégica: el pensamiento más allá de la ejecución. Que se entienda que Magoya piensa el problema, entiende el negocio y la industria. | Si sólo se muestra el build, el interlocutor de negocio se desconecta. |
-| Técnico | Responsable y franca | Registro colaborativo. Mostrar que se entiende el stack y los problemas habituales, con menos framing estratégico. | Si se entra muy estratégico, suena a consultor genérico y no a alguien que puede construir y resolver. |
-
-**A tener en cuenta: el momento del funnel.** Además de la audiencia, la marca entiende el contexto de la conversación. No es lo mismo un primer contacto que una propuesta, ni los mensajes que damos a alguien que ya compró o con quién tenemos una relación de años.
-
-Complemento (slide 19): con el CTO, que es gatekeeper, funciona mejor el territorio hands-on, con un discurso específico y más técnico.
-
-
-
-# ===== LENGUAJE (capa verbal C · .ai/verbal/lenguaje.md) =====
-
-> Fuente: Magoya Brand Playbook (octubre de 2026), Parte 4 (slides 47–54). Si algo de este archivo difiere del playbook, prevalece el playbook.
-
-# Magoya · Lenguaje (capa verbal C)
-
-Qué palabras usa Magoya, cuáles no, y cómo nombra al agro en cada mercado. Página navegable: `lenguaje.html`. La misma información en JSON: `vocabulary.json`.
-
-## 1. Vocabulario vetado (slides 48–49)
-
-Magoya no usa estas palabras.
-
-| No escribir | Por qué | Escribir en su lugar |
-|---|---|---|
-| agtech | No es como Magoya se describe. Suena a startup de producto, no a consultora. | consultora hands-on · hands-on consultant |
-| digital (solo) | Suena viejo, de otra época. Con contexto puede aparecer: «digital product development» es aceptable. Nunca como descriptor de marca ni como claim. | software · software product · software development |
-| transformación digital | Concepto sobrevendido. La transformación digital ya ocurrió, en mejor o peor forma, en cualquier empresa: usarlo suena a que todavía no pasó. | Hablamos de resultados y de lo que se resuelve concretamente. |
-| custom | Es una palabra que dispara "build from scratch" en el comprador enterprise: suena caro, lento, riesgoso. | Si lo tenemos que usar, decimos "diseñado para resolver el desafío". |
-| software factory · dev shop · agencia | Los tres reducen a Magoya a un ejecutor sin estrategia. | consultora hands-on |
-| tecnología (sola) | Es un concepto demasiado amplio que en agro incluye maquinaria, biológicos e IoT. | software |
-| ayudar | Implica una relación asimétrica, de quien sabe hacia quien no sabe. Magoya hace con el otro, no por el otro. | trabajar con · colaborar · hacer junto a · acompañar |
-| adopción (como sinónimo de uso) | Magoya define "uso" como el todo: adopción, uso frecuente y recurrencia. | uso · y que la adopción quede como sub-etapa |
-| DIPI | El nombre interno que se le daba a la metodología. Era sólo el Discovery dentro del método. | Método Magoya para el proceso completo · Discovery para la primera fase |
-| building blocks | Sugiere que Magoya reutiliza componentes de un cliente en otro, lo que abre un conflicto de propiedad intelectual. | Sin reemplazo definido. |
-
-Relacionado (slide 4): "tecnología" no reemplaza a "software y AI", y "estrategia y ejecución" no define a Magoya (lo reemplaza hands-on). Slide 31: evitamos "soluciones integrales", "transformación" y "disrupción".
-
-### No quedaron vetados (slide 49)
-
-| Término | Regla |
-|---|---|
-| soluciones · solutions | Usar con criterio, y nunca combinado con adjetivos genéricos como "integrales" o "innovadoras". |
-| framework · metodología | No vetados. "Método" es la palabra preferida, pero framework es aceptable en contextos técnicos. |
-| adopción, en su contexto correcto | No vetada si se usa para nombrar específicamente el paso de adopción dentro del arco de uso. |
-
-## 2. AI, en inglés (slide 50)
-
-- Usamos **AI**, en inglés, para nombrar la inteligencia artificial en general, en cualquier idioma del texto.
-- Es la forma que la marca adoptó para actualizar su propuesta: hacemos **"Software y AI"**.
-- **La única excepción es "IA en Campo":** es un nombre propio, el nombre del programa, y se escribe siempre así, en español, en cualquier idioma del texto que lo rodee. Nunca "AI en Campo".
-
-## 3. Quién es quién: glosario por mercado (slides 51–52)
-
-| Quién es | ES · Argentina | EN · Estados Unidos | PT · Brasil |
-|---|---|---|---|
-| El que produce | Productor | Farmer · Grower · Producer | Produtor · Agricultor |
-| · cultivos de alto valor | Productor frutihortícola | Farmer · Grower · Producer | Produtor · Horticultor |
-| · ganadería | Productor ganadero | Rancher | Pecuarista |
-| · fruticultura | Productor frutihortícola | Orchard farmer | Fruticultor |
-| El técnico | Asesor · agrónomo | Advisor · Agronomist | Agrônomo · consultor agronômico · engenheiro agrônomo · engenheiro agrícola |
-| El canal | Distribuidor | Dealer | Distribuidor |
-| · contacto con el productor | Distribuidor · comercio de insumos agrícolas | Retailer | Revenda · revendedor · loja de insumos agrícolas |
-| · alimentos | Mayorista | Wholesaler | Atacadista |
-| · maquinaria | Concesionario · concesionaria | Dealer · dealership | Concessionária · revenda de máquinas |
-| · cooperativas | Cooperativa | Cooperative | Cooperativa |
-| Quien usa el producto | Usuario | User | Usuário |
-| El equipo del productor | Operador · analista digital · gestor o gerente · productor o dueño | Operator · digital analyst · manager · farmer or owner | Operador · analista digital · gestor ou gerente · produtor ou proprietário |
-| El equipo del cliente | Representante de ventas (RV) · soporte técnico · asesor | Commercial · tech support · advisor | Representante técnico de vendas (RTV) · assistente técnico de vendas (AT) · assistência ou suporte técnico |
-| El sector | Agro · sector agropecuario · agronegocio | Agriculture · Ag | Agro · agropecuário · agronegócio |
-| El cliente · insumos | Empresa de insumos para el agro | Ag input company | Empresa de insumos agrícolas |
-| El cliente · maquinaria | Empresa de maquinaria | OEM company | Empresa de máquinas ou maquinário |
-| El cliente · semillas | Semillera | Seed company | Empresa de sementes |
-
-**Importante.**
-- "Distribuidor" en Argentina es **dealer** en inglés, no "distributor". Y "retailer" es el que tiene contacto con el productor, que es otra figura (slide 51).
-- **"Agribusiness" nombra al cliente, no al sector:** en inglés el sector es *agriculture* o *ag*. En Brasil "agricultor" convive con "produtor" para el que produce (slide 52).
-- **Tipos de cultivo (slide 52).** Español: extensivos e intensivos, la división de primer nivel. Inglés: *row crops* para extensivos; *specialty crops* o *fresh crops* para intensivos (tomate, pimiento, pepino, almendra, cítricos). El inglés no usa esa división.
-
-## 4. Cómo suena Magoya (slide 53)
-
-| Tema | Así no | Así sí | Por qué |
-|---|---|---|---|
-| Cómo trabajamos con clientes | «Ayudamos a nuestros clientes a transformar sus negocios.» | «Trabajamos con nuestros clientes para resolver problemas concretos utilizando software.» | «Ayudar» está vetado y «transformar» solo queda reservado para el propósito en forma interna. |
-| Alcance del trabajo | «Lideramos la transformación» | «Trabajamos desde la definición del problema hasta la ejecución de la solución.» | Nos ponemos a la altura de quien resuelve, no por encima, y «transformar» nos arrastra al territorio de transformación digital. |
-| Qué construimos | «Implementamos soluciones innovadoras.» | «Construimos lo que el cliente necesita para su negocio», con foco en el uso. | «Soluciones innovadoras» es genérico y viejo. |
-| El uso | «Impulsamos la adopción de tecnología.» | «Trabajamos para lograr que cada solución se use.» | Adopción como sinónimo está vetada, y «tecnología» también. |
-| Qué ofrecemos | «Ofrecemos soluciones integrales.» | «Ofrecemos soluciones de software y AI y, si es necesario, conectamos las partes que hacen falta para que funcione.» | «Integrales» es genérico. |
-
-## 5. Ejemplo: posteo de LinkedIn (slide 54)
-
-**Vocero:** Cami · **Territorio:** Uso
-
-> El onboarding de una herramienta digital empieza mucho antes del lanzamiento. Empieza en el diseño: en qué ve el usuario primero, cómo entiende el primer flujo y en qué momento puede seguir solo.
->
-> En los casos en que la herramienta ya está lanzada y el uso no despega, lo trabajamos en tres frentes: un journey de onboarding, adopción y loyalty con customer success, virtual y a campo, que trabaja de manera proactiva y reactiva; agentes de AI que permiten escalar ese soporte para estar en el momento exacto en que el usuario lo necesita y loops de feedback que llevan lo aprendido directo al producto.
->
-> Con un cliente pasamos del 12% al 36% de uso. El acompañamiento a campo nos mostró dónde se trababa la gente, esos aprendizajes volvieron al diseño y hoy el producto los resuelve solo.
->
-> La meta es que el producto escale sin depender de más personas. Cada conversación en el campo es una mejora que el próximo usuario ya no va a necesitar.
-
-| Regla aplicada | Cómo se ve acá |
-|---|---|
-| Rasgo Curiosa | Busca dónde se traba el usuario antes de asumir la causa. |
-| Vetos respetados | No usa «ayudar» ni «tecnología». «Adopción» aparece como parte del uso. |
-| Territorio Uso | El uso se diseña desde el inicio y lo termina sosteniendo el producto. |
-| AI con naturalidad | La AI aparece como un frente más, al servicio del usuario. |
-| Regla "Concreta" | Cifra real (12% a 36%) y un método explícito en tres frentes. |
-
-Nota: el ejemplo del playbook está en español; según la slide 62, el idioma principal de LinkedIn es el inglés (ver `.ai/verbal/aplicacion.md`). La cifra 12%→36% es del ejemplo del playbook: para publicarla en otra pieza tiene que estar aprobada en `ai/facts.json`.
-
-
-
 # ===== APLICACION (capa verbal D · .ai/verbal/aplicacion.md) =====
 
 > Fuente: Magoya Brand Playbook (octubre de 2026), Parte 6 (slides 58–63). Si algo de este archivo difiere del playbook, prevalece el playbook.
@@ -956,18 +857,19 @@ Cada voz tiene un territorio claro y sostenible.
  "meta": {
   "brand": "Magoya",
   "file": "vocabulary.json",
-  "description": "Vocabulario de marca de Magoya en JSON: palabras vetadas, frases prohibidas, regla AI, glosario por mercado, definición y tagline. Hermano verbal de tokens.json.",
-  "source": "Magoya Brand Playbook, octubre de 2026 (slides 4, 41, 48-52 y 57). Si algo difiere del playbook, prevalece el playbook.",
-  "related": ["lenguaje.html", ".ai/verbal/lenguaje.md", ".ai/checklist-verbal.md"],
+  "description": "Vocabulario de marca de Magoya en JSON: vocabulario a evitar, frases que la marca evita, regla AI, glosario por mercado, definición y tagline. Hermano verbal de tokens.json.",
+  "source": "Datos: Magoya Brand Playbook, octubre de 2026 (slides 4, 41, 48-52 y 57). Cómo se usa el vocabulario: Guía editorial de Magoya, \"Manual voz y tono MAGOYA V2\", octubre de 2026 (.ai/verbal/guia-editorial.md, §3). Para las denominaciones aprobadas y las traducciones prevalece el playbook; para la voz, el estilo y el uso del vocabulario prevalece la guía.",
+  "related": ["lenguaje.html", ".ai/verbal/lenguaje.md", ".ai/verbal/guia-editorial.md", ".ai/checklist-verbal.md"],
   "updated": "2026-10-19"
  },
+ "rule": "Las etiquetas de \"vetoed\" no son palabras universalmente vetadas. Hay que evitar etiquetas reductoras para definir a Magoya (por ejemplo \"software factory\", \"dev shop\", \"agtech\" como categoría identitaria, \"custom\" como promesa central o \"transformación digital\" como definición), y evaluar cada palabra por su función y su contexto. Mantener las denominaciones aprobadas en el playbook y las traducciones validadas por mercado. Fuente: Guía editorial V2, §3 (Vocabulario de marca).",
  "definition": {
   "es": "Magoya es una consultora hands-on en software y AI para empresas del agro.",
   "en": "Magoya is a hands-on software and AI consulting firm for agribusiness.",
   "rules": [
-   "\"Estrategia y ejecución\" no se usa para definir a Magoya: lo reemplaza hands-on.",
-   "No usamos la palabra \"tecnología\" para reemplazar a \"software y AI\"."
-  ],
+    "\"Estrategia y ejecución\" no se usa para definir a Magoya: lo reemplaza hands-on.",
+    "No usamos la palabra \"tecnología\" para reemplazar a \"software y AI\" en la definición o el tagline; en otros contextos puede emplearse (Guía editorial V2, §3)."
+   ],
   "slide": 4
  },
  "one_liner": {
@@ -981,25 +883,26 @@ Cada voz tiene un territorio claro y sostenible.
   "se_puede_soltar": "\"Consultora\" y \"hands-on\": se dicen inmediatamente después, en la firma o en la presentación.",
   "slides": [56, 57]
  },
+ "how_to_read": "La clave \"vetoed\" conserva el nombre que le da el playbook (slides 48-49), pero se lee según \"rule\": son palabras a evitar, sobre todo al definir a Magoya, no un veto universal. \"why\" explica el riesgo y \"use_instead\" da la alternativa preferida. \"forbidden_phrases\" son las frases prohibidas del playbook (slide 41); la guía editorial V2 no las flexibiliza.",
  "vetoed": [
-  {"term": "agtech", "why": "No es como Magoya se describe. Suena a startup de producto, no a consultora.", "use_instead": ["consultora hands-on", "hands-on consultant"], "slide": 48},
-  {"term": "digital (solo)", "why": "Suena viejo, de otra época. Con contexto puede aparecer: «digital product development» es aceptable. Nunca como descriptor de marca ni como claim.", "use_instead": ["software", "software product", "software development"], "slide": 48},
-  {"term": "transformación digital", "why": "Concepto sobrevendido. La transformación digital ya ocurrió, en mejor o peor forma, en cualquier empresa: usarlo suena a que todavía no pasó.", "use_instead": ["Hablamos de resultados y de lo que se resuelve concretamente."], "slide": 48},
-  {"term": "custom", "why": "Es una palabra que dispara \"build from scratch\" en el comprador enterprise: suena caro, lento, riesgoso.", "use_instead": ["Si lo tenemos que usar, decimos \"diseñado para resolver el desafío\"."], "slide": 48},
-  {"term": "software factory", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
-  {"term": "dev shop", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
-  {"term": "agencia", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
-  {"term": "tecnología (sola)", "why": "Es un concepto demasiado amplio que en agro incluye maquinaria, biológicos e IoT.", "use_instead": ["software"], "slide": 48},
-  {"term": "ayudar", "why": "Implica una relación asimétrica, de quien sabe hacia quien no sabe. Magoya hace con el otro, no por el otro.", "use_instead": ["trabajar con", "colaborar", "hacer junto a", "acompañar"], "slide": 48},
-  {"term": "adopción (como sinónimo de uso)", "why": "Magoya define \"uso\" como el todo: adopción, uso frecuente y recurrencia.", "use_instead": ["uso", "y que la adopción quede como sub-etapa"], "slide": 49},
-  {"term": "DIPI", "why": "El nombre interno que se le daba a la metodología. Era sólo el Discovery dentro del método.", "use_instead": ["Método Magoya (para el proceso completo)", "Discovery (para la primera fase)"], "slide": 49},
-  {"term": "building blocks", "why": "Sugiere que Magoya reutiliza componentes de un cliente en otro, lo que abre un conflicto de propiedad intelectual.", "use_instead": [], "note": "Sin reemplazo definido.", "slide": 49}
- ],
+   {"term": "agtech", "why": "No es como Magoya se describe. Suena a startup de producto, no a consultora.", "use_instead": ["consultora hands-on", "hands-on consultant"], "slide": 48},
+   {"term": "digital (solo)", "why": "Suena viejo, de otra época. Con contexto puede aparecer: «digital product development» es aceptable. Nunca como descriptor de marca ni como claim.", "use_instead": ["software", "software product", "software development"], "slide": 48},
+   {"term": "transformación digital", "why": "Concepto sobrevendido. La transformación digital ya ocurrió, en mejor o peor forma, en cualquier empresa: usarlo suena a que todavía no pasó.", "use_instead": ["Hablamos de resultados y de lo que se resuelve concretamente."], "slide": 48},
+   {"term": "custom", "why": "Es una palabra que dispara \"build from scratch\" en el comprador enterprise: suena caro, lento, riesgoso.", "use_instead": ["Si lo tenemos que usar, decimos \"diseñado para resolver el desafío\"."], "slide": 48},
+   {"term": "software factory", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
+   {"term": "dev shop", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
+   {"term": "agencia", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
+   {"term": "tecnología (sola)", "why": "Es un concepto demasiado amplio que en agro incluye maquinaria, biológicos e IoT.", "use_instead": ["software", "software y AI"], "context": "No sustituye a \"software y AI\" en la definición o el tagline de Magoya; en otros contextos puede emplearse (Guía editorial V2, §3).", "slide": 48},
+   {"term": "ayudar", "why": "Implica una relación asimétrica, de quien sabe hacia quien no sabe. Magoya hace con el otro, no por el otro.", "use_instead": ["trabajar con", "colaborar", "hacer junto a", "acompañar"], "slide": 48},
+   {"term": "adopción (como sinónimo de uso)", "why": "Magoya define \"uso\" como el todo: adopción, uso frecuente y recurrencia.", "use_instead": ["uso", "y que la adopción quede como sub-etapa"], "slide": 49},
+   {"term": "DIPI", "why": "El nombre interno que se le daba a la metodología. Era sólo el Discovery dentro del método.", "use_instead": ["Método Magoya (para el proceso completo)", "Discovery (para la primera fase)"], "slide": 49},
+   {"term": "building blocks", "why": "Sugiere que Magoya reutiliza componentes de un cliente en otro, lo que abre un conflicto de propiedad intelectual.", "use_instead": [], "note": "Sin reemplazo definido.", "slide": 49}
+  ],
  "not_vetoed": [
-  {"term": "soluciones · solutions", "rule": "Usar con criterio, y nunca combinado con adjetivos genéricos como \"integrales\" o \"innovadoras\".", "slide": 49},
-  {"term": "framework · metodología", "rule": "No vetados. \"Método\" es la palabra preferida, pero framework es aceptable en contextos técnicos.", "slide": 49},
-  {"term": "adopción, en su contexto correcto", "rule": "No vetada si se usa para nombrar específicamente el paso de adopción dentro del arco de uso.", "slide": 49}
- ],
+   {"term": "soluciones · solutions", "rule": "Usar con criterio, y nunca combinado con adjetivos genéricos como \"integrales\" o \"innovadoras\".", "slide": 49},
+   {"term": "framework · metodología", "rule": "No vetados. \"Método\" es la palabra preferida, pero framework es aceptable en contextos técnicos.", "slide": 49},
+   {"term": "adopción, en su contexto correcto", "rule": "No vetada si se usa para nombrar específicamente el paso de adopción dentro del arco de uso.", "slide": 49}
+  ],
  "ai_rule": {
   "use": "AI",
   "rule": "Usamos AI, en inglés, para nombrar la inteligencia artificial en general, en cualquier idioma del texto. Es la forma que la marca adoptó para actualizar su propuesta: hacemos \"Software y AI\".",
@@ -1012,40 +915,46 @@ Cada voz tiene un territorio claro y sostenible.
   "slide": 50
  },
  "glossary": [
-  {"who": "El que produce", "es": "Productor", "en": "Farmer · Grower · Producer", "pt": "Produtor · Agricultor", "slide": 51},
-  {"who": "El que produce · cultivos de alto valor", "es": "Productor frutihortícola", "en": "Farmer · Grower · Producer", "pt": "Produtor · Horticultor", "slide": 51},
-  {"who": "El que produce · ganadería", "es": "Productor ganadero", "en": "Rancher", "pt": "Pecuarista", "slide": 51},
-  {"who": "El que produce · fruticultura", "es": "Productor frutihortícola", "en": "Orchard farmer", "pt": "Fruticultor", "slide": 51},
-  {"who": "El técnico", "es": "Asesor · agrónomo", "en": "Advisor · Agronomist", "pt": "Agrônomo · consultor agronômico · engenheiro agrônomo · engenheiro agrícola", "slide": 51},
-  {"who": "El canal", "es": "Distribuidor", "en": "Dealer", "pt": "Distribuidor", "note": "\"Distribuidor\" en Argentina es dealer en inglés, no \"distributor\".", "slide": 51},
-  {"who": "El canal · contacto con el productor", "es": "Distribuidor · comercio de insumos agrícolas", "en": "Retailer", "pt": "Revenda · revendedor · loja de insumos agrícolas", "note": "\"Retailer\" es el que tiene contacto con el productor, que es otra figura.", "slide": 51},
-  {"who": "El canal · alimentos", "es": "Mayorista", "en": "Wholesaler", "pt": "Atacadista", "slide": 51},
-  {"who": "El canal · maquinaria", "es": "Concesionario · concesionaria", "en": "Dealer · dealership", "pt": "Concessionária · revenda de máquinas", "slide": 51},
-  {"who": "El canal · cooperativas", "es": "Cooperativa", "en": "Cooperative", "pt": "Cooperativa", "slide": 51},
-  {"who": "Quien usa el producto", "es": "Usuario", "en": "User", "pt": "Usuário", "slide": 52},
-  {"who": "El equipo del productor", "es": "Operador · analista digital · gestor o gerente · productor o dueño", "en": "Operator · digital analyst · manager · farmer or owner", "pt": "Operador · analista digital · gestor ou gerente · produtor ou proprietário", "slide": 52},
-  {"who": "El equipo del cliente", "es": "Representante de ventas (RV) · soporte técnico · asesor", "en": "Commercial · tech support · advisor", "pt": "Representante técnico de vendas (RTV) · assistente técnico de vendas (AT) · assistência ou suporte técnico", "slide": 52},
-  {"who": "El sector", "es": "Agro · sector agropecuario · agronegocio", "en": "Agriculture · Ag", "pt": "Agro · agropecuário · agronegócio", "note": "\"Agribusiness\" nombra al cliente, no al sector: en inglés el sector es agriculture o ag. En Brasil \"agricultor\" convive con \"produtor\" para el que produce.", "slide": 52},
-  {"who": "El cliente · insumos", "es": "Empresa de insumos para el agro", "en": "Ag input company", "pt": "Empresa de insumos agrícolas", "slide": 52},
-  {"who": "El cliente · maquinaria", "es": "Empresa de maquinaria", "en": "OEM company", "pt": "Empresa de máquinas ou maquinário", "slide": 52},
-  {"who": "El cliente · semillas", "es": "Semillera", "en": "Seed company", "pt": "Empresa de sementes", "slide": 52},
-  {"who": "Tipos de cultivo", "es": "Extensivos · intensivos (la división de primer nivel)", "en": "Row crops (extensivos) · specialty crops o fresh crops (intensivos: tomate, pimiento, pepino, almendra, cítricos)", "pt": null, "note": "El inglés no usa la división extensivos/intensivos. El playbook no da el término en portugués.", "slide": 52}
- ],
+   {"who": "El que produce", "es": "Productor", "en": "Farmer · Grower · Producer", "pt": "Produtor · Agricultor", "slide": 51},
+   {"who": "El que produce · cultivos de alto valor", "es": "Productor frutihortícola", "en": "Farmer · Grower · Producer", "pt": "Produtor · Horticultor", "slide": 51},
+   {"who": "El que produce · ganadería", "es": "Productor ganadero", "en": "Rancher", "pt": "Pecuarista", "slide": 51},
+   {"who": "El que produce · fruticultura", "es": "Productor frutihortícola", "en": "Orchard farmer", "pt": "Fruticultor", "slide": 51},
+   {"who": "El técnico", "es": "Asesor · agrónomo", "en": "Advisor · Agronomist", "pt": "Agrônomo · consultor agronômico · engenheiro agrônomo · engenheiro agrícola", "slide": 51},
+   {"who": "El canal", "es": "Distribuidor", "en": "Dealer", "pt": "Distribuidor", "note": "\"Distribuidor\" en Argentina es dealer en inglés, no \"distributor\".", "slide": 51},
+   {"who": "El canal · contacto con el productor", "es": "Distribuidor · comercio de insumos agrícolas", "en": "Retailer", "pt": "Revenda · revendedor · loja de insumos agrícolas", "note": "\"Retailer\" es el que tiene contacto con el productor, que es otra figura.", "slide": 51},
+   {"who": "El canal · alimentos", "es": "Mayorista", "en": "Wholesaler", "pt": "Atacadista", "slide": 51},
+   {"who": "El canal · maquinaria", "es": "Concesionario · concesionaria", "en": "Dealer · dealership", "pt": "Concessionária · revenda de máquinas", "slide": 51},
+   {"who": "El canal · cooperativas", "es": "Cooperativa", "en": "Cooperative", "pt": "Cooperativa", "slide": 51},
+   {"who": "Quien usa el producto", "es": "Usuario", "en": "User", "pt": "Usuário", "slide": 52},
+   {"who": "El equipo del productor", "es": "Operador · analista digital · gestor o gerente · productor o dueño", "en": "Operator · digital analyst · manager · farmer or owner", "pt": "Operador · analista digital · gestor ou gerente · produtor ou proprietário", "slide": 52},
+   {"who": "El equipo del cliente", "es": "Representante de ventas (RV) · soporte técnico · asesor", "en": "Commercial · tech support · advisor", "pt": "Representante técnico de vendas (RTV) · assistente técnico de vendas (AT) · assistência ou suporte técnico", "slide": 52},
+   {"who": "El sector", "es": "Agro · sector agropecuario · agronegocio", "en": "Agriculture · Ag", "pt": "Agro · agropecuário · agronegócio", "note": "\"Agribusiness\" nombra al cliente, no al sector: en inglés el sector es agriculture o ag. En Brasil \"agricultor\" convive con \"produtor\" para el que produce.", "slide": 52},
+   {"who": "El cliente · insumos", "es": "Empresa de insumos para el agro", "en": "Ag input company", "pt": "Empresa de insumos agrícolas", "slide": 52},
+   {"who": "El cliente · maquinaria", "es": "Empresa de maquinaria", "en": "OEM company", "pt": "Empresa de máquinas ou maquinário", "slide": 52},
+   {"who": "El cliente · semillas", "es": "Semillera", "en": "Seed company", "pt": "Empresa de sementes", "slide": 52},
+   {"who": "Tipos de cultivo", "es": "Extensivos · intensivos (la división de primer nivel)", "en": "Row crops (extensivos) · specialty crops o fresh crops (intensivos: tomate, pimiento, pepino, almendra, cítricos)", "pt": null, "note": "El inglés no usa la división extensivos/intensivos. El playbook no da el término en portugués.", "slide": 52}
+  ],
  "forbidden_phrases": [
-  {"phrase": "Lo que tenés no sirve", "why": "Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe.", "slide": 41},
-  {"phrase": "Hay que hacerlo todo de nuevo", "why": "Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe.", "slide": 41},
-  {"phrase": "Sólo nosotros podemos resolverlo", "why": "Decir eso es soberbia. Magoya no compite con altanería ni destruyendo a los demás.", "slide": 41},
-  {"phrase": "Esto se hace así", "why": "No creemos en las verdades únicas, sin contexto. La marca no tiene fórmulas o recetas estándar.", "slide": 41},
-  {"phrase": "Transformamos", "why": "Si bien nuestro propósito es ambicioso, usamos la palabra \"transformar\" de manera interna, no queremos sobreprometer impacto. Además, la palabra transformación arrastra peso del concepto de \"transformación digital\" que está quemado.", "slide": 41},
-  {"phrase": "Esta tecnología es fácil de aplicar", "why": "Es el mito del mago, nuestro archienemigo central. Nada de soluciones mágicas porque achican el trabajo propio y suenan a quien no conoce el agro.", "slide": 41},
-  {"phrase": "Estos problemas son fáciles de resolver", "why": "Es el mito del mago, nuestro archienemigo central. Nada de soluciones mágicas porque achican el trabajo propio y suenan a quien no conoce el agro.", "slide": 41},
-  {"phrase": "El problema es del cliente o del usuario", "why": "Magoya no culpa a otros y propone la solución. Nunca señala culpables.", "slide": 41}
- ],
+   {"phrase": "Lo que tenés no sirve", "why": "Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe.", "slide": 41},
+   {"phrase": "Hay que hacerlo todo de nuevo", "why": "Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe.", "slide": 41},
+   {"phrase": "Sólo nosotros podemos resolverlo", "why": "Decir eso es soberbia. Magoya no compite con altanería ni destruyendo a los demás.", "slide": 41},
+   {"phrase": "Esto se hace así", "why": "No creemos en las verdades únicas, sin contexto. La marca no tiene fórmulas o recetas estándar.", "slide": 41},
+   {"phrase": "Transformamos", "why": "Si bien nuestro propósito es ambicioso, usamos la palabra \"transformar\" de manera interna, no queremos sobreprometer impacto. Además, la palabra transformación arrastra peso del concepto de \"transformación digital\" que está quemado.", "slide": 41},
+   {"phrase": "Esta tecnología es fácil de aplicar", "why": "Es el mito del mago, nuestro archienemigo central. Nada de soluciones mágicas porque achican el trabajo propio y suenan a quien no conoce el agro.", "slide": 41},
+   {"phrase": "Estos problemas son fáciles de resolver", "why": "Es el mito del mago, nuestro archienemigo central. Nada de soluciones mágicas porque achican el trabajo propio y suenan a quien no conoce el agro.", "slide": 41},
+   {"phrase": "El problema es del cliente o del usuario", "why": "Magoya no culpa a otros y propone la solución. Nunca señala culpables.", "slide": 41}
+  ],
  "forbidden_phrases_note": "La slide 41 las presenta como \"siete frases\"; textualmente enumera estos ocho enunciados en seis filas. Se evitan todos.",
  "translations": [
-  {"es": "Responsable (rasgo de personalidad)", "en": "Accountable", "not": "responsible", "why": "Accountable es hacerse cargo del resultado.", "slide": 30}
- ]
+   {"es": "Responsable (rasgo de personalidad)", "en": "Accountable", "not": "responsible", "why": "Accountable es hacerse cargo del resultado.", "slide": 30}
+  ]
 }
+
+
+
+# ===== VOZ Y LENGUAJE (detalle) =====
+
+El detalle del playbook (objetivos por mercado, diales, postura, lo que Magoya no dice, glosario completo y ejemplos) está en https://brand.magoya.com/.ai/verbal/voz.md y https://brand.magoya.com/.ai/verbal/lenguaje.md
 
 
 
@@ -1127,7 +1036,7 @@ Cada voz tiene un territorio claro y sostenible.
   "kickers": "MAYÚSCULAS, tracking +0.12em",
   "labels_de_boton": "sentence case",
   "nomenclatura_ia": "SIEMPRE 'AI' para nombrar la inteligencia artificial, en cualquier idioma del texto ('Software y AI', 'capacidades de AI', 'Integrar con AI'). Única excepción: el nombre propio del programa 'IA en Campo', que se escribe siempre así, en cualquier idioma, y nunca 'AI en Campo'. Fuente: Magoya Brand Playbook, oct 2026, slide 50. Los nombres de archivo y las URLs del sistema siguen en 'ai-' (ai-en-campo.html, /ai/): eso NO se copia al texto de la pieza.",
-  "reglas_verbales": "el resto de las reglas de texto (definición, vocabulario vetado, frases prohibidas, territorios 50/30/20, diales por país, glosario ES · EN · PT) está en vocabulary.json y .ai/verbal/ — se valida con .ai/checklist-verbal.md"
+  "reglas_verbales": "el resto de las reglas de texto (definición, vocabulario de marca, frases prohibidas, glosario ES · EN · PT) está en vocabulary.json y .ai/verbal/ — se valida con .ai/checklist-verbal.md. Territorios 50/30/20 y diales por país son guías de planificación y referencia orientativa, no chequeos por texto (guía editorial V2, §4)"
  },
  "verificacion": "los 17 chequeos de .ai/checklist.md y, si la pieza tiene texto, .ai/checklist-verbal.md — este archivo agrega los números; los checklists dicen cómo auditarlos",
  "pendiente_de_definir": [
@@ -1415,14 +1324,46 @@ Plantillas HTML oficiales de los 41 módulos, generadas del exportador real. Se 
 # ===== PRECEDENCIA (quien gana cuando dos reglas chocan) =====
 
 {
- "que_es": "Ley de precedencia: qué documento gana cuando dos reglas oficiales de este sistema se contradicen. Existe para que ninguna AI ni ninguna persona tenga que elegir. Si encontrás una contradicción, aplicá esta ley, entregá la pieza, y reportá la contradicción — pero no la resuelvas por criterio propio.",
- "version": "1.1 · 2026-10-19",
+ "que_es": "Ley de precedencia: qué documento gana cuando dos reglas oficiales de este sistema se contradicen. Existe para que ninguna AI ni ninguna persona tenga que elegir. Si encontrás una contradicción, aplicá esta ley, entregá la pieza como borrador pendiente de revisión y reportá la contradicción — pero no la resuelvas por criterio propio.",
+ "version": "1.2 · 2026-10-19",
  "por_que_existe": "Una auditoría a ciegas encontró 16 contradicciones entre documentos oficiales del sistema: reglas que ninguna plantilla puede cumplir, instrucciones que prometen control que la geometría no permite, y números distintos en dos archivos. Mientras existan, la AI tiene que decidir — y decidir es exactamente lo que este sistema promete que nadie tenga que hacer.",
  "capas": {
-  "verbal_A_D": "A Estrategia, B Voz, C Lenguaje y D Aplicación salen del Magoya Brand Playbook (octubre de 2026). El playbook prevalece sobre cualquier archivo del sistema hasta que su contenido esté publicado en el sitio (estrategia.html, voz.html, lenguaje.html, aplicacion.html) y en .ai/verbal/, vocabulary.json y .ai/checklist-verbal.md; si un archivo difiere del playbook, gana el playbook y el archivo se corrige.",
+  "verbal_A_D": "A Estrategia, B Voz, C Lenguaje y D Aplicación se reparten entre dos fuentes (ver jerarquia_de_fuentes): la identidad, el posicionamiento, los territorios, la propuesta de valor, la oferta, los espacios de actuación y el Método Magoya salen del Magoya Brand Playbook (octubre de 2026); la voz, el estilo, el vocabulario y la adaptación editorial salen de la Guía editorial de Magoya, \"Manual voz y tono MAGOYA V2\" (octubre de 2026), en .ai/verbal/guia-editorial.md. Si un archivo del sistema (estrategia.html, voz.html, lenguaje.html, aplicacion.html, .ai/verbal/, vocabulary.json, .ai/checklist-verbal.md) difiere de la fuente que le corresponde, gana la fuente y el archivo se corrige.",
   "visual_E_F": "E Identidad visual y F Piezas y plantillas se mantienen de la v1.2 hasta su revisión. Para la capa visual rige el orden de abajo.",
   "G_H": "G IA en Campo tiene manual propio (ai-en-campo.html). H Integrar con AI (ai.html) no es fuente: deriva de las capas anteriores.",
-  "regla_de_texto": "En el texto de una pieza, las reglas verbales (definición, AI, vocabulario vetado, frases prohibidas, territorios) vienen del playbook y se validan con .ai/checklist-verbal.md, aunque la plantilla traiga otro texto de ejemplo: el texto de las plantillas es EJEMPLO, no regla."
+  "regla_de_texto": "En el texto de una pieza, las reglas de identidad (definición, AI, espacios, método, denominaciones y traducciones) vienen del playbook, y las de voz, estilo, vocabulario y adaptación vienen de la guía editorial; las dos se validan con .ai/checklist-verbal.md, aunque la plantilla traiga otro texto de ejemplo: el texto de las plantillas es EJEMPLO, no regla. Bajo la guía, el vocabulario del playbook no es un veto universal (se evalúa por función y contexto) y el 50/30/20 es una guía de planificación de contenidos, no un chequeo por texto."
+ },
+ "jerarquia_de_fuentes": {
+  "que_es": "Qué fuente responde qué, para el contenido de una pieza. Sale de la Guía editorial V2, §6 (Fuentes autorizadas y responsabilidades). No reemplaza al orden de abajo, que resuelve choques entre archivos del sistema para la capa visual y la entrega.",
+  "niveles": [
+   {
+    "n": 1,
+    "fuente": "Magoya Brand Playbook (.ai/verbal/estrategia.md)",
+    "responde": "identidad, posicionamiento, territorios, propuesta de valor, oferta, espacios de actuación y Método Magoya"
+   },
+   {
+    "n": 2,
+    "fuente": "Guía editorial V2 (.ai/verbal/guia-editorial.md)",
+    "responde": "voz, estilo, vocabulario y adaptación editorial"
+   },
+   {
+    "n": 3,
+    "fuente": "fuentes internas aprobadas y vigentes, con validación humana (ai/facts.json)",
+    "responde": "casos, resultados, métricas, clientes, testimonios y datos comerciales"
+   },
+   {
+    "n": 4,
+    "fuente": "el brief del solicitante",
+    "responde": "objetivo, audiencia, canal, idioma, CTA y contexto de la pieza",
+    "limite": "el brief no puede redefinir la identidad ni autorizar cifras no validadas"
+   }
+  ],
+  "reglas_obligatorias": "Las reglas marcadas [OBLIGATORIO] en la guía prevalecen sobre las recomendaciones estilísticas, sin reemplazar la estrategia del playbook (guía, propósito y jerarquía de fuentes)."
+ },
+ "conflictos_entre_fuentes": {
+  "regla": "Si las fuentes se contradicen, o el brief contradice una regla obligatoria, no se inventa una síntesis ni se resuelve en silencio: se señala la discrepancia, se propone una salida y se pide definición a una persona (guía, propósito y §7).",
+  "como_se_entrega": "La pieza sale como borrador identificable como pendiente de revisión, con el conflicto escrito en el bloque PEDIDO A HUMANOS (las dos fuentes y qué dice cada una). Lo mismo si el pedido involucra decisiones, riesgos o cifras relevantes: no se asume autorización de publicación (guía §7).",
+  "relacion_con_el_orden": "El orden de abajo sigue rigiendo para choques entre archivos del sistema (plantilla, tokens, constraints, checklists). Aplicarlo no exime de señalar el choque: ver como_reportar_una_contradiccion."
  },
  "orden": [
   {
@@ -1459,7 +1400,7 @@ Plantillas HTML oficiales de los 41 módulos, generadas del exportador real. Se 
    "n": 6,
    "gana": ".ai/checklist.md y .ai/checklist-verbal.md",
    "por_que": "son el gate de salida (visual y de texto), no la fuente.",
-   "consecuencia": "un chequeo visual que ninguna plantilla oficial pasa es un chequeo mal escrito. Un chequeo verbal que contradice al playbook también."
+   "consecuencia": "un chequeo visual que ninguna plantilla oficial pasa es un chequeo mal escrito. Un chequeo verbal que contradice al playbook o a la guía editorial también."
   },
   {
    "n": 7,
@@ -1487,7 +1428,7 @@ Plantillas HTML oficiales de los 41 módulos, generadas del exportador real. Se 
 
 # Método de trabajo — obligatorio para cualquier pieza con contenido
 
-**Versión 3.1 · 2026-10-19** · Parte del flujo de todas las entradas por AI. Cumplir la marca al pie
+**Versión 3.2 · 2026-10-19** · Parte del flujo de todas las entradas por AI. Cumplir la marca al pie
 de la letra es la mitad del trabajo; la otra mitad es que la historia esté bien contada. Una pieza
 on-brand con la historia mal contada es una pieza fallida.
 
@@ -1565,8 +1506,10 @@ pasadas actuando cada rol por separado.
    mal, no el cuerpo.
 2. **Agente de copy — marca, no reescribe.** El texto aprobado no se toca. Su trabajo es señalar:
    qué afirmación viaja sin cifra ni plazo, qué frase es relleno, qué dato no tiene fuente, y qué
-   contradice algo ya decidido — incluida la capa verbal: `.ai/checklist-verbal.md` (definición, AI, vocabulario vetado,
-   frases prohibidas, territorios, diales). Devuelve una lista de observaciones, no una versión nueva. Si el copy
+   contradice algo ya decidido — incluida la capa verbal: `.ai/checklist-verbal.md` (las 8 preguntas de la guía editorial:
+   brief y posicionamiento, tono constructivo, hecho vs. hipótesis vs. ejemplo, cifras con validación humana, permisos de
+   clientes, uso/adopción/espacios/método, adaptación a audiencia y canal, lo que queda por confirmar; más definición, AI y
+   traducciones del playbook). Fuente de la voz: `.ai/verbal/guia-editorial.md`. Devuelve una lista de observaciones, no una versión nueva. Si el copy
    es materia prima y sí hay que escribirlo, lo dice explícito antes de hacerlo.
 3. **Agente de diseño.** Verifica plantilla oficial sin cambios de geometría, slots dentro de
    `max_caracteres`, y `ai/constraints.json`. **Cuando dos reglas oficiales se contradicen, aplicá
@@ -1612,6 +1555,7 @@ selector, qué agregaste que no venía en el material, y qué encontró el crít
 
 ## Changelog
 
+- **3.2** (2026-10-19): el agente de copy corre el checklist verbal rearmado sobre las 8 preguntas de la Guía editorial V2 (`.ai/verbal/guia-editorial.md`), que pasa a ser la fuente de la voz y el tono; las cifras sin validación humana y los conflictos entre fuentes se señalan, no se resuelven.
 - **3.1** (2026-10-19): el agente de copy y el criterio de entrega suman el checklist verbal del Magoya Brand Playbook (octubre 2026).
 - **3.0** (2026-08-19): el eje pasa de textura a **rol narrativo**. El ghost deck (títulos solos, antes de elegir módulos) es un gate de Fase 0. Las cinco reglas de textura se reemplazan por cuatro de argumento, y la textura queda como diagnóstico: era un gate insatisfacible — 0 de 362.880 órdenes del deck de producto pasaban, porque el catálogo no tiene un módulo visual que cargue un método, un journey ni un caso. Se agrega el chequeo de adorno, que es la falla que hizo abandonar al primer usuario y que nada medía. Fase 1b se elimina: era una fase de más.
 - **2.1** (2026-08-19): Fase 1b — componer la secuencia, con el campo `perfil` de cada módulo (lienzo y peso, derivados de la plantilla) y la regla anti-adorno: si el deck queda soso se cambia de módulo, no se decora. Sale de un feedback real: la AI eligió módulos de texto con lienzo blanco y sage uno atrás del otro, cumplió todas las reglas, y cuando le señalaron que estaba soso agregó carátulas decorativas.
@@ -1659,7 +1603,7 @@ Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar
 - **Slides**: margen interior 7% del ancho, escala 126/84/56/42pt sobre 1920px, como máximo un golpe de lima por slide (ver chequeo 5), y el lienzo que traiga la plantilla: blanco, sage `#EEF2EC`, verde profundo o foto.
 - **Redes**: display y cifras al ~70% del ancho. Story 1080×1920 con zona segura de 96px arriba y abajo. Feed 1080×1080.
 - **Logo**: mínimo 90px en pantalla / 24mm impreso; por debajo va el avatar "m". Clearspace = altura de la letra "m". Nunca estirado, rotado, sombreado ni en lima.
-- **Copy**: labels de botón en sentence case; kickers en MAYÚSCULAS con tracking +0.12em. Todo lo demás del texto (definición, vetos, frases prohibidas, AI, territorios, diales) se valida con `.ai/checklist-verbal.md`.
+- **Copy**: labels de botón en sentence case; kickers en MAYÚSCULAS con tracking +0.12em. Todo lo demás del texto (definición, vocabulario de marca, frases prohibidas, AI, datos validados, clientes con permiso) se valida con `.ai/checklist-verbal.md`.
 - **Merch**: siempre foto o render real del producto, nunca ilustración ni esquema vectorial. Sin lima en textil.
 - **Fotos de personas**: siempre B&N con un acento verde o lima.
 
@@ -1671,36 +1615,53 @@ Es una **marca de programa presentada por Magoya, con manual propio** (`ai-en-ca
 
 # ===== CHECKLIST VERBAL (texto) =====
 
-> Fuente: Magoya Brand Playbook (octubre de 2026). Cada chequeo cita la slide de la que sale. Si algo de este archivo difiere del playbook, prevalece el playbook.
+> Fuentes: la voz, el estilo, el vocabulario y la adaptación editorial salen de la Guía editorial de Magoya, "Manual voz y tono MAGOYA V2" (octubre de 2026), en `.ai/verbal/guia-editorial.md`. La identidad, el posicionamiento, los territorios, la oferta, los espacios de actuación y el Método Magoya salen del Magoya Brand Playbook (octubre de 2026), en `.ai/verbal/estrategia.md`. Cada chequeo cita la sección de la guía o la slide del playbook de la que sale. Si este archivo difiere de alguna de las dos, prevalece la fuente.
 
-# Checklist verbal — cualquier texto de Magoya antes de publicar
+# Checklist verbal — cualquier texto de Magoya antes de entregar
 
-Lo corre un modelo o una persona sobre cualquier texto de Magoya: post, deck, web, propuesta, mail, copy de una pieza. Complementa a `.ai/checklist.md` (chequeos visuales): una pieza con texto pasa los dos. Todos tienen que dar **sí**. Si alguno falla, corregí nombrando la regla y volvé a correr la lista completa.
+Lo corre un modelo o una persona sobre cualquier texto de Magoya: post, deck, web, propuesta, mail, copy de una pieza. Complementa a `.ai/checklist.md` (chequeos visuales): una pieza con texto pasa los dos.
 
-Datos de apoyo: `vocabulary.json` (vetos, frases prohibidas, glosario), `.ai/verbal/estrategia.md`, `.ai/verbal/voz.md`, `.ai/verbal/lenguaje.md`, `.ai/verbal/aplicacion.md`.
+Se arma sobre el **control antes de entregar** de la guía (§9): ocho preguntas. Las ocho tienen que dar **sí**. Si una falla, corregí nombrando la regla y volvé a correr la lista completa. Si la respuesta a la 8 es "queda algo por confirmar", el texto no se descarta: se entrega como **borrador pendiente de revisión**, con lo que falta señalado explícitamente.
 
-| # | Chequeo | Cómo se verifica | Falla si… |
+**Jerarquía de fuentes (guía §6).** Identidad, posicionamiento, territorios, propuesta de valor, oferta, espacios y Método Magoya → Brand Playbook (`.ai/verbal/estrategia.md`). Voz, estilo, vocabulario y adaptación editorial → Guía editorial V2 (`.ai/verbal/guia-editorial.md`). Casos, resultados, métricas, clientes, testimonios y datos comerciales → fuentes internas aprobadas, con validación humana (`ai/facts.json`). Objetivo, audiencia, canal, idioma y CTA → el brief, que no puede redefinir la identidad ni autorizar cifras no validadas. **Si las fuentes se contradicen, no se resuelve en silencio: se señala la discrepancia y se pide definición** (guía, propósito y §7).
+
+## 1. Control antes de entregar (guía §9)
+
+| # | Pregunta | Cómo se verifica | Falla si… | Fuente |
+|---|---|---|---|---|
+| 1 | **¿El texto responde al brief y respeta el posicionamiento del playbook?** | Antes de redactar, identificá objetivo, audiencia, canal, idioma, fuente factual y restricciones de confidencialidad. Compará cómo se presenta Magoya contra `.ai/verbal/estrategia.md` y contra los chequeos de la sección 2 | Falta información indispensable y no se preguntó. El brief se usó para redefinir la identidad o para autorizar una cifra no validada. El texto contradice la definición, los territorios, la oferta, los espacios o el método del playbook | Guía §6, §7 y §9.1 |
+| 2 | **¿Es constructivo, respetuoso, sin soberbia y con un punto de vista útil?** | Leé el texto contra los principios de §1 y la personalidad de §3 (Estratega › Responsable › Curiosa › Franca). Como referencia, las frases que el playbook evita están en `forbidden_phrases` de `vocabulary.json` | El mensaje queda en una crítica o en un "no" sin alternativa, aprendizaje, pregunta útil ni vía de mejora. Hay sentencias absolutas o tono de quien ya sabe todo. La franqueza llega sin la ecualización del rasgo responsable ("esto está totalmente mal" en vez de "en nuestra lectura"). Se culpa al usuario cuando el uso falla. Se desacredita a otros de la industria. Ser constructivo no exige ocultar riesgos ni maquillar diagnósticos | Guía §1, §3 (Personalidad); playbook slides 30, 38 y 41 |
+| 3 | **¿Distingue hechos de hipótesis y ejemplos?** | Marcá cada afirmación como hecho validado, interpretación, hipótesis o ejemplo ilustrativo | Una interpretación, hipótesis o tendencia general aparece como hecho o como resultado propio. Un ejemplo hipotético no está rotulado como ficticio. Una intuición se presenta como hecho del sector. Una generalización no se apoya en casos ni indica el alcance de la observación | Guía §2 (Partir de evidencia, Generalizaciones) y §7 |
+| 4 | **¿Toda cifra o resultado real tiene una validación humana identificable?** | Buscá cada cifra en `ai/facts.json`. Un resultado nuevo necesita que alguien del equipo de Magoya lo aporte y lo valide, con fuente, responsable de validación, fecha, definición de la métrica y alcance autorizado (ver `validacion` en `ai/facts.json`) | La cifra fue inventada, estimada o completada por la AI, aunque el cliente sea anónimo. Falta unidad, alcance, período o base de comparación cuando corresponde. Una cifra sin validación viaja como real: va `[PENDIENTE]`, la pieza sale BORRADOR y se pide la validación. Un número hipotético solo entra rotulado como ejemplo ficticio | Guía §2 (Métricas y resultados) y §8; contrato de entrega de `ai/precedencia.json` |
+| 5 | **¿La mención o anonimización de clientes respeta los permisos?** | Mirá cada cliente nombrado y cada detalle de un caso (tipo de compañía, rol, región, cultivo) | Se nombra un cliente, o se usa su logo, una cita o una historia identificable, sin autorización expresa del responsable. Un caso anonimizado permite identificar al cliente por descarte. La anonimización se usó para inventar resultados o publicar información confidencial. Por defecto, los clientes no se nombran | Guía §2 (Casos y confidencialidad), §7 y §8 |
+| 6 | **¿Usa correctamente "uso", "adopción", los espacios de actuación y el Método Magoya?** | Mirá cada aparición de adopción/adoption, de los tres espacios y del método. Ver chequeos 2.3 y 2.4 | "Adopción" aparece como sinónimo de uso. El diagnóstico se llama espacio de actuación. La implementación aparece como un cuarto espacio. Espacios, servicios y método se mezclan como si fueran lo mismo | Guía §3 (Precisión de términos); playbook slides 10, 13, 24–25 y 49 |
+| 7 | **¿El nivel técnico, el tono y el idioma se adaptan a la audiencia y al canal?** | Identificá audiencia, mercado, canal e idioma del brief. Referencias: énfasis por audiencia (`.ai/verbal/voz.md` §11) y diales por país (`voz.md` §9), que son **orientativos**, no parámetros mecánicos | Se simplificó artificialmente un contenido técnico, o se entró en detalle técnico donde la audiencia necesita problema, oportunidad y resultado. El registro no corresponde al canal. El texto está en otro idioma que el pedido, o con terminología que no es natural para ese mercado. Se inventó una traducción de marca no aprobada en vez de consultar. Si el idioma del brief difiere del idioma principal del canal según el playbook (inglés en web, LinkedIn e Instagram, slide 62), se señala, no se resuelve en silencio | Guía §4; playbook slides 44, 46 y 62 |
+| 8 | **¿Queda alguna información por confirmar antes de publicar?** | Listá lo que falta: cifras sin validar, permisos de clientes, conflictos entre fuentes, traducciones no aprobadas | Hay algo por confirmar y no está señalado explícitamente. El pedido involucra decisiones, riesgos o cifras relevantes y el texto no está identificado como borrador pendiente de revisión. Un conflicto entre fuentes, o un brief que contradice una regla obligatoria, se resolvió sin decirlo en vez de señalarlo y proponer una salida | Guía §7 y §9.8 |
+
+## 2. Chequeos del playbook que siguen vigentes bajo la guía
+
+Reglas de identidad, nomenclatura y traducción que la guía mantiene (§3 y §4: "mantener las denominaciones aprobadas en el playbook y las traducciones validadas por mercado").
+
+| # | Chequeo | Falla si… | Fuente |
 |---|---|---|---|
-| 1 | **Definición: consultora hands-on en software y AI para empresas del agro** (4, 57) | Buscá cómo se presenta Magoya. Compará contra `definition` y `one_liner` de `vocabulary.json`. El tagline es **Software and AI for agribusiness** | Magoya se define con otra fórmula: "estrategia y ejecución" en vez de hands-on, "tecnología" en vez de "software y AI", o un descriptor vetado (chequeo 3). O el tagline aparece con otra redacción |
-| 2 | **AI, nunca la sigla en español** (50) | Buscá la palabra suelta `IA` en todo el texto, en cualquier idioma | Aparece `IA` para nombrar la inteligencia artificial. La única excepción es el nombre propio **IA en Campo**, que se escribe siempre así, en cualquier idioma. Falla también si aparece "AI en Campo" o el nombre con minúscula |
-| 3 | **Cero palabras vetadas** (48, 49) | Buscá cada `term` de `vetoed` en `vocabulary.json`: agtech, digital (solo), transformación digital, custom, software factory, dev shop, agencia, tecnología (sola), ayudar, adopción como sinónimo de uso, DIPI, building blocks | Aparece alguno. Se reemplaza por su `use_instead`. No fallan: "soluciones" sin adjetivo genérico, "framework" en contexto técnico y "adopción" como paso dentro del arco de uso (`not_vetoed`) |
-| 4 | **Ninguna frase prohibida** (41) | Buscá los enunciados de `forbidden_phrases` y sus paráfrasis: "lo que tenés no sirve", "hay que hacerlo todo de nuevo", "sólo nosotros podemos resolverlo", "esto se hace así", "transformamos", "esta tecnología es fácil de aplicar", "estos problemas son fáciles de resolver", "el problema es del cliente o del usuario" | El texto dice alguna, o dice lo mismo con otras palabras. La slide las llama "siete frases"; enumera ocho enunciados y se chequean todos |
-| 5 | **"Uso" antes que "adopción"** (13, 31, 49) | Mirá cada aparición de adopción/adoption | "Adopción" está usada como sinónimo de uso, o como meta final. La adopción es el momento en que alguien pasa de no usuario a usuario: una parte del uso, no su sinónimo |
-| 6 | **Peso de los territorios 50/30/20** (37, 60) | En un conjunto de mensajes (un deck, una campaña, el calendario de un mes), contá qué territorio carga cada mensaje: Uso, Integración, Hands-on | La mezcla no se acerca a Uso 50% · Integración 30% · Hands-on 20%, o Uso no es el territorio prioritario. Para un vocero: ~70% su territorio primario y ~30% los otros dos |
-| 7 | **Pruebas, no adjetivos** (31, 36, 53) | Marcá cada afirmación de tamaño, calidad o alcance ("global", "líder", "innovadora", "integral") y buscá su respaldo | Una afirmación viaja sin prueba: clientes, años de relación, geografías, casos en producción, un dato. "Mostrarnos grandes se cae si se apoya en adjetivos". Las cifras salen de `ai/facts.json`; lo que no esté ahí va como `[PENDIENTE]` |
-| 8 | **Diales según el país** (44, 45) | Identificá el mercado del texto y compará contra los cinco diales: Provocación, Densidad técnica, Cercanía, Venta explícita, Marca de origen | El registro no corresponde: default global 4·2·2·4·1; AR 4·2·4·4·2; BR 3·2·2·3·1; US 3·2·2·4·1. El default es Magoya global y el ajuste por país es la excepción. La personalidad no cambia por mercado: si el texto suena a otra marca en otro país, falla |
-| 9 | **Énfasis según la audiencia** (19, 46) | Identificá quién lee: negocio y C-suite, o técnico | Para negocio y C-suite no pesan estratega y curiosa ni va adelante la visión estratégica (si sólo se muestra el build, se desconecta). Para un público técnico no pesan responsable y franca ni hay registro colaborativo (si se entra muy estratégico, suena a consultor genérico). Con el CTO funciona mejor hands-on |
-| 10 | **Inglés como idioma principal en web, LinkedIn e Instagram** (62) | Mirá el canal de destino y el idioma | Una pieza para el website, LinkedIn o Instagram de Magoya sale en otro idioma como principal |
-| 11 | **Responsable → Accountable** (30) | En textos en inglés, buscá cómo se traduce el rasgo "responsable" | Aparece "responsible" para el rasgo. Va **accountable**: hacerse cargo del resultado |
-| 12 | **Distribuidor → dealer** (51) | En textos en inglés, buscá "distributor" | "Distribuidor" (Argentina) se tradujo "distributor". Va **dealer**. "Retailer" es otra figura: el que tiene contacto con el productor |
-| 13 | **Agribusiness es el cliente, no el sector** (52) | En inglés, mirá cómo se nombra al sector | "Agribusiness" nombra al sector. En inglés el sector es **agriculture** o **ag**; agribusiness son las empresas del agro, el cliente |
-| 14 | **Los cuatro rasgos, en orden** (30, 38) | Leé el texto contra Estratega › Responsable › Curiosa › Franca | La franqueza llega sin la ecualización del rasgo responsable ("este está totalmente equivocado" en vez de "en mi opinión"), o el texto busca impresionar en vez de tomar mejores decisiones juntos |
-| 15 | **El usuario nunca es el culpable** (14, 30, 40) | Buscá dónde el texto atribuye un problema de uso | El problema de uso se atribuye al usuario. Cuando el uso falla, la causa se busca en el onboarding, el diseño o la propuesta de valor |
-| 16 | **Lo de IA en Campo queda en IA en Campo** (59, 63) | Mirá si una pieza de Magoya trae contenido básico para el productor | Una pieza de la cuenta de Magoya publica contenido educativo básico, tutoriales o tips para el productor: eso es IA en Campo. Y al revés: IA en Campo no habla desde la cuenta de Magoya como contenido propio |
+| 2.1 | **Definición: consultora hands-on en software y AI para empresas del agro.** Tagline: **Software and AI for agribusiness** (`definition`, `one_liner` y `tagline` de `vocabulary.json`) | Al presentar a Magoya se usa otra fórmula: "estrategia y ejecución" en vez de hands-on, "tecnología" en vez de "software y AI" en la definición o el tagline, o una etiqueta reductora como definición ("software factory", "dev shop", "agtech" como categoría identitaria, "custom" como promesa central, "transformación digital" como definición). Fuera de la definición y el tagline, esas palabras y "tecnología" no están vetadas: se evalúan por su función y contexto | Playbook slides 4, 48 y 57; guía §3 (Palabras y denominaciones, Vocabulario de marca) |
+| 2.2 | **AI, nunca la sigla en español.** Única excepción: el nombre propio **IA en Campo**, que se escribe siempre así, en cualquier idioma | Aparece la sigla en español para nombrar la inteligencia artificial, o "AI en Campo", o el nombre propio con minúscula | Playbook slide 50; guía §4 (Idiomas) |
+| 2.3 | **"Uso" antes que "adopción".** La adopción es el momento en que alguien pasa de no usuario a usuario: una parte del uso, no su sinónimo | "Adopción" está usada como sinónimo de uso o como meta final | Playbook slides 13, 31 y 49; guía §1 (Uso y valor) y §3 |
+| 2.4 | **Espacios de actuación y Método Magoya.** Tres espacios: Estrategia, Diseño y desarrollo, Adopción y uso. El método (Discovery, ideación, planificación, ejecución, medición y evolución) atraviesa los tres | El diagnóstico aparece como espacio (es parte del método). La implementación aparece como espacio aparte (vive en Diseño y desarrollo). Se usa "DIPI" por el método. Ante la duda, se remite a la explicación completa del playbook | Playbook slides 10, 24–25 y 49; guía §3 (Precisión de términos) |
+| 2.5 | **Responsable → Accountable.** En inglés, el rasgo se traduce *accountable* | Aparece "responsible" para el rasgo | Playbook slide 30; guía §3 (Personalidad) |
+| 2.6 | **Distribuidor → dealer.** En inglés, "distribuidor" (Argentina) es *dealer* | "Distribuidor" se tradujo "distributor". *Retailer* es otra figura: el que tiene contacto con el productor | Playbook slide 51 |
+| 2.7 | **Agribusiness es el cliente, no el sector.** En inglés el sector es *agriculture* o *ag* | "Agribusiness" nombra al sector | Playbook slide 52 |
+| 2.8 | **Ninguna frase prohibida.** Las frases de "lo que Magoya no dice" del playbook (`forbidden_phrases` en `vocabulary.json`): «Lo que tenés no sirve», «Hay que hacerlo todo de nuevo», «Sólo nosotros podemos resolverlo», «Esto se hace así», «Transformamos», «Esta tecnología es fácil de aplicar» / «Estos problemas son fáciles de resolver», «El problema es del cliente o del usuario». La guía no las flexibiliza | El texto usa alguna, o una paráfrasis con el mismo sentido | Playbook, slide 41 |
 
-## Glosario rápido de chequeo
+## 3. Nota de planificación (no se chequea texto por texto)
 
-- Vetos, reemplazos y frases prohibidas: `vocabulary.json` → `vetoed`, `not_vetoed`, `forbidden_phrases`.
-- Términos por mercado (ES · EN · PT): `vocabulary.json` → `glossary`.
-- Diales y énfasis por audiencia: `.ai/verbal/voz.md`, secciones 9 y 11.
-- Territorios y statements: `.ai/verbal/estrategia.md`, sección 8.
+- **Territorios Uso 50% · Integración 30% · Hands-on 20%** (playbook slide 37) y **70% territorio primario · 30% los otros dos para cada vocero** (slide 60) son guías de planificación de contenidos: se miran sobre un calendario, una campaña o el conjunto de piezas de un vocero, no sobre cada texto. "No imponer porcentajes editoriales por pieza" y "no son restricciones que deban forzarse en cada texto" (guía §4, Canales y Voceros).
+- **Diales por país** (playbook slide 44): referencia orientativa para ajustar cercanía, registro, nivel técnico e intensidad comercial, no parámetros mecánicos (guía §4). La identidad no cambia por país.
+
+## Datos de apoyo
+
+- Voz, estilo, adaptación e instrucciones operativas: `.ai/verbal/guia-editorial.md` (Parte II, §6–§9, escrita para agentes de AI).
+- Definición, espacios, oferta y método: `.ai/verbal/estrategia.md`, secciones 1, 5, 6 y 11.
+- Vocabulario, glosario ES · EN · PT y frases que el playbook evita: `vocabulary.json` (leer su campo `rule`: las etiquetas listadas no están vetadas universalmente).
+- Rasgos, diales y énfasis por audiencia: `.ai/verbal/voz.md`. Voceros, canales e idioma: `.ai/verbal/aplicacion.md`.
+- Cifras aprobadas y contrato de validación: `ai/facts.json`. Qué hacer con un hueco o una contradicción: `ai/precedencia.json`.

@@ -1,6 +1,6 @@
 # Método de trabajo — obligatorio para cualquier pieza con contenido
 
-**Versión 3.1 · 2026-10-19** · Parte del flujo de todas las entradas por AI. Cumplir la marca al pie
+**Versión 3.2 · 2026-10-19** · Parte del flujo de todas las entradas por AI. Cumplir la marca al pie
 de la letra es la mitad del trabajo; la otra mitad es que la historia esté bien contada. Una pieza
 on-brand con la historia mal contada es una pieza fallida.
 
@@ -78,8 +78,10 @@ pasadas actuando cada rol por separado.
    mal, no el cuerpo.
 2. **Agente de copy — marca, no reescribe.** El texto aprobado no se toca. Su trabajo es señalar:
    qué afirmación viaja sin cifra ni plazo, qué frase es relleno, qué dato no tiene fuente, y qué
-   contradice algo ya decidido — incluida la capa verbal: `.ai/checklist-verbal.md` (definición, AI, vocabulario vetado,
-   frases prohibidas, territorios, diales). Devuelve una lista de observaciones, no una versión nueva. Si el copy
+   contradice algo ya decidido — incluida la capa verbal: `.ai/checklist-verbal.md` (las 8 preguntas de la guía editorial:
+   brief y posicionamiento, tono constructivo, hecho vs. hipótesis vs. ejemplo, cifras con validación humana, permisos de
+   clientes, uso/adopción/espacios/método, adaptación a audiencia y canal, lo que queda por confirmar; más definición, AI y
+   traducciones del playbook). Fuente de la voz: `.ai/verbal/guia-editorial.md`. Devuelve una lista de observaciones, no una versión nueva. Si el copy
    es materia prima y sí hay que escribirlo, lo dice explícito antes de hacerlo.
 3. **Agente de diseño.** Verifica plantilla oficial sin cambios de geometría, slots dentro de
    `max_caracteres`, y `ai/constraints.json`. **Cuando dos reglas oficiales se contradicen, aplicá
@@ -125,6 +127,7 @@ selector, qué agregaste que no venía en el material, y qué encontró el crít
 
 ## Changelog
 
+- **3.2** (2026-10-19): el agente de copy corre el checklist verbal rearmado sobre las 8 preguntas de la Guía editorial V2 (`.ai/verbal/guia-editorial.md`), que pasa a ser la fuente de la voz y el tono; las cifras sin validación humana y los conflictos entre fuentes se señalan, no se resuelven.
 - **3.1** (2026-10-19): el agente de copy y el criterio de entrega suman el checklist verbal del Magoya Brand Playbook (octubre 2026).
 - **3.0** (2026-08-19): el eje pasa de textura a **rol narrativo**. El ghost deck (títulos solos, antes de elegir módulos) es un gate de Fase 0. Las cinco reglas de textura se reemplazan por cuatro de argumento, y la textura queda como diagnóstico: era un gate insatisfacible — 0 de 362.880 órdenes del deck de producto pasaban, porque el catálogo no tiene un módulo visual que cargue un método, un journey ni un caso. Se agrega el chequeo de adorno, que es la falla que hizo abandonar al primer usuario y que nada medía. Fase 1b se elimina: era una fase de más.
 - **2.1** (2026-08-19): Fase 1b — componer la secuencia, con el campo `perfil` de cada módulo (lienzo y peso, derivados de la plantilla) y la regla anti-adorno: si el deck queda soso se cambia de módulo, no se decora. Sale de un feedback real: la AI eligió módulos de texto con lienzo blanco y sage uno atrás del otro, cumplió todas las reglas, y cuando le señalaron que estaba soso agregó carátulas decorativas.

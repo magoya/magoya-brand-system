@@ -2,7 +2,7 @@
 
 Sistema de marca oficial de **Magoya**, consultora hands-on en software y AI para empresas del agro. Una sola fuente de verdad, consumible por personas y por AIs.
 
-**v2.0 (octubre de 2026):** la estructura sale del Magoya Brand Playbook. Las partes A–D (estrategia, voz, lenguaje, aplicación) salen del playbook, que manda hasta que esté publicado acá. E–F (identidad visual, piezas) se conservan del v1.2 hasta revisarlas.
+**v2.0 (octubre de 2026):** la estructura sale del Magoya Brand Playbook. Las partes A–D (estrategia, voz, lenguaje, aplicación) salen del playbook; desde la v2.1, la voz y el tono aplicados salen de la Guía editorial de voz y tono V2 (`.ai/verbal/guia-editorial.md`). E–F (identidad visual, piezas) se conservan del v1.2 hasta revisarlas.
 
 **Live:** https://brand.magoya.com/
 
@@ -16,8 +16,8 @@ Todas las páginas comparten la misma navegación (`nav.css`): 0 · Inicio, A–
 |---|---|---|
 | 0 · Inicio | [`index.html`](index.html) | Qué es Magoya en una línea, mapa de las 9 partes, qué documento manda, versiones, entrada para AI y el moodboard visual |
 | A · Estrategia | [`estrategia.html`](estrategia.html) | Quiénes somos, propósito, diferenciales, propuesta de valor, oferta, boilerplate, territorios y Usage Loop, audiencias, razones para creer, Método Magoya, valores, pilares, promesa, personalidad, arquitectura, tagline |
-| B · Voz | [`voz.html`](voz.html) | Qué se construye primero, objetivos por mercado, postura, contra qué lucha, lo que no dice, rasgos, ejes, diales, localización, énfasis por audiencia |
-| C · Lenguaje | [`lenguaje.html`](lenguaje.html) | Vocabulario vetado, AI (no IA), glosario ES/EN/PT, cómo suena Magoya, reglas de oro verbales |
+| B · Voz | [`voz.html`](voz.html) | Desde la Guía editorial V2: la voz en la práctica, personalidad, ejes, principios de expresión, cómo construimos mensajes, adaptación por audiencia, mercado, canal y vocero, ejemplos. Del playbook: qué se construye primero, objetivos por mercado, postura, contra qué lucha, lo que no dice |
+| C · Lenguaje | [`lenguaje.html`](lenguaje.html) | Estilo y lenguaje, vocabulario de marca, AI (no IA), glosario ES/EN/PT, cómo suena Magoya, reglas de oro verbales |
 | D · Aplicación | [`aplicacion.html`](aplicacion.html) | Capas de la marca, voceros y territorios, canales e idioma, focos de contenido y producción |
 | E · Identidad visual | [`brand-book.html`](brand-book.html) · [`icons.html`](icons.html) | Logo, color, tipografía, fotografía, ilustración, convivencia, iconografía, componentes, reglas de oro visuales · librería de 58 íconos |
 | F · Piezas y plantillas | [`piezas.html`](piezas.html) · [`slides.html`](slides.html) · [`plantillas.html`](plantillas.html) · [`pieces.html`](pieces.html) · [`library.html`](library.html) · [`logos.html`](logos.html) | Resumen + aplicaciones, merch y papelería · 41 módulos de slide · plantillas listas · comerciales · assets · logos de clientes |

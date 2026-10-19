@@ -286,13 +286,17 @@ print(_d.stdout.strip().splitlines()[-1] if _d.stdout.strip() else _d.stderr.str
 parts = []
 parts.append(open('llms.txt').read())
 parts.append('\n\n# ===== BRAND.md (doctrina completa) =====\n\n' + open('BRAND.md').read())
-# capa verbal del Brand Playbook (oct 2026): A-D en Markdown + vocabulario
-for _titulo, _f in [('ESTRATEGIA (capa verbal A · .ai/verbal/estrategia.md)', '.ai/verbal/estrategia.md'),
-                    ('VOZ (capa verbal B · .ai/verbal/voz.md)', '.ai/verbal/voz.md'),
-                    ('LENGUAJE (capa verbal C · .ai/verbal/lenguaje.md)', '.ai/verbal/lenguaje.md'),
+# capa verbal: Guía editorial V2 (voz y tono + instrucciones para AI) y Brand Playbook (oct 2026): A-D en Markdown + vocabulario
+for _titulo, _f in [('GUIA EDITORIAL (voz y tono + instrucciones operativas para AI · .ai/verbal/guia-editorial.md)', '.ai/verbal/guia-editorial.md'),
+                    ('ESTRATEGIA (capa verbal A · .ai/verbal/estrategia.md)', '.ai/verbal/estrategia.md'),
                     ('APLICACION (capa verbal D · .ai/verbal/aplicacion.md)', '.ai/verbal/aplicacion.md'),
                     ('VOCABULARIO (vocabulary.json)', 'vocabulary.json')]:
     parts.append('\n\n# ===== ' + _titulo + ' =====\n\n' + open(_f).read())
+# voz.md y lenguaje.md quedan fuera del fetch único para no pasar ~200KB (algunas AIs truncan):
+# su voz ya está en la guía editorial y su vocabulario y glosario en vocabulary.json.
+parts.append('\n\n# ===== VOZ Y LENGUAJE (detalle) =====\n\nEl detalle del playbook (objetivos por mercado, diales, '
+             'postura, lo que Magoya no dice, glosario completo y ejemplos) está en '
+             'https://brand.magoya.com/.ai/verbal/voz.md y https://brand.magoya.com/.ai/verbal/lenguaje.md\n')
 parts.append('\n\n# ===== CONSTRAINTS (minimos/maximos/clearspace/safe areas) =====\n\n' + open('ai/constraints.json').read())
 parts.append('\n\n# ===== SELECTOR DE MODULOS (que queres contar -> que plantilla) =====\n\n' + open('ai/selector.json').read())
 tpl = json.load(open('ai/templates/index.json'))
