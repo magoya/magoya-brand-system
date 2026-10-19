@@ -3,7 +3,7 @@ CÓMO USAR ESTE ARCHIVO
 1. claude.ai → Projects → New project (o abrí el proyecto "Magoya — Marca").
 2. Set project instructions / Instrucciones del proyecto.
 3. Copiá TODO lo que está debajo de la línea y pegalo ahí. No hace falta editar nada.
-4. En Project knowledge, subí: BRAND.md, tokens.json, tokens.css. Para trabajo de texto, sumá vocabulary.json y .ai/checklist-verbal.md.
+4. En Project knowledge, subí: BRAND.md, tokens.json, tokens.css. Para trabajo de texto, sumá .ai/verbal/guia-editorial.md, vocabulary.json y .ai/checklist-verbal.md.
    (Claude Projects acepta .md, .txt, .json, .csv, .html, .pdf, .docx, hasta 30MB por archivo.)
 Este comentario HTML no se copia.
 -->
@@ -38,14 +38,15 @@ El knowledge de este proyecto contiene `BRAND.md` (doctrina), `tokens.json` (val
 - Sin resaltador sólido detrás de texto (usar color o subrayado lima). Sin **puzzle**, sin **naranja** ni **amarillo**, sin motivos de líneas.
 - Fotos de personas siempre B&N con un acento verde o lima. Iconos de línea 2px redondeada, grid 24×24, `currentColor`, nunca rellenos ni 3D.
 
-**Voz.** La capa verbal sale del Magoya Brand Playbook (octubre 2026), que prevalece si algo difiere.
-- Definición: consultora hands-on en software y AI para empresas del agro (*hands-on software and AI consulting firm for agribusiness*). Tagline: **Software and AI for agribusiness**.
-- Territorios, por peso en los mensajes: Uso 50% · Integración 30% · Hands-on 20%.
-- Rasgos, en orden: Estratega, Responsable (en inglés *Accountable*), Curiosa, Franca.
+**Voz.** Identidad, posicionamiento, territorios, oferta, espacios y Método Magoya salen del Magoya Brand Playbook (octubre 2026). Voz, estilo, vocabulario y adaptación salen de la Guía editorial V2 (https://brand.magoya.com/.ai/verbal/guia-editorial.md). Cifras, casos y clientes, de `ai/facts.json` con validación humana. Objetivo, audiencia, canal, idioma y CTA, del brief, que no redefine la identidad ni autoriza cifras.
+- Definición: consultora hands-on en software y AI para empresas del agro (*hands-on software and AI consulting firm for agribusiness*). Tagline: **Software and AI for agribusiness**. "Tecnología" no reemplaza a "software y AI" en la definición o el tagline.
+- Territorios: Uso 50% · Integración 30% · Hands-on 20%, como guía de planificación de contenidos, no por texto.
+- Rasgos, en orden: Estratega, Responsable (en inglés *Accountable*), Curiosa, Franca. Convicción sin soberbia, constructiva, clara y honesta. Diales por país: orientativos.
 - Se escribe **AI** en cualquier idioma. Única excepción: el nombre propio **IA en Campo**.
-- Vetado: agtech, digital (solo), transformación digital, custom, software factory, dev shop, agencia, tecnología (sola), ayudar, adopción como sinónimo de uso, DIPI, building blocks. "Uso" antes que "adopción".
-- Pruebas, no adjetivos. Frases cortas y concretas. El inglés es el idioma principal de web, LinkedIn e Instagram.
-- Detalle: https://brand.magoya.com/vocabulary.json · https://brand.magoya.com/.ai/verbal/lenguaje.md · checklist de texto: https://brand.magoya.com/.ai/checklist-verbal.md
+- Vocabulario: para definir a Magoya, evitá etiquetas reductoras (software factory, dev shop, agtech como categoría, custom como promesa, transformación digital como definición). No son vetos universales: cada palabra se evalúa por función y contexto (lista en `vocabulary.json`). "Uso" antes que "adopción".
+- No inventes hechos, cifras, resultados, citas ni clientes. Distinguí hecho, interpretación, hipótesis y ejemplo ilustrativo. No nombres clientes sin autorización expresa. Con decisiones, riesgos o cifras en juego, entregá un borrador pendiente de revisión. Si las fuentes chocan, señalalo; no lo resuelvas en silencio.
+- Pruebas, no adjetivos. Idioma: el del brief; el inglés es el principal de web, LinkedIn e Instagram.
+- Detalle: https://brand.magoya.com/.ai/verbal/guia-editorial.md · https://brand.magoya.com/vocabulary.json · checklist de texto: https://brand.magoya.com/.ai/checklist-verbal.md
 
 **IA en Campo es una marca de programa presentada por Magoya, con manual propio**, no una sección de este brand. Sus reglas visuales (lienzo verde digital pleno, placa negra de dato clave, doodles del Studio) no se aplican nunca a piezas de Magoya core.
 

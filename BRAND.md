@@ -8,19 +8,23 @@
 
 ## 1. Qué es Magoya
 
-> **Capa verbal: Magoya Brand Playbook (octubre de 2026).** Esta sección resume lo esencial; el detalle vive en `estrategia.html`, `voz.html`, `lenguaje.html` y `aplicacion.html`, y en su versión machine-readable: [`.ai/verbal/estrategia.md`](.ai/verbal/estrategia.md), [`.ai/verbal/voz.md`](.ai/verbal/voz.md), [`.ai/verbal/lenguaje.md`](.ai/verbal/lenguaje.md), [`.ai/verbal/aplicacion.md`](.ai/verbal/aplicacion.md) y [`vocabulary.json`](vocabulary.json). Antes de publicar un texto: [`.ai/checklist-verbal.md`](.ai/checklist-verbal.md). Si algo de acá difiere del playbook, prevalece el playbook. La capa visual (§2–§14) se mantiene hasta su revisión.
+> **Capa verbal: Magoya Brand Playbook y Guía editorial V2 (octubre de 2026).** La identidad, el posicionamiento, los territorios, la oferta, los espacios y el Método Magoya salen del playbook; la voz, el estilo, el vocabulario y la adaptación editorial salen de la Guía editorial ("Manual voz y tono MAGOYA V2"), en [`.ai/verbal/guia-editorial.md`](.ai/verbal/guia-editorial.md), cuya Parte II son las instrucciones operativas para agentes de AI. Esta sección resume lo esencial; el detalle vive en `estrategia.html`, `voz.html`, `lenguaje.html` y `aplicacion.html`, y en su versión machine-readable: [`.ai/verbal/estrategia.md`](.ai/verbal/estrategia.md), [`.ai/verbal/voz.md`](.ai/verbal/voz.md), [`.ai/verbal/lenguaje.md`](.ai/verbal/lenguaje.md), [`.ai/verbal/aplicacion.md`](.ai/verbal/aplicacion.md) y [`vocabulary.json`](vocabulary.json). Antes de entregar un texto: [`.ai/checklist-verbal.md`](.ai/checklist-verbal.md). Si algo de acá difiere de la fuente que corresponde, prevalece la fuente. La capa visual (§2–§14) se mantiene hasta su revisión.
 
-**Definición.** Magoya es una consultora hands-on en software y AI para empresas del agro. *Magoya is a hands-on software and AI consulting firm for agribusiness.* "Estrategia y ejecución" no se usa para definir a Magoya: lo reemplaza **hands-on**; y "tecnología" no reemplaza a "software y AI".
+**Definición.** Magoya es una consultora hands-on en software y AI para empresas del agro. *Magoya is a hands-on software and AI consulting firm for agribusiness.* "Estrategia y ejecución" no se usa para definir a Magoya: lo reemplaza **hands-on**; y "tecnología" no reemplaza a "software y AI" en la definición o el tagline (en otros contextos puede usarse).
 
 **Tagline.** **Software and AI for agribusiness.**
 
-**Territorios de posicionamiento, por peso en los mensajes:** **Uso 50%** ("El éxito no es llegar al lanzamiento del producto. El éxito es que ese producto se use.") · **Integración 30%** ("Nuestra primera opción es construir sobre lo que ya existe.") · **Hands-on 20%** ("Ejecutamos lo que proponemos.").
+**Territorios de posicionamiento, por peso en los mensajes:** **Uso 50%** ("El éxito no es llegar al lanzamiento del producto. El éxito es que ese producto se use.") · **Integración 30%** ("Nuestra primera opción es construir sobre lo que ya existe.") · **Hands-on 20%** ("Ejecutamos lo que proponemos."). El 50/30/20, y el 70/30 de cada vocero, son guías de planificación de contenidos, no un chequeo de cada texto.
 
 **Personalidad:** cuatro rasgos, en este orden, y cada uno ecualiza al siguiente: **Estratega · Responsable · Curiosa · Franca**. En inglés, Responsable se traduce *Accountable*, no *responsible*.
 
 **AI.** Se escribe **AI**, en inglés, para nombrar la inteligencia artificial en cualquier idioma del texto. Única excepción: **IA en Campo**, nombre propio del programa, que se escribe siempre así (nunca "AI en Campo").
 
-**Vocabulario vetado:** agtech · digital (solo) · transformación digital · custom · software factory · dev shop · agencia · tecnología (sola) · ayudar · adopción como sinónimo de uso · DIPI · building blocks. Decimos "uso" antes que "adopción". Reemplazos y glosario ES · EN · PT en [`vocabulary.json`](vocabulary.json).
+**Voz.** Convicción sin soberbia, constructiva, como partner, clara y honesta, centrada en el uso y el valor. Los diales por país son orientativos: la identidad no cambia por mercado.
+
+**Vocabulario.** Se evitan las etiquetas reductoras para definir a Magoya (software factory, dev shop, agtech como categoría identitaria, custom como promesa central, transformación digital como definición); no son palabras universalmente vetadas, se evalúan por función y contexto. La lista del playbook (agtech · digital (solo) · transformación digital · custom · software factory · dev shop · agencia · tecnología (sola) · ayudar · adopción como sinónimo de uso · DIPI · building blocks), con sus reemplazos y el glosario ES · EN · PT, está en [`vocabulary.json`](vocabulary.json). Decimos "uso" antes que "adopción".
+
+**Reglas operativas para AI (guía, Parte II).** No se inventan hechos, cifras, resultados, citas ni clientes. Toda métrica real la valida alguien del equipo (fuente, responsable, fecha, definición y alcance) y vive en [`ai/facts.json`](ai/facts.json). Los clientes no se nombran por defecto. Se distingue hecho validado, interpretación, hipótesis y ejemplo ilustrativo. Si hay decisiones, riesgos o cifras en juego, se entrega un borrador pendiente de revisión. Un conflicto entre fuentes se señala, no se resuelve en silencio.
 
 **Idioma.** El inglés es el idioma principal del website, de LinkedIn y de Instagram. La personalidad es la misma en Argentina, Brasil y Estados Unidos; lo que cambia por mercado es el vocabulario, el estadio de construcción y el énfasis por audiencia.
 

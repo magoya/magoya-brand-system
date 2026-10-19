@@ -1,6 +1,6 @@
 # Magoya Brand — entrada para GitHub Copilot
 
-**Versión 1.3 · 2026-10-19** · Punto de entrada de la marca Magoya para Copilot. Se versiona por separado de las otras AIs (changelog al pie).
+**Versión 1.4 · 2026-10-19** · Punto de entrada de la marca Magoya para Copilot. Se versiona por separado de las otras AIs (changelog al pie).
 
 ## Flujo (en este orden)
 
@@ -8,7 +8,7 @@
 2. **Tokens en el código**: bajá https://brand.magoya.com/tokens.css al proyecto — Copilot autocompleta con las custom properties que ve en el árbol.
 3. **Doctrina completa**: https://brand.magoya.com/BRAND.md (Copilot Chat puede leerla si se la pegás o si está en el workspace).
 4. **Assets**: https://brand.magoya.com/ai/assets.json — bajá al repo los SVGs que la UI necesite.
-5. **Copy de la UI**: bajá al repo https://brand.magoya.com/vocabulary.json y [checklist-verbal.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist-verbal.md) — capa verbal del Magoya Brand Playbook (octubre 2026): definición, AI en cualquier idioma (salvo el nombre propio IA en Campo), vocabulario vetado, glosario ES/EN/PT. El preset del punto 1 ya trae lo esencial.
+5. **Copy de la UI**: bajá al repo [guia-editorial.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/guia-editorial.md), https://brand.magoya.com/vocabulary.json y [checklist-verbal.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist-verbal.md) — la voz y el vocabulario salen de la Guía editorial V2 (sin cifras ni clientes inventados, vocabulario evaluado por contexto); la definición, AI en cualquier idioma (salvo el nombre propio IA en Campo) y el glosario ES/EN/PT, del Magoya Brand Playbook (octubre 2026). El preset del punto 1 ya trae lo esencial.
 
 ## Qué podés hacer al pie de la letra (hoy)
 
@@ -28,6 +28,8 @@ Magoya no publica una skill**: el canal sigue siendo el preset de instrucciones 
 la advertencia de siempre: una URL escrita en un archivo de instrucciones **no se fetchea sola**.
 
 ## Changelog
+
+- **1.4** (2026-10-19): Guía editorial V2 ("Manual voz y tono MAGOYA V2") como fuente de la voz y el tono: .ai/verbal/guia-editorial.md en el flujo y en la lista plana, con sus reglas operativas (sin cifras inventadas, validación humana, clientes no nombrados por defecto, borrador pendiente de revisión, conflictos señalados). El checklist verbal se rearma sobre sus 8 preguntas.
 
 - **1.3** (2026-10-19): capa verbal del Magoya Brand Playbook (octubre 2026) — vocabulary.json, .ai/checklist-verbal.md y .ai/verbal/ en el flujo y en la lista plana. Se escribe AI, no la sigla en español (salvo IA en Campo).
 

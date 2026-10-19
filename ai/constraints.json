@@ -74,7 +74,7 @@
   "kickers": "MAYÚSCULAS, tracking +0.12em",
   "labels_de_boton": "sentence case",
   "nomenclatura_ia": "SIEMPRE 'AI' para nombrar la inteligencia artificial, en cualquier idioma del texto ('Software y AI', 'capacidades de AI', 'Integrar con AI'). Única excepción: el nombre propio del programa 'IA en Campo', que se escribe siempre así, en cualquier idioma, y nunca 'AI en Campo'. Fuente: Magoya Brand Playbook, oct 2026, slide 50. Los nombres de archivo y las URLs del sistema siguen en 'ai-' (ai-en-campo.html, /ai/): eso NO se copia al texto de la pieza.",
-  "reglas_verbales": "el resto de las reglas de texto (definición, vocabulario vetado, frases prohibidas, territorios 50/30/20, diales por país, glosario ES · EN · PT) está en vocabulary.json y .ai/verbal/ — se valida con .ai/checklist-verbal.md"
+  "reglas_verbales": "el resto de las reglas de texto (definición, vocabulario de marca, frases prohibidas, glosario ES · EN · PT) está en vocabulary.json y .ai/verbal/ — se valida con .ai/checklist-verbal.md. Territorios 50/30/20 y diales por país son guías de planificación y referencia orientativa, no chequeos por texto (guía editorial V2, §4)"
  },
  "verificacion": "los 17 chequeos de .ai/checklist.md y, si la pieza tiene texto, .ai/checklist-verbal.md — este archivo agrega los números; los checklists dicen cómo auditarlos",
  "pendiente_de_definir": [

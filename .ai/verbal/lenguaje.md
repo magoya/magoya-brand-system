@@ -1,35 +1,45 @@
-> Fuente: Magoya Brand Playbook (octubre de 2026), Parte 4 (slides 47–54). Si algo de este archivo difiere del playbook, prevalece el playbook.
+> **Voz, estilo y vocabulario: la fuente es la Guía editorial de Magoya ("Manual voz y tono MAGOYA V2", octubre de 2026), en `.ai/verbal/guia-editorial.md`.** Este archivo resume la Parte 4 del Magoya Brand Playbook (octubre de 2026, slides 47–54): denominaciones, regla AI y glosario por mercado, que la guía mantiene. Para el uso del vocabulario, si algo de acá difiere de la guía, prevalece la guía; para las denominaciones aprobadas y las traducciones, prevalece el playbook.
 
 # Magoya · Lenguaje (capa verbal C)
 
 Qué palabras usa Magoya, cuáles no, y cómo nombra al agro en cada mercado. Página navegable: `lenguaje.html`. La misma información en JSON: `vocabulary.json`.
 
-## 1. Vocabulario vetado (slides 48–49)
+## 0. Estilo y lenguaje (Guía editorial V2, resumen)
 
-Magoya no usa estas palabras.
+Resumen de las reglas de lenguaje de la guía. El texto completo, con el peso de cada regla, está en `.ai/verbal/guia-editorial.md` §3 y §4.
 
-| No escribir | Por qué | Escribir en su lugar |
+- **Palabras y denominaciones [obligatorio cuando se define a Magoya].** Para presentar a Magoya, la definición oficial del playbook: consultora hands-on en software y AI para empresas del agro. "Tecnología" no sustituye a "software y AI" en la definición o el tagline, pero puede emplearse en otros contextos.
+- **Vocabulario de marca [principio].** Evitar etiquetas reductoras para definirnos. No son palabras universalmente vetadas: evaluar su función y contexto. Mantener las denominaciones aprobadas en el playbook y las traducciones validadas por mercado.
+- **Precisión de términos [principio].** Adopción no es sinónimo de uso. El diagnóstico no es un espacio de actuación y la implementación no es un cuarto espacio. Espacios de actuación, servicios y Método Magoya son conceptos distintos (ver `.ai/verbal/estrategia.md` §5, §6 y §11).
+- **Estilo [recomendación].** Frases claras, verbos concretos, párrafos legibles. La brevedad ayuda, pero no es un límite rígido de palabras. Evitar fórmulas repetitivas ("no es X, es Y", tríadas vacías, preguntas retóricas genéricas, guiones largos, frases de consultoría intercambiables).
+- **Idiomas [obligatorio].** Escribir en el idioma solicitado, con terminología natural para el mercado. Preservar nombres propios y denominaciones oficiales, como "AI" e "IA en Campo". Ante traducciones no aprobadas, consultar en vez de inventar equivalencias de marca.
+
+## 1. Vocabulario a evitar (slides 48–49, leído según la guía editorial §3)
+
+**Cómo se lee esta lista.** El playbook la presenta como vocabulario vetado. La guía editorial (§3, Vocabulario de marca) la precisa: hay que evitar etiquetas reductoras **para definir a Magoya**, como "software factory", "dev shop", "agtech" como categoría identitaria, "custom" como promesa central o "transformación digital" como definición, pero **no son palabras universalmente vetadas**: cada una se evalúa por su función y su contexto. Y "tecnología" no sustituye a "software y AI" en la definición o el tagline, pero puede usarse en otros contextos (guía §3). El "por qué" y el reemplazo de cada fila siguen siendo la referencia para decidir.
+
+| Evitar (sobre todo para definir a Magoya) | Por qué | Preferir |
 |---|---|---|
 | agtech | No es como Magoya se describe. Suena a startup de producto, no a consultora. | consultora hands-on · hands-on consultant |
 | digital (solo) | Suena viejo, de otra época. Con contexto puede aparecer: «digital product development» es aceptable. Nunca como descriptor de marca ni como claim. | software · software product · software development |
 | transformación digital | Concepto sobrevendido. La transformación digital ya ocurrió, en mejor o peor forma, en cualquier empresa: usarlo suena a que todavía no pasó. | Hablamos de resultados y de lo que se resuelve concretamente. |
 | custom | Es una palabra que dispara "build from scratch" en el comprador enterprise: suena caro, lento, riesgoso. | Si lo tenemos que usar, decimos "diseñado para resolver el desafío". |
 | software factory · dev shop · agencia | Los tres reducen a Magoya a un ejecutor sin estrategia. | consultora hands-on |
-| tecnología (sola) | Es un concepto demasiado amplio que en agro incluye maquinaria, biológicos e IoT. | software |
+| tecnología (sola) | Es un concepto demasiado amplio que en agro incluye maquinaria, biológicos e IoT. No sustituye a "software y AI" en la definición o el tagline; en otros contextos puede emplearse (guía §3). | software · software y AI |
 | ayudar | Implica una relación asimétrica, de quien sabe hacia quien no sabe. Magoya hace con el otro, no por el otro. | trabajar con · colaborar · hacer junto a · acompañar |
 | adopción (como sinónimo de uso) | Magoya define "uso" como el todo: adopción, uso frecuente y recurrencia. | uso · y que la adopción quede como sub-etapa |
 | DIPI | El nombre interno que se le daba a la metodología. Era sólo el Discovery dentro del método. | Método Magoya para el proceso completo · Discovery para la primera fase |
 | building blocks | Sugiere que Magoya reutiliza componentes de un cliente en otro, lo que abre un conflicto de propiedad intelectual. | Sin reemplazo definido. |
 
-Relacionado (slide 4): "tecnología" no reemplaza a "software y AI", y "estrategia y ejecución" no define a Magoya (lo reemplaza hands-on). Slide 31: evitamos "soluciones integrales", "transformación" y "disrupción".
+Relacionado (slide 4): "tecnología" no reemplaza a "software y AI" en la definición, y "estrategia y ejecución" no define a Magoya (lo reemplaza hands-on). Slide 31: evitamos "soluciones integrales", "transformación" y "disrupción". Para presentar a Magoya, la definición oficial es obligatoria (guía §3, Palabras y denominaciones).
 
-### No quedaron vetados (slide 49)
+### Palabras que sí usamos, con criterio (slide 49)
 
 | Término | Regla |
 |---|---|
 | soluciones · solutions | Usar con criterio, y nunca combinado con adjetivos genéricos como "integrales" o "innovadoras". |
-| framework · metodología | No vetados. "Método" es la palabra preferida, pero framework es aceptable en contextos técnicos. |
-| adopción, en su contexto correcto | No vetada si se usa para nombrar específicamente el paso de adopción dentro del arco de uso. |
+| framework · metodología | Se usan. "Método" es la palabra preferida, pero framework es aceptable en contextos técnicos. |
+| adopción, en su contexto correcto | Se usa para nombrar específicamente el paso de adopción dentro del arco de uso. |
 
 ## 2. AI, en inglés (slide 50)
 
@@ -68,10 +78,10 @@ Relacionado (slide 4): "tecnología" no reemplaza a "software y AI", y "estrateg
 
 | Tema | Así no | Así sí | Por qué |
 |---|---|---|---|
-| Cómo trabajamos con clientes | «Ayudamos a nuestros clientes a transformar sus negocios.» | «Trabajamos con nuestros clientes para resolver problemas concretos utilizando software.» | «Ayudar» está vetado y «transformar» solo queda reservado para el propósito en forma interna. |
+| Cómo trabajamos con clientes | «Ayudamos a nuestros clientes a transformar sus negocios.» | «Trabajamos con nuestros clientes para resolver problemas concretos utilizando software.» | «Ayudar» plantea una relación asimétrica y «transformar» solo queda reservado para el propósito en forma interna. |
 | Alcance del trabajo | «Lideramos la transformación» | «Trabajamos desde la definición del problema hasta la ejecución de la solución.» | Nos ponemos a la altura de quien resuelve, no por encima, y «transformar» nos arrastra al territorio de transformación digital. |
 | Qué construimos | «Implementamos soluciones innovadoras.» | «Construimos lo que el cliente necesita para su negocio», con foco en el uso. | «Soluciones innovadoras» es genérico y viejo. |
-| El uso | «Impulsamos la adopción de tecnología.» | «Trabajamos para lograr que cada solución se use.» | Adopción como sinónimo está vetada, y «tecnología» también. |
+| El uso | «Impulsamos la adopción de tecnología.» | «Trabajamos para lograr que cada solución se use.» | Adopción no es sinónimo de uso, y «tecnología» suelta es demasiado amplia para decir qué hacemos. |
 | Qué ofrecemos | «Ofrecemos soluciones integrales.» | «Ofrecemos soluciones de software y AI y, si es necesario, conectamos las partes que hacen falta para que funcione.» | «Integrales» es genérico. |
 
 ## 5. Ejemplo: posteo de LinkedIn (slide 54)
@@ -89,9 +99,9 @@ Relacionado (slide 4): "tecnología" no reemplaza a "software y AI", y "estrateg
 | Regla aplicada | Cómo se ve acá |
 |---|---|
 | Rasgo Curiosa | Busca dónde se traba el usuario antes de asumir la causa. |
-| Vetos respetados | No usa «ayudar» ni «tecnología». «Adopción» aparece como parte del uso. |
+| Vocabulario | No usa «ayudar». «Adopción» aparece como parte del uso. |
 | Territorio Uso | El uso se diseña desde el inicio y lo termina sosteniendo el producto. |
 | AI con naturalidad | La AI aparece como un frente más, al servicio del usuario. |
-| Regla "Concreta" | Cifra real (12% a 36%) y un método explícito en tres frentes. |
+| Regla "Concreta" | Cifra concreta (12% a 36%, ejemplo del playbook pendiente de validación) y un método explícito en tres frentes. |
 
-Nota: el ejemplo del playbook está en español; según la slide 62, el idioma principal de LinkedIn es el inglés (ver `.ai/verbal/aplicacion.md`). La cifra 12%→36% es del ejemplo del playbook: para publicarla en otra pieza tiene que estar aprobada en `ai/facts.json`.
+Nota: el ejemplo del playbook está en español; según la slide 62, el idioma principal de LinkedIn es el inglés (ver `.ai/verbal/aplicacion.md`). La cifra 12%→36% es del ejemplo del playbook: para publicarla en otra pieza tiene que estar aprobada en `ai/facts.json` y validada por alguien del equipo (guía editorial §2 y §8).

@@ -1,6 +1,21 @@
 {
- "que_es": "Datos REALES y aprobados de Magoya para usar en piezas. Regla absoluta: lo que no está acá NO existe — las cifras de ejemplo de las plantillas jamás se entregan como reales; si falta un dato, se le pide al usuario.",
- "version": "1.1 · 2026-10-19",
+ "que_es": "Datos REALES y aprobados de Magoya para usar en piezas. Regla absoluta: lo que no está acá NO existe — las cifras de ejemplo de las plantillas jamás se entregan como reales; si falta un dato, se le pide al usuario y lo valida una persona del equipo de Magoya (ver validacion).",
+ "version": "1.2 · 2026-10-19",
+ "validacion": {
+  "que_es": "Contrato de validación humana de la Guía editorial de Magoya (\"Manual voz y tono MAGOYA V2\", octubre de 2026), §2 (Métricas y resultados, Casos y confidencialidad) y §8 (Validación humana y permisos). Rige para todo lo que entra a este archivo y para toda cifra que una pieza comunique como real.",
+  "quien_valida": "Una persona del equipo de Magoya valida toda métrica o resultado nuevo antes de que se comunique como real. La cifra tiene que ser aportada y validada explícitamente por alguien del equipo: la AI no puede inventar, estimar ni completar números, aunque el cliente sea anónimo. Si falta validación, se solicita.",
+  "campos_a_registrar": [
+   "fuente",
+   "responsable_de_validacion",
+   "fecha",
+   "definicion_de_la_metrica",
+   "alcance_autorizado"
+  ],
+  "campos_nota": "Se registran cuando sea posible (guía §8). Al comunicar la cifra, incluir unidad, alcance, período y base de comparación cuando corresponda (guía §2). Las entradas actuales de cifras_aprobadas registran solo la fuente: los demás campos se completan cuando una persona los confirme, no los completa la AI.",
+  "clientes": "Por defecto no se nombran clientes ni se divulga información identificable. Para usar el nombre, el logo, una cita o una historia identificable de un cliente se exige autorización expresa del responsable correspondiente; los casos conjuntos son excepciones aprobadas. La anonimización no autoriza inventar resultados ni publicar información confidencial (guía §2, §7 y §8).",
+  "afirmaciones_institucionales": "Las afirmaciones institucionales ya aprobadas en el playbook (por ejemplo, \"95% de nuestros clientes es promotor de Magoya\" o \"más de nueve años resolviendo problemas exclusivamente en el agro\") pueden reutilizarse dentro de su contexto y vigencia. Si dependen de números variables, como años de experiencia, equipos o índices de satisfacción, se confirma su actualización cuando corresponda (guía §8). Ver también derivados_del_tiempo.",
+  "lo_que_la_ai_puede_hacer": "Proponer textos, estructuras, hipótesis de trabajo y ejemplos señalizados como ficticios. No puede convertirlos por sí misma en datos corporativos oficiales. Los números hipotéticos solo se admiten rotulados como ejemplos ficticios (guía §2 y §8)."
+ },
  "empresa": {
   "nombre": "Magoya",
   "que_hace": "Consultora hands-on en software y AI para empresas del agro. (EN: Magoya is a hands-on software and AI consulting firm for agribusiness.) Fuente: Magoya Brand Playbook, oct 2026, slide 4.",
@@ -55,7 +70,8 @@
    "Bayer Crop Science",
    "Bunge",
    "Precision Planting"
-  ]
+  ],
+  "conflicto_a_definir": "Señalado para decisión humana, no resuelto: la Guía editorial V2 (§2 y §8) dice que por defecto no se nombran clientes y que usar el nombre, el logo, una cita o una historia identificable exige autorización expresa del responsable. Esta lista se arma por los logos que existen en assets/logos/clients/, no por autorizaciones registradas. Una persona tiene que definir qué clientes tienen autorización y para qué uso (logo en grilla, caso, cita). Mientras tanto, si una pieza nombra un cliente, la AI lo señala en el bloque PEDIDO A HUMANOS."
  },
  "equipo_nombrable": {
   "regla": "solo personas con foto real en assets/photos/ y rol confirmado",
@@ -64,7 +80,7 @@
    "Leo Dopacio",
    "Varina Baldi — Founder & CEO"
   ],
-  "nota": "\"AgTech Expert\" figura como rol de Camila López Colmano en el sistema, pero \"agtech\" está vetado en el Brand Playbook (slide 48). Confirmar con ella el título vigente antes de usarlo en una pieza nueva."
+  "nota": "\"AgTech Expert\" figura como rol de Camila López Colmano en el sistema, pero \"agtech\" figura en el vocabulario a evitar del Brand Playbook (slide 48); la Guía editorial V2 (§3) lo evita como categoría identitaria de Magoya y pide evaluar cada palabra por función y contexto. Confirmar con ella el título vigente antes de usarlo en una pieza nueva."
  },
  "pendiente_de_aprobar": [
   {

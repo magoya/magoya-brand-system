@@ -1,12 +1,44 @@
 {
- "que_es": "Ley de precedencia: qué documento gana cuando dos reglas oficiales de este sistema se contradicen. Existe para que ninguna AI ni ninguna persona tenga que elegir. Si encontrás una contradicción, aplicá esta ley, entregá la pieza, y reportá la contradicción — pero no la resuelvas por criterio propio.",
- "version": "1.1 · 2026-10-19",
+ "que_es": "Ley de precedencia: qué documento gana cuando dos reglas oficiales de este sistema se contradicen. Existe para que ninguna AI ni ninguna persona tenga que elegir. Si encontrás una contradicción, aplicá esta ley, entregá la pieza como borrador pendiente de revisión y reportá la contradicción — pero no la resuelvas por criterio propio.",
+ "version": "1.2 · 2026-10-19",
  "por_que_existe": "Una auditoría a ciegas encontró 16 contradicciones entre documentos oficiales del sistema: reglas que ninguna plantilla puede cumplir, instrucciones que prometen control que la geometría no permite, y números distintos en dos archivos. Mientras existan, la AI tiene que decidir — y decidir es exactamente lo que este sistema promete que nadie tenga que hacer.",
  "capas": {
-  "verbal_A_D": "A Estrategia, B Voz, C Lenguaje y D Aplicación salen del Magoya Brand Playbook (octubre de 2026). El playbook prevalece sobre cualquier archivo del sistema hasta que su contenido esté publicado en el sitio (estrategia.html, voz.html, lenguaje.html, aplicacion.html) y en .ai/verbal/, vocabulary.json y .ai/checklist-verbal.md; si un archivo difiere del playbook, gana el playbook y el archivo se corrige.",
+  "verbal_A_D": "A Estrategia, B Voz, C Lenguaje y D Aplicación se reparten entre dos fuentes (ver jerarquia_de_fuentes): la identidad, el posicionamiento, los territorios, la propuesta de valor, la oferta, los espacios de actuación y el Método Magoya salen del Magoya Brand Playbook (octubre de 2026); la voz, el estilo, el vocabulario y la adaptación editorial salen de la Guía editorial de Magoya, \"Manual voz y tono MAGOYA V2\" (octubre de 2026), en .ai/verbal/guia-editorial.md. Si un archivo del sistema (estrategia.html, voz.html, lenguaje.html, aplicacion.html, .ai/verbal/, vocabulary.json, .ai/checklist-verbal.md) difiere de la fuente que le corresponde, gana la fuente y el archivo se corrige.",
   "visual_E_F": "E Identidad visual y F Piezas y plantillas se mantienen de la v1.2 hasta su revisión. Para la capa visual rige el orden de abajo.",
   "G_H": "G IA en Campo tiene manual propio (ai-en-campo.html). H Integrar con AI (ai.html) no es fuente: deriva de las capas anteriores.",
-  "regla_de_texto": "En el texto de una pieza, las reglas verbales (definición, AI, vocabulario vetado, frases prohibidas, territorios) vienen del playbook y se validan con .ai/checklist-verbal.md, aunque la plantilla traiga otro texto de ejemplo: el texto de las plantillas es EJEMPLO, no regla."
+  "regla_de_texto": "En el texto de una pieza, las reglas de identidad (definición, AI, espacios, método, denominaciones y traducciones) vienen del playbook, y las de voz, estilo, vocabulario y adaptación vienen de la guía editorial; las dos se validan con .ai/checklist-verbal.md, aunque la plantilla traiga otro texto de ejemplo: el texto de las plantillas es EJEMPLO, no regla. Bajo la guía, el vocabulario del playbook no es un veto universal (se evalúa por función y contexto) y el 50/30/20 es una guía de planificación de contenidos, no un chequeo por texto."
+ },
+ "jerarquia_de_fuentes": {
+  "que_es": "Qué fuente responde qué, para el contenido de una pieza. Sale de la Guía editorial V2, §6 (Fuentes autorizadas y responsabilidades). No reemplaza al orden de abajo, que resuelve choques entre archivos del sistema para la capa visual y la entrega.",
+  "niveles": [
+   {
+    "n": 1,
+    "fuente": "Magoya Brand Playbook (.ai/verbal/estrategia.md)",
+    "responde": "identidad, posicionamiento, territorios, propuesta de valor, oferta, espacios de actuación y Método Magoya"
+   },
+   {
+    "n": 2,
+    "fuente": "Guía editorial V2 (.ai/verbal/guia-editorial.md)",
+    "responde": "voz, estilo, vocabulario y adaptación editorial"
+   },
+   {
+    "n": 3,
+    "fuente": "fuentes internas aprobadas y vigentes, con validación humana (ai/facts.json)",
+    "responde": "casos, resultados, métricas, clientes, testimonios y datos comerciales"
+   },
+   {
+    "n": 4,
+    "fuente": "el brief del solicitante",
+    "responde": "objetivo, audiencia, canal, idioma, CTA y contexto de la pieza",
+    "limite": "el brief no puede redefinir la identidad ni autorizar cifras no validadas"
+   }
+  ],
+  "reglas_obligatorias": "Las reglas marcadas [OBLIGATORIO] en la guía prevalecen sobre las recomendaciones estilísticas, sin reemplazar la estrategia del playbook (guía, propósito y jerarquía de fuentes)."
+ },
+ "conflictos_entre_fuentes": {
+  "regla": "Si las fuentes se contradicen, o el brief contradice una regla obligatoria, no se inventa una síntesis ni se resuelve en silencio: se señala la discrepancia, se propone una salida y se pide definición a una persona (guía, propósito y §7).",
+  "como_se_entrega": "La pieza sale como borrador identificable como pendiente de revisión, con el conflicto escrito en el bloque PEDIDO A HUMANOS (las dos fuentes y qué dice cada una). Lo mismo si el pedido involucra decisiones, riesgos o cifras relevantes: no se asume autorización de publicación (guía §7).",
+  "relacion_con_el_orden": "El orden de abajo sigue rigiendo para choques entre archivos del sistema (plantilla, tokens, constraints, checklists). Aplicarlo no exime de señalar el choque: ver como_reportar_una_contradiccion."
  },
  "orden": [
   {
@@ -43,7 +75,7 @@
    "n": 6,
    "gana": ".ai/checklist.md y .ai/checklist-verbal.md",
    "por_que": "son el gate de salida (visual y de texto), no la fuente.",
-   "consecuencia": "un chequeo visual que ninguna plantilla oficial pasa es un chequeo mal escrito. Un chequeo verbal que contradice al playbook también."
+   "consecuencia": "un chequeo visual que ninguna plantilla oficial pasa es un chequeo mal escrito. Un chequeo verbal que contradice al playbook o a la guía editorial también."
   },
   {
    "n": 7,

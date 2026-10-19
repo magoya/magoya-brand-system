@@ -28,7 +28,7 @@ Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar
 - **Slides**: margen interior 7% del ancho, escala 126/84/56/42pt sobre 1920px, como máximo un golpe de lima por slide (ver chequeo 5), y el lienzo que traiga la plantilla: blanco, sage `#EEF2EC`, verde profundo o foto.
 - **Redes**: display y cifras al ~70% del ancho. Story 1080×1920 con zona segura de 96px arriba y abajo. Feed 1080×1080.
 - **Logo**: mínimo 90px en pantalla / 24mm impreso; por debajo va el avatar "m". Clearspace = altura de la letra "m". Nunca estirado, rotado, sombreado ni en lima.
-- **Copy**: labels de botón en sentence case; kickers en MAYÚSCULAS con tracking +0.12em. Todo lo demás del texto (definición, vetos, frases prohibidas, AI, territorios, diales) se valida con `.ai/checklist-verbal.md`.
+- **Copy**: labels de botón en sentence case; kickers en MAYÚSCULAS con tracking +0.12em. Todo lo demás del texto (definición, vocabulario de marca, frases prohibidas, AI, datos validados, clientes con permiso) se valida con `.ai/checklist-verbal.md`.
 - **Merch**: siempre foto o render real del producto, nunca ilustración ni esquema vectorial. Sin lima en textil.
 - **Fotos de personas**: siempre B&N con un acento verde o lima.
 
