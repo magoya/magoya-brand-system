@@ -32,7 +32,7 @@
    "id": "C1",
    "nombre": "Título + grilla de 4 stats",
    "cuando_usarlo": "credenciales de la compañía. Cuatro cifras, cada una con un descriptor de una línea. Nunca más de cuatro en esta grilla.",
-   "layout_src": "SPEC.C1=function(p){\n  var s=[bg(C.w)].concat(chrome(p),[T('Proof,\\nnot promises.',{x:7.5,y:14,w:36,h:16,s:5.6,b:true,tight:true,lh:1.05})]);\n  var d=[['95%','Client retention across engagements'],['5+','Years of average client relationship'],\n         ['21','AgTech domains covered by the team'],['10','Countries where our products operate']];\n  d.forEach(function(c,i){var x=51+(i%2)*22,y=15+Math.floor(i/2)*15;\n    s=s.concat(stat(x,y,c[0],c[1],4.6,C.ink,C.g600,20));});\n  return s;};"
+   "layout_src": "SPEC.C1=function(p){\n  var s=[bg(C.w)].concat(chrome(p),[T('Proof,\\nnot promises.',{x:7.5,y:14,w:36,h:16,s:5.6,b:true,tight:true,lh:1.05})]);\n  var d=[['95%','of our clients are Magoya promoters'],['5+','Years of average client relationship'],\n         ['21','ag domains covered by the team'],['10','Countries where our products operate']];\n  d.forEach(function(c,i){var x=51+(i%2)*22,y=15+Math.floor(i/2)*15;\n    s=s.concat(stat(x,y,c[0],c[1],4.6,C.ink,C.g600,20));});\n  return s;};"
   },
   {
    "id": "C2",
@@ -44,13 +44,13 @@
    "id": "C3",
    "nombre": "Porcentaje al palo — una cifra gigante (44cqw ≈ 65% del ancho)",
    "cuando_usarlo": "cuando el dato es el argumento. La cifra ocupa ~70% del slide y no comparte protagonismo con nada. Lima como display sobre verde profundo.",
-   "layout_src": "SPEC.C3=function(p){return [bg(C.g950)].concat(chrome(p,true),[\n  T([{text:'95',options:{fontSize:FS(44)}},{text:'%',options:{fontSize:FS(18)}}],\n    {x:7.5,y:9.5,w:85,h:33,s:44,b:true,c:C.lime,tight:true,lh:.8,va:'middle'}),\n  T('Client retention across every engagement since 2017.',{x:7.5,y:44.5,w:56,h:7,s:2.2,b:true,c:C.cr100,lh:1.25})]);};"
+   "layout_src": "SPEC.C3=function(p){return [bg(C.g950)].concat(chrome(p,true),[\n  T([{text:'95',options:{fontSize:FS(44)}},{text:'%',options:{fontSize:FS(18)}}],\n    {x:7.5,y:9.5,w:85,h:33,s:44,b:true,c:C.lime,tight:true,lh:.8,va:'middle'}),\n  T('of our clients are Magoya promoters.',{x:7.5,y:44.5,w:56,h:7,s:2.2,b:true,c:C.cr100,lh:1.25})]);};"
   },
   {
    "id": "C4",
    "nombre": "Tres cifras grandes en línea (15cqw)",
    "cuando_usarlo": "cuando tres datos cuentan una sola historia. Un descriptor corto abajo de cada uno y una regla lima para anclar el bloque.",
-   "layout_src": "SPEC.C4=function(p){\n  var s=[bg(C.w)].concat(chrome(p),[T('SINCE 2017',{x:7.5,y:12,w:40,h:2.6,s:1.5,b:true,c:C.em7,cs:1.8})]);\n  var d=[['21','AgTech domains covered in-house'],['10','Countries running our products'],['5+','Years of average client relationship']];\n  d.forEach(function(c,i){var x=7.5+i*29;\n    s.push(T(c[0],{x:x,y:19,w:26,h:15,s:15,b:true,tight:true,lh:.9}));\n    s.push(T(c[1],{x:x,y:36.5,w:24,h:7,s:1.5,c:C.g600,lh:1.3}));});\n  s.push(rule(7.5,45.5,14));return s;};\n\n/* --- D · gráficos --- */;"
+   "layout_src": "SPEC.C4=function(p){\n  var s=[bg(C.w)].concat(chrome(p),[T('SINCE 2017',{x:7.5,y:12,w:40,h:2.6,s:1.5,b:true,c:C.em7,cs:1.8})]);\n  var d=[['21','ag domains covered in-house'],['10','Countries running our products'],['5+','Years of average client relationship']];\n  d.forEach(function(c,i){var x=7.5+i*29;\n    s.push(T(c[0],{x:x,y:19,w:26,h:15,s:15,b:true,tight:true,lh:.9}));\n    s.push(T(c[1],{x:x,y:36.5,w:24,h:7,s:1.5,c:C.g600,lh:1.3}));});\n  s.push(rule(7.5,45.5,14));return s;};\n\n/* --- D · gráficos --- */;"
   }
  ],
  "dsl_completo_en": "https://brand.magoya.com/ai/slides.json"

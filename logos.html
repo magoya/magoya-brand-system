@@ -149,20 +149,25 @@ h2{margin:38px 0 14px;font-size:1.3rem;font-weight:700}
     body{padding-left:20px;padding-right:20px}
   }
 
-  /* ---------- topbar: espacios iguales y el grupo de IA al final ---------- */
+  /* ---------- topbar v1.2 (en v2.0 la nav vive en nav.css) ---------- */
   /* los margenes .cl (16px) y .cl2 (10px) hacian que cada par de items tuviera
      una separacion distinta. Ahora todos los items pares estan a la misma
-     distancia y el unico corte estructural es el divisor antes del grupo de IA. */
+     distancia y el unico corte estructural es el divisor antes del grupo de AI. */
   .mg-topbar a.cl,.mg-topbar a.cl2{margin-left:0}
   .mg-topbar .navdiv{margin:0 12px}
-  /* IA en campo es sub-marca: se anuncia con su propia ley, el verde ES el fondo */
+  /* IA en Campo: programa presentado por Magoya, el verde ES el fondo */
   .mg-topbar a.sub{background:var(--emerald-500);color:var(--green-950);font-weight:800}
   .mg-topbar a.sub:hover{background:var(--lime-500);color:var(--green-950)}
   .mg-topbar a.sub.on{box-shadow:inset 0 0 0 2px var(--cream-50)}
 </style>
+<link rel="stylesheet" href="nav.css">
 </head>
 <body>
-<nav class="mg-topbar"><a href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a><a href="index.html">Inicio</a><a href="brand-book.html">Brand book</a><a href="slides.html">Slides</a><a href="pieces.html">Comerciales</a><a href="icons.html">Iconos</a><a href="library.html">Assets</a><a href="logos.html" class="cl2 on">Clientes</a><span class="navdiv"></span><a href="ai.html">Integrar con IA</a><a href="ai-en-campo.html" class="sub">IA en campo</a></nav>
+<nav class="mg-topbar">
+  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
+  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html"><i>A</i>Estrategia</a><a href="voz.html"><i>B</i>Voz</a><a href="lenguaje.html"><i>C</i>Lenguaje</a><a href="aplicacion.html"><i>D</i>Aplicación</a><span class="navdiv"></span><a href="brand-book.html"><i>E</i>Identidad visual</a><a href="piezas.html" class="on"><i>F</i>Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub"><i>G</i>IA en Campo</a><a href="ai.html"><i>H</i>Integrar con AI</a>
+  <div class="mg-subnav"><span class="lbl">F · Piezas y plantillas</span><a href="piezas.html">Resumen</a><a href="slides.html">Slides</a><a href="plantillas.html">Plantillas listas</a><a href="pieces.html">Comerciales</a><a href="piezas.html#papeleria">Papelería</a><a href="piezas.html#merch">Merch</a><a href="library.html">Assets</a><a href="logos.html" class="on">Clientes</a></div>
+</nav>
 
 <nav class="side">
   <a href="#clientes"><span>Clientes</span></a>
@@ -170,7 +175,7 @@ h2{margin:38px 0 14px;font-size:1.3rem;font-weight:700}
   <span class="v">BRAND SYSTEM · V1.1</span>
 </nav>
 
-<p class="crumb"><a href="brand-book.html">Brand book</a> › Logos de clientes & stack</p>
+<p class="crumb"><a href="piezas.html">F · Piezas y plantillas</a> › Logos de clientes & stack</p>
 
 <span class="eyebrow">Magoya · Brand System v1.1</span>
 <h1>Logos de clientes & partners</h1>

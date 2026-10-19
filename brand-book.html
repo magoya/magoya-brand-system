@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
-<title>Magoya · Brand System v1.1</title>
+<title>E · Identidad visual · Magoya Brand System</title>
 <link rel="stylesheet" href="tokens.css">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -506,27 +506,28 @@
     .hero-in,.inner,.hero > .inner,section > .inner,footer > *,footer > div{padding-left:20px;padding-right:20px}
   }
 
-  /* ---------- topbar: espacios iguales y el grupo de IA al final ---------- */
+  /* ---------- topbar: espacios iguales (v1.2; en v2.0 la nav vive en nav.css) ---------- */
   /* los margenes .cl (16px) y .cl2 (10px) hacian que cada par de items tuviera
      una separacion distinta. Ahora todos los items pares estan a la misma
-     distancia y el unico corte estructural es el divisor antes del grupo de IA. */
+     distancia y el unico corte estructural es el divisor antes del grupo de AI. */
   .mg-topbar a.cl,.mg-topbar a.cl2{margin-left:0}
   .mg-topbar .navdiv{margin:0 12px}
-  /* IA en campo es sub-marca: se anuncia con su propia ley, el verde ES el fondo */
+  /* IA en Campo: programa presentado por Magoya, el verde ES el fondo */
   .mg-topbar a.sub{background:var(--emerald-500);color:var(--green-950);font-weight:800}
   .mg-topbar a.sub:hover{background:var(--lime-500);color:var(--green-950)}
   .mg-topbar a.sub.on{box-shadow:inset 0 0 0 2px var(--cream-50)}
 </style>
+<link rel="stylesheet" href="nav.css">
 </head>
 <body>
 
 <nav class="mg-topbar">
-  <a href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
-  <a href="index.html">Inicio</a><a href="brand-book.html" class="on">Brand book</a><a href="slides.html">Slides</a><a href="pieces.html">Comerciales</a><a href="icons.html">Iconos</a><a href="library.html">Assets</a><a href="logos.html">Clientes</a><span class="navdiv"></span><a href="ai.html">Integrar con IA</a><a href="ai-en-campo.html" class="sub">IA en campo</a>
+  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
+  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html"><i>A</i>Estrategia</a><a href="voz.html"><i>B</i>Voz</a><a href="lenguaje.html"><i>C</i>Lenguaje</a><a href="aplicacion.html"><i>D</i>Aplicación</a><span class="navdiv"></span><a href="brand-book.html" class="on"><i>E</i>Identidad visual</a><a href="piezas.html"><i>F</i>Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub"><i>G</i>IA en Campo</a><a href="ai.html"><i>H</i>Integrar con AI</a>
+  <div class="mg-subnav"><span class="lbl">E · Identidad visual</span><a href="brand-book.html" class="on">Manual visual</a><a href="icons.html">Librería de íconos</a></div>
 </nav>
 
 <nav class="side" id="dock">
-  <a href="#esencia"><span>Esencia</span></a>
   <a href="#logo"><span>Logo &amp; avatares</span></a>
   <a href="#color"><span>Color</span></a>
   <a href="#tipografia"><span>Tipografía</span></a>
@@ -535,56 +536,24 @@
   <a href="#convivencia"><span>Convivencia</span></a>
   <a href="#iconografia"><span>Iconografía</span></a>
   <a href="#componentes"><span>Componentes</span></a>
-  <a href="#aplicaciones"><span>Aplicaciones</span></a>
-  <a href="#merch"><span>Merch</span></a>
-  <a href="#papeleria"><span>Papelería</span></a>
-  <a href="#reglas"><span>Reglas de oro</span></a>
-  <a href="#anexa" class="anx"><span>IA en campo ↗</span></a>
+  <a href="#reglas"><span>Reglas de oro visuales</span></a>
 </nav>
 
 <header class="hero">
-  <span class="tag">Brand System · v1.1</span>
+  <span class="tag">Brand System · v2.0</span>
   <div class="hero-in">
     <img class="wm" src="assets/magoya-wordmark-cream.svg" alt="Magoya">
-    <h1>Digital product<br>development <em>for<br>agribusiness.</em></h1>
-    <p>El sistema de diseño oficial de Magoya: identidad, color, tipografía, fotografía, ilustración y componentes — una sola fuente de verdad.</p></div>
+    <h1>Software and AI<br><em>for agribusiness.</em></h1>
+    <p>E · Identidad visual. Logo, color, tipografía, fotografía, ilustración, íconos y componentes de Magoya.</p>
+    <p style="font-size:14px;color:var(--sage-400);margin-top:12px">Esta parte se conserva hasta revisarla con el nuevo posicionamiento; solo se ajustaron los textos de ejemplo. La estrategia, la voz y el lenguaje están en las partes A a D.</p></div>
 </header>
 
 <main>
 
-<!-- ================= 01 ESENCIA ================= -->
-<section id="esencia">
-  <div class="inner">
-  <span class="kicker">01 · Esencia</span>
-  <h2>Expertise senior.<br>Dominio agro. Partnership.</h2>
-  <p class="lead">Magoya es el partner de estrategia y desarrollo de producto digital para agribusiness. Nos embebemos como extensión del equipo del cliente — tecnólogos senior, expertos de producto y agrónomos.</p>
-  <div class="grid g3 pillars">
-    <div class="stat"><div class="n" style="color:var(--emerald-700)">Clarity</div><div class="d">Convertimos complejidad en decisiones: un plan que tu equipo puede defender adentro de la empresa.</div></div>
-    <div class="stat"><div class="n" style="color:var(--emerald-700)">Confidence</div><div class="d">Equipos senior con fluidez profunda en AgTech.</div></div>
-    <div class="stat"><div class="n" style="color:var(--emerald-700)">Commitment</div><div class="d">Estamos para el largo plazo. Resultados que duran más que el roadmap.</div></div></div>
-  <h3>Misión & posicionamiento</h3>
-  <p class="note" style="max-width:720px;margin-bottom:14px">Desde 2017, Magoya existe para que las agroempresas modernas construyan mejores productos digitales: <b>“Ag software fails on adoption, not on code. We put a senior team inside yours — engineers, product and agronomists — and we test every release on a real operation.”</b> Posicionamiento: <i>Your Digital Product Strategy and Development Partner — where strategy meets execution, and product meets reality.</i> El hero de la marca: <b>“AgTech challenges demand more than code.”</b></p>
-  <h3>La voz</h3>
-  <p class="note" style="max-width:760px"><b>Traductora.</b> Hablamos agro y software: el trabajo es pasar de uno al otro sin perder precisión. <b>Concreta:</b> ninguna afirmación de valor viaja sin cifra, nombre de cliente, plazo o captura. <b>Directa:</b> oraciones cortas, conclusión primero, cero preguntas retóricas, mínimo de siglas. <b>Filosa cuando hace falta:</b> decimos lo que no cierra — ni hype de IA ni negacionismo. <b>Informal sin ser liviana:</b> voseo en español, humor cuando aliviana una idea, nunca como adorno.</p>
-  <p class="note" style="max-width:760px;margin-top:12px"><b>Idioma.</b> Español para cercanía y comunidad; inglés para credencial y cuentas US (nativo-conceptual, con revisión nativa antes de salir); portugués para Brasil. En textos en castellano, <b>mínimo de palabras en inglés — y las que van, traducidas.</b></p>
-  <p class="note" style="max-width:760px;margin-top:12px">Vocabulario propio: <i>levantar el guante · no damos vueltas · talento híbrido · traducir · convertir complejidad en decisiones · señal y ruido · equipo embebido (embedded) · claridad, confianza, compromiso · lote, campaña, ventana de siembra.</i></p>
-  <div class="dodont">
-    <div class="dd"><span class="h">Así suena</span><ul>
-      <li>“Embedded teams, not outsourced tickets.” — contraste, siete palabras, sin adjetivos.</li>
-      <li>“If it does not work at 6am with one bar of signal, it does not work.”</li>
-      <li>“Si después de eso no somos el partner indicado, te quedás con todo.” — transparencia que asume costo propio.</li></ul></div>
-    <div class="dd avoid"><span class="h">Nunca</span><ul>
-      <li>Preguntas retóricas · superlativos sobre nosotros mismos (“the best”, “unparalleled”).</li>
-      <li>“As a service” para lo que es un servicio a medida · siglas internas (DIPI) · “soluciones end-to-end”.</li>
-      <li>“Familia” para el equipo · “startup” para Magoya · hype de IA · frasecitas.</li></ul></div>
-  </div>
-  <p class="cap" style="max-width:760px">La evidencia de cada regla —con citas del Manual de Marca 2022, la estrategia de marca de Varu y las reuniones— está en <code style="font-family:var(--font-mono);font-size:11.5px">VOICE-RESEARCH.md</code>.</p></div>
-</section>
-
 <!-- ================= 02 LOGO ================= -->
 <section id="logo" style="background:var(--paper-50)">
   <div class="inner">
-  <span class="kicker">02 · Logo & avatares</span>
+  <span class="kicker">E.1 · Logo & avatares</span>
   <h2>Logo & avatares</h2>
   <p class="lead">El wordmark redondeado es la firma. Los avatares — extraídos de las letras del wordmark — son el sistema de identidad secundario para redes, favicons y aplicaciones chicas.</p>
 
@@ -633,7 +602,7 @@
 <!-- ================= 03 COLOR ================= -->
 <section id="color">
   <div class="inner">
-  <span class="kicker">03 · Color</span>
+  <span class="kicker">E.2 · Color</span>
   <h2>El negro construye.<br>El verde hace crecer.</h2>
   <p class="lead">Tres verdes con roles distintos + neutros cálidos. Los neutros sostienen ~75% de cada pieza; el verde enciende el ~25% restante. Nunca una pieza 100% negra ni 100% verde. <b>El verde digital y el verde ilustración eran demasiado parecidos como para convivir como dos colores distintos</b> — se unificaron el 6 de agosto de 2026: ahora es un solo verde para identidad, ropa de personajes y soporte.</p>
 
@@ -687,18 +656,18 @@
 <!-- ================= 04 TIPOGRAFÍA ================= -->
 <section id="tipografia" style="background:var(--sage-50)">
   <div class="inner">
-  <span class="kicker">04 · Tipografía</span>
+  <span class="kicker">E.3 · Tipografía</span>
   <h2>Manrope. Una sola familia.</h2>
   <p class="lead">Variable 200–800, self-hosted. Display ExtraBold con tracking apretado (−3%) para titulares; Regular para cuerpo. Los kickers van en MAYÚSCULAS con tracking amplio, en pill o solos.</p>
 
-  <div class="spec"><span class="lab">Display hero · 800 · −3%</span><div class="type-hero" style="font-size:clamp(3rem,6vw,5.6rem)">Complex agtech challenges demand more than code.</div></div>
-  <div class="spec"><span class="lab">Display · 800</span><div class="type-hero" style="font-size:clamp(2.2rem,4vw,3.6rem)">Nine years building digital products for agribusiness</div></div>
-  <div class="spec"><span class="lab">Título · 700</span><div style="font-size:1.95rem;font-weight:700;letter-spacing:-0.02em">Build a digital product for an Input Company</div></div>
+  <div class="spec"><span class="lab">Display hero · 800 · −3%</span><div class="type-hero" style="font-size:clamp(3rem,6vw,5.6rem)">A product succeeds when it gets used and delivers value.</div></div>
+  <div class="spec"><span class="lab">Display · 800</span><div class="type-hero" style="font-size:clamp(2.2rem,4vw,3.6rem)">Software and AI for agribusiness</div></div>
+  <div class="spec"><span class="lab">Título · 700</span><div style="font-size:1.95rem;font-weight:700;letter-spacing:-0.02em">We execute what we propose.</div></div>
   <div class="spec"><span class="lab">Subtítulo · 600</span><div style="font-size:1.25rem;font-weight:600">Magoya blends product strategy, engineering, and agricultural expertise.</div></div>
   <div class="spec"><span class="lab">Cuerpo · 400</span><div style="font-size:1rem;max-width:560px">Twenty years in the industry: agronomists and engineers who have shipped for Bayer, John Deere and Apeel. We partner with modern agribusinesses to design, build, and evolve their products.</div></div>
   <div class="spec"><span class="lab">Kicker · 800 · +12%</span><div style="font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase">Product Strategy · Case Study · Our Footprint</div></div>
   <div class="spec"><span class="lab">Título de card · 700</span><div style="font-size:1.35rem;font-weight:700;letter-spacing:-0.01em">Domain expertise</div></div>
-  <div class="spec"><span class="lab">Número / stat · 800 · −3%</span><div style="font-size:3.4rem;font-weight:800;letter-spacing:-0.03em;line-height:1">95% <span style="font-size:1rem;font-weight:400;color:var(--gray-600);letter-spacing:0">Client retention — la bajada del número va en Body</span></div></div>
+  <div class="spec"><span class="lab">Número / stat · 800 · −3%</span><div style="font-size:3.4rem;font-weight:800;letter-spacing:-0.03em;line-height:1">95% <span style="font-size:1rem;font-weight:400;color:var(--gray-600);letter-spacing:0">of our clients are Magoya promoters — la bajada del número va en Body</span></div></div>
   <div class="spec"><span class="lab">Quote · 600 · itálica no</span><div style="font-size:1.3rem;font-weight:600;line-height:1.45;max-width:520px">“Hard to tell the difference between an Apeel employee and a Magoya employee.”<span style="display:block;font-size:.85rem;font-weight:400;color:var(--gray-600);margin-top:8px">Nombre Apellido — atribución en Body small</span></div></div>
   <div class="spec"><span class="lab">Caption · 400</span><div style="font-size:.8rem;color:var(--gray-600)">Créditos, fuentes de datos, notas al pie. Nunca menos de 11px / #6E756D mínimo sobre blanco.</div></div>
   <div class="spec"><span class="lab">Link · 600 · subrayado</span><div style="font-size:1rem"><a href="#tipografia" style="color:var(--emerald-700);font-weight:600">magoya.com/case-studies</a> — verde #009145, siempre subrayado en cuerpo de texto</div></div>
@@ -713,13 +682,13 @@
 
   <h3>Resaltado en titulares</h3>
   <p class="note" style="max-width:720px;margin-bottom:16px">Dos formas oficiales de encender una palabra: <b>color</b> (sobre claro: verde <span style="font-family:var(--font-mono);font-size:.85em">#009145</span> y solo en texto grande ≥24px bold; lima sobre oscuro) o <b>subrayado lima</b>. El verde digital #00DE68 como texto queda reservado a fondos oscuros y al logo. Prohibido el bloque de resaltador sólido detrás del texto.</p>
-  <div class="type-hero" style="font-size:2.4rem">Nine years building digital products<br>for <span style="color:var(--emerald-700)">agribusiness</span>. 95% client retention.</div></div>
+  <div class="type-hero" style="font-size:2.4rem">Software and AI<br>for <span style="color:var(--emerald-700)">agribusiness</span>. 95% of our clients are Magoya promoters.</div></div>
 </section>
 
 <!-- ================= 05 FOTOGRAFÍA ================= -->
 <section id="fotografia">
   <div class="inner">
-  <span class="kicker">05 · Fotografía</span>
+  <span class="kicker">E.4 · Fotografía</span>
   <h2>El campo desde arriba.<br>Las personas en blanco y negro.</h2>
   <p class="lead">Dos familias fotográficas, cada una con su regla. Aérea de campo: color natural con overlay verde profundo para fondos con texto. Personas: siempre B&N con un acento verde o lima — la firma Magoya.</p>
 
@@ -757,7 +726,7 @@
 <!-- ================= 06 ILUSTRACIÓN ================= -->
 <section id="ilustracion" style="background:var(--paper-50)">
   <div class="inner">
-  <span class="kicker">06 · Ilustración & motivos</span>
+  <span class="kicker">E.5 · Ilustración & motivos</span>
   <h2>Personajes planos.<br>Semicírculos que crecen.</h2>
   <p class="lead">Personajes de relleno plano redondeado, sin rostro: pants lima o verde, tops grises, zapatillas verdes. Y el motivo de marca: el patrón de <b>semicírculos</b> — brotes geométricos que crecen en diagonal, frescos y orgánicos sin ser literales.</p>
 
@@ -855,7 +824,7 @@
 <!-- ================= 07 CONVIVENCIA ================= -->
 <section id="convivencia" style="background:var(--paper-50)">
   <div class="inner">
-  <span class="kicker">07 · Convivencia de recursos</span>
+  <span class="kicker">E.6 · Convivencia de recursos</span>
   <h2>Un protagonista por pieza</h2>
   <p class="lead">La marca tiene siete recursos gráficos. La regla que los ordena: <b>máximo dos por pieza además de la tipografía</b> — uno protagonista y otro que acompaña en segundo plano. Con tres o más, la pieza deja de ser Magoya y se vuelve ruido.</p>
 
@@ -914,7 +883,7 @@
 <!-- ================= 08 ICONOGRAFÍA ================= -->
 <section id="iconografia">
   <div class="inner">
-  <span class="kicker">08 · Iconografía</span>
+  <span class="kicker">E.7 · Iconografía</span>
   <h2>Íconos de línea redondeada</h2>
   <p class="lead">Trazo 2px, terminaciones y esquinas redondeadas — el mismo ADN del wordmark. Monocromos y recoloreables: negro sobre claro, crema sobre oscuro, <b>lima solo el ícono destacado de la pieza</b>. Nunca rellenos sólidos ni 3D.</p>
 
@@ -939,7 +908,7 @@
       <span class="icm big on-dark" style="-webkit-mask-image:url(assets/studio/icons/agro/gota.svg);mask-image:url(assets/studio/icons/agro/gota.svg)"></span>
       <span class="icm big on-dark" style="-webkit-mask-image:url(assets/studio/icons/agro/sol.svg);mask-image:url(assets/studio/icons/agro/sol.svg)"></span>
       <span class="icm big on-dark" style="-webkit-mask-image:url(assets/studio/icons/agro/dron.svg);mask-image:url(assets/studio/icons/agro/dron.svg)"></span></div></div>
-  <p class="cap" style="max-width:680px">Además del set agro hay <b>58 íconos generales</b> en 7 categorías (producto & UX, datos & IA, plataforma, negocio, comunicación & redes, sistema) en <a href="icons.html" style="color:var(--emerald-700);font-weight:600">la librería de íconos</a>, y los logos de <b>IA</b> (OpenAI, Claude, Gemini…) y <b>redes</b> en <code style="font-family:var(--font-mono);font-size:11.5px">assets/studio/icons/</code>.</p>
+  <p class="cap" style="max-width:680px">Además del set agro hay <b>58 íconos generales</b> en 7 categorías (producto & UX, datos & AI, plataforma, negocio, comunicación & redes, sistema) en <a href="icons.html" style="color:var(--emerald-700);font-weight:600">la librería de íconos</a>, y los logos de <b>AI</b> (OpenAI, Claude, Gemini…) y <b>redes</b> en <code style="font-family:var(--font-mono);font-size:11.5px">assets/studio/icons/</code>.</p>
 
   <h3>Íconos a escala grande — lo que ya funciona en los slides</h3>
   <p class="note" style="max-width:760px;margin-bottom:16px">En <a href="slides.html" style="color:var(--emerald-700);font-weight:600">el deck kit</a> el ícono no siempre es un detalle chico: en varios módulos carga peso visual real. Tres formas ya probadas, con el módulo de origen:</p>
@@ -954,13 +923,13 @@
     <div class="comp-canvas" style="background:var(--white);border:1px solid var(--color-hairline);flex-direction:column;align-items:flex-start;gap:12px;min-height:180px">
       <div style="display:flex;gap:10px;align-items:flex-start"><img src="assets/studio/icons/ai/anthropic.svg" alt="Anthropic" style="width:22px;height:22px;flex:none"><div><b style="font-size:13px;display:block">Retrieval over field data</b><span style="font-size:11.5px;color:var(--gray-600)">RAG sobre resultados de ensayos, etiquetas y protocolos.</span></div></div>
       <div style="display:flex;gap:10px;align-items:flex-start"><img src="assets/studio/icons/ai/huggingface.svg" alt="Hugging Face" style="width:22px;height:22px;flex:none"><div><b style="font-size:13px;display:block">Vision on crop imagery</b><span style="font-size:11.5px;color:var(--gray-600)">Detección de enfermedad y maleza en imágenes de campo.</span></div></div></div></div>
-  <p class="cap" style="display:flex;gap:18px;flex-wrap:wrap;max-width:760px"><span>① Ícono como protagonista del statement — módulo <a href="slides.html#fam-a" style="color:var(--emerald-700);font-weight:600">A5</a></span><span>② Ícono en badge circular, grilla de capacidades — módulo <a href="slides.html#fam-b" style="color:var(--emerald-700);font-weight:600">B3</a></span><span>③ Ícono como líder de fila, capacidades de IA — módulo <a href="slides.html#fam-k" style="color:var(--emerald-700);font-weight:600">K2</a></span></p></div>
+  <p class="cap" style="display:flex;gap:18px;flex-wrap:wrap;max-width:760px"><span>① Ícono como protagonista del statement — módulo <a href="slides.html#fam-a" style="color:var(--emerald-700);font-weight:600">A5</a></span><span>② Ícono en badge circular, grilla de capacidades — módulo <a href="slides.html#fam-b" style="color:var(--emerald-700);font-weight:600">B3</a></span><span>③ Ícono como líder de fila, capacidades de AI — módulo <a href="slides.html#fam-k" style="color:var(--emerald-700);font-weight:600">K2</a></span></p></div>
 </section>
 
 <!-- ================= 09 COMPONENTES ================= -->
 <section id="componentes" style="background:var(--paper-50)">
   <div class="inner">
-  <span class="kicker">09 · Componentes</span>
+  <span class="kicker">E.8 · Componentes</span>
   <h2>Botones, chips & cards</h2>
   <p class="lead">Todo redondeado — como el logo. El CTA primario es lima; el institucional, verde profundo. Los chips categorizan; las cards muestran gente, datos y quotes.</p>
 
@@ -1013,7 +982,7 @@
       <p class="cap"><b>Sobre claro</b> (blanco, sage, crema) → borde y texto en <b>verde profundo #133825</b> (default), <b>verde #009145</b> para categoría destacada, o <b>negro #161616</b> para etiqueta neutra.</p></div>
     <div>
       <div class="comp-canvas" style="background:var(--green-950);min-height:132px;align-content:flex-start">
-        <span class="pill pill-cream">AgTech</span>
+        <span class="pill pill-cream">Hands-on</span>
         <span class="pill" style="color:var(--lime-500);border-color:var(--lime-500)">Hiring</span></div>
       <p class="cap"><b>Sobre oscuro</b> (verde profundo, negro) → borde y texto en <b>crema #ECE3DB</b> (default) o <b>lima #A2FF00</b> para el chip destacado — uno solo por pieza.</p></div></div>
 
@@ -1025,7 +994,7 @@
         <img class="wm-s" src="assets/magoya-wordmark-cream.svg" alt="Magoya">
         <span class="chip-open">Open role</span></div>
       <h4>We’re<br><span class="arrow">→</span> Hiring</h4>
-      <p>UX/UI Designer · AgTech Expert</p>
+      <p>UX/UI Designer · Agronomist</p>
       <div class="foot">
         <a class="mail" href="mailto:people@magoya.com" style="text-decoration:none">people@magoya.com</a></div></div>
     <div class="quote-card">
@@ -1033,7 +1002,7 @@
       <div class="q">
         <p>“Magoya’s expertise in UX, digital ag platform development, and agronomic know-how made our transformation possible.”</p>
         <div class="who"><b>Varina Baldi</b>Founder &amp; CEO</div></div></div>
-    <div class="stat"><div class="n">95%</div><div class="d">Retención de clientes</div><div class="src">2017–2026</div></div>
+    <div class="stat"><div class="n">95%</div><div class="d">De nuestros clientes es promotor de Magoya</div><div class="src">Brand Playbook · oct 2026</div></div>
     <div class="stat on-dark"><div class="n">5+</div><div class="d">Años de relación promedio</div><div class="src">Promedio de cartera</div></div></div>
 
   <h3>Logo wall — Who we build with</h3>
@@ -1047,282 +1016,12 @@
     <img src="assets/logos/clients/precision-planting.svg" alt="Precision Planting" style="height:34px;object-fit:contain;filter:grayscale(1);opacity:.75"></div></div>
 </section>
 
-<!-- ================= 10 APLICACIONES ================= -->
-<section id="aplicaciones" style="background:var(--sage-50)">
-  <div class="inner">
-  <span class="kicker">10 · Aplicaciones</span>
-  <h2>La marca en acción</h2>
-  <p class="lead">Cómo se ve Magoya en cada canal: web, redes sociales, presentaciones y piezas de contenido. La portada del hero es la <b>pieza canónica</b> — foto aérea + overlay verde profundo + wordmark crema + display con acento lima: si una pieza nueva no conversa con ella, no es Magoya.</p>
-
-  <h3>Web — hero canónico</h3>
-  <div class="app-piece app-social" style="min-height:380px">
-    <img class="wm" src="assets/magoya-wordmark-cream.svg" alt="Magoya">
-    <span class="cta">Contact us</span>
-    <h4 style="font-size:44px">Digital product development <span style="color:var(--lime-500)">for agribusiness</span></h4></div>
-  <p class="cap" style="max-width:680px">La receta: foto aérea real · scrim verde profundo 55–86% · wordmark crema arriba-izquierda · CTA lima arriba-derecha · display ExtraBold abajo-izquierda con una frase en lima.</p>
-
-  <h3>Web — favicon & app icon aplicados</h3>
-  <div style="max-width:420px;border-radius:10px 10px 0 0;overflow:hidden;border:1px solid var(--color-hairline)">
-    <div style="background:#DEE1E6;padding:8px 10px 0;display:flex;gap:6px">
-      <div style="background:var(--white);border-radius:8px 8px 0 0;padding:8px 14px;display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink-900);max-width:200px">
-        <img src="assets/favicon/favicon-32.png" alt="" style="width:16px;height:16px;flex:0 0 auto">
-        <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Magoya · Brand System</span></div></div>
-    <div style="background:var(--white);padding:8px 14px;font-size:11px;color:var(--gray-600);font-family:var(--font-mono)">brand.magoya.com</div></div>
-  <p class="cap" style="max-width:680px">El mismo avatar "m" ya está aplicado como favicon real en las 9 páginas de este sistema — no es una maqueta.</p>
-  <div class="grid g4" style="max-width:680px">
-    <div class="sw"><div class="chip" style="background:var(--emerald-500);display:flex;align-items:center;justify-content:center"><img src="assets/favicon/favicon-16.png" style="width:16px;height:16px"></div><div class="meta"><b>16px</b><span>favicon-16.png</span><a href="assets/favicon/favicon-16.png" download style="font-size:11px;color:var(--emerald-700);font-weight:600">bajar ↓</a></div></div>
-    <div class="sw"><div class="chip" style="background:var(--emerald-500);display:flex;align-items:center;justify-content:center"><img src="assets/favicon/favicon-32.png" style="width:24px;height:24px"></div><div class="meta"><b>32px</b><span>favicon-32.png</span><a href="assets/favicon/favicon-32.png" download style="font-size:11px;color:var(--emerald-700);font-weight:600">bajar ↓</a></div></div>
-    <div class="sw"><div class="chip" style="background:var(--emerald-500);display:flex;align-items:center;justify-content:center"><img src="assets/favicon/favicon-180.png" style="width:40px;height:40px"></div><div class="meta"><b>180px</b><span>apple-touch-icon</span><a href="assets/favicon/favicon-180.png" download style="font-size:11px;color:var(--emerald-700);font-weight:600">bajar ↓</a></div></div>
-    <div class="sw"><div class="chip" style="background:var(--emerald-500);display:flex;align-items:center;justify-content:center"><img src="assets/favicon/favicon-512.png" style="width:44px;height:44px"></div><div class="meta"><b>512px</b><span>PWA / app icon</span><a href="assets/favicon/favicon-512.png" download style="font-size:11px;color:var(--emerald-700);font-weight:600">bajar ↓</a></div></div></div>
-  <p class="cap" style="max-width:680px">Implementación: <code>&lt;link rel="icon" type="image/svg+xml" href="favicon.svg"&gt;</code> + PNG de respaldo en 32/16px + <code>apple-touch-icon</code> 180px. El SVG fuente es <code>assets/avatars/avatar-m.svg</code> — mismo archivo, sin editar.</p>
-
-  <h3>Redes sociales — feed (1:1)</h3>
-  <div class="grid g3">
-    <div style="aspect-ratio:1;border-radius:var(--radius-lg);overflow:hidden;position:relative;background:linear-gradient(180deg,rgba(12,33,23,.35),rgba(12,33,23,.8)),url('assets/photos/field-terraces.jpg') center/cover;color:var(--cream-50);padding:26px;display:flex;flex-direction:column">
-      <img src="assets/magoya-wordmark-cream.svg" alt="Magoya" style="width:86px">
-      <div style="margin-top:auto;font-size:34px;font-weight:800;letter-spacing:-0.03em;line-height:1.03">AgTech challenges demand <span style="color:var(--lime-500)">more than code</span>.</div></div>
-    <div style="aspect-ratio:1;border-radius:var(--radius-lg);overflow:hidden;position:relative;background:var(--cream-100);padding:26px;display:flex;flex-direction:column">
-      <img src="assets/avatars/avatar-face.svg" alt="" style="width:52px">
-      <div style="margin-top:18px;font-size:30px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--green-900);max-width:92%">We're hiring: UX/UI Designer, AgTech expert</div>
-      <span style="margin-top:auto;align-self:flex-start;font-size:14px;font-weight:700;color:var(--green-900)">people@magoya.com →</span></div>
-    <div style="aspect-ratio:1;border-radius:var(--radius-lg);overflow:hidden;position:relative;background:var(--green-950);color:var(--cream-50);padding:26px;display:flex;flex-direction:column">
-      <span style="align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--cream-100);color:var(--cream-100);padding:4px 12px;border-radius:999px">Case study</span>
-      <div style="margin-top:auto;font-size:110px;font-weight:800;letter-spacing:-0.04em;color:var(--lime-500);line-height:.85">95%</div>
-      <div style="font-size:17px;font-weight:600;color:var(--cream-100);margin-top:10px;max-width:70%">client retention across engagements</div>
-      <img src="assets/illus/char-jumping.svg" alt="" style="position:absolute;right:-30px;bottom:-36px;width:52%"></div></div>
-  <p class="cap" style="max-width:680px">Tres recetas de feed: <b>foto</b> (statement sobre aérea) · <b>crema</b> (aviso con avatar de comunidad) · <b>dark</b> (dato lima + personaje recortado). Rotarlas mantiene la grilla variada y reconocible.</p>
-
-  <h3>Redes sociales — story (9:16), banner y avatar</h3>
-  <div class="grid" style="grid-template-columns:220px 1fr;gap:20px;align-items:start">
-    <div style="aspect-ratio:9/16;border-radius:var(--radius-lg);overflow:hidden;position:relative;display:flex;flex-direction:column;background:var(--green-950)">
-      <div style="flex:1.1;background:linear-gradient(180deg,rgba(12,33,23,.15),rgba(12,33,23,.7)),url('assets/photos/field-bali.jpg') center/cover"></div>
-      <div style="flex:1;padding:20px;color:var(--cream-50);position:relative">
-        <img src="assets/magoya-wordmark-cream.svg" alt="Magoya" style="width:78px">
-        <div style="font-size:25px;font-weight:800;letter-spacing:-0.03em;line-height:1.08;margin-top:10px">Senior AgTech talent, embedded in your team</div>
-        <span style="display:inline-block;background:var(--lime-500);color:var(--ink-900);font-size:13px;font-weight:700;padding:9px 16px;border-radius:var(--radius-btn);margin-top:14px">Swipe up</span></div></div>
-    <div style="display:flex;flex-direction:column;gap:20px;min-width:0">
-      <div class="lnkbn">
-        <div class="panel">
-          <img src="assets/magoya-wordmark-cream.svg" alt="Magoya">
-          <div>Your Digital Product Strategy and Development Partner</div></div>
-        <div class="pw2"><img src="assets/photos/cami-agtech-bw.jpg" alt="Camila López Colmano — hombros y remera de Magoya" style="object-position:center 68%"></div>
-        <span class="rule"></span></div>
-      <div class="lnkbn">
-        <div class="panel">
-          <img src="assets/magoya-wordmark-cream.svg" alt="Magoya">
-          <div>Your Digital Product Strategy and Development Partner</div></div>
-        <div class="pw2"><img src="assets/photos/leo-dopacio-bw.jpg" alt="Leo Dopacio — hombros y remera de Magoya" style="object-position:center 64%"></div>
-        <span class="rule"></span></div>
-      <div class="lnkbn">
-        <div class="panel">
-          <img src="assets/magoya-wordmark-cream.svg" alt="Magoya">
-          <div>Your Digital Product Strategy and Development Partner</div></div>
-        <div class="pw2"><img src="assets/photos/varu-baldi-bw.jpg" alt="Varina Baldi — hombros y remera de Magoya" style="object-position:center 60%"></div>
-        <span class="rule"></span></div>
-      <div style="display:flex;gap:20px;align-items:center">
-        <img src="assets/avatars/avatar-face.svg" alt="Avatar de perfil" style="width:84px;border-radius:50%">
-        <img src="assets/avatars/avatar-m.svg" alt="Avatar m" style="width:84px;border-radius:50%">
-        <p class="cap" style="max-width:340px">Avatar de perfil: la <b>cara</b> para redes de comunidad (IG, X), la <b>m</b> para canales corporativos (LinkedIn). <b>Banner de LinkedIn:</b> panel negro sólido a la izquierda con wordmark crema y tagline <b>siempre nítidos</b> + foto limpia a la derecha — cuerpo en B&N con blur sutil, hombros y cuello reconocibles como persona sin mostrar la cara, y el <b>wordmark de la remera completo y sin nada encima</b> — + filete verde digital al borde. Tres personas reales, misma receta.</p></div></div></div>
-
-  <h3>Presentaciones</h3>
-  <p class="note" style="max-width:720px">El sistema completo de slides vive en <a href="slides.html" style="color:var(--emerald-700);font-weight:600">módulos de presentación</a>: 41 módulos en 13 familias con la escala del diseñador (126/84/56/42pt), lienzos blanco/sage, un golpe de lima por slide y máximo dos recursos gráficos. Cada módulo se exporta a .pptx. Las piezas comerciales (one-pager, flyers) están en <a href="pieces.html" style="color:var(--emerald-700);font-weight:600">plantillas comerciales</a>.</p>
-
-  <h3>Contenido — módulo de métricas</h3>
-  <div class="grid g2">
-    <div class="app-piece app-metrics" style="min-height:0">
-      <span class="k">Case study</span>
-      <h4>Build a digital product<br>for an Input Company</h4>
-      <div class="km">Key Metrics</div>
-      <div class="nums">
-        <div><div class="n">25k</div><div class="d">Delivered recommendations</div></div>
-        <div><div class="n">3k</div><div class="d">Monthly Active Users (MAU)</div></div></div></div>
-    <div class="app-piece" style="background:var(--sage-50);border:1px solid var(--color-hairline);padding:34px;display:block;min-height:340px;position:relative;overflow:hidden">
-      <span class="pill">Our footprint</span>
-      <h4 style="font-size:38px;font-weight:800;letter-spacing:-0.03em;line-height:1.06;margin:14px 0 18px;max-width:62%">People of the world, experts in Ag</h4>
-      <div style="font-size:15px;font-weight:600;color:var(--green-900);max-width:56%">Buenos Aires · São Paulo · Santa Fe · California</div>
-      <img src="assets/illus/char-experts-talking.svg" alt="" style="position:absolute;right:-26px;bottom:-30px;width:44%"></div></div>
-
-  <h3>Especificaciones de export</h3>
-  <div class="dodont">
-    <div class="dd">
-      <span class="h">Hacer</span>
-      <ul>
-      <li><b>Slides:</b> 16:9 (1920×1080) · margen interior = 7% del ancho en todos los lados · tipografía 126/84/56/42pt.</li>
-      <li><b>Favicon / app icon:</b> avatar “m” · 16/32/180/512px · el círculo llega al borde del lienzo, sin padding extra.</li>
-      <li><b>Social:</b> feed 1:1 (1080×1080) · <b>carrusel retrato 4:5 (1080×1350)</b> · stories 9:16 (1080×1920, zona segura 96px arriba/abajo) · wordmark arriba-izquierda, CTA lima arriba-derecha. Los 13 formatos de red viven en Magoya Studio.</li>
-      <li><b>Print:</b> A4 con sangrado 3mm · validar CMYK con prueba de color (lima y verde digital pierden saturación en papel).</li>
-      </ul></div></div></div>
-</section>
-
-<!-- ================= 11 MERCH ================= -->
-<section id="merch" style="background:var(--paper-50)">
-  <div class="inner">
-  <span class="kicker">11 · Merch & indumentaria</span>
-  <h2>La marca puesta</h2>
-  <p class="lead">Regla madre del merch (del modelo de producción del buzo): <b>verde profundo + crema, discreto y premium</b>. Wordmark chico en pecho izquierdo, monograma en espalda, patrón de avatares solo en interiores/forros. Nada de estampas gigantes ni lima en textil. <b>El merch se muestra siempre con foto/render real</b> — los esquemas de abajo son especificación de producción, no presentación.</p>
-
-  <h3>Catálogo de merch — fotos reales</h3>
-  <p class="note" style="max-width:760px;margin-bottom:18px">Regla: <b>el merch se muestra SIEMPRE con foto o render real del producto</b> — nunca con ilustración ni esquema vectorial. Cada producto abajo tiene su especificación de aplicación; los que aún no tienen foto muestran el slot con el nombre de archivo esperado.</p>
-  <div class="grid g3" id="merch-catalogo"></div>
-  <p class="cap" style="max-width:760px">Para completar el catálogo: dejar las fotos en <code style="font-family:var(--font-mono);font-size:11.5px">assets/photos/merch/</code> con el nombre indicado en cada slot (JPG, lado largo ≥1600px). Se muestran solas al recargar.</p>
-
-  <h3 style="margin-top:28px">Especificación de producción — Buzo, Propuesta 1</h3>
-  <p class="note" style="max-width:760px;margin-bottom:14px">El buzo ya tiene render real (arriba, primer producto del catálogo) y define el estándar de calidad para el resto del merch textil — no es la referencia a mostrar primero, es la guía de medidas y colocación:</p>
-  <div class="grid" style="grid-template-columns:1.4fr 1fr;gap:24px;align-items:start">
-    <img src="assets/photos/merch-buzo.jpg" alt="Buzo Magoya verde profundo — frente con wordmark crema en pecho, espalda con monograma m" style="border-radius:var(--radius-lg);width:100%">
-    <div>
-      <div class="dodont">
-    <div class="dd">
-      <span class="h">Hacer</span>
-      <ul>
-      <li>Frente: wordmark crema bordado, pecho izquierdo.</li>
-      <li>Espalda: monograma “m” crema bajo el cuello.</li>
-      <li>Forro de capucha: trama de avatares crema/verde (tile 80×80mm, espaciado 20mm).</li>
-      <li>Parche canguro: “Magoya · since 2017” 65×35mm.</li>
-      <li>Colorways aprobados: verde profundo · crema · negro · gris.</li>
-      </ul></div></div>
-      <p class="cap" style="margin-top:12px">El vector de bordado del pecho (60mm, crema) se baja de la <a href="library.html#animado" style="color:var(--emerald-700);font-weight:600">librería de assets</a>; el resto de los vectores de producción (monograma 30mm, trama capucha, parche) siguen en la carpeta “Diseño buzos”. Remera, gorra, vaso y cuaderno: pendiente foto real — hasta entonces, solo especificación.</p></div></div>
-
-  <p class="note" style="max-width:760px;margin-top:20px">La referencia de calidad es el render del buzo (guía de producción con colores y espaciados). Toda pieza textil se valida contra ella: <b>bordado antes que estampa</b>, tono sobre tono antes que contraste, crema #ECE3DB y verde #133825 como dupla fija, y <b>sin lima en textil</b>.</p></div>
-</section>
-
-<script>
-/* Catálogo de merch: intenta cargar la foto real; si no existe, muestra el slot
-   con el nombre de archivo esperado. Sin ilustraciones. */
-(function(){
-  const ICO = {
-    hoodie:'<path d="M8 8l4-2 1.5 2.2a3 3 0 004.9 0L20 6l4 2 2.5 5.5-2.5 1.2V26H8V14.7L5.5 13.5z"/><path d="M12 6l4 4 4-4"/>',
-    tee:'<path d="M9 8l4-2 1.5 2.2a3 3 0 004.9 0L21 6l4 2 2 5-2.4 1.1V26H8.4V14.1L6 13z"/>',
-    cap:'<path d="M5 20c0-6.6 4.9-11 11-11s11 4.4 11 11"/><path d="M4 20h24c1.9 0 3 1.3 2.6 2.5-6.5-1.6-18.7-1.6-25.2 0C1 21.3 2.1 20 4 20z"/><circle cx="16" cy="15.5" r="2.2"/>',
-    socks:'<path d="M9 4h5v11c0 3 1.5 4.5 3.5 5.5l3 1.6c2 1.1 2.6 3.5 1.4 5.3-1.2 1.9-3.7 2.3-5.5 1L9 24c-2.4-1.7-3.6-4.2-3.6-7V4z"/><path d="M9 8h5"/>',
-    backpack:'<rect x="7" y="9" width="18" height="19" rx="4"/><path d="M12 9V7a4 4 0 018 0v2M11 15h10M11 21h4"/>',
-    tumbler:'<path d="M11 4h10v3H11z"/><path d="M11.5 7h9l-1 19a2 2 0 01-2 1.8h-3a2 2 0 01-2-1.8z"/><path d="M12.5 14h8"/>',
-    notebook:'<rect x="7" y="4" width="18" height="24" rx="3"/><path d="M11 4v24"/><path d="M15 10h6M15 15h6"/>',
-    sticker:'<circle cx="12.5" cy="12.5" r="6"/><circle cx="21" cy="20" r="6"/><path d="M9 26l3-3"/>',
-    people:'<circle cx="11" cy="10" r="3.5"/><circle cx="21" cy="11" r="3"/><path d="M4 26c0-4.4 3.1-7 7-7s7 2.6 7 7M18.5 20.5c1.6-1 3.6-1.2 5.5-.5 2.4.9 4 3 4 6"/>'
-  };
-  const ITEMS = [
-    {f:'merch-buzo.jpg', dir:'', ic:'hoodie', n:'Buzo (hoodie)', spec:'Verde profundo. Wordmark crema bordado pecho izq (60mm) · monograma “m” crema espalda (30mm) · forro de capucha con trama de avatares · parche canguro “since 2017” (65×35mm).'},
-    {f:'remera-blanca.jpg', ic:'tee', n:'Remera blanca', spec:'Blanca con wordmark verde digital al frente, o estampa chica pecho izq. Variante de equipo para eventos y fotos.'},
-    {f:'remera-negra.jpg', ic:'tee', n:'Remera negra', spec:'Negra #161616 con wordmark crema o verde digital. La variante más urbana del set.'},
-    {f:'gorra.jpg', ic:'cap', n:'Gorra', spec:'Negra o verde profundo con parche/bordado del monograma “m” al frente. Nunca el wordmark completo — a ese tamaño no respira.'},
-    {f:'medias.jpg', ic:'socks', n:'Medias', spec:'Blancas y negras con “m” tejida en el puño. Detalle de marca, no billboard.'},
-    {f:'mochila.jpg', ic:'backpack', n:'Mochila', spec:'Negra técnica, wordmark chico bordado en el panel frontal o lateral. Discreta y premium.'},
-    {f:'termo.jpg', ic:'tumbler', n:'Vaso térmico', spec:'Acero o crema, wordmark verde digital al centro. Sin patrones sobre el cuerpo.'},
-    {f:'cuaderno.jpg', ic:'notebook', n:'Cuaderno / notes', spec:'Tapa verde profundo o crema, wordmark y paño de semicírculos naciendo del borde inferior.'},
-    {f:'stickers.jpg', ic:'sticker', n:'Stickers', spec:'Set de avatares (go · o · cara · m) + wordmark. Troquelado circular, verde digital sobre blanco.'},
-    {f:'equipo-merch.jpg', ic:'people', n:'El equipo usándolo', spec:'La foto que más vale: gente real del equipo con el merch puesto, en contexto de trabajo. Para employer brand y redes.'},
-  ];
-  const box = document.getElementById('merch-catalogo');
-  if(!box) return;
-  ITEMS.forEach(it=>{
-    const path = (it.dir===''? 'assets/photos/' : 'assets/photos/merch/') + it.f;
-    const card = document.createElement('div');
-    card.style.cssText = 'background:var(--white);border:1px solid var(--color-hairline);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column';
-    card.innerHTML =
-      '<div class="ph" style="aspect-ratio:4/3;background:var(--sage-50);display:flex;align-items:flex-end;justify-content:flex-start;padding:16px;position:relative;overflow:hidden"></div>' +
-      '<div style="padding:16px"><b style="font-size:14.5px;display:block">'+it.n+'</b>' +
-      '<p style="font-size:12.5px;color:var(--gray-600);line-height:1.45;margin-top:5px">'+it.spec+'</p></div>';
-    const ph = card.querySelector('.ph');
-    const img = new Image();
-    img.onload = ()=>{ ph.innerHTML=''; ph.style.padding='0'; img.style.cssText='width:100%;height:100%;object-fit:cover'; img.alt=it.n+' Magoya'; ph.appendChild(img); };
-    img.onerror = ()=>{ ph.innerHTML =
-      '<span style="position:absolute;top:10px;left:10px;font-size:9.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-600);border:1.5px solid var(--gray-400);padding:3px 8px;border-radius:999px;background:var(--sage-50)">Placeholder</span>' +
-      '<div style="position:relative">' +
-        '<svg viewBox="0 0 32 32" width="58" height="58" fill="none" stroke="#6E756D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+(ICO[it.ic]||'')+'</svg>' +
-        '<div style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-top:6px;word-break:break-all">'+it.f+'</div>' +
-      '</div>'; };
-    img.src = path;
-    box.appendChild(card);
-  });
-})();
-</script>
-
-<!-- ================= 12 PAPELERÍA ================= -->
-<section id="papeleria">
-  <div class="inner">
-  <span class="kicker">12 · Papelería & corporativo</span>
-  <h2>El logo en documentos</h2>
-  <p class="lead">Membrete, firma de email y reglas para documentos del día a día — donde la marca más se degrada si no hay sistema.</p>
-
-  <div class="grid g2" style="align-items:start">
-    <div>
-      <div style="aspect-ratio:210/297;background:var(--white);border:1px solid var(--color-hairline);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.07);padding:9% 10%;display:flex;flex-direction:column;container-type:inline-size">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <img src="assets/magoya-wordmark-green.svg" alt="Magoya" style="width:20cqw">
-          <span style="font-size:2cqw;color:var(--gray-600)">Buenos Aires, 3 de agosto 2026</span></div>
-        <div style="margin-top:12cqw;display:flex;flex-direction:column;gap:2.6cqw">
-          <div style="height:2cqw;width:38%;background:#E9E9E4;border-radius:99px"></div>
-          <div style="height:1.6cqw;width:92%;background:#F0F0EC;border-radius:99px"></div>
-          <div style="height:1.6cqw;width:88%;background:#F0F0EC;border-radius:99px"></div>
-          <div style="height:1.6cqw;width:94%;background:#F0F0EC;border-radius:99px"></div>
-          <div style="height:1.6cqw;width:56%;background:#F0F0EC;border-radius:99px"></div>
-          <div style="height:1.6cqw;width:90%;background:#F0F0EC;border-radius:99px;margin-top:2cqw"></div>
-          <div style="height:1.6cqw;width:84%;background:#F0F0EC;border-radius:99px"></div></div>
-        <div style="margin-top:auto;border-top:2px solid var(--emerald-500);padding-top:2.4cqw;display:flex;justify-content:space-between;align-items:center">
-          <span style="font-size:1.9cqw;color:var(--gray-600)">magoya.com · info@magoya.com · Buenos Aires / California</span>
-          <img src="assets/avatars/avatar-m.svg" alt="" style="width:4.6cqw"></div></div>
-      <p class="cap" style="margin-top:10px"><b>Membrete A4.</b> Wordmark verde arriba-izquierda (20% del ancho), texto en Manrope (fallback Arial), pie con filete verde digital + avatar “m”. Sin marcas de agua ni fondos.</p></div>
-    <div>
-      <div style="background:var(--white);border:1px solid var(--color-hairline);border-radius:12px;padding:26px">
-        <p style="font-size:13.5px;color:var(--gray-600);margin-bottom:18px">— Saludos,</p>
-        <div style="display:flex;gap:18px;align-items:center">
-          <img src="assets/downloads/magoya-firma-animada.gif" alt="Magoya" style="width:132px;height:auto;display:block">
-          <div style="border-left:3px solid var(--emerald-500);padding-left:16px">
-            <b style="font-size:15px">Nombre Apellido</b>
-            <div style="font-size:13px;color:var(--gray-600)">Rol · Magoya</div>
-            <div style="font-size:13px;margin-top:4px"><a href="#papeleria" style="color:var(--emerald-700);font-weight:600;border-bottom:none">magoya.com</a> · +54 9 11 0000 0000</div>
-            <div style="display:flex;gap:12px;align-items:center;margin-top:8px">
-              <a href="#" aria-label="LinkedIn de Magoya" style="display:inline-flex"><img src="assets/studio/icons/social/linkedin.svg" alt="LinkedIn" style="width:15px;height:15px"></a>
-              <a href="ai-en-campo.html" style="font-size:11.5px;font-weight:700;color:var(--emerald-700);text-decoration:none;border-bottom:none;display:inline-flex;align-items:center;gap:3px">IA en campo <span style="color:var(--gray-500)">↗</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="cap" style="margin-top:10px"><b>Firma de email.</b> Va <b>siempre el wordmark</b> — nunca los avatares ni la cara. Estático o <b>animado</b> (arriba se ve en vivo: las letras aparecen una por una y se detiene sobre el logo completo). Filete verde + nombre 700 + rol y datos en gris. Debajo del contacto, dos elementos opcionales: el <b>ícono de LinkedIn</b> (16px) y el link a <b>IA en campo</b> — la única marca anexa que amerita su propia línea en la firma. <b>El LinkedIn es a elección de cada persona:</b> la página de Magoya como base, o el perfil personal si lo prefiere — cada uno carga el link que le corresponda. Sin banners, sin frases legales eternas, sin más logos de redes que ese.</p>
-
-      <h3>Descargas de papelería</h3>
-      <div class="grid g2" style="gap:12px">
-        <a class="dlbox" href="assets/downloads/doc-header.svg" download><span class="fmt vector">SVG</span><b>Header de documento</b><span class="sp">2480×300 · vectorial</span></a>
-        <a class="dlbox" href="assets/downloads/doc-footer.svg" download><span class="fmt vector">SVG</span><b>Footer de documento</b><span class="sp">2480×200 · filete verde</span></a>
-        <a class="dlbox" href="assets/downloads/magoya-firma-estatica.png" download><span class="fmt raster">PNG</span><b>Firma estática</b><span class="sp">PNG 400×140 · si el correo no anima</span></a>
-        <a class="dlbox" href="assets/downloads/magoya-firma-animada.gif" download><span class="fmt raster">GIF</span><b>Firma animada</b><span class="sp">GIF 200×70 · una pasada, sin loop · para Gmail</span></a>
-        <a class="dlbox" href="assets/magoya-wordmark-animado.svg" download><span class="fmt vector">SVG</span><b>Logo animado (web)</b><span class="sp">para sitio y HTML</span></a>
-      </div>
-
-      <h3>Cómo se sube la firma a Gmail</h3>
-      <ol class="howto">
-        <li>Subí el GIF a un lugar público (Drive con link público, el sitio, cualquier hosting): <b>Gmail no permite insertar un archivo local en la firma</b>, necesita una URL.</li>
-        <li>Gmail → <b>Configuración → Ver todos los ajustes → General → Firma → Crear nueva</b>.</li>
-        <li>Escribí el texto primero (Nombre, Rol · Magoya, magoya.com, teléfono) en <b>Arial</b> — Gmail no soporta Manrope.</li>
-        <li>Cursor donde va el logo → <b>Insertar imagen → Dirección web (URL)</b> → pegá la URL → tamaño <b>Pequeño</b> (~120px).</li>
-        <li>Guardá los cambios al pie de la página. Donde el cliente no anime GIF se ve el último frame, que ya es el logo completo.</li>
-        <li>Si querés sumar el ícono de LinkedIn y el link a IA en campo (como en el ejemplo de arriba): insertalos igual, con <b>Insertar imagen → Dirección web (URL)</b> el ícono, enlazado a <b>la página de Magoya o a tu perfil personal</b> (los dos son válidos, elegís vos), y como texto con link el link de IA en campo.</li>
-      </ol>
-      <p class="cap"><b>Cómo está construido:</b> el wordmark oficial en verde digital; las letras entran de a una con un leve rise y <b>se detiene sobre el logo completo</b> — 12 frames, <b>sin loop</b> (una sola pasada, nunca vuelve a blanco), fondo blanco (los clientes de correo no manejan bien la transparencia). Se genera desde el SVG del wordmark, nunca se redibuja.</p>
-
-      <h3 style="margin-top:34px">Reglas en documentos</h3>
-      <div class="dodont">
-    <div class="dd">
-      <span class="h">Hacer</span>
-      <ul>
-      <li>Docs y slides internos: wordmark en esquina superior izquierda, tamaño discreto (≤ 1/5 del ancho).</li>
-      <li>Tipografía de documentos: Manrope; si no está instalada (Google Docs de terceros, mails), <b>Arial</b> — nunca otra.</li>
-      <li>PDF externos siempre desde las plantillas de <a href="pieces.html" style="color:var(--emerald-700)">piezas comerciales</a>.</li>
-      </ul></div>
-    <div class="dd avoid">
-      <span class="h">Evitar</span>
-      <ul>
-      <li>Logo como marca de agua gigante, en gris lavado, o repetido por página.</li>
-      <li>Avatares como viñetas de lista o adornos — son identidad, no decoración.</li>
-      </ul></div></div></div></div></div>
-</section>
-
 <!-- ================= 13 REGLAS ================= -->
 <section id="reglas">
   <div class="inner">
-  <span class="kicker">13 · Reglas de oro</span>
+  <span class="kicker">E.9 · Reglas de oro visuales</span>
   <h2>Lo que nunca se negocia</h2>
+  <p class="lead">Las reglas visuales. Las reglas sobre cómo escribimos están en <a href="lenguaje.html#reglas">C · Lenguaje</a> y en el <a href="ai.html">checklist verbal de H</a>.</p>
   <div class="dodont">
     <div class="dd">
       <span class="h">Hacer</span>
@@ -1342,7 +1041,7 @@
       <ul>
       <li><b>Emojis</b> en títulos o en cualquier texto — salvo manitos que señalan y banderas de países.</li>
       <li>Resaltador sólido detrás de palabras. Usar color o subrayado lima.</li>
-      <li>Gradientes glossy, 3D, simetría perfecta, estética “hecha por IA”.</li>
+      <li>Gradientes glossy, 3D, simetría perfecta, estética “hecha por AI”.</li>
       <li>Slide 100% negra o 100% verde. Siempre equilibrio.</li>
       <li>Personajes con rostro, estilo infantil o monoline — quedaron descartados.</li>
       <li>La metáfora del <b>puzzle</b> (brand viejo) queda retirada en todas las piezas — su reemplazo narrativo es el crecimiento (paño de semicírculos).</li>
@@ -1353,23 +1052,10 @@
 </section>
 
 
-<!-- ================= MARCA ANEXA ================= -->
-<section id="anexa" style="background:var(--ink-950)">
-  <div class="inner">
-    <div class="grid" style="grid-template-columns:300px 1fr;gap:36px;align-items:center">
-      <img src="assets/pieces/fecha-marcada-ig-portrait.svg" alt="Pieza IA en campo: webinar 6 AGO 11:00 h ARG" style="width:100%;border-radius:var(--radius-lg);display:block">
-      <div>
-        <span class="kicker" style="border-color:var(--lime-500);color:var(--lime-500)">Marca anexa</span>
-        <h2 style="color:var(--cream-50)">IA en campo</h2>
-        <p class="lead" style="color:var(--cream-200);max-width:60ch">La línea de contenido educativo de IA para el agro tiene <b style="color:var(--cream-50)">su propio manual</b>: no es una sección de este brand, es una marca anexa que comparte el ADN (Manrope, verdes oficiales, wordmark intocable) pero maneja su propio lienzo, su propio ruido y su propia voz.</p>
-        <p class="cap" style="color:var(--gray-400);max-width:60ch">Las piezas se producen en Magoya Studio a partir de plantillas — la de la izquierda es real, exportada del Studio: template <code style="font-family:var(--font-mono);font-size:11.5px">fecha-marcada</code>, formato <code style="font-family:var(--font-mono);font-size:11.5px">ig-portrait</code> (1080×1350).</p>
-        <a href="ai-en-campo.html" style="display:inline-block;background:var(--lime-500);color:var(--ink-900);text-decoration:none;font-weight:700;font-size:14.5px;padding:13px 24px;border-radius:var(--radius-btn);margin-top:18px;border:none">Abrir el manual de IA en campo →</a></div></div></div>
-</section>
-
 </main>
 
 <footer>
-  <div>Magoya Brand System v1.1 · consolida guía de producción + moodboard 2026 + módulos del diseñador · <a href="slides.html">módulos de slides</a> · <a href="app/">Deck Studio</a></div>
+  <div>Magoya Brand System v2.0 · E · Identidad visual · se conserva hasta revisarla · <a href="piezas.html">F · Piezas y plantillas</a> · <a href="app/">Deck Studio</a></div>
 </footer>
 
 
@@ -1389,12 +1075,8 @@
     tipografia:   ['Manrope variable',          'TTF 200–800 + licencia OFL · 70 KB', 'assets/downloads/magoya-manrope.zip', 'bajar fuente'],
     fotografia:   ['Banco de fotos',            '5 aéreas + retrato B&N + merch · 6.8 MB', 'assets/downloads/magoya-fotos.zip', 'bajar fotos'],
     ilustracion:  ['Ilustración & motivos',     '4 personajes + paño + marcas · SVG · 29 KB', 'assets/downloads/magoya-ilustracion.zip', 'bajar ilustración'],
-    iconografia:  ['Set de íconos',             '16 agro + 10 IA + 13 redes · SVG · 20 KB', 'assets/downloads/magoya-iconos.zip', 'bajar íconos'],
-    aplicaciones: ['Logos de clientes',         '31 logos reales · SVG · 306 KB', 'assets/downloads/magoya-logos-clientes.zip', 'bajar logos'],
-    'ai-en-campo':['Kit IA en campo',           'doodles + badge + logos IA/redes · 19 KB', 'assets/downloads/magoya-ai-en-campo.zip', 'bajar kit'],
-    merch:        ['Referencia de merch',       'render buzo Propuesta 1 · JPG · 321 KB', 'assets/photos/merch-buzo.jpg', 'bajar render'],
-    reglas:       ['Manual completo',           'BRAND.md + tokens · 11 KB', 'assets/downloads/magoya-tokens.zip', 'bajar manual'],
-    anexa:        ['Kit IA en campo',           'doodles + badge + logos IA/redes · 19 KB', 'assets/downloads/magoya-ai-en-campo.zip', 'bajar kit']
+    iconografia:  ['Set de íconos',             '16 agro + 10 AI + 13 redes · SVG · 20 KB', 'assets/downloads/magoya-iconos.zip', 'bajar íconos'],
+    reglas:       ['Manual completo',           'BRAND.md + tokens · 11 KB', 'assets/downloads/magoya-tokens.zip', 'bajar manual']
   };
   var panel=document.getElementById('dlpanel'), t=document.getElementById('dl-ttl'),
       m=document.getElementById('dl-meta'), a=document.getElementById('dl-link'), lb=document.getElementById('dl-label');

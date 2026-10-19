@@ -417,21 +417,26 @@
     body{padding-left:0;padding-right:0}
   }
 
-  /* ---------- topbar: espacios iguales y el grupo de IA al final ---------- */
+  /* ---------- topbar v1.2 (en v2.0 la nav vive en nav.css) ---------- */
   /* los margenes .cl (16px) y .cl2 (10px) hacian que cada par de items tuviera
      una separacion distinta. Ahora todos los items pares estan a la misma
-     distancia y el unico corte estructural es el divisor antes del grupo de IA. */
+     distancia y el unico corte estructural es el divisor antes del grupo de AI. */
   .mg-topbar a.cl,.mg-topbar a.cl2{margin-left:0}
   .mg-topbar .navdiv{margin:0 12px}
-  /* IA en campo es sub-marca: se anuncia con su propia ley, el verde ES el fondo */
+  /* IA en Campo: programa presentado por Magoya, el verde ES el fondo */
   .mg-topbar a.sub{background:var(--emerald-500);color:var(--green-950);font-weight:800}
   .mg-topbar a.sub:hover{background:var(--lime-500);color:var(--green-950)}
   .mg-topbar a.sub.on{box-shadow:inset 0 0 0 2px var(--cream-50)}
 </style>
+<link rel="stylesheet" href="nav.css">
 </head>
 <body>
 <div class="wrap">
-<nav class="mg-topbar"><a href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a><a href="index.html">Inicio</a><a href="brand-book.html">Brand book</a><a href="slides.html" class="cl on">Slides</a><a href="pieces.html">Comerciales</a><a href="icons.html">Iconos</a><a href="library.html">Assets</a><a href="logos.html">Clientes</a><span class="navdiv"></span><a href="ai.html">Integrar con IA</a><a href="ai-en-campo.html" class="sub">IA en campo</a></nav>
+<nav class="mg-topbar">
+  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
+  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html"><i>A</i>Estrategia</a><a href="voz.html"><i>B</i>Voz</a><a href="lenguaje.html"><i>C</i>Lenguaje</a><a href="aplicacion.html"><i>D</i>Aplicación</a><span class="navdiv"></span><a href="brand-book.html"><i>E</i>Identidad visual</a><a href="piezas.html" class="on"><i>F</i>Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub"><i>G</i>IA en Campo</a><a href="ai.html"><i>H</i>Integrar con AI</a>
+  <div class="mg-subnav"><span class="lbl">F · Piezas y plantillas</span><a href="piezas.html">Resumen</a><a href="slides.html" class="on">Slides</a><a href="plantillas.html">Plantillas listas</a><a href="pieces.html">Comerciales</a><a href="piezas.html#papeleria">Papelería</a><a href="piezas.html#merch">Merch</a><a href="library.html">Assets</a><a href="logos.html">Clientes</a></div>
+</nav>
 
 <nav class="side">
   <a href="#fam-a"><span>Apertura</span></a>
@@ -444,14 +449,14 @@
   <a href="#fam-h"><span>Fotografía</span></a>
   <a href="#fam-i"><span>Ilustración</span></a>
   <a href="#fam-j"><span>Personas</span></a>
-  <a href="#fam-k"><span>Tecnología &amp; IA</span></a>
+  <a href="#fam-k"><span>Software &amp; AI</span></a>
   <a href="#fam-l"><span>Clientes</span></a>
   <a href="#fam-m"><span>Portada &amp; cierre</span></a>
   <span class="v">DECK KIT · V1.2</span>
 </nav>
 
   <div class="intro">
-    <p class="crumb"><a href="brand-book.html">Brand book</a> › Deck kit</p>
+    <p class="crumb"><a href="piezas.html">F · Piezas y plantillas</a> › Deck kit</p>
   <p style="font-size:13.5px;color:var(--gray-600);margin:10px 0 0;max-width:70ch">Para usar un módulo sin editar nada, están las <a href="plantillas.html" style="color:var(--emerald-700);font-weight:600">41 plantillas listas para copiar</a> — mismo diseño, con huecos para el texto.</p>
     <span class="eyebrow">Magoya · Deck kit v1.2</span>
     <h1>Sistema de slides</h1>
@@ -462,7 +467,7 @@
     <div class="in">
       <img class="wm" src="assets/magoya-wordmark-cream.svg" alt="Magoya">
       <div class="tag"><span class="chip cream">Deck kit</span><span class="chip lime">41 módulos</span></div>
-      <div class="hl">AgTech challenges<br>demand <em>more than code</em>.</div>
+      <div class="hl">It's built.<br><em>Now let's get it used.</em></div>
       <p class="sb">We partner with modern agribusinesses to design, build, and evolve their products and platforms. Senior teams embedded in yours — technologists, product experts and agronomists.</p>
     </div>
   </div>
@@ -511,7 +516,7 @@
     <div class="slide">
       <div class="pad">
         <span class="kick">Product strategy</span>
-        <div class="t-hero">AgTech<br>challenges demand<br><em>more than code</em>.</div>
+        <div class="t-hero">It's built.<br><em>Now let's get it used.</em></div>
       </div>
     </div>
   </article>
@@ -543,7 +548,7 @@
         <div style="flex:.85"><div class="t-disp">Agenda</div><p class="t-cap" style="margin-top:1.6cqw;max-width:24cqw">45 minutos · 5 bloques</p></div>
         <div style="flex:1.15" class="rows">
           <div class="row"><span class="n accent">01</span><span>Who we are — and how we embed</span></div>
-          <div class="row hl"><span class="n">02</span><span><b>What we've built in AgTech</b></span></div>
+          <div class="row hl"><span class="n">02</span><span><b>What we've built in agriculture</b></span></div>
           <div class="row"><span class="n accent">03</span><span>The Magoya method</span></div>
           <div class="row"><span class="n accent">04</span><span>Investment scenarios</span></div>
           <div class="row"><span class="n accent">05</span><span>Next steps</span></div>
@@ -564,7 +569,7 @@
         <img class="wm-slide" src="assets/magoya-wordmark-cream.svg" alt="Magoya">
         <div style="margin-top:2.6cqw">
           <div style="font-size:12cqw;font-weight:800;letter-spacing:-0.04em;line-height:.9;color:var(--lime-500)">02</div>
-          <div class="t-disp" style="color:var(--cream-50);margin-top:1cqw">What we've built<br>in AgTech</div>
+          <div class="t-disp" style="color:var(--cream-50);margin-top:1cqw">What we've built<br>in agriculture</div>
         </div>
       </div>
     </div>
@@ -646,7 +651,7 @@
           <div class="card dark">
             <h5>Team Extension</h5>
             <p><b style="color:var(--cream-50)">How it works:</b> shared responsibilities inside your product development process.</p>
-            <p><b style="color:var(--cream-50)">Best for:</b> scaling an existing team with AgTech fluency.</p>
+            <p><b style="color:var(--cream-50)">Best for:</b> scaling an existing team with domain fluency in agriculture.</p>
             <div class="foot">Monthly per role · 3-month cycles</div>
           </div>
           <div class="card sage">
@@ -696,9 +701,9 @@
       <div class="pad tight" style="flex-direction:row;gap:6cqw">
         <div style="flex:.9"><div class="t-disp">Proof,<br>not promises.</div></div>
         <div style="flex:1.1;display:grid;grid-template-columns:repeat(2,1fr);gap:3cqw 4cqw;align-content:center">
-          <div><div class="stat-n">95%</div><div class="stat-d">Client retention across engagements</div></div>
+          <div><div class="stat-n">95%</div><div class="stat-d">of our clients are Magoya promoters</div></div>
           <div><div class="stat-n">5+</div><div class="stat-d">Years of average client relationship</div></div>
-          <div><div class="stat-n">21</div><div class="stat-d">AgTech domains covered by the team</div></div>
+          <div><div class="stat-n">21</div><div class="stat-d">ag domains covered by the team</div></div>
           <div><div class="stat-n">10</div><div class="stat-d">Countries where our products operate</div></div>
         </div>
       </div>
@@ -734,7 +739,7 @@
       <div class="chrome dark"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"><span class="pg"></span></div>
       <div class="pad tight" style="justify-content:center;color:var(--cream-50)">
         <div class="mega" style="color:var(--lime-500)">95<small>%</small></div>
-        <p style="font-size:2.1cqw;font-weight:600;color:var(--cream-100);margin-top:.3cqw;max-width:52cqw">Client retention across every engagement since 2017.</p>
+        <p style="font-size:2.1cqw;font-weight:600;color:var(--cream-100);margin-top:.3cqw;max-width:52cqw">of our clients are Magoya promoters.</p>
       </div>
     </div>
   </article>
@@ -750,7 +755,7 @@
       <div class="pad tight">
         <span class="kick">Since 2017</span>
         <div class="big3" style="margin-top:auto">
-          <div class="u"><div class="n">21</div><div class="d">AgTech domains covered in-house</div></div>
+          <div class="u"><div class="n">21</div><div class="d">ag domains covered in-house</div></div>
           <div class="u"><div class="n">10</div><div class="d">Countries running our products</div></div>
           <div class="u"><div class="n">5<span style="color:var(--emerald-700)">+</span></div><div class="d">Years of average client relationship</div></div>
         </div>
@@ -1290,7 +1295,7 @@
       <div class="pad tight" style="z-index:3;align-items:flex-end;text-align:right">
         <div style="max-width:44cqw;margin-top:auto">
           <div class="stat-n" style="font-size:9cqw">21</div>
-          <div class="t-sub" style="margin-top:1cqw">AgTech domains covered by the same team</div>
+          <div class="t-sub" style="margin-top:1cqw">ag domains covered by the same team</div>
           <p class="t-cap" style="margin-top:1.2cqw">Agronomy, logistics, traceability, carbon, retail, crop protection and fifteen more.</p>
         </div>
       </div>
@@ -1357,8 +1362,8 @@
     </div>
   </article>
 
-  <!-- ============ K · TECNOLOGÍA & IA ============ -->
-  <div class="fam" id="fam-k"><h2>K · Tecnología &amp; IA</h2><span class="sub">stack de partners y capacidades de IA</span><label class="all"><input type="checkbox" data-all="K" checked>Familia</label></div>
+  <!-- ============ K · SOFTWARE & AI ============ -->
+  <div class="fam" id="fam-k"><h2>K · Software &amp; AI</h2><span class="sub">stack de partners y capacidades de AI</span><label class="all"><input type="checkbox" data-all="K" checked>Familia</label></div>
 
   <article class="mod" data-mod="K1">
     <div class="mod-h">
@@ -1386,8 +1391,8 @@
   <article class="mod" data-mod="K2">
     <div class="mod-h">
       <label class="pick"><input type="checkbox" data-fam="K" checked aria-label="Incluir K2"></label>
-      <div class="l1"><span class="code">K2</span><span class="nm">Capacidades de IA (logos de modelos + qué hacemos con ellos)</span></div>
-      <p class="when"><b>Cuándo usarlo:</b> cuando la conversación entra en IA y hay que ser explícito. Cada fila nombra una capacidad concreta, no "AI-powered". Los logos de <code>assets/studio/icons/ai/</code> vienen monocromos: van en negro sobre claro.</p>
+      <div class="l1"><span class="code">K2</span><span class="nm">Capacidades de AI (logos de modelos + qué hacemos con ellos)</span></div>
+      <p class="when"><b>Cuándo usarlo:</b> cuando la conversación entra en AI y hay que ser explícito. Cada fila nombra una capacidad concreta, no "AI-powered". Los logos de <code>assets/studio/icons/ai/</code> vienen monocromos: van en negro sobre claro.</p>
     </div>
     <div class="slide">
       <div class="chrome"><img src="assets/magoya-wordmark-black.svg" alt="Magoya"><span class="pg"></span></div>
@@ -1419,7 +1424,7 @@
       <div class="chrome"><img src="assets/magoya-wordmark-black.svg" alt="Magoya"><span class="pg"></span></div>
       <div class="pad tight">
         <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:3cqw">
-          <div class="t-disp" style="font-size:4.2cqw;max-width:46cqw">Nine years inside agribusiness</div>
+          <div class="t-disp" style="font-size:4.2cqw;max-width:46cqw">Nine-plus years inside agribusiness</div>
           <div style="text-align:right"><div class="stat-n" style="font-size:3.4cqw">5+</div><div class="stat-d">years of average relationship</div></div>
         </div>
         <div class="wall">
@@ -1457,7 +1462,7 @@
           <span class="chip cream">Partnership proposal · 2026</span>
         </div>
         <div style="margin-top:auto">
-          <div class="t-hero" style="font-size:6.8cqw">Digital product<br>development<br>for agribusiness</div>
+          <div class="t-hero" style="font-size:6.8cqw">Software and AI<br>for agribusiness</div>
           <p style="font-size:1.75cqw;color:var(--cream-100);margin-top:1.6cqw;max-width:46cqw;line-height:1.5">We design, build and evolve the products and platforms that modern agribusinesses run on.</p>
         </div>
       </div>
@@ -1478,8 +1483,8 @@
           <span class="chip cream">Partnership proposal · 2026</span>
         </div>
         <div style="margin-top:auto;max-width:58cqw">
-          <div class="t-hero" style="font-size:6.8cqw;color:var(--cream-50)">AgTech challenges demand more than code.</div>
-          <p style="font-size:1.75cqw;color:var(--cream-200);margin-top:1.6cqw;max-width:44cqw;line-height:1.5">Clarity, confidence and commitment — the three things a nine-year AgTech partnership is actually made of.</p>
+          <div class="t-hero" style="font-size:6.8cqw;color:var(--cream-50)">Software and AI for agribusiness.</div>
+          <p style="font-size:1.75cqw;color:var(--cream-200);margin-top:1.6cqw;max-width:44cqw;line-height:1.5">We understand the problem with you, build the solution and work to make sure it gets used in the field.</p>
         </div>
       </div>
     </div>
@@ -1748,7 +1753,7 @@ var SPEC={};
 /* --- A · apertura --- */
 SPEC.A1=function(){return [bg(C.w),
   T('PRODUCT STRATEGY',{x:7.5,y:8,w:60,h:2.6,s:1.5,b:true,c:C.em7,cs:1.8}),
-  T('AgTech challenges\ndemand more than code.',{x:7.5,y:13,w:85,h:26,s:8.2,b:true,tight:true,lh:1.02}),
+  T("It's built.\nNow let's get it used.",{x:7.5,y:13,w:85,h:26,s:8.2,b:true,tight:true,lh:1.02}),
   R({x:7.5,y:38.6,w:47,h:.85,fill:C.em5,radius:.42})];};
 
 SPEC.A2=function(p){return [bg(C.w)].concat(chrome(p),[
@@ -1759,14 +1764,14 @@ SPEC.A2=function(p){return [bg(C.w)].concat(chrome(p),[
 SPEC.A3=function(p){return [bg(C.w)].concat(chrome(p),[
   T('Agenda',{x:7.5,y:13,w:34,h:8,s:5.6,b:true,tight:true}),
   T('45 minutes · 5 blocks',{x:7.5,y:22.5,w:30,h:3,s:1.45,c:C.g600})],
-  rowsBlock(44,12.5,48.5,[{n:'01',t:'Who we are — and how we embed'},{n:'02',t:"What we've built in AgTech"},
+  rowsBlock(44,12.5,48.5,[{n:'01',t:'Who we are — and how we embed'},{n:'02',t:"What we've built in agriculture"},
     {n:'03',t:'The Magoya method'},{n:'04',t:'Investment scenarios'},{n:'05',t:'Next steps'}],1,C.em7));};
 
 SPEC.A4=function(){return [bg(C.g950),
   IMG({src:A+'motif-semis.svg',x:0,y:41.25,w:100,h:15,fit:'cover',swap:[['#00DE68','#ECE3DB']]}),
   IMG({src:WMC,x:7.5,y:7,w:11,h:3.007}),
   T('02',{x:7.5,y:14,w:30,h:12,s:12,b:true,c:C.lime,tight:true,lh:.9}),
-  T("What we've built\nin AgTech",{x:7.5,y:26,w:60,h:13,s:5.6,b:true,c:C.cr50,tight:true,lh:1.05})];};
+  T("What we've built\nin agriculture",{x:7.5,y:26,w:60,h:13,s:5.6,b:true,c:C.cr50,tight:true,lh:1.05})];};
 
 SPEC.A5=function(p){return [bg(C.sage)].concat(chrome(p),[
   T('REMOTE SENSING',{x:7.5,y:13,w:50,h:2.6,s:1.5,b:true,c:C.em7,cs:1.8}),
@@ -1791,7 +1796,7 @@ SPEC.B1=function(p){
 SPEC.B2=function(p){
   var s=[bg(C.w)].concat(chrome(p),[T('Engagement models',{x:7.5,y:11.5,w:70,h:7,s:4.4,b:true,tight:true})]);
   var d=[{h:'Product Development',a:'How it works: we assemble every role needed and own the process end to end.',b:'Best for: building a product from discovery to launch.',f:'Fixed scope · milestone billing',dk:0},
-         {h:'Team Extension',a:'How it works: shared responsibilities inside your product development process.',b:'Best for: scaling an existing team with AgTech fluency.',f:'Monthly per role · 3-month cycles',dk:1},
+         {h:'Team Extension',a:'How it works: shared responsibilities inside your product development process.',b:'Best for: scaling an existing team with domain fluency in agriculture.',f:'Monthly per role · 3-month cycles',dk:1},
          {h:'Staff Augmentation',a:'How it works: we provide the talent; you keep your processes and management.',b:'Best for: filling senior roles fast, without hiring overhead.',f:'Monthly per role · your PM',dk:0}];
   d.forEach(function(c,i){var x=7.5+i*29,y=20.5,w=27,h=28.5;
     s.push(card(x,y,w,h,c.dk?C.g900:C.sage,null));
@@ -1819,8 +1824,8 @@ SPEC.B3=function(p){
 /* --- C · cifras --- */
 SPEC.C1=function(p){
   var s=[bg(C.w)].concat(chrome(p),[T('Proof,\nnot promises.',{x:7.5,y:14,w:36,h:16,s:5.6,b:true,tight:true,lh:1.05})]);
-  var d=[['95%','Client retention across engagements'],['5+','Years of average client relationship'],
-         ['21','AgTech domains covered by the team'],['10','Countries where our products operate']];
+  var d=[['95%','of our clients are Magoya promoters'],['5+','Years of average client relationship'],
+         ['21','ag domains covered by the team'],['10','Countries where our products operate']];
   d.forEach(function(c,i){var x=51+(i%2)*22,y=15+Math.floor(i/2)*15;
     s=s.concat(stat(x,y,c[0],c[1],4.6,C.ink,C.g600,20));});
   return s;};
@@ -1837,11 +1842,11 @@ SPEC.C2=function(p){
 SPEC.C3=function(p){return [bg(C.g950)].concat(chrome(p,true),[
   T([{text:'95',options:{fontSize:FS(44)}},{text:'%',options:{fontSize:FS(18)}}],
     {x:7.5,y:9.5,w:85,h:33,s:44,b:true,c:C.lime,tight:true,lh:.8,va:'middle'}),
-  T('Client retention across every engagement since 2017.',{x:7.5,y:44.5,w:56,h:7,s:2.2,b:true,c:C.cr100,lh:1.25})]);};
+  T('of our clients are Magoya promoters.',{x:7.5,y:44.5,w:56,h:7,s:2.2,b:true,c:C.cr100,lh:1.25})]);};
 
 SPEC.C4=function(p){
   var s=[bg(C.w)].concat(chrome(p),[T('SINCE 2017',{x:7.5,y:12,w:40,h:2.6,s:1.5,b:true,c:C.em7,cs:1.8})]);
-  var d=[['21','AgTech domains covered in-house'],['10','Countries running our products'],['5+','Years of average client relationship']];
+  var d=[['21','ag domains covered in-house'],['10','Countries running our products'],['5+','Years of average client relationship']];
   d.forEach(function(c,i){var x=7.5+i*29;
     s.push(T(c[0],{x:x,y:19,w:26,h:15,s:15,b:true,tight:true,lh:.9}));
     s.push(T(c[1],{x:x,y:36.5,w:24,h:7,s:1.5,c:C.g600,lh:1.3}));});
@@ -2098,7 +2103,7 @@ SPEC.I1=function(p){return [bg(C.w),
 SPEC.I2=function(p){return [bg(C.sage),
   IMG({src:A+'illus/char-chart-duo.svg',x:-6,y:8.25,w:40.3,h:48})].concat(chrome(p,false,44),[
   T('21',{x:48,y:22,w:44.5,h:10,s:9,b:true,tight:true,al:'right',lh:.95}),
-  T('AgTech domains covered by the same team',{x:48,y:32.5,w:44.5,h:8,s:2.8,b:true,al:'right',lh:1.25}),
+  T('ag domains covered by the same team',{x:48,y:32.5,w:44.5,h:8,s:2.8,b:true,al:'right',lh:1.25}),
   T('Agronomy, logistics, traceability, carbon, retail, crop protection and fifteen more.',
     {x:56,y:42,w:36.5,h:6,s:1.45,c:C.g600,al:'right',lh:1.35})]);};
 
@@ -2133,7 +2138,7 @@ SPEC.J3=function(p){
     s.push(T(c[1],{x:x,y:47.7,w:w,h:3,s:1.3,c:C.g600}));});
   return s;};
 
-/* --- K · tecnología & IA --- */
+/* --- K · software & AI --- */
 SPEC.K1=function(p){
   var s=[bg(C.sage)].concat(chrome(p),[
     T('The stack we work in',{x:7.5,y:11.5,w:50,h:7,s:4.2,b:true,tight:true})],
@@ -2164,7 +2169,7 @@ SPEC.K2=function(p){
 /* --- L · clientes --- */
 SPEC.L1=function(p){
   var s=[bg(C.w)].concat(chrome(p),[
-    T('Nine years inside agribusiness',{x:7.5,y:11.5,w:46,h:11,s:4.2,b:true,tight:true,lh:1.08}),
+    T('Nine-plus years inside agribusiness',{x:7.5,y:11.5,w:46,h:11,s:4.2,b:true,tight:true,lh:1.08}),
     T('5+',{x:70,y:12,w:22.5,h:5,s:3.4,b:true,tight:true,al:'right'}),
     T('years of average relationship',{x:66,y:16.6,w:26.5,h:3,s:1.4,c:C.g600,al:'right'})]);
   var names=['apeel-sciences','bunge','corteva','syngenta','climate-fieldview','precision-planting',
@@ -2177,7 +2182,7 @@ SPEC.M1=function(){return [bg(C.g950),
   R({x:0,y:0,w:100,h:56.25,fill:C.g950,alpha:30}),
   IMG({src:WMC,x:7.5,y:7,w:11,h:3.007})].concat(
   chip(63.5,7,'Partnership proposal · 2026',C.cr100,29),[
-  T('Digital product\ndevelopment\nfor agribusiness',{x:7.5,y:24,w:60,h:22,s:6.8,b:true,c:C.cr50,tight:true,lh:1.02}),
+  T('Software and AI\nfor agribusiness',{x:7.5,y:24,w:60,h:22,s:6.8,b:true,c:C.cr50,tight:true,lh:1.02}),
   T('We design, build and evolve the products and platforms that modern agribusinesses run on.',
     {x:7.5,y:46.5,w:46,h:6,s:1.75,c:C.cr100,lh:1.45})]);};
 
@@ -2185,8 +2190,8 @@ SPEC.M2=function(){return [bg(C.g950),
   IMG({src:A+'motif-semis.svg',x:70,y:0,w:30,h:56.25}),
   IMG({src:WMC,x:7.5,y:7,w:11,h:3.007})].concat(
   chip(63.5,7,'Partnership proposal · 2026',C.cr100,29),[
-  T('AgTech challenges demand more than code.',{x:7.5,y:24,w:58,h:22,s:6.8,b:true,c:C.cr50,tight:true,lh:1.02}),
-  T('Clarity, confidence and commitment — the three things a nine-year AgTech partnership is actually made of.',
+  T('Software and AI for agribusiness.',{x:7.5,y:24,w:58,h:22,s:6.8,b:true,c:C.cr50,tight:true,lh:1.02}),
+  T('We understand the problem with you, build the solution and work to make sure it gets used in the field.',
     {x:7.5,y:46.5,w:44,h:7,s:1.75,c:C.cr200,lh:1.45})]);};
 
 SPEC.M3=function(p){return [bg(C.sage)].concat(chrome(p),[

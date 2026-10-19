@@ -1,6 +1,8 @@
 # Magoya Brand System
 
-Sistema de diseño oficial de **Magoya** — AgTech digital product studio. Una sola fuente de verdad, consumible por personas y por IAs.
+Sistema de marca oficial de **Magoya**, consultora hands-on en software y AI para empresas del agro. Una sola fuente de verdad, consumible por personas y por AIs.
+
+**v2.0 (octubre de 2026):** la estructura sale del Magoya Brand Playbook. Las partes A–D (estrategia, voz, lenguaje, aplicación) salen del playbook, que manda hasta que esté publicado acá. E–F (identidad visual, piezas) se conservan del v1.2 hasta revisarlas.
 
 **Live:** https://brand.magoya.com/
 
@@ -8,23 +10,25 @@ Sistema de diseño oficial de **Magoya** — AgTech digital product studio. Una 
 
 ## Para personas
 
-Las 9 páginas comparten la misma topbar y el mismo índice lateral (dock).
+Todas las páginas comparten la misma navegación (`nav.css`): 0 · Inicio, A–D capa verbal, E–F capa visual, G–H programa y AI.
 
-| Página | Qué hay |
-|---|---|
-| [`index.html`](index.html) | **La portada** — el moodboard: 19 celdas con un elemento real de la marca cada una, cada celda entra al capítulo que le corresponde. Es la entrada al sistema |
-| [`brand-book.html`](brand-book.html) | **El brand book** — 13 secciones: esencia, logo & avatares, color, tipografía, fotografía, ilustración & motivos, convivencia de recursos, iconografía, componentes, aplicaciones, merch, papelería, reglas de oro · + §14 marca anexa |
-| [`ai-en-campo.html`](ai-en-campo.html) | **Manual de la marca anexa "IA en campo"** — la línea de contenido educativo de IA para el agro (rompe tres reglas del core a propósito) |
-| [`slides.html`](slides.html) | 41 módulos de presentación en 13 familias (escala 126/84/56/42pt) + exportador .pptx |
-| [`pieces.html`](pieces.html) | Plantillas de piezas comerciales con anatomía (one-pager, flyers) |
-| [`icons.html`](icons.html) | 58 iconos línea redondeada — click para copiar el SVG |
-| [`library.html`](library.html) | Ficha + descarga directa de cada asset aprobado, y los 8 ZIPs por sección |
-| [`logos.html`](logos.html) | Logos de clientes y stack tecnológico |
-| [`ai.html`](ai.html) | **Integrar con IA** — cómo cargar la marca en Claude, Cursor, Copilot o un GPT, y cómo validar lo que devuelve |
+| Parte | Página | Qué hay |
+|---|---|---|
+| 0 · Inicio | [`index.html`](index.html) | Qué es Magoya en una línea, mapa de las 9 partes, qué documento manda, versiones, entrada para AI y el moodboard visual |
+| A · Estrategia | [`estrategia.html`](estrategia.html) | Quiénes somos, propósito, diferenciales, propuesta de valor, oferta, boilerplate, territorios y Usage Loop, audiencias, razones para creer, Método Magoya, valores, pilares, promesa, personalidad, arquitectura, tagline |
+| B · Voz | [`voz.html`](voz.html) | Qué se construye primero, objetivos por mercado, postura, contra qué lucha, lo que no dice, rasgos, ejes, diales, localización, énfasis por audiencia |
+| C · Lenguaje | [`lenguaje.html`](lenguaje.html) | Vocabulario vetado, AI (no IA), glosario ES/EN/PT, cómo suena Magoya, reglas de oro verbales |
+| D · Aplicación | [`aplicacion.html`](aplicacion.html) | Capas de la marca, voceros y territorios, canales e idioma, focos de contenido y producción |
+| E · Identidad visual | [`brand-book.html`](brand-book.html) · [`icons.html`](icons.html) | Logo, color, tipografía, fotografía, ilustración, convivencia, iconografía, componentes, reglas de oro visuales · librería de 58 íconos |
+| F · Piezas y plantillas | [`piezas.html`](piezas.html) · [`slides.html`](slides.html) · [`plantillas.html`](plantillas.html) · [`pieces.html`](pieces.html) · [`library.html`](library.html) · [`logos.html`](logos.html) | Resumen + aplicaciones, merch y papelería · 41 módulos de slide · plantillas listas · comerciales · assets · logos de clientes |
+| G · IA en Campo | [`ai-en-campo.html`](ai-en-campo.html) | Sub-manual del programa presentado por Magoya: lockup, voz y piezas |
+| H · Integrar con AI | [`ai.html`](ai.html) | Cómo cargar la marca en Claude, Cursor, Copilot o un GPT, y cómo validar lo que devuelve |
+
+Estilos compartidos: `manual.css` (base del manual, extraída del brand book), `playbook.css` (componentes de A–D), `nav.css` (navegación). `manual.js` maneja el índice lateral y el alto del topbar.
 
 ## Para AIs
 
-Si sos una IA generando piezas para Magoya, leé **en este orden**:
+Si sos una AI generando piezas para Magoya, leé **en este orden**:
 
 1. [`BRAND.md`](BRAND.md) — la doctrina completa en Markdown (reglas, roles de color, matriz de convivencia, recetas de aplicación, prohibiciones). Sus secciones 1–13 + §14 espejan una a una las del brand book visual.
 2. [`tokens.json`](tokens.json) — todos los valores exactos: paleta con roles y reglas de accesibilidad, tipografía, espaciado, radios, matriz de convivencia, layouts de export y rutas de assets.
@@ -50,9 +54,9 @@ assets/
 ├── logos/clients/    # 17 clientes reales
 ├── logos/partners/   # 14 partners tecnológicos
 ├── logos/*.svg       # 3 logos de cuentas objetivo (bayer, basf, john-deere)
-├── studio/           # espejo de los archivos de Magoya Studio: iconos agro/IA/redes,
+├── studio/           # espejo de los archivos de Magoya Studio: iconos agro/AI/redes,
 │                     # doodles, flourishes, badge EN VIVO, mockups de dispositivo,
-│                     # mark-ai-campo.svg (mark a mano del lockup "IA en campo · por Magoya")
+│                     # mark-ai-campo.svg (mark a mano del lockup "IA en Campo · por Magoya")
 ├── downloads/        # 8 ZIPs por sección + firma GIF/PNG + doc-header/footer
 ├── refs/             # MATERIAL FUENTE — no publicable, ver abajo
 └── font/manrope/     # Manrope variable 200–800 (OFL)
@@ -64,7 +68,7 @@ assets/
 
 **Duplicados conocidos** (existen en dos rutas; la de la derecha es la que usa el manual): `assets/badge-envivo.svg` y `assets/doodle-{blob,dots,loop}.svg` → viven en `assets/studio/` · `assets/logos/{corteva,syngenta}.svg` → viven en `assets/logos/clients/`. Al bajar un asset, usar siempre el que linkea `library.html`.
 
-**Fuentes de las piezas de "IA en campo"**: `assets/photos/ai-campo-silueta.{jpg,png}` es la silueta recortada que usan las plantillas del Studio, y `assets/pieces/*.jpg` son capturas de piezas ya publicadas que el manual muestra como referencia. Son insumos de producción del Studio, no assets de descarga.
+**Fuentes de las piezas de "IA en Campo"**: `assets/photos/ai-campo-silueta.{jpg,png}` es la silueta recortada que usan las plantillas del Studio, y `assets/pieces/*.jpg` son capturas de piezas ya publicadas que el manual muestra como referencia. Son insumos de producción del Studio, no assets de descarga.
 
 ## Documentos de trabajo
 

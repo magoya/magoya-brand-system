@@ -23,7 +23,7 @@ Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos
 aprobados de la compania viven en https://brand.magoya.com/ai/facts.json —
 si el dato que necesitas no esta ahi, pedilo al usuario; no lo inventes.
 
-REGLAS PARA LA IA (no negociables):
+REGLAS PARA LA AI (no negociables):
 1. NO tocar posiciones, tamaños, colores ni tipografías. La geometría ES la marca.
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
@@ -46,11 +46,11 @@ REGLAS PARA LA IA (no negociables):
 <p class="t" data-slot="t2" data-rol="display" style="left:7.5cqw;top:14cqw;width:36cqw;height:16cqw;font-size:3.733cqw;font-weight:800;color:#161616;text-align:left;line-height:1.05;letter-spacing:-0.03em">Proof,
 not promises.</p>
 <p class="t" data-slot="t3" data-rol="display" style="left:51cqw;top:15cqw;width:20cqw;height:4.14cqw;font-size:3.067cqw;font-weight:800;color:#161616;text-align:left;line-height:0.95;letter-spacing:-0.03em">[XX]</p>
-<p class="t" data-slot="t4" data-rol="caption" style="left:51cqw;top:19.232cqw;width:20cqw;height:6cqw;font-size:0.933cqw;font-weight:400;color:#666666;text-align:left;line-height:1.25">Client retention across engagements</p>
+<p class="t" data-slot="t4" data-rol="caption" style="left:51cqw;top:19.232cqw;width:20cqw;height:6cqw;font-size:0.933cqw;font-weight:400;color:#666666;text-align:left;line-height:1.25">of our clients are Magoya promoters</p>
 <p class="t" data-slot="t5" data-rol="display" style="left:73cqw;top:15cqw;width:20cqw;height:4.14cqw;font-size:3.067cqw;font-weight:800;color:#161616;text-align:left;line-height:0.95;letter-spacing:-0.03em">[XX]</p>
 <p class="t" data-slot="t6" data-rol="caption" style="left:73cqw;top:19.232cqw;width:20cqw;height:6cqw;font-size:0.933cqw;font-weight:400;color:#666666;text-align:left;line-height:1.25">Years of average client relationship</p>
 <p class="t" data-slot="t7" data-rol="display" style="left:51cqw;top:30cqw;width:20cqw;height:4.14cqw;font-size:3.067cqw;font-weight:800;color:#161616;text-align:left;line-height:0.95;letter-spacing:-0.03em">[XX]</p>
-<p class="t" data-slot="t8" data-rol="caption" style="left:51cqw;top:34.232cqw;width:20cqw;height:6cqw;font-size:0.933cqw;font-weight:400;color:#666666;text-align:left;line-height:1.25">AgTech domains covered by the team</p>
+<p class="t" data-slot="t8" data-rol="caption" style="left:51cqw;top:34.232cqw;width:20cqw;height:6cqw;font-size:0.933cqw;font-weight:400;color:#666666;text-align:left;line-height:1.25">ag domains covered by the team</p>
 <p class="t" data-slot="t9" data-rol="display" style="left:73cqw;top:30cqw;width:20cqw;height:4.14cqw;font-size:3.067cqw;font-weight:800;color:#161616;text-align:left;line-height:0.95;letter-spacing:-0.03em">[XX]</p>
 <p class="t" data-slot="t10" data-rol="caption" style="left:73cqw;top:34.232cqw;width:20cqw;height:6cqw;font-size:0.933cqw;font-weight:400;color:#666666;text-align:left;line-height:1.25">Countries where our products operate</p>
 </div>

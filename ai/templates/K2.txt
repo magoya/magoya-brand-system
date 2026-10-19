@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8">
-<title>Magoya · módulo K2 — Capacidades de IA (logos de modelos + qué hacemos con ellos)</title>
+<title>Magoya · módulo K2 — Capacidades de AI (logos de modelos + qué hacemos con ellos)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 <style>
@@ -15,15 +15,15 @@
   .tb td{border-bottom:1px solid #DCD0C4;padding:.6cqw .9cqw}
 </style>
 <!--
-PLANTILLA OFICIAL MAGOYA — módulo K2 (Capacidades de IA (logos de modelos + qué hacemos con ellos))
-Cuándo usarlo: cuando la conversación entra en IA y hay que ser explícito. Cada fila nombra una capacidad concreta, no &quot;AI-powered&quot;. Los logos de assets/studio/icons/ai/ vienen monocromos: van en negro sobre claro.
+PLANTILLA OFICIAL MAGOYA — módulo K2 (Capacidades de AI (logos de modelos + qué hacemos con ellos))
+Cuándo usarlo: cuando la conversación entra en AI y hay que ser explícito. Cada fila nombra una capacidad concreta, no &quot;AI-powered&quot;. Los logos de assets/studio/icons/ai/ vienen monocromos: van en negro sobre claro.
 
 ATENCION — TODO EL TEXTO Y LAS CIFRAS DE ESTA PLANTILLA SON EJEMPLO.
 Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos
 aprobados de la compania viven en https://brand.magoya.com/ai/facts.json —
 si el dato que necesitas no esta ahi, pedilo al usuario; no lo inventes.
 
-REGLAS PARA LA IA (no negociables):
+REGLAS PARA LA AI (no negociables):
 1. NO tocar posiciones, tamaños, colores ni tipografías. La geometría ES la marca.
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no

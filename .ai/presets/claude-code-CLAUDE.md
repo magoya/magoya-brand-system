@@ -22,7 +22,7 @@ Estos comentarios HTML se descartan antes de entrar al contexto: no gastan token
 
 # Marca Magoya — reglas de diseño
 
-Magoya es un estudio de estrategia y desarrollo de producto digital para agribusiness (AgTech). Todo output visual, de UI o de copy sigue estas reglas.
+Magoya es una consultora hands-on en software y AI para empresas del agro. Tagline: **Software and AI for agribusiness**. Todo output visual, de UI o de copy sigue estas reglas.
 
 **Fuente de verdad completa** (leela con WebFetch cuando necesites un detalle que no esté acá):
 - Doctrina: https://brand.magoya.com/BRAND.md
@@ -78,10 +78,17 @@ Balance por pantalla o pieza: neutros ≈75%, verdes ≈25%, un solo movimiento 
 
 ## Copy
 
-Profesional y senior, nunca vendedor; transparente y estructurado; maduro y confiable, no whimsical. Frases cortas, números concretos, sin superlativos ni grandilocuencia. Vocabulario propio: embedded, deep AgTech fluency, clarity / confidence / commitment, long-term value.
+La capa verbal sale del Magoya Brand Playbook (octubre 2026), que prevalece si algo difiere.
+- Definición: consultora hands-on en software y AI para empresas del agro (*hands-on software and AI consulting firm for agribusiness*). Tagline: **Software and AI for agribusiness**.
+- Territorios, por peso en los mensajes: Uso 50% · Integración 30% · Hands-on 20%.
+- Rasgos, en orden: Estratega, Responsable (en inglés *Accountable*), Curiosa, Franca.
+- Se escribe **AI** en cualquier idioma. Única excepción: el nombre propio **IA en Campo**.
+- Vetado: agtech, digital (solo), transformación digital, custom, software factory, dev shop, agencia, tecnología (sola), ayudar, adopción como sinónimo de uso, DIPI, building blocks. "Uso" antes que "adopción".
+- Pruebas, no adjetivos. Frases cortas y concretas. El inglés es el idioma principal de web, LinkedIn e Instagram.
+- Detalle: https://brand.magoya.com/vocabulary.json · https://brand.magoya.com/.ai/verbal/lenguaje.md · checklist de texto: https://brand.magoya.com/.ai/checklist-verbal.md
 
 ## Antes de dar por terminada una pieza
 
-Corré la checklist: https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md — y reportá en una línea los hex usados, los golpes de lima y los recursos gráficos.
+Corré la checklist: https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md (y si hay texto, también https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist-verbal.md) — y reportá en una línea los hex usados, los golpes de lima y los recursos gráficos.
 
-"IA en campo" es una marca anexa con manual propio (`ai-en-campo.html`): sus reglas nunca se aplican a piezas de Magoya core.
+IA en Campo es una marca de programa presentada por Magoya, con manual propio (`ai-en-campo.html`): sus reglas nunca se aplican a piezas de Magoya core.

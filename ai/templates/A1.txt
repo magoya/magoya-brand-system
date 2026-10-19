@@ -23,7 +23,7 @@ Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos
 aprobados de la compania viven en https://brand.magoya.com/ai/facts.json —
 si el dato que necesitas no esta ahi, pedilo al usuario; no lo inventes.
 
-REGLAS PARA LA IA (no negociables):
+REGLAS PARA LA AI (no negociables):
 1. NO tocar posiciones, tamaños, colores ni tipografías. La geometría ES la marca.
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
@@ -42,8 +42,8 @@ REGLAS PARA LA IA (no negociables):
 <div class="slide" data-modulo="A1">
 <div class="r" style="left:0cqw;top:0cqw;width:100cqw;height:56.25cqw;background:#FFFFFF"></div>
 <p class="t" data-slot="t1" data-rol="kicker" style="left:7.5cqw;top:8cqw;width:60cqw;height:2.6cqw;font-size:1.0cqw;font-weight:800;color:#009145;text-align:left;line-height:1.2;letter-spacing:0.1247em">PRODUCT STRATEGY</p>
-<p class="t" data-slot="t2" data-rol="display" style="left:7.5cqw;top:13cqw;width:85cqw;height:26cqw;font-size:5.467cqw;font-weight:800;color:#161616;text-align:left;line-height:1.02;letter-spacing:-0.03em">AgTech challenges
-demand more than code.</p>
+<p class="t" data-slot="t2" data-rol="display" style="left:7.5cqw;top:13cqw;width:85cqw;height:26cqw;font-size:5.467cqw;font-weight:800;color:#161616;text-align:left;line-height:1.02;letter-spacing:-0.03em">It&#x27;s built.
+Now let&#x27;s get it used.</p>
 <div class="r" style="left:7.5cqw;top:38.6cqw;width:47cqw;height:0.85cqw;background:#00DE68;border-radius:0.42cqw"></div>
 </div>
 </body></html>

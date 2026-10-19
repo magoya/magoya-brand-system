@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
-<title>Magoya · IA en campo — sub-manual v1.1</title>
+<title>G · IA en Campo · Magoya Brand System</title>
 <link rel="stylesheet" href="tokens.css">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -78,7 +78,7 @@
   .dcell{background:var(--sage-50);border-radius:12px;padding:16px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-height:96px;justify-content:flex-start}
   .dn{font-family:var(--font-mono);font-size:10px;color:var(--gray-600);margin-top:auto}
 
-  /* logos de IA / redes: 4 variantes descargables (svg/png x color/negro) */
+  /* logos de AI / redes: 4 variantes descargables (svg/png x color/negro) */
   .glogo{grid-template-columns:repeat(auto-fill,minmax(128px,1fr))}
   .logocell{background:var(--sage-50);border-radius:12px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px}
   .logocell .lprev{height:32px;display:flex;align-items:center;justify-content:center}
@@ -123,7 +123,7 @@
   .dd.avoid li{color:var(--gray-600)}
   @media (max-width:880px){.dodont{grid-template-columns:1fr}}
 
-  /* logo IA en campo: lockup real (Manrope viva) + mark a mano SOLO en este tamaño */
+  /* lockup IA en Campo: lockup real (Manrope viva) + mark a mano SOLO en este tamaño */
   .aic-plate{border-radius:16px;padding:28px;display:flex;align-items:flex-end}
   .aic-lockup{display:inline-flex;flex-direction:column;line-height:1}
   .aic-lockup .l1{display:flex;align-items:center;gap:5px;font-weight:800;font-size:26px;letter-spacing:-0.02em}
@@ -259,51 +259,52 @@
     .hero-in,.inner,.hero > .inner,section > .inner,footer > *,footer > div{padding-left:20px;padding-right:20px}
   }
 
-  /* ---------- topbar: espacios iguales y el grupo de IA al final ---------- */
+  /* ---------- topbar: espacios iguales y el grupo de AI al final ---------- */
   /* los margenes .cl (16px) y .cl2 (10px) hacian que cada par de items tuviera
      una separacion distinta. Ahora todos los items pares estan a la misma
-     distancia y el unico corte estructural es el divisor antes del grupo de IA. */
+     distancia y el unico corte estructural es el divisor antes del grupo de AI. */
   .mg-topbar a.cl,.mg-topbar a.cl2{margin-left:0}
   .mg-topbar .navdiv{margin:0 12px}
-  /* IA en campo es sub-marca: se anuncia con su propia ley, el verde ES el fondo */
+  /* IA en Campo: programa presentado por Magoya, el verde ES el fondo */
   .mg-topbar a.sub{background:var(--emerald-500);color:var(--green-950);font-weight:800}
   .mg-topbar a.sub:hover{background:var(--lime-500);color:var(--green-950)}
   .mg-topbar a.sub.on{box-shadow:inset 0 0 0 2px var(--cream-50)}
 </style>
+<link rel="stylesheet" href="nav.css">
 </head>
 <body>
 
 <nav class="mg-topbar">
-  <a href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
-  <a href="index.html">Inicio</a><a href="brand-book.html">Brand book</a><a href="slides.html">Slides</a><a href="pieces.html">Comerciales</a><a href="icons.html">Iconos</a><a href="library.html">Assets</a><a href="logos.html">Clientes</a><span class="navdiv"></span><a href="ai.html">Integrar con IA</a><a href="ai-en-campo.html" class="sub on">IA en campo</a>
+  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
+  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html"><i>A</i>Estrategia</a><a href="voz.html"><i>B</i>Voz</a><a href="lenguaje.html"><i>C</i>Lenguaje</a><a href="aplicacion.html"><i>D</i>Aplicación</a><span class="navdiv"></span><a href="brand-book.html"><i>E</i>Identidad visual</a><a href="piezas.html"><i>F</i>Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub on"><i>G</i>IA en Campo</a><a href="ai.html"><i>H</i>Integrar con AI</a>
 </nav>
 
 <nav class="side">
   <a href="#esencia"><span>Esencia</span></a>
   <a href="#color-voz"><span>Color & voz</span></a>
-  <a href="#logo-aic"><span>Logo</span></a>
+  <a href="#logo-aic"><span>Lockup</span></a>
   <a href="#ruido"><span>Ruido del Studio</span></a>
   <a href="#componentes"><span>Componentes</span></a>
   <a href="#plantillas"><span>Plantillas</span></a>
   <a href="#formatos"><span>Formatos</span></a>
   <a href="#reglas"><span>Reglas</span></a>
-  <span class="v">IA EN CAMPO · V1.1</span>
+  <span class="v">G · IA EN CAMPO</span>
 </nav>
 
 <header class="hero">
   <div class="hero-in">
     <div>
       <div class="badges">
-        <span class="k">Sub-marca de Magoya</span>
+        <span class="k">G · Sub-manual del programa</span>
         <span class="live"><span class="dm" style="-webkit-mask-image:url(assets/studio/doodle-sparkle.svg);mask-image:url(assets/studio/doodle-sparkle.svg)"></span>Webinars en vivo</span>
       </div>
-      <h1>IA en campo<br><i>sin relleno.</i></h1>
-      <p class="hook">Carruseles, reels y webinars que le hablan directo al productor — sin humo de IA. <b>Cada pieza responde una pregunta real del lote</b>, no vende una promesa.</p>
+      <h1>IA en Campo<br><i>sin relleno.</i></h1>
+      <p class="hook">Carruseles, reels y webinars que le hablan directo al productor — sin humo de AI. <b>Cada pieza responde una pregunta real del lote</b>, no vende una promesa.</p>
       <div class="stats">
         <svg class="arrow-cta" viewBox="0 0 40 26" fill="none"><path d="M36 3 C 22 1, 8 6, 5 18" stroke="currentColor" stroke-width="6" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path d="M2 11 L5 20 L13 16" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" fill="none"/></svg>
         <div><b>13</b><span>formatos de red</span></div>
         <div><b>8</b><span>plantillas del Studio</span></div>
-        <div><b>10</b><span>reglas · qué rompe y qué no</span></div>
+        <div><b>13</b><span>reglas · qué rompe y qué no</span></div>
       </div>
     </div>
     <div class="tile">
@@ -320,8 +321,22 @@
 <section id="esencia">
   <div class="inner">
   <span class="kick">1 · Esencia</span>
-  <h2>Educar sobre IA, con los pies en el lote</h2>
-  <p class="lead">IA en campo existe para un solo trabajo: que el productor y el técnico agro entiendan y usen IA en su día a día. El contenido responde preguntas reales (“¿qué le pregunto a la IA sobre mi lote?”), muestra herramientas concretas y anuncia webinars. Es la voz de canal de redes de Magoya — cuando la pieza es institucional (clientes, ventas, employer brand), se usa el core.</p>
+  <h2>Educar sobre AI, con los pies en el lote</h2>
+  <p class="lead">IA en Campo es una <b>marca de programa presentada por Magoya, no marca de Magoya</b>, y no es una línea de negocio. Es el programa abierto de AI aplicada al agro: webinars y capacitaciones abiertas al público. Por ahora, solo en Argentina.</p>
+  <div class="table-scroll" style="max-width:940px;margin-bottom:22px">
+  <table>
+    <thead><tr><th>Qué define</th><th>IA en Campo (Brand Playbook, oct 2026)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Qué es</b></td><td>Marca de programa presentada por Magoya, no marca de Magoya. No es una línea de negocio.</td></tr>
+      <tr><td><b>Qué dice</b></td><td>AI aplicada al día operativo del campo, para el usuario final.</td></tr>
+      <tr><td><b>Audiencia y canales</b></td><td>Propios. Webinars y capacitaciones abiertas al público, por ahora solo en Argentina.</td></tr>
+      <tr><td><b>Relación con Magoya</b></td><td>Magoya presenta: “IA en Campo, presentado por Magoya”.</td></tr>
+      <tr><td><b>Qué no dice</b></td><td>No habla desde la cuenta de Magoya como si fuera contenido propio de la marca.</td></tr>
+      <tr><td><b>Qué aporta</b></td><td>Es la fuente de los casos publicables.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note" style="max-width:70ch;margin-bottom:12px"><b>Dónde termina Magoya.</b> El contenido básico (los tips para ser más productivo en el campo, el tutorial de cómo usar una herramienta, el contenido educativo para el productor) es de IA en Campo, no de Magoya. Magoya habla de AI desde el lado de quien la construye; IA en Campo, desde el lado de quien la usa. En Argentina, IA en Campo construyó audiencia, pero por debajo del perfil de cliente estratégico.</p>
+  <p class="note" style="max-width:70ch;margin-bottom:22px">El trabajo de cada pieza: que el productor y el técnico agro entiendan y usen AI en su día a día. El contenido responde preguntas reales (“¿qué le pregunto a la AI sobre mi lote?”), muestra herramientas concretas y anuncia webinars.</p>
   <div class="rule-list">
     <div class="rule"><b class="do"></b><span><b>Cuándo:</b> carruseles educativos, tips de herramientas, webinars, cuenta regresiva, “mito vs realidad”, chat del productor.</span></div>
     <div class="rule"><b class="dont"></b><span><b>Cuándo NO:</b> propuestas comerciales, casos de cliente formales, deck de ventas, sitio — eso es core Magoya.</span></div></div></div>
@@ -332,7 +347,7 @@
   <div class="inner">
   <span class="kick">2 · Color & voz</span>
   <h2>Verde pleno, placa negra, voseo</h2>
-  <p class="lead">La sub-marca rompe tres reglas del core <b>a propósito</b> — y solo estas tres. Todo lo demás (Manrope, wordmark intocable, logos reales) sigue igual.</p>
+  <p class="lead">El programa rompe tres reglas del core <b>a propósito</b> — y solo estas tres. Todo lo demás (Manrope, wordmark intocable, logos reales) sigue igual.</p>
   <div class="grid g3">
     <div class="sw"><div class="chip" style="background:var(--emerald-500)"></div><div class="meta"><b>Lienzo pleno</b><span>#00DE68</span> acá el verde ES el fondo</div></div>
     <div class="sw"><div class="chip" style="background:var(--ink-900)"></div><div class="meta"><b>Placa negra</b><span>#161616</span> el dato clave (hora, cifra)</div></div>
@@ -341,7 +356,7 @@
   <h3>La pieza patrón — anatomía</h3>
   <div class="grid" style="grid-template-columns:340px 1fr;gap:28px;align-items:start">
     <div>
-      <img src="assets/pieces/fecha-marcada-ig-portrait.svg" alt="Pieza IA en campo: webinar 6 AGO 11:00 h ARG" style="width:100%;border-radius:16px;display:block">
+      <img src="assets/pieces/fecha-marcada-ig-portrait.svg" alt="Pieza IA en Campo: webinar 6 AGO 11:00 h ARG" style="width:100%;border-radius:16px;display:block">
       <p class="cap">Pieza <b>real</b>, exportada del Studio: template <code>fecha-marcada</code> · formato <code>ig-portrait</code> (1080×1350). Es la referencia de la línea — cualquier pieza nueva se compara con esta.</p></div>
     <div>
       <div class="table-scroll">
@@ -353,21 +368,26 @@
           <tr><td><b>Placa</b></td><td>fondo negro + texto crema · el dato operativo (hora, plazo) · una sola por pieza</td></tr>
           <tr><td><b>Bajada</b></td><td>500 · verde profundo · la promesa concreta, 6–10 palabras</td></tr>
           <tr><td><b>CTA</b></td><td>pill verde profundo o negra + texto crema + <b>una manito que señala</b> (👈 👉 👇) · opcional (puede ir en el copy). Es la única familia de emoji permitida, junto con las banderas</td></tr>
-          <tr><td><b>Firma</b></td><td>lockup <b>IA en campo · por Magoya</b> abajo-izquierda (ver sección Logo) — reemplaza al wordmark solo en piezas de esta sub-marca</td></tr>
+          <tr><td><b>Firma</b></td><td>lockup de <b>IA en Campo</b> abajo-izquierda (ver sección Lockup) — reemplaza al wordmark solo en piezas del programa</td></tr>
           <tr><td><b>Ruido</b></td><td>2–4 elementos en las esquinas, rotación ±5–15° · nunca sobre el texto</td></tr>
         </tbody>
       </table></div></div></div>
 
   <h3>La voz</h3>
-  <p class="note" style="max-width:70ch"><b>Voseo argentino, didáctica y directa:</b> “Analizá”, “Usá Claude o ChatGPT”, “Che, ¿con qué IA armo informes?”. Preguntas reales del productor como ancla. Emojis con criterio: uno por CTA (👈  ), nunca lluvia. Sin jerga corporativa — acá no hay “soluciones end-to-end”, hay “te muestro cómo”.</p></div>
+  <p class="note" style="max-width:70ch"><b>Voseo argentino, didáctica y directa:</b> “Analizá”, “Usá Claude o ChatGPT”, “¿Con qué AI armo informes?”. Habla de vos, no en slang. Preguntas reales del productor como ancla. Habla como IA en Campo, nunca desde la cuenta de Magoya como si fuera contenido propio de la marca. Emojis con criterio: uno por CTA (👈  ), nunca lluvia. Sin jerga corporativa — acá no hay “soluciones end-to-end”, hay “te muestro cómo”.</p></div>
 </section>
 
-<!-- 3 LOGO IA EN CAMPO -->
+<!-- 3 LOCKUP IA EN CAMPO -->
 <section id="logo-aic" style="background:var(--sage-50)">
   <div class="inner">
-  <span class="kick">3 · Logo</span>
-  <h2>El lockup de IA en campo</h2>
-  <p class="lead">Todas las piezas de esta sub-marca llevan este lockup abajo-izquierda en vez del wordmark de Magoya solo. El garabato es el mismo lenguaje de las marcas a mano del core, pero <b>en este único tamaño, pegado al texto</b> — nunca suelto y grande como estallido decorativo en una esquina.</p>
+  <span class="kick">3 · Lockup</span>
+  <h2>El lockup de IA en Campo</h2>
+  <h3 style="margin-top:6px">La regla: IA en Campo, presentado por Magoya</h3>
+  <p class="note" style="max-width:70ch;margin-bottom:12px">Magoya presenta el programa: <b>“IA en Campo, presentado por Magoya”</b> (Brand Playbook, arquitectura de marca). IA en Campo es marca de programa, no marca de Magoya.</p>
+  <p class="note" style="max-width:70ch;margin-bottom:28px"><b>Asset pendiente.</b> Todavía no existe un lockup visual con la línea “presentado por Magoya”. La parte visual se mantiene hasta que se revise: mientras tanto, las piezas usan el lockup actual, que se muestra abajo y firma “por Magoya”.</p>
+
+  <h3>El lockup actual de las piezas</h3>
+  <p class="lead">Todas las piezas del programa llevan este lockup abajo-izquierda en vez del wordmark de Magoya solo. El garabato es el mismo lenguaje de las marcas a mano del core, pero <b>en este único tamaño, pegado al texto</b> — nunca suelto y grande como estallido decorativo en una esquina.</p>
 
   <div class="grid g2" style="margin-bottom:22px">
     <div class="aic-plate" style="background:var(--emerald-500);color:var(--ink-900)">
@@ -383,7 +403,7 @@
     <div class="rule"><b class="dont">Evitar</b> agrandar el mark y usarlo solo, flotando en una esquina como estallido cómic — eso quedó afuera del sistema.</div>
     <div class="rule"><b class="do">Hacer</b> negro <code>#161616</code> sobre lienzo claro (verde pleno, crema) · crema <code>#ECE3DB</code> sobre placa negra.</div>
     <div class="rule"><b class="dont">Evitar</b> lima o verde digital en el lockup — el lockup es siempre neutro, el color lo pone el fondo.</div>
-    <div class="rule"><b class="do">Hacer</b> "por Magoya" siempre en <code>font-mono</code>, mayúsculas, más chico — es la firma, no el título.</div>
+    <div class="rule"><b class="do">Hacer</b> la firma de Magoya siempre en <code>font-mono</code>, mayúsculas, más chico — es la firma, no el título. Hoy dice "por Magoya" hasta que exista el lockup con "presentado por Magoya".</div>
     <div class="rule"><b class="dont">Evitar</b> mover el lockup del ángulo inferior izquierdo — es la posición fija, como la firma del wordmark en el core.</div>
   </div>
   <p class="note" style="max-width:70ch;margin-top:18px">Asset del mark: <code>assets/studio/mark-ai-campo.svg</code> (mask, recoloreable). El lockup en sí no es una imagen — se compone con Manrope viva (800, tracking −2%) para que nunca pierda nitidez en ningún tamaño de exportación.</p></div>
@@ -394,7 +414,7 @@
   <div class="inner">
   <span class="kick">4 · Ruido</span>
   <h2>Los elementos del Studio</h2>
-  <p class="lead">Estos son los assets <b>reales</b> que usa Magoya Studio para producir las piezas — los mismos archivos, sin versiones paralelas. Los doodles son monocromos y se tiñen; los logos de IA y redes van en su color oficial.</p>
+  <p class="lead">Estos son los assets <b>reales</b> que usa Magoya Studio para producir las piezas — los mismos archivos, sin versiones paralelas. Los doodles son monocromos y se tiñen; los logos de AI y redes van en su color oficial.</p>
 
   <h3>Doodles & flourishes <span style="font-weight:400;font-size:.8em;color:var(--gray-600)">— monocromos, recoloreables</span></h3>
   <div class="grid g4">
@@ -414,9 +434,9 @@
     <div class="dcell"><span class="dm" style="-webkit-mask-image:url(assets/studio/badge-envivo.svg);mask-image:url(assets/studio/badge-envivo.svg);width:120px;height:36px;background:#E33"></span><span class="dn">sobre claro → rojo directo</span></div></div>
   <p class="cap">El SVG viene con <code>fill="currentColor"</code>: se pinta del color que le pases (por eso no se ve si se inserta suelto como imagen). En el manual va por CSS <code>mask</code>; en el Studio entra al pipeline de teñido.</p>
 
-  <h3>Logos de IA <span style="font-weight:400;font-size:.8em;color:var(--gray-600)">— los 10, en su color oficial</span></h3>
+  <h3>Logos de AI <span style="font-weight:400;font-size:.8em;color:var(--gray-600)">— los 10, en su color oficial</span></h3>
 <div class="grid glogo"><div class="logocell" data-group="ai" data-slug="anthropic"><div class="lprev"><img src="assets/studio/icons/ai/anthropic.svg" alt="anthropic"></div><span class="dn">ai/anthropic</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="ai" data-slug="claude"><div class="lprev"><img src="assets/studio/icons/ai/claude.svg" alt="claude"></div><span class="dn">ai/claude</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="ai" data-slug="google"><div class="lprev"><img src="assets/studio/icons/ai/google.svg" alt="google"></div><span class="dn">ai/google</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="ai" data-slug="googlegemini"><div class="lprev"><img src="assets/studio/icons/ai/googlegemini.svg" alt="googlegemini"></div><span class="dn">ai/googlegemini</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="ai" data-slug="huggingface"><div class="lprev"><img src="assets/studio/icons/ai/huggingface.svg" alt="huggingface"></div><span class="dn">ai/huggingface</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="ai" data-slug="meta"><div class="lprev"><img src="assets/studio/icons/ai/meta.svg" alt="meta"></div><span class="dn">ai/meta</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="ai" data-slug="mistralai"><div class="lprev"><img src="assets/studio/icons/ai/mistralai.svg" alt="mistralai"></div><span class="dn">ai/mistralai</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="ai" data-slug="ollama"><div class="lprev"><img src="assets/studio/icons/ai/ollama.svg" alt="ollama"></div><span class="dn">ai/ollama</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="ai" data-slug="openai"><div class="lprev"><img src="assets/studio/icons/ai/openai.svg" alt="openai"></div><span class="dn">ai/openai</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="ai" data-slug="perplexity"><div class="lprev"><img src="assets/studio/icons/ai/perplexity.svg" alt="perplexity"></div><span class="dn">ai/perplexity</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div></div>
-  <p class="cap">Cuando la pieza habla de IA, los logos de las herramientas van <b>en su color de marca</b> (no monocromos): así se reconocen al instante. Tamaño chico, apenas rotados, nunca protagonistas del mensaje. Uso nominativo — hablamos DE esas herramientas. <b>Cada logo se descarga en 4 variantes:</b> SVG color · SVG negro · PNG con contenedor color · PNG con contenedor negro.</p>
+  <p class="cap">Cuando la pieza habla de AI, los logos de las herramientas van <b>en su color de marca</b> (no monocromos): así se reconocen al instante. Tamaño chico, apenas rotados, nunca protagonistas del mensaje. Uso nominativo — hablamos DE esas herramientas. <b>Cada logo se descarga en 4 variantes:</b> SVG color · SVG negro · PNG con contenedor color · PNG con contenedor negro.</p>
 
   <h3>Logos de redes</h3>
 <div class="grid glogo"><div class="logocell" data-group="social" data-slug="youtube"><div class="lprev"><img src="assets/studio/icons/social/youtube.svg" alt="youtube"></div><span class="dn">social/youtube</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="whatsapp"><div class="lprev"><img src="assets/studio/icons/social/whatsapp.svg" alt="whatsapp"></div><span class="dn">social/whatsapp</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="instagram"><div class="lprev"><img src="assets/studio/icons/social/instagram.svg" alt="instagram"></div><span class="dn">social/instagram</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="linkedin"><div class="lprev"><img src="assets/studio/icons/social/linkedin.svg" alt="linkedin"></div><span class="dn">social/linkedin</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="x"><div class="lprev"><img src="assets/studio/icons/social/x.svg" alt="x"></div><span class="dn">social/x</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="tiktok"><div class="lprev"><img src="assets/studio/icons/social/tiktok.svg" alt="tiktok"></div><span class="dn">social/tiktok</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="telegram"><div class="lprev"><img src="assets/studio/icons/social/telegram.svg" alt="telegram"></div><span class="dn">social/telegram</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="threads"><div class="lprev"><img src="assets/studio/icons/social/threads.svg" alt="threads"></div><span class="dn">social/threads</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="facebook"><div class="lprev"><img src="assets/studio/icons/social/facebook.svg" alt="facebook"></div><span class="dn">social/facebook</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="discord"><div class="lprev"><img src="assets/studio/icons/social/discord.svg" alt="discord"></div><span class="dn">social/discord</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="twitch"><div class="lprev"><img src="assets/studio/icons/social/twitch.svg" alt="twitch"></div><span class="dn">social/twitch</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="reddit"><div class="lprev"><img src="assets/studio/icons/social/reddit.svg" alt="reddit"></div><span class="dn">social/reddit</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div><div class="logocell" data-group="social" data-slug="pinterest"><div class="lprev"><img src="assets/studio/icons/social/pinterest.svg" alt="pinterest"></div><span class="dn">social/pinterest</span><div class="lbtns"><button data-v="svg-color">SVG</button><button data-v="svg-black">SVG neg</button><button data-v="png-color">PNG</button><button data-v="png-black">PNG neg</button></div></div></div>
@@ -428,7 +448,7 @@
     <div class="dcell"><span class="dm" style="-webkit-mask-image:url(assets/studio/icons/agro/chat-ia.svg);mask-image:url(assets/studio/icons/agro/chat-ia.svg)"></span><span class="dn">chat-ia</span></div>
     <div class="dcell"><span class="dm" style="-webkit-mask-image:url(assets/studio/icons/agro/satelite.svg);mask-image:url(assets/studio/icons/agro/satelite.svg)"></span><span class="dn">satelite</span></div>
     <div class="dcell"><span class="dm" style="-webkit-mask-image:url(assets/studio/icons/agro/dron.svg);mask-image:url(assets/studio/icons/agro/dron.svg)"></span><span class="dn">dron</span></div></div>
-  <p class="cap">Set completo de 16 en el <a href="brand-book.html#iconografia" style="color:var(--emerald-700);font-weight:600">brand book</a>.</p>
+  <p class="cap">Set completo de 16 en <a href="brand-book.html#iconografia" style="color:var(--emerald-700);font-weight:600">E · Identidad visual</a>.</p>
 
   <div class="rule-list" style="margin-top:22px">
     <div class="rule"><b class="do"></b><span>2–4 elementos de ruido por pieza · rotación ±5–15° · en las esquinas.</span></div>
@@ -440,10 +460,10 @@
   <div class="inner">
   <span class="kick">5 · El carrusel</span>
   <h2>Cómo se cuenta la historia</h2>
-  <p class="lead">Esto no es una galería: es el <b>arco narrativo</b> que hace que un carrusel de IA en campo enseñe algo. Si el orden se rompe, la pieza se ve linda y no comunica. <b>4 a 6 slides, una idea por slide.</b></p>
+  <p class="lead">Esto no es una galería: es el <b>arco narrativo</b> que hace que un carrusel de IA en Campo enseñe algo. Si el orden se rompe, la pieza se ve linda y no comunica. <b>4 a 6 slides, una idea por slide.</b></p>
   <div class="arc">
     <div class="step"><span class="n">01</span><b>Engancho con la duda real</b><p>La pregunta que te hacen, textual, en boca del productor. Nunca abrir con la solución ni con la marca.</p><span class="tpl-tag">impacto-pregunta</span></div>
-    <div class="step"><span class="n">02</span><b>Muestro la herramienta</b><p>Qué IA usar y cómo se le habla. Acá van los logos en su color y el prompt real.</p><span class="tpl-tag">whatsapp · impacto-apps</span></div>
+    <div class="step"><span class="n">02</span><b>Muestro la herramienta</b><p>Qué AI usar y cómo se le habla. Acá van los logos en su color y el prompt real.</p><span class="tpl-tag">whatsapp · impacto-apps</span></div>
     <div class="step"><span class="n">03</span><b>Doy la prueba</b><p>Una cifra o una captura del resultado. Sin prueba, el carrusel es opinión.</p><span class="tpl-tag">impacto-cifra · impacto-pantalla</span></div>
     <div class="step"><span class="n">04</span><b>Cierro con el paso siguiente</b><p>Una sola acción. Es la única slide que puede ir en verde profundo.</p><span class="tpl-tag">carrusel-cierre</span></div></div>
 
@@ -494,7 +514,7 @@
     </a>
     <a class="pcard" href="https://facundo-web.github.io/magoya-studio/#gallery" target="_blank" rel="noopener">
       <div class="pv"><span class="ph">Ver en el Studio</span></div>
-      <div class="pb"><span class="want">Enseñar una herramienta</span><b>whatsapp · impacto-apps</b><p>Muestra la conversación real y los logos de IA en su color.</p><span class="go">Abrir en el Studio →</span></div>
+      <div class="pb"><span class="want">Enseñar una herramienta</span><b>whatsapp · impacto-apps</b><p>Muestra la conversación real y los logos de AI en su color.</p><span class="go">Abrir en el Studio →</span></div>
     </a>
     <a class="pcard" href="https://facundo-web.github.io/magoya-studio/#gallery" target="_blank" rel="noopener">
       <div class="pv"><span class="ph">Ver en el Studio</span></div>
@@ -520,7 +540,7 @@
   <div class="inner">
   <span class="kick">7 · Formatos</span>
   <h2>Los 13 formatos de red</h2>
-  <p class="lead">Toda plantilla se exporta a cualquier formato — el Studio maneja las zonas seguras. <b>Formato madre de IA en campo: carrusel retrato 4:5.</b></p>
+  <p class="lead">Toda plantilla se exporta a cualquier formato — el Studio maneja las zonas seguras. <b>Formato madre de IA en Campo: carrusel retrato 4:5.</b></p>
   <div class="table-scroll">
   <table>
     <thead><tr><th>Red</th><th>Formato</th><th class="mono">Medidas</th></tr></thead>
@@ -552,14 +572,15 @@
     <div class="rule"><b class="do"></b><span>Placa negra con crema para el dato clave — una por pieza.</span></div>
     <div class="rule"><b class="do"></b><span>Ruido SOLO con los assets del Studio (<code>assets/studio/</code>): 2–4 por pieza, ±5–15°, en las esquinas.</span></div>
     <div class="rule"><b class="do"></b><span>Display y cifras al ~70% del ancho de la pieza. En redes, grande o nada.</span></div>
-    <div class="rule"><b class="do"></b><span>Voseo didáctico + una manito que señala por CTA (nunca otro emoji). Lockup "IA en campo · por Magoya" abajo-izquierda.</span></div>
+    <div class="rule"><b class="do"></b><span>Voseo didáctico + una manito que señala por CTA (nunca otro emoji). Lockup de IA en Campo abajo-izquierda; en texto, “IA en Campo, presentado por Magoya”.</span></div>
     <div class="rule"><b class="do"></b><span>Producir SIEMPRE desde plantillas del Studio.</span></div>
-    <div class="rule"><b class="do">Hacer</b><span>Se escribe <b>IA en campo</b>, con IA en español. Nunca "AI en campo": los nombres de archivo del sistema siguen en <code>ai-</code> por compatibilidad, pero eso no se copia al texto de la pieza.</span></div>
-      <div class="rule"><b class="dont"></b><span>Nada de esta sub-marca vuelve al core: ni placa negra, ni fondo verde pleno, ni stickers en piezas institucionales.</span></div>
-    <div class="rule"><b class="dont"></b><span>Ningún acento fuera de la paleta core (nada de terracota ni colores propios de la sub-marca) — solo verdes, lima, negro y crema.</span></div>
+    <div class="rule"><b class="do">Hacer</b><span>Se escribe <b>IA en Campo</b>: es nombre propio y va siempre así, en cualquier idioma del texto. Nunca "AI en Campo". Para la inteligencia artificial en general se usa <b>AI</b>, en inglés. Los nombres de archivo del sistema siguen en <code>ai-</code> por compatibilidad, pero eso no se copia al texto de la pieza.</span></div>
+      <div class="rule"><b class="dont"></b><span>Nada de este programa vuelve al core: ni placa negra, ni fondo verde pleno, ni stickers en piezas institucionales.</span></div>
+    <div class="rule"><b class="dont"></b><span>Ningún acento fuera de la paleta core (nada de terracota ni colores propios del programa) — solo verdes, lima, negro y crema.</span></div>
     <div class="rule"><b class="dont"></b><span>Lima #A2FF00 casi no juega acá — el protagonista es el verde digital. No mezclar los dos verdes brillantes en una pieza.</span></div>
     <div class="rule"><b class="dont"></b><span>El wordmark sigue intocable: negro o crema, nunca reconstruido ni con sombras.</span></div>
-    <div class="rule"><b class="dont"></b><span>El mark de "IA en campo" agrandado y suelto como estallido cómic en una esquina — solo va chico, pegado al lockup.</span></div></div></div>
+    <div class="rule"><b class="dont"></b><span>Hablar desde la cuenta de Magoya como si fuera contenido propio de la marca: IA en Campo es marca de programa presentada por Magoya.</span></div>
+    <div class="rule"><b class="dont"></b><span>El mark de "IA en Campo" agrandado y suelto como estallido cómic en una esquina — solo va chico, pegado al lockup.</span></div></div></div>
 </section>
 
 </main>
@@ -596,7 +617,7 @@
 </script>
 
 <script>
-// ---------- logos de IA/redes: 4 variantes (svg/png x color/negro, isologo/con contenedor) ----------
+// ---------- logos de AI/redes: 4 variantes (svg/png x color/negro, isologo/con contenedor) ----------
 (function(){
   function dl(url, filename){
     fetch(url).then(function(r){return r.blob();}).then(function(b){

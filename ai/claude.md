@@ -1,6 +1,6 @@
 # Magoya Brand — entrada para Claude (claude.ai / Claude Code / API)
 
-**Versión 1.6 · 2026-09-07** · Punto de entrada de la marca Magoya para Claude. Se versiona por separado de las otras AIs: cuando Claude gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
+**Versión 1.7 · 2026-10-19** · Punto de entrada de la marca Magoya para Claude. Se versiona por separado de las otras AIs: cuando Claude gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
 
 > **AVISO PARA EL MODELO QUE LEE ESTO: no resumas este archivo — necesitás las URLs literales.** Si tu herramienta de fetch te devolvió un resumen sin links, volvé a pedir el contenido completo, o hacé UN fetch de `https://brand.magoya.com/llms-full.txt` que trae todo el sistema en un solo archivo.
 Si sos Claude leyendo esto: seguí el flujo de abajo, todas las URLs son públicas y fetcheables sin auth.
@@ -16,6 +16,7 @@ Si sos Claude leyendo esto: seguí el flujo de abajo, todas las URLs son públic
    Usá los 41 módulos de abajo **solo si el deck que necesitás no es ninguno de esos tres.**
 
 1. **Doctrina** → https://brand.magoya.com/BRAND.md
+   **Texto** (si la pieza lleva copy) → https://brand.magoya.com/vocabulary.json y https://brand.magoya.com/.ai/checklist-verbal.md — la capa verbal del Magoya Brand Playbook (octubre 2026), que prevalece si algo difiere: Magoya es una consultora hands-on en software y AI para empresas del agro; se escribe AI en cualquier idioma (única excepción: el nombre propio IA en Campo); vocabulario vetado; territorios Uso 50% · Integración 30% · Hands-on 20%. Detalle en https://brand.magoya.com/.ai/verbal/ (estrategia.md, voz.md, lenguaje.md, aplicacion.md).
 2. **Valores exactos** → https://brand.magoya.com/tokens.json
 3. **Tokens CSS** (si vas a escribir código) → https://brand.magoya.com/tokens.css — usá las custom properties, nunca hex sueltos.
 4. **Assets** → https://brand.magoya.com/ai/assets.json — 239 archivos con URL directa y regla de uso. Los SVGs se leen como texto: el wordmark se usa tal cual, jamás se redibuja.
@@ -44,6 +45,12 @@ https://brand.magoya.com/ai/constraints.json  <- mínimos, clearspace, márgenes
 https://brand.magoya.com/ai/assets.json       <- los 239 assets con URL directa
 https://brand.magoya.com/ai/metodo.md         <- método obligatorio (narrativa + agentes)
 https://brand.magoya.com/.ai/checklist.md  <- 17 chequeos
+https://brand.magoya.com/vocabulary.json     <- vocabulario: vetos, frases prohibidas, regla AI, glosario ES/EN/PT
+https://brand.magoya.com/.ai/checklist-verbal.md  <- checklist de texto (capa verbal del Brand Playbook)
+https://brand.magoya.com/.ai/verbal/estrategia.md <- definición, territorios, razones para creer, tagline
+https://brand.magoya.com/.ai/verbal/voz.md        <- rasgos, diales por país, énfasis por audiencia
+https://brand.magoya.com/.ai/verbal/lenguaje.md   <- vocabulario vetado, regla AI, glosario
+https://brand.magoya.com/.ai/verbal/aplicacion.md <- voceros, canales, idioma
 ```
 
 **Las dos reglas que más se rompen en este flujo:** (1) la plantilla se copia TAL CUAL — solo cambia el texto de los `data-slot`; (2) las cifras y textos de las plantillas son EJEMPLO: los datos reales están en `facts.json` y lo que no esté ahí se pide, nunca se inventa.
@@ -74,6 +81,8 @@ entero en cada conversación.
   decisión abierta en el ledger (`.ai/VALIDACION-IA.md`), no la tomes por tu cuenta.
 
 ## Changelog
+
+- **1.7** (2026-10-19): capa verbal del Magoya Brand Playbook (octubre 2026) — vocabulary.json, .ai/checklist-verbal.md y .ai/verbal/ en el flujo y en la lista plana. Se escribe AI, no la sigla en español (salvo IA en Campo).
 
 - **1.6** (2026-09-07): Agent Skills documentado como mecanismo (progressive disclosure + plugin marketplace como canal de distribución). Todavía no hay skill publicada: el canal sigue siendo la URL.
 

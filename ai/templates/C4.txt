@@ -23,7 +23,7 @@ Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos
 aprobados de la compania viven en https://brand.magoya.com/ai/facts.json —
 si el dato que necesitas no esta ahi, pedilo al usuario; no lo inventes.
 
-REGLAS PARA LA IA (no negociables):
+REGLAS PARA LA AI (no negociables):
 1. NO tocar posiciones, tamaños, colores ni tipografías. La geometría ES la marca.
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no
@@ -45,7 +45,7 @@ REGLAS PARA LA IA (no negociables):
 <p class="t" data-slot="t1" data-rol="numero_de_pagina" style="left:76.5cqw;top:3.5cqw;width:16cqw;height:2.2cqw;font-size:0.767cqw;font-weight:800;color:#AAAAAA;text-align:right;line-height:1.2;letter-spacing:0.0994em">NN</p>
 <p class="t" data-slot="t2" data-rol="kicker" style="left:7.5cqw;top:12cqw;width:40cqw;height:2.6cqw;font-size:1.0cqw;font-weight:800;color:#009145;text-align:left;line-height:1.2;letter-spacing:0.1247em">SINCE 2017</p>
 <p class="t" data-slot="t3" data-rol="display" style="left:7.5cqw;top:19cqw;width:26cqw;height:15cqw;font-size:10.0cqw;font-weight:800;color:#161616;text-align:left;line-height:0.9;letter-spacing:-0.03em">[XX]</p>
-<p class="t" data-slot="t4" data-rol="caption" style="left:7.5cqw;top:36.5cqw;width:24cqw;height:7cqw;font-size:1.0cqw;font-weight:400;color:#666666;text-align:left;line-height:1.3">AgTech domains covered in-house</p>
+<p class="t" data-slot="t4" data-rol="caption" style="left:7.5cqw;top:36.5cqw;width:24cqw;height:7cqw;font-size:1.0cqw;font-weight:400;color:#666666;text-align:left;line-height:1.3">ag domains covered in-house</p>
 <p class="t" data-slot="t5" data-rol="display" style="left:36.5cqw;top:19cqw;width:26cqw;height:15cqw;font-size:10.0cqw;font-weight:800;color:#161616;text-align:left;line-height:0.9;letter-spacing:-0.03em">[XX]</p>
 <p class="t" data-slot="t6" data-rol="caption" style="left:36.5cqw;top:36.5cqw;width:24cqw;height:7cqw;font-size:1.0cqw;font-weight:400;color:#666666;text-align:left;line-height:1.3">Countries running our products</p>
 <p class="t" data-slot="t7" data-rol="display" style="left:65.5cqw;top:19cqw;width:26cqw;height:15cqw;font-size:10.0cqw;font-weight:800;color:#161616;text-align:left;line-height:0.9;letter-spacing:-0.03em">[XX]</p>

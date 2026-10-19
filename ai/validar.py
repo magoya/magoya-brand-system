@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Validador de la capa de consumo para IA.
+Validador de la capa de consumo para AI.
 
 Chequea lo que se puede chequear sin criterio: que los links resuelvan, que las
 referencias cruzadas cierren, que la capa generada no se haya despegado de sus
@@ -85,10 +85,10 @@ def check_slots():
                     and t not in ('[XX]', 'NN') and not es_ordinal):
                 cifras.append('%s/%s = %s' % (m['id'], s.get('slot'), t))
     if sin_guia:
-        huecos.append('%d slots de gráfico/tabla sin nota de qué va adentro (la IA asume): %s'
+        huecos.append('%d slots de gráfico/tabla sin nota de qué va adentro (la AI asume): %s'
                       % (len(sin_guia), ', '.join(sin_guia)))
     if sin_limite:
-        fallas.append('%d slots sin max_caracteres ni max_lineas (la IA no sabe cuánto texto entra): %s'
+        fallas.append('%d slots sin max_caracteres ni max_lineas (la AI no sabe cuánto texto entra): %s'
                       % (len(sin_limite), ', '.join(sin_limite[:12])))
     else:
         ok.append('slots: %d, todos con límite de texto' % total)
@@ -122,7 +122,7 @@ def check_pendientes():
     p = c.get('pendiente_de_definir') or []
     items = p if isinstance(p, list) else list(p.values()) if isinstance(p, dict) else [p]
     if items:
-        huecos.append('constraints.json declara %d definiciones pendientes — mientras estén ahí, la IA tiene '
+        huecos.append('constraints.json declara %d definiciones pendientes — mientras estén ahí, la AI tiene '
                       'que asumir: %s' % (len(items), ' · '.join(str(i)[:90] for i in items)))
     else:
         ok.append('constraints.json: sin definiciones pendientes')
@@ -145,7 +145,7 @@ def check_cobertura():
         'zona segura en redes': ['zona segura', 'zona_segura', '96'],
         'ancho máximo de párrafo': ['ancho_maximo', 'caracteres por línea'],
         'jerarquía tipográfica': ['niveles_maximos', 'kickers', 'tracking'],
-        'nomenclatura IA': ['nomenclatura'],
+        'nomenclatura AI': ['nomenclatura'],
     }
     faltan = [k for k, ks in exigidas.items() if not any(x in plano for x in ks)]
     if faltan:
@@ -155,16 +155,18 @@ def check_cobertura():
         ok.append('constraints.json cubre las 8 familias de restricción (espacios, logo, texto, redes, nomenclatura)')
 
 
-# ─── 6. IA, no AI ───────────────────────────────────────────────────────────
-# copy en inglés, nombres propios, identificadores de código y nombres de archivo
-PERMITIDO = ('Data &amp; AI', 'Data & AI', 'data &amp; AI', 'data & AI', 'AI Studio',
-             'AI-powered', 'with AI', 'moved AI into', 'Agro AI', 'AI=A+', 'src: AI+',
-             'src:AI+', 'AI-INTEGRATION', 'AI Patterns', 'AI patterns', 'AI by McKinsey',
-             '"AI no es el claim', 'AI o plataformas')
+# ─── 6. AI, no la sigla en español (Brand Playbook oct 2026, slide 50) ──────
+# Regla: se escribe AI en cualquier idioma del texto. Única excepción: el nombre propio
+# "IA en Campo", que se escribe siempre así (nunca "AI en Campo" ni con minúscula).
+# No cuentan: nombres de archivo (VALIDACION-IA.md, agente-validacion-ia.md).
 # marcadores de que el texto ENUNCIA la regla, no la incumple
-ENUNCIA_REGLA = ('nunca AI', "nunca 'AI'", 'Nunca "AI', 'IA, no AI', 'escribe "AI"',
-                 'se admite "AI"', 'en vez de **IA**', 'queda solo para copy',
-                 "'AI' solo se escribe", 'Buscá `AI`', 'no AI**', 'no se copia al texto')
+ENUNCIA_REGLA = ('la sigla en español', 'Buscá la palabra suelta `IA`', '"do_not_write"',
+                 'IA (como sigla', 'nunca "AI en Campo"', "nunca 'AI en Campo'", 'Nunca "AI en Campo"',
+                 'nunca “AI en Campo”', 'o con minúscula', 'con minúscula', '"never": "AI en Campo"',
+                 'Nunca <span class="no">“AI en Campo”',
+                 # el lockup de IA en Campo parte el nombre en dos renglones: "IA" / "en Campo"
+                 'class="l1">IA<span class="mk">', 'altura de "IA"', 'derecha de "IA"',
+                 '<td><span class="no">“AI en Campo”</span></td>')
 
 
 def check_nomenclatura():
@@ -172,25 +174,37 @@ def check_nomenclatura():
     # los SVG de assets/pieces llevan copy VISIBLE y quedaban fuera del barrido: la pieza
     # patrón del 4:5 publicaba "AI EN CAMPO" en el kicker y ninguna corrida lo vio.
     objetivo = sorted(set(glob.glob('*.html') + glob.glob('ai/*.json') + glob.glob('ai/*.md')
-                          + ['llms.txt', 'llms-full.txt', 'BRAND.md', '.ai/checklist.md']
+                          + ['llms.txt', 'llms-full.txt', 'BRAND.md', 'vocabulary.json',
+                             '.ai/checklist.md', '.ai/checklist-verbal.md']
+                          + glob.glob('.ai/verbal/*.md')
                           + glob.glob('ai/templates/*.txt')
                           + glob.glob('assets/pieces/*.svg') + glob.glob('assets/studio/*.svg')))
     for f in objetivo:
         if not os.path.exists(f):
             continue
         s = io.open(f, encoding='utf-8', errors='ignore').read()
-        for m in re.finditer(r'\bAI\b', s):
+        for m in re.finditer(r'\b(IA|AI)\b', s):
+            antes, despues = s[max(0, m.start() - 1):m.start()], s[m.end():m.end() + 9]
+            if antes in '-_' and antes:
+                continue                                   # nombre de archivo
+            if despues.startswith('.md') or despues.startswith('-'):
+                continue
+            nombre = s[m.start():m.end() + 9]
+            if m.group(1) == 'IA' and nombre in ('IA en Campo', 'IA EN CAMPO'):   # mayúsculas: kicker
+                continue                                   # el nombre propio, bien escrito
+            if m.group(1) == 'AI' and not re.match(r'AI en [Cc]ampo', s[m.start():m.end() + 9]):
+                continue                                   # AI suelto es la forma correcta
             amplio = s[max(0, m.start() - 110):m.end() + 110]
-            if any(k in amplio for k in PERMITIDO) or any(k in amplio for k in ENUNCIA_REGLA):
+            if any(k in amplio for k in ENUNCIA_REGLA):
                 continue
             v = s[max(0, m.start() - 40):m.end() + 26]
-            if True:
-                malos.append('%s: …%s…' % (f, re.sub(r'\s+', ' ', v)))
+            malos.append('%s: …%s…' % (f, re.sub(r'\s+', ' ', v)))
     if malos:
-        fallas.append('%d lugares escriben "AI" en copy español (regla: IA). Primeros: %s'
+        fallas.append('%d lugares no siguen la regla AI (se escribe AI en cualquier idioma; única excepción, '
+                      'el nombre propio "IA en Campo"). Primeros: %s'
                       % (len(malos), ' || '.join(malos[:6])))
     else:
-        ok.append('nomenclatura: ningún "AI" fuera de inglés y nombres propios')
+        ok.append('nomenclatura: AI en todo el copy y "IA en Campo" bien escrito')
 
 
 # ─── 7. links publicados ────────────────────────────────────────────────────
@@ -277,7 +291,7 @@ def check_peso():
             continue
         kb = os.path.getsize(f) / 1024
         if f == 'llms-full.txt' and kb > 200:
-            huecos.append('llms-full.txt pesa %.0fKB: arriba de ~200KB varias IA lo truncan al pegarlo' % kb)
+            huecos.append('llms-full.txt pesa %.0fKB: arriba de ~200KB varias AI lo truncan al pegarlo' % kb)
     ok.append('peso: llms-full.txt %.0fKB' % (os.path.getsize('llms-full.txt') / 1024))
 
 
@@ -477,7 +491,7 @@ def _arco(path):
 
 def _adorno(path):
     """La falla que hizo abandonar al usuario y que nada medía: cuando le dijeron que el
-    deck estaba soso, la IA agregó carátulas decorativas. El chequeo de textura no las
+    deck estaba soso, la AI agregó carátulas decorativas. El chequeo de textura no las
     veía y encima las sacaba del denominador."""
     s = io.open(path, encoding='utf-8', errors='ignore').read()
     # un contenedor .slide sin data-modulo solo cuenta como inventado si RENDERIZA como
@@ -538,7 +552,7 @@ def _solo_slides(s):
 
 
 def validar_pieza(path):
-    """El hallazgo que motivó esto: en la auditoría una IA declaró cinco cifras como no
+    """El hallazgo que motivó esto: en la auditoría una AI declaró cinco cifras como no
     verificables en su reporte y las dejó escritas en la slide. Declarar no es contener."""
     s = io.open(path, encoding='utf-8', errors='ignore').read()
     # Las cifras se cuentan SOLO dentro de las slides. Todo lo que está afuera —el <title>,
@@ -660,7 +674,7 @@ for fn in (check_selector, check_slots, check_pendientes, check_cobertura,
         fallas.append('%s explotó: %s: %s' % (fn.__name__, type(e).__name__, e))
 
 print('=' * 72)
-print('VALIDACIÓN DE LA CAPA DE CONSUMO PARA IA%s' % ('  (con red)' if CON_RED else '  (local)'))
+print('VALIDACIÓN DE LA CAPA DE CONSUMO PARA AI%s' % ('  (con red)' if CON_RED else '  (local)'))
 print('=' * 72)
 for t, xs in (('FALLA', fallas), ('HUECO (necesita decisión humana)', huecos), ('OK', ok)):
     for x in xs:
