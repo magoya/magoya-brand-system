@@ -30,42 +30,42 @@
  "familias": [
   {
    "id": "A",
-   "nombre": "A · Apertura",
+   "nombre": "Apertura",
    "que_cubre": "statements, agenda y divisores de sección"
   },
   {
    "id": "B",
-   "nombre": "B · Servicios & cards",
+   "nombre": "Servicios & cards",
    "que_cubre": "modelos de engagement y capacidades"
   },
   {
    "id": "C",
-   "nombre": "C · Cifras",
+   "nombre": "Cifras",
    "que_cubre": "stats, métricas al palo, números que se leen de lejos"
   },
   {
    "id": "D",
-   "nombre": "D · Gráficos",
+   "nombre": "Gráficos",
    "que_cubre": "barras, barras agrupadas, líneas y progreso"
   },
   {
    "id": "E",
-   "nombre": "E · Listas & tablas",
+   "nombre": "Listas & tablas",
    "que_cubre": "método, checklists y escenarios de inversión"
   },
   {
    "id": "F",
-   "nombre": "F · Proceso",
+   "nombre": "Proceso",
    "que_cubre": "timelines, método, journey de actores y artefactos"
   },
   {
    "id": "G",
-   "nombre": "G · Casos de éxito",
+   "nombre": "Casos de éxito",
    "que_cubre": "estructura challenge → equipo → adaptación → resultados"
   },
   {
    "id": "H",
-   "nombre": "H · Fotografía",
+   "nombre": "Fotografía",
    "que_cubre": "aéreas de campo a sangre, scrim y tiras"
   },
   {
