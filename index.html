@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
-<title>Magoya · Brand System</title>
+<title>Magoya · Sistema de marca</title>
 <link rel="stylesheet" href="tokens.css">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -199,70 +199,79 @@
   .boardhead span{font-size:13px;color:var(--gray-600)}
 </style>
 <link rel="stylesheet" href="nav.css">
+<style>
+/* Propuesta local: portada por tareas. No aplicada al sitio publicado. */
+.wrap{max-width:1320px;margin:0 auto;padding-top:62px}.head{align-items:center;margin-bottom:42px;gap:60px}.head h1{max-width:880px}.head p{line-height:1.6;max-width:62ch}.mg-topbar{padding:12px 28px;flex-wrap:nowrap;gap:8px}.mg-topbar .navdiv{display:none}.program-link{margin-left:auto;opacity:.8}.resource-state{justify-self:end;border-left:1px solid var(--color-hairline);padding-left:28px;min-width:220px}.resource-state>span{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-600)}.resource-state>b{display:block;margin:10px 0 6px;font-size:22px}.resource-state p{font-size:12px;margin:0 0 14px}.resource-state a{font-size:12px;font-weight:700;color:var(--emerald-700)}.task-heading{display:flex;align-items:baseline;gap:18px;margin-bottom:18px}.task-heading h2{font-size:26px;letter-spacing:-.03em}.task-heading>span{font-size:13px;color:var(--gray-600)}.task-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.task-card{padding:24px;background:var(--white);border:1px solid var(--color-hairline);border-radius:14px;display:flex;flex-direction:column;min-height:260px;transition:transform .18s}.task-card:hover{transform:translateY(-3px)}.task-card>span{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-600)}.task-card h3{font-size:24px;line-height:1.12;letter-spacing:-.03em;margin:20px 0 12px}.task-card p{font-size:13px;line-height:1.6;color:var(--gray-600);margin-bottom:24px}.task-card>b{font-size:13px;margin-top:auto}.task-primary{background:var(--ink-900);color:var(--cream-50);border-color:var(--ink-900)}.task-primary>span,.task-primary p{color:var(--cream-300)}.task-primary>b{background:var(--lime-500);color:var(--ink-900);padding:10px 14px;border-radius:var(--radius-btn);align-self:flex-start}.reference-map,.source-details{border-bottom:1px solid var(--color-hairline);padding:20px 0}.reference-map{margin-top:24px}.source-details{margin-bottom:38px}.reference-map>summary,.source-details>summary{cursor:pointer;font-size:14px;font-weight:700}.reference-map>summary>span{font-weight:400;font-size:12px;color:var(--gray-600);margin-left:16px}.map{margin-top:22px}.facts{margin-top:22px;margin-bottom:12px}.nav-group{position:relative;color:var(--cream-300);font-size:13px;font-weight:600}.nav-group summary{cursor:pointer;padding:6px 10px}.nav-group>div{position:absolute;top:35px;left:0;background:var(--green-950);padding:12px;min-width:190px;box-shadow:0 8px 20px #0003;border-radius:8px}.nav-group a{display:block}.task-card:focus-visible,summary:focus-visible{outline:3px solid var(--emerald-700);outline-offset:4px}
+@media(max-width:1000px){.task-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.head{gap:28px}.program-link{margin-left:0}.mg-topbar{overflow:visible;flex-wrap:wrap}.nav-group>div{z-index:130}}
+@media(max-width:600px){.wrap{padding:28px 20px 60px}.head{grid-template-columns:1fr;margin-bottom:28px}.resource-state{justify-self:start;padding-left:16px}.task-grid{grid-template-columns:1fr}.task-card{min-height:210px}.task-heading{display:block}.task-heading>span{display:block;margin-top:6px}.reference-map>summary>span{display:block;margin:8px 0 0}.mg-topbar{padding:10px 14px;gap:3px}.mg-topbar img{height:25px}.mg-topbar a,.nav-group{font-size:12px}.mg-topbar .brandmark{width:100%;margin-bottom:4px}.facts{grid-template-columns:1fr}.map{grid-template-columns:1fr}.head h1{font-size:2.35rem!important}}
+</style>
 </head>
 <body>
 
-<nav class="mg-topbar">
-  <span class="brandmark"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></span>
-  <a href="index.html" class="on">Inicio</a><span class="navdiv"></span><a href="estrategia.html"><i>A</i>Estrategia</a><a href="voz.html"><i>B</i>Voz</a><a href="lenguaje.html"><i>C</i>Lenguaje</a><a href="aplicacion.html"><i>D</i>Aplicación</a><span class="navdiv"></span><a href="brand-book.html"><i>E</i>Identidad visual</a><a href="piezas.html"><i>F</i>Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub"><i>G</i>IA en Campo</a><a href="ai.html"><i>H</i>Integrar con AI</a>
+<nav class="mg-topbar" aria-label="Navegación principal">
+<a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · inicio"></a>
+<a class="on" href="index.html" aria-current="page">Inicio</a>
+<details class="nav-group"><summary>Conocer la marca</summary><div><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><a href="brand-book.html">Identidad visual</a></div></details>
+<a href="piezas.html">Elegir una plantilla</a><a href="library.html">Recursos</a><a href="ai.html">Integrar con AI</a><a href="ai-en-campo.html" class="program-link">IA en Campo ↗</a>
 </nav>
 
 <div class="wrap">
 
   <div class="head">
     <div>
-      <span class="k" style="color:var(--emerald-700)">Brand System · v2.1 · octubre de 2026</span>
+      <span class="k" style="color:var(--emerald-700)">Marca Magoya · octubre de 2026</span>
       <h1 style="font-size:clamp(2.3rem,4.2vw,3.7rem)">Consultora <span style="white-space:nowrap">hands-on</span> en software y AI <em>para empresas del agro.</em></h1>
-      <p>El sistema de marca de Magoya, en nueve partes. Primero la estrategia, la voz y el lenguaje; después la identidad visual y las piezas.</p>
+      <p>La marca en práctica. Encontrá las reglas, las palabras y los recursos para lo que vas a crear.</p>
     </div>
-    <div class="meta">
-      <div><b>9</b><span>partes</span></div>
-      <div><b>41</b><span>módulos de slide</span></div>
-      <div><b>58</b><span>íconos</span></div>
-      <div><b>31</b><span>logos reales</span></div>
-    </div>
+    <div class="resource-state"><span>Fuentes vigentes</span><b>Voz y tono</b><p>Actualizada el 19 oct 2026</p><a href="#fuentes">Consultar fuentes →</a></div>
   </div>
+  <section class="task-entry" aria-labelledby="task-title"><div class="task-heading"><h2 id="task-title">¿Qué vas a crear?</h2><span>Elegí por dónde empezar.</span></div>
+  <div class="task-grid">
+    <a class="task-card task-primary" href="piezas.html"><span>Diseño y producción</span><h3>Piezas y plantillas</h3><p>Consultá formatos, ejemplos y descargas para slides, documentos, redes y papelería.</p><b>Elegir una plantilla →</b></a>
+    <a class="task-card" href="voz.html"><span>Voz y lenguaje</span><h3>Escribir como Magoya</h3><p>Encontrá el tono, ejemplos y criterios para cada audiencia.</p><b>Consultar la voz →</b></a>
+    <a class="task-card" href="library.html"><span>Assets y descargas</span><h3>Encontrar un recurso</h3><p>Logos, tipografía, íconos y fotos con sus reglas de uso.</p><b>Abrir biblioteca →</b></a>
+    <a class="task-card" href="ai.html"><span>Herramientas de AI</span><h3>Crear con AI</h3><p>Cargá las fuentes vigentes y revisá lo que devuelve tu herramienta.</p><b>Preparar herramienta →</b></a>
+  </div></section>
+  <details class="reference-map"><summary>Consultar todos los capítulos de la marca <span>Estrategia, voz, lenguaje, aplicación e identidad visual</span></summary>
 
   <div class="map">
-    <div class="p0"><b>0 · Inicio</b> Qué es Magoya en una línea, qué documento manda, versiones y entrada para AI. Estás acá.</div>
-    <a class="part verbal" href="estrategia.html"><b>A · Estrategia</b><span>Quiénes somos · Propuesta de valor y oferta · Territorios y Usage Loop · Audiencias · Razones para creer y Método · Valores, pilares y promesa · Personalidad · Arquitectura de marca · Tagline</span><small>Sale del playbook</small></a>
-    <a class="part verbal" href="voz.html"><b>B · Voz</b><span>La voz en la práctica · Personalidad, ejes y principios · Cómo construimos mensajes · Adaptación por audiencia, mercado y canal · Postura y lo que no dice</span><small>Guía editorial V2 + playbook</small></a>
-    <a class="part verbal" href="lenguaje.html"><b>C · Lenguaje</b><span>Estilo y lenguaje · Vocabulario de marca · AI, en inglés · Glosario ES / EN / PT · Cómo suena Magoya · Reglas de oro verbales</span><small>Guía editorial V2 + playbook</small></a>
-    <a class="part verbal" href="aplicacion.html"><b>D · Aplicación</b><span>Voceros y territorios · Canales e idioma · Focos de contenido y producción</span><small>Sale del playbook</small></a>
-    <a class="part visual" href="brand-book.html"><b>E · Identidad visual</b><span>Logo y avatares · Color · Tipografía · Fotografía · Ilustración · Íconos · Componentes · Reglas de oro visuales</span><small>Del brand system v1.2 · se revisa</small></a>
-    <a class="part visual" href="piezas.html"><b>F · Piezas y plantillas</b><span>Slides · Comerciales · Papelería · Merch · Assets · Clientes</span><small>Del brand system v1.2 · se revisa</small></a>
-    <a class="part mixta" href="ai-en-campo.html"><b>G · IA en Campo</b><span>Sub-manual del programa: lockup, voz y piezas</span><small>Mixta</small></a>
-    <a class="part mixta" href="ai.html"><b>H · Integrar con AI</b><span>Archivos para AI, presets y validación, con la capa verbal nueva</span><small>Mixta</small></a>
+
+    <a class="part verbal" href="estrategia.html"><b>Estrategia</b><span>Quiénes somos · Propuesta de valor y oferta · Territorios y Usage Loop · Audiencias · Razones para creer y Método · Valores, pilares y promesa · Personalidad · Arquitectura de marca · Tagline</span><small>Sale del playbook</small></a>
+    <a class="part verbal" href="voz.html"><b>Voz</b><span>La voz en la práctica · Personalidad, ejes y principios · Cómo construimos mensajes · Adaptación por audiencia, mercado y canal · Postura y lo que no dice</span><small>Guía editorial + playbook</small></a>
+    <a class="part verbal" href="lenguaje.html"><b>Lenguaje</b><span>Estilo y lenguaje · Vocabulario de marca · AI, en inglés · Glosario ES / EN / PT · Cómo suena Magoya · Reglas de oro verbales</span><small>Guía editorial + playbook</small></a>
+    <a class="part verbal" href="aplicacion.html"><b>Aplicación</b><span>Voceros y territorios · Canales e idioma · Focos de contenido y producción</span><small>Sale del playbook</small></a>
+    <a class="part visual" href="brand-book.html"><b>Identidad visual</b><span>Logo y avatares · Color · Tipografía · Fotografía · Ilustración · Íconos · Componentes · Reglas de oro visuales</span><small>Identidad visual vigente</small></a>
+    <a class="part visual" href="piezas.html"><b>Piezas y plantillas</b><span>Slides · Comerciales · Papelería · Merch · Assets · Clientes</span><small>Identidad visual vigente</small></a>
+    <a class="part mixta" href="ai-en-campo.html"><b>IA en Campo</b><span>Sub-manual del programa: lockup, voz y piezas</span><small>Mixta</small></a>
+    <a class="part mixta" href="ai.html"><b>Integrar con AI</b><span>Archivos para AI, presets y validación, con la capa verbal nueva</span><small>Mixta</small></a>
   </div>
 
+  </details>
+  <details class="source-details" id="fuentes"><summary>Fuentes y uso con AI</summary>
   <div class="facts">
     <div>
       <h3>Qué documento manda</h3>
       <ul>
-        <li>Las partes A a D salen del <b>Magoya Brand Playbook</b> (octubre de 2026). Si el sitio difiere de su fuente (playbook o guía editorial), gana la fuente y se corrige el sitio.</li>
-        <li>La voz y el tono aplicados salen de la <b>Guía editorial de voz y tono V2</b>: manda sobre voz, estilo, vocabulario y adaptación. Identidad, posicionamiento, oferta y método siguen en el playbook.</li>
+        <li>Estrategia y aplicación salen del <b>Magoya Brand Playbook</b> (octubre de 2026). Si el sitio difiere de su fuente (playbook o guía editorial), gana la fuente y se corrige el sitio.</li>
+        <li>La voz y el tono aplicados salen de la <b>Guía editorial de voz y tono</b>: manda sobre voz, estilo, vocabulario y adaptación. Identidad, posicionamiento, oferta y método siguen en el playbook.</li>
         <li>Casos, cifras y clientes salen de fuentes internas aprobadas, con validación humana.</li>
         <li>Si dos fuentes se contradicen, no se arma una síntesis: se señala y se pide definición.</li>
-        <li>Lo verbal y estratégico de la versión anterior (Esencia, La voz) quedó reemplazado por A, B y C.</li>
-        <li>E y F se conservan como estaban hasta revisarlos con el nuevo posicionamiento.</li>
+        <li>Lo verbal y estratégico de la versión anterior (Esencia, La voz) quedó reemplazado por estrategia, voz y lenguaje.</li>
+        <li>Identidad visual y piezas se conservan como estaban hasta revisarlos con el nuevo posicionamiento.</li>
       </ul>
     </div>
     <div>
-      <h3>Versiones</h3>
-      <ul>
-        <li><b>v2.1</b> · octubre de 2026 · voz y tono desde la Guía editorial V2; instrucciones operativas para AI.</li>
-        <li><b>v2.0</b> · octubre de 2026 · nueva estructura del playbook: suma estrategia, voz, lenguaje y aplicación.</li>
-        <li><b>v1.2</b> · deck kit de 41 módulos.</li>
-        <li><b>v1.1</b> · brand book, slides, comerciales, íconos, assets y capa para AI.</li>
-      </ul>
+      <h3>Recursos vigentes</h3>
+      <ul><li><b>Voz y tono</b> · actualizados el 19 de octubre de 2026.</li><li><b>Estrategia y lenguaje</b> · criterios para comunicar la marca.</li><li><b>Identidad visual</b> · reglas y recursos de diseño.</li><li><b>Plantillas</b> · módulos listos para adaptar.</li></ul>
     </div>
     <div>
       <h3>Entrada para AI</h3>
-      <p>Para cargar la marca en Claude, Cursor o un GPT: <a href="ai.html">H · Integrar con AI</a>.</p>
+      <p>Para cargar la marca en Claude, Cursor o un GPT: <a href="ai.html">Integrar con AI</a>.</p>
       <p style="margin-top:8px"><code>llms.txt</code> · <code>BRAND.md</code> · <code>tokens.json</code> · <code>vocabulary.json</code></p>
     </div>
   </div>
 
+  </details>
   <div class="boardhead"><h2>Identidad visual y piezas, de un vistazo</h2><span>Tocá cualquier pieza para entrar a su capítulo.</span></div>
 
   <div class="board">
@@ -312,7 +321,7 @@
             <button class="btn" style="background:transparent;border:1.5px solid var(--green-900);color:var(--green-900);width:fit-content">Ver más</button>
           </div>
         </div>
-        <span style="font-size:10.5px;color:var(--gray-600);font-family:var(--font-mono);margin-top:10px">El kit (botones, chips, cards) y su aplicación · redes, merch & papelería</span>
+        <span style="font-size:10.5px;color:var(--gray-600);font-family:var(--font-mono);margin-top:10px">Componentes y aplicaciones · botones, tarjetas, redes y papelería</span>
       </div>
       <span class="lb"><b>Un sistema, no un ejemplo</b><span>Publicá en LinkedIn o redes de Magoya</span></span>
     </a>
@@ -417,12 +426,12 @@
         <span class="ch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h7"/></svg><b>Slides</b></span>
         <div style="font-size:clamp(1.25rem,2.3vw,1.75rem);font-weight:var(--weight-extra);letter-spacing:-0.03em;line-height:1.05;margin:auto 0">It's built. <span style="color:var(--emerald-700)">Now let's get it used.</span></div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-          <span class="chip" style="color:var(--green-900);font-size:9.5px">A1 · Statement hero</span>
-          <span class="chip" style="color:var(--green-900);font-size:9.5px">41 módulos</span>
+          <span class="chip" style="color:var(--green-900);font-size:9.5px">Portada de presentación</span>
+          <span class="chip" style="color:var(--green-900);font-size:9.5px">Plantillas para adaptar</span>
           <span class="chip" style="color:var(--green-900);font-size:9.5px">export .pptx</span>
         </div>
       </div>
-      <span class="lb"><b>Deck kit</b><span>41 módulos: bajás el .pptx, o usás las plantillas listas para copiar</span></span>
+      <span class="lb"><b>Plantillas de presentación</b><span>Descargá el PowerPoint o usá una plantilla lista para copiar</span></span>
     </a>
 
     <!-- 09 COMERCIALES — wide -->
@@ -431,7 +440,7 @@
         <span class="ch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M14 3v4h4"/><path d="M8 12h8M8 15h8M8 18h5"/></svg><b>Comerciales</b></span>
         <div style="font-size:clamp(1.15rem,2.1vw,1.55rem);font-weight:var(--weight-extra);letter-spacing:-0.02em;line-height:1.12;margin:auto 0">Ejecutamos lo que <span style="color:var(--lime-500)">proponemos</span>.</div>
         <div class="chips" style="margin-top:0">
-          <span class="chip" style="font-size:9.5px">T1 · One-pager</span>
+          <span class="chip" style="font-size:9.5px">Presentación comercial</span>
           <span class="chip" style="font-size:9.5px">3 modelos</span>
         </div>
       </div>
@@ -442,7 +451,7 @@
     <a class="c b3" href="ai-en-campo.html">
       <img class="ph fill" src="assets/pieces/fecha-marcada-ig-portrait.svg" alt="Pieza IA en Campo" style="object-position:top">
       <span class="ch chov"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-6M12 15a6 6 0 0 1 6-6h2v1a6 6 0 0 1-6 6zM12 15a5 5 0 0 0-5-5H6v1a5 5 0 0 0 5 5zM17.5 2l.7 1.8L20 4.5l-1.8.7L17.5 7l-.7-1.8L15 4.5l1.8-.7z"/></svg><b>IA en Campo</b></span>
-      <span class="lb"><b>G · IA en Campo</b><span>Programa presentado por Magoya: AI aplicada al día operativo del campo</span></span>
+      <span class="lb"><b>IA en Campo</b><span>Programa presentado por Magoya: AI aplicada al día operativo del campo</span></span>
     </a>
 
     <!-- 11 H · INTEGRAR CON AI — wide -->
@@ -458,7 +467,7 @@
         </div>
         <span style="font-size:11px;color:var(--cream-300);font-family:var(--font-mono);margin-top:14px">llms.txt · BRAND.md · tokens.json</span>
       </div>
-      <span class="lb"><b>H · Integrar con AI</b><span>Cargá la marca en Claude, Cursor o un GPT</span></span>
+      <span class="lb"><b>Integrar con AI</b><span>Cargá la marca en Claude, Cursor o un GPT</span></span>
     </a>
 
     <!-- 12 IDENTIDAD — wide, al final -->
@@ -482,7 +491,7 @@
 </div>
 
 <footer>
-  Magoya Brand System v2.1 · <a href="estrategia.html">A · Estrategia</a> · <a href="brand-book.html">E · Identidad visual</a> · <a href="piezas.html">F · Piezas y plantillas</a> · <a href="ai.html">H · Integrar con AI</a> · <a href="ROADMAP.md">roadmap</a>
+  Magoya · Sistema de marca · <a href="estrategia.html">Estrategia</a> · <a href="brand-book.html">Identidad visual</a> · <a href="piezas.html">Piezas y plantillas</a> · <a href="ai.html">Integrar con AI</a> · <a href="ROADMAP.md">Documentación del sistema</a>
 </footer>
 
 <script>
@@ -544,6 +553,20 @@
   side.addEventListener('mouseleave', function(){
     links.forEach(function(a){ a.style.setProperty('--s', '1'); });
   });
+})();
+</script>
+<script>
+(function(){
+  function revealSources(){
+    if(location.hash !== '#fuentes') return;
+    var panel = document.getElementById('fuentes');
+    if(panel) { panel.open = true; panel.scrollIntoView({block:'start'}); }
+  }
+  document.querySelector('a[href="#fuentes"]').addEventListener('click',function(){
+    document.getElementById('fuentes').open = true;
+  });
+  window.addEventListener('hashchange',revealSources);
+  revealSources();
 })();
 </script>
 </body>

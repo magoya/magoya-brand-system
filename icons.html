@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
-<title>Magoya · Librería de iconos v1.1</title>
+<title>Magoya · Librería de iconos</title>
 <link rel="stylesheet" href="tokens.css">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -48,7 +48,7 @@
 
   .mg-topbar{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;gap:2px;flex-wrap:wrap;background:var(--green-950);padding:10px 24px;box-shadow:0 4px 18px rgba(0,0,0,.16)}
   .mg-topbar img{height:34px;margin-right:18px}
-  
+
   .mg-topbar a{color:var(--cream-300);text-decoration:none;font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px}
   .mg-topbar a:hover,.mg-topbar a.on{background:var(--green-800);color:var(--cream-50)}
   .mg-topbar a.cl{margin-left:16px}
@@ -96,7 +96,6 @@
   .dd.avoid li{color:var(--gray-600)}
   @media (max-width:880px){.usegrid,.dodont{grid-template-columns:1fr}}
 
-  
   /* ---------- rail de puntos: navegacion de secciones ---------- */
   /* El punto ES la pill: al entrar al rail se ensancha hasta que entra el texto,
      asi que el texto siempre es parte del link y se puede clickear.
@@ -214,17 +213,17 @@
 <div class="wrap">
 <nav class="mg-topbar">
   <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
-  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html"><i>A</i>Estrategia</a><a href="voz.html"><i>B</i>Voz</a><a href="lenguaje.html"><i>C</i>Lenguaje</a><a href="aplicacion.html"><i>D</i>Aplicación</a><span class="navdiv"></span><a href="brand-book.html" class="on"><i>E</i>Identidad visual</a><a href="piezas.html"><i>F</i>Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub"><i>G</i>IA en Campo</a><a href="ai.html"><i>H</i>Integrar con AI</a>
-  <div class="mg-subnav"><span class="lbl">E · Identidad visual</span><a href="brand-book.html">Manual visual</a><a href="icons.html" class="on">Librería de íconos</a></div>
+  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><span class="navdiv"></span><a href="brand-book.html" class="on">Identidad visual</a><a href="piezas.html">Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub">IA en Campo</a><a href="ai.html">Integrar con AI</a>
+  <div class="mg-subnav"><span class="lbl">Identidad visual</span><a href="brand-book.html">Manual visual</a><a href="icons.html" class="on">Librería de íconos</a></div>
 </nav>
 
 <nav class="side" id="side-auto">
-  <span class="v">BRAND SYSTEM · V1.1</span>
+  <span class="v">BRAND SYSTEM</span>
 </nav>
 
-  <p class="crumb"><a href="brand-book.html">E · Identidad visual</a> › Librería de iconos</p>
+  <p class="crumb"><a href="brand-book.html">Identidad visual</a> › Librería de iconos</p>
 
-  <span class="eyebrow">Magoya · Iconos v1.1</span>
+  <span class="eyebrow">Magoya · Iconos</span>
   <h1>Librería de iconos</h1>
   <p class="lead">58 iconos de línea con el ADN del wordmark: trazo 2px, terminaciones y esquinas redondeadas, tamaño óptico 24px. Monocromos y recoloreables (usan <code>currentColor</code>). Click en un icono para copiar su SVG.</p>
   <p style="font-size:13.5px;color:var(--gray-600);margin-bottom:10px"><b>Click</b> en un ícono lo copia como <b>imagen PNG</b> (pegalo directo en Docs, Slides, Figma o un mail). Los botones <code style="font-family:var(--font-mono);font-size:11px">PNG</code> / <code style="font-family:var(--font-mono);font-size:11px">SVG</code> lo descargan. <b>⌘/Ctrl + click</b> selecciona varios y <button id="sel-all" style="font-size:12px;font-weight:700;border:1.5px solid var(--emerald-700);color:var(--emerald-700);background:transparent;border-radius:999px;padding:3px 11px;cursor:pointer">seleccionar todos</button></p>
@@ -442,7 +441,6 @@ document.getElementById('sel-all').addEventListener('click', function(){
   document.querySelectorAll('.ic').forEach(function(c){c.classList.add('sel');}); updateBar();
 });
 </script>
-
 
 <script>
 (function(){
