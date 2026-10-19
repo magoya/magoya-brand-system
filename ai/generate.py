@@ -63,7 +63,7 @@ for mod in mods:
         mod['layout_src'] = mod_srcs[mod['id']]
 
 slides = {
-  'que_es': 'Spec machine-readable de los 41 módulos de presentación de Magoya. El deck kit navegable (con export .pptx) vive en slides.html — esta es la receta para que una IA reconstruya cualquier módulo.',
+  'que_es': 'Spec machine-readable de los 41 módulos de presentación de Magoya. El deck kit navegable (con export .pptx) vive en slides.html — esta es la receta para que una AI reconstruya cualquier módulo.',
   'si_tu_fetch_trunca': f'Este archivo es grande (~86KB). Si tu fetch llega cortado o resumido, usa los archivos por familia (2-10KB, mismo formato): {BASE}/ai/slides/A.json hasta {BASE}/ai/slides/M.json — una familia por archivo, con layout_src completo por modulo.',
   'lienzo': {'ancho_px': 1920, 'alto_px': 1080, 'margen_interior': '7%',
              'fondos': ['blanco #FFFFFF', 'sage #EFF3EE', 'oscuro #133825 (solo apertura/cierre/citas)'],
@@ -102,10 +102,10 @@ CATDOC = {
  'assets/font': ('Manrope variable (única tipografía)', 'Pesos 200–800. Display 800 tracking −3%. También en Google Fonts como "Manrope".'),
  'assets/font/manrope': ('Archivos de la fuente', ''),
  'assets/favicon': ('Favicons oficiales', 'Avatar m al corte, sin padding extra.'),
- 'assets/pieces': ('Piezas reales exportadas (referencia de calidad)', 'fecha-marcada-ig-portrait es LA pieza canónica de IA en campo (formato madre 4:5).'),
- 'assets/studio': ('Kit de la sub-marca IA en campo + logos de terceros', 'Los doodles/flourishes del Studio son SOLO para piezas de IA en campo, no para Magoya core.'),
+ 'assets/pieces': ('Piezas reales exportadas (referencia de calidad)', 'fecha-marcada-ig-portrait es LA pieza canónica de IA en Campo (formato madre 4:5).'),
+ 'assets/studio': ('Kit del programa IA en Campo + logos de terceros', 'Los doodles/flourishes del Studio son SOLO para piezas de IA en Campo, no para Magoya core.'),
  'assets/studio/icons/agro': ('Íconos agro del Studio', ''),
- 'assets/studio/icons/ai': ('Logos oficiales de plataformas de IA', 'Usar la variante correcta según fondo (-black sobre claro).'),
+ 'assets/studio/icons/ai': ('Logos oficiales de plataformas de AI', 'Usar la variante correcta según fondo (-black sobre claro).'),
  'assets/studio/icons/social': ('Logos oficiales de redes', 'Idem variantes por fondo.'),
  'assets/studio/devices': ('Mockups de dispositivos', ''),
  # assets/refs NO va en el manifiesto: está gitignored, así que sus URLs dan 404
@@ -286,6 +286,13 @@ print(_d.stdout.strip().splitlines()[-1] if _d.stdout.strip() else _d.stderr.str
 parts = []
 parts.append(open('llms.txt').read())
 parts.append('\n\n# ===== BRAND.md (doctrina completa) =====\n\n' + open('BRAND.md').read())
+# capa verbal del Brand Playbook (oct 2026): A-D en Markdown + vocabulario
+for _titulo, _f in [('ESTRATEGIA (capa verbal A · .ai/verbal/estrategia.md)', '.ai/verbal/estrategia.md'),
+                    ('VOZ (capa verbal B · .ai/verbal/voz.md)', '.ai/verbal/voz.md'),
+                    ('LENGUAJE (capa verbal C · .ai/verbal/lenguaje.md)', '.ai/verbal/lenguaje.md'),
+                    ('APLICACION (capa verbal D · .ai/verbal/aplicacion.md)', '.ai/verbal/aplicacion.md'),
+                    ('VOCABULARIO (vocabulary.json)', 'vocabulary.json')]:
+    parts.append('\n\n# ===== ' + _titulo + ' =====\n\n' + open(_f).read())
 parts.append('\n\n# ===== CONSTRAINTS (minimos/maximos/clearspace/safe areas) =====\n\n' + open('ai/constraints.json').read())
 parts.append('\n\n# ===== SELECTOR DE MODULOS (que queres contar -> que plantilla) =====\n\n' + open('ai/selector.json').read())
 tpl = json.load(open('ai/templates/index.json'))
@@ -303,6 +310,7 @@ parts.append('\n\n# ===== COMO COMPONER EL DECK (el arco manda, la textura es co
 parts.append('\n\n# ===== PRECEDENCIA (quien gana cuando dos reglas chocan) =====\n\n' + open('ai/precedencia.json').read())
 parts.append('\n\n# ===== METODO DE TRABAJO (obligatorio) =====\n\n' + open('ai/metodo.md').read())
 parts.append('\n\n# ===== CHECKLIST DE ENTREGA =====\n\n' + open('.ai/checklist.md').read())
+parts.append('\n\n# ===== CHECKLIST VERBAL (texto) =====\n\n' + open('.ai/checklist-verbal.md').read())
 open('llms-full.txt', 'w').write('\n'.join(parts))
 import os as _os
 print(f'llms-full.txt: {_os.path.getsize("llms-full.txt")//1024}KB')

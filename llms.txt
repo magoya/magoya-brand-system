@@ -1,29 +1,49 @@
 # Magoya Brand System
 
-> Sistema de diseño oficial de **Magoya** — estudio de estrategia y desarrollo de producto digital para agribusiness (AgTech), activo desde 2017. Este sistema es la única fuente de verdad de la marca: paleta con roles, tipografía Manrope, fotografía, ilustración, componentes y recetas de aplicación, publicado en formato legible por personas (HTML) y por modelos (Markdown + JSON + CSS).
+> Brand System oficial de **Magoya** — consultora hands-on en software y AI para empresas del agro (*Magoya is a hands-on software and AI consulting firm for agribusiness*). Tagline: **Software and AI for agribusiness**. Este sistema es la única fuente de verdad de la marca: una capa verbal (estrategia, voz, lenguaje y aplicación, del Magoya Brand Playbook de octubre de 2026, que prevalece si algo difiere) y una capa visual (paleta con roles, tipografía Manrope, fotografía, ilustración, componentes y recetas de aplicación, que se mantiene hasta su revisión), publicadas en formato legible por personas (HTML) y por modelos (Markdown + JSON + CSS).
 
-Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md` y `tokens.json`, y aplicá el prompt de sistema de `.ai/brand-prompt.md`. Las once reglas que más se rompen, para tenerlas antes de abrir cualquier link:
+Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md`, `tokens.json` y `vocabulary.json`, y aplicá el prompt de sistema de `.ai/brand-prompt.md`. Si escribís texto, corré `.ai/checklist-verbal.md` antes de entregar. Las cinco reglas verbales que más se rompen:
+
+- Magoya se define como **consultora hands-on en software y AI para empresas del agro**. Nunca agtech, software factory, dev shop ni agencia.
+- Se escribe **AI** en cualquier idioma del texto. Única excepción: el nombre propio **IA en Campo** (nunca "AI en Campo").
+- Peso de los mensajes por territorio: **Uso 50% · Integración 30% · Hands-on 20%**. Decimos "uso" antes que "adopción".
+- Vetado además: digital (solo), transformación digital, custom, tecnología (sola), ayudar, DIPI, building blocks. Lista completa con reemplazos en `vocabulary.json`.
+- Pruebas, no adjetivos. El inglés es el idioma principal del website, LinkedIn e Instagram.
+
+Y las once reglas visuales que más se rompen, para tenerlas antes de abrir cualquier link:
 
 1. Tipografía **Manrope** (variable 200–800), fallback Arial. Display peso 800, tracking −0.03em. Máximo 3 niveles tipográficos en una pieza escrita a mano; si la pieza sale de una plantilla del catálogo, el techo es el de esa plantilla (7 roles nombrados).
 2. **75/25**: neutros (blanco/sage/negro/crema) ≈75% de la pieza, verdes ≈25%, un solo movimiento verde dominante. Nunca una pieza 100% negra ni 100% verde.
 3. Lima **#A2FF00** = energía en dosis única (un CTA *o* un display *o* un motivo por pieza). **Nunca como texto sobre fondo claro** (1.25:1).
 4. Verde digital **#00DE68** = identidad (wordmark y avatares). Como texto solo sobre fondo oscuro; sobre blanco se usa **#009145** y solo ≥24px bold. Lima ≠ logo.
 5. **Sin emojis** en títulos ni en cualquier texto — la única excepción son las manitos que señalan (👈 👉 👇) hacia un CTA y las banderas de países.
-6. **Sin gradientes** glossy, 3D ni estética "hecha por IA". El único gradiente permitido es el scrim verde profundo 55–86% sobre foto aérea.
+6. **Sin gradientes** glossy, 3D ni estética "hecha por AI". El único gradiente permitido es el scrim verde profundo 55–86% sobre foto aérea.
 7. **Máximo 2 recursos gráficos por pieza** además de la tipografía: uno protagonista y uno de acompañamiento. Los pares que no conviven son: dos fotos, foto + personaje, foto aérea + paño de semicírculos, y personaje + ícono (matriz completa en `resourceCoexistence` de `tokens.json`).
 8. El **motivo de semicírculos va siempre al corte**: nace de un borde de la pieza o de detrás de un objeto. Nunca se ve cortado flotando en el aire.
 9. **Personajes** ilustrados: planos, redondeados, **sin rostro**, paleta cerrada de 5 colores, siempre recortados por un borde del lado opuesto al texto. Nunca centrados como clipart, nunca sobre foto.
 10. **Chips solo texto y espaciado en escala**: el chip (pill outline) nunca lleva punto/bullet delante del texto ni ícono adentro; todo margin/padding/gap sale de la escala base-4 (4/8/12/16/24/32/48/64/96) con un solo eje de alineación por pieza — specs en `components` y `spacing.rules` de `tokens.json`.
 11. Fuera de la marca: la metáfora del **puzzle**, el **naranja** y el **amarillo** del brand viejo, los personajes con rostro/monoline/stock, los motivos de líneas (caminos concéntricos, estratos), el bloque resaltador sólido detrás de texto y los logos de clientes falsos o placeholder.
 
+## Capa verbal (Magoya Brand Playbook, octubre de 2026)
+
+- [estrategia.html](https://brand.magoya.com/estrategia.html): A · Estrategia — definición, propósito, diferenciales, propuesta de valor, oferta, boilerplates, territorios, audiencias, razones para creer, Método Magoya, valores, pilares, promesa, personalidad, arquitectura y tagline.
+- [voz.html](https://brand.magoya.com/voz.html): B · Voz — qué se construye primero, objetivos por mercado, prioridad de territorios, rasgos, postura, contra qué lucha, lo que no dice, ejes, cinco diales, localización y énfasis por audiencia.
+- [lenguaje.html](https://brand.magoya.com/lenguaje.html): C · Lenguaje — vocabulario vetado, regla AI, glosario ES · EN · PT y cómo suena Magoya.
+- [aplicacion.html](https://brand.magoya.com/aplicacion.html): D · Aplicación — capas, voceros y territorios, canales e idioma, focos y producción.
+- [vocabulary.json](https://brand.magoya.com/vocabulary.json): hermano verbal de `tokens.json` — palabras vetadas con su reemplazo, términos no vetados, regla AI, glosario por mercado, frases prohibidas, definición, una línea y tagline.
+- [.ai/verbal/estrategia.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/estrategia.md): la Parte 1 y el tagline en Markdown.
+- [.ai/verbal/voz.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/voz.md): las Partes 2 y 3 en Markdown.
+- [.ai/verbal/lenguaje.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/lenguaje.md): la Parte 4 en Markdown.
+- [.ai/verbal/aplicacion.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/aplicacion.md): la Parte 6 en Markdown.
+
 ## Núcleo machine-readable
 
-- [BRAND.md](https://brand.magoya.com/BRAND.md): la doctrina completa en Markdown — 12 secciones con esencia y voz, logo, roles de color, tipografía, fotografía, ilustración y motivos, iconografía, componentes, recetas de aplicación, merch, papelería y reglas de oro. Es el documento a leer si solo vas a leer uno.
+- [BRAND.md](https://brand.magoya.com/BRAND.md): la doctrina completa en Markdown — resumen de la capa verbal y las secciones visuales: logo, roles de color, tipografía, fotografía, ilustración y motivos, iconografía, componentes, recetas de aplicación, merch, papelería y reglas de oro. Es el documento a leer si solo vas a leer uno.
 - [tokens.json](https://brand.magoya.com/tokens.json): todos los valores exactos con su rol y sus reglas de accesibilidad — paleta completa, ratio de uso por pieza, escalas tipográficas (incluida la de slides en pt), espaciado, radios, layouts de export, la matriz `resourceCoexistence` de qué recursos gráficos pueden convivir, y las rutas de assets (con la lista de recursos retirados).
 - [tokens.css](https://brand.magoya.com/tokens.css): los mismos tokens como CSS custom properties en dos capas (primitivos y semánticos) con 4 temas: `default` (verde profundo), `light` (crema), `paper` (editorial) y `studio` (blanco + negro + lima, el de slides y marketing). Usar esto al escribir código.
 - [README.md](https://brand.magoya.com/README.md): mapa del repositorio, orden de lectura recomendado y árbol de la carpeta `assets/`.
 - [ai/assets.json](https://brand.magoya.com/ai/assets.json): manifiesto de TODOS los assets (239 archivos) con URL directa y regla de uso por carpeta — wordmarks, avatares, los 58 íconos del sistema como SVGs individuales (`assets/icons/`), ilustraciones, fotos, logos reales de clientes y stack. Pages no lista directorios: este manifiesto es la única forma de enumerar los assets.
-- [llms-full.txt](https://brand.magoya.com/llms-full.txt): TODO el sistema en un solo fetch (doctrina + constraints + selector + índice de plantillas + método + checklist) — empezá acá si tus fetches encadenados fallan o truncan.
+- [llms-full.txt](https://brand.magoya.com/llms-full.txt): TODO el sistema en un solo fetch (doctrina + capa verbal + constraints + selector + índice de plantillas + método + checklists) — empezá acá si tus fetches encadenados fallan o truncan.
 - [ai/templates/index.json](https://brand.magoya.com/ai/templates/index.json): las 41 plantillas HTML oficiales con slots — se usan TAL CUAL: copiá el archivo, llená los data-slot respetando max_caracteres, no toques geometría ni colores. Este es el camino "copiá, pegá y funciona". Cada plantilla también está como `.txt` (texto plano) porque muchos fetch convierten el `.html` a markdown. Para armar un deck de varias slides: [deck-starter.html](https://brand.magoya.com/ai/templates/deck-starter.html) — pegás los `<div class="slide">` adentro, con un solo `<head>`.
 - [ai/decks/index.json](https://brand.magoya.com/ai/decks/index.json): **TRES DECKS YA ARMADOS Y VALIDADOS** — credenciales, propuesta de piloto y cierre de proyecto. Secuencia, lienzos y arco resueltos: no hay que componer, solo cambiar el texto entre corchetes. Si lo que te piden es un deck, empezá acá y no por el selector.
 - [ai/selector.json](https://brand.magoya.com/ai/selector.json): qué querés contar → qué plantilla. Sin criterio de diseño requerido.
@@ -31,22 +51,24 @@ Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md` y `tokens.j
 - [ai/constraints.json](https://brand.magoya.com/ai/constraints.json): mínimos de logo, clearspace, márgenes, safe areas, límites de texto — los números que nadie tiene que asumir.
 - [ai/slides.json](https://brand.magoya.com/ai/slides.json): la geometría fuente de los 41 módulos (layout_src) — para quien renderice por su cuenta; si solo vas a APLICAR, usá las plantillas.
 
-## Entrada por IA (un link por herramienta, versionadas por separado)
+## Entrada por AI (un link por herramienta, versionadas por separado)
 
 - [ai/chatgpt.md](https://brand.magoya.com/ai/chatgpt.md): ChatGPT (Custom GPT / Projects) — flujo por browsing, sin permisos.
 - [ai/claude.md](https://brand.magoya.com/ai/claude.md): Claude (claude.ai / Claude Code / API).
 - [ai/gemini.md](https://brand.magoya.com/ai/gemini.md): Gemini (app / AI Studio / Gems).
 - [ai/cursor.md](https://brand.magoya.com/ai/cursor.md): Cursor.
 - [ai/copilot.md](https://brand.magoya.com/ai/copilot.md): GitHub Copilot.
-- [ai/generic.md](https://brand.magoya.com/ai/generic.md): cualquier otra IA con browsing.
+- [ai/generic.md](https://brand.magoya.com/ai/generic.md): cualquier otra AI con browsing.
 
 ## Prompts y checklist listos para usar
 
 - [.ai/brand-prompt.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/brand-prompt.md): el prompt de sistema canónico y autocontenido (~540 palabras). Pegarlo como system prompt, custom instructions o project instructions y la salida ya sale on-brand sin adjuntar nada más.
 - [.ai/brand-prompt-short.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/brand-prompt-short.md): versión de ~120 palabras para pegar al inicio de un chat suelto.
-- [.ai/checklist.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md): 17 chequeos verificables para auditar una pieza generada por IA antes de publicarla.
+- [.ai/checklist.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md): 17 chequeos verificables (visuales) para auditar una pieza generada por AI antes de publicarla.
+- [.ai/checklist-verbal.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist-verbal.md): checklist verbal — cada chequeo con la slide del playbook de la que sale (definición, AI, vetos, frases prohibidas, uso/adopción, 50/30/20, pruebas, diales, audiencia, idioma, traducciones). Se corre sobre cualquier texto de Magoya antes de publicarlo.
 - [ai/precedencia.json](https://brand.magoya.com/ai/precedencia.json): ley de precedencia — qué documento gana cuando dos reglas oficiales del sistema se contradicen, más el contrato de entrega (qué puede salir con un hueco adentro y qué no).
 - [ai/metodo.md](https://brand.magoya.com/ai/metodo.md): el método de trabajo obligatorio para piezas con contenido — entender antes de elegir, módulos por criterio (no por defecto), y agentes de copy / diseño / crítica antes de entregar.
+- [ai.html](https://brand.magoya.com/ai.html): H · Integrar con AI — archivos para AI, presets por herramienta y validación (visual y verbal).
 - [AI-INTEGRATION.md](https://brand.magoya.com/AI-INTEGRATION.md): guía de setup por herramienta (Claude Projects, Claude Code, Claude Design, Custom GPT, Cursor, Copilot, chat genérico) con tabla de verificación y troubleshooting.
 
 ## Manual visual navegable
@@ -60,5 +82,5 @@ Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md` y `tokens.j
 
 - [library.html](https://brand.magoya.com/library.html): todos los assets con descarga directa (wordmarks, avatares, motivos, personajes, fotos, fuente).
 - [logos.html](https://brand.magoya.com/logos.html): logos reales de clientes y del stack tecnológico — los únicos que se pueden usar en un logo wall.
-- [ai-en-campo.html](https://brand.magoya.com/ai-en-campo.html): manual de la marca anexa "IA en campo". **No es parte del core**: rompe tres reglas a propósito (lienzo verde digital pleno, placa negra de dato clave, doodles del Studio). No aplicar sus reglas a piezas de Magoya.
+- [ai-en-campo.html](https://brand.magoya.com/ai-en-campo.html): G · IA en Campo, marca de programa presentada por Magoya, con manual propio. **No es parte del core**: rompe tres reglas a propósito (lienzo verde digital pleno, placa negra de dato clave, doodles del Studio). No aplicar sus reglas a piezas de Magoya.
 - [ROADMAP.md](https://brand.magoya.com/ROADMAP.md): estado del sistema y pendientes de contenido.

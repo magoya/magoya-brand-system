@@ -1,6 +1,6 @@
 # Magoya — Brand System v1.1
 
-> Manual de marca en Markdown, pensado para ser consumido por personas y por IAs.
+> Manual de marca en Markdown, pensado para ser consumido por personas y por modelos de AI.
 > Tokens exactos en [`tokens.json`](tokens.json) y [`tokens.css`](tokens.css). Manual visual navegable en [`brand-book.html`](brand-book.html).
 > **Las secciones 1–13 + §14 espejan una a una las del brand book visual.** Si una regla cambia acá, cambia allá — y al revés.
 
@@ -8,17 +8,21 @@
 
 ## 1. Qué es Magoya
 
-Estudio/partner de **estrategia y desarrollo de producto digital para agribusiness** (desde 2017). *"We partner with modern agribusinesses to design, build, and evolve their products and platforms."* Hero de marca: **"AgTech challenges demand more than code."** Diferenciador: equipos senior **embebidos** en el equipo del cliente — tecnólogos, expertos de producto y agrónomos. Pilares (las 3C): **Clarity** (complejidad → plan claro), **Confidence** (equipos senior con fluidez AgTech), **Commitment** (largo plazo).
+> **Capa verbal: Magoya Brand Playbook (octubre de 2026).** Esta sección resume lo esencial; el detalle vive en `estrategia.html`, `voz.html`, `lenguaje.html` y `aplicacion.html`, y en su versión machine-readable: [`.ai/verbal/estrategia.md`](.ai/verbal/estrategia.md), [`.ai/verbal/voz.md`](.ai/verbal/voz.md), [`.ai/verbal/lenguaje.md`](.ai/verbal/lenguaje.md), [`.ai/verbal/aplicacion.md`](.ai/verbal/aplicacion.md) y [`vocabulary.json`](vocabulary.json). Antes de publicar un texto: [`.ai/checklist-verbal.md`](.ai/checklist-verbal.md). Si algo de acá difiere del playbook, prevalece el playbook. La capa visual (§2–§14) se mantiene hasta su revisión.
 
-**Voz:** **traductora** — hablamos agro y software, y el trabajo es pasar de uno al otro sin perder precisión. **Concreta**: ninguna afirmación de valor viaja sin cifra, nombre de cliente, plazo o captura. **Directa**: oraciones cortas, conclusión primero, cero preguntas retóricas, mínimo de siglas. **Filosa cuando hace falta**: decimos lo que no cierra — ni hype de IA ni negacionismo. **Informal sin ser liviana**: voseo en español, humor cuando aliviana una idea, nunca como adorno; no infantil.
+**Definición.** Magoya es una consultora hands-on en software y AI para empresas del agro. *Magoya is a hands-on software and AI consulting firm for agribusiness.* "Estrategia y ejecución" no se usa para definir a Magoya: lo reemplaza **hands-on**; y "tecnología" no reemplaza a "software y AI".
 
-**Idioma:** español para cercanía y comunidad (voseo, léxico del lote); inglés para credencial y cuentas US (nativo-conceptual, nunca traducido, con revisión nativa antes de salir); portugués para Brasil. **En textos en castellano, mínimo de palabras en inglés — y las que van, traducidas.**
+**Tagline.** **Software and AI for agribusiness.**
 
-**Vocabulario propio:** *levantar el guante · no damos vueltas · talento híbrido / trilingües · traducir · convertir complejidad en decisiones · señal y ruido · equipo embebido (embedded) · claridad, confianza, compromiso · lote, campaña, ventana de siembra.*
+**Territorios de posicionamiento, por peso en los mensajes:** **Uso 50%** ("El éxito no es llegar al lanzamiento del producto. El éxito es que ese producto se use.") · **Integración 30%** ("Nuestra primera opción es construir sobre lo que ya existe.") · **Hands-on 20%** ("Ejecutamos lo que proponemos.").
 
-**Nunca:** preguntas retóricas · superlativos sobre nosotros mismos ("the best", "unparalleled") · "as a service" para lo que es un servicio a medida · siglas internas (DIPI) · "soluciones end-to-end" · "fracaso" · "familia" para el equipo · "startup" para Magoya · hype de IA · frasecitas de autoayuda.
+**Personalidad:** cuatro rasgos, en este orden, y cada uno ecualiza al siguiente: **Estratega · Responsable · Curiosa · Franca**. En inglés, Responsable se traduce *Accountable*, no *responsible*.
 
-> Evidencia y trazabilidad de cada regla: [`VOICE-RESEARCH.md`](VOICE-RESEARCH.md) — releva el Manual de Marca 2022 (la única especificación de voz que Magoya tuvo), la estrategia de marca de Varu, los pilares de contenido y las reuniones. **"No whimsical" salió de acá y volvió a ilustración**: era una conclusión sobre los personajes, no sobre la voz — cuatro fuentes piden humor explícitamente.
+**AI.** Se escribe **AI**, en inglés, para nombrar la inteligencia artificial en cualquier idioma del texto. Única excepción: **IA en Campo**, nombre propio del programa, que se escribe siempre así (nunca "AI en Campo").
+
+**Vocabulario vetado:** agtech · digital (solo) · transformación digital · custom · software factory · dev shop · agencia · tecnología (sola) · ayudar · adopción como sinónimo de uso · DIPI · building blocks. Decimos "uso" antes que "adopción". Reemplazos y glosario ES · EN · PT en [`vocabulary.json`](vocabulary.json).
+
+**Idioma.** El inglés es el idioma principal del website, de LinkedIn y de Instagram. La personalidad es la misma en Argentina, Brasil y Estados Unidos; lo que cambia por mercado es el vocabulario, el estadio de construcción y el énfasis por audiencia.
 
 ## 2. Logo & avatares
 
@@ -108,7 +112,7 @@ La marca tiene seis recursos gráficos. La regla que los ordena: **máximo dos p
 
 ## 8. Iconografía
 
-Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. **Set agro de 16 íconos + 10 logos de IA + 13 de redes en `assets/studio/icons/` — los mismos archivos que usa Magoya Studio.** Negro sobre claro, crema sobre oscuro, **lima solo el ícono destacado (uno por pieza)**. Librería propia de 58 iconos en 7 categorías (`icons.html`); completar con Lucide (misma gramática) si hace falta volumen. Nunca rellenos sólidos ni 3D.
+Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. **Set agro de 16 íconos + 10 logos de AI + 13 de redes en `assets/studio/icons/` — los mismos archivos que usa Magoya Studio.** Negro sobre claro, crema sobre oscuro, **lima solo el ícono destacado (uno por pieza)**. Librería propia de 58 iconos en 7 categorías (`icons.html`); completar con Lucide (misma gramática) si hace falta volumen. Nunca rellenos sólidos ni 3D.
 
 ## 9. Componentes
 
@@ -149,14 +153,14 @@ Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. *
 7. El motivo va al corte: nace de un borde o de detrás de un objeto — nunca cortado al aire.
 8. Máximo 2 recursos gráficos por pieza (§7); el monograma "m" no va en cards; en la firma va el wordmark.
 9. **Emojis prohibidos** — la única excepción son las manitos que señalan (👈 👉 👇) hacia un CTA y las banderas de países para geografía. Nunca en títulos.
-10. ✗ Resaltador sólido tras texto · ✗ gradientes glossy/3D/estética IA · ✗ pieza 100% negra o verde · ✗ personajes con rostro/monoline · ✗ puzzle · ✗ naranja/amarillo · ✗ banda festoneada · ✗ motivos de líneas.
-11. **En español se escribe IA, nunca AI** — "IA en campo", "Integrar con IA", "capacidades de IA". "AI" queda solo para copy en inglés (decks US) y nombres propios ajenos ("Data & AI", "AI Studio"). Una pieza en español que diga "AI" está mal escrita.
+10. ✗ Resaltador sólido tras texto · ✗ gradientes glossy/3D/estética AI · ✗ pieza 100% negra o verde · ✗ personajes con rostro/monoline · ✗ puzzle · ✗ naranja/amarillo · ✗ banda festoneada · ✗ motivos de líneas.
+11. **AI, en cualquier idioma** — se escribe AI para nombrar la inteligencia artificial, también en textos en español. Única excepción: el nombre propio **IA en Campo**. Regla del Brand Playbook (slide 50); el resto de la capa verbal en §1.
 
-## 14. Marca anexa "IA en campo" (manual propio)
+## 14. IA en Campo (manual propio)
 
-**No es una sección de este brand: es una marca anexa con su propio manual** (`ai-en-campo.html`). Línea de contenido educativo de IA para el agro (carruseles, reels, webinars). Mismo ADN (Manrope, verdes oficiales) pero **rompe tres reglas del core a propósito**: (1) lienzo **verde digital pleno #00DE68** como fondo dominante; (2) **placa negra** #161616 con texto crema para el dato clave — permitida acá como lenguaje sticker; (3) **ruido con los assets del Studio** (`assets/studio/`): doodles (sparkle, dots, blob, loop), flourishes (arrow, navarrow, circle, underline), badge EN VIVO y logos oficiales de IA/redes — 2–4 por pieza, ±5–15°, en las esquinas, teñidos en verde digital o lima (nunca un color propio: la sub-marca no usa terracota ni ningún acento fuera de la paleta core). Texto secundario verde profundo; display negro. Formato madre: **carrusel retrato 4:5 (1080×1350)** — no el cuadrado 1080×1080, que Instagram dejó de privilegiar para carruseles. Arco narrativo de 4–6 slides (duda real → herramienta → prueba → paso siguiente), sin numerar las slides (el swipe ya lo comunica); **ritmo de color del arco: verde pleno en la primera y la última slide, crema Magoya en las del medio** — todo verde se lee como una sola pieza repetida, no como un recorrido.
+**No es una sección de este brand: es una marca de programa presentada por Magoya, con su propio manual** (`ai-en-campo.html`). Programa abierto de AI aplicada al agro (carruseles, reels, webinars). Mismo ADN (Manrope, verdes oficiales) pero **rompe tres reglas del core a propósito**: (1) lienzo **verde digital pleno #00DE68** como fondo dominante; (2) **placa negra** #161616 con texto crema para el dato clave — permitida acá como lenguaje sticker; (3) **ruido con los assets del Studio** (`assets/studio/`): doodles (sparkle, dots, blob, loop), flourishes (arrow, navarrow, circle, underline), badge EN VIVO y logos oficiales de AI/redes — 2–4 por pieza, ±5–15°, en las esquinas, teñidos en verde digital o lima (nunca un color propio: la sub-marca no usa terracota ni ningún acento fuera de la paleta core). Texto secundario verde profundo; display negro. Formato madre: **carrusel retrato 4:5 (1080×1350)** — no el cuadrado 1080×1080, que Instagram dejó de privilegiar para carruseles. Arco narrativo de 4–6 slides (duda real → herramienta → prueba → paso siguiente), sin numerar las slides (el swipe ya lo comunica); **ritmo de color del arco: verde pleno en la primera y la última slide, crema Magoya en las del medio** — todo verde se lee como una sola pieza repetida, no como un recorrido.
 
-**Logo de la sub-marca:** lockup **"IA en campo · por Magoya"** abajo-izquierda — reemplaza al wordmark de Magoya solo en piezas de esta línea. Se compone con Manrope viva (800, tracking −2%), nunca como imagen. Lleva un mark a mano (`assets/studio/mark-ai-campo.svg`, mismo lenguaje de las marcas a mano del core) pegado a la derecha de "IA", a ~65% de su altura — **ese mark existe únicamente en este tamaño**: agrandado y suelto en una esquina como estallido cómic queda fuera del sistema. Negro `#161616` sobre lienzo claro, crema `#ECE3DB` sobre placa negra; nunca lima ni verde digital en el lockup — el color lo pone el fondo, no el logo. "por Magoya" siempre en `font-mono`, mayúsculas, más chico: es la firma, no el título.
+**Logo del programa:** lockup **"IA en Campo · por Magoya"** (hasta que exista el lockup con "presentado por Magoya") abajo-izquierda — reemplaza al wordmark de Magoya solo en piezas de esta línea. Se compone con Manrope viva (800, tracking −2%), nunca como imagen. Lleva un mark a mano (`assets/studio/mark-ai-campo.svg`, mismo lenguaje de las marcas a mano del core) pegado a la derecha de "IA", a ~65% de su altura — **ese mark existe únicamente en este tamaño**: agrandado y suelto en una esquina como estallido cómic queda fuera del sistema. Negro `#161616` sobre lienzo claro, crema `#ECE3DB` sobre placa negra; nunca lima ni verde digital en el lockup — el color lo pone el fondo, no el logo. "por Magoya" siempre en `font-mono`, mayúsculas, más chico: es la firma, no el título.
 
 Las piezas se producen SIEMPRE desde plantillas del Studio y su receta queda guardada en un `.magoya.json` (template, scheme, accent, anchor, rule, silueta, objetos con x/y/scale/rotation) — esa es la fuente para reproducirlas, no el ojo. Producción en Magoya Studio (30+ plantillas, 13 formatos de red). Nada de esto vuelve al core.
 
@@ -164,16 +168,17 @@ Las piezas se producen SIEMPRE desde plantillas del Studio y su receta queda gua
 
 | Página | Qué documenta |
 |---|---|
-| `brand-book.html` | Brand book: 13 secciones + §14 marca anexa |
-| `ai-en-campo.html` | Manual completo de la marca anexa |
+| `estrategia.html` · `voz.html` · `lenguaje.html` · `aplicacion.html` | Capa verbal A–D del Brand Playbook (octubre 2026) |
+| `brand-book.html` | Brand book: 13 secciones + §14 IA en Campo |
+| `ai-en-campo.html` | Manual completo de IA en Campo |
 | `slides.html` | Módulos de presentación |
 | `pieces.html` | Piezas comerciales (one-pager + flyers) |
 | `icons.html` | 58 iconos copiables |
 | `library.html` | Ficha + descarga de cada asset aprobado |
 | `logos.html` | Logos de clientes y stack tecnológico |
-| `ai.html` | Cómo cargar esta marca en una herramienta de IA y cómo validar el resultado |
+| `ai.html` | H · Integrar con AI: cómo cargar esta marca en una herramienta de AI y cómo validar el resultado |
 
-Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.ai/brand-prompt-short.md` (prompts para pegar), `.ai/checklist.md` (validación) y `.ai/presets/` (uno por herramienta). **Todos derivan de este archivo: si una regla cambia acá, hay que propagarla ahí.**
+Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.ai/brand-prompt-short.md` (prompts para pegar), `.ai/checklist.md` (validación visual), `.ai/checklist-verbal.md` (validación de texto), `.ai/verbal/` y `vocabulary.json` (capa verbal) y `.ai/presets/` (uno por herramienta). **Todos derivan de este archivo: si una regla cambia acá, hay que propagarla ahí.**
 
 `assets/refs/` es **material fuente no publicable** (exports originales del diseñador): se conserva como referencia de trazado, no se enlaza ni se distribuye. `archive/` son versiones previas del sistema — no usar.
 

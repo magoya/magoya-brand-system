@@ -1,0 +1,93 @@
+/* Componentes de la capa verbal (partes A–D), sobre manual.css.
+   Fuente de los textos: Magoya Brand Playbook, octubre de 2026. */
+
+/* ---------- hero de parte: más bajo que el del brand book ---------- */
+.hero.part{min-height:58vh;
+  background:
+    linear-gradient(180deg, rgba(12,33,23,.62), rgba(12,33,23,.9)),
+    url("assets/photos/field-rows.jpg") center/cover}
+.hero.part .letter{display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:16px;
+  background:var(--emerald-500);color:var(--green-950);font-size:34px;font-weight:var(--weight-extra);margin-bottom:26px}
+.hero.part h1{font-size:clamp(2.8rem,5.4vw,4.8rem)}
+.hero.part p{max-width:680px}
+.hero .srcline{margin-top:22px;font-size:12.5px;font-family:var(--font-mono);color:var(--sage-400)}
+
+/* ---------- fuente de cada sección ---------- */
+.src{display:inline-block;font-family:var(--font-mono);font-size:11px;color:var(--gray-600);margin:-30px 0 30px}
+
+/* ---------- tablas ---------- */
+.tbl{width:100%;max-width:1180px;border-collapse:collapse;margin:8px 0 10px;font-size:14.5px;line-height:1.5}
+.tbl th{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald-700);
+  text-align:left;padding:0 18px 10px 0;border-bottom:2px solid var(--green-900);vertical-align:bottom}
+.tbl td{padding:14px 18px 14px 0;border-bottom:1px solid var(--color-hairline);vertical-align:top}
+.tbl td:first-child{font-weight:var(--weight-bold);color:var(--ink-900);width:18%;padding-right:22px}
+.tbl.bi td:nth-child(3){color:var(--gray-600)}          /* inglés en segundo plano */
+.tbl.bi.nolabel td:first-child{font-weight:var(--weight-regular);width:auto}
+.tbl.bi.nolabel td:nth-child(2){color:var(--gray-600)}
+.tbl td .en{display:block;color:var(--gray-600);margin-top:4px}
+.tbl.compact td{padding:10px 18px 10px 0}
+.tbl .num{font-family:var(--font-mono);font-size:12px;color:var(--emerald-700);font-weight:700}
+.tbl.wide-first td:first-child{width:26%}
+
+/* ---------- regla destacada ---------- */
+.rule{max-width:1000px;display:flex;gap:16px;align-items:flex-start;background:var(--sage-50);border-left:5px solid var(--green-900);
+  border-radius:0 var(--radius-lg) var(--radius-lg) 0;padding:16px 22px;margin:22px 0;font-size:15px;line-height:1.5}
+.rule b.k{flex:0 0 auto;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--green-900);padding-top:3px}
+.rule.warn{border-left-color:var(--ink-900);background:var(--paper-50)}
+
+/* ---------- definición grande ---------- */
+.def{max-width:980px;font-size:clamp(1.6rem,2.8vw,2.3rem);font-weight:var(--weight-extra);letter-spacing:-0.02em;line-height:1.18;color:var(--ink-900)}
+.def .en{display:block;font-size:.62em;font-weight:var(--weight-semibold);color:var(--gray-600);margin-top:12px;letter-spacing:-0.01em}
+
+/* ---------- territorios ---------- */
+.terr{display:grid;grid-template-columns:5fr 3fr 2fr;gap:14px;max-width:1180px;margin:10px 0 24px}
+.terr > div{border-radius:var(--radius-lg);padding:22px 22px 24px;background:var(--green-950);color:var(--cream-100)}
+.terr > div:nth-child(2){background:var(--green-800)}
+.terr > div:nth-child(3){background:var(--green-700)}
+.terr .pct{font-size:clamp(40px,5vw,64px);font-weight:var(--weight-extra);letter-spacing:-0.04em;line-height:.9;color:var(--lime-500)}
+.terr .nm{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-50);margin-top:12px}
+.terr .q{font-size:14px;line-height:1.45;margin-top:10px;color:var(--cream-200)}
+
+/* ---------- usage loop ---------- */
+.loop{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0 6px;max-width:1180px}
+.loop span{border:1.5px solid var(--green-900);color:var(--green-900);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700}
+.loop i{font-style:normal;color:var(--gray-400);font-weight:700}
+.loop.en span{border-color:var(--gray-400);color:var(--gray-600);font-weight:600}
+
+/* ---------- cards de texto ---------- */
+.tc{background:var(--white);border:1px solid var(--color-hairline);border-radius:var(--radius-lg);padding:20px 22px}
+.tc .t{font-size:16px;font-weight:var(--weight-extra);color:var(--ink-900);letter-spacing:-0.01em}
+.tc .t small{display:block;font-size:11.5px;font-weight:700;color:var(--emerald-700);letter-spacing:.04em;margin-top:3px}
+.tc p{font-size:14px;line-height:1.5;color:var(--gray-800);margin-top:10px}
+.tc p.en{color:var(--gray-600);border-top:1px dashed var(--color-hairline);padding-top:10px}
+.tc .n{font-family:var(--font-mono);font-size:12px;font-weight:700;color:var(--emerald-700)}
+.tc.dark{background:var(--green-950);border:none}
+.tc.dark .t{color:var(--cream-50)}
+.tc.dark p{color:var(--cream-200)}
+
+/* ---------- ejes (sliders) ---------- */
+.axes{max-width:1100px;display:flex;flex-direction:column}
+.axis{display:grid;grid-template-columns:150px 1fr 150px 2.2fr;gap:18px;align-items:center;padding:12px 0;border-bottom:1px solid var(--color-hairline);font-size:14px}
+.axis .l{font-weight:var(--weight-bold);text-align:right}
+.axis .r{color:var(--gray-600)}
+.axis .bar{height:6px;border-radius:3px;background:var(--gray-200);position:relative}
+.axis .bar b{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--green-900)}
+.axis .why{color:var(--gray-800);line-height:1.45}
+
+/* ---------- ejemplos de texto (posteo, relato) ---------- */
+.sample{max-width:900px;background:var(--paper-50);border-radius:var(--radius-lg);padding:24px 28px;font-size:15.5px;line-height:1.6;color:var(--ink-900)}
+.sample .who{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald-700);margin-bottom:12px;display:block}
+.sample p + p{margin-top:12px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1180px}
+
+/* ---------- prohibidos ---------- */
+.no{color:var(--ink-900);text-decoration:line-through;text-decoration-color:rgba(13,12,12,.35)}
+
+/* ---------- navegación entre partes ---------- */
+.partnav{display:flex;justify-content:space-between;gap:16px;max-width:1180px;margin-top:10px}
+.partnav a{display:flex;flex-direction:column;gap:4px;border:1px solid var(--color-hairline);border-radius:var(--radius-lg);
+  padding:16px 20px;text-decoration:none !important;color:var(--ink-900) !important;min-width:260px;background:var(--white)}
+.partnav a:hover{border-color:var(--green-900)}
+.partnav a small{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald-700)}
+.partnav a b{font-size:18px;font-weight:var(--weight-extra)}
+.partnav a.next{text-align:right;margin-left:auto}

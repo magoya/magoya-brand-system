@@ -1,18 +1,37 @@
 {
  "que_es": "Datos REALES y aprobados de Magoya para usar en piezas. Regla absoluta: lo que no está acá NO existe — las cifras de ejemplo de las plantillas jamás se entregan como reales; si falta un dato, se le pide al usuario.",
- "version": "1.0 · 2026-08-11",
+ "version": "1.1 · 2026-10-19",
  "empresa": {
   "nombre": "Magoya",
-  "que_hace": "Estudio de estrategia y desarrollo de producto digital para agribusiness (AgTech). Equipos senior embebidos en el equipo del cliente.",
+  "que_hace": "Consultora hands-on en software y AI para empresas del agro. (EN: Magoya is a hands-on software and AI consulting firm for agribusiness.) Fuente: Magoya Brand Playbook, oct 2026, slide 4.",
+  "tagline": "Software and AI for agribusiness (Brand Playbook, slide 57)",
   "activa_desde": 2017,
   "pilares": [
-   "Clarity",
-   "Confidence",
-   "Commitment"
+   "Perspectiva ante todo · Perspective first",
+   "Articular para hacer que pase · Connect the pieces",
+   "Pensamiento iterativo · Move and learn",
+   "Enseñar a pescar · Capability stays"
   ],
-  "sub_marca": "IA en campo (contenido educativo de IA para productores; manual propio en ai-en-campo.html)"
+  "pilares_fuente": "Brand Playbook, oct 2026, slide 27. Reemplaza a Clarity / Confidence / Commitment, que no están en el playbook.",
+  "ia_en_campo": "IA en Campo: marca de programa presentada por Magoya, no marca de Magoya. AI aplicada al día operativo del campo, para el usuario final; manual visual propio en ai-en-campo.html (Brand Playbook, slides 33 y 59). Por ahora solo disponible en Argentina (slide 23)."
  },
  "cifras_aprobadas": [
+  {
+   "cifra": "95% de nuestros clientes es promotor de Magoya · la relación promedio supera los 5 años",
+   "cifra_en": "95% of our clients are Magoya promoters, and our average relationship lasts more than 5 years",
+   "fuente": "Brand Playbook, oct 2026, razón para creer 10 (slides 21 y 23)"
+  },
+  {
+   "cifra": "más de nueve años resolviendo problemas exclusivamente en el agro",
+   "cifra_en": "nine-plus years solving problems only in this sector",
+   "fuente": "Brand Playbook, oct 2026, slide 8",
+   "uso": "envejece: ver derivados_del_tiempo"
+  },
+  {
+   "cifra": "equipos propios en Argentina, Brasil y Estados Unidos",
+   "cifra_en": "our own teams in Argentina, Brazil and the United States",
+   "fuente": "Brand Playbook, oct 2026, slides 8, 12 y 21"
+  },
   {
    "cifra": "17 clientes reales",
    "fuente": "logos.html — los logos existen en assets/logos/clients/"
@@ -44,20 +63,25 @@
    "Camila López Colmano — AgTech Expert",
    "Leo Dopacio",
    "Varina Baldi — Founder & CEO"
-  ]
+  ],
+  "nota": "\"AgTech Expert\" figura como rol de Camila López Colmano en el sistema, pero \"agtech\" está vetado en el Brand Playbook (slide 48). Confirmar con ella el título vigente antes de usarlo en una pieza nueva."
  },
  "pendiente_de_aprobar": [
   {
    "cifra": "95% de retención de clientes",
-   "estado": "usada históricamente en el sistema — confirmar vigencia con Varu antes de usarla en una pieza nueva"
+   "estado": "CONTRADICE al Brand Playbook: la cifra aprobada es \"95% de nuestros clientes es promotor de Magoya\" (slides 21 y 23), no retención. No usar como retención; ver cifras_aprobadas."
+  },
+  {
+   "cifra": "del 12% al 36% de uso con un cliente",
+   "estado": "aparece como ejemplo en el Brand Playbook (slide 54). Métrica de UN caso: solo usable con el caso correcto y confirmación"
   },
   {
    "cifra": "15 retailers / 44 growers en 2 meses",
    "estado": "métrica de UN caso — solo usable con el caso correcto y confirmación"
   },
   {
-   "dato": "cantidad de proyectos entregados, tamaño del equipo, mercados activos",
-   "estado": "sin fuente aprobada — pedir siempre"
+   "dato": "cantidad de proyectos entregados, tamaño del equipo",
+   "estado": "sin fuente aprobada — pedir siempre. Los mercados activos (Argentina, Brasil, Estados Unidos) ya salen del Brand Playbook: ver cifras_aprobadas."
   }
  ],
  "derivados_del_tiempo": {

@@ -1,4 +1,4 @@
-# Agente de validación: ¿puede cualquier IA consumir este brand al máximo?
+# Agente de validación: ¿puede cualquier AI consumir este brand al máximo?
 
 **Corre semanal** (tarea programada `validar-fusion-ia-brand`). Este archivo es el protocolo —
 editalo y la próxima corrida usa la versión nueva. El registro de cada corrida va en
@@ -6,7 +6,7 @@ editalo y la próxima corrida usa la versión nueva. El registro de cada corrida
 
 La pregunta que el agente tiene que poder contestar cada semana, con evidencia:
 
-> Si alguien que no sabe de diseño le pasa un link de `brand.magoya.com` a la IA que tenga a mano
+> Si alguien que no sabe de diseño le pasa un link de `brand.magoya.com` a la AI que tenga a mano
 > y le pide una pieza, ¿sale bien la primera vez, sin que esa persona tenga que adaptar ni asumir nada?
 
 Un "sí" no se declara: se prueba a ciegas y se puntúa contra el checklist.
@@ -21,13 +21,13 @@ cd /Users/facu/Claude/brand-system && python3 ai/validar.py --red
 
 Chequea sin criterio humano: referencias cruzadas selector ↔ plantillas, slots sin límite de texto,
 cifras de ejemplo que se puedan entregar como reales, drift entre la capa publicada y sus fuentes,
-URLs que no resuelven, cobertura de las familias de restricción, nomenclatura IA/AI y peso de las
+URLs que no resuelven, cobertura de las familias de restricción, nomenclatura AI (regla del Brand Playbook, slide 50) y peso de las
 entradas. **Exit code 1 = hay fallas.**
 
 Reglas de actuación:
 
-- **Falla mecánica** (link roto, drift, referencia que no cierra, cifra sin `[XX]`, `AI` en copy
-  español): arreglala y commiteala. Son bugs, no decisiones.
+- **Falla mecánica** (link roto, drift, referencia que no cierra, cifra sin `[XX]`, la sigla en español en vez de AI
+  en el copy, o "IA en Campo" mal escrito): arreglala y commiteala. Son bugs, no decisiones.
 - **Hueco** (`pendiente_de_definir`, dato sin aprobar, slot sin nota): **NO lo llenes**. Va a la
   sección "Necesita tu decisión" del ledger, con la pregunta concreta y por qué importa.
 - Si el validador se rompe por un cambio de estructura, arreglá el validador y decilo.
@@ -44,16 +44,16 @@ toda fuente que usen, para poder descartar la corrida si tocaron el repo.
 
 | # | Entrada | Pedido |
 |---|---|---|
-| 1 | `https://brand.magoya.com/ai/claude.md` | un deck de 5 slides para presentarle a un cliente AgTech nuevo qué hace Magoya |
+| 1 | `https://brand.magoya.com/ai/claude.md` | un deck de 5 slides para presentarle a un cliente nuevo del agro qué hace Magoya |
 | 2 | `https://brand.magoya.com/llms-full.txt` | un post de LinkedIn anunciando una capacidad concreta del equipo |
-| 3 | `https://brand.magoya.com/ai/gemini.md` | un carrusel 4:5 de **IA en campo** para productores |
+| 3 | `https://brand.magoya.com/ai/gemini.md` | un carrusel 4:5 de **IA en Campo** para productores |
 
 Después, **un cuarto subagente crítico que no vio cómo se generó nada** puntúa cada salida contra
-los 16 chequeos de [`checklist.md`](checklist.md) y contra `ai/constraints.json`. Y mide la métrica
+los 17 chequeos de [`checklist.md`](checklist.md), contra [`checklist-verbal.md`](checklist-verbal.md) y contra `ai/constraints.json`. Y mide la métrica
 primaria: **qué porcentaje de los títulos de contenido son aserciones** (sujeto + verbo +
 afirmación) y no etiquetas de tema. Línea de base 17% sobre una propuesta real; objetivo ≥80%. Para cada pieza:
 chequeos que pasan, cuáles fallan y **por qué falló** — ¿la regla no estaba escrita, estaba escrita
-pero enterrada, o estaba clara y la IA la ignoró?
+pero enterrada, o estaba clara y la AI la ignoró?
 
 Esa última columna es el producto real del bloque: distingue un hueco del spec de un problema de
 fetch de un límite del modelo. Solo el primero se arregla acá.
@@ -96,7 +96,7 @@ Qué cambió desde la corrida anterior (fecha en el ledger). Buscá y verificá,
    Si algo cambió, **hay que actualizar la entrada de esa herramienta** (`ai/<tool>.md`), que se
    versiona por separado justamente para esto.
 2. **Convenciones** — estado de `llms.txt`, DTCG design tokens, servidores MCP de design systems.
-3. **Comparación** — cómo publican para IA Atlassian, Polaris, Carbon, Material. ¿Alguien resolvió
+3. **Comparación** — cómo publican para AI Atlassian, Polaris, Carbon, Material. ¿Alguien resolvió
    algo que acá se resuelve peor?
 
 Descartá lo que sea marketing. Solo entra lo que cambie una decisión concreta del sistema.

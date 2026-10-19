@@ -7,7 +7,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
-<title>Magoya · Integrar con IA</title>
+<title>H · Integrar con AI · Magoya Brand System</title>
 <link rel="stylesheet" href="tokens.css">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -264,23 +264,24 @@
     .hero-in,.inner,.hero > .inner,section > .inner,footer > *,footer > div{padding-left:20px;padding-right:20px}
   }
 
-  /* ---------- topbar: espacios iguales y el grupo de IA al final ---------- */
+  /* ---------- topbar: espacios iguales y el grupo de AI al final ---------- */
   /* los margenes .cl (16px) y .cl2 (10px) hacian que cada par de items tuviera
      una separacion distinta. Ahora todos los items pares estan a la misma
-     distancia y el unico corte estructural es el divisor antes del grupo de IA. */
+     distancia y el unico corte estructural es el divisor antes del grupo de AI. */
   .mg-topbar a.cl,.mg-topbar a.cl2{margin-left:0}
   .mg-topbar .navdiv{margin:0 12px}
-  /* IA en campo es sub-marca: se anuncia con su propia ley, el verde ES el fondo */
+  /* IA en Campo es programa presentado por Magoya: se anuncia con su propia ley, el verde ES el fondo */
   .mg-topbar a.sub{background:var(--emerald-500);color:var(--green-950);font-weight:800}
   .mg-topbar a.sub:hover{background:var(--lime-500);color:var(--green-950)}
   .mg-topbar a.sub.on{box-shadow:inset 0 0 0 2px var(--cream-50)}
 </style>
+<link rel="stylesheet" href="nav.css">
 </head>
 <body>
 
 <nav class="mg-topbar">
-  <a href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
-  <a href="index.html">Inicio</a><a href="brand-book.html">Brand book</a><a href="slides.html">Slides</a><a href="pieces.html">Comerciales</a><a href="icons.html">Iconos</a><a href="library.html">Assets</a><a href="logos.html">Clientes</a><span class="navdiv"></span><a href="ai.html" class="on">Integrar con IA</a><a href="ai-en-campo.html" class="sub">IA en campo</a>
+  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
+  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html"><i>A</i>Estrategia</a><a href="voz.html"><i>B</i>Voz</a><a href="lenguaje.html"><i>C</i>Lenguaje</a><a href="aplicacion.html"><i>D</i>Aplicación</a><span class="navdiv"></span><a href="brand-book.html"><i>E</i>Identidad visual</a><a href="piezas.html"><i>F</i>Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub"><i>G</i>IA en Campo</a><a href="ai.html" class="on"><i>H</i>Integrar con AI</a>
 </nav>
 
 <nav class="side" id="dock">
@@ -289,17 +290,18 @@
   <a href="#herramientas"><span>Herramientas</span></a>
   <a href="#archivos"><span>Archivos</span></a>
   <a href="#validar"><span>Validar</span></a>
+  <a href="#checklist-verbal"><span>Checklist verbal</span></a>
   <a href="#ejemplos"><span>Pedidos bien y mal</span></a>
   <a href="#limites"><span>Límites</span></a>
   <a href="brand-book.html" class="anx"><span>Brand book ↗</span></a>
-  <span class="v">INTEGRAR CON IA · V1.1</span>
+  <span class="v">INTEGRAR CON AI · V1.1</span>
 </nav>
 
 <header class="hero">
   <div class="inner">
-    <span class="k">Brand System · material para IA</span>
-    <h1>Que la IA trabaje <em>con la marca</em>,<br>no de memoria.</h1>
-    <p>Todo el manual de Magoya en formato que una IA puede leer entero: prompts listos, presets por herramienta y archivos machine-readable. Se copia, se pega y se valida.</p>
+    <span class="k">Brand System · H · material para AI</span>
+    <h1>Que la AI trabaje <em>con la marca</em>,<br>no de memoria.</h1>
+    <p>Todo el manual de Magoya en formato que un modelo de AI puede leer entero: la capa verbal del Brand Playbook y la capa visual, con prompts listos, presets por herramienta, archivos machine-readable y dos checklists de validación. Se copia, se pega y se valida.</p>
   </div>
 </header>
 
@@ -309,14 +311,14 @@
 <section id="por-que">
   <div class="inner">
   <span class="kicker">01 · Por qué existe esta página</span>
-  <h2>El manual no sirve si cada uno<br>le explica la marca a la IA de memoria</h2>
-  <p class="lead">Hoy la mitad del trabajo de marca pasa por una IA: un copy, una variante de layout, un slide, un componente. Si cada persona improvisa el contexto, la marca se degrada pieza por pieza — lima de más, un verde que no existe, un chip sólido, una foto a color. Acá está el mismo manual, pero en el formato que la herramienta necesita: pegable, descargable y con URL pública.</p>
+  <h2>El manual no sirve si cada uno<br>le explica la marca a la AI de memoria</h2>
+  <p class="lead">Hoy la mitad del trabajo de marca pasa por una herramienta de AI: un copy, una variante de layout, un slide, un componente. Si cada persona improvisa el contexto, la marca se degrada pieza por pieza — lima de más, un verde que no existe, un chip sólido, una foto a color, una palabra vetada, una frase que la marca no dice. Acá está el mismo manual, pero en el formato que la herramienta necesita: pegable, descargable y con URL pública.</p>
   <div class="grid g3">
-    <div class="stat"><div class="n">Un solo contexto</div><div class="d">La misma base de marca para todos: no hay una versión buena en la cabeza de una persona y otra en la de la IA.</div></div>
+    <div class="stat"><div class="n">Un solo contexto</div><div class="d">La misma base de marca para todos: no hay una versión buena en la cabeza de una persona y otra en la de la AI.</div></div>
     <div class="stat"><div class="n">Listo para pegar</div><div class="d">Prompt corto para un chat suelto, prompt completo y presets por herramienta. Nada que redactar de nuevo.</div></div>
-    <div class="stat"><div class="n">Verificable</div><div class="d">Lo que la IA devuelve se chequea contra una lista concreta antes de usarlo. La IA propone, la marca aprueba.</div></div>
+    <div class="stat"><div class="n">Verificable</div><div class="d">Lo que la AI devuelve se chequea contra dos listas concretas, visual y verbal, antes de usarlo. La AI propone, la marca aprueba.</div></div>
   </div>
-  <p class="note" style="margin-top:26px">Regla de fondo: <b>la IA acelera decisiones ya tomadas</b> — no toma decisiones de marca. Todo lo que está en esta página deriva del <a class="lk" href="brand-book.html">brand book</a> y de <a class="lk" href="BRAND.md">BRAND.md</a>; si hay diferencia, manda el manual.</p>
+  <p class="note" style="margin-top:26px">Regla de fondo: <b>la AI acelera decisiones ya tomadas</b> — no toma decisiones de marca. Todo lo que está en esta página deriva del Magoya Brand Playbook (octubre de 2026) para la capa verbal —<a class="lk" href="estrategia.html">estrategia</a>, <a class="lk" href="voz.html">voz</a>, <a class="lk" href="lenguaje.html">lenguaje</a> y <a class="lk" href="aplicacion.html">aplicación</a>— y del <a class="lk" href="brand-book.html">brand book</a> y <a class="lk" href="BRAND.md">BRAND.md</a> para la visual; si hay diferencia, manda el manual, y en lo verbal manda el playbook.</p>
   </div>
 </section>
 
@@ -336,12 +338,12 @@
   </div>
 
   <div class="steps30">
-    <div><b>1 · Pegar</b> El bloque va primero, solo. Esperá que la IA confirme que lo leyó.</div>
+    <div><b>1 · Pegar</b> El bloque va primero, solo. Esperá que la AI confirme que lo leyó.</div>
     <div><b>2 · Pedir</b> Recién ahí el pedido, con formato, medida y destino. Mirá <a class="lk" href="#ejemplos">pedidos bien escritos</a>.</div>
-    <div><b>3 · Validar</b> Pasá la respuesta por el <a class="lk" href="#validar">checklist</a>. Si algo falla, se corrige señalando la regla.</div>
+    <div><b>3 · Validar</b> Pasá la respuesta por los <a class="lk" href="#validar">checklists</a>, visual y verbal. Si algo falla, se corrige señalando la regla.</div>
   </div>
 
-  <p class="note" style="margin-top:26px">Para trabajo sostenido (un deck entero, un repo, una campaña) no alcanza el prompt corto: cargá el preset de tu herramienta en <a class="lk" href="#herramientas">herramientas</a> y adjuntá <code>BRAND.md</code> + <code>tokens.json</code>.</p>
+  <p class="note" style="margin-top:26px">Para trabajo sostenido (un deck entero, un repo, una campaña) no alcanza el prompt corto: cargá el preset de tu herramienta en <a class="lk" href="#herramientas">herramientas</a> y adjuntá <code>BRAND.md</code> + <code>tokens.json</code>. Si el trabajo es de texto, sumá <code>vocabulary.json</code> + <code>.ai/checklist-verbal.md</code>.</p>
   </div>
 </section>
 
@@ -355,7 +357,7 @@
   <div style="background:var(--green-950);color:var(--cream-50);border-radius:var(--radius-lg);padding:30px 32px;margin:26px 0 30px;max-width:1000px">
     <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--lime-500);border:1.5px solid rgba(162,255,0,.45);padding:5px 13px;border-radius:999px">Nuevo · copiá, pegá y funciona</span>
     <h3 style="margin:16px 0 10px;font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--cream-50)">Las 41 plantillas ya armadas</h3>
-    <p style="font-size:14.5px;color:var(--cream-200);max-width:70ch;margin-bottom:8px">Antes la IA tenía que <i>interpretar</i> la geometría de cada módulo. Ya no: cada módulo es una plantilla lista con el diseño bloqueado y huecos para el texto. Vos o la IA eligen con el <b>selector</b> (qué querés contar → qué plantilla), copian y llenan. Nada que adaptar, nada que asumir.</p>
+    <p style="font-size:14.5px;color:var(--cream-200);max-width:70ch;margin-bottom:8px">Antes la AI tenía que <i>interpretar</i> la geometría de cada módulo. Ya no: cada módulo es una plantilla lista con el diseño bloqueado y huecos para el texto. Vos o la AI eligen con el <b>selector</b> (qué querés contar → qué plantilla), copian y llenan. Nada que adaptar, nada que asumir.</p>
     <div style="display:flex;gap:24px;flex-wrap:wrap;margin:20px 0 22px;font-family:var(--font-mono);font-size:11.5px;color:var(--cream-300)">
       <span><b style="color:var(--lime-500);font-size:15px;display:block;font-family:var(--font-body)">41</b>plantillas con slots</span>
       <span><b style="color:var(--lime-500);font-size:15px;display:block;font-family:var(--font-body)">31</b>filas del selector</span>
@@ -367,7 +369,7 @@
       <a href="ai/selector.json" style="color:var(--lime-500)">selector.json</a> · <a href="ai/constraints.json" style="color:var(--lime-500)">constraints.json</a> (mínimos, clearspace, márgenes, safe areas) · <a href="ai/facts.json" style="color:var(--lime-500)">facts.json</a> (datos reales) · <a href="llms-full.txt" style="color:var(--lime-500)">llms-full.txt</a> (todo en un fetch)</p>
   </div>
 
-  <p class="lead" style="margin-top:14px"><b>El camino más corto: un link por IA.</b> Cada entrada le dice a esa IA qué fetchear, en qué orden y qué puede hacer al pie de la letra hoy — sin subir archivos ni pedir permisos. <b>Copiá la instrucción</b> y pegala donde esa herramienta guarda instrucciones permanentes (GPT, Gem, Project): con eso alcanza.</p>
+  <p class="lead" style="margin-top:14px"><b>El camino más corto: un link por AI.</b> Cada entrada le dice a esa AI qué fetchear, en qué orden y qué puede hacer al pie de la letra hoy — sin subir archivos ni pedir permisos. <b>Copiá la instrucción</b> y pegala donde esa herramienta guarda instrucciones permanentes (GPT, Gem, Project): con eso alcanza.</p>
 
   <div class="ailinks">
     <div class="ail" data-ai="chatgpt"><b>ChatGPT</b><span>Custom GPT / Projects</span>
@@ -467,8 +469,8 @@
 <section id="archivos" style="background:var(--sage-50)">
   <div class="inner">
   <span class="kicker">04 · Archivos</span>
-  <h2>Los siete archivos machine-readable</h2>
-  <p class="lead">Todo lo que una IA necesita saber de Magoya está en estos siete archivos. Cada uno tiene su URL pública porque muchas herramientas piden un link, no un adjunto.</p>
+  <h2>Los trece archivos machine-readable</h2>
+  <p class="lead">Todo lo que una AI necesita saber de Magoya está en estos trece archivos: los siete de siempre, y cinco archivos y un checklist nuevos para la capa verbal del Brand Playbook (octubre de 2026). Cada uno tiene su URL pública porque muchas herramientas piden un link, no un adjunto.</p>
 
   <div class="table-scroll">
   <table>
@@ -482,14 +484,14 @@
       </tr>
       <tr>
         <td><code>BRAND.md</code></td>
-        <td>El manual entero en Markdown: 12 secciones, de esencia a papelería.</td>
+        <td>El manual en Markdown: el resumen de la capa verbal y la capa visual, de logo a papelería.</td>
         <td>La fuente de verdad. Se adjunta al knowledge de un proyecto o se deja en el repo.<span class="u">https://brand.magoya.com/BRAND.md</span></td>
         <td><a class="get" href="BRAND.md" download>bajar</a></td>
       </tr>
       <tr>
         <td><code>tokens.json</code></td>
         <td>Tokens de diseño en JSON: color, tipografía, espaciado, radios.</td>
-        <td>Para que la IA use valores exactos y no aproxime colores de memoria.<span class="u">https://brand.magoya.com/tokens.json</span></td>
+        <td>Para que la AI use valores exactos y no aproxime colores de memoria.<span class="u">https://brand.magoya.com/tokens.json</span></td>
         <td><a class="get" href="tokens.json" download>bajar</a></td>
       </tr>
       <tr>
@@ -500,7 +502,7 @@
       </tr>
       <tr>
         <td><code>.ai/brand-prompt.md</code></td>
-        <td>Prompt completo de marca: reglas, prohibiciones y criterios de decisión.</td>
+        <td>Prompt completo de marca: reglas visuales y verbales, prohibiciones y criterios de decisión.</td>
         <td>Cuando el pedido es una pieza real y no una consulta suelta. Es el cuerpo de los presets.<span class="u">https://brand.magoya.com/.ai/brand-prompt.md</span></td>
         <td><a class="get" href=".ai/brand-prompt.md" download>bajar</a></td>
       </tr>
@@ -512,16 +514,63 @@
       </tr>
       <tr>
         <td><code>.ai/checklist.md</code></td>
-        <td>La lista de validación de lo que devuelve la IA.</td>
-        <td>Se adjunta al proyecto para que la IA se auto-revise antes de entregar.<span class="u">https://brand.magoya.com/.ai/checklist.md</span></td>
+        <td>La lista de validación visual de lo que devuelve la AI.</td>
+        <td>Se adjunta al proyecto para que la AI se auto-revise antes de entregar.<span class="u">https://brand.magoya.com/.ai/checklist.md</span></td>
         <td><a class="get" href=".ai/checklist.md" download>bajar</a></td>
       </tr>
     </tbody>
   </table>
   </div>
 
+
+  <h3>La capa verbal: cinco archivos y un checklist</h3>
+  <p class="note" style="margin-bottom:18px">Del Magoya Brand Playbook (octubre de 2026). Cada archivo abre diciendo de qué parte del playbook sale; si algo difiere, prevalece el playbook. Las páginas navegables son <a class="lk" href="estrategia.html">estrategia</a>, <a class="lk" href="voz.html">voz</a>, <a class="lk" href="lenguaje.html">lenguaje</a> y <a class="lk" href="aplicacion.html">aplicación</a>.</p>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th style="width:210px">Archivo</th><th style="width:250px">Qué es</th><th>Para qué sirve · URL pública</th><th style="width:96px">Bajar</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><code>vocabulary.json</code></td>
+        <td>El vocabulario de marca en JSON: vetos con su reemplazo, frases prohibidas, regla AI, glosario ES · EN · PT, definición y tagline.</td>
+        <td>El hermano verbal de <code>tokens.json</code>: para que la AI use las palabras exactas y no las de memoria.<span class="u">https://brand.magoya.com/vocabulary.json</span></td>
+        <td><a class="get" href="vocabulary.json" download>bajar</a></td>
+      </tr>
+      <tr>
+        <td><code>.ai/verbal/estrategia.md</code></td>
+        <td>La Parte 1 del playbook y el tagline: definición, propósito, diferenciales, oferta, boilerplates, territorios, razones para creer, método, valores, rasgos y arquitectura.</td>
+        <td>Cuando el pedido es presentar a Magoya: deck de credenciales, one-pager, web, boilerplate.<span class="u">https://brand.magoya.com/.ai/verbal/estrategia.md</span></td>
+        <td><a class="get" href=".ai/verbal/estrategia.md" download>bajar</a></td>
+      </tr>
+      <tr>
+        <td><code>.ai/verbal/voz.md</code></td>
+        <td>Las Partes 2 y 3: qué se construye primero, objetivos por mercado, peso de los territorios, rasgos, postura, ejes, cinco diales y énfasis por audiencia.</td>
+        <td>Para ajustar el registro según el país y la audiencia, y para escribir puntos de vista.<span class="u">https://brand.magoya.com/.ai/verbal/voz.md</span></td>
+        <td><a class="get" href=".ai/verbal/voz.md" download>bajar</a></td>
+      </tr>
+      <tr>
+        <td><code>.ai/verbal/lenguaje.md</code></td>
+        <td>La Parte 4: vocabulario vetado, regla AI, glosario por mercado y cómo suena Magoya, con el ejemplo de LinkedIn.</td>
+        <td>Para escribir o traducir: qué palabra va y cuál no, en español, inglés y portugués.<span class="u">https://brand.magoya.com/.ai/verbal/lenguaje.md</span></td>
+        <td><a class="get" href=".ai/verbal/lenguaje.md" download>bajar</a></td>
+      </tr>
+      <tr>
+        <td><code>.ai/verbal/aplicacion.md</code></td>
+        <td>La Parte 6: capas de la arquitectura, voceros y sus territorios, canales e idioma, focos y producción.</td>
+        <td>Para contenido de voceros y redes: quién habla, de qué, en qué canal y en qué idioma.<span class="u">https://brand.magoya.com/.ai/verbal/aplicacion.md</span></td>
+        <td><a class="get" href=".ai/verbal/aplicacion.md" download>bajar</a></td>
+      </tr>
+      <tr>
+        <td><code>.ai/checklist-verbal.md</code></td>
+        <td>La lista de validación de texto, con la slide del playbook de la que sale cada chequeo.</td>
+        <td>Se corre sobre cualquier texto de Magoya antes de publicar. Se adjunta al proyecto junto al checklist visual.<span class="u">https://brand.magoya.com/.ai/checklist-verbal.md</span></td>
+        <td><a class="get" href=".ai/checklist-verbal.md" download>bajar</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
   <p class="note" style="margin-top:24px">Si una herramienta no logra leer una ruta que empieza con punto, usá el mirror crudo del repo: <code>https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/…</code> — el mismo archivo, sin pasar por GitHub Pages.</p>
-  <p class="note" style="margin-top:12px">Los presets por herramienta viven en <code>.ai/presets/</code> y se bajan desde <a class="lk" href="#herramientas">herramientas</a>. Assets binarios (logos, fotos, iconos) no van acá: están en la <a class="lk" href="library.html">librería de assets</a> — a una IA se le pasa la ruta del archivo, nunca se le pide que dibuje el logo.</p>
+  <p class="note" style="margin-top:12px">Los presets por herramienta viven en <code>.ai/presets/</code> y se bajan desde <a class="lk" href="#herramientas">herramientas</a>. Assets binarios (logos, fotos, iconos) no van acá: están en la <a class="lk" href="library.html">librería de assets</a> — a una AI se le pasa la ruta del archivo, nunca se le pide que dibuje el logo.</p>
   </div>
 </section>
 
@@ -529,8 +578,8 @@
 <section id="validar">
   <div class="inner">
   <span class="kicker">05 · Validar</span>
-  <h2>Trece chequeos antes de usar<br>lo que devolvió la IA</h2>
-  <p class="lead">La IA propone; la marca aprueba. Pasá cada entrega por esta lista — cuando algo falla, se corrige nombrando la regla, no pidiendo “que quede más lindo”. Es la misma lista que <a class="lk" href=".ai/checklist.md">.ai/checklist.md</a>, que además trae cómo se verifica cada punto: adjuntala al proyecto y la IA se auto-revisa antes de contestar.</p>
+  <h2>Trece chequeos visuales y un checklist verbal<br>antes de usar lo que devolvió la AI</h2>
+  <p class="lead">La AI propone; la marca aprueba. Pasá cada entrega por esta lista — cuando algo falla, se corrige nombrando la regla, no pidiendo “que quede más lindo”. Es la misma lista que <a class="lk" href=".ai/checklist.md">.ai/checklist.md</a>, que además trae cómo se verifica cada punto: adjuntala al proyecto y la AI se auto-revisa antes de contestar. Si la entrega tiene texto, pasa también el <a class="lk" href="#checklist-verbal">checklist verbal</a>.</p>
   <ol class="check" id="checklist">
     <li><b>Solo hex de la paleta.</b> Cada color sale de <code>tokens.json</code>. Un verde “parecido” (<code>#4CAF50</code>, <code>#2ECC71</code>) es un verde que no es de Magoya.</li>
     <li><b>Cero naranja y cero amarillo.</b> Ningún tono del brand viejo. Excepción única: <code>#FFC67B</code>, y solo como piel de personaje.</li>
@@ -546,7 +595,25 @@
     <li><b>Personajes sin rostro y al borde.</b> Planos, cinco colores de la paleta cerrada, recortados por un borde del lado opuesto al texto, nunca sobre foto ni centrados como clipart.</li>
     <li><b>Botón vs chip, y assets reales.</b> Botón rect radio 10px, chip pill outline; logos de clientes reales; sin resaltador sólido detrás de texto.</li>
   </ol>
-  <p class="note" style="margin-top:26px">El archivo agrega los extras por formato (slides, redes, logo, copy, merch, fotos de personas) y la aclaración de <a class="lk" href="ai-en-campo.html">IA en campo</a>, que tiene manual propio y rompe tres reglas del core a propósito. Y una regla de proceso: si una entrega falla tres o más puntos, no la corrijas de a parches — volvé a pegar el prompt y rehacé el pedido con más especificación.</p>
+  <p class="note" style="margin-top:26px">El archivo agrega los extras por formato (slides, redes, logo, copy, merch, fotos de personas) y la aclaración de <a class="lk" href="ai-en-campo.html">IA en Campo</a>, que tiene manual propio y rompe tres reglas del core a propósito. Y una regla de proceso: si una entrega falla tres o más puntos, no la corrijas de a parches — volvé a pegar el prompt y rehacé el pedido con más especificación.</p>
+
+  <h3 id="checklist-verbal" style="margin-top:56px">Checklist verbal: cualquier texto de Magoya</h3>
+  <p class="lead" style="margin-bottom:26px">Los trece chequeos visuales miran la pieza; estos miran el texto. Cada uno sale de una regla del Brand Playbook y lleva su slide entre paréntesis. La versión completa, con cómo se verifica y cuándo falla cada punto, es <a class="lk" href=".ai/checklist-verbal.md">.ai/checklist-verbal.md</a>.</p>
+  <ol class="check" id="checklist-verbal-list">
+    <li><b>Definición hands-on.</b> Magoya se presenta como consultora hands-on en software y AI para empresas del agro. Ni “estrategia y ejecución”, ni “tecnología” en vez de “software y AI”. Tagline: <i>Software and AI for agribusiness</i>. <span style="white-space:nowrap">(slide 4, 57)</span></li>
+    <li><b>AI, en cualquier idioma.</b> La sigla en español no se usa para la inteligencia artificial. Única excepción: el nombre propio <b>IA en Campo</b>, siempre así; nunca “AI en Campo”. <span style="white-space:nowrap">(slide 50)</span></li>
+    <li><b>Cero palabras vetadas.</b> agtech, digital (solo), transformación digital, custom, software factory, dev shop, agencia, tecnología (sola), ayudar, adopción como sinónimo de uso, DIPI, building blocks. Reemplazos en <code>vocabulary.json</code>. <span style="white-space:nowrap">(slide 48, 49)</span></li>
+    <li><b>Ninguna frase prohibida.</b> “Lo que tenés no sirve”, “hay que hacerlo todo de nuevo”, “sólo nosotros podemos resolverlo”, “esto se hace así”, “transformamos”, “es fácil de aplicar / de resolver”, “el problema es del cliente o del usuario”. <span style="white-space:nowrap">(slide 41)</span></li>
+    <li><b>Uso antes que adopción.</b> La adopción es el paso de no usuario a usuario: una parte del uso, no su sinónimo. <span style="white-space:nowrap">(slide 13, 31, 49)</span></li>
+    <li><b>Territorios 50/30/20.</b> En un conjunto de mensajes: Uso 50%, Integración 30%, Hands-on 20%. Un vocero: ~70% su territorio primario. <span style="white-space:nowrap">(slide 37, 60)</span></li>
+    <li><b>Pruebas, no adjetivos.</b> “Global” o “líder” sin respaldo restan. Van clientes, años de relación, geografías, casos en producción, un dato de <code>facts.json</code>. <span style="white-space:nowrap">(slide 31, 36)</span></li>
+    <li><b>Diales por país.</b> Provocación, densidad técnica, cercanía, venta explícita y marca de origen: default global, y ajuste solo para AR, BR o US. <span style="white-space:nowrap">(slide 44)</span></li>
+    <li><b>Énfasis por audiencia.</b> Negocio y C-suite: estratega y curiosa, visión estratégica. Técnico: responsable y franca, registro colaborativo. <span style="white-space:nowrap">(slide 46)</span></li>
+    <li><b>Inglés como idioma principal.</b> Website, LinkedIn e Instagram de Magoya van en inglés como idioma principal. <span style="white-space:nowrap">(slide 62)</span></li>
+    <li><b>Responsable → Accountable.</b> En inglés el rasgo es <i>accountable</i>, no <i>responsible</i>: hacerse cargo del resultado. <span style="white-space:nowrap">(slide 30)</span></li>
+    <li><b>Distribuidor → dealer.</b> En inglés va <i>dealer</i>, no <i>distributor</i>. <i>Retailer</i> es otra figura: el que tiene contacto con el productor. <span style="white-space:nowrap">(slide 51)</span></li>
+    <li><b>Agribusiness es el cliente.</b> No el sector: en inglés el sector es <i>agriculture</i> o <i>ag</i>. <span style="white-space:nowrap">(slide 52)</span></li>
+  </ol>
   </div>
 </section>
 
@@ -555,7 +622,7 @@
   <div class="inner">
   <span class="kicker">06 · Pedidos</span>
   <h2>El mismo pedido, flojo y bien escrito</h2>
-  <p class="lead">Un pedido flojo obliga a la IA a inventar: formato, tono, color, jerarquía. Un pedido bien escrito cierra esas decisiones de antemano — y lo que vuelve se puede usar. Tres casos reales.</p>
+  <p class="lead">Un pedido flojo obliga a la AI a inventar: formato, tono, color, jerarquía. Un pedido bien escrito cierra esas decisiones de antemano — y lo que vuelve se puede usar. Tres casos reales.</p>
 
   <div class="pair">
     <div class="col weak">
@@ -566,7 +633,7 @@
       <span class="h">Bien especificado</span>
       <p class="q">Pieza de feed 1:1 (1080×1080) para LinkedIn de Magoya, receta dark: fondo negro #161616, dato en lima #A2FF00 al ~70% del ancho, personaje plano recortado por el borde derecho, wordmark crema abajo-izquierda.
 Dato: reducción de 6 semanas a 4 días en el ciclo de reporte de un cliente de agroinsumos.
-Copy en español, voz senior y directa, sin adjetivos de venta, sin emojis. Máximo tres niveles tipográficos. Devolveme HTML+CSS usando var() de tokens.css.</p>
+Copy en inglés (idioma principal de LinkedIn), territorio Uso, pruebas y no adjetivos, sin emojis. Máximo tres niveles tipográficos. Devolveme HTML+CSS usando var() de tokens.css.</p>
     </div>
     <div class="chg"><b>Qué cambió:</b> formato y medida exactos, una de las tres recetas de feed en vez de “lindo”, el dato concreto que es el contenido real de la pieza, la dosis única de lima definida, y la salida pedida en código con tokens — no una descripción que después hay que interpretar.</div>
   </div>
@@ -583,7 +650,7 @@ Tres cifras: 34% menos tiempo de carga de datos · 12 semanas al primer release 
 Cifras en Manrope 800, tracking −3%, negro #161616; un solo golpe de lima en la cifra principal (subrayado, no bloque de resaltado). Kicker en MAYÚSCULAS con tracking +12%. Sin iconos decorativos, sin sombras.
 Título en inglés, tono neutral, sin frases grandilocuentes.</p>
     </div>
-    <div class="chg"><b>Qué cambió:</b> “colores” pasó a ser una regla — un golpe de lima, subrayado y no resaltador. Se fijaron lienzo, margen del sistema de slides, escala tipográfica y las cifras verdaderas. Y se cerró el idioma y el tono, que es donde la IA suele irse a vendedora.</div>
+    <div class="chg"><b>Qué cambió:</b> “colores” pasó a ser una regla — un golpe de lima, subrayado y no resaltador. Se fijaron lienzo, margen del sistema de slides, escala tipográfica y las cifras verdaderas. Y se cerró el idioma y el tono, que es donde la AI suele irse de registro.</div>
   </div>
 
   <div class="pair">
@@ -594,13 +661,13 @@ Título en inglés, tono neutral, sin frases grandilocuentes.</p>
     <div class="col strong">
       <span class="h">Bien especificado</span>
       <p class="q">One-pager A4 vertical para un prospecto de agroinsumos en Brasil 🇧🇷, derivado del one-pager madre de pieces.html — no inventes una plantilla nueva.
-Estructura: wordmark verde arriba-izquierda (20% del ancho), hero “AgTech challenges demand more than code.”, las 3C (Clarity / Confidence / Commitment) en una fila, dos casos con logos reales de clientes, pie con filete verde digital y avatar m.
+Estructura: wordmark verde arriba-izquierda (20% del ancho), hero con la definición “Hands-on software and AI consulting firm for agribusiness.”, los tres territorios (uso, integración, hands-on) en una fila, dos casos con logos reales de clientes, pie con filete verde digital y avatar m.
 Copy en inglés, 90 palabras por bloque como techo. Sin fotos de personas si no te paso los archivos. Neutros ~75%, un solo acento lima en el CTA.</p>
     </div>
-    <div class="chg"><b>Qué cambió:</b> se ancló a una plantilla que ya existe en vez de dejar que invente una, se listaron los bloques en orden, se puso techo de palabras y se bloqueó de antemano el error típico: fotos o logos que la IA no tiene y termina fabricando.</div>
+    <div class="chg"><b>Qué cambió:</b> se ancló a una plantilla que ya existe en vez de dejar que invente una, se listaron los bloques en orden, se puso techo de palabras y se bloqueó de antemano el error típico: fotos o logos que la AI no tiene y termina fabricando.</div>
   </div>
 
-  <p class="note">Patrón de los tres: <b>formato y medida · receta o plantilla del sistema · el contenido real · la dosis de color · idioma y tono · el formato de salida</b>. Seis líneas y la primera entrega ya sirve.</p>
+  <p class="note">Patrón de los tres: <b>formato y medida · receta o plantilla del sistema · el contenido real · la dosis de color · idioma, territorio y tono · el formato de salida</b>. Seis líneas y la primera entrega ya sirve.</p>
   </div>
 </section>
 
@@ -609,34 +676,34 @@ Copy en inglés, 90 palabras por bloque como techo. Sin fotos de personas si no 
   <div class="inner">
   <span class="kicker">07 · Límites</span>
   <h2>Qué resuelve sola y qué no</h2>
-  <p class="lead">La IA es buenísima en lo que ya está decidido y peligrosa en lo que hay que decidir. La línea es simple: puede <b>ejecutar y variar</b> dentro del sistema; no puede <b>ampliar</b> el sistema.</p>
+  <p class="lead">La AI es buenísima en lo que ya está decidido y peligrosa en lo que hay que decidir. La línea es simple: puede <b>ejecutar y variar</b> dentro del sistema; no puede <b>ampliar</b> el sistema.</p>
   <div class="dodont">
     <div class="dd">
       <span class="h">Hacer — puede resolverlo sola</span>
       <ul>
         <li><b>Variaciones de layout</b> sobre una receta que ya existe: mover jerarquía, probar tres versiones del mismo slide, adaptar 1:1 a 9:16.</li>
-        <li><b>Copy en inglés y traducciones</b> con el tono de marca: neutral, senior, sin frases grandilocuentes.</li>
+        <li><b>Copy en inglés y traducciones</b> con la voz de marca: los cuatro rasgos, el vocabulario de <a class="lk" href="lenguaje.html">lenguaje</a> y el glosario de <code>vocabulary.json</code>.</li>
         <li><b>Código con tokens</b>: HTML/CSS/React que consume <code>var(--token)</code> de <code>tokens.css</code>, sin un hex suelto.</li>
-        <li><b>Revisión contra el manual</b>: pasarle una pieza y pedirle los doce chequeos de <a class="lk" href="#validar">validar</a>.</li>
+        <li><b>Revisión contra el manual</b>: pasarle una pieza y pedirle los trece chequeos visuales y el checklist verbal de <a class="lk" href="#validar">validar</a>.</li>
         <li><b>Trabajo de volumen</b>: nombres de archivo, alts, metadata, tablas de assets, versiones cortas y largas de un mismo texto.</li>
         <li><b>Estructura de contenido</b>: ordenar un deck, resumir un caso, proponer titulares alternativos.</li>
       </ul>
     </div>
     <div class="dd avoid">
-      <span class="h">Evitar — no es trabajo de la IA</span>
+      <span class="h">Evitar — no es trabajo de la AI</span>
       <ul>
         <li><b>Inventar colores.</b> La paleta está cerrada. Un verde “parecido” es un verde que no es de Magoya.</li>
         <li><b>Dibujar o reconstruir el logo.</b> El wordmark y los avatares son archivos: se referencian desde la <a class="lk" href="library.html">librería</a>, no se generan.</li>
         <li><b>Generar fotos de personas del equipo.</b> Van personas reales en B&amp;N. Una cara sintética no es del equipo.</li>
         <li><b>Crear plantillas nuevas de cero</b> en vez de usar las de <a class="lk" href="slides.html">slides</a>, <a class="lk" href="pieces.html">comerciales</a> o Magoya Studio. Si falta una plantilla, se diseña — no se improvisa por prompt.</li>
-        <li><b>Decidir reglas de marca.</b> Si el manual no lo dice, la respuesta no es “que lo resuelva la IA”: se pregunta y se agrega al manual.</li>
+        <li><b>Decidir reglas de marca.</b> Si el manual no lo dice, la respuesta no es “que lo resuelva la AI”: se pregunta y se agrega al manual.</li>
         <li><b>Poner logos de clientes que no existen</b> o placeholders. Los logos son siempre reales.</li>
       </ul>
     </div>
   </div>
   <p class="note" style="margin-top:28px">Cuando el pedido cae del lado derecho, el camino es otro: <a class="lk" href="library.html">librería de assets</a> para archivos reales, <a class="lk" href="slides.html">slides</a> y <a class="lk" href="pieces.html">comerciales</a> para plantillas, y Magoya Studio para producir piezas de redes con receta guardada.</p>
   <div style="margin-top:30px;display:flex;gap:10px;flex-wrap:wrap">
-    <span class="pill pill-green">La IA propone</span><span class="pill">La marca aprueba</span>
+    <span class="pill pill-green">La AI propone</span><span class="pill">La marca aprueba</span>
   </div>
   </div>
 </section>
@@ -644,32 +711,20 @@ Copy en inglés, 90 palabras por bloque como techo. Sin fotos de personas si no 
 </main>
 
 <footer>
-  <div>Magoya Brand System v1.1 · material de integración con IA · <a href="BRAND.md">BRAND.md</a> · <a href="llms.txt">llms.txt</a> · <a href="brand-book.html">brand book</a></div>
+  <div>Magoya Brand System · H · Integrar con AI · <a href="BRAND.md">BRAND.md</a> · <a href="llms.txt">llms.txt</a> · <a href="brand-book.html">brand book</a></div>
 </footer>
 
 <script>
 /* ---------- prompt corto: se lee del archivo, con fallback propio ---------- */
 (function(){
   var FALLBACK = [
-    'Diseñás y escribís para Magoya: estudio de estrategia y desarrollo de producto digital para agribusiness (desde 2017). Equipos senior embebidos en el equipo del cliente. Pilares: Clarity, Confidence, Commitment.',
-    '',
-    'VOZ — profesional y cercana, experta y senior, nunca vendedora; transparente y estructurada. Madura y confiable, nada whimsical. Vocabulario propio: embedded, deep AgTech fluency, long-term value.',
-    '',
-    'COLOR — Verde Magoya #133825 · Verde digital #00DE68 (identidad: logo, avatares, ropa de personajes y data-viz — antes había un verde ilustración distinto, se unificó) · Lima #A2FF00 (energía: UNA dosis por pieza) · Crema #ECE3DB · Sage #EEF2EC · Negro #161616.',
-    'Regla central: el negro construye, el verde hace crecer. Neutros ~75%, verde ~25%, un solo movimiento verde dominante. Nunca una pieza 100% negra ni 100% verde.',
-    'Accesibilidad no negociable: lima nunca como texto sobre claro; verde sobre blanco como texto es #009145 y solo >=24px bold; #00DE68 como texto solo sobre oscuro.',
-    '',
-    'TIPOGRAFÍA — Manrope (fallback Arial). Display ExtraBold 800 con tracking -3%; cuerpo Regular 400; kickers MAYÚSCULAS con tracking +12%. Máximo 3 niveles tipográficos por pieza; el peso hace la jerarquía. Énfasis por color o subrayado lima — prohibido el bloque resaltador sólido detrás del texto.',
-    '',
-    'COMPONENTES — Botón: rectángulo radio 10px, fondo sólido (lima = CTA primario). Chip: pill outline, borde y texto del mismo color, fondo transparente. Nunca chip sólido ni botón pill. Todo redondeado, como el wordmark.',
-    '',
-    'IMAGEN — Personas: gente real del equipo, siempre B&N con un acento verde o lima. Aérea de campo: scrim verde profundo 55-86% cuando lleva texto (es el único gradiente permitido). Ilustración: personajes planos sin rostro, paleta cerrada de 5 colores (#00DE68 #A2FF00 #DFDFDF #FFC67B #161616), siempre recortados por un borde de la pieza. Motivo de marca: semicírculos al corte, nacen de un borde o de detrás de un objeto — nunca cortados flotando en el aire.',
-    '',
-    'NUNCA — emojis (solo manitos que señalan un CTA y banderas de países; ninguno en títulos) · gradientes glossy, 3D o estética IA · resaltador sólido tras texto · la metáfora del puzzle · naranja y amarillo del brand viejo · reconstruir o alterar el wordmark · logos de clientes inventados o placeholders.',
-    '',
-    'CÓDIGO — usá los tokens de tokens.css por var(--token). Cero hex hardcodeado, salvo los 5 colores cerrados de ilustración.',
-    '',
-    'Si te falta un dato de marca, preguntá antes de producir. No lo inventes.'
+    "Diseñás y escribís para **Magoya**, consultora hands-on en software y AI para empresas del agro. Tagline: **Software and AI for agribusiness**. Tipografía **Manrope** (display 800, tracking −0.03em), máximo 3 niveles en piezas escritas a mano (una plantilla del catálogo llega a 7). Neutros ≈75% (blanco, sage `#EEF2EC`, negro `#161616`, crema `#ECE3DB`), verdes ≈25%: verde profundo `#133825`, verde digital `#00DE68` (solo identidad: logo y avatares; como texto solo sobre oscuro), lima `#A2FF00` en dosis única — un CTA o un display o un motivo por pieza, **nunca como texto sobre claro**.",
+    "",
+    "Prohibido: emojis (salvo manitos 👈👉👇 hacia un CTA y banderas de países), gradientes glossy o 3D, resaltador sólido detrás de texto, puzzle, naranja, amarillo, personajes con rostro, logos de clientes falsos, piezas 100% negras o 100% verdes. Máximo 2 recursos gráficos por pieza; el motivo de semicírculos va siempre al corte desde un borde. Botón = rectángulo radio 10px; chip = pill outline.",
+    "",
+    "Voz (Brand Playbook, oct 2026): territorios Uso 50% · Integración 30% · Hands-on 20%; rasgos Estratega, Responsable (en inglés *Accountable*), Curiosa, Franca. Se escribe **AI** en cualquier idioma; única excepción, el nombre propio **IA en Campo**. Vetado: agtech, digital (solo), transformación digital, custom, software factory, dev shop, agencia, tecnología (sola), ayudar, adopción como sinónimo de uso, DIPI, building blocks. \"Uso\" antes que \"adopción\". Pruebas, no adjetivos. Inglés como idioma principal de web, LinkedIn e Instagram. Vocabulario: `https://brand.magoya.com/vocabulary.json` · checklist: `https://brand.magoya.com/.ai/checklist-verbal.md`.",
+    "",
+    "**Los datos no se inventan:** las cifras y clientes publicables están en `https://brand.magoya.com/ai/facts.json`. Lo que no esté ahí va como `[PENDIENTE]` y la pieza sale marcada **BORRADOR**."
   ].join('\n');
 
   var pre = document.getElementById('shortPrompt');
@@ -704,7 +759,7 @@ Copy en inglés, 90 palabras por bloque como techo. Sin fotos de personas si no 
   });
 })();
 
-// ---------- entradas por IA: copiar link / instrucción ----------
+// ---------- entradas por AI: copiar link / instrucción ----------
 (function(){
   var BASE = 'https://brand.magoya.com/ai/';
   function inst(url){

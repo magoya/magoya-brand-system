@@ -38,7 +38,7 @@
    "id": "I2",
    "nombre": "Personaje a la izquierda + dato al palo (sage)",
    "cuando_usarlo": "espejo de I1 para alternar el lado. El texto siempre va del lado opuesto al personaje; la cifra hace de display.",
-   "layout_src": "SPEC.I2=function(p){return [bg(C.sage),\n  IMG({src:A+'illus/char-chart-duo.svg',x:-6,y:8.25,w:40.3,h:48})].concat(chrome(p,false,44),[\n  T('21',{x:48,y:22,w:44.5,h:10,s:9,b:true,tight:true,al:'right',lh:.95}),\n  T('AgTech domains covered by the same team',{x:48,y:32.5,w:44.5,h:8,s:2.8,b:true,al:'right',lh:1.25}),\n  T('Agronomy, logistics, traceability, carbon, retail, crop protection and fifteen more.',\n    {x:56,y:42,w:36.5,h:6,s:1.45,c:C.g600,al:'right',lh:1.35})]);};\n\n/* --- J · personas --- */;"
+   "layout_src": "SPEC.I2=function(p){return [bg(C.sage),\n  IMG({src:A+'illus/char-chart-duo.svg',x:-6,y:8.25,w:40.3,h:48})].concat(chrome(p,false,44),[\n  T('21',{x:48,y:22,w:44.5,h:10,s:9,b:true,tight:true,al:'right',lh:.95}),\n  T('ag domains covered by the same team',{x:48,y:32.5,w:44.5,h:8,s:2.8,b:true,al:'right',lh:1.25}),\n  T('Agronomy, logistics, traceability, carbon, retail, crop protection and fifteen more.',\n    {x:56,y:42,w:36.5,h:6,s:1.45,c:C.g600,al:'right',lh:1.35})]);};\n\n/* --- J · personas --- */;"
   }
  ],
  "dsl_completo_en": "https://brand.magoya.com/ai/slides.json"

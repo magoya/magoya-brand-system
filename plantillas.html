@@ -159,32 +159,37 @@
     body{padding-left:0;padding-right:0}
   }
 
-  /* ---------- topbar: espacios iguales y el grupo de IA al final ---------- */
+  /* ---------- topbar v1.2 (en v2.0 la nav vive en nav.css) ---------- */
   /* los margenes .cl (16px) y .cl2 (10px) hacian que cada par de items tuviera
      una separacion distinta. Ahora todos los items pares estan a la misma
-     distancia y el unico corte estructural es el divisor antes del grupo de IA. */
+     distancia y el unico corte estructural es el divisor antes del grupo de AI. */
   .mg-topbar a.cl,.mg-topbar a.cl2{margin-left:0}
   .mg-topbar .navdiv{margin:0 12px}
-  /* IA en campo es sub-marca: se anuncia con su propia ley, el verde ES el fondo */
+  /* IA en Campo: programa presentado por Magoya, el verde ES el fondo */
   .mg-topbar a.sub{background:var(--emerald-500);color:var(--green-950);font-weight:800}
   .mg-topbar a.sub:hover{background:var(--lime-500);color:var(--green-950)}
   .mg-topbar a.sub.on{box-shadow:inset 0 0 0 2px var(--cream-50)}
 </style>
+<link rel="stylesheet" href="nav.css">
 </head>
 <body>
-<nav class="mg-topbar"><a href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a><a href="index.html">Inicio</a><a href="brand-book.html">Brand book</a><a href="slides.html">Slides</a><a href="pieces.html">Comerciales</a><a href="icons.html">Iconos</a><a href="library.html">Assets</a><a href="logos.html">Clientes</a><span class="navdiv"></span><a href="ai.html">Integrar con IA</a><a href="ai-en-campo.html" class="sub">IA en campo</a></nav>
+<nav class="mg-topbar">
+  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
+  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html"><i>A</i>Estrategia</a><a href="voz.html"><i>B</i>Voz</a><a href="lenguaje.html"><i>C</i>Lenguaje</a><a href="aplicacion.html"><i>D</i>Aplicación</a><span class="navdiv"></span><a href="brand-book.html"><i>E</i>Identidad visual</a><a href="piezas.html" class="on"><i>F</i>Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub"><i>G</i>IA en Campo</a><a href="ai.html"><i>H</i>Integrar con AI</a>
+  <div class="mg-subnav"><span class="lbl">F · Piezas y plantillas</span><a href="piezas.html">Resumen</a><a href="slides.html">Slides</a><a href="plantillas.html" class="on">Plantillas listas</a><a href="pieces.html">Comerciales</a><a href="piezas.html#papeleria">Papelería</a><a href="piezas.html#merch">Merch</a><a href="library.html">Assets</a><a href="logos.html">Clientes</a></div>
+</nav>
 
 <nav class="side">
   <span class="lbl">Familias</span>
-  <a href="#fam-a"><span>A · Apertura</span></a><a href="#fam-b"><span>B · Servicios & cards</span></a><a href="#fam-c"><span>C · Cifras</span></a><a href="#fam-d"><span>D · Gráficos</span></a><a href="#fam-e"><span>E · Listas & tablas</span></a><a href="#fam-f"><span>F · Proceso</span></a><a href="#fam-g"><span>G · Casos de éxito</span></a><a href="#fam-h"><span>H · Fotografía</span></a><a href="#fam-i"><span>I · Ilustración</span></a><a href="#fam-j"><span>J · Personas</span></a><a href="#fam-k"><span>K · Tecnología & IA</span></a><a href="#fam-l"><span>L · Clientes</span></a><a href="#fam-m"><span>M · Portada & cierre</span></a>
+  <a href="#fam-a"><span>A · Apertura</span></a><a href="#fam-b"><span>B · Servicios & cards</span></a><a href="#fam-c"><span>C · Cifras</span></a><a href="#fam-d"><span>D · Gráficos</span></a><a href="#fam-e"><span>E · Listas & tablas</span></a><a href="#fam-f"><span>F · Proceso</span></a><a href="#fam-g"><span>G · Casos de éxito</span></a><a href="#fam-h"><span>H · Fotografía</span></a><a href="#fam-i"><span>I · Ilustración</span></a><a href="#fam-j"><span>J · Personas</span></a><a href="#fam-k"><span>K · Software & AI</span></a><a href="#fam-l"><span>L · Clientes</span></a><a href="#fam-m"><span>M · Portada & cierre</span></a>
   <span class="v">BRAND SYSTEM · V1.2</span>
 </nav>
 
 <div class="wrap">
-  <p class="crumb"><a href="ai.html">Integrar con IA</a> › Plantillas listas</p>
+  <p class="crumb"><a href="piezas.html">F · Piezas y plantillas</a> › Plantillas listas</p>
   <span class="eyebrow">Copiá · pegá · funciona</span>
   <h1>Las 41 plantillas,<br>listas para usar.</h1>
-  <p class="lead">Cada plantilla es el módulo oficial ya armado: geometría, colores y tipografía <b>bloqueados</b>. Vos (o una IA) solo reemplazás el texto de los slots. No hay nada que adaptar ni asumir — el diseño ya está resuelto. Estas mismas plantillas son las que consume cualquier IA vía <a href="ai/templates/index.json">templates/index.json</a>, eligiendo el módulo con el <a href="ai/selector.json">selector</a>.</p>
+  <p class="lead">Cada plantilla es el módulo oficial ya armado: geometría, colores y tipografía <b>bloqueados</b>. Vos (o una AI) solo reemplazás el texto de los slots. No hay nada que adaptar ni asumir — el diseño ya está resuelto. Estas mismas plantillas son las que consume cualquier AI vía <a href="ai/templates/index.json">templates/index.json</a>, eligiendo el módulo con el <a href="ai/selector.json">selector</a>.</p>
 
   <div class="flow">
     <div><b>1 · Elegí</b>Buscá abajo la fila "Si tenés" que describe tu contenido. Sin criterio de diseño.</div>
@@ -612,7 +617,7 @@
         <a href="ai/templates/J3.html" target="_blank" rel="noopener">abrir</a>
       </div>
     </div>
-  </article></div><h2 id="fam-k">K · Tecnología & IA</h2><div class="grid">  <article class="tpl" data-id="K1">
+  </article></div><h2 id="fam-k">K · Software & AI</h2><div class="grid">  <article class="tpl" data-id="K1">
     <div class="prev"><iframe src="ai/templates/K1.html" loading="lazy" title="K1" tabindex="-1" scrolling="no"></iframe></div>
     <div class="body">
       <div class="hd"><span class="code">K1</span><b>Stack tecnológico por capa (logos reales en gris)</b></div>
@@ -627,9 +632,9 @@
   </article>  <article class="tpl" data-id="K2">
     <div class="prev"><iframe src="ai/templates/K2.html" loading="lazy" title="K2" tabindex="-1" scrolling="no"></iframe></div>
     <div class="body">
-      <div class="hd"><span class="code">K2</span><b>Capacidades de IA (logos de modelos + qué hacemos con ellos)</b></div>
-      <p class="tenes"><b>Si tenés:</b> capacidades de IA con herramientas concretas</p>
-      <p class="cuando">cuando la conversación entra en IA y hay que ser explícito. Cada fila nombra una capacidad concreta, no "AI-powered". Los logos de</p>
+      <div class="hd"><span class="code">K2</span><b>Capacidades de AI (logos de modelos + qué hacemos con ellos)</b></div>
+      <p class="tenes"><b>Si tenés:</b> capacidades de AI con herramientas concretas</p>
+      <p class="cuando">cuando la conversación entra en AI y hay que ser explícito. Cada fila nombra una capacidad concreta, no "AI-powered". Los logos de</p>
       <div class="chips"><span class="chip">display</span><span class="chip">subtitulo</span><span class="chip">caption</span><span class="chip">subtitulo</span><span class="nslots">9 slots</span></div>
       <div class="acts">
         <button class="btn-copy sm" data-copy="K2" type="button">Copiar plantilla</button>
@@ -686,7 +691,7 @@
     </div>
   </article></div>
 
-  <footer>Magoya Brand System · <a href="ai.html">integrar con IA</a> · <a href="ai/constraints.json">constraints</a> · <a href="slides.html">deck kit con export .pptx</a> · <a href="brand-book.html">brand book</a></footer>
+  <footer>Magoya Brand System · <a href="ai.html">integrar con AI</a> · <a href="ai/constraints.json">constraints</a> · <a href="slides.html">deck kit con export .pptx</a> · <a href="brand-book.html">brand book</a></footer>
 </div>
 
 <script>

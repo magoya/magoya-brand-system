@@ -32,7 +32,7 @@
    "id": "A1",
    "nombre": "Statement hero (126pt)",
    "cuando_usarlo": "primera slide después de la portada, o para abrir un bloque con una sola idea. Una frase, nada más. La frase que carga el sentido va en lima.",
-   "layout_src": "SPEC.A1=function(){return [bg(C.w),\n  T('PRODUCT STRATEGY',{x:7.5,y:8,w:60,h:2.6,s:1.5,b:true,c:C.em7,cs:1.8}),\n  T('AgTech challenges\\ndemand more than code.',{x:7.5,y:13,w:85,h:26,s:8.2,b:true,tight:true,lh:1.02}),\n  R({x:7.5,y:38.6,w:47,h:.85,fill:C.em5,radius:.42})];};"
+   "layout_src": "SPEC.A1=function(){return [bg(C.w),\n  T('PRODUCT STRATEGY',{x:7.5,y:8,w:60,h:2.6,s:1.5,b:true,c:C.em7,cs:1.8}),\n  T(\"It's built.\\nNow let's get it used.\",{x:7.5,y:13,w:85,h:26,s:8.2,b:true,tight:true,lh:1.02}),\n  R({x:7.5,y:38.6,w:47,h:.85,fill:C.em5,radius:.42})];};"
   },
   {
    "id": "A2",
@@ -44,13 +44,13 @@
    "id": "A3",
    "nombre": "Agenda / índice",
    "cuando_usarlo": "slide 2 de todo deck de más de 10 slides. Se repite antes de cada bloque moviendo la fila en lima a la sección que arranca.",
-   "layout_src": "SPEC.A3=function(p){return [bg(C.w)].concat(chrome(p),[\n  T('Agenda',{x:7.5,y:13,w:34,h:8,s:5.6,b:true,tight:true}),\n  T('45 minutes · 5 blocks',{x:7.5,y:22.5,w:30,h:3,s:1.45,c:C.g600})],\n  rowsBlock(44,12.5,48.5,[{n:'01',t:'Who we are — and how we embed'},{n:'02',t:\"What we've built in AgTech\"},\n    {n:'03',t:'The Magoya method'},{n:'04',t:'Investment scenarios'},{n:'05',t:'Next steps'}],1,C.em7));};"
+   "layout_src": "SPEC.A3=function(p){return [bg(C.w)].concat(chrome(p),[\n  T('Agenda',{x:7.5,y:13,w:34,h:8,s:5.6,b:true,tight:true}),\n  T('45 minutes · 5 blocks',{x:7.5,y:22.5,w:30,h:3,s:1.45,c:C.g600})],\n  rowsBlock(44,12.5,48.5,[{n:'01',t:'Who we are — and how we embed'},{n:'02',t:\"What we've built in agriculture\"},\n    {n:'03',t:'The Magoya method'},{n:'04',t:'Investment scenarios'},{n:'05',t:'Next steps'}],1,C.em7));};"
   },
   {
    "id": "A4",
    "nombre": "Divisor de sección (paño de semicírculos al corte)",
    "cuando_usarlo": "respiro entre bloques. El paño nace del borde inferior y se corta contra los tres bordes de la pieza — nunca flota en el aire. Número en lima, título en crema.",
-   "layout_src": "SPEC.A4=function(){return [bg(C.g950),\n  IMG({src:A+'motif-semis.svg',x:0,y:41.25,w:100,h:15,fit:'cover',swap:[['#00DE68','#ECE3DB']]}),\n  IMG({src:WMC,x:7.5,y:7,w:11,h:3.007}),\n  T('02',{x:7.5,y:14,w:30,h:12,s:12,b:true,c:C.lime,tight:true,lh:.9}),\n  T(\"What we've built\\nin AgTech\",{x:7.5,y:26,w:60,h:13,s:5.6,b:true,c:C.cr50,tight:true,lh:1.05})];};"
+   "layout_src": "SPEC.A4=function(){return [bg(C.g950),\n  IMG({src:A+'motif-semis.svg',x:0,y:41.25,w:100,h:15,fit:'cover',swap:[['#00DE68','#ECE3DB']]}),\n  IMG({src:WMC,x:7.5,y:7,w:11,h:3.007}),\n  T('02',{x:7.5,y:14,w:30,h:12,s:12,b:true,c:C.lime,tight:true,lh:.9}),\n  T(\"What we've built\\nin agriculture\",{x:7.5,y:26,w:60,h:13,s:5.6,b:true,c:C.cr50,tight:true,lh:1.05})];};"
   },
   {
    "id": "A5",

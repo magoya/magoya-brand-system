@@ -32,13 +32,13 @@
    "id": "M1",
    "nombre": "Portada — aérea de campo + scrim verde",
    "cuando_usarlo": "portada por defecto. Wordmark crema arriba a la izquierda, chip de contexto a la derecha, display abajo. El scrim es obligatorio: sin él el texto no lee.",
-   "layout_src": "SPEC.M1=function(){return [bg(C.g950),\n  IMG({src:PH+'field-rows.jpg',x:0,y:0,w:100,h:56.25,fit:'cover'}),\n  R({x:0,y:0,w:100,h:56.25,fill:C.g950,alpha:30}),\n  IMG({src:WMC,x:7.5,y:7,w:11,h:3.007})].concat(\n  chip(63.5,7,'Partnership proposal · 2026',C.cr100,29),[\n  T('Digital product\\ndevelopment\\nfor agribusiness',{x:7.5,y:24,w:60,h:22,s:6.8,b:true,c:C.cr50,tight:true,lh:1.02}),\n  T('We design, build and evolve the products and platforms that modern agribusinesses run on.',\n    {x:7.5,y:46.5,w:46,h:6,s:1.75,c:C.cr100,lh:1.45})]);};"
+   "layout_src": "SPEC.M1=function(){return [bg(C.g950),\n  IMG({src:PH+'field-rows.jpg',x:0,y:0,w:100,h:56.25,fit:'cover'}),\n  R({x:0,y:0,w:100,h:56.25,fill:C.g950,alpha:30}),\n  IMG({src:WMC,x:7.5,y:7,w:11,h:3.007})].concat(\n  chip(63.5,7,'Partnership proposal · 2026',C.cr100,29),[\n  T('Software and AI\\nfor agribusiness',{x:7.5,y:24,w:60,h:22,s:6.8,b:true,c:C.cr50,tight:true,lh:1.02}),\n  T('We design, build and evolve the products and platforms that modern agribusinesses run on.',\n    {x:7.5,y:46.5,w:46,h:6,s:1.75,c:C.cr100,lh:1.45})]);};"
   },
   {
    "id": "M2",
    "nombre": "Portada alternativa — verde profundo + paño al corte",
    "cuando_usarlo": "cuando no hay una foto que aporte, o cuando el deck ya abre con foto y hace falta contraste. El paño nace del borde derecho y se corta contra él.",
-   "layout_src": "SPEC.M2=function(){return [bg(C.g950),\n  IMG({src:A+'motif-semis.svg',x:70,y:0,w:30,h:56.25}),\n  IMG({src:WMC,x:7.5,y:7,w:11,h:3.007})].concat(\n  chip(63.5,7,'Partnership proposal · 2026',C.cr100,29),[\n  T('AgTech challenges demand more than code.',{x:7.5,y:24,w:58,h:22,s:6.8,b:true,c:C.cr50,tight:true,lh:1.02}),\n  T('Clarity, confidence and commitment — the three things a nine-year AgTech partnership is actually made of.',\n    {x:7.5,y:46.5,w:44,h:7,s:1.75,c:C.cr200,lh:1.45})]);};"
+   "layout_src": "SPEC.M2=function(){return [bg(C.g950),\n  IMG({src:A+'motif-semis.svg',x:70,y:0,w:30,h:56.25}),\n  IMG({src:WMC,x:7.5,y:7,w:11,h:3.007})].concat(\n  chip(63.5,7,'Partnership proposal · 2026',C.cr100,29),[\n  T('Software and AI for agribusiness.',{x:7.5,y:24,w:58,h:22,s:6.8,b:true,c:C.cr50,tight:true,lh:1.02}),\n  T('We understand the problem with you, build the solution and work to make sure it gets used in the field.',\n    {x:7.5,y:46.5,w:44,h:7,s:1.75,c:C.cr200,lh:1.45})]);};"
   },
   {
    "id": "M3",

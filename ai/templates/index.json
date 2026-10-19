@@ -31,7 +31,7 @@
     {
      "slot": "t2",
      "rol": "display",
-     "texto_ejemplo": "AgTech challenges\ndemand more than code.",
+     "texto_ejemplo": "It's built.\nNow let's get it used.",
      "max_caracteres_aprox": 97,
      "max_lineas": 4
     }
@@ -135,7 +135,7 @@
     {
      "slot": "t7",
      "rol": "caption",
-     "texto_ejemplo": "What we've built in AgTech",
+     "texto_ejemplo": "What we've built in agriculture",
      "max_caracteres_aprox": 172,
      "max_lineas": 3
     },
@@ -208,7 +208,7 @@
     {
      "slot": "t2",
      "rol": "display",
-     "texto_ejemplo": "What we've built\nin AgTech",
+     "texto_ejemplo": "What we've built\nin agriculture",
      "max_caracteres_aprox": 75,
      "max_lineas": 3
     }
@@ -427,7 +427,7 @@
     {
      "slot": "t9",
      "rol": "caption",
-     "texto_ejemplo": "Best for: scaling an existing team with AgTech fluency.",
+     "texto_ejemplo": "Best for: scaling an existing team with domain fluency in agriculture.",
      "max_caracteres_aprox": 193,
      "max_lineas": 5
     },
@@ -624,7 +624,7 @@
     {
      "slot": "t4",
      "rol": "caption",
-     "texto_ejemplo": "Client retention across engagements",
+     "texto_ejemplo": "of our clients are Magoya promoters",
      "max_caracteres_aprox": 171,
      "max_lineas": 5
     },
@@ -652,7 +652,7 @@
     {
      "slot": "t8",
      "rol": "caption",
-     "texto_ejemplo": "AgTech domains covered by the team",
+     "texto_ejemplo": "ag domains covered by the team",
      "max_caracteres_aprox": 171,
      "max_lineas": 5
     },
@@ -777,7 +777,7 @@
     {
      "slot": "t3",
      "rol": "subtitulo",
-     "texto_ejemplo": "Client retention across every engagement since 2017.",
+     "texto_ejemplo": "of our clients are Magoya promoters.",
      "max_caracteres_aprox": 183,
      "max_lineas": 3
     }
@@ -822,7 +822,7 @@
     {
      "slot": "t4",
      "rol": "caption",
-     "texto_ejemplo": "AgTech domains covered in-house",
+     "texto_ejemplo": "ag domains covered in-house",
      "max_caracteres_aprox": 189,
      "max_lineas": 5
     },
@@ -2585,7 +2585,7 @@
     {
      "slot": "t3",
      "rol": "titulo",
-     "texto_ejemplo": "AgTech domains covered by the same team",
+     "texto_ejemplo": "ag domains covered by the same team",
      "max_caracteres_aprox": 113,
      "max_lineas": 3
     },
@@ -2846,8 +2846,8 @@
   },
   {
    "id": "K2",
-   "nombre": "Capacidades de IA (logos de modelos + qué hacemos con ellos)",
-   "cuando_usarlo": "cuando la conversación entra en IA y hay que ser explícito. Cada fila nombra una capacidad concreta, no \"AI-powered\". Los logos de assets/studio/icons/ai/ vienen monocromos: van en negro sobre claro.",
+   "nombre": "Capacidades de AI (logos de modelos + qué hacemos con ellos)",
+   "cuando_usarlo": "cuando la conversación entra en AI y hay que ser explícito. Cada fila nombra una capacidad concreta, no \"AI-powered\". Los logos de assets/studio/icons/ai/ vienen monocromos: van en negro sobre claro.",
    "url": "https://brand.magoya.com/ai/templates/K2.html",
    "url_texto_crudo": "https://brand.magoya.com/ai/templates/K2.txt",
    "slots": [
@@ -2950,7 +2950,7 @@
     {
      "slot": "t2",
      "rol": "display",
-     "texto_ejemplo": "Nine years inside agribusiness",
+     "texto_ejemplo": "Nine-plus years inside agribusiness",
      "max_caracteres_aprox": 78,
      "max_lineas": 3
     },
@@ -2997,7 +2997,7 @@
     {
      "slot": "t2",
      "rol": "display",
-     "texto_ejemplo": "Digital product\ndevelopment\nfor agribusiness",
+     "texto_ejemplo": "Software and AI\nfor agribusiness",
      "max_caracteres_aprox": 82,
      "max_lineas": 4
     },
@@ -3037,14 +3037,14 @@
     {
      "slot": "t2",
      "rol": "display",
-     "texto_ejemplo": "AgTech challenges demand more than code.",
+     "texto_ejemplo": "Software and AI for agribusiness.",
      "max_caracteres_aprox": 79,
      "max_lineas": 4
     },
     {
      "slot": "t3",
      "rol": "subtitulo",
-     "texto_ejemplo": "Clarity, confidence and commitment — the three things a nine-year AgTech partnership is actually made of.",
+     "texto_ejemplo": "We understand the problem with you, build the solution and work to make sure it gets used in the field.",
      "max_caracteres_aprox": 241,
      "max_lineas": 4
     }

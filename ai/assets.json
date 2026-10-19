@@ -86,42 +86,42 @@
   },
   {
    "nombre": "chart-bars",
-   "categoria": "Datos & IA",
+   "categoria": "Datos & AI",
    "url": "https://brand.magoya.com/assets/icons/chart-bars.svg"
   },
   {
    "nombre": "chart-line",
-   "categoria": "Datos & IA",
+   "categoria": "Datos & AI",
    "url": "https://brand.magoya.com/assets/icons/chart-line.svg"
   },
   {
    "nombre": "pie",
-   "categoria": "Datos & IA",
+   "categoria": "Datos & AI",
    "url": "https://brand.magoya.com/assets/icons/pie.svg"
   },
   {
    "nombre": "database",
-   "categoria": "Datos & IA",
+   "categoria": "Datos & AI",
    "url": "https://brand.magoya.com/assets/icons/database.svg"
   },
   {
    "nombre": "ai",
-   "categoria": "Datos & IA",
+   "categoria": "Datos & AI",
    "url": "https://brand.magoya.com/assets/icons/ai.svg"
   },
   {
    "nombre": "chip",
-   "categoria": "Datos & IA",
+   "categoria": "Datos & AI",
    "url": "https://brand.magoya.com/assets/icons/chip.svg"
   },
   {
    "nombre": "satellite",
-   "categoria": "Datos & IA",
+   "categoria": "Datos & AI",
    "url": "https://brand.magoya.com/assets/icons/satellite.svg"
   },
   {
    "nombre": "sensor",
-   "categoria": "Datos & IA",
+   "categoria": "Datos & AI",
    "url": "https://brand.magoya.com/assets/icons/sensor.svg"
   },
   {
@@ -538,7 +538,7 @@
   {
    "carpeta": "assets/pieces",
    "descripcion": "Piezas reales exportadas (referencia de calidad)",
-   "reglas": "fecha-marcada-ig-portrait es LA pieza canónica de IA en campo (formato madre 4:5).",
+   "reglas": "fecha-marcada-ig-portrait es LA pieza canónica de IA en Campo (formato madre 4:5).",
    "archivos": [
     "https://brand.magoya.com/assets/pieces/fecha-marcada-ig-portrait.jpg",
     "https://brand.magoya.com/assets/pieces/fecha-marcada-ig-portrait.svg",
@@ -549,8 +549,8 @@
   },
   {
    "carpeta": "assets/studio",
-   "descripcion": "Kit de la sub-marca IA en campo + logos de terceros",
-   "reglas": "Los doodles/flourishes del Studio son SOLO para piezas de IA en campo, no para Magoya core.",
+   "descripcion": "Kit del programa IA en Campo + logos de terceros",
+   "reglas": "Los doodles/flourishes del Studio son SOLO para piezas de IA en Campo, no para Magoya core.",
    "archivos": [
     "https://brand.magoya.com/assets/studio/badge-envivo.svg",
     "https://brand.magoya.com/assets/studio/doodle-blob.svg",
@@ -600,7 +600,7 @@
   },
   {
    "carpeta": "assets/studio/icons/ai",
-   "descripcion": "Logos oficiales de plataformas de IA",
+   "descripcion": "Logos oficiales de plataformas de AI",
    "reglas": "Usar la variante correcta según fondo (-black sobre claro).",
    "archivos": [
     "https://brand.magoya.com/assets/studio/icons/ai/anthropic-black.svg",

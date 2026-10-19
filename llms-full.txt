@@ -1,29 +1,49 @@
 # Magoya Brand System
 
-> Sistema de diseño oficial de **Magoya** — estudio de estrategia y desarrollo de producto digital para agribusiness (AgTech), activo desde 2017. Este sistema es la única fuente de verdad de la marca: paleta con roles, tipografía Manrope, fotografía, ilustración, componentes y recetas de aplicación, publicado en formato legible por personas (HTML) y por modelos (Markdown + JSON + CSS).
+> Brand System oficial de **Magoya** — consultora hands-on en software y AI para empresas del agro (*Magoya is a hands-on software and AI consulting firm for agribusiness*). Tagline: **Software and AI for agribusiness**. Este sistema es la única fuente de verdad de la marca: una capa verbal (estrategia, voz, lenguaje y aplicación, del Magoya Brand Playbook de octubre de 2026, que prevalece si algo difiere) y una capa visual (paleta con roles, tipografía Manrope, fotografía, ilustración, componentes y recetas de aplicación, que se mantiene hasta su revisión), publicadas en formato legible por personas (HTML) y por modelos (Markdown + JSON + CSS).
 
-Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md` y `tokens.json`, y aplicá el prompt de sistema de `.ai/brand-prompt.md`. Las once reglas que más se rompen, para tenerlas antes de abrir cualquier link:
+Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md`, `tokens.json` y `vocabulary.json`, y aplicá el prompt de sistema de `.ai/brand-prompt.md`. Si escribís texto, corré `.ai/checklist-verbal.md` antes de entregar. Las cinco reglas verbales que más se rompen:
+
+- Magoya se define como **consultora hands-on en software y AI para empresas del agro**. Nunca agtech, software factory, dev shop ni agencia.
+- Se escribe **AI** en cualquier idioma del texto. Única excepción: el nombre propio **IA en Campo** (nunca "AI en Campo").
+- Peso de los mensajes por territorio: **Uso 50% · Integración 30% · Hands-on 20%**. Decimos "uso" antes que "adopción".
+- Vetado además: digital (solo), transformación digital, custom, tecnología (sola), ayudar, DIPI, building blocks. Lista completa con reemplazos en `vocabulary.json`.
+- Pruebas, no adjetivos. El inglés es el idioma principal del website, LinkedIn e Instagram.
+
+Y las once reglas visuales que más se rompen, para tenerlas antes de abrir cualquier link:
 
 1. Tipografía **Manrope** (variable 200–800), fallback Arial. Display peso 800, tracking −0.03em. Máximo 3 niveles tipográficos en una pieza escrita a mano; si la pieza sale de una plantilla del catálogo, el techo es el de esa plantilla (7 roles nombrados).
 2. **75/25**: neutros (blanco/sage/negro/crema) ≈75% de la pieza, verdes ≈25%, un solo movimiento verde dominante. Nunca una pieza 100% negra ni 100% verde.
 3. Lima **#A2FF00** = energía en dosis única (un CTA *o* un display *o* un motivo por pieza). **Nunca como texto sobre fondo claro** (1.25:1).
 4. Verde digital **#00DE68** = identidad (wordmark y avatares). Como texto solo sobre fondo oscuro; sobre blanco se usa **#009145** y solo ≥24px bold. Lima ≠ logo.
 5. **Sin emojis** en títulos ni en cualquier texto — la única excepción son las manitos que señalan (👈 👉 👇) hacia un CTA y las banderas de países.
-6. **Sin gradientes** glossy, 3D ni estética "hecha por IA". El único gradiente permitido es el scrim verde profundo 55–86% sobre foto aérea.
+6. **Sin gradientes** glossy, 3D ni estética "hecha por AI". El único gradiente permitido es el scrim verde profundo 55–86% sobre foto aérea.
 7. **Máximo 2 recursos gráficos por pieza** además de la tipografía: uno protagonista y uno de acompañamiento. Los pares que no conviven son: dos fotos, foto + personaje, foto aérea + paño de semicírculos, y personaje + ícono (matriz completa en `resourceCoexistence` de `tokens.json`).
 8. El **motivo de semicírculos va siempre al corte**: nace de un borde de la pieza o de detrás de un objeto. Nunca se ve cortado flotando en el aire.
 9. **Personajes** ilustrados: planos, redondeados, **sin rostro**, paleta cerrada de 5 colores, siempre recortados por un borde del lado opuesto al texto. Nunca centrados como clipart, nunca sobre foto.
 10. **Chips solo texto y espaciado en escala**: el chip (pill outline) nunca lleva punto/bullet delante del texto ni ícono adentro; todo margin/padding/gap sale de la escala base-4 (4/8/12/16/24/32/48/64/96) con un solo eje de alineación por pieza — specs en `components` y `spacing.rules` de `tokens.json`.
 11. Fuera de la marca: la metáfora del **puzzle**, el **naranja** y el **amarillo** del brand viejo, los personajes con rostro/monoline/stock, los motivos de líneas (caminos concéntricos, estratos), el bloque resaltador sólido detrás de texto y los logos de clientes falsos o placeholder.
 
+## Capa verbal (Magoya Brand Playbook, octubre de 2026)
+
+- [estrategia.html](https://brand.magoya.com/estrategia.html): A · Estrategia — definición, propósito, diferenciales, propuesta de valor, oferta, boilerplates, territorios, audiencias, razones para creer, Método Magoya, valores, pilares, promesa, personalidad, arquitectura y tagline.
+- [voz.html](https://brand.magoya.com/voz.html): B · Voz — qué se construye primero, objetivos por mercado, prioridad de territorios, rasgos, postura, contra qué lucha, lo que no dice, ejes, cinco diales, localización y énfasis por audiencia.
+- [lenguaje.html](https://brand.magoya.com/lenguaje.html): C · Lenguaje — vocabulario vetado, regla AI, glosario ES · EN · PT y cómo suena Magoya.
+- [aplicacion.html](https://brand.magoya.com/aplicacion.html): D · Aplicación — capas, voceros y territorios, canales e idioma, focos y producción.
+- [vocabulary.json](https://brand.magoya.com/vocabulary.json): hermano verbal de `tokens.json` — palabras vetadas con su reemplazo, términos no vetados, regla AI, glosario por mercado, frases prohibidas, definición, una línea y tagline.
+- [.ai/verbal/estrategia.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/estrategia.md): la Parte 1 y el tagline en Markdown.
+- [.ai/verbal/voz.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/voz.md): las Partes 2 y 3 en Markdown.
+- [.ai/verbal/lenguaje.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/lenguaje.md): la Parte 4 en Markdown.
+- [.ai/verbal/aplicacion.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/aplicacion.md): la Parte 6 en Markdown.
+
 ## Núcleo machine-readable
 
-- [BRAND.md](https://brand.magoya.com/BRAND.md): la doctrina completa en Markdown — 12 secciones con esencia y voz, logo, roles de color, tipografía, fotografía, ilustración y motivos, iconografía, componentes, recetas de aplicación, merch, papelería y reglas de oro. Es el documento a leer si solo vas a leer uno.
+- [BRAND.md](https://brand.magoya.com/BRAND.md): la doctrina completa en Markdown — resumen de la capa verbal y las secciones visuales: logo, roles de color, tipografía, fotografía, ilustración y motivos, iconografía, componentes, recetas de aplicación, merch, papelería y reglas de oro. Es el documento a leer si solo vas a leer uno.
 - [tokens.json](https://brand.magoya.com/tokens.json): todos los valores exactos con su rol y sus reglas de accesibilidad — paleta completa, ratio de uso por pieza, escalas tipográficas (incluida la de slides en pt), espaciado, radios, layouts de export, la matriz `resourceCoexistence` de qué recursos gráficos pueden convivir, y las rutas de assets (con la lista de recursos retirados).
 - [tokens.css](https://brand.magoya.com/tokens.css): los mismos tokens como CSS custom properties en dos capas (primitivos y semánticos) con 4 temas: `default` (verde profundo), `light` (crema), `paper` (editorial) y `studio` (blanco + negro + lima, el de slides y marketing). Usar esto al escribir código.
 - [README.md](https://brand.magoya.com/README.md): mapa del repositorio, orden de lectura recomendado y árbol de la carpeta `assets/`.
 - [ai/assets.json](https://brand.magoya.com/ai/assets.json): manifiesto de TODOS los assets (239 archivos) con URL directa y regla de uso por carpeta — wordmarks, avatares, los 58 íconos del sistema como SVGs individuales (`assets/icons/`), ilustraciones, fotos, logos reales de clientes y stack. Pages no lista directorios: este manifiesto es la única forma de enumerar los assets.
-- [llms-full.txt](https://brand.magoya.com/llms-full.txt): TODO el sistema en un solo fetch (doctrina + constraints + selector + índice de plantillas + método + checklist) — empezá acá si tus fetches encadenados fallan o truncan.
+- [llms-full.txt](https://brand.magoya.com/llms-full.txt): TODO el sistema en un solo fetch (doctrina + capa verbal + constraints + selector + índice de plantillas + método + checklists) — empezá acá si tus fetches encadenados fallan o truncan.
 - [ai/templates/index.json](https://brand.magoya.com/ai/templates/index.json): las 41 plantillas HTML oficiales con slots — se usan TAL CUAL: copiá el archivo, llená los data-slot respetando max_caracteres, no toques geometría ni colores. Este es el camino "copiá, pegá y funciona". Cada plantilla también está como `.txt` (texto plano) porque muchos fetch convierten el `.html` a markdown. Para armar un deck de varias slides: [deck-starter.html](https://brand.magoya.com/ai/templates/deck-starter.html) — pegás los `<div class="slide">` adentro, con un solo `<head>`.
 - [ai/decks/index.json](https://brand.magoya.com/ai/decks/index.json): **TRES DECKS YA ARMADOS Y VALIDADOS** — credenciales, propuesta de piloto y cierre de proyecto. Secuencia, lienzos y arco resueltos: no hay que componer, solo cambiar el texto entre corchetes. Si lo que te piden es un deck, empezá acá y no por el selector.
 - [ai/selector.json](https://brand.magoya.com/ai/selector.json): qué querés contar → qué plantilla. Sin criterio de diseño requerido.
@@ -31,22 +51,24 @@ Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md` y `tokens.j
 - [ai/constraints.json](https://brand.magoya.com/ai/constraints.json): mínimos de logo, clearspace, márgenes, safe areas, límites de texto — los números que nadie tiene que asumir.
 - [ai/slides.json](https://brand.magoya.com/ai/slides.json): la geometría fuente de los 41 módulos (layout_src) — para quien renderice por su cuenta; si solo vas a APLICAR, usá las plantillas.
 
-## Entrada por IA (un link por herramienta, versionadas por separado)
+## Entrada por AI (un link por herramienta, versionadas por separado)
 
 - [ai/chatgpt.md](https://brand.magoya.com/ai/chatgpt.md): ChatGPT (Custom GPT / Projects) — flujo por browsing, sin permisos.
 - [ai/claude.md](https://brand.magoya.com/ai/claude.md): Claude (claude.ai / Claude Code / API).
 - [ai/gemini.md](https://brand.magoya.com/ai/gemini.md): Gemini (app / AI Studio / Gems).
 - [ai/cursor.md](https://brand.magoya.com/ai/cursor.md): Cursor.
 - [ai/copilot.md](https://brand.magoya.com/ai/copilot.md): GitHub Copilot.
-- [ai/generic.md](https://brand.magoya.com/ai/generic.md): cualquier otra IA con browsing.
+- [ai/generic.md](https://brand.magoya.com/ai/generic.md): cualquier otra AI con browsing.
 
 ## Prompts y checklist listos para usar
 
 - [.ai/brand-prompt.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/brand-prompt.md): el prompt de sistema canónico y autocontenido (~540 palabras). Pegarlo como system prompt, custom instructions o project instructions y la salida ya sale on-brand sin adjuntar nada más.
 - [.ai/brand-prompt-short.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/brand-prompt-short.md): versión de ~120 palabras para pegar al inicio de un chat suelto.
-- [.ai/checklist.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md): 17 chequeos verificables para auditar una pieza generada por IA antes de publicarla.
+- [.ai/checklist.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md): 17 chequeos verificables (visuales) para auditar una pieza generada por AI antes de publicarla.
+- [.ai/checklist-verbal.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist-verbal.md): checklist verbal — cada chequeo con la slide del playbook de la que sale (definición, AI, vetos, frases prohibidas, uso/adopción, 50/30/20, pruebas, diales, audiencia, idioma, traducciones). Se corre sobre cualquier texto de Magoya antes de publicarlo.
 - [ai/precedencia.json](https://brand.magoya.com/ai/precedencia.json): ley de precedencia — qué documento gana cuando dos reglas oficiales del sistema se contradicen, más el contrato de entrega (qué puede salir con un hueco adentro y qué no).
 - [ai/metodo.md](https://brand.magoya.com/ai/metodo.md): el método de trabajo obligatorio para piezas con contenido — entender antes de elegir, módulos por criterio (no por defecto), y agentes de copy / diseño / crítica antes de entregar.
+- [ai.html](https://brand.magoya.com/ai.html): H · Integrar con AI — archivos para AI, presets por herramienta y validación (visual y verbal).
 - [AI-INTEGRATION.md](https://brand.magoya.com/AI-INTEGRATION.md): guía de setup por herramienta (Claude Projects, Claude Code, Claude Design, Custom GPT, Cursor, Copilot, chat genérico) con tabla de verificación y troubleshooting.
 
 ## Manual visual navegable
@@ -60,7 +82,7 @@ Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md` y `tokens.j
 
 - [library.html](https://brand.magoya.com/library.html): todos los assets con descarga directa (wordmarks, avatares, motivos, personajes, fotos, fuente).
 - [logos.html](https://brand.magoya.com/logos.html): logos reales de clientes y del stack tecnológico — los únicos que se pueden usar en un logo wall.
-- [ai-en-campo.html](https://brand.magoya.com/ai-en-campo.html): manual de la marca anexa "IA en campo". **No es parte del core**: rompe tres reglas a propósito (lienzo verde digital pleno, placa negra de dato clave, doodles del Studio). No aplicar sus reglas a piezas de Magoya.
+- [ai-en-campo.html](https://brand.magoya.com/ai-en-campo.html): G · IA en Campo, marca de programa presentada por Magoya, con manual propio. **No es parte del core**: rompe tres reglas a propósito (lienzo verde digital pleno, placa negra de dato clave, doodles del Studio). No aplicar sus reglas a piezas de Magoya.
 - [ROADMAP.md](https://brand.magoya.com/ROADMAP.md): estado del sistema y pendientes de contenido.
 
 
@@ -69,7 +91,7 @@ Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md` y `tokens.j
 
 # Magoya — Brand System v1.1
 
-> Manual de marca en Markdown, pensado para ser consumido por personas y por IAs.
+> Manual de marca en Markdown, pensado para ser consumido por personas y por modelos de AI.
 > Tokens exactos en [`tokens.json`](tokens.json) y [`tokens.css`](tokens.css). Manual visual navegable en [`brand-book.html`](brand-book.html).
 > **Las secciones 1–13 + §14 espejan una a una las del brand book visual.** Si una regla cambia acá, cambia allá — y al revés.
 
@@ -77,17 +99,21 @@ Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md` y `tokens.j
 
 ## 1. Qué es Magoya
 
-Estudio/partner de **estrategia y desarrollo de producto digital para agribusiness** (desde 2017). *"We partner with modern agribusinesses to design, build, and evolve their products and platforms."* Hero de marca: **"AgTech challenges demand more than code."** Diferenciador: equipos senior **embebidos** en el equipo del cliente — tecnólogos, expertos de producto y agrónomos. Pilares (las 3C): **Clarity** (complejidad → plan claro), **Confidence** (equipos senior con fluidez AgTech), **Commitment** (largo plazo).
+> **Capa verbal: Magoya Brand Playbook (octubre de 2026).** Esta sección resume lo esencial; el detalle vive en `estrategia.html`, `voz.html`, `lenguaje.html` y `aplicacion.html`, y en su versión machine-readable: [`.ai/verbal/estrategia.md`](.ai/verbal/estrategia.md), [`.ai/verbal/voz.md`](.ai/verbal/voz.md), [`.ai/verbal/lenguaje.md`](.ai/verbal/lenguaje.md), [`.ai/verbal/aplicacion.md`](.ai/verbal/aplicacion.md) y [`vocabulary.json`](vocabulary.json). Antes de publicar un texto: [`.ai/checklist-verbal.md`](.ai/checklist-verbal.md). Si algo de acá difiere del playbook, prevalece el playbook. La capa visual (§2–§14) se mantiene hasta su revisión.
 
-**Voz:** **traductora** — hablamos agro y software, y el trabajo es pasar de uno al otro sin perder precisión. **Concreta**: ninguna afirmación de valor viaja sin cifra, nombre de cliente, plazo o captura. **Directa**: oraciones cortas, conclusión primero, cero preguntas retóricas, mínimo de siglas. **Filosa cuando hace falta**: decimos lo que no cierra — ni hype de IA ni negacionismo. **Informal sin ser liviana**: voseo en español, humor cuando aliviana una idea, nunca como adorno; no infantil.
+**Definición.** Magoya es una consultora hands-on en software y AI para empresas del agro. *Magoya is a hands-on software and AI consulting firm for agribusiness.* "Estrategia y ejecución" no se usa para definir a Magoya: lo reemplaza **hands-on**; y "tecnología" no reemplaza a "software y AI".
 
-**Idioma:** español para cercanía y comunidad (voseo, léxico del lote); inglés para credencial y cuentas US (nativo-conceptual, nunca traducido, con revisión nativa antes de salir); portugués para Brasil. **En textos en castellano, mínimo de palabras en inglés — y las que van, traducidas.**
+**Tagline.** **Software and AI for agribusiness.**
 
-**Vocabulario propio:** *levantar el guante · no damos vueltas · talento híbrido / trilingües · traducir · convertir complejidad en decisiones · señal y ruido · equipo embebido (embedded) · claridad, confianza, compromiso · lote, campaña, ventana de siembra.*
+**Territorios de posicionamiento, por peso en los mensajes:** **Uso 50%** ("El éxito no es llegar al lanzamiento del producto. El éxito es que ese producto se use.") · **Integración 30%** ("Nuestra primera opción es construir sobre lo que ya existe.") · **Hands-on 20%** ("Ejecutamos lo que proponemos.").
 
-**Nunca:** preguntas retóricas · superlativos sobre nosotros mismos ("the best", "unparalleled") · "as a service" para lo que es un servicio a medida · siglas internas (DIPI) · "soluciones end-to-end" · "fracaso" · "familia" para el equipo · "startup" para Magoya · hype de IA · frasecitas de autoayuda.
+**Personalidad:** cuatro rasgos, en este orden, y cada uno ecualiza al siguiente: **Estratega · Responsable · Curiosa · Franca**. En inglés, Responsable se traduce *Accountable*, no *responsible*.
 
-> Evidencia y trazabilidad de cada regla: [`VOICE-RESEARCH.md`](VOICE-RESEARCH.md) — releva el Manual de Marca 2022 (la única especificación de voz que Magoya tuvo), la estrategia de marca de Varu, los pilares de contenido y las reuniones. **"No whimsical" salió de acá y volvió a ilustración**: era una conclusión sobre los personajes, no sobre la voz — cuatro fuentes piden humor explícitamente.
+**AI.** Se escribe **AI**, en inglés, para nombrar la inteligencia artificial en cualquier idioma del texto. Única excepción: **IA en Campo**, nombre propio del programa, que se escribe siempre así (nunca "AI en Campo").
+
+**Vocabulario vetado:** agtech · digital (solo) · transformación digital · custom · software factory · dev shop · agencia · tecnología (sola) · ayudar · adopción como sinónimo de uso · DIPI · building blocks. Decimos "uso" antes que "adopción". Reemplazos y glosario ES · EN · PT en [`vocabulary.json`](vocabulary.json).
+
+**Idioma.** El inglés es el idioma principal del website, de LinkedIn y de Instagram. La personalidad es la misma en Argentina, Brasil y Estados Unidos; lo que cambia por mercado es el vocabulario, el estadio de construcción y el énfasis por audiencia.
 
 ## 2. Logo & avatares
 
@@ -177,7 +203,7 @@ La marca tiene seis recursos gráficos. La regla que los ordena: **máximo dos p
 
 ## 8. Iconografía
 
-Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. **Set agro de 16 íconos + 10 logos de IA + 13 de redes en `assets/studio/icons/` — los mismos archivos que usa Magoya Studio.** Negro sobre claro, crema sobre oscuro, **lima solo el ícono destacado (uno por pieza)**. Librería propia de 58 iconos en 7 categorías (`icons.html`); completar con Lucide (misma gramática) si hace falta volumen. Nunca rellenos sólidos ni 3D.
+Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. **Set agro de 16 íconos + 10 logos de AI + 13 de redes en `assets/studio/icons/` — los mismos archivos que usa Magoya Studio.** Negro sobre claro, crema sobre oscuro, **lima solo el ícono destacado (uno por pieza)**. Librería propia de 58 iconos en 7 categorías (`icons.html`); completar con Lucide (misma gramática) si hace falta volumen. Nunca rellenos sólidos ni 3D.
 
 ## 9. Componentes
 
@@ -218,14 +244,14 @@ Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. *
 7. El motivo va al corte: nace de un borde o de detrás de un objeto — nunca cortado al aire.
 8. Máximo 2 recursos gráficos por pieza (§7); el monograma "m" no va en cards; en la firma va el wordmark.
 9. **Emojis prohibidos** — la única excepción son las manitos que señalan (👈 👉 👇) hacia un CTA y las banderas de países para geografía. Nunca en títulos.
-10. ✗ Resaltador sólido tras texto · ✗ gradientes glossy/3D/estética IA · ✗ pieza 100% negra o verde · ✗ personajes con rostro/monoline · ✗ puzzle · ✗ naranja/amarillo · ✗ banda festoneada · ✗ motivos de líneas.
-11. **En español se escribe IA, nunca AI** — "IA en campo", "Integrar con IA", "capacidades de IA". "AI" queda solo para copy en inglés (decks US) y nombres propios ajenos ("Data & AI", "AI Studio"). Una pieza en español que diga "AI" está mal escrita.
+10. ✗ Resaltador sólido tras texto · ✗ gradientes glossy/3D/estética AI · ✗ pieza 100% negra o verde · ✗ personajes con rostro/monoline · ✗ puzzle · ✗ naranja/amarillo · ✗ banda festoneada · ✗ motivos de líneas.
+11. **AI, en cualquier idioma** — se escribe AI para nombrar la inteligencia artificial, también en textos en español. Única excepción: el nombre propio **IA en Campo**. Regla del Brand Playbook (slide 50); el resto de la capa verbal en §1.
 
-## 14. Marca anexa "IA en campo" (manual propio)
+## 14. IA en Campo (manual propio)
 
-**No es una sección de este brand: es una marca anexa con su propio manual** (`ai-en-campo.html`). Línea de contenido educativo de IA para el agro (carruseles, reels, webinars). Mismo ADN (Manrope, verdes oficiales) pero **rompe tres reglas del core a propósito**: (1) lienzo **verde digital pleno #00DE68** como fondo dominante; (2) **placa negra** #161616 con texto crema para el dato clave — permitida acá como lenguaje sticker; (3) **ruido con los assets del Studio** (`assets/studio/`): doodles (sparkle, dots, blob, loop), flourishes (arrow, navarrow, circle, underline), badge EN VIVO y logos oficiales de IA/redes — 2–4 por pieza, ±5–15°, en las esquinas, teñidos en verde digital o lima (nunca un color propio: la sub-marca no usa terracota ni ningún acento fuera de la paleta core). Texto secundario verde profundo; display negro. Formato madre: **carrusel retrato 4:5 (1080×1350)** — no el cuadrado 1080×1080, que Instagram dejó de privilegiar para carruseles. Arco narrativo de 4–6 slides (duda real → herramienta → prueba → paso siguiente), sin numerar las slides (el swipe ya lo comunica); **ritmo de color del arco: verde pleno en la primera y la última slide, crema Magoya en las del medio** — todo verde se lee como una sola pieza repetida, no como un recorrido.
+**No es una sección de este brand: es una marca de programa presentada por Magoya, con su propio manual** (`ai-en-campo.html`). Programa abierto de AI aplicada al agro (carruseles, reels, webinars). Mismo ADN (Manrope, verdes oficiales) pero **rompe tres reglas del core a propósito**: (1) lienzo **verde digital pleno #00DE68** como fondo dominante; (2) **placa negra** #161616 con texto crema para el dato clave — permitida acá como lenguaje sticker; (3) **ruido con los assets del Studio** (`assets/studio/`): doodles (sparkle, dots, blob, loop), flourishes (arrow, navarrow, circle, underline), badge EN VIVO y logos oficiales de AI/redes — 2–4 por pieza, ±5–15°, en las esquinas, teñidos en verde digital o lima (nunca un color propio: la sub-marca no usa terracota ni ningún acento fuera de la paleta core). Texto secundario verde profundo; display negro. Formato madre: **carrusel retrato 4:5 (1080×1350)** — no el cuadrado 1080×1080, que Instagram dejó de privilegiar para carruseles. Arco narrativo de 4–6 slides (duda real → herramienta → prueba → paso siguiente), sin numerar las slides (el swipe ya lo comunica); **ritmo de color del arco: verde pleno en la primera y la última slide, crema Magoya en las del medio** — todo verde se lee como una sola pieza repetida, no como un recorrido.
 
-**Logo de la sub-marca:** lockup **"IA en campo · por Magoya"** abajo-izquierda — reemplaza al wordmark de Magoya solo en piezas de esta línea. Se compone con Manrope viva (800, tracking −2%), nunca como imagen. Lleva un mark a mano (`assets/studio/mark-ai-campo.svg`, mismo lenguaje de las marcas a mano del core) pegado a la derecha de "IA", a ~65% de su altura — **ese mark existe únicamente en este tamaño**: agrandado y suelto en una esquina como estallido cómic queda fuera del sistema. Negro `#161616` sobre lienzo claro, crema `#ECE3DB` sobre placa negra; nunca lima ni verde digital en el lockup — el color lo pone el fondo, no el logo. "por Magoya" siempre en `font-mono`, mayúsculas, más chico: es la firma, no el título.
+**Logo del programa:** lockup **"IA en Campo · por Magoya"** (hasta que exista el lockup con "presentado por Magoya") abajo-izquierda — reemplaza al wordmark de Magoya solo en piezas de esta línea. Se compone con Manrope viva (800, tracking −2%), nunca como imagen. Lleva un mark a mano (`assets/studio/mark-ai-campo.svg`, mismo lenguaje de las marcas a mano del core) pegado a la derecha de "IA", a ~65% de su altura — **ese mark existe únicamente en este tamaño**: agrandado y suelto en una esquina como estallido cómic queda fuera del sistema. Negro `#161616` sobre lienzo claro, crema `#ECE3DB` sobre placa negra; nunca lima ni verde digital en el lockup — el color lo pone el fondo, no el logo. "por Magoya" siempre en `font-mono`, mayúsculas, más chico: es la firma, no el título.
 
 Las piezas se producen SIEMPRE desde plantillas del Studio y su receta queda guardada en un `.magoya.json` (template, scheme, accent, anchor, rule, silueta, objetos con x/y/scale/rotation) — esa es la fuente para reproducirlas, no el ojo. Producción en Magoya Studio (30+ plantillas, 13 formatos de red). Nada de esto vuelve al core.
 
@@ -233,22 +259,793 @@ Las piezas se producen SIEMPRE desde plantillas del Studio y su receta queda gua
 
 | Página | Qué documenta |
 |---|---|
-| `brand-book.html` | Brand book: 13 secciones + §14 marca anexa |
-| `ai-en-campo.html` | Manual completo de la marca anexa |
+| `estrategia.html` · `voz.html` · `lenguaje.html` · `aplicacion.html` | Capa verbal A–D del Brand Playbook (octubre 2026) |
+| `brand-book.html` | Brand book: 13 secciones + §14 IA en Campo |
+| `ai-en-campo.html` | Manual completo de IA en Campo |
 | `slides.html` | Módulos de presentación |
 | `pieces.html` | Piezas comerciales (one-pager + flyers) |
 | `icons.html` | 58 iconos copiables |
 | `library.html` | Ficha + descarga de cada asset aprobado |
 | `logos.html` | Logos de clientes y stack tecnológico |
-| `ai.html` | Cómo cargar esta marca en una herramienta de IA y cómo validar el resultado |
+| `ai.html` | H · Integrar con AI: cómo cargar esta marca en una herramienta de AI y cómo validar el resultado |
 
-Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.ai/brand-prompt-short.md` (prompts para pegar), `.ai/checklist.md` (validación) y `.ai/presets/` (uno por herramienta). **Todos derivan de este archivo: si una regla cambia acá, hay que propagarla ahí.**
+Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.ai/brand-prompt-short.md` (prompts para pegar), `.ai/checklist.md` (validación visual), `.ai/checklist-verbal.md` (validación de texto), `.ai/verbal/` y `vocabulary.json` (capa verbal) y `.ai/presets/` (uno por herramienta). **Todos derivan de este archivo: si una regla cambia acá, hay que propagarla ahí.**
 
 `assets/refs/` es **material fuente no publicable** (exports originales del diseñador): se conserva como referencia de trazado, no se enlaza ni se distribuye. `archive/` son versiones previas del sistema — no usar.
 
 ---
 
 *Pendientes de contenido: fotos/nombres reales del equipo, cita completa de Camila López Colmano, logos vectoriales de ProducePay/HabiTerre/IntelinAir, validación de Staff Augmentation, unificación del email de contacto (hoy conviven `people@` e `info@`).*
+
+
+
+# ===== ESTRATEGIA (capa verbal A · .ai/verbal/estrategia.md) =====
+
+> Fuente: Magoya Brand Playbook (octubre de 2026), Partes 1 y 5 (slides 3–33 y 55–57). Si algo de este archivo difiere del playbook, prevalece el playbook.
+
+# Magoya · Estrategia (capa verbal A)
+
+Versión machine-readable de la estrategia de marca. Página navegable: `estrategia.html`. Vocabulario en `vocabulary.json`; checklist en `.ai/checklist-verbal.md`.
+
+## 1. Quiénes somos (slide 4)
+
+"Primero 'hola, soy Magoya'; después, todo lo demás."
+
+| Texto | Español | English |
+|---|---|---|
+| Definición | Magoya es una consultora hands-on en software y AI para empresas del agro. | Magoya is a hands-on software and AI consulting firm for agribusiness. |
+| Una línea | Consultora hands-on en software y AI para empresas del agro. | Hands-on software and AI consulting firm for agribusiness. |
+
+**Regla.** "Estrategia y ejecución" no se usa para definir a Magoya: lo reemplaza **hands-on**. No usamos la palabra "tecnología" para reemplazar a "software y AI".
+
+## 2. Propósito (slide 5)
+
+| | Español | English |
+|---|---|---|
+| Titular | Potenciar el uso del software y la AI en el agro para que sean una verdadera fuerza de transformación del sector. | To enable broader use of software and AI in agriculture, so they become a true force for transformation in the space. |
+| Por qué | Porque el verdadero impacto del software y la AI no está en la solución en sí misma, sino en su capacidad de integrarse a la realidad del sector, resolver problemas concretos, sostenerse en el tiempo y evolucionar junto con quienes los usan. | Because the real impact of software and AI does not come from the technology itself, but from its ability to become part of the reality of the space: solving real problems, delivering value over time, and evolving alongside the people and businesses that use it. |
+| Cierre | Queremos impulsar un agro en el que el software y la AI sean una verdadera fuerza de transformación: potenciando los negocios y contribuyendo a construir un sector cada vez más eficiente, conectado y preparado para evolucionar y crecer. | We want an agriculture where software and AI are a true force for transformation: boosting businesses and contributing to building a space that is more efficient, connected and prepared to evolve and grow. |
+
+Nota de uso (slides 41 y 53): "transformar" queda reservado para el propósito, de forma interna. No va en copy hacia afuera.
+
+### Nuestra búsqueda (slide 6)
+
+- **ES.** Que el uso y el impacto del software y la AI sean el criterio que guíe todo el proceso de construcción de soluciones. Desde definir qué problema vale la pena resolver, cómo se diseña, cómo se implementa, cómo se acompaña su adopción y su uso, cómo se mide y evoluciona.
+- **EN.** We want usage and impact of software and AI to be the guiding principle throughout the entire process of creating solutions. From defining which problem is worth solving, how it is designed, how it is implemented, how its adoption and use are supported, how it is measured, and how it evolves.
+
+## 3. Quiénes somos y qué hacemos (slide 7)
+
+**¿Quiénes somos? (ES)** Somos una consultora hands-on en software y AI para empresas del agro. Entendemos la industria, el negocio, el software y el contexto en el que cada producto tiene que funcionar. Nuestra mirada es integral: partimos de lo que ya existe y podemos ejecutar lo que recomendamos. Trabajamos en cualquier etapa: desde la estrategia hasta el diseño, el desarrollo y el uso a campo. Tenemos un método para asegurar resultados. Cada paso tiene una hipótesis, un plan y un KPI de éxito.
+
+**Who we are (EN)** We are a hands-on software and AI consulting firm for agribusiness. We understand the industry, the business, the software and the context each product has to work in. We look at the whole picture: we start from what is already there, and we can execute what we recommend. We come in at any stage: from strategy through design and development, and all the way to use in the field. We work with a method that secures results. Every step has a hypothesis, a plan and a success KPI.
+
+**¿Qué hacemos? (ES)** Trabajamos con las empresas del agro para resolver sus desafíos de negocio con software y AI, y para que esos productos evolucionen con el negocio y generen resultados. Entramos para entender el problema, identificar oportunidades y definir qué vale la pena resolver, cómo y cuándo hacerlo. Diseñamos y desarrollamos soluciones, integramos software, datos y ecosistemas, y acompañamos su implementación, adopción, uso y evolución. De la estrategia a la ejecución, acompañamos a las empresas para que las soluciones de software y AI funcionen, sean valoradas por sus usuarios y evolucionen con el negocio.
+
+**What we do (EN)** We work with agribusinesses to solve their business challenges with software and AI, and to make those products evolve with the business and deliver results. We come in to understand the problem, find the opportunities and define what is worth solving, how and when. We design and develop solutions, we integrate software, data and ecosystems, and we support their adoption, use and evolution. From strategy to execution, we stay with companies so their software and AI works, is valued by the people who use it, and evolves with the business.
+
+## 4. Diferenciales (slide 8) — cinco, en este orden
+
+| # | Diferencial | Español | English |
+|---|---|---|---|
+| 1 | Fluidez en agro / Domain fluency | El agro no es un vertical que atendemos: está integrado en la forma en que diseñamos y construimos software y AI. Llevamos más de nueve años resolviendo problemas exclusivamente en el sector, con ingenieros agrónomos en los squads de producto e ingeniería y nuestro agente de AI con su base de conocimiento. | Agriculture is not a vertical we serve. It is built into how we design and develop software and AI: nine-plus years solving problems only in this sector, with agronomists in our product and engineering squads and our AI agent with its knowledge base. |
+| 2 | Tres empresas en una / Three companies in one | Estrategia, diseño y desarrollo, adopción y uso suelen estar en manos de tres proveedores distintos. En Magoya son un mismo equipo, con un mismo método. Hacemos la ideación, diseñamos y construimos, y también acompañamos procesos de onboarding, adopción y customer success. | Strategy, design and development, adoption and usage usually sit with three different vendors. At Magoya they are one team and one method. We do the ideation, we design and build, and we also run onboarding, adoption and customer success. |
+| 3 | Hands-on | No nos quedamos en un papel ni en una presentación: recomendamos lo que es ejecutable para esa empresa, en su situación, y lo ejecutamos, sea en build o en uso. Somos estratégicos, con la ejecución en mente. | We don't stop at a document or a nice presentation: we recommend what that company can actually execute, in its situation, and we execute it, in build or in usage. We're strategic, with execution in mind. |
+| 4 | Orientados al resultado / Outcome-driven | Cada cosa que hacemos arranca de un problema, tiene una hipótesis y termina en un número. Sin KPI no hacemos nada. | Everything we do starts from a problem, has a hypothesis and ends in a number. No KPI, no work. |
+| 5 | Locales en los tres países / Local in all three countries | Equipos propios en Estados Unidos, Brasil y Argentina, incluyendo gente en el campo. | Our own teams in the United States, Brazil and Argentina, close to the field. |
+
+## 5. Propuesta de valor (slide 9)
+
+"Somos especialistas en todo el ciclo del desarrollo de un producto, con un mismo equipo y un mismo método."
+
+| | Español | English |
+|---|---|---|
+| Bajada | Magoya trabaja con las empresas del agro para resolver sus desafíos de negocio con software y AI. Trabajamos hands-on en los tres espacios donde viven los problemas: estrategia, diseño y desarrollo, adopción y uso. | Magoya works with agribusinesses to solve their business challenges with software and AI. We work hands-on across the three spaces where problems live: strategy, design and development, adoption and usage. |
+| Estrategia | Resolvemos las preguntas que vienen antes del producto: si hay product-market fit, si el modelo de negocio es viable, qué sumarle a una plataforma para llegar a un nuevo target o país o por dónde entrar con AI en la compañía. | We answer the questions that come before the product: whether there is product-market fit, whether the business model is viable, what to add to a platform to reach a new target, or how to adopt AI into the company's processes. |
+| Diseño y desarrollo | Diseñamos, construimos e implementamos software y AI, sea un producto nuevo o uno que ya existe y hay que mejorar, integrar o escalar. | We design, build and implement software and AI, whether it is a new product or improvements, integrations or scaling an existing one. |
+| Adopción y uso | Acompañamos a los equipos en el campo y en la operación diaria: onboarding, adopción, soporte en todos sus niveles, y medición del uso y del valor generado. | We partner with teams on the ground and in their daily work, from onboarding and adoption to multi-tier support, and we measure both usage and the value it delivers. |
+| Cierre | Unimos lo que normalmente son tres proveedores distintos. Estrategia, diseño y desarrollo, adopción y uso suelen estar en manos de tres empresas que no se hablan. En Magoya están en un mismo equipo, con el mismo método. Eso nos permite construir soluciones interconectadas en sus tres espacios, que se retroalimentan entre sí. Ese diferencial nos da la posibilidad de empezar por donde está el dolor más fuerte del cliente. | We bring together what usually sits with three different vendors. Strategy, design and development, adoption and usage are usually handled by three companies that don't talk to each other. At Magoya they sit within one team, working under one method. That lets us build interconnected solutions across all three spaces, each one feeding the others, and start wherever the client's pain is strongest. |
+
+### Los nombres de los espacios de actuación (slide 10)
+
+| Español | English | Qué no se dice |
+|---|---|---|
+| Estrategia | Strategy | Consultoría estratégica · Diagnóstico (el diagnóstico es parte del método, no un espacio) |
+| Diseño y desarrollo | Design and development | Implementación como un espacio aparte: la implementación vive acá |
+| Adopción y uso | Adoption and usage | Servicios de escala · Adoption and usage services · Rollout |
+
+## 6. La oferta (slide 11)
+
+| Estrategia · Strategy | Diseño y desarrollo · Design and development | Adopción y uso · Adoption and usage |
+|---|---|---|
+| Research e ideación de nuevos features · Research and ideation of new features | Diseño UX/UI · UX/UI design | Onboarding, adopción y loyalty programs · Onboarding, adoption and loyalty programs |
+| Análisis de product-market fit · Product-market fit analysis | Desarrollo e implementación web y mobile · Web and mobile development and implementation | Customer success y customer support (L1, L2 y L3) · Customer success and customer support (L1, L2, L3) |
+| Análisis de nuevo target o nuevos mercados · New target and new market analysis | Implementación de AI · AI implementation | Soporte a campo · Field support |
+| Estrategia de adopción de AI · AI adoption strategy | Infraestructura y DevOps · Infrastructure and DevOps | Adopción de AI · AI adoption |
+| | Integración de ecosistemas · Ecosystem integration | Medición de uso y de valor · Usage and value measurement |
+| | Data cleaning e integraciones de datos · Data cleanup and data integration | |
+| | Talento · Talent | |
+
+**No van al frente.** Mantenimiento se ofrece si el cliente lo pide. Staff augmentation entra tarde, cuando ya se habla de propuesta concreta. El asesoramiento agronómico no es un servicio: es una razón para creer.
+
+## 7. Boilerplate (slide 12)
+
+**Corto · ES.** Magoya es una consultora hands-on en software y AI para empresas del agro. Trabajamos con compañías que ven al software y la AI como parte central de su negocio: entendemos el problema junto a ellas, construimos soluciones y acompañamos hasta que el producto se usa en el campo. Equipos propios de producto, ingeniería y agronomía en Estados Unidos, Brasil y Argentina.
+
+**Short · EN.** Magoya is a hands-on software and AI consulting firm for agribusiness. We work with companies that see software and AI as central to their business: we understand the problem with them, build the solution and work to make sure it gets used in the field. We have our own teams in product, engineering and agronomy across the US, Brazil and Argentina.
+
+**Largo · ES.** Magoya es una consultora hands-on en software y AI para empresas del agro. Trabajamos con las principales compañías del sector en todo el arco: entender qué hay que resolver, construirlo y lograr que se use.
+Nuestros equipos son propios y combinan producto, ingeniería y agronomía, con gente en el campo en Estados Unidos, Brasil y Argentina. No tenemos producto propio, así que entramos sin sesgo: nuestra primera opción es trabajar con lo que la empresa ya tiene.
+Hacemos acuerdos a cada paso: primero el diagnóstico, después qué se construye, después el plan de ejecución y medición. Cada proyecto tiene un resultado esperado y una forma de medirlo. Lo que aprendemos cuando el producto está en manos de quien lo usa es lo que nos da las oportunidades para evolucionar.
+
+**Long · EN.** Magoya is a hands-on software and AI consulting firm for agribusiness. We work with the sector's leading companies across the full arc: understanding what needs to be solved, building it, and making sure it gets used.
+We deploy our own teams which combine product, engineering and agronomy, with people in the field in the US, Brazil and Argentina.
+We have no product of our own, so we come in without bias: our first option is always to work with what the company already has.
+We agree on each step: first the diagnosis, then what gets built, then the plan to execute and measure. Every project has an expected result and a way to measure it. What we learn once the product is in the hands of the people who use it is what shows us how to evolve it.
+
+## 8. Territorios de posicionamiento (slides 13–18 y 37)
+
+**Peso de los mensajes: Uso 50% · Integración 30% · Hands-on 20%.** Magoya construye en los tres territorios; construir la asociación con el uso es la prioridad (slide 37).
+
+### 8.1 Uso — prioritario, 50% (slides 13–14)
+
+- **ES.** El software no vale por sí mismo. Vale por su uso. El éxito de un producto de software es que se use y aporte valor al usuario. Para Magoya, el uso no es una etapa: es el norte que ordena todo el ciclo del producto. Desde la ideación y el diseño hasta la implementación, el onboarding, la adopción y la evolución, las preguntas son siempre las mismas: ¿quién lo va a usar?, ¿en qué contexto? y ¿qué valor se espera generar al usarlo? La adopción es el momento en que alguien pasa de no usuario a usuario. Es una parte del uso, no su sinónimo. Y el uso sostenido no se da solo: se da cuando el producto genera valor para quien lo usa.
+- **EN.** Software has no value in itself. Its value is in its use. A software product succeeds when it gets used and delivers value to the user. For Magoya, usage is not a stage: it is the north star for the whole product cycle. From ideation and design through implementation, onboarding, adoption and evolution, the questions are always the same: who is going to use this? In what context? And what value is the user expecting out of it? Adoption is the moment someone goes from non-user to user. It is part of usage, not a synonym for it. And sustained usage does not happen on its own: it happens when the product creates value for the person using it.
+- **Frase guía (slide 37).** "El éxito no es llegar al lanzamiento del producto. El éxito es que ese producto se use." Magoya es capaz de lograr que un producto no sólo se construya y llegue al lanzamiento, sino que se adopte, se use de forma sostenida y se mejore en función del contexto real del campo.
+
+**Usage Loop (slide 13)**
+- ES: Estrategia › Diseño y desarrollo › Onboarding › Adopción › Uso sostenido › Retención › Valor y retorno › Mejoras.
+- EN: Strategy › Design and development › Onboarding › Adoption › Sustained usage › Retention › Value and return › Improvements.
+
+**Statements de Uso (slide 14)**
+
+| Español | English |
+|---|---|
+| El éxito de un producto es que se use y aporte valor. | A product succeeds when it gets used and delivers value. |
+| El uso no es una etapa: es el norte de todo el ciclo del producto. | Usage is not a stage: it is the north star for the whole product cycle. |
+| Tres preguntas guían cada decisión: quién lo va a usar, en qué contexto y qué valor genera. | Three questions guide every decision: who will use it, in what situation, and what value it creates. |
+| La adopción es el momento en que alguien pasa de no usuario a usuario. Es parte del uso, no su sinónimo. | Adoption is the moment someone goes from non-user to user. It is part of usage, not a synonym for it. |
+| El uso sostenido se da cuando el producto genera valor para quien lo usa. | Sustained usage happens when the product creates value for the person using it. |
+| El usuario nunca es el responsable de un problema de uso. | The user is never to blame for a usage problem. |
+| El producto evoluciona con lo que aprendemos de quien lo usa. | The product evolves with what we learn from the people who use it. |
+
+### 8.2 Integración — 30% (slides 15–16)
+
+- **ES.** Vemos el todo cuando otros ven partes. Abordamos el problema con un punto de vista integrador. Sumamos personas, capacidades, ingeniería y conocimiento del negocio, y entendemos tanto la dinámica organizacional como los desafíos técnicos. Nos aseguramos de que se avance en base a acuerdos: primero el diagnóstico, después qué se construye, después el plan de ejecución y de medición. Ese orden es lo que hace que todos los que tienen algo que decir estén en la misma página. Nuestra primera opción es construir sobre lo que ya existe. No le sumamos ruido a un ecosistema que ya está fragmentado.
+- **EN.** We take a holistic approach where others see parts. We approach the problem with an integrating point of view. We bring together people, capabilities, engineering and business knowledge, and we understand the organizational dynamics as well as the technical challenges. We make sure progress rests on agreements: first the diagnosis, then what gets built, then the plan to execute and measure. That order is what keeps everyone with a say on the same page. Our first option is to build on what already exists. We don't add noise to an ecosystem that is already fragmented.
+- **Frase guía (slide 37).** "Nuestra primera opción es construir sobre lo que ya existe." Magoya sabe conectar herramientas y sistemas sin romper lo que existe ni frenar el roadmap durante meses. Es capaz de hacer un diagnóstico previo, tomar decisiones de arquitectura, construir sobre lo que ya funciona y no reinventar la rueda. Magoya tiene una mirada integral y puede conectar a los equipos.
+
+**Statements de Integración (slide 16)**
+
+| Español | English |
+|---|---|
+| Nos aseguramos de que haya un entendimiento común del problema, de las oportunidades y de la solución. | We build a shared understanding of the problem, the opportunities and the solution. |
+| Nuestra primera opción es construir sobre lo que ya existe. | Our first option is to build on what already exists. |
+| Traemos orden, no una herramienta más para mantener. | We bring order, not one more tool to maintain. |
+| Entendemos la dinámica organizacional tanto como los desafíos técnicos. | We understand the organizational dynamics as well as the technical challenges. |
+| Sugerimos lo que sabemos que es posible hacer, y nos comprometemos con lograrlo. | We propose what we know can be done, and we commit to getting it done. |
+| El agro no es un vertical que atendemos: está integrado en la forma en que diseñamos y construimos software y AI. | Agriculture is not a vertical we serve: it is built into how we design and develop software and AI. |
+| Podemos empezar por cualquier parte del ciclo: a veces el arreglo arranca en un L1 de soporte que devuelve feedback. | We can start anywhere in the cycle: sometimes the fix begins with an L1 support ticket that sends feedback back. |
+
+Regla: "Usar lo que ya tenés" queda afuera: se dice **construir sobre lo que ya existe**.
+
+### 8.3 Hands-on — 20% (slides 17–18)
+
+- **ES.** Ejecutamos lo que proponemos. Somos capaces de ejecutar en todo el ciclo, y nos gusta hacerlo: en estrategia, en diseño y desarrollo, y en adopción y uso. Sabemos hacer cada una de esas partes y podemos entrar por cualquiera. Hands-on significa que ponemos a prueba nuestro propio diagnóstico: lo construimos, lo validamos y lo iteramos, y el resultado nos encuentra ahí. Trabajamos dentro del problema, junto al equipo del cliente. Hablamos en concreto. Ponemos las opciones sobre la mesa, acordamos qué se ejecuta y lo hacemos. Si lo proponemos es porque ya sabemos que lo podemos construir. El valor se ve en semanas: cada etapa deja un entregable.
+- **EN.** We execute what we propose. We can execute across the whole cycle, and we like doing it: in strategy, in design and development, and in adoption and usage. We know how to do each of these parts, and we can come in wherever we're needed. Hands-on means we put our own diagnosis to the test: we build it, validate it and iterate on it, and we are there when the results come in. We work inside the problem, alongside the client's team. We speak in concrete terms. We put the options on the table, agree on what gets executed, and do it. If we propose something, it is because we already know we can build it. Value shows up in weeks: every stage finishes with a clear deliverable.
+- **Frase guía (slide 37).** "Ejecutamos lo que proponemos." Magoya ejecuta en todo el ciclo: estrategia, diseño y desarrollo, adopción y uso, y puede entrar por cualquiera de esas partes. Pone a prueba su propio diagnóstico: lo construye, lo valida, lo itera y se queda hasta ver el resultado, trabajando dentro del problema junto al equipo del cliente. Solo propone lo que sabe construir, y el valor se ve en semanas.
+
+**Statements de Hands-on (slide 18)**
+
+| Español | English |
+|---|---|
+| Ejecutamos lo que proponemos. | We execute what we propose. |
+| Ponemos a prueba nuestro propio diagnóstico: lo construimos, lo validamos y lo iteramos. | We put our own diagnosis to the test: we build it, validate it and iterate on it. |
+| Trabajamos dentro del problema, junto al equipo del cliente. | We work inside the problem, alongside the client's team. |
+| Si lo proponemos, es porque sabemos que se puede construir. | If we propose it, it is because we know it can be built. |
+| Si no lo sabemos, lo decimos. | If we don't know, we say so. |
+| Cada etapa deja un entregable para ejecutar. | Every stage ends with a deliverable you can act on. |
+| Una recomendación que nadie construye nunca se equivoca. | A recommendation nobody builds is never wrong. |
+
+## 9. Audiencias (slide 19)
+
+Magoya le vende a empresas grandes del agro. El foco es B2B enterprise, no empresas medianas ni startups.
+
+| Rol | Quién | Qué hay que saber |
+|---|---|---|
+| Audiencia primaria | Negocio y producto | Le vendemos al dueño de la visión, del producto y del roadmap. En el agro ese rol muchas veces lo ejerce alguien de negocio o el propio CTO, sin título formal de PO. |
+| Audiencia emergente | Customer success | Es un rol con cada vez más presupuesto. Las empresas grandes invierten en empujar el uso del software que ya tienen, muchas veces más que en desarrollo nuevo. |
+| Decisores | CPO, CEO o negocio | Son los decisores principales. En algunos casos también decide el CFO. |
+| Gatekeepers | El CTO y las segundas líneas | Si el mensaje es muy de producto o de negocio, lo anulan. Con el CTO funciona mejor el territorio hands-on, con un discurso específico y más técnico. |
+
+**Prioridad de los próximos doce meses:** negocio y producto, y customer success.
+
+## 10. Razones para creer (slides 20–23) — versiones cortas
+
+Las versiones largas están en el playbook y en `estrategia.html`.
+
+| # | Español (corta) | English (short) |
+|---|---|---|
+| 01 | Entendemos el agro. Sabemos de software. Combinamos un profundo conocimiento del agro con capacidades avanzadas en software y AI. Nuestro equipo reúne especialistas en agro, producto, ingeniería y customer success. | We understand agriculture and software. |
+| 02 | Tenemos un método. Trabajamos de punta a punta con el Método Magoya: Discovery, ideación, planificación, ejecución, y medición y evolución. Cada etapa tiene acuerdos, entregables y métricas. | We work end to end with the Magoya Method: Discovery, ideation, planning, execution, and measurement and evolution. Each stage has agreements, deliverables, and metrics. |
+| 03 | Somos hands-on. No somos teóricos. Proponemos lo que se puede ejecutar y estamos dispuestos a implementarlo. | We're hands-on. We're not theorists. We propose what can actually be executed, and we're ready to implement it. |
+| 04 | Combinamos calidad y velocidad. La experiencia en el dominio reduce la curva de entendimiento sin sacrificar profundidad. Avanzamos con entregas frecuentes y excelencia técnica. | We combine quality and speed. Our domain expertise shortens the learning curve without sacrificing depth. We move forward with frequent deliveries and technical excellence. |
+| 05 | Dejamos capacidad instalada. Resolvemos el problema con el cliente, compartimos metodología y transferimos conocimiento. La relación no depende de que Magoya esté siempre presente. | We solve the problem together with the client, share our methodology, and transfer knowledge. The relationship doesn't depend on Magoya always being there. |
+| 06 | Honestidad intelectual. Decimos lo que vemos, incluso cuando no es lo que se espera escuchar. Cuestionamos supuestos para tomar mejores decisiones juntos. | Intellectual honesty. We share what we see, even when it's not what clients might expect to hear. We like to question assumptions together with them, so we can make better decisions as a team. |
+| 07 | Cada proyecto construye al siguiente. Acumulamos conocimiento sobre el negocio, las personas y los procesos: una relación de largo plazo no empieza de cero. | Every project builds on the last. We get familiar with the business' way of working, the people and the processes: a long-term relationship doesn't start from scratch. |
+| 08 | Empezamos por el problema. Magoya no tiene un producto propio que necesite encajar en cada cliente: partimos de una mirada imparcial. | We start with the problem. Magoya doesn't have its own product that needs to fit every client: we start from an unbiased perspective. |
+| 09 | Generamos valor desde el principio. Ciclos cortos con avances concretos y medibles. Cada etapa deja algo listo para ver, validar, integrar o aprender. | We create value from the start. Short cycles, with concrete, measurable progress. Every stage leaves something ready to see, validate, integrate, or learn from. |
+| 10 | Nos vuelven a elegir. El 95% de nuestros clientes es promotor de Magoya y la relación promedio supera los 5 años. | Long-term trust. 95% of our clients are Magoya promoters, and our average relationship lasts more than 5 years. |
+| 11 | Somos locales donde trabajamos. Estructura propia en Argentina, Brasil y Estados Unidos. | We're local wherever we work. We deploy our own teams in Argentina, Brazil, and the United States. |
+| 12 | Compartimos lo que sabemos. IA en Campo es el programa abierto de AI aplicada al agro: prueba que entendemos de AI y de agro, y que estamos cerca de quien usa el software. | We share what we know. IA en Campo is our open program on AI applied to ag: proof that we understand AI and ag, and that we stay close to the people who use the software. |
+| 13 | Outcome driven. Cada entregable trabaja en pos de un resultado. Todo empieza con una hipótesis y termina con un outcome atado a un KPI. | Outcome-driven. Every deliverable works toward a result. Everything starts with a hypothesis and ends with an outcome tied to a KPI. |
+
+Notas del playbook: la versión larga EN de la razón 12 aclara que IA en Campo, por ahora, solo está disponible en Argentina (slide 23). El asesoramiento agronómico es una razón para creer, no un servicio (slide 11).
+
+## 11. El Método Magoya (slides 24–25)
+
+Es la forma de trabajar de Magoya. Es un activo, no una marca (slide 33).
+
+| Etapa | Qué pasa | El cliente obtiene |
+|---|---|---|
+| 1 · Discovery | Hacemos una inmersión completa en los problemas a solucionar junto a stakeholders y usuarios; analizamos materiales y datos disponibles. | Mismo entendimiento del problema. Findings priorizados y acordados junto a stakeholders. Cierra con workshop. |
+| 2 · Ideación | Opciones de diseño de solución, construidas con el cliente. | Alternativas de solución con sus trade-offs y una opción ponderada. Cierra con workshop de selección. |
+| 3 · Planificación | Se trabaja en un plan de ejecución y estrategia de medición, con las hipótesis y los KPI definidos. | Plan acordado con recursos, roadmap, entregables y métricas esperadas. |
+| 4 · Ejecución | Implementamos de forma iterativa con avances esperables y ajustes. | Resultados validados en ciclos cortos. |
+| 5 · Medición y evolución | Se mide contra los KPI acordados y el aprendizaje alimenta el próximo ciclo. | Evidencia de impacto y una decisión por tomar: escalar, ajustar o cambiar de rumbo. |
+
+| Stage | What happens | What the client gets |
+|---|---|---|
+| 1 · Discovery | We immerse ourselves in the problem with stakeholders and users and analyze the available materials and data. | A shared understanding of the problem and prioritized findings agreed with stakeholders. Closes with a workshop. |
+| 2 · Ideation | We build solution options together with the client. | Solution alternatives with their trade-offs and a weighted recommendation. Closes with a selection workshop. |
+| 3 · Planning | We build an execution plan and a measurement strategy, with clear hypotheses and KPIs. | An agreed plan with resources, roadmap, deliverables, and expected metrics. |
+| 4 · Execution | We implement iteratively, with visible progress and adjustments along the way. | Results validated in short cycles. |
+| 5 · Measurement and evolution | We measure against the agreed KPIs, and what we learn feeds the next cycle. | Evidence of impact and a clear decision: scale, adjust, or change course. |
+
+**Qué diferencia a la forma de hacer.** Conocimiento de dominio agro, la ecuación de tiempo-calidad, el traspaso del método y conocimiento directamente al equipo del cliente, y que cada etapa se cierra de manera rigurosa con un acuerdo y una métrica. (EN: Deep agriculture expertise. A time-quality equation that doesn't trade one for the other. Transfer of the method to the client's team. And every stage closes with an agreement and a metric.)
+
+**Regla.** No se hace ejecución sin Discovery. El Discovery se puede acortar, acelerar e incluso solapar con parte de la ejecución, pero nunca anular. (EN: No execution without Discovery. It can be shortened, accelerated, or overlapped with execution. It is never skipped.)
+
+## 12. Valores (slide 26)
+
+| Valor | Español | English |
+|---|---|---|
+| Coraje · Nerve | Decimos lo que está pasando y buscamos la mejor solución, aunque implique cuestionar el brief inicial del cliente o plantear conversaciones incómodas cuando son necesarias. | We say what's happening and we go after the best answer, even when that means questioning the brief we were handed or starting the conversation nobody wants to have. |
+| Evidence-driven | Cada propuesta que hacemos está respaldada por evidencia. Trabajamos con método y con una vara alta, y eso es justamente lo que nos permite movernos rápido y cambiar de dirección cuando los datos lo piden. | Every proposal we make is backed by evidence. We work with method, discipline and a high bar. We change directions when the data asks for it. |
+| Compromiso · Follow-through | Somos hands-on, implementamos lo que recomendamos y no dejamos al cliente solo. Nos hacemos cargo del resultado y vamos a fondo para lograrlo. Damos lo mejor en cada entrega y si se pone difícil, seguimos. | We're hands-on. We build what we recommend and we don't leave the client alone with it. We own the outcome and go all in to get there. We give our best in everything we deliver, and if it gets hard, we keep going. |
+| Cocreación · Built together | Construimos acuerdos, damos opciones y hacemos planes junto al cliente y sus equipos. Tenemos la flexibilidad para repensar y trabajar en equipo. | We build the agreements, put options on the table and make the plan with the client and their teams. We connect and we rethink when the work says so. |
+
+## 13. Pilares (slide 27)
+
+Ideas que definen cómo Magoya piensa, trabaja y se comporta.
+
+| Pilar | Español | English |
+|---|---|---|
+| Perspectiva ante todo / Perspective first | Entender el problema es parte de resolverlo. No creemos en soluciones prefabricadas ni en aplicar fórmulas estandarizadas. Antes de decidir qué hacer, buscamos entender el negocio, las personas, el contexto y las dinámicas que hacen que un problema exista. | We don't believe in off-the-shelf answers or standard formulas. Before deciding what to do, we work out the business, the people, the context, and the origin of the problem that needs to be solved. |
+| Articular para hacer que pase / Connect the pieces | Conectamos las partes para encontrar una solución posible. Sumamos personas, capacidades, ingeniería y conocimiento del negocio para entender qué hace falta para avanzar. Comprendemos la política, los acuerdos y los recursos internos como parte tanto del problema como de la solución. | We bring together people, capabilities, engineering and business knowledge to work out what it takes to move forward with a diagnosis. Internal politics, alignment and resources aren't obstacles to the work — they're part of it. We factor them into both the problem and the solution. |
+| Pensamiento iterativo / Move and learn | Nos movemos rápido y aprendemos de la realidad. No esperamos tener todas las respuestas para empezar. Trabajamos en ciclos cortos, construimos, validamos y ajustamos a partir de lo que sucede en el campo. Para Magoya, ejecutar no significa dejar de pensar y diagnosticar no significa quedarse quietos. | We work fast and we learn from what actually happens. We don't wait to have every answer before starting. Short cycles: build, check, adjust against what happens in the field. Execution doesn't mean we stop thinking, and diagnosing doesn't mean you stand still. |
+| Enseñar a pescar / Capability stays | La organización que nos contrata cambia. Compartimos conocimiento, construimos acuerdos y dejamos capacidades instaladas para que el equipo pueda seguir avanzando. El objetivo es que cada vez puedan hacer más y mejor con lo que construimos juntos. | Teams change. So we share what we know, build the agreements and leave your people able to keep going without us. The goal is that they can do more, and do it better, with what we built together. |
+
+## 14. Promesa (slide 28)
+
+- **ES.** Magoya acompaña a las empresas del agro a redefinir sus problemas de uso de software y obtener mayor valor y resultados.
+- **EN.** Magoya works alongside agribusinesses to redefine their software usage problems and get more value and results out of them.
+
+| Qué sumás | Por qué | What you gain | Why |
+|---|---|---|---|
+| Un aliado que articula a todos los actores. | Como externos, aportamos una mirada neutral. Reunimos a las partes sin pisar a nadie y cerramos acuerdos que todos sienten como propios. | An ally who brings every player together. | As an outside partner, we bring a neutral view. We get people on the same page without stepping on anyone's toes, and close agreements everyone owns. |
+| Más tiempo para conducir tu producto. | Vos ponés el norte y las decisiones son tuyas. Sumamos foco y velocidad para que las cosas avancen, sin sacar a tu gente más estratégica de lo que está haciendo. | More time to lead your product. | You set the direction and the decisions stay yours. We bring focus and speed to keep things moving, without pulling your most strategic people off their current assignments. |
+| Un equipo extendido con capacidades múltiples. | Además de capacidades, traemos mirada estratégica y la experiencia de haber llevado ideas de prototipo a productos rentables. | An extended team with a broad skill set. | Along with capability, we bring strategic thinking and the experience of taking ideas from prototype to profitable products. |
+| Claridad para priorizar. | Con un método probado durante años, pasás de features aislados a una estrategia de producto con decisiones basadas en datos. | Clarity to prioritize. | With a method proven over years, you move from isolated features to a product strategy built on data. |
+
+## 15. Arquetipo (slide 29)
+
+Magoya no es una consultora que se limita a dar respuestas: es un partner que cuestiona para encontrar la pregunta correcta y explora para descubrir la solución que funciona.
+
+| Arquetipo | Qué hace |
+|---|---|
+| **El Sabio** — piensa, cuestiona, da perspectiva | Aporta la autoridad basada en la experiencia, no en la imposición. Su rol es aportar claridad en medio de la complejidad. Analiza el negocio, las personas y el contexto político interno para entender los verdaderos desafíos y problemas, independientemente de lo que se haya planteado inicialmente. Su honestidad intelectual le permite decir lo necesario, incluso cuando es incómodo, para asegurar que las decisiones y cursos de acción sean los correctos. |
+| **El Explorador** — investiga, descubre, abre posibilidades | Es la fuerza que impulsa el movimiento. No acepta el problema inicial como definitivo sino que lo usa como un punto de partida para indagar más profundo. Cuestiona los supuestos, busca oportunidades donde otros ven barreras y no teme salirse del camino trillado si eso significa alcanzar un resultado tangible. Aprende mientras hace, en movimiento, porque para el explorador, la acción descubre y es una forma de aprendizaje. |
+
+El Sabio asegura que el rumbo sea el correcto y fundamentado; el Explorador asegura que avancemos. Juntos transforman la incertidumbre en un plan concreto.
+
+## 16. Rasgos de personalidad (slide 30)
+
+**Somos estrategas, responsables, curiosos y francos. El orden importa: cada uno ecualiza al siguiente.**
+
+Hablamos con el criterio de quien conoce el problema desde adentro, pero sin ponernos por encima del cliente. Buscamos entender antes de opinar, preguntamos antes de asumir y decimos lo que vemos, incluso cuando no es lo más cómodo. Somos directos, claros y concretos. No hablamos para demostrar cuánto sabemos, sino para tomar mejores decisiones juntos.
+
+| Rasgo | En una frase | Qué implica |
+|---|---|---|
+| 01 Estratega | Ve lo que está pasando detrás del problema aparente. | Es analítica. Busca claridad antes que complejidad. Conecta información, identifica patrones y ordena problemas que parecen más grandes de lo que realmente son. |
+| 02 Responsable | Se hace cargo de lo que propone. | No recomienda lo que no está dispuesta a ejecutar, y si propone algo es porque ya sabe que se puede construir. Pone a prueba su propio diagnóstico cuando lo construye, lo valida, lo itera. Avanza en base a acuerdos, dice lo que sabe y lo que no, y cuando el uso falla busca la causa en el onboarding, el diseño o la propuesta de valor, no en el usuario. |
+| 03 Curiosa | Pregunta para abrir nuevas posibilidades. | No toma el brief como verdad definitiva. Investiga, observa y se mete en el contexto hasta encontrar lo que todavía no se está viendo. Su curiosidad tiene propósito: descubrir oportunidades y problemas que valga la pena resolver. |
+| 04 Franca | Dice lo que hay que decir. | No busca tener razón ni agradar por encima de todo. Sostiene sus puntos de vista con experiencia y evidencia, y puede cuestionar una decisión sin convertir la conversación en una confrontación. |
+
+**En inglés, Responsable se traduce Accountable, no responsible:** accountable es hacerse cargo del resultado.
+
+Qué ecualiza cada rasgo: ver `.ai/verbal/voz.md` (slide 38).
+
+## 17. Expresión verbal (slides 31–32)
+
+| Principio | Explicación | Reglas | Ejemplo |
+|---|---|---|---|
+| Hablamos con convicción y apertura | Compartimos un punto de vista, lo sustentamos y dejamos espacio para construir sobre él. | Decimos "nuestra lectura es" antes que "esto es así". Cada afirmación va con su porqué y su evidencia. Seguridad sin soberbia. | "Esto es lo que estamos viendo. Veamos qué hacemos con eso." |
+| Hacemos preguntas que abren | Llegamos con una lectura propia basada en lo que sabemos, y preguntamos para entender cómo el cliente ve y vive el problema. Desde ahí construimos el camino de cambio por acuerdo. | Pedimos la perspectiva del cliente antes de dar la nuestra. Preguntamos cómo lo ven y cómo lo viven en el día a día. Ajustamos nuestros supuestos con lo que escuchamos. | "Antes de contarte cómo lo vemos nosotros, ¿cómo lo viven ustedes en el día a día?" |
+| Decimos lo que hay que decir, con cuidado | La honestidad intelectual es parte del trabajo. Si algo no va a funcionar, lo decimos a tiempo. | Damos la conclusión tal cual es, con respeto y con el porqué. Sumamos una alternativa antes que descartar lo que hay. | "Creemos que hay una mejor opción. Te contamos cuál y por qué." |
+| Hablamos claro para que las cosas pasen | Si una idea se puede decir simple, la decimos simple. Usamos las palabras del negocio y del campo. | Frases cortas y concretas. Verbos de acción: integrar, acompañar, construir, medir. Evitamos "soluciones integrales", "transformación" y "disrupción". Explicamos los términos técnicos cuando hacen falta. Decimos "uso" antes que "adopción". | "Ya está construido. Ahora hagamos que se use." |
+| Hablamos como partner | Estamos dentro del problema, junto al cliente y sus equipos. Nos involucramos y construimos juntos. | Usamos "nosotros" cuando el problema es compartido. Acompañamos y colaboramos. Firmes y cercanos a la vez. | "Lo pensamos juntos y vemos cómo hacerlo posible." |
+| Hablamos desde lo que construimos | Somos hands-on. Nuestra credibilidad viene de lo que hicimos, en el campo y en producción. | Ejemplos reales antes que conceptos. Mostramos un prototipo, una demo o un dato antes de explicar. Contamos lo que funcionó y lo que no. | "Esto ya lo construimos. Te mostramos cómo funciona." |
+| Hablamos de AI con naturalidad | La AI es un medio para lograr resultados, como cualquier tecnología que adoptamos. Hoy atraviesa todo lo que hacemos y la hablamos como parte de nuestro trabajo y del de nuestros clientes. | Primero el problema y el resultado, después la herramienta. Decimos qué resuelve, con qué datos y qué todavía no hace. La mencionamos cuando suma, sin forzarla ni usarla para impresionar. | "Con AI procesamos los reportes de campo y el agrónomo tiene la recomendación en minutos." |
+
+| Principle | Rules | Example |
+|---|---|---|
+| We speak with conviction and openness | We say "our read is" before "this is how it is." Every claim comes with its why and its evidence. Confident, never arrogant. | "This is what we're seeing. Let's figure out what to do with it." |
+| We ask questions that open things up | We ask for the client's perspective before giving ours. We ask how they see it and how they live it day to day. We adjust our assumptions to what we hear. | "Before we tell you how we see it, how does this play out for you day to day?" |
+| We say what needs saying, and we say it with care | We give the conclusion as it is, with respect and backed by the why. We add an alternative before ruling out what's there. | "We think there's a better option. Let us show you which one and why." |
+| We speak plainly to make things happen | Short, concrete sentences. Action verbs: integrate, support, build, measure. We avoid "end-to-end solutions," "transformation," and "disruption." We explain technical terms when needed. We say "usage" before "adoption." | "It's built. Now let's get it used." |
+| We speak as a partner | We say "we" when the problem is shared. We work side by side and collaborate. Firm and close at the same time. | "Let's think it through together and find a way to make it happen." |
+| We speak from what we've built | Real examples before concepts. We show a prototype, a demo, or a data point before explaining. We share what worked and what didn't. | "We've already built this. Let us show you how it works." |
+| We talk about AI naturally | Problem and outcome first, then the tool. We say what it solves, with what data, and what it can't do yet. We bring it up when it adds value, without forcing it or using it to impress. | "We use AI to process field reports, so the agronomist gets the recommendation in minutes." |
+
+## 18. Arquitectura de marca (slide 33)
+
+Magoya es marca madre y única marca comercial. Método Magoya y Usage Loop son activos, no marcas.
+
+| Capa | Rol | Relación con Magoya |
+|---|---|---|
+| Magoya | Marca madre. Audiencia enterprise del agro. Contiene toda la oferta en todos los mercados. | — |
+| Vocería | Directores y expertos, desde cuentas personales y sobre territorios autorizados. Acá viven los puntos de vista. | Magoya amplifica y valida. |
+| Varina Baldi | La voz más generalista de la marca. | Magoya presenta. |
+| IA en Campo | Marca de programa presentada por Magoya, no marca de Magoya. Audiencia y canales propios: AI aplicada al día operativo del campo, para el usuario final. Fuente de los casos publicables. | Magoya presenta: "IA en Campo, presentado por Magoya". |
+
+Detalle de capas, voceros y canales: `.ai/verbal/aplicacion.md` (Parte 6).
+
+## 19. Tagline (slides 56–57)
+
+**Software and AI for agribusiness**
+
+Por qué un tagline funcional y no uno inspirador: Magoya tiene nueve o diez años en el mercado, pero la marca se construyó desde el hacer, no desde el decir. En términos de construcción de marca, el estadio es más temprano de lo que los años sugieren. El nombre Magoya no transfiere ninguna asociación a priori. El tagline es el segundo mensaje más repetido de la marca y tiene que hacer el trabajo de posicionamiento que el nombre no hace. Se usará un tagline emocional cuando la marca alcance un grado de conocimiento con el que estemos conformes; Magoya todavía no está ahí.
+
+Reglas del tagline:
+- **Base no negociable:** Software + AI + agro / agribusiness. Sin eso la marca queda demasiado ambigua y pierde el nicho.
+- **Lo que se puede soltar:** "Consultora" y "hands-on". Se dicen inmediatamente después, en la firma o en la presentación. El tagline no tiene que decir todo.
+- **El calificativo:** algo que trascienda el build y apunte al uso o al valor. "Uso" es más específico y diferenciador que "resultado", que le sirve a cualquier consultora.
+
+
+
+# ===== VOZ (capa verbal B · .ai/verbal/voz.md) =====
+
+> Fuente: Magoya Brand Playbook (octubre de 2026), Partes 2 y 3 (slides 34–46). Si algo de este archivo difiere del playbook, prevalece el playbook.
+
+# Magoya · Voz (capa verbal B)
+
+Qué se construye primero, qué defiende la marca, con qué personalidad lo dice y cómo suena. Página navegable: `voz.html`. Definición, territorios y rasgos completos en `.ai/verbal/estrategia.md`.
+
+## 1. Qué se construye primero (slide 35)
+
+Una marca es una construcción de largo plazo. Las asociaciones a la marca por parte de nuestros públicos no se logran de una vez: posicionar es un camino de paciencia y repetición. Por eso, elegimos algunos mensajes para trabajar. Una vez que estos se consoliden se avanza con otro set de mensajes.
+
+| Orden | Mensaje | Qué significa |
+|---|---|---|
+| 01 | "Hola, soy Magoya" | Primero, nos presentamos como consultora hands-on de software y AI para el agro. Es el primer mensaje a construir, antes que cualquier otro: sin esta base, cualquier otro mensaje no tiene dónde apoyarse. |
+| 02 | "Soy experta en uso" | La meta es que nos adueñemos del territorio de uso. Ninguna consultora está asociada al uso hoy de la manera en la que lo proponemos y lograr esta asociación nos aporta un ángulo diferenciador. |
+| 03 | "Soy referente en el mercado" | Queremos construir una marca thought leader, referente en el mercado. Este es un objetivo para tener como prioridad una vez que las dos capas anteriores ya estén construidas. |
+
+## 2. Objetivos de construcción de marca por mercado (slide 36)
+
+**Objetivo transversal.** Que Magoya se entienda como consultora hands-on de software y AI para el agro, con la escala, la experiencia y el alcance global para acompañar a los líderes del sector. Quien ya nos conoce descubre que somos más grandes, completos y expertos de lo que imaginaba. Quien no nos conoce nos conoce así desde el primer contacto.
+
+| Mercado | Punto de partida (Magoya ahora) | Qué persigue la comunicación |
+|---|---|---|
+| Argentina | Nos conocen, pero piensan que somos chicos: dev shop o proveedor menor. IA en Campo construyó audiencia, pero por debajo del perfil de cliente estratégico. | Mostrar la Magoya que no ven: consultora con clientes globales, equipo experto y presencia internacional. Trabajar el territorio de uso, donde hay negocio inexplorado. Explorar capacitaciones y educación como señal de expertise: "soy tan experto que te puedo enseñar". |
+| Brasil | El mercado más débil de los tres. Nunca se comunicó nada. No somos conocidos. | Presentación completa desde cero, con el concepto transversal entero. Entramos como un jugador global y consolidado, respaldado por clientes y trayectoria. En esta geografía vamos a dar el primer paso. |
+| Estados Unidos | El "hola" ya está dado. Nos conocen, pero aún somos conocidos como dev shop. | Lograr validación y un posicionamiento más estratégico: pasar de dev shop a partner de software y AI, y mostrar a los clientes actuales una oferta más amplia y completa de lo que imaginan. |
+
+**Riesgo.** "Mostrarnos grandes" se cae si se apoya en adjetivos. Un procurement de Bayer o Deere chequea headcount y en ese caso "global" sin respaldo resta credibilidad. Lo que nos hace grandes tiene que contarse con pruebas: clientes, años de relación, geografías, casos en producción.
+
+(Las menciones a "dev shop" de esta tabla describen cómo nos ven hoy; como descriptor de Magoya, "dev shop" está vetado: ver `.ai/verbal/lenguaje.md`.)
+
+## 3. Prioridad en los territorios de posicionamiento (slide 37)
+
+Construir la asociación de Magoya con el uso es la prioridad.
+
+| Territorio | Peso | Frase | Qué demuestra |
+|---|---|---|---|
+| Uso (prioritario) | **50%** | "El éxito no es llegar al lanzamiento del producto. El éxito es que ese producto se use." | Magoya es capaz de lograr que un producto no sólo se construya y llegue al lanzamiento, sino que se adopte, se use de forma sostenida y se mejore en función del contexto real del campo. |
+| Integración | **30%** | "Nuestra primera opción es construir sobre lo que ya existe." | Magoya sabe conectar herramientas y sistemas sin romper lo que existe ni frenar el roadmap durante meses. Es capaz de hacer un diagnóstico previo, tomar decisiones de arquitectura, construir sobre lo que ya funciona y no reinventar la rueda. Magoya tiene una mirada integral y puede conectar a los equipos. |
+| Hands-on | **20%** | "Ejecutamos lo que proponemos." | Magoya ejecuta en todo el ciclo: estrategia, diseño y desarrollo, adopción y uso, y puede entrar por cualquiera de esas partes. Pone a prueba su propio diagnóstico: lo construye, lo valida, lo itera y se queda hasta ver el resultado, trabajando dentro del problema junto al equipo del cliente. Solo propone lo que sabe construir, y el valor se ve en semanas. |
+
+**Regla.** Magoya construye en los 3 territorios, pero el peso de los mensajes se reparte en 50% para Uso, 30% para Integración y 20% para Hands-on.
+
+## 4. Rasgos de personalidad y qué ecualizan (slide 38)
+
+La personalidad de Magoya se describe en estos 4 rasgos. El orden importa: cada uno ecualiza al siguiente.
+
+| Orden | Rasgo | Qué implica | Qué ecualiza |
+|---|---|---|---|
+| 01 | Estratega | Es el rasgo central: atraviesa todo lo que Magoya hace y dice. Es analítica, ve lo que está detrás del problema. Conecta información, identifica patrones, busca claridad. Ordena qué va primero. Lee al otro: entiende cuándo y cómo hacer las cosas. Presenta evidencia. Diagnostica. Propone soluciones. | Es el rasgo que ecualiza al resto de la personalidad. Por ejemplo: un estratega puede ser curioso y franco sin que eso implique confrontación. |
+| 02 | Responsable | "Donde pone la promesa, pone el acto": consistencia entre lo que dice y lo que hace. Acompaña hasta el final. No habla de lo que no sabe; si tiene que estudiar algo, lo estudia. No sale a "destruir" a otros en la industria aunque pueda. Cumple con las promesas. | Ecualiza la franqueza: es lo que evita llegar pateando la mesa. "En mi opinión" en vez de "este está totalmente equivocado". No destruye, cuida el largo plazo. |
+| 03 | Curiosa | Es profunda. No acepta los pedidos como verdades: sigue hasta la raíz del problema. Une puntas entre partes de la organización que no se hablan. Descubre oportunidades: "me pediste esto y apareció otra cosa". | Lleva adentro el matiz challenger. No es cualquier curiosidad: es la que busca variables para enriquecer la estrategia. |
+| 04 | Franca | Con honestidad intelectual: dice lo que considera mejor para el cliente. Sostiene puntos de vista, trae recomendaciones inesperadas. Cuestiona sin confrontar: habla del elefante en el cuarto, invita a hacerse cargo de la realidad. | La franqueza entra en juego cuando ya hay confianza. No es confrontativa ni "cuchillo entre los dientes". |
+
+En inglés, **Responsable = Accountable**, no responsible (slide 30).
+
+## 5. La postura de Magoya (slide 39)
+
+Desde dónde habla Magoya. Lo que defiende. **Magoya está del lado de entender, hacer y acompañar.**
+
+| Postura | Qué significa |
+|---|---|
+| Es parte del ecosistema, no habla desde afuera | No entra a decir que todo está mal. Es parte del problema y propone la solución. |
+| Tiene respeto por lo logrado | El cliente llegó hasta acá: Magoya es humilde y respetuosa. |
+| Trabaja desde donde está el cliente | Si hay que hacer algo nuevo, se pregunta qué se puede evolucionar antes de refundar. No pretende empezar de cero. Lo que ya existe es el punto de partida, no el enemigo. |
+| Propone una práctica fáctica, no intuitiva | Lo que sugiere es basado en evidencia y en datos medibles. Las opiniones son fundadas y se demuestran. Muestra todas las opciones, incluso las que no son viables ahora. |
+| Piensa que el lanzamiento es sólo el principio | Esta postura se apoya en la mirada que construye el territorio de posicionamiento Uso. |
+
+## 6. Contra qué lucha Magoya (slide 40)
+
+Estos son nuestros archienemigos declarados. Nos sirven como punto de partida para escribir los puntos de vista de la marca.
+
+1. Medir el éxito en el lanzamiento y no en el uso.
+2. Proponer la misma solución para todos.
+3. Entregar un producto y no acompañar su implementación.
+4. Resolver sin la convicción de que va a ser útil.
+5. El "ya sé cómo resolverlo" antes de entender el problema.
+6. Reinventar la rueda, o decir que todo lo que el cliente tiene no sirve.
+7. La sobrepromesa y las soluciones mágicas.
+8. Equipos que no miden. Consultoras que no hacen.
+9. Culpar al usuario cuando la tecnología no se adapta a él.
+10. La soberbia: "Ya sé todo".
+11. Enamorarse de un producto que no resuelve un problema real.
+12. Hacer desde cero cuando se puede redefinir lo que existe. Patear todo y tener que desarmar para empezar.
+
+**Estamos fundamentalmente opuestos** al arquetipo del mago: ese que piensa que "al usuario no le importa cómo se resuelven las cosas". Nosotros estamos a favor de evidenciar, de mostrar, de fundamentar, de educar.
+
+## 7. Lo que Magoya no dice (slide 41)
+
+La slide las presenta como "siete frases prohibidas en la marca". Textualmente son estos enunciados; se evitan todos.
+
+| Frase prohibida | Por qué |
+|---|---|
+| "Lo que tenés no sirve" · "Hay que hacerlo todo de nuevo" | Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe. |
+| "Sólo nosotros podemos resolverlo" | Decir eso es soberbia. Magoya no compite con altanería ni destruyendo a los demás. |
+| "Esto se hace así" | No creemos en las verdades únicas, sin contexto. La marca no tiene fórmulas o recetas estándar. |
+| "Transformamos" | Si bien nuestro propósito es ambicioso, usamos la palabra "transformar" de manera interna, no queremos sobreprometer impacto. Además, la palabra transformación arrastra peso del concepto de "transformación digital" que está quemado. |
+| "Esta tecnología es fácil de aplicar" · "Estos problemas son fáciles de resolver" | Es el mito del mago, nuestro archienemigo central. Nada de soluciones mágicas porque achican el trabajo propio y suenan a quien no conoce el agro. |
+| "El problema es del cliente o del usuario" | Magoya no culpa a otros y propone la solución. Nunca señala culpables. |
+
+## 8. Ejes de expresión (slide 43)
+
+Cómo se expresa la marca hacia afuera. Posición = la casilla que marca el playbook en una escala de 1 a 5 (1 = el polo izquierdo, 5 = el derecho).
+
+| Eje | Posición (1–5) | Cómo se expresa Magoya |
+|---|---|---|
+| Seria · Divertida | 2 | Magoya no es McDonald's o M&M's. Pero no quiere decir que sea una marca aburrida. |
+| Moderna · Tradicional | 2 | Se respeta la tradición del campo. Aún así, la marca se expresa de manera moderna. |
+| Racional · Emocional | 2 | Porque argumenta, justifica, evidencia. Aún así, no es insensible o robótica. |
+| Adulta · Joven | 3 | Magoya es mayor de edad. Habla de vos, no en slang. Es respetuosa, pero sin reverencia. |
+| Líder · Perfil bajo | 2 | Magoya busca ocupar una posición de referencia en el mercado. |
+| Arriesgada · Medida | 3 | Tomamos riesgo pero no queremos vernos como una práctica u opción arriesgada. |
+| Innovadora · Clásica | 2 | La nuestra es innovación metodológica y de enfoque, no tecnológica. |
+| Empírica · Intuitiva | 1 | Diagnosticamos, recomendamos y proponemos presentando evidencia. |
+| Técnica · Accesible | 2 | Lideramos con credibilidad técnica, pero somos traductores. |
+| De nicho · Masiva | 2 | Somos la opción especialista en nuestro sector. |
+| Transparente · Diplomática | 2 | La expresión de la marca es honesta. |
+| Personal · Institucional | 2 | Magoya se expresa de manera cercana y no rígida. |
+
+## 9. Los cinco diales (slide 44)
+
+**El default es Magoya global. El ajuste por país es la excepción, no la regla.** Escala 1 a 5.
+
+| Dial | En 1 | En 5 | Default | AR | BR | US | Por qué |
+|---|---|---|---|---|---|---|---|
+| Provocación | Complaciente | Confrontativa | 4 | 4 | 3 | 3 | En Argentina se pisa más fuerte; en Brasil y Estados Unidos conviene tener un registro más institucional. Cuando la marca puede, avanza. |
+| Densidad técnica | De negocio | Técnica | 2 | 2 | 2 | 2 | Magoya tiene que mostrar que entiende el negocio del cliente. Lo técnico es el respaldo, no la entrada: si se entra muy técnico, la comparación pasa a ser de specs y no es un territorio en el que queremos jugar. |
+| Cercanía | Institucional | Coloquial | 2 | 4 | 2 | 2 | Tenemos registro de consultora: institucional sin ser frío. Argentina va a 4 ya que es culturalmente más picante. |
+| Venta explícita | Educador | Comercial | 4 | 4 | 3 | 4 | El educador muestra el camino completo; el comercial dice "tenés este problema, yo te lo resuelvo". Magoya vende consultivamente, pero no regala el roadmap. |
+| Marca de origen | Invisible | Explícita | 1 | 2 | 1 | 1 | El objetivo es que la marca no dependa de la nacionalidad para posicionarse. Usar el origen como argumento de costo cierra la puerta a vender valor. No se niega el origen, pero no se lo lleva al frente. |
+
+## 10. Localización (slide 45)
+
+**No hay un tono distinto por mercado.** La personalidad de la marca Magoya es la misma en Argentina, Brasil y Estados Unidos.
+
+Lo que sí cambia por mercado:
+1. **El vocabulario.** Un glosario por territorio, con la preferencia de uso de la marca y el contexto de cuándo dos términos son sinónimos y cuándo no (ver `vocabulary.json` y `.ai/verbal/lenguaje.md`).
+2. **El estadio de construcción.** En Argentina tiene más historia y hay que trabajar en reposicionar, en Estados Unidos la marca tiene que construir las asociaciones correctas y en Brasil hay que empezar de cero.
+3. **El énfasis por audiencia.** Hay que entender cuál de los territorios se pone adelante según quién esté enfrente.
+
+## 11. Énfasis por audiencia y contexto (slide 46)
+
+| Audiencia | Qué rasgos pesan más | Qué se pone adelante | Qué pasa si se equivoca el énfasis |
+|---|---|---|---|
+| Negocio y C-suite | Estratega y curiosa | Visión estratégica: el pensamiento más allá de la ejecución. Que se entienda que Magoya piensa el problema, entiende el negocio y la industria. | Si sólo se muestra el build, el interlocutor de negocio se desconecta. |
+| Técnico | Responsable y franca | Registro colaborativo. Mostrar que se entiende el stack y los problemas habituales, con menos framing estratégico. | Si se entra muy estratégico, suena a consultor genérico y no a alguien que puede construir y resolver. |
+
+**A tener en cuenta: el momento del funnel.** Además de la audiencia, la marca entiende el contexto de la conversación. No es lo mismo un primer contacto que una propuesta, ni los mensajes que damos a alguien que ya compró o con quién tenemos una relación de años.
+
+Complemento (slide 19): con el CTO, que es gatekeeper, funciona mejor el territorio hands-on, con un discurso específico y más técnico.
+
+
+
+# ===== LENGUAJE (capa verbal C · .ai/verbal/lenguaje.md) =====
+
+> Fuente: Magoya Brand Playbook (octubre de 2026), Parte 4 (slides 47–54). Si algo de este archivo difiere del playbook, prevalece el playbook.
+
+# Magoya · Lenguaje (capa verbal C)
+
+Qué palabras usa Magoya, cuáles no, y cómo nombra al agro en cada mercado. Página navegable: `lenguaje.html`. La misma información en JSON: `vocabulary.json`.
+
+## 1. Vocabulario vetado (slides 48–49)
+
+Magoya no usa estas palabras.
+
+| No escribir | Por qué | Escribir en su lugar |
+|---|---|---|
+| agtech | No es como Magoya se describe. Suena a startup de producto, no a consultora. | consultora hands-on · hands-on consultant |
+| digital (solo) | Suena viejo, de otra época. Con contexto puede aparecer: «digital product development» es aceptable. Nunca como descriptor de marca ni como claim. | software · software product · software development |
+| transformación digital | Concepto sobrevendido. La transformación digital ya ocurrió, en mejor o peor forma, en cualquier empresa: usarlo suena a que todavía no pasó. | Hablamos de resultados y de lo que se resuelve concretamente. |
+| custom | Es una palabra que dispara "build from scratch" en el comprador enterprise: suena caro, lento, riesgoso. | Si lo tenemos que usar, decimos "diseñado para resolver el desafío". |
+| software factory · dev shop · agencia | Los tres reducen a Magoya a un ejecutor sin estrategia. | consultora hands-on |
+| tecnología (sola) | Es un concepto demasiado amplio que en agro incluye maquinaria, biológicos e IoT. | software |
+| ayudar | Implica una relación asimétrica, de quien sabe hacia quien no sabe. Magoya hace con el otro, no por el otro. | trabajar con · colaborar · hacer junto a · acompañar |
+| adopción (como sinónimo de uso) | Magoya define "uso" como el todo: adopción, uso frecuente y recurrencia. | uso · y que la adopción quede como sub-etapa |
+| DIPI | El nombre interno que se le daba a la metodología. Era sólo el Discovery dentro del método. | Método Magoya para el proceso completo · Discovery para la primera fase |
+| building blocks | Sugiere que Magoya reutiliza componentes de un cliente en otro, lo que abre un conflicto de propiedad intelectual. | Sin reemplazo definido. |
+
+Relacionado (slide 4): "tecnología" no reemplaza a "software y AI", y "estrategia y ejecución" no define a Magoya (lo reemplaza hands-on). Slide 31: evitamos "soluciones integrales", "transformación" y "disrupción".
+
+### No quedaron vetados (slide 49)
+
+| Término | Regla |
+|---|---|
+| soluciones · solutions | Usar con criterio, y nunca combinado con adjetivos genéricos como "integrales" o "innovadoras". |
+| framework · metodología | No vetados. "Método" es la palabra preferida, pero framework es aceptable en contextos técnicos. |
+| adopción, en su contexto correcto | No vetada si se usa para nombrar específicamente el paso de adopción dentro del arco de uso. |
+
+## 2. AI, en inglés (slide 50)
+
+- Usamos **AI**, en inglés, para nombrar la inteligencia artificial en general, en cualquier idioma del texto.
+- Es la forma que la marca adoptó para actualizar su propuesta: hacemos **"Software y AI"**.
+- **La única excepción es "IA en Campo":** es un nombre propio, el nombre del programa, y se escribe siempre así, en español, en cualquier idioma del texto que lo rodee. Nunca "AI en Campo".
+
+## 3. Quién es quién: glosario por mercado (slides 51–52)
+
+| Quién es | ES · Argentina | EN · Estados Unidos | PT · Brasil |
+|---|---|---|---|
+| El que produce | Productor | Farmer · Grower · Producer | Produtor · Agricultor |
+| · cultivos de alto valor | Productor frutihortícola | Farmer · Grower · Producer | Produtor · Horticultor |
+| · ganadería | Productor ganadero | Rancher | Pecuarista |
+| · fruticultura | Productor frutihortícola | Orchard farmer | Fruticultor |
+| El técnico | Asesor · agrónomo | Advisor · Agronomist | Agrônomo · consultor agronômico · engenheiro agrônomo · engenheiro agrícola |
+| El canal | Distribuidor | Dealer | Distribuidor |
+| · contacto con el productor | Distribuidor · comercio de insumos agrícolas | Retailer | Revenda · revendedor · loja de insumos agrícolas |
+| · alimentos | Mayorista | Wholesaler | Atacadista |
+| · maquinaria | Concesionario · concesionaria | Dealer · dealership | Concessionária · revenda de máquinas |
+| · cooperativas | Cooperativa | Cooperative | Cooperativa |
+| Quien usa el producto | Usuario | User | Usuário |
+| El equipo del productor | Operador · analista digital · gestor o gerente · productor o dueño | Operator · digital analyst · manager · farmer or owner | Operador · analista digital · gestor ou gerente · produtor ou proprietário |
+| El equipo del cliente | Representante de ventas (RV) · soporte técnico · asesor | Commercial · tech support · advisor | Representante técnico de vendas (RTV) · assistente técnico de vendas (AT) · assistência ou suporte técnico |
+| El sector | Agro · sector agropecuario · agronegocio | Agriculture · Ag | Agro · agropecuário · agronegócio |
+| El cliente · insumos | Empresa de insumos para el agro | Ag input company | Empresa de insumos agrícolas |
+| El cliente · maquinaria | Empresa de maquinaria | OEM company | Empresa de máquinas ou maquinário |
+| El cliente · semillas | Semillera | Seed company | Empresa de sementes |
+
+**Importante.**
+- "Distribuidor" en Argentina es **dealer** en inglés, no "distributor". Y "retailer" es el que tiene contacto con el productor, que es otra figura (slide 51).
+- **"Agribusiness" nombra al cliente, no al sector:** en inglés el sector es *agriculture* o *ag*. En Brasil "agricultor" convive con "produtor" para el que produce (slide 52).
+- **Tipos de cultivo (slide 52).** Español: extensivos e intensivos, la división de primer nivel. Inglés: *row crops* para extensivos; *specialty crops* o *fresh crops* para intensivos (tomate, pimiento, pepino, almendra, cítricos). El inglés no usa esa división.
+
+## 4. Cómo suena Magoya (slide 53)
+
+| Tema | Así no | Así sí | Por qué |
+|---|---|---|---|
+| Cómo trabajamos con clientes | «Ayudamos a nuestros clientes a transformar sus negocios.» | «Trabajamos con nuestros clientes para resolver problemas concretos utilizando software.» | «Ayudar» está vetado y «transformar» solo queda reservado para el propósito en forma interna. |
+| Alcance del trabajo | «Lideramos la transformación» | «Trabajamos desde la definición del problema hasta la ejecución de la solución.» | Nos ponemos a la altura de quien resuelve, no por encima, y «transformar» nos arrastra al territorio de transformación digital. |
+| Qué construimos | «Implementamos soluciones innovadoras.» | «Construimos lo que el cliente necesita para su negocio», con foco en el uso. | «Soluciones innovadoras» es genérico y viejo. |
+| El uso | «Impulsamos la adopción de tecnología.» | «Trabajamos para lograr que cada solución se use.» | Adopción como sinónimo está vetada, y «tecnología» también. |
+| Qué ofrecemos | «Ofrecemos soluciones integrales.» | «Ofrecemos soluciones de software y AI y, si es necesario, conectamos las partes que hacen falta para que funcione.» | «Integrales» es genérico. |
+
+## 5. Ejemplo: posteo de LinkedIn (slide 54)
+
+**Vocero:** Cami · **Territorio:** Uso
+
+> El onboarding de una herramienta digital empieza mucho antes del lanzamiento. Empieza en el diseño: en qué ve el usuario primero, cómo entiende el primer flujo y en qué momento puede seguir solo.
+>
+> En los casos en que la herramienta ya está lanzada y el uso no despega, lo trabajamos en tres frentes: un journey de onboarding, adopción y loyalty con customer success, virtual y a campo, que trabaja de manera proactiva y reactiva; agentes de AI que permiten escalar ese soporte para estar en el momento exacto en que el usuario lo necesita y loops de feedback que llevan lo aprendido directo al producto.
+>
+> Con un cliente pasamos del 12% al 36% de uso. El acompañamiento a campo nos mostró dónde se trababa la gente, esos aprendizajes volvieron al diseño y hoy el producto los resuelve solo.
+>
+> La meta es que el producto escale sin depender de más personas. Cada conversación en el campo es una mejora que el próximo usuario ya no va a necesitar.
+
+| Regla aplicada | Cómo se ve acá |
+|---|---|
+| Rasgo Curiosa | Busca dónde se traba el usuario antes de asumir la causa. |
+| Vetos respetados | No usa «ayudar» ni «tecnología». «Adopción» aparece como parte del uso. |
+| Territorio Uso | El uso se diseña desde el inicio y lo termina sosteniendo el producto. |
+| AI con naturalidad | La AI aparece como un frente más, al servicio del usuario. |
+| Regla "Concreta" | Cifra real (12% a 36%) y un método explícito en tres frentes. |
+
+Nota: el ejemplo del playbook está en español; según la slide 62, el idioma principal de LinkedIn es el inglés (ver `.ai/verbal/aplicacion.md`). La cifra 12%→36% es del ejemplo del playbook: para publicarla en otra pieza tiene que estar aprobada en `ai/facts.json`.
+
+
+
+# ===== APLICACION (capa verbal D · .ai/verbal/aplicacion.md) =====
+
+> Fuente: Magoya Brand Playbook (octubre de 2026), Parte 6 (slides 58–63). Si algo de este archivo difiere del playbook, prevalece el playbook.
+
+# Magoya · Aplicación (capa verbal D)
+
+Quién habla, de qué, en qué canal y con qué cadencia. Página navegable: `aplicacion.html`.
+
+## 1. Capas de la arquitectura de marca (slide 59)
+
+| Capa | Qué es y a quién le habla | Qué dice | Qué no dice |
+|---|---|---|---|
+| Magoya | Marca principal. Le habla a agribusiness (empresas del agro). Es la que tiene que salir primero y construir el posicionamiento de consultora hands-on. | Los tres territorios: uso, integración y hands-on. El Método Magoya y los puntos de vista de marca. | No le habla al productor ni al usuario final. No publica contenido educativo básico. |
+| Los voceros | Cada uno desde su vertical de expertise. Sostienen el thought leadership técnico y el liderazgo desde lo específico. | Se mueven en su territorio primario en un 70%, los otros dos en un 30%. Aportan color, anécdotas y profundidad que la marca no puede dar. | No reemplazan a la marca. No publican contenido institucional puro. |
+| IA en Campo | Marca de programa presentada por Magoya, no es marca de Magoya. No es una línea de negocio. | AI aplicada al día operativo del campo, para el usuario final. | No habla desde la cuenta de Magoya como si fuera contenido propio de la marca. |
+
+Relación con Magoya (slide 33): Magoya es marca madre y única marca comercial; la vocería es amplificada y validada por Magoya; IA en Campo se presenta como "IA en Campo, presentado por Magoya". Método Magoya y Usage Loop son activos, no marcas.
+
+## 2. Los voceros y sus territorios (slide 60)
+
+Cada voz tiene un territorio claro y sostenible.
+
+| Vocero | Territorio primario | Ángulo | Audiencia y tono |
+|---|---|---|---|
+| Varu | Magoya · Hands-on · Integración | Es la que habla de Magoya, su futuro y perspectivas. Quién responde si hay crisis. Habla de qué significa ser una consultora que implementa lo que recomienda. También habla de integración. | La vocera generalista. Medios de negocios y agro. CEOs. |
+| Cami | Uso | Mirada agronómica y de negocio: onboarding, retención, etapas de adopción, qué pasa en el campo después de diseñar. | Operadores y gente de campo. Concreto, con ejemplos técnicos de agro. |
+| Facu | Uso (perspectiva producto) | Cómo se diseña un producto para que se use, causas sistémicas de las fallas de adopción, user persona y user brief. | CPOs y líderes de producto. Más técnico y más abstracto que Cami, a propósito. |
+| Pato | Integración | Arquitectura, decisiones técnicas, pruebas de concepto, criterios para integrar sin romper lo existente. | CTOs e ingeniería. Profundo y difícil de seguir para el que no es técnico: esa profundidad es el punto. |
+| Leo | Territorio adyacente | Internacionalización, criterios de inversión, AI en operaciones de finanzas. Cómo se justifica la inversión. | Construye credibilidad indirecta. Mirada de quien construye una empresa, no de CFO corporativo. |
+| Kinsie · Cami Reis | Uso (localizado) | Los mismos temas que Cami, con el doble clic de Estados Unidos y de Brasil. | Su valor es la señal «somos locales». |
+
+- **Todos los voceros hablan de AI.** Y todos pueden tocar los tres territorios de posicionamiento con una distribución aproximada de **70% territorio primario y 30% los otros dos**.
+- **Importante.** Magoya como marca también habla de los tres territorios de posicionamiento. Los voceros no la reemplazan: le agregan color, anécdotas y profundidad.
+- Varina Baldi es la voz más generalista de la marca; Magoya la presenta (slide 33).
+
+### Ejemplo: la misma idea de fondo, dos voceros (slide 61)
+
+**Cami · Uso · operadores y gente de campo**
+> Hace poco con un cliente vimos que ciertos tipos de usuarios dejaban de usar una app de monitoreo en la semana tres. El problema no era la app sino la adopción: pasada la curiosidad inicial, no lograba entrar en la rutina real de ese usuario en el campo. Lo trabajamos desde la adopción: onboarding acompañado las primeras semanas y métricas de uso por etapa para detectar en qué momento cae el uso.
+
+**Pato · Integración · CTOs e ingeniería**
+> Vimos un modelo de AI de recomendaciones que funcionaba bien en pruebas y fallaba en producción. El problema estaba en los datos: los sensores reportaban con distinta frecuencia y nadie había definido qué hacer cuando un dato llegaba tarde. Lo trabajamos desde la arquitectura: definimos el contrato de datos entre sistemas antes de volver a tocar el modelo.
+
+**Estructura de relato:** vimos, el problema estaba en…, trabajamos desde….
+
+## 3. Canales, idioma, formato (slide 62)
+
+| Canal | Rol | Qué vive ahí | Regla |
+|---|---|---|---|
+| LinkedIn | Primario | Thought leadership y territorios de posicionamiento. Es donde está el público objetivo: agribusiness, CTOs y CEOs del agro. | La página de marca publica contenido propio pero también amplifica y repostea a las personas. |
+| Instagram | Secundario | Equipo, presencia en varios países, movimiento, cultura de trabajo. Reuniones, visitas a campo, eventos. | No es el canal de posicionamiento técnico. En LinkedIn va la reflexión larga sobre una reunión; acá va la foto de esa reunión con una frase. |
+| Sitio | El hub de la marca | Los tres territorios de posicionamiento, explicados. | Debe contener toda la narrativa de la marca. |
+
+**El idioma.** Elegimos el **inglés como idioma principal** del website, de LinkedIn e Instagram.
+
+## 4. Focos de contenido y producción (slide 63)
+
+### Los cinco focos
+
+1. **El Método Magoya.** Explicar cada etapa —Discovery, ideación, planificación, ejecución, medición y evolución— de forma sostenida. Es algo que Magoya nunca comunicó y que diferencia.
+2. **Los puntos de vista de marca.** Desarrollar y posicionar todos los puntos de vista de cada uno de los territorios de posicionamiento de la marca.
+3. **AI (desde el lado de quien construye).** No desde el lado de quien la usa: eso es IA en Campo. Qué herramientas funcionan, qué falla en los deployments y por qué.
+4. **Casos (sin logos).** Aprendizajes agregados: «en los últimos diecisiete deployments, estas son las tres cosas que más impactan en el uso sostenido».
+5. **Presencia en países.** Reuniones, viajes, visitas a campo. Construye la narrativa de consultora con presencia regional.
+
+### Cómo se produce
+
+1. Se define el tema y se le da a cada vocero un título o un statement sobre el que tenga opinión.
+2. El vocero devuelve una nota de voz, un borrador, o hace una entrevista de media hora.
+3. Se cura, se afina y se devuelve con preguntas de seguimiento, pidiendo un ejemplo concreto vivido.
+4. El vocero valida. El contenido queda en su voz, pero trabajado.
+
+### Cadencia
+
+- **Frecuencia de publicación:** mínimo 1 artículo por vocero por mes (objetivo: 2). Nadie puede pasar un mes sin publicar. Acumular piezas y programarlas.
+- **Mezcla de contenido:** 90% contenido experto, 10% humano.
+
+**Lo que no es de Magoya.** El contenido básico: "Los tres tips para ser más productivo en el campo", el tutorial de cómo usar una herramienta, el contenido educativo para el productor. Eso es IA en Campo. Magoya habla más arriba.
+
+
+
+# ===== VOCABULARIO (vocabulary.json) =====
+
+{
+ "meta": {
+  "brand": "Magoya",
+  "file": "vocabulary.json",
+  "description": "Vocabulario de marca de Magoya en JSON: palabras vetadas, frases prohibidas, regla AI, glosario por mercado, definición y tagline. Hermano verbal de tokens.json.",
+  "source": "Magoya Brand Playbook, octubre de 2026 (slides 4, 41, 48-52 y 57). Si algo difiere del playbook, prevalece el playbook.",
+  "related": ["lenguaje.html", ".ai/verbal/lenguaje.md", ".ai/checklist-verbal.md"],
+  "updated": "2026-10-19"
+ },
+ "definition": {
+  "es": "Magoya es una consultora hands-on en software y AI para empresas del agro.",
+  "en": "Magoya is a hands-on software and AI consulting firm for agribusiness.",
+  "rules": [
+   "\"Estrategia y ejecución\" no se usa para definir a Magoya: lo reemplaza hands-on.",
+   "No usamos la palabra \"tecnología\" para reemplazar a \"software y AI\"."
+  ],
+  "slide": 4
+ },
+ "one_liner": {
+  "es": "Consultora hands-on en software y AI para empresas del agro.",
+  "en": "Hands-on software and AI consulting firm for agribusiness.",
+  "slide": 4
+ },
+ "tagline": {
+  "text": "Software and AI for agribusiness",
+  "base_no_negociable": "Software + AI + agro / agribusiness.",
+  "se_puede_soltar": "\"Consultora\" y \"hands-on\": se dicen inmediatamente después, en la firma o en la presentación.",
+  "slides": [56, 57]
+ },
+ "vetoed": [
+  {"term": "agtech", "why": "No es como Magoya se describe. Suena a startup de producto, no a consultora.", "use_instead": ["consultora hands-on", "hands-on consultant"], "slide": 48},
+  {"term": "digital (solo)", "why": "Suena viejo, de otra época. Con contexto puede aparecer: «digital product development» es aceptable. Nunca como descriptor de marca ni como claim.", "use_instead": ["software", "software product", "software development"], "slide": 48},
+  {"term": "transformación digital", "why": "Concepto sobrevendido. La transformación digital ya ocurrió, en mejor o peor forma, en cualquier empresa: usarlo suena a que todavía no pasó.", "use_instead": ["Hablamos de resultados y de lo que se resuelve concretamente."], "slide": 48},
+  {"term": "custom", "why": "Es una palabra que dispara \"build from scratch\" en el comprador enterprise: suena caro, lento, riesgoso.", "use_instead": ["Si lo tenemos que usar, decimos \"diseñado para resolver el desafío\"."], "slide": 48},
+  {"term": "software factory", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
+  {"term": "dev shop", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
+  {"term": "agencia", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
+  {"term": "tecnología (sola)", "why": "Es un concepto demasiado amplio que en agro incluye maquinaria, biológicos e IoT.", "use_instead": ["software"], "slide": 48},
+  {"term": "ayudar", "why": "Implica una relación asimétrica, de quien sabe hacia quien no sabe. Magoya hace con el otro, no por el otro.", "use_instead": ["trabajar con", "colaborar", "hacer junto a", "acompañar"], "slide": 48},
+  {"term": "adopción (como sinónimo de uso)", "why": "Magoya define \"uso\" como el todo: adopción, uso frecuente y recurrencia.", "use_instead": ["uso", "y que la adopción quede como sub-etapa"], "slide": 49},
+  {"term": "DIPI", "why": "El nombre interno que se le daba a la metodología. Era sólo el Discovery dentro del método.", "use_instead": ["Método Magoya (para el proceso completo)", "Discovery (para la primera fase)"], "slide": 49},
+  {"term": "building blocks", "why": "Sugiere que Magoya reutiliza componentes de un cliente en otro, lo que abre un conflicto de propiedad intelectual.", "use_instead": [], "note": "Sin reemplazo definido.", "slide": 49}
+ ],
+ "not_vetoed": [
+  {"term": "soluciones · solutions", "rule": "Usar con criterio, y nunca combinado con adjetivos genéricos como \"integrales\" o \"innovadoras\".", "slide": 49},
+  {"term": "framework · metodología", "rule": "No vetados. \"Método\" es la palabra preferida, pero framework es aceptable en contextos técnicos.", "slide": 49},
+  {"term": "adopción, en su contexto correcto", "rule": "No vetada si se usa para nombrar específicamente el paso de adopción dentro del arco de uso.", "slide": 49}
+ ],
+ "ai_rule": {
+  "use": "AI",
+  "rule": "Usamos AI, en inglés, para nombrar la inteligencia artificial en general, en cualquier idioma del texto. Es la forma que la marca adoptó para actualizar su propuesta: hacemos \"Software y AI\".",
+  "do_not_write": "IA (como sigla de inteligencia artificial)",
+  "exception": {
+   "name": "IA en Campo",
+   "rule": "Es un nombre propio, el nombre del programa, y se escribe siempre así, en español, en cualquier idioma del texto que lo rodee.",
+   "never": "AI en Campo"
+  },
+  "slide": 50
+ },
+ "glossary": [
+  {"who": "El que produce", "es": "Productor", "en": "Farmer · Grower · Producer", "pt": "Produtor · Agricultor", "slide": 51},
+  {"who": "El que produce · cultivos de alto valor", "es": "Productor frutihortícola", "en": "Farmer · Grower · Producer", "pt": "Produtor · Horticultor", "slide": 51},
+  {"who": "El que produce · ganadería", "es": "Productor ganadero", "en": "Rancher", "pt": "Pecuarista", "slide": 51},
+  {"who": "El que produce · fruticultura", "es": "Productor frutihortícola", "en": "Orchard farmer", "pt": "Fruticultor", "slide": 51},
+  {"who": "El técnico", "es": "Asesor · agrónomo", "en": "Advisor · Agronomist", "pt": "Agrônomo · consultor agronômico · engenheiro agrônomo · engenheiro agrícola", "slide": 51},
+  {"who": "El canal", "es": "Distribuidor", "en": "Dealer", "pt": "Distribuidor", "note": "\"Distribuidor\" en Argentina es dealer en inglés, no \"distributor\".", "slide": 51},
+  {"who": "El canal · contacto con el productor", "es": "Distribuidor · comercio de insumos agrícolas", "en": "Retailer", "pt": "Revenda · revendedor · loja de insumos agrícolas", "note": "\"Retailer\" es el que tiene contacto con el productor, que es otra figura.", "slide": 51},
+  {"who": "El canal · alimentos", "es": "Mayorista", "en": "Wholesaler", "pt": "Atacadista", "slide": 51},
+  {"who": "El canal · maquinaria", "es": "Concesionario · concesionaria", "en": "Dealer · dealership", "pt": "Concessionária · revenda de máquinas", "slide": 51},
+  {"who": "El canal · cooperativas", "es": "Cooperativa", "en": "Cooperative", "pt": "Cooperativa", "slide": 51},
+  {"who": "Quien usa el producto", "es": "Usuario", "en": "User", "pt": "Usuário", "slide": 52},
+  {"who": "El equipo del productor", "es": "Operador · analista digital · gestor o gerente · productor o dueño", "en": "Operator · digital analyst · manager · farmer or owner", "pt": "Operador · analista digital · gestor ou gerente · produtor ou proprietário", "slide": 52},
+  {"who": "El equipo del cliente", "es": "Representante de ventas (RV) · soporte técnico · asesor", "en": "Commercial · tech support · advisor", "pt": "Representante técnico de vendas (RTV) · assistente técnico de vendas (AT) · assistência ou suporte técnico", "slide": 52},
+  {"who": "El sector", "es": "Agro · sector agropecuario · agronegocio", "en": "Agriculture · Ag", "pt": "Agro · agropecuário · agronegócio", "note": "\"Agribusiness\" nombra al cliente, no al sector: en inglés el sector es agriculture o ag. En Brasil \"agricultor\" convive con \"produtor\" para el que produce.", "slide": 52},
+  {"who": "El cliente · insumos", "es": "Empresa de insumos para el agro", "en": "Ag input company", "pt": "Empresa de insumos agrícolas", "slide": 52},
+  {"who": "El cliente · maquinaria", "es": "Empresa de maquinaria", "en": "OEM company", "pt": "Empresa de máquinas ou maquinário", "slide": 52},
+  {"who": "El cliente · semillas", "es": "Semillera", "en": "Seed company", "pt": "Empresa de sementes", "slide": 52},
+  {"who": "Tipos de cultivo", "es": "Extensivos · intensivos (la división de primer nivel)", "en": "Row crops (extensivos) · specialty crops o fresh crops (intensivos: tomate, pimiento, pepino, almendra, cítricos)", "pt": null, "note": "El inglés no usa la división extensivos/intensivos. El playbook no da el término en portugués.", "slide": 52}
+ ],
+ "forbidden_phrases": [
+  {"phrase": "Lo que tenés no sirve", "why": "Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe.", "slide": 41},
+  {"phrase": "Hay que hacerlo todo de nuevo", "why": "Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe.", "slide": 41},
+  {"phrase": "Sólo nosotros podemos resolverlo", "why": "Decir eso es soberbia. Magoya no compite con altanería ni destruyendo a los demás.", "slide": 41},
+  {"phrase": "Esto se hace así", "why": "No creemos en las verdades únicas, sin contexto. La marca no tiene fórmulas o recetas estándar.", "slide": 41},
+  {"phrase": "Transformamos", "why": "Si bien nuestro propósito es ambicioso, usamos la palabra \"transformar\" de manera interna, no queremos sobreprometer impacto. Además, la palabra transformación arrastra peso del concepto de \"transformación digital\" que está quemado.", "slide": 41},
+  {"phrase": "Esta tecnología es fácil de aplicar", "why": "Es el mito del mago, nuestro archienemigo central. Nada de soluciones mágicas porque achican el trabajo propio y suenan a quien no conoce el agro.", "slide": 41},
+  {"phrase": "Estos problemas son fáciles de resolver", "why": "Es el mito del mago, nuestro archienemigo central. Nada de soluciones mágicas porque achican el trabajo propio y suenan a quien no conoce el agro.", "slide": 41},
+  {"phrase": "El problema es del cliente o del usuario", "why": "Magoya no culpa a otros y propone la solución. Nunca señala culpables.", "slide": 41}
+ ],
+ "forbidden_phrases_note": "La slide 41 las presenta como \"siete frases\"; textualmente enumera estos ocho enunciados en seis filas. Se evitan todos.",
+ "translations": [
+  {"es": "Responsable (rasgo de personalidad)", "en": "Accountable", "not": "responsible", "why": "Accountable es hacerse cargo del resultado.", "slide": 30}
+ ]
+}
 
 
 
@@ -329,9 +1126,10 @@ Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.a
   "en_plantillas": "el límite real por slot está en ai/templates/index.json (max_caracteres_aprox y max_lineas) — si el texto no entra, se acorta el TEXTO, nunca la fuente",
   "kickers": "MAYÚSCULAS, tracking +0.12em",
   "labels_de_boton": "sentence case",
-  "nomenclatura_ia": "en español SIEMPRE 'IA', nunca 'AI': 'IA en campo', 'Integrar con IA', 'capacidades de IA', 'Datos & IA'. 'AI' solo se escribe en copy en inglés (decks US) y en nombres propios ajenos ('Data & AI', 'AI Studio'). Los nombres de archivo y las URLs del sistema siguen en 'ai-' por compatibilidad (ai-en-campo.html, /ai/) — eso NO se copia al texto de la pieza."
+  "nomenclatura_ia": "SIEMPRE 'AI' para nombrar la inteligencia artificial, en cualquier idioma del texto ('Software y AI', 'capacidades de AI', 'Integrar con AI'). Única excepción: el nombre propio del programa 'IA en Campo', que se escribe siempre así, en cualquier idioma, y nunca 'AI en Campo'. Fuente: Magoya Brand Playbook, oct 2026, slide 50. Los nombres de archivo y las URLs del sistema siguen en 'ai-' (ai-en-campo.html, /ai/): eso NO se copia al texto de la pieza.",
+  "reglas_verbales": "el resto de las reglas de texto (definición, vocabulario vetado, frases prohibidas, territorios 50/30/20, diales por país, glosario ES · EN · PT) está en vocabulary.json y .ai/verbal/ — se valida con .ai/checklist-verbal.md"
  },
- "verificacion": "los 17 chequeos de .ai/checklist.md — este archivo agrega los números; el checklist dice cómo auditarlos",
+ "verificacion": "los 17 chequeos de .ai/checklist.md y, si la pieza tiene texto, .ai/checklist-verbal.md — este archivo agrega los números; los checklists dicen cómo auditarlos",
  "pendiente_de_definir": [
   "mínimos tipográficos para web/app (px por nivel): el mínimo legible de cada nivel. OJO: la escala SÍ existe — tokens.json tiene typography.scale en rem (xs→7xl) para web y slideScale en pt para slides. Lo que falta es el piso en px, no la escala",
   "clearspace numérico de los avatares (hoy solo el wordmark lo tiene)",
@@ -482,7 +1280,7 @@ Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.a
    "usa": "K1"
   },
   {
-   "tenes": "capacidades de IA con herramientas concretas",
+   "tenes": "capacidades de AI con herramientas concretas",
    "usa": "K2"
   },
   {
@@ -541,7 +1339,7 @@ Plantillas HTML oficiales de los 41 módulos, generadas del exportador real. Se 
 - J2 · Quote sobre foto B&N + scrim · beat: evidencia · lienzo: foto · peso: visual -> https://brand.magoya.com/ai/templates/J2.html · slots: t1(numero_de_pagina,max 66ch), t2(titulo,max 274ch), t3(subtitulo,max 113ch), t4(caption,max 131ch)
 - J3 · Equipo — retratos B&N + rol · beat: propuesta · lienzo: blanco · peso: visual -> https://brand.magoya.com/ai/templates/J3.html · slots: t1(numero_de_pagina,max 66ch), t2(display,max 50ch), t3(caption,max 216ch), t4(caption,max 81ch), t5(caption,max 99ch), t6(caption,max 81ch)
 - K1 · Stack tecnológico por capa (logos reales en gris) · beat: evidencia · lienzo: sage · peso: visual -> https://brand.magoya.com/ai/templates/K1.html · slots: t1(numero_de_pagina,max 66ch), t2(display,max 55ch), t3(caption,max 153ch), t4(kicker,max 105ch), t5(kicker,max 105ch), t6(kicker,max 105ch)
-- K2 · Capacidades de IA (logos de modelos + qué hacemos con ellos) · beat: propuesta · lienzo: blanco · peso: visual -> https://brand.magoya.com/ai/templates/K2.html · slots: t1(numero_de_pagina,max 66ch), t2(display,max 55ch), t3(subtitulo,max 100ch), t4(caption,max 333ch), t5(subtitulo,max 100ch), t6(caption,max 333ch)
+- K2 · Capacidades de AI (logos de modelos + qué hacemos con ellos) · beat: propuesta · lienzo: blanco · peso: visual -> https://brand.magoya.com/ai/templates/K2.html · slots: t1(numero_de_pagina,max 66ch), t2(display,max 55ch), t3(subtitulo,max 100ch), t4(caption,max 333ch), t5(subtitulo,max 100ch), t6(caption,max 333ch)
 - L1 · Logo wall de clientes (12 logos, grilla pareja) · beat: evidencia · lienzo: blanco · peso: visual -> https://brand.magoya.com/ai/templates/L1.html · slots: t1(numero_de_pagina,max 66ch), t2(display,max 78ch), t3(titulo,max 15ch), t4(caption,max 90ch)
 - M1 · Portada — aérea de campo + scrim verde · beat: apertura · lienzo: foto · peso: visual -> https://brand.magoya.com/ai/templates/M1.html · slots: t1(caption,max 167ch), t2(display,max 82ch), t3(subtitulo,max 189ch)
 - M2 · Portada alternativa — verde profundo + paño al corte · beat: apertura · lienzo: verde-profundo · peso: visual -> https://brand.magoya.com/ai/templates/M2.html · slots: t1(caption,max 167ch), t2(display,max 79ch), t3(subtitulo,max 241ch)
@@ -617,50 +1415,87 @@ Plantillas HTML oficiales de los 41 módulos, generadas del exportador real. Se 
 # ===== PRECEDENCIA (quien gana cuando dos reglas chocan) =====
 
 {
- "que_es": "Ley de precedencia: qué documento gana cuando dos reglas oficiales de este sistema se contradicen. Existe para que ninguna IA ni ninguna persona tenga que elegir. Si encontrás una contradicción, aplicá esta ley, entregá la pieza, y reportá la contradicción — pero no la resuelvas por criterio propio.",
- "version": "1.0 · 2026-08-19",
- "por_que_existe": "Una auditoría a ciegas encontró 16 contradicciones entre documentos oficiales del sistema: reglas que ninguna plantilla puede cumplir, instrucciones que prometen control que la geometría no permite, y números distintos en dos archivos. Mientras existan, la IA tiene que decidir — y decidir es exactamente lo que este sistema promete que nadie tenga que hacer.",
-
+ "que_es": "Ley de precedencia: qué documento gana cuando dos reglas oficiales de este sistema se contradicen. Existe para que ninguna AI ni ninguna persona tenga que elegir. Si encontrás una contradicción, aplicá esta ley, entregá la pieza, y reportá la contradicción — pero no la resuelvas por criterio propio.",
+ "version": "1.1 · 2026-10-19",
+ "por_que_existe": "Una auditoría a ciegas encontró 16 contradicciones entre documentos oficiales del sistema: reglas que ninguna plantilla puede cumplir, instrucciones que prometen control que la geometría no permite, y números distintos en dos archivos. Mientras existan, la AI tiene que decidir — y decidir es exactamente lo que este sistema promete que nadie tenga que hacer.",
+ "capas": {
+  "verbal_A_D": "A Estrategia, B Voz, C Lenguaje y D Aplicación salen del Magoya Brand Playbook (octubre de 2026). El playbook prevalece sobre cualquier archivo del sistema hasta que su contenido esté publicado en el sitio (estrategia.html, voz.html, lenguaje.html, aplicacion.html) y en .ai/verbal/, vocabulary.json y .ai/checklist-verbal.md; si un archivo difiere del playbook, gana el playbook y el archivo se corrige.",
+  "visual_E_F": "E Identidad visual y F Piezas y plantillas se mantienen de la v1.2 hasta su revisión. Para la capa visual rige el orden de abajo.",
+  "G_H": "G IA en Campo tiene manual propio (ai-en-campo.html). H Integrar con AI (ai.html) no es fuente: deriva de las capas anteriores.",
+  "regla_de_texto": "En el texto de una pieza, las reglas verbales (definición, AI, vocabulario vetado, frases prohibidas, territorios) vienen del playbook y se validan con .ai/checklist-verbal.md, aunque la plantilla traiga otro texto de ejemplo: el texto de las plantillas es EJEMPLO, no regla."
+ },
  "orden": [
-  {"n": 1, "gana": "la plantilla oficial de ai/templates/", "por_que": "es una pieza real que ya funcionó. La geometría, los colores y la tipografía que trae son la marca, no una sugerencia.", "consecuencia": "si un chequeo o un constraint contradice a una plantilla, el que está mal es el chequeo. Reportalo, no adaptes la plantilla."},
-  {"n": 2, "gana": "ai/facts.json", "por_que": "es la única fuente de datos reales de la empresa. Nada la sobreescribe, ni la CEO de segunda mano.", "consecuencia": "un dato que no está acá no se publica como real, aunque venga en el material que te pasaron. Ver contrato_de_entrega."},
-  {"n": 3, "gana": "tokens.json", "por_que": "son los valores exactos.", "consecuencia": "ningún hex, radio o peso suelto que no salga de acá."},
-  {"n": 4, "gana": "ai/constraints.json", "por_que": "son los mínimos y máximos que no requieren criterio.", "consecuencia": "si contradice a una plantilla, gana la plantilla (regla 1) y el constraint se corrige."},
-  {"n": 5, "gana": "BRAND.md", "por_que": "es la doctrina: explica el por qué.", "consecuencia": "cuando la doctrina y un número chocan, el número gana para ejecutar y la doctrina gana para decidir si la pieza tiene sentido."},
-  {"n": 6, "gana": ".ai/checklist.md", "por_que": "es el gate de salida, no la fuente.", "consecuencia": "un chequeo que ninguna plantilla oficial pasa es un chequeo mal escrito."},
-  {"n": 7, "gana": "el campo cuando_usarlo de ai/templates/index.json", "por_que": "es orientación editorial, lo último en la cadena.", "consecuencia": "si promete control sobre un elemento que la plantilla no deja mover (por ejemplo 'el destacado va en lima' en un módulo sin lima elegible), la instrucción está mal. Hacé lo que permite la plantilla y reportalo."}
+  {
+   "n": 1,
+   "gana": "la plantilla oficial de ai/templates/",
+   "por_que": "es una pieza real que ya funcionó. La geometría, los colores y la tipografía que trae son la marca, no una sugerencia.",
+   "consecuencia": "si un chequeo o un constraint contradice a una plantilla, el que está mal es el chequeo. Reportalo, no adaptes la plantilla."
+  },
+  {
+   "n": 2,
+   "gana": "ai/facts.json",
+   "por_que": "es la única fuente de datos reales de la empresa. Nada la sobreescribe, ni la CEO de segunda mano.",
+   "consecuencia": "un dato que no está acá no se publica como real, aunque venga en el material que te pasaron. Ver contrato_de_entrega."
+  },
+  {
+   "n": 3,
+   "gana": "tokens.json",
+   "por_que": "son los valores exactos.",
+   "consecuencia": "ningún hex, radio o peso suelto que no salga de acá."
+  },
+  {
+   "n": 4,
+   "gana": "ai/constraints.json",
+   "por_que": "son los mínimos y máximos que no requieren criterio.",
+   "consecuencia": "si contradice a una plantilla, gana la plantilla (regla 1) y el constraint se corrige."
+  },
+  {
+   "n": 5,
+   "gana": "BRAND.md",
+   "por_que": "es la doctrina: explica el por qué.",
+   "consecuencia": "cuando la doctrina y un número chocan, el número gana para ejecutar y la doctrina gana para decidir si la pieza tiene sentido."
+  },
+  {
+   "n": 6,
+   "gana": ".ai/checklist.md y .ai/checklist-verbal.md",
+   "por_que": "son el gate de salida (visual y de texto), no la fuente.",
+   "consecuencia": "un chequeo visual que ninguna plantilla oficial pasa es un chequeo mal escrito. Un chequeo verbal que contradice al playbook también."
+  },
+  {
+   "n": 7,
+   "gana": "el campo cuando_usarlo de ai/templates/index.json",
+   "por_que": "es orientación editorial, lo último en la cadena.",
+   "consecuencia": "si promete control sobre un elemento que la plantilla no deja mover (por ejemplo 'el destacado va en lima' en un módulo sin lima elegible), la instrucción está mal. Hacé lo que permite la plantilla y reportalo."
+  }
  ],
-
  "contrato_de_entrega": {
-  "que_resuelve": "Declarar un hueco no es lo mismo que negarse a entregarlo. En la auditoría, una IA marcó cinco cifras como no verificables en su reporte y las dejó escritas en la slide igual. El reporte estaba impecable y la pieza salía con el dato prohibido.",
+  "que_resuelve": "Declarar un hueco no es lo mismo que negarse a entregarlo. En la auditoría, una AI marcó cinco cifras como no verificables en su reporte y las dejó escritas en la slide igual. El reporte estaba impecable y la pieza salía con el dato prohibido.",
   "reglas": [
    "Un dato que no está en facts.json NO se escribe en la pieza. Va como [PENDIENTE] visible, nunca como el número que te pasaron.",
    "Si el material de origen trae un dato que CONTRADICE a facts.json, la slide no sale: se entrega con el slot en [PENDIENTE] y la contradicción explícita en el pedido a humanos.",
    "Toda entrega lleva un bloque 'PEDIDO A HUMANOS' con una línea por hueco: qué dato falta, a quién se le pide, y qué slide se desbloquea con eso.",
    "Si la pieza tiene aunque sea un [PENDIENTE], se entrega marcada como BORRADOR. Una pieza sin ningún hueco es la única que puede salir como final.",
-  "El bloque PEDIDO A HUMANOS se marca con el atributo data-pedido-a-humanos en su contenedor, como hacen los tres decks de ai/decks/. validar.py --pieza usa esa marca para no contar como cifra afirmada lo que el bloque escribe SOBRE la pieza: sin la marca, tu propia declaración de huecos te cuenta en contra."
+   "El bloque PEDIDO A HUMANOS se marca con el atributo data-pedido-a-humanos en su contenedor, como hacen los tres decks de ai/decks/. validar.py --pieza usa esa marca para no contar como cifra afirmada lo que el bloque escribe SOBRE la pieza: sin la marca, tu propia declaración de huecos te cuenta en contra."
   ],
   "verificacion": "python3 ai/validar.py --pieza <archivo.html> corre sobre el HTML entregado, no sobre el repo — pero necesitás el script, así que solo se puede si tenés el repo clonado. Si llegaste por URL y no lo tenés, el contrato igual te obliga: [PENDIENTE], BORRADOR y pedido a humanos se cumplen a mano."
  },
-
  "como_reportar_una_contradiccion": "Si tenés el repo: anotala en .ai/VALIDACION-IA.md bajo 'Necesita tu decisión', con los dos archivos que se contradicen y qué dice cada uno; el agente semanal las junta y las lleva a una persona. Si llegaste por URL y no podés escribir en el repo —que es el caso normal— la contradicción va en el bloque PEDIDO A HUMANOS de la pieza que estás entregando, con los dos archivos y la cita de cada lado: ese bloque ES el canal, y la persona que recibe la pieza la lleva al ledger. Lo que no se hace nunca es resolverla por criterio propio ni dejarla sin registrar porque no tenías dónde escribirla."
 }
-
 
 
 # ===== METODO DE TRABAJO (obligatorio) =====
 
 # Método de trabajo — obligatorio para cualquier pieza con contenido
 
-**Versión 3.0 · 2026-08-19** · Parte del flujo de todas las entradas por IA. Cumplir la marca al pie
+**Versión 3.1 · 2026-10-19** · Parte del flujo de todas las entradas por AI. Cumplir la marca al pie
 de la letra es la mitad del trabajo; la otra mitad es que la historia esté bien contada. Una pieza
 on-brand con la historia mal contada es una pieza fallida.
 
-> **Lo que cambió en la v2.0 y por qué.** Una auditoría a ciegas (dos IA que solo recibieron una URL
+> **Lo que cambió en la v2.0 y por qué.** Una auditoría a ciegas (dos AI que solo recibieron una URL
 > pública) mostró tres cosas. Una: la v1.3 pedía como **insumo** que escribieras "LA idea", y nadie
 > llega con eso — el material real es un transcript, un doc de la CEO o un deck viejo. Dos: el agente
 > de copy "reescribía cada texto", y el copy entra aprobado y bloqueado: reescribirlo es trabajo que
-> después hay que revertir. Tres: declarar un hueco no es lo mismo que no entregarlo — una IA marcó
+> después hay que revertir. Tres: declarar un hueco no es lo mismo que no entregarlo — una AI marcó
 > cinco cifras como no verificables en su reporte y las dejó escritas en la slide igual.
 
 ## Fase 0 — Del material crudo a la narrativa
@@ -730,7 +1565,8 @@ pasadas actuando cada rol por separado.
    mal, no el cuerpo.
 2. **Agente de copy — marca, no reescribe.** El texto aprobado no se toca. Su trabajo es señalar:
    qué afirmación viaja sin cifra ni plazo, qué frase es relleno, qué dato no tiene fuente, y qué
-   contradice algo ya decidido. Devuelve una lista de observaciones, no una versión nueva. Si el copy
+   contradice algo ya decidido — incluida la capa verbal: `.ai/checklist-verbal.md` (definición, AI, vocabulario vetado,
+   frases prohibidas, territorios, diales). Devuelve una lista de observaciones, no una versión nueva. Si el copy
    es materia prima y sí hay que escribirlo, lo dice explícito antes de hacerlo.
 3. **Agente de diseño.** Verifica plantilla oficial sin cambios de geometría, slots dentro de
    `max_caracteres`, y `ai/constraints.json`. **Cuando dos reglas oficiales se contradicen, aplicá
@@ -741,7 +1577,7 @@ pasadas actuando cada rol por separado.
 
 ## Fase 3 — Criterio de entrega
 
-**Técnico.** Los 17 chequeos de `.ai/checklist.md`, más:
+**Técnico.** Los 17 chequeos de `.ai/checklist.md`, los de `.ai/checklist-verbal.md` para el texto, más:
 
 ```
 python3 ai/validar.py --pieza <tu-archivo.html>
@@ -776,8 +1612,9 @@ selector, qué agregaste que no venía en el material, y qué encontró el crít
 
 ## Changelog
 
+- **3.1** (2026-10-19): el agente de copy y el criterio de entrega suman el checklist verbal del Magoya Brand Playbook (octubre 2026).
 - **3.0** (2026-08-19): el eje pasa de textura a **rol narrativo**. El ghost deck (títulos solos, antes de elegir módulos) es un gate de Fase 0. Las cinco reglas de textura se reemplazan por cuatro de argumento, y la textura queda como diagnóstico: era un gate insatisfacible — 0 de 362.880 órdenes del deck de producto pasaban, porque el catálogo no tiene un módulo visual que cargue un método, un journey ni un caso. Se agrega el chequeo de adorno, que es la falla que hizo abandonar al primer usuario y que nada medía. Fase 1b se elimina: era una fase de más.
-- **2.1** (2026-08-19): Fase 1b — componer la secuencia, con el campo `perfil` de cada módulo (lienzo y peso, derivados de la plantilla) y la regla anti-adorno: si el deck queda soso se cambia de módulo, no se decora. Sale de un feedback real: la IA eligió módulos de texto con lienzo blanco y sage uno atrás del otro, cumplió todas las reglas, y cuando le señalaron que estaba soso agregó carátulas decorativas.
+- **2.1** (2026-08-19): Fase 1b — componer la secuencia, con el campo `perfil` de cada módulo (lienzo y peso, derivados de la plantilla) y la regla anti-adorno: si el deck queda soso se cambia de módulo, no se decora. Sale de un feedback real: la AI eligió módulos de texto con lienzo blanco y sage uno atrás del otro, cumplió todas las reglas, y cuando le señalaron que estaba soso agregó carátulas decorativas.
 - **2.0** (2026-08-19): Fase 0 nueva (del material crudo a la narrativa, con registro de lo que
   agregás y búsqueda de contradicciones antes de diseñar) · el agente de copy marca en vez de
   reescribir · agente de títulos con umbral medido (17% → 80%) · contrato de entrega y
@@ -792,9 +1629,9 @@ selector, qué agregaste que no venía en el material, y qué encontró el crít
 
 # ===== CHECKLIST DE ENTREGA =====
 
-# Checklist de validación — piezas, código o copy generados por IA
+# Checklist de validación — piezas, código o copy generados por AI
 
-Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar. Si alguno falla, corregí y volvé a correr la lista completa.
+Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar. Si alguno falla, corregí y volvé a correr la lista completa. **Si la pieza tiene texto, corré también `.ai/checklist-verbal.md`** (capa verbal del Brand Playbook, oct 2026).
 
 > **Quién manda cuando dos reglas se contradicen.** La plantilla oficial gana: es una pieza real que ya funcionó. Si un chequeo de esta lista contradice a una plantilla de `ai/templates/`, el que está mal es el chequeo — reportalo, no adaptes la plantilla. El orden completo está en `ai/precedencia.json`.
 
@@ -815,17 +1652,55 @@ Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar
 | 13 | **Botón vs. chip, y assets reales** | Revisá radios y logos | Un botón es pill o un chip tiene fondo sólido (botón = rect radio 10px, chip = pill outline), o hay logos de clientes inventados/placeholder, o hay un resaltador sólido detrás de texto |
 | 14 | **Chips: solo texto, sin punto** | Mirá cada chip/pill de la pieza | Un chip lleva un punto/bullet (•) delante del texto, un ícono adentro, o texto en sentence case — el chip es SOLO texto uppercase; la pill ya delimita, el punto es ruido |
 | 15 | **Espaciado en escala y un eje** | Extraé los margin/padding/gap y compará contra la escala base-4 de `tokens.json`; mirá el eje de alineación | Hay valores fuera de la escala (5, 10, 14, 18…), bloques a menos de 24 de aire entre sí, más de un eje de alineación en una pieza **escrita a mano** (una plantilla del catálogo puede traer dos columnas: M3 las trae, y ahí manda la plantilla), filas cuyos elementos no comparten centro vertical, o paddings con 4 valores distintos |
-| 16 | **IA, no AI** | Buscá `AI` como palabra suelta en todo el copy | Una pieza en español escribe "AI" (AI en campo, Integrar con AI, capacidades de AI) en vez de **IA**. Solo se admite "AI" en copy en inglés y en nombres propios ajenos ("Data & AI", "AI Studio") |
+| 16 | **AI, en cualquier idioma** | Buscá la sigla de inteligencia artificial en todo el copy. La regla verbal completa está en `.ai/checklist-verbal.md` (chequeo 2) | El copy no escribe **AI** para nombrar la inteligencia artificial, en cualquier idioma del texto. Única excepción: el nombre propio **IA en Campo**, que se escribe siempre así (nunca "AI en Campo"). Regla del Brand Playbook, oct 2026, slide 50 |
 | 17 | **Wordmark: variante, tamaño, posición y letterforms** | Comparalo contra la plantilla: variante correcta (interiores **black**, portada y cierre **cream**), 211px de ancho y x=7.5% **del ancho** del lienzo (144px sobre 1920) siempre. La **y** la declara la plantilla y NO es una sola: interiores y cierre a y=3.2% (61px), **portada M1 a y=7%** (134px). Las dos son del ancho, no del alto. Y comparalo contra el asset canónico de `assets/`, no contra el nombre del archivo | La variante no corresponde al lienzo (deep en un interior), el tamaño no es 211px, la posición se midió contra el alto en vez del ancho, o las letterforms no son las del asset canónico. **Una pieza real pasó los 16 chequeos con el wordmark en variante, tamaño y posición equivocados: es el único elemento que el manual llama "LA firma de la marca" y era el único sin auditoría** |
 ## Extras según el formato
 
 - **Slides**: margen interior 7% del ancho, escala 126/84/56/42pt sobre 1920px, como máximo un golpe de lima por slide (ver chequeo 5), y el lienzo que traiga la plantilla: blanco, sage `#EEF2EC`, verde profundo o foto.
 - **Redes**: display y cifras al ~70% del ancho. Story 1080×1920 con zona segura de 96px arriba y abajo. Feed 1080×1080.
 - **Logo**: mínimo 90px en pantalla / 24mm impreso; por debajo va el avatar "m". Clearspace = altura de la letra "m". Nunca estirado, rotado, sombreado ni en lima.
-- **Copy**: sin superlativos ni frases grandilocuentes; labels de botón en sentence case; kickers en MAYÚSCULAS con tracking +0.12em.
+- **Copy**: labels de botón en sentence case; kickers en MAYÚSCULAS con tracking +0.12em. Todo lo demás del texto (definición, vetos, frases prohibidas, AI, territorios, diales) se valida con `.ai/checklist-verbal.md`.
 - **Merch**: siempre foto o render real del producto, nunca ilustración ni esquema vectorial. Sin lima en textil.
 - **Fotos de personas**: siempre B&N con un acento verde o lima.
 
-## Si la pieza es de "IA en campo"
+## Si la pieza es de "IA en Campo"
 
-Es una **marca anexa con manual propio** (`ai-en-campo.html`), no el core. Ahí sí valen el lienzo verde digital `#00DE68` pleno, la placa negra de dato clave y los doodles del Studio (2–4 por pieza, ±5–15°). Nada de eso es válido en una pieza de Magoya core, y nada del core aplica tal cual a "IA en campo".
+Es una **marca de programa presentada por Magoya, con manual propio** (`ai-en-campo.html`), no el core. Ahí sí valen el lienzo verde digital `#00DE68` pleno, la placa negra de dato clave y los doodles del Studio (2–4 por pieza, ±5–15°). Nada de eso es válido en una pieza de Magoya core, y nada del core aplica tal cual a IA en Campo.
+
+
+
+# ===== CHECKLIST VERBAL (texto) =====
+
+> Fuente: Magoya Brand Playbook (octubre de 2026). Cada chequeo cita la slide de la que sale. Si algo de este archivo difiere del playbook, prevalece el playbook.
+
+# Checklist verbal — cualquier texto de Magoya antes de publicar
+
+Lo corre un modelo o una persona sobre cualquier texto de Magoya: post, deck, web, propuesta, mail, copy de una pieza. Complementa a `.ai/checklist.md` (chequeos visuales): una pieza con texto pasa los dos. Todos tienen que dar **sí**. Si alguno falla, corregí nombrando la regla y volvé a correr la lista completa.
+
+Datos de apoyo: `vocabulary.json` (vetos, frases prohibidas, glosario), `.ai/verbal/estrategia.md`, `.ai/verbal/voz.md`, `.ai/verbal/lenguaje.md`, `.ai/verbal/aplicacion.md`.
+
+| # | Chequeo | Cómo se verifica | Falla si… |
+|---|---|---|---|
+| 1 | **Definición: consultora hands-on en software y AI para empresas del agro** (4, 57) | Buscá cómo se presenta Magoya. Compará contra `definition` y `one_liner` de `vocabulary.json`. El tagline es **Software and AI for agribusiness** | Magoya se define con otra fórmula: "estrategia y ejecución" en vez de hands-on, "tecnología" en vez de "software y AI", o un descriptor vetado (chequeo 3). O el tagline aparece con otra redacción |
+| 2 | **AI, nunca la sigla en español** (50) | Buscá la palabra suelta `IA` en todo el texto, en cualquier idioma | Aparece `IA` para nombrar la inteligencia artificial. La única excepción es el nombre propio **IA en Campo**, que se escribe siempre así, en cualquier idioma. Falla también si aparece "AI en Campo" o el nombre con minúscula |
+| 3 | **Cero palabras vetadas** (48, 49) | Buscá cada `term` de `vetoed` en `vocabulary.json`: agtech, digital (solo), transformación digital, custom, software factory, dev shop, agencia, tecnología (sola), ayudar, adopción como sinónimo de uso, DIPI, building blocks | Aparece alguno. Se reemplaza por su `use_instead`. No fallan: "soluciones" sin adjetivo genérico, "framework" en contexto técnico y "adopción" como paso dentro del arco de uso (`not_vetoed`) |
+| 4 | **Ninguna frase prohibida** (41) | Buscá los enunciados de `forbidden_phrases` y sus paráfrasis: "lo que tenés no sirve", "hay que hacerlo todo de nuevo", "sólo nosotros podemos resolverlo", "esto se hace así", "transformamos", "esta tecnología es fácil de aplicar", "estos problemas son fáciles de resolver", "el problema es del cliente o del usuario" | El texto dice alguna, o dice lo mismo con otras palabras. La slide las llama "siete frases"; enumera ocho enunciados y se chequean todos |
+| 5 | **"Uso" antes que "adopción"** (13, 31, 49) | Mirá cada aparición de adopción/adoption | "Adopción" está usada como sinónimo de uso, o como meta final. La adopción es el momento en que alguien pasa de no usuario a usuario: una parte del uso, no su sinónimo |
+| 6 | **Peso de los territorios 50/30/20** (37, 60) | En un conjunto de mensajes (un deck, una campaña, el calendario de un mes), contá qué territorio carga cada mensaje: Uso, Integración, Hands-on | La mezcla no se acerca a Uso 50% · Integración 30% · Hands-on 20%, o Uso no es el territorio prioritario. Para un vocero: ~70% su territorio primario y ~30% los otros dos |
+| 7 | **Pruebas, no adjetivos** (31, 36, 53) | Marcá cada afirmación de tamaño, calidad o alcance ("global", "líder", "innovadora", "integral") y buscá su respaldo | Una afirmación viaja sin prueba: clientes, años de relación, geografías, casos en producción, un dato. "Mostrarnos grandes se cae si se apoya en adjetivos". Las cifras salen de `ai/facts.json`; lo que no esté ahí va como `[PENDIENTE]` |
+| 8 | **Diales según el país** (44, 45) | Identificá el mercado del texto y compará contra los cinco diales: Provocación, Densidad técnica, Cercanía, Venta explícita, Marca de origen | El registro no corresponde: default global 4·2·2·4·1; AR 4·2·4·4·2; BR 3·2·2·3·1; US 3·2·2·4·1. El default es Magoya global y el ajuste por país es la excepción. La personalidad no cambia por mercado: si el texto suena a otra marca en otro país, falla |
+| 9 | **Énfasis según la audiencia** (19, 46) | Identificá quién lee: negocio y C-suite, o técnico | Para negocio y C-suite no pesan estratega y curiosa ni va adelante la visión estratégica (si sólo se muestra el build, se desconecta). Para un público técnico no pesan responsable y franca ni hay registro colaborativo (si se entra muy estratégico, suena a consultor genérico). Con el CTO funciona mejor hands-on |
+| 10 | **Inglés como idioma principal en web, LinkedIn e Instagram** (62) | Mirá el canal de destino y el idioma | Una pieza para el website, LinkedIn o Instagram de Magoya sale en otro idioma como principal |
+| 11 | **Responsable → Accountable** (30) | En textos en inglés, buscá cómo se traduce el rasgo "responsable" | Aparece "responsible" para el rasgo. Va **accountable**: hacerse cargo del resultado |
+| 12 | **Distribuidor → dealer** (51) | En textos en inglés, buscá "distributor" | "Distribuidor" (Argentina) se tradujo "distributor". Va **dealer**. "Retailer" es otra figura: el que tiene contacto con el productor |
+| 13 | **Agribusiness es el cliente, no el sector** (52) | En inglés, mirá cómo se nombra al sector | "Agribusiness" nombra al sector. En inglés el sector es **agriculture** o **ag**; agribusiness son las empresas del agro, el cliente |
+| 14 | **Los cuatro rasgos, en orden** (30, 38) | Leé el texto contra Estratega › Responsable › Curiosa › Franca | La franqueza llega sin la ecualización del rasgo responsable ("este está totalmente equivocado" en vez de "en mi opinión"), o el texto busca impresionar en vez de tomar mejores decisiones juntos |
+| 15 | **El usuario nunca es el culpable** (14, 30, 40) | Buscá dónde el texto atribuye un problema de uso | El problema de uso se atribuye al usuario. Cuando el uso falla, la causa se busca en el onboarding, el diseño o la propuesta de valor |
+| 16 | **Lo de IA en Campo queda en IA en Campo** (59, 63) | Mirá si una pieza de Magoya trae contenido básico para el productor | Una pieza de la cuenta de Magoya publica contenido educativo básico, tutoriales o tips para el productor: eso es IA en Campo. Y al revés: IA en Campo no habla desde la cuenta de Magoya como contenido propio |
+
+## Glosario rápido de chequeo
+
+- Vetos, reemplazos y frases prohibidas: `vocabulary.json` → `vetoed`, `not_vetoed`, `forbidden_phrases`.
+- Términos por mercado (ES · EN · PT): `vocabulary.json` → `glossary`.
+- Diales y énfasis por audiencia: `.ai/verbal/voz.md`, secciones 9 y 11.
+- Territorios y statements: `.ai/verbal/estrategia.md`, sección 8.

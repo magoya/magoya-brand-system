@@ -23,7 +23,7 @@ Nunca entregar los textos/cifras de ejemplo como contenido real. Los datos
 aprobados de la compania viven en https://brand.magoya.com/ai/facts.json —
 si el dato que necesitas no esta ahi, pedilo al usuario; no lo inventes.
 
-REGLAS PARA LA IA (no negociables):
+REGLAS PARA LA AI (no negociables):
 1. NO tocar posiciones, tamaños, colores ni tipografías. La geometría ES la marca.
 2. Solo reemplazar el TEXTO INTERNO de los elementos con data-slot, respetando
    max_caracteres_aprox y max_lineas de ai/templates/index.json. Si tu texto no

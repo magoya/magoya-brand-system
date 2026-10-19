@@ -17,7 +17,7 @@ Este comentario HTML es para vos; podés borrarlo o dejarlo, Copilot lo ignora.
 
 # Magoya — Design System
 
-Magoya es un estudio de estrategia y desarrollo de producto digital para agribusiness (AgTech). Toda UI, pieza y copy de este repo sigue el brand system: https://brand.magoya.com/ (`BRAND.md` + `tokens.json` + `tokens.css`).
+Magoya es una consultora hands-on en software y AI para empresas del agro (tagline: **Software and AI for agribusiness**). Toda UI, pieza y copy de este repo sigue el brand system: https://brand.magoya.com/ (`BRAND.md` + `tokens.json` + `tokens.css`).
 
 ## Color
 
@@ -61,4 +61,11 @@ Máximo 3 niveles tipográficos por vista. Labels de botón en sentence case, nu
 
 ## Copy en UI
 
-Profesional y senior, nunca vendedor. Frases cortas, números concretos, sin superlativos ni grandilocuencia. Vocabulario propio: embedded, deep AgTech fluency, clarity / confidence / commitment, long-term value.
+La capa verbal sale del Magoya Brand Playbook (octubre 2026), que prevalece si algo difiere.
+- Definición: consultora hands-on en software y AI para empresas del agro (*hands-on software and AI consulting firm for agribusiness*). Tagline: **Software and AI for agribusiness**.
+- Territorios, por peso en los mensajes: Uso 50% · Integración 30% · Hands-on 20%.
+- Rasgos, en orden: Estratega, Responsable (en inglés *Accountable*), Curiosa, Franca.
+- Se escribe **AI** en cualquier idioma. Única excepción: el nombre propio **IA en Campo**.
+- Vetado: agtech, digital (solo), transformación digital, custom, software factory, dev shop, agencia, tecnología (sola), ayudar, adopción como sinónimo de uso, DIPI, building blocks. "Uso" antes que "adopción".
+- Pruebas, no adjetivos. Frases cortas y concretas. El inglés es el idioma principal de web, LinkedIn e Instagram.
+- Detalle: https://brand.magoya.com/vocabulary.json · https://brand.magoya.com/.ai/verbal/lenguaje.md · checklist de texto: https://brand.magoya.com/.ai/checklist-verbal.md

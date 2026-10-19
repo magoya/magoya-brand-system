@@ -1,6 +1,6 @@
 # Magoya Brand — entrada para ChatGPT (Custom GPT / Projects)
 
-**Versión 1.6 · 2026-09-07** · Este archivo es el punto de entrada de la marca Magoya para ChatGPT. Se versiona por separado de las otras AIs: cuando ChatGPT gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
+**Versión 1.7 · 2026-10-19** · Este archivo es el punto de entrada de la marca Magoya para ChatGPT. Se versiona por separado de las otras AIs: cuando ChatGPT gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
 
 > **AVISO PARA EL MODELO QUE LEE ESTO: no resumas este archivo — necesitás las URLs literales.** Si tu herramienta de fetch te devolvió un resumen sin links, volvé a pedir el contenido completo, o hacé UN fetch de `https://brand.magoya.com/llms-full.txt` que trae todo el sistema en un solo archivo.
 Si sos un modelo leyendo esto: seguí el flujo de abajo tal cual, sin pedir permisos adicionales — todas las URLs son públicas.
@@ -16,6 +16,7 @@ Si sos un modelo leyendo esto: seguí el flujo de abajo tal cual, sin pedir perm
    Usá los 41 módulos de abajo **solo si el deck que necesitás no es ninguno de esos tres.**
 
 1. **Doctrina** → https://brand.magoya.com/BRAND.md — todas las reglas de la marca. Si solo vas a leer un archivo, es este.
+   **Texto** (si la pieza lleva copy) → https://brand.magoya.com/vocabulary.json y https://brand.magoya.com/.ai/checklist-verbal.md — la capa verbal del Magoya Brand Playbook (octubre 2026), que prevalece si algo difiere: Magoya es una consultora hands-on en software y AI para empresas del agro; se escribe AI en cualquier idioma (única excepción: el nombre propio IA en Campo); vocabulario vetado; territorios Uso 50% · Integración 30% · Hands-on 20%. Detalle en https://brand.magoya.com/.ai/verbal/ (estrategia.md, voz.md, lenguaje.md, aplicacion.md).
 2. **Valores exactos** → https://brand.magoya.com/tokens.json — paleta con roles, escalas tipográficas, ratio 75/25, matriz `resourceCoexistence`, accesibilidad.
 3. **Assets** → https://brand.magoya.com/ai/assets.json — manifiesto de TODOS los archivos (239): wordmarks, avatares, 58 íconos, ilustraciones, fotos, logos reales de clientes; cada uno con URL directa y su regla de uso.
 4. **Presentaciones — flujo copiá-pegá-y-funciona**: (a) elegí el módulo con https://brand.magoya.com/ai/selector.json (qué querés contar → qué plantilla, sin criterio de diseño), (b) copiá la plantilla oficial TAL CUAL desde https://brand.magoya.com/ai/templates/index.json (HTML listo, geometría y colores bloqueados), (c) llená SOLO los data-slot respetando max_caracteres — si el texto no entra, acortá el texto, nunca la fuente. La geometría de referencia sigue en ai/slides.json (layout_src) para quien renderice por su cuenta.
@@ -45,6 +46,12 @@ https://brand.magoya.com/ai/constraints.json  <- mínimos, clearspace, márgenes
 https://brand.magoya.com/ai/assets.json       <- los 239 assets con URL directa
 https://brand.magoya.com/ai/metodo.md         <- método obligatorio (narrativa + agentes)
 https://brand.magoya.com/.ai/checklist.md  <- 17 chequeos
+https://brand.magoya.com/vocabulary.json     <- vocabulario: vetos, frases prohibidas, regla AI, glosario ES/EN/PT
+https://brand.magoya.com/.ai/checklist-verbal.md  <- checklist de texto (capa verbal del Brand Playbook)
+https://brand.magoya.com/.ai/verbal/estrategia.md <- definición, territorios, razones para creer, tagline
+https://brand.magoya.com/.ai/verbal/voz.md        <- rasgos, diales por país, énfasis por audiencia
+https://brand.magoya.com/.ai/verbal/lenguaje.md   <- vocabulario vetado, regla AI, glosario
+https://brand.magoya.com/.ai/verbal/aplicacion.md <- voceros, canales, idioma
 ```
 
 **Las dos reglas que más se rompen en este flujo:** (1) la plantilla se copia TAL CUAL — solo cambia el texto de los `data-slot`; (2) las cifras y textos de las plantillas son EJEMPLO: los datos reales están en `facts.json` y lo que no esté ahí se pide, nunca se inventa.
@@ -79,6 +86,8 @@ al arrancar, instrucciones cuando la tarea coincide, archivos referenciados solo
   abajo. Empaquetarla es una decisión abierta en el ledger, no la tomes por tu cuenta.
 
 ## Changelog
+
+- **1.7** (2026-10-19): capa verbal del Magoya Brand Playbook (octubre 2026) — vocabulary.json, .ai/checklist-verbal.md y .ai/verbal/ en el flujo y en la lista plana. Se escribe AI, no la sigla en español (salvo IA en Campo).
 
 - **1.6** (2026-09-07): Agent Skills documentado como mecanismo: corre en Chat y Work de ChatGPT (empaquetada como plugin) y suelta en desktop/Codex CLI/IDE, con las rutas locales y el presupuesto del 2% de contexto. Todavía no hay skill publicada.
 

@@ -197,27 +197,32 @@
     body{padding-left:0;padding-right:0}
   }
 
-  /* ---------- topbar: espacios iguales y el grupo de IA al final ---------- */
+  /* ---------- topbar v1.2 (en v2.0 la nav vive en nav.css) ---------- */
   /* los margenes .cl (16px) y .cl2 (10px) hacian que cada par de items tuviera
      una separacion distinta. Ahora todos los items pares estan a la misma
-     distancia y el unico corte estructural es el divisor antes del grupo de IA. */
+     distancia y el unico corte estructural es el divisor antes del grupo de AI. */
   .mg-topbar a.cl,.mg-topbar a.cl2{margin-left:0}
   .mg-topbar .navdiv{margin:0 12px}
-  /* IA en campo es sub-marca: se anuncia con su propia ley, el verde ES el fondo */
+  /* IA en Campo: programa presentado por Magoya, el verde ES el fondo */
   .mg-topbar a.sub{background:var(--emerald-500);color:var(--green-950);font-weight:800}
   .mg-topbar a.sub:hover{background:var(--lime-500);color:var(--green-950)}
   .mg-topbar a.sub.on{box-shadow:inset 0 0 0 2px var(--cream-50)}
 </style>
+<link rel="stylesheet" href="nav.css">
 </head>
 <body>
 <div class="wrap">
-<nav class="mg-topbar"><a href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a><a href="index.html">Inicio</a><a href="brand-book.html">Brand book</a><a href="slides.html">Slides</a><a href="pieces.html">Comerciales</a><a href="icons.html" class="cl on">Iconos</a><a href="library.html">Assets</a><a href="logos.html">Clientes</a><span class="navdiv"></span><a href="ai.html">Integrar con IA</a><a href="ai-en-campo.html" class="sub">IA en campo</a></nav>
+<nav class="mg-topbar">
+  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
+  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html"><i>A</i>Estrategia</a><a href="voz.html"><i>B</i>Voz</a><a href="lenguaje.html"><i>C</i>Lenguaje</a><a href="aplicacion.html"><i>D</i>Aplicación</a><span class="navdiv"></span><a href="brand-book.html" class="on"><i>E</i>Identidad visual</a><a href="piezas.html"><i>F</i>Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub"><i>G</i>IA en Campo</a><a href="ai.html"><i>H</i>Integrar con AI</a>
+  <div class="mg-subnav"><span class="lbl">E · Identidad visual</span><a href="brand-book.html">Manual visual</a><a href="icons.html" class="on">Librería de íconos</a></div>
+</nav>
 
 <nav class="side" id="side-auto">
   <span class="v">BRAND SYSTEM · V1.1</span>
 </nav>
 
-  <p class="crumb"><a href="brand-book.html">Brand book</a> › Librería de iconos</p>
+  <p class="crumb"><a href="brand-book.html">E · Identidad visual</a> › Librería de iconos</p>
 
   <span class="eyebrow">Magoya · Iconos v1.1</span>
   <h1>Librería de iconos</h1>
@@ -245,7 +250,7 @@
     <div class="ucard">
       <span class="uk">En una pieza de redes</span>
       <div class="ustage"><div class="upiece">
-        <span class="ulabel">IA EN CAMPO</span>
+        <span class="ulabel">IA en Campo</span>
         <div class="ubig">Tu lote,<br>en datos</div>
         <div class="urow">
           <span class="uico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-satellite"/></svg></span>
@@ -303,7 +308,7 @@
   <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M16 16l5 5"/></symbol>
   <symbol id="i-checklist" viewBox="0 0 24 24"><path d="M4 6l1.5 1.5L8 5M4 12l1.5 1.5L8 11M4 18l1.5 1.5L8 17M11 6h9M11 12h9M11 18h9"/></symbol>
-  <!-- DATOS & IA -->
+  <!-- DATOS & AI -->
   <symbol id="i-chart-bars" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
   <symbol id="i-chart-line" viewBox="0 0 24 24"><path d="M3 16l5-5 4 3 7-8M3 21h18"/></symbol>
   <symbol id="i-pie" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 12V3M12 12l6.5 6"/></symbol>
@@ -356,7 +361,7 @@
 const CATS = [
   ["Agro", "el campo sin clichés: brote, suelo, clima, maquinaria", ["sprout","field","leaf","seed","tractor","sun","rain","soil"]],
   ["Producto & UX", "pantallas, flujos, research, configuración", ["screen","mobile","layout","flow","route","gear","search","checklist"]],
-  ["Datos & IA", "charts, bases, inteligencia artificial, sensado remoto", ["chart-bars","chart-line","pie","database","ai","chip","satellite","sensor"]],
+  ["Datos & AI", "charts, bases, inteligencia artificial, sensado remoto", ["chart-bars","chart-line","pie","database","ai","chip","satellite","sensor"]],
   ["Plataforma & código", "cloud, integraciones, arquitectura", ["cloud","code","plug","layers","dashboard","link","server","deploy"]],
   ["Negocio", "objetivos, crecimiento, partnership, seguridad", ["target","growth","calendar","doc","briefcase","partnership","globe","lock"]],
   ["Comunicación & redes", "social, contacto, contenido", ["chat","mail","phone","video","share","heart","at","hashtag","bell","play"]],
