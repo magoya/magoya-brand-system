@@ -1,5 +1,7 @@
 # Magoya Brand — entradas por AI
 
+**Equipo de Magoya:** el trabajo de marca con AI se hace en el proyecto oficial de Claude **"Magoya · Marca"** (organización de Magoya en claude.ai), con las instrucciones y los archivos ya cargados. Nadie configura su propia herramienta, y las otras herramientas no están soportadas para el trabajo del equipo con la marca. Detalle en https://brand.magoya.com/ai.html. Las entradas de abajo son puntos de lectura para cualquier AI que lea el sistema.
+
 Un link por herramienta. Cada entrada se versiona por separado: cuando una AI gana capacidades, se actualiza SU archivo (con changelog) sin tocar los demás.
 
 | AI | Link de entrada |

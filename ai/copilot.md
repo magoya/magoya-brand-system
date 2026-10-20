@@ -1,5 +1,7 @@
 # Magoya Brand — entrada para GitHub Copilot
 
+> **Equipo de Magoya:** para el trabajo de marca, el camino oficial es el proyecto de Claude "Magoya · Marca" (https://brand.magoya.com/ai.html). Esta entrada queda como punto de lectura para cualquier AI.
+
 **Versión 1.4 · 2026-10-19** · Punto de entrada de la marca Magoya para Copilot. Se versiona por separado de las otras AIs (changelog al pie).
 
 ## Flujo (en este orden)

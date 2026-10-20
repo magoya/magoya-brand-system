@@ -1,5 +1,7 @@
 # Cómo darle el manual de Magoya a una IA
 
+> **Equipo de Magoya:** esta guía por herramienta quedó como referencia técnica. El trabajo de marca del equipo se hace en el proyecto oficial de Claude "Magoya · Marca"; nadie configura su propia herramienta. Ver [ai.html](ai.html).
+
 Guía de setup, herramienta por herramienta. El objetivo es que cualquier IA que use el equipo respete el manual sin que haya que recordárselo en cada prompt.
 
 **Fuente de verdad:** [`BRAND.md`](BRAND.md) (doctrina) · [`tokens.json`](tokens.json) (valores exactos con roles) · [`tokens.css`](tokens.css) (custom properties, 4 temas). Todo lo demás de este repo es presentación.
