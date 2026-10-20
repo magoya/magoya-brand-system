@@ -1,6 +1,6 @@
 <!--
 INSTRUCCIONES DEL PROYECTO OFICIAL "Magoya · Marca" (Claude Projects, organización de Magoya en claude.ai)
-Esto lo mantiene quien administra el proyecto. El resto del equipo no configura nada: abre un chat dentro del proyecto.
+Esto lo mantiene quien administra el proyecto (Facundo). El resto del equipo no configura nada: abre un chat dentro del proyecto.
 
 1. En el proyecto, "Set project instructions": pegá TODO lo que está debajo de la línea --- y guardá.
 2. En el knowledge del proyecto ("+" / Add content) subí estos archivos, en su última versión:
