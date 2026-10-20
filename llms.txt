@@ -2,6 +2,8 @@
 
 > Brand System oficial de **Magoya** — consultora hands-on en software y AI para empresas del agro (*Magoya is a hands-on software and AI consulting firm for agribusiness*). Tagline: **Software and AI for agribusiness**. Este sistema es la única fuente de verdad de la marca: una capa verbal (estrategia, voz, lenguaje y aplicación: la identidad, la oferta y el método salen del Magoya Brand Playbook de octubre de 2026; la voz, el estilo y el vocabulario, de la Guía editorial V2 "Manual voz y tono MAGOYA V2") y una capa visual (paleta con roles, tipografía Manrope, fotografía, ilustración, componentes y recetas de aplicación, que se mantiene hasta su revisión), publicadas en formato legible por personas (HTML) y por modelos (Markdown + JSON + CSS).
 
+**Equipo de Magoya:** el trabajo de marca con AI se hace en el proyecto oficial de Claude **"Magoya · Marca"**, en la organización de Magoya en claude.ai, con las instrucciones y los archivos ya cargados. Otras herramientas no están soportadas para el trabajo del equipo con la marca. Cómo se usa y cómo se administra: [ai.html](https://brand.magoya.com/ai.html).
+
 Si vas a generar piezas, código o copy para Magoya, leé `BRAND.md`, `tokens.json` y `vocabulary.json`, y aplicá el prompt de sistema de `.ai/brand-prompt.md`. Si escribís texto, leé `.ai/verbal/guia-editorial.md` (su Parte II son instrucciones operativas para agentes de AI) y corré `.ai/checklist-verbal.md` antes de entregar. Las cinco reglas verbales que más se rompen:
 
 - Magoya se define como **consultora hands-on en software y AI para empresas del agro**. Para definirla no se usan etiquetas reductoras (software factory, dev shop, agtech como categoría, custom como promesa, transformación digital) ni "tecnología" en lugar de "software y AI".
@@ -27,10 +29,10 @@ Y las once reglas visuales que más se rompen, para tenerlas antes de abrir cual
 ## Capa verbal (Magoya Brand Playbook y Guía editorial V2, octubre de 2026)
 
 - [.ai/verbal/guia-editorial.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/guia-editorial.md): Guía editorial de Magoya ("Manual voz y tono MAGOYA V2") — fuente de la voz, el estilo, el vocabulario y la adaptación editorial. Parte II: instrucciones operativas para agentes de AI (jerarquía de fuentes, reglas de generación, validación humana y permisos, control antes de entregar).
-- [estrategia.html](https://brand.magoya.com/estrategia.html): A · Estrategia — definición, propósito, diferenciales, propuesta de valor, oferta, boilerplates, territorios, audiencias, razones para creer, Método Magoya, valores, pilares, promesa, personalidad, arquitectura y tagline.
-- [voz.html](https://brand.magoya.com/voz.html): B · Voz — la voz en la práctica, personalidad, ejes, principios, cómo construimos mensajes, adaptación y ejemplos (guía editorial V2); qué se construye primero, objetivos por mercado, postura, contra qué lucha y lo que no dice (playbook); cinco diales, localización y énfasis por audiencia.
-- [lenguaje.html](https://brand.magoya.com/lenguaje.html): C · Lenguaje — estilo, vocabulario de marca, regla AI, glosario ES · EN · PT y cómo suena Magoya.
-- [aplicacion.html](https://brand.magoya.com/aplicacion.html): D · Aplicación — capas, voceros y territorios, canales e idioma, focos y producción.
+- [estrategia.html](https://brand.magoya.com/estrategia.html): Estrategia — definición, propósito, diferenciales, propuesta de valor, oferta, boilerplates, territorios, audiencias, razones para creer, Método Magoya, valores, pilares, promesa, personalidad, arquitectura y tagline.
+- [voz.html](https://brand.magoya.com/voz.html): Voz — la voz en la práctica, personalidad, ejes, cómo construimos mensajes, adaptación y ejemplos (guía editorial); qué se construye primero, objetivos por mercado, postura, contra qué lucha y lo que no dice (playbook); cinco diales, localización y énfasis por audiencia.
+- [lenguaje.html](https://brand.magoya.com/lenguaje.html): Lenguaje — estilo, expresión verbal (siete principios), vocabulario de marca, regla AI, glosario ES · EN · PT y cómo suena Magoya.
+- [aplicacion.html](https://brand.magoya.com/aplicacion.html): Aplicación — capas, voceros y territorios, canales e idioma, focos y producción.
 - [vocabulary.json](https://brand.magoya.com/vocabulary.json): hermano verbal de `tokens.json` — vocabulario a evitar con su reemplazo (leer su campo `rule`: no es un veto universal), términos no vetados, regla AI, glosario por mercado, frases que la marca evita, definición, una línea y tagline.
 - [.ai/verbal/estrategia.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/estrategia.md): la Parte 1 y el tagline en Markdown.
 - [.ai/verbal/voz.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/voz.md): las Partes 2 y 3 en Markdown.
@@ -69,8 +71,8 @@ Y las once reglas visuales que más se rompen, para tenerlas antes de abrir cual
 - [.ai/checklist-verbal.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist-verbal.md): checklist verbal — las 8 preguntas del control antes de entregar de la guía editorial (§9) y los chequeos del playbook que siguen vigentes (definición, AI, uso/adopción, espacios y método, Accountable, dealer, agribusiness), cada uno con su fuente; el 50/30/20 queda como nota de planificación. Se corre sobre cualquier texto de Magoya antes de entregarlo.
 - [ai/precedencia.json](https://brand.magoya.com/ai/precedencia.json): ley de precedencia — qué documento gana cuando dos reglas oficiales del sistema se contradicen, más el contrato de entrega (qué puede salir con un hueco adentro y qué no).
 - [ai/metodo.md](https://brand.magoya.com/ai/metodo.md): el método de trabajo obligatorio para piezas con contenido — entender antes de elegir, módulos por criterio (no por defecto), y agentes de copy / diseño / crítica antes de entregar.
-- [ai.html](https://brand.magoya.com/ai.html): H · Integrar con AI — archivos para AI, presets por herramienta y validación (visual y verbal).
-- [AI-INTEGRATION.md](https://brand.magoya.com/AI-INTEGRATION.md): guía de setup por herramienta (Claude Projects, Claude Code, Claude Design, Custom GPT, Cursor, Copilot, chat genérico) con tabla de verificación y troubleshooting.
+- [ai.html](https://brand.magoya.com/ai.html): Integrar con AI. El proyecto oficial de Claude "Magoya · Marca" que usa el equipo: cómo usarlo, checklists visual y verbal, límites y cómo se administra.
+- [AI-INTEGRATION.md](https://brand.magoya.com/AI-INTEGRATION.md): referencia técnica anterior, no es el camino del equipo (ver ai.html). Guía de setup por herramienta (Claude Projects, Claude Code, Claude Design, Custom GPT, Cursor, Copilot, chat genérico) con tabla de verificación y troubleshooting.
 
 ## Manual visual navegable
 
@@ -83,5 +85,5 @@ Y las once reglas visuales que más se rompen, para tenerlas antes de abrir cual
 
 - [library.html](https://brand.magoya.com/library.html): todos los assets con descarga directa (wordmarks, avatares, motivos, personajes, fotos, fuente).
 - [logos.html](https://brand.magoya.com/logos.html): logos reales de clientes y del stack tecnológico — los únicos que se pueden usar en un logo wall.
-- [ai-en-campo.html](https://brand.magoya.com/ai-en-campo.html): G · IA en Campo, marca de programa presentada por Magoya, con manual propio. **No es parte del core**: rompe tres reglas a propósito (lienzo verde digital pleno, placa negra de dato clave, doodles del Studio). No aplicar sus reglas a piezas de Magoya.
+- [ai-en-campo.html](https://brand.magoya.com/ai-en-campo.html): IA en Campo, marca de programa presentada por Magoya, con manual propio. **No es parte del core**: rompe tres reglas a propósito (lienzo verde digital pleno, placa negra de dato clave, doodles del Studio). No aplicar sus reglas a piezas de Magoya.
 - [ROADMAP.md](https://brand.magoya.com/ROADMAP.md): estado del sistema y pendientes de contenido.

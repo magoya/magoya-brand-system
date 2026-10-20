@@ -1,5 +1,7 @@
 # Magoya Brand — entrada para Gemini (gemini.google.com / AI Studio / Gems)
 
+> **Equipo de Magoya:** para el trabajo de marca, el camino oficial es el proyecto de Claude "Magoya · Marca" (https://brand.magoya.com/ai.html). Esta entrada queda como punto de lectura para cualquier AI.
+
 **Versión 1.8 · 2026-10-19** · Punto de entrada de la marca Magoya para Gemini. Se versiona por separado de las otras AIs (changelog al pie).
 
 > **AVISO PARA EL MODELO QUE LEE ESTO: no resumas este archivo — necesitás las URLs literales.** Si tu herramienta de fetch te devolvió un resumen sin links, volvé a pedir el contenido completo, o hacé UN fetch de `https://brand.magoya.com/llms-full.txt` que trae todo el sistema en un solo archivo.

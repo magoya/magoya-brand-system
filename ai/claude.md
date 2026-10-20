@@ -1,6 +1,8 @@
 # Magoya Brand — entrada para Claude (claude.ai / Claude Code / API)
 
-**Versión 1.8 · 2026-10-19** · Punto de entrada de la marca Magoya para Claude. Se versiona por separado de las otras AIs: cuando Claude gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
+**Versión 1.9 · 2026-10-19** · Punto de entrada de la marca Magoya para Claude. Se versiona por separado de las otras AIs: cuando Claude gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
+
+> **Equipo de Magoya:** para el trabajo de marca, el camino oficial es el proyecto de Claude "Magoya · Marca" (https://brand.magoya.com/ai.html). Esta entrada queda como punto de lectura para cualquier AI.
 
 > **AVISO PARA EL MODELO QUE LEE ESTO: no resumas este archivo — necesitás las URLs literales.** Si tu herramienta de fetch te devolvió un resumen sin links, volvé a pedir el contenido completo, o hacé UN fetch de `https://brand.magoya.com/llms-full.txt` que trae todo el sistema en un solo archivo.
 Si sos Claude leyendo esto: seguí el flujo de abajo, todas las URLs son públicas y fetcheables sin auth.
@@ -60,28 +62,31 @@ https://brand.magoya.com/.ai/verbal/aplicacion.md <- voceros, canales, idioma
 
 - **Artifacts / HTML / componentes**: fidelidad total — embebé los SVGs reales (fetch + inline) y cargá Manrope desde Google Fonts.
 - **Claude Code**: cloná o fetcheá el repo directamente (`github.com/magoya/magoya-brand-system`) — ahí está todo el árbol de assets sin manifiesto de por medio. Preset listo: [claude-code-CLAUDE.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/presets/claude-code-CLAUDE.md).
-- **Imágenes**: Claude no genera raster — para piezas visuales la salida correcta es HTML/SVG con los assets reales, que es justamente donde la fidelidad es total.
+- **Imágenes**: Claude no genera fotos ni ilustraciones; arma diagramas y visuales en HTML y SVG ([ayuda de Claude](https://support.claude.com/en/articles/9002504)). Para piezas visuales la salida correcta es HTML/SVG con los assets reales, que es justamente donde la fidelidad es total.
 
 ## Setup (una sola vez, para humanos)
 
-- **claude.ai Projects**: pegá en las instrucciones del proyecto: *"Antes de cualquier tarea de marca, fetch https://brand.magoya.com/ai/claude.md y seguí su flujo."* + el preset [claude-project-instructions.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/presets/claude-project-instructions.md) como refuerzo. Knowledge opcional como fallback offline: BRAND.md, tokens.json, tokens.css.
-- **Claude Code**: copiá el preset a `CLAUDE.md` del proyecto.
+- **Equipo de Magoya**: no hay setup individual. El trabajo de marca se hace en el proyecto oficial de Claude **"Magoya · Marca"**, en la organización de Magoya en claude.ai: pedís acceso a quien lo administra, abrís un chat dentro del proyecto y le das un brief (objetivo, audiencia, canal, idioma, fuente de datos). Otras herramientas no están soportadas para el trabajo del equipo con la marca. Detalle: https://brand.magoya.com/ai.html
+- **Quien administra el proyecto**: las instrucciones del proyecto son el preset [claude-project-instructions.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/presets/claude-project-instructions.md) (lo que está debajo del separador) y el knowledge son los archivos que lista ese preset. Cuando cambia la marca, se reemplazan los archivos que cambiaron. Con Web search activo, Claude además puede leer esta entrada y el resto del sitio por URL.
 
-## Agent Skills: el canal que le gana a la URL (verificado 2026-09-07)
+## Agent Skills: el canal que le gana a la URL
 
 Una **skill** es una carpeta con un `SKILL.md` (metadata + instrucciones) que el agente carga en tres
 etapas: al arrancar solo lee nombre y descripción, el cuerpo entra cuando la tarea coincide, y los
 archivos referenciados recién cuando los necesita. Eso es lo contrario de `llms-full.txt`, que entra
 entero en cada conversación.
 
-- **Claude Code / claude.ai**: skills en `.claude/skills/` del proyecto o `~/.claude/skills/`
-  ([docs](https://code.claude.com/docs/en/skills)). La distribución soportada es un **plugin
+- **Claude Code**: skills en `.claude/skills/` del proyecto o `~/.claude/skills/`
+  ([docs](https://code.claude.com/docs/en/skills)). En claude.ai, las skills se suben y se activan
+  desde la configuración de la cuenta, no desde una carpeta. La distribución soportada es un **plugin
   marketplace**, que es un repo de git: `/plugin marketplace add <owner/repo>` y después
   `/plugin install <nombre>@<marketplace>`. Este brand system YA es un repo, así que el canal existe.
 - **Hoy Magoya no publica una skill.** El canal sigue siendo la URL de arriba. Empaquetarla es una
   decisión abierta en el ledger (`.ai/VALIDACION-IA.md`), no la tomes por tu cuenta.
 
 ## Changelog
+
+- **1.9** (2026-10-19): el equipo de Magoya trabaja la marca en el proyecto oficial de Claude "Magoya · Marca"; el setup para humanos pasa a ser acceso al proyecto, sin configuración individual. Se corrigen la línea de imágenes (Claude no genera fotos ni ilustraciones, sí HTML/SVG) y la de skills en claude.ai, y se quita la fecha de verificación que no tenía fuente.
 
 - **1.8** (2026-10-19): Guía editorial V2 ("Manual voz y tono MAGOYA V2") como fuente de la voz y el tono: .ai/verbal/guia-editorial.md en el flujo y en la lista plana, con sus reglas operativas (sin cifras inventadas, validación humana, clientes no nombrados por defecto, borrador pendiente de revisión, conflictos señalados). El checklist verbal se rearma sobre sus 8 preguntas.
 
