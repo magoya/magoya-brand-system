@@ -16,6 +16,26 @@
 
 ---
 
+## Ronda de feedback · 22 de octubre de 2026 ("Brand System Online - Magoya")
+
+Fuente: presentación de feedback del equipo (9 slides), más dos decisiones de Facu en chat: Recursos mantiene los logos de clientes y el membrete, y la firma de email se va.
+
+| # | Feedback | Estado | Evidencia |
+|---|---|---|---|
+| 1 | La navegación cambiaba entera al entrar a "Elegir una plantilla" | **LISTO** | Una sola barra en las 11 páginas (`nav.css`, `nav.js`): Inicio · Conocer la marca · Recursos · Integrar con AI · IA en Campo |
+| 2 | Piezas y plantillas: eliminar por completo; se descargan tipografía, elementos y paleta, no piezas editables | **LISTO** | Borradas `piezas.html`, `slides.html`, `plantillas.html`, `pieces.html`, `app/`, `ai/slides*`, `ai/templates/`, `ai/decks/`, `ai/selector.json` y `.mesa/` (la iniciativa de decks) |
+| 3 | Lima ahora es de IA en Campo: en Magoya se potencia el Verde Magoya y el lima queda para acentos, detalles o CTA | **LISTO** | Sección Color de `brand-book.html`, `BRAND.md` §9, `tokens.json` `color.usage`. Se sacó la barra con porcentajes y la muestra del verde de ilustración en el inicio |
+| 4 | Fotografía: sacar la foto que no es cenital; personas a color, sin detalle, mejor en espacios abiertos | **PARCIAL** | Fuera `field-corn.jpg` y todos los retratos B&N. Texto de fotografía literal del feedback. Falta: fotos a color del equipo (hoy solo la de Varu) |
+| 5 | Eliminar ilustración y motivos hasta iconografía ("Ilustración no tenemos") | **LISTO** | Secciones Ilustración y Convivencia fuera del brand book; borrados `assets/illus/`, motivos y doodles del core |
+| 6 | Reglas de oro: lima para acentos y CTA; personas a color; borrar "máximo dos recursos"; no subrayado, solo círculo o flechas | **LISTO** | Reglas de `brand-book.html` y `BRAND.md` §9. El brand book muestra el círculo como ejemplo de resaltado; círculo y flecha descargables en Recursos |
+| 7 | Sacar el archienemigo 3 (decisión de Varu) | **LISTO** | `voz.html` y `.ai/verbal/voz.md`: once archienemigos |
+| 8 | Cuando estén listos, sumar estilo de feed-placas y Deck | **BLOQUEADO** | Depende del material nuevo. Anotado en `ROADMAP.md`. Mientras tanto se sacaron las recetas y medidas de feed y story (`BRAND.md`, `constraints.json`, `tokens.json`, `ai.html`) |
+| 9 | Sacar lo que no se usa para que no meta ruido en llamados externos | **LISTO** | Ninguna página, archivo para AI ni `llms*.txt` menciona lo eliminado. La revisión adversarial sumó: wordmark de bordado de merch (y el logo kit rehecho con 4 wordmarks), avatares recoloreados y trama, mockups de dispositivo, duplicados de la raíz, `VOICE-RESEARCH.md` y CSS sin uso. `python3 ai/validar.py`: 2 fallas previas a esta ronda (la pieza de IA en Campo con "con IA" y el wordmark animado con otro dibujo) |
+
+**Pendientes de esta ronda:** proporciones nuevas de uso del color, fotos a color del equipo, y la pieza `assets/pieces/fecha-marcada-ig-portrait.svg` que todavía dice "con IA".
+
+---
+
 ## 0. Lo que cambia el plan: el proceso con Proteína está en marcha
 
 Busqué en las reuniones qué pasó con la voz "hasta hoy". No hubo un ajuste de copy: hay **un proceso de estrategia de marca en curso** que este sistema todavía no refleja. Fuente: notas de reunión del 17, 20, 22, 28 y 30 de julio y del 4 de agosto de 2026.

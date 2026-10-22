@@ -2,7 +2,7 @@
 
 # Checklist verbal — cualquier texto de Magoya antes de entregar
 
-Lo corre un modelo o una persona sobre cualquier texto de Magoya: post, deck, web, propuesta, mail, copy de una pieza. Complementa a `.ai/checklist.md` (chequeos visuales): una pieza con texto pasa los dos.
+Lo corre un modelo o una persona sobre cualquier texto de Magoya: post, web, propuesta, mail, documento, copy de una pieza. Complementa a `.ai/checklist.md` (chequeos visuales): una pieza con texto pasa los dos.
 
 Se arma sobre el **control antes de entregar** de la guía (§9): ocho preguntas. Las ocho tienen que dar **sí**. Si una falla, corregí nombrando la regla y volvé a correr la lista completa. Si la respuesta a la 8 es "queda algo por confirmar", el texto no se descarta: se entrega como **borrador pendiente de revisión**, con lo que falta señalado explícitamente.
 

@@ -1,114 +1,86 @@
-# Método de trabajo — obligatorio para cualquier pieza con contenido
+# Método de trabajo para escribir y revisar contenido de Magoya
 
-**Versión 3.2 · 2026-10-19** · Parte del flujo de todas las entradas por AI. Cumplir la marca al pie
-de la letra es la mitad del trabajo; la otra mitad es que la historia esté bien contada. Una pieza
-on-brand con la historia mal contada es una pieza fallida.
+**Versión 4.0 · 2026-10-22** · Parte del flujo de todas las entradas por AI. Cumplir la marca al pie
+de la letra es la mitad del trabajo; la otra mitad es que la historia esté bien contada. Un texto
+on-brand con la historia mal contada es un texto fallido.
 
-> **Lo que cambió en la v2.0 y por qué.** Una auditoría a ciegas (dos AI que solo recibieron una URL
-> pública) mostró tres cosas. Una: la v1.3 pedía como **insumo** que escribieras "LA idea", y nadie
-> llega con eso — el material real es un transcript, un doc de la CEO o un deck viejo. Dos: el agente
-> de copy "reescribía cada texto", y el copy entra aprobado y bloqueado: reescribirlo es trabajo que
-> después hay que revertir. Tres: declarar un hueco no es lo mismo que no entregarlo — una AI marcó
-> cinco cifras como no verificables en su reporte y las dejó escritas en la slide igual.
+## Fase 0: del material crudo a la idea
 
-## Fase 0 — Del material crudo a la narrativa
-
-**Esta fase antes no existía y es donde se pierde el deck.** El insumo real nunca es un outline: es
-un transcript, un documento de otra persona, un deck viejo para reciclar, o los tres a la vez.
+El insumo real nunca es un outline: es un transcript, un documento de otra persona, un texto viejo
+para reciclar, o los tres a la vez.
 
 1. **Inventariá lo que te dieron**, sin editar nada: cada bloque de contenido con su origen. Marcá
    cuál es texto aprobado (no se toca) y cuál es materia prima (se puede reordenar).
 2. **Escribí LA idea vos, y mostrala.** Una frase: lo único que la audiencia se tiene que llevar. Si
-   el material no alcanza para escribirla, eso no te frena — **la escribís como hipótesis y la marcás
+   el material no alcanza para escribirla, eso no te frena: **la escribís como hipótesis y la marcás
    como tal** en el pedido a humanos. Lo que no se hace es avanzar sin haberla escrito.
-3. **Contá los beats y comparalos con lo que te dieron.** Si el material trae 8 bloques y tu narrativa
-   necesita 13, esos 5 de más son decisiones tuyas: **listalas una por una con su motivo.** En la
-   auditoría, un deck creció de 8 a 13 slides y nadie registró quién agregó las 5 ni por qué — y ahí
-   vivían las contradicciones con el brief.
-4. **Buscá la contradicción antes de diseñar.** Cruzá el material contra `ai/facts.json` y contra las
+3. **Registrá lo que agregás.** Todo bloque que no venía en el material es una decisión tuya: listala
+   con su motivo. Lo que se agrega sin registro es donde aparecen las contradicciones con el brief.
+4. **Buscá la contradicción antes de escribir.** Cruzá el material contra `ai/facts.json` y contra las
    decisiones ya tomadas. Un dato del material que contradice a `facts.json` es un bloqueo, no un
-   detalle: la slide no sale hasta que una persona decida. Y un pedido del brief que contradice a
-   otro ("dark mode" contra `fondos_permitidos`) se reporta antes de intentarlo, no después.
+   detalle: ese dato no sale hasta que una persona decida. Y un pedido del brief que contradice una
+   regla de la marca se reporta antes de intentarlo, no después.
 
-### Gate de Fase 0 — el ghost deck
+### Gate de Fase 0: los títulos solos
 
-**Antes de mirar un solo módulo**, escribí los títulos de las slides en orden, solos, y leelos de un
-tirón. Si no se reconstruye el argumento, no estás listo para elegir módulos — y ningún módulo lo va
-a arreglar. Es el *storyline test* que usan McKinsey, Bain y BCG, y se aprueba sin abrir el catálogo.
+Si el contenido tiene partes (secciones, slides de un carrusel, bloques de un documento), escribí
+primero los títulos en orden, solos, y leelos de un tirón. Si no se reconstruye el argumento, no
+estás listo para escribir el cuerpo.
 
-Dos cosas se chequean acá y no después:
+**Cada título es una aserción**, no una etiqueta de tema. "Baselining and four initial experiments"
+es etiqueta; "Four experiments tell us where the model breaks" es aserción. Medido: 2 de 12 en una
+propuesta real (17%). Objetivo ≥80%.
 
-1. **Cada título es una aserción**, no una etiqueta de tema. "Baselining and four initial experiments"
-   es etiqueta; "Four experiments tell us where the model breaks" es aserción. Medido: 2 de 12 en una
-   propuesta real (17%). Objetivo ≥80%.
-2. **El arco tiene los cuatro momentos**: se pone una tensión antes de proponer, y se respalda con
-   evidencia después de proponer, y se cierra pidiendo algo. Si tu outline no los tiene, el deck va a
-   leerse genérico por más que las slides estén lindas.
+## Fase 1: escribir
 
-Recién con el ghost deck aprobado se eligen los módulos, y ahí cada beat del outline se mapea al
-`perfil.beat` del módulo (`apertura · tension · contexto · propuesta · evidencia · pedido ·
-estructura`). Las cuatro reglas de secuencia están en `como_componer_el_deck`.
+- Buscá la oportunidad de contar mejor: ¿ese dato rinde más como cifra destacada que enterrado en
+  una lista? ¿eso que parece una lista es un caso? ¿ese párrafo es una frase esperando a ser dicha?
+- El texto más corto que cuente la historia completa, gana. Una idea por bloque.
+- La voz y el vocabulario salen de `.ai/verbal/guia-editorial.md` y `vocabulary.json`; la identidad,
+  la oferta y el método, de `.ai/verbal/estrategia.md`.
 
-## Fase 1 — Elegir cada módulo por criterio
-
-- Para cada beat, usá el **selector** (`ai/selector.json`): qué querés contar → qué módulo, sin
-  criterio de diseño. Ante dos candidatos, leé el `cuando_usarlo` de los dos y justificá.
-- **Si ninguna fila aplica, no fuerces.** Diez de los 41 módulos solo se alcanzan por una cláusula
-  condicionada a criterio, y hay tipos de contenido que todavía no tienen fila (journey de dos
-  niveles, cinco cifras, cartera de varios casos en un slide). Si tu contenido es uno de esos:
-  elegí el módulo más cercano, **declará que elegiste contra el selector y por qué**, y reportá la
-  fila que falta. Repurposar un módulo tiene costos invisibles — el acento de lima de B1 está en la
-  card del medio, así que usarlo para tres pilares destaca el segundo sin ningún motivo semántico.
-- Buscá la oportunidad de contar mejor: ¿ese dato rinde más como cifra gigante que como bullet? ¿eso
-  que parece una lista es un caso de éxito? ¿ese párrafo es un statement esperando a ser una frase?
-- El deck más corto que cuente la historia completa, gana. Una idea por slide.
-
-## Fase 2 — Las tres pasadas (agentes si tu plataforma los tiene)
+## Fase 2: las pasadas (agentes si tu plataforma los tiene)
 
 Nunca entregues la primera versión. Si podés desplegar subagentes, desplegalos; si no, hacé las
 pasadas actuando cada rol por separado.
 
-1. **Agente de títulos — el que más mueve la aguja.** Cada título de contenido tiene que ser una
-   **aserción**: sujeto + verbo + afirmación. No una etiqueta de tema. "Baselining and four initial
-   experiments" es una etiqueta; "Four experiments tell us where the model breaks" es una aserción.
-   *Línea de base medida: 2 de 12 títulos de una propuesta real eran aserciones (17%). El objetivo es
-   ≥80%.* La base no es estética: assertion-evidence mide mejor comprensión y mejor recall diferido
-   que topic-subtopic (Garner & Alley, n=110).
+1. **Agente de títulos, el que más mueve la aguja.** Cada título de contenido tiene que ser una
+   **aserción**: sujeto + verbo + afirmación. La base no es estética: assertion-evidence mide mejor
+   comprensión y mejor recall diferido que topic-subtopic (Garner & Alley, n=110).
    **El test:** leé solo los títulos en orden. Si no se reconstruye el argumento, los títulos están
    mal, no el cuerpo.
-2. **Agente de copy — marca, no reescribe.** El texto aprobado no se toca. Su trabajo es señalar:
+2. **Agente de copy: marca, no reescribe.** El texto aprobado no se toca. Su trabajo es señalar:
    qué afirmación viaja sin cifra ni plazo, qué frase es relleno, qué dato no tiene fuente, y qué
-   contradice algo ya decidido — incluida la capa verbal: `.ai/checklist-verbal.md` (las 8 preguntas de la guía editorial:
-   brief y posicionamiento, tono constructivo, hecho vs. hipótesis vs. ejemplo, cifras con validación humana, permisos de
-   clientes, uso/adopción/espacios/método, adaptación a audiencia y canal, lo que queda por confirmar; más definición, AI y
-   traducciones del playbook). Fuente de la voz: `.ai/verbal/guia-editorial.md`. Devuelve una lista de observaciones, no una versión nueva. Si el copy
-   es materia prima y sí hay que escribirlo, lo dice explícito antes de hacerlo.
-3. **Agente de diseño.** Verifica plantilla oficial sin cambios de geometría, slots dentro de
-   `max_caracteres`, y `ai/constraints.json`. **Cuando dos reglas oficiales se contradicen, aplicá
-   `ai/precedencia.json` y reportá la contradicción — no la resuelvas por criterio propio.**
-4. **Agente crítico — el que refuta.** Una sola consigna: *encontrá el slide más débil y proponé cómo
-   contarlo mejor.* La ronda que refuta encuentra más que la que construye. Si el crítico no encontró
+   contradice algo ya decidido, incluida la capa verbal: `.ai/checklist-verbal.md` (las 8 preguntas
+   de la guía editorial: brief y posicionamiento, tono constructivo, hecho vs. hipótesis vs. ejemplo,
+   cifras con validación humana, permisos de clientes, uso/adopción/espacios/método, adaptación a
+   audiencia y canal, lo que queda por confirmar; más definición, AI y traducciones del playbook).
+   Fuente de la voz: `.ai/verbal/guia-editorial.md`. Devuelve una lista de observaciones, no una
+   versión nueva. Si el copy es materia prima y sí hay que escribirlo, lo dice explícito antes.
+3. **Agente de diseño (si hay algo visual).** Verifica `.ai/checklist.md`, `tokens.json` y
+   `ai/constraints.json`. **Cuando dos reglas oficiales se contradicen, aplicá
+   `ai/precedencia.json` y reportá la contradicción; no la resuelvas por criterio propio.**
+4. **Agente crítico, el que refuta.** Una sola consigna: *encontrá la parte más débil y proponé cómo
+   contarla mejor.* La ronda que refuta encuentra más que la que construye. Si el crítico no encontró
    nada, no estaba criticando.
 
-## Fase 3 — Criterio de entrega
+## Fase 3: criterio de entrega
 
-**Técnico.** Los 17 chequeos de `.ai/checklist.md`, los de `.ai/checklist-verbal.md` para el texto, más:
+**Técnico.** Los chequeos de `.ai/checklist-verbal.md` para el texto y los de `.ai/checklist.md` si
+hay algo visual. Si tenés el repo:
 
 ```
-python3 ai/validar.py --pieza <tu-archivo.html>
+python3 ai/validar.py --entrega <tu-archivo>
 ```
 
 **Narrativo.**
 
 | Qué | Umbral | Cómo se mide |
 |---|---|---|
-| Títulos-aserción en slides de contenido | ≥80% | contalos: sujeto + verbo + afirmación |
+| Títulos-aserción | ≥80% | contalos: sujeto + verbo + afirmación |
 | La historia leída solo de títulos | cierra | leelos en orden, sin el cuerpo |
-| Densidad | mediana ≤110 palabras por slide | contá palabras visibles |
-| Arco | cierra en pedido, tensión antes de proponer, evidencia después | `validar.py --pieza` lo mide |
-| Adorno | ninguna slide fuera del catálogo | `validar.py --pieza` lo mide |
-| Slide prescindible | ninguno | si borrás un slide y la historia no pierde nada, borralo |
-| El dato más fuerte | en el slide más fuerte | si la mejor cifra está en un bullet, movela |
+| Bloque prescindible | ninguno | si borrás un bloque y la historia no pierde nada, borralo |
+| El dato más fuerte | en el lugar más visible | si la mejor cifra está enterrada, movela |
 
 **No midas legibilidad con Flesch, INFLESZ ni Fernández Huerta.** Las fórmulas piden prosa corrida de
 100+ palabras y los bullets sin verbo inflan el score: medido sobre una propuesta real, el largo de
@@ -117,26 +89,17 @@ oración ya daba sano mientras 10 de 12 títulos no decían nada. El test de tí
 **Contrato de entrega** (`ai/precedencia.json` lo detalla). Lo esencial:
 
 - Un dato que no está en `facts.json` **no se escribe**. Va como `[PENDIENTE]` visible.
-- Si el material trae un dato que **contradice** a `facts.json`, la slide no sale.
-- Toda entrega lleva un bloque **PEDIDO A HUMANOS**: qué falta, a quién se le pide, qué se desbloquea.
-- Con aunque sea un `[PENDIENTE]`, la pieza se entrega marcada **BORRADOR**. Sin ninguno, puede salir
+- Si el material trae un dato que **contradice** a `facts.json`, ese dato no sale.
+- Toda entrega con huecos lleva al final un bloque **PEDIDO A HUMANOS**: qué falta y a quién se le pide.
+- Con aunque sea un `[PENDIENTE]`, el entregable se marca **BORRADOR**. Sin ninguno, puede salir
   como final.
 
-Entregá también una nota corta de decisiones: qué módulos elegiste y por qué, qué elegiste contra el
-selector, qué agregaste que no venía en el material, y qué encontró el crítico.
+Entregá también una nota corta de decisiones: qué agregaste que no venía en el material, qué
+contradicciones encontraste y qué encontró el crítico.
 
 ## Changelog
 
+- **4.0** (2026-10-22): el método deja de armar piezas desde un catálogo, que se retiró del sistema por decisión del equipo. Queda para escribir y revisar contenido de marca: la idea antes del texto, los títulos-aserción, las pasadas de copy, diseño y crítica, y el contrato de entrega. El validador pasa a `validar.py --entrega`.
 - **3.2** (2026-10-19): el agente de copy corre el checklist verbal rearmado sobre las 8 preguntas de la Guía editorial V2 (`.ai/verbal/guia-editorial.md`), que pasa a ser la fuente de la voz y el tono; las cifras sin validación humana y los conflictos entre fuentes se señalan, no se resuelven.
 - **3.1** (2026-10-19): el agente de copy y el criterio de entrega suman el checklist verbal del Magoya Brand Playbook (octubre 2026).
-- **3.0** (2026-08-19): el eje pasa de textura a **rol narrativo**. El ghost deck (títulos solos, antes de elegir módulos) es un gate de Fase 0. Las cinco reglas de textura se reemplazan por cuatro de argumento, y la textura queda como diagnóstico: era un gate insatisfacible — 0 de 362.880 órdenes del deck de producto pasaban, porque el catálogo no tiene un módulo visual que cargue un método, un journey ni un caso. Se agrega el chequeo de adorno, que es la falla que hizo abandonar al primer usuario y que nada medía. Fase 1b se elimina: era una fase de más.
-- **2.1** (2026-08-19): Fase 1b — componer la secuencia, con el campo `perfil` de cada módulo (lienzo y peso, derivados de la plantilla) y la regla anti-adorno: si el deck queda soso se cambia de módulo, no se decora. Sale de un feedback real: la AI eligió módulos de texto con lienzo blanco y sage uno atrás del otro, cumplió todas las reglas, y cuando le señalaron que estaba soso agregó carátulas decorativas.
-- **2.0** (2026-08-19): Fase 0 nueva (del material crudo a la narrativa, con registro de lo que
-  agregás y búsqueda de contradicciones antes de diseñar) · el agente de copy marca en vez de
-  reescribir · agente de títulos con umbral medido (17% → 80%) · contrato de entrega y
-  `validar --pieza` · legibilidad por fórmula descartada con evidencia · `ai/precedencia.json` para
-  cuando dos reglas oficiales chocan.
-- **1.3** (2026-08-11): fase 1 exige `ai/facts.json` como única fuente de datos de la empresa.
-- **1.2** (2026-08-11): fase 2 usa el selector; el agente de diseño valida plantilla-sin-cambios.
-- **1.1** (2026-08-10): el checklist técnico pasa a 15 chequeos.
-- **1.0** (2026-08-10): primera versión.
+- **1.0 a 3.0** (2026-08-10 a 2026-08-19): versiones atadas al catálogo de piezas que se retiró en la 4.0.

@@ -88,20 +88,19 @@ Desde dónde habla Magoya. Lo que defiende. **Magoya está del lado de entender,
 
 ## 6. Contra qué lucha Magoya (slide 40)
 
-Estos son nuestros archienemigos declarados. Nos sirven como punto de partida para escribir los puntos de vista de la marca.
+Estos son nuestros archienemigos declarados. La lista del playbook tenía doce; uno se retiró en la revisión de octubre de 2026. Nos sirven como punto de partida para escribir los puntos de vista de la marca.
 
 1. Medir el éxito en el lanzamiento y no en el uso.
 2. Proponer la misma solución para todos.
-3. Entregar un producto y no acompañar su implementación.
-4. Resolver sin la convicción de que va a ser útil.
-5. El "ya sé cómo resolverlo" antes de entender el problema.
-6. Reinventar la rueda, o decir que todo lo que el cliente tiene no sirve.
-7. La sobrepromesa y las soluciones mágicas.
-8. Equipos que no miden. Consultoras que no hacen.
-9. Culpar al usuario cuando la tecnología no se adapta a él.
-10. La soberbia: "Ya sé todo".
-11. Enamorarse de un producto que no resuelve un problema real.
-12. Hacer desde cero cuando se puede redefinir lo que existe. Patear todo y tener que desarmar para empezar.
+3. Resolver sin la convicción de que va a ser útil.
+4. El "ya sé cómo resolverlo" antes de entender el problema.
+5. Reinventar la rueda, o decir que todo lo que el cliente tiene no sirve.
+6. La sobrepromesa y las soluciones mágicas.
+7. Equipos que no miden. Consultoras que no hacen.
+8. Culpar al usuario cuando la tecnología no se adapta a él.
+9. La soberbia: "Ya sé todo".
+10. Enamorarse de un producto que no resuelve un problema real.
+11. Hacer desde cero cuando se puede redefinir lo que existe. Patear todo y tener que desarmar para empezar.
 
 **Estamos fundamentalmente opuestos** al arquetipo del mago: ese que piensa que "al usuario no le importa cómo se resuelven las cosas". Nosotros estamos a favor de evidenciar, de mostrar, de fundamentar, de educar.
 

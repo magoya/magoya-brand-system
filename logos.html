@@ -162,10 +162,11 @@ h2{margin:38px 0 14px;font-size:1.3rem;font-weight:700}
 <link rel="stylesheet" href="nav.css">
 </head>
 <body>
-<nav class="mg-topbar">
-  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
-  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><span class="navdiv"></span><a href="brand-book.html">Identidad visual</a><a href="piezas.html" class="on">Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub">IA en Campo</a><a href="ai.html">Integrar con AI</a>
-  <div class="mg-subnav"><span class="lbl">Piezas y plantillas</span><a href="piezas.html">Resumen</a><a href="slides.html">Slides</a><a href="plantillas.html">Plantillas listas</a><a href="pieces.html">Comerciales</a><a href="piezas.html#papeleria">Papelería</a><a href="piezas.html#merch">Merch</a><a href="library.html">Assets</a><a href="logos.html" class="on">Clientes</a></div>
+<nav class="mg-topbar" aria-label="Navegación principal">
+<a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · inicio"></a>
+<a href="index.html">Inicio</a>
+<details class="nav-group"><summary>Conocer la marca</summary><div><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><a href="brand-book.html">Identidad visual</a></div></details>
+<a href="library.html" class="on">Recursos</a><a href="ai.html">Integrar con AI</a><a href="ai-en-campo.html" class="program-link">IA en Campo ↗</a>
 </nav>
 
 <nav class="side">
@@ -174,7 +175,7 @@ h2{margin:38px 0 14px;font-size:1.3rem;font-weight:700}
   <span class="v">BRAND SYSTEM</span>
 </nav>
 
-<p class="crumb"><a href="piezas.html">Piezas y plantillas</a> › Logos de clientes & stack</p>
+<p class="crumb"><a href="library.html">Recursos</a> › Logos de clientes & stack</p>
 
 <span class="eyebrow">Magoya · Sistema de marca</span>
 <h1>Logos de clientes & partners</h1>
@@ -311,5 +312,6 @@ h2{margin:38px 0 14px;font-size:1.3rem;font-weight:700}
   });
 })();
 </script>
+<script src="nav.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
- "que_es": "Datos REALES y aprobados de Magoya para usar en piezas. Regla absoluta: lo que no está acá NO existe — las cifras de ejemplo de las plantillas jamás se entregan como reales; si falta un dato, se le pide al usuario y lo valida una persona del equipo de Magoya (ver validacion).",
- "version": "1.2 · 2026-10-19",
+ "que_es": "Datos REALES y aprobados de Magoya. Regla absoluta: lo que no está acá NO existe como dato real; si falta un dato, se le pide al usuario y lo valida una persona del equipo de Magoya (ver validacion).",
+ "version": "1.3 · 2026-10-22",
  "validacion": {
   "que_es": "Contrato de validación humana de la Guía editorial de Magoya (\"Manual voz y tono MAGOYA V2\", octubre de 2026), §2 (Métricas y resultados, Casos y confidencialidad) y §8 (Validación humana y permisos). Rige para todo lo que entra a este archivo y para toda cifra que una pieza comunique como real.",
   "quien_valida": "Una persona del equipo de Magoya valida toda métrica o resultado nuevo antes de que se comunique como real. La cifra tiene que ser aportada y validada explícitamente por alguien del equipo: la AI no puede inventar, estimar ni completar números, aunque el cliente sea anónimo. Si falta validación, se solicita.",
@@ -56,31 +56,26 @@
    "fuente": "logos.html — assets/logos/partners/"
   },
   {
-   "cifra": "41 módulos de presentación · 58 íconos · 239 assets",
+   "cifra": "58 íconos · 202 assets",
    "fuente": "el propio brand system",
    "uso": "solo para hablar del sistema, no de la compañía"
   }
  ],
  "clientes_nombrables": {
   "regla": "solo los que tienen logo real en assets/logos/clients/ — la lista completa y vigente está en ai/assets.json (carpeta assets/logos/clients)",
-  "destacados_en_piezas_del_sistema": [
-   "Apeel Sciences",
-   "Corteva",
-   "Syngenta",
-   "Bayer Crop Science",
-   "Bunge",
-   "Precision Planting"
-  ],
-  "conflicto_a_definir": "Señalado para decisión humana, no resuelto: la Guía editorial V2 (§2 y §8) dice que por defecto no se nombran clientes y que usar el nombre, el logo, una cita o una historia identificable exige autorización expresa del responsable. Esta lista se arma por los logos que existen en assets/logos/clients/, no por autorizaciones registradas. Una persona tiene que definir qué clientes tienen autorización y para qué uso (logo en grilla, caso, cita). Mientras tanto, si una pieza nombra un cliente, la AI lo señala en el bloque PEDIDO A HUMANOS."
+  "conflicto_a_definir": "Señalado para decisión humana, no resuelto: la Guía editorial V2 (§2 y §8) dice que por defecto no se nombran clientes y que usar el nombre, el logo, una cita o una historia identificable exige autorización expresa del responsable. Esta lista se arma por los logos que existen en assets/logos/clients/, no por autorizaciones registradas. Una persona tiene que definir qué clientes tienen autorización y para qué uso (logo en grilla, caso, cita). Mientras tanto, si un entregable nombra un cliente, la AI lo señala en el bloque PEDIDO A HUMANOS."
  },
  "equipo_nombrable": {
-  "regla": "solo personas con foto real en assets/photos/ y rol confirmado",
-  "en_el_sistema": [
-   "Camila López Colmano — AgTech Expert",
-   "Leo Dopacio",
+  "regla": "solo personas del equipo con rol confirmado",
+  "rol_confirmado": [
    "Varina Baldi — Founder & CEO"
   ],
-  "nota": "\"AgTech Expert\" figura como rol de Camila López Colmano en el sistema, pero \"agtech\" figura en el vocabulario a evitar del Brand Playbook (slide 48); la Guía editorial V2 (§3) lo evita como categoría identitaria de Magoya y pide evaluar cada palabra por función y contexto. Confirmar con ella el título vigente antes de usarlo en una pieza nueva."
+  "rol_por_confirmar": [
+   "Camila López Colmano — figura como AgTech Expert, a confirmar",
+   "Leo Dopacio — sin rol registrado"
+  ],
+  "nota": "\"AgTech Expert\" figura como rol de Camila López Colmano en el sistema, pero \"agtech\" figura en el vocabulario a evitar del Brand Playbook (slide 48); la Guía editorial V2 (§3) lo evita como categoría identitaria de Magoya y pide evaluar cada palabra por función y contexto. Confirmar con ella el título vigente antes de usarlo.",
+  "fotos": "La única foto de persona disponible es la de Varina Baldi, a color: assets/photos/varu-ceo-color.jpg. Faltan fotos a color del resto del equipo; no se reemplazan con placeholders."
  },
  "pendiente_de_aprobar": [
   {

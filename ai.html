@@ -270,9 +270,11 @@
 </head>
 <body>
 
-<nav class="mg-topbar">
-  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
-  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><span class="navdiv"></span><a href="brand-book.html">Identidad visual</a><a href="piezas.html">Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub">IA en Campo</a><a href="ai.html" class="on">Integrar con AI</a>
+<nav class="mg-topbar" aria-label="Navegación principal">
+<a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · inicio"></a>
+<a href="index.html">Inicio</a>
+<details class="nav-group"><summary>Conocer la marca</summary><div><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><a href="brand-book.html">Identidad visual</a></div></details>
+<a href="library.html">Recursos</a><a href="ai.html" class="on" aria-current="page">Integrar con AI</a><a href="ai-en-campo.html" class="program-link">IA en Campo ↗</a>
 </nav>
 
 <nav class="side" id="dock">
@@ -292,7 +294,7 @@
   <div class="inner">
     <span class="k">Sistema de marca · AI</span>
     <h1>Un solo proyecto<br>para trabajar <em>la marca</em> con AI.</h1>
-    <p>En Magoya, el trabajo de marca con AI pasa por un único lugar: el proyecto oficial de Claude <b>Magoya · Marca</b>, con las mismas instrucciones y los mismos archivos para todo el equipo. Nadie configura su propia herramienta. Abrís un chat en el proyecto, le das un brief y revisás lo que devuelve con los checklists.</p>
+    <p>En Magoya, el trabajo de marca con AI pasa por un único lugar: el proyecto oficial de Claude <b>Magoya · Marca</b>, que ayuda a escribir y revisar contenido on-brand con las reglas y los recursos de la marca, con las mismas instrucciones y los mismos archivos para todo el equipo. Nadie configura su propia herramienta. Abrís un chat en el proyecto, le das un brief y revisás lo que devuelve con los checklists.</p>
   </div>
 </header>
 
@@ -303,7 +305,7 @@
   <div class="inner">
   <span class="kicker">El proyecto oficial</span>
   <h2>Todo el equipo usa<br>el mismo proyecto</h2>
-  <p class="lead">Si cada persona le explica la marca a la AI a su manera, la marca se degrada pieza por pieza: lima de más, un verde que no existe, un chip sólido, una foto a color, una cifra que nadie validó. Por eso hay un solo proyecto, creado y mantenido por Magoya en su organización de Claude y compartido con el equipo.</p>
+  <p class="lead">Si cada persona le explica la marca a la AI a su manera, la marca se degrada pieza por pieza: lima donde no va, un verde que no existe, un chip sólido, una foto de stock, una cifra que nadie validó. Por eso hay un solo proyecto, creado y mantenido por Magoya en su organización de Claude y compartido con el equipo.</p>
   <div class="grid g3">
     <div class="stat"><div class="n">Un solo contexto</div><div class="d">Las instrucciones y los archivos de marca los carga quien administra el proyecto. Vos no subís ni pegás nada.</div></div>
     <div class="stat"><div class="n">La versión vigente</div><div class="d">Cuando la marca cambia, el proyecto se actualiza una vez y todo el equipo trabaja con la versión nueva sin hacer nada.</div></div>
@@ -342,13 +344,13 @@
     </div>
     <pre id="briefTpl">Objetivo: qué tiene que lograr la pieza.
 Audiencia: quién la va a leer (rol, tipo de empresa, mercado).
-Canal y formato: dónde sale y en qué medida (ej. LinkedIn, feed 1080×1080).
+Canal y formato: dónde sale y en qué medida (ej. LinkedIn, mail, web).
 Idioma: español, inglés o portugués.
 Fuente de datos: facts.json, un documento aprobado (adjuntalo) o "sin cifras".
 Pedido: lo que necesitás, en una o dos líneas.</pre>
   </div>
 
-  <p class="note" style="margin-top:22px">Si el pedido necesita leer el sitio (una plantilla del catálogo, un asset), activá <b>Web search</b> desde el menú <b>+</b> del chat: con eso Claude puede leer las URLs públicas de brand.magoya.com. Si la opción no aparece, la tiene que habilitar un Owner de la organización.</p>
+  <p class="note" style="margin-top:22px">Si el pedido necesita leer el sitio (un asset, una regla publicada), activá <b>Web search</b> desde el menú <b>+</b> del chat: con eso Claude puede leer las URLs públicas de brand.magoya.com. Si la opción no aparece, la tiene que habilitar un Owner de la organización.</p>
   </div>
 </section>
 
@@ -360,24 +362,24 @@ Pedido: lo que necesitás, en una o dos líneas.</pre>
   <p class="lead">La AI propone; la marca aprueba. Pasá cada entrega por esta lista. Cuando algo falla, se corrige nombrando la regla, no pidiendo “que quede más lindo”. Es la misma lista que <a class="lk" href=".ai/checklist.md">.ai/checklist.md</a>, que trae además cómo se verifica cada punto y ya está cargada en el proyecto: podés pedirle a Claude que la corra sobre su propia entrega. Si la entrega tiene texto, pasa también el <a class="lk" href="#checklist-verbal">checklist verbal</a>.</p>
   <ol class="check" id="checklist">
     <li><b>Solo hex de la paleta.</b> Cada color sale de <code>tokens.json</code>. Un verde “parecido” (<code>#4CAF50</code>, <code>#2ECC71</code>) es un verde que no es de Magoya.</li>
-    <li><b>Cero naranja y cero amarillo.</b> Ningún tono del brand viejo. Excepción única: <code>#FFC67B</code>, y solo como piel de personaje.</li>
+    <li><b>Cero naranja y cero amarillo.</b> Ningún tono del brand viejo.</li>
     <li><b>Lima nunca como texto sobre claro.</b> Sobre blanco, sage, crema o papel el verde-texto es <code>#009145</code> y solo ≥24px bold.</li>
     <li><b>#00DE68 como texto solo sobre oscuro.</b> Sobre fondo claro no se usa: ahí va <code>#009145</code>.</li>
-    <li><b>Como máximo un golpe de lima.</b> Contá CTA, display, motivo, ícono destacado y marca a mano: si hay dos en lima, sobra uno. Cero lima también es válido.</li>
-    <li><b>Balance 75/25.</b> Neutros dominan, verdes ~25%. Nunca una pieza 100% negra ni 100% verde.</li>
-    <li><b>Manrope y la jerarquía declarada.</b> Ninguna otra tipografía (ni Inter, ni Poppins, ni <code>system-ui</code> suelto). Máximo tres niveles en una pieza escrita a mano; una plantilla del catálogo llega a siete.</li>
+    <li><b>Lima solo como acento.</b> Acentos, detalles, resaltar o CTA. Nada más.</li>
+    <li><b>Verde Magoya protagonista.</b> El verde que manda es el <code>#133825</code>. Las proporciones de uso entre colores están pendientes de definir: no se miden porcentajes.</li>
+    <li><b>Manrope y tres niveles.</b> Ninguna otra tipografía (ni Inter, ni Poppins, ni <code>system-ui</code> suelto) y como máximo tres niveles tipográficos.</li>
     <li><b>Cero emojis.</b> Solo manitos que señalan un CTA y banderas de países. Ninguno en títulos.</li>
-    <li><b>Cero gradientes.</b> Ni glossy, ni 3D, ni glass, ni sombras de brillo. El único permitido es el scrim verde profundo 55–86% sobre foto aérea.</li>
-    <li><b>Máximo dos recursos gráficos</b> además de la tipografía, y sin pares prohibidos: dos fotos, foto + personaje, foto aérea + paño de semicírculos, personaje + ícono.</li>
-    <li><b>Motivo al corte.</b> Los semicírculos nacen de un borde o de detrás de un objeto, nunca cortados flotando en el aire.</li>
-    <li><b>Personajes sin rostro y al borde.</b> Planos, cinco colores de la paleta cerrada, recortados por un borde del lado opuesto al texto, nunca sobre foto ni centrados como clipart.</li>
-    <li><b>Botón vs chip, y assets reales.</b> Botón rect radio 10px, chip pill outline; logos de clientes reales; sin resaltador sólido detrás de texto.</li>
+    <li><b>Cero gradientes.</b> Ni glossy, ni 3D, ni glass, ni sombras de brillo. El único permitido es el overlay verde profundo 55–86% sobre foto aérea.</li>
+    <li><b>Fotografía aérea.</b> Siempre cenital, en color natural, y con overlay verde profundo cuando lleva texto.</li>
+    <li><b>Fotografía de personas.</b> Siempre a color, sin ningún detalle encima (ni barra ni acento verde), mejor en espacios abiertos.</li>
+    <li><b>Sin ilustración.</b> Magoya no usa ilustración.</li>
+    <li><b>Resaltar con círculo o flechas.</b> Una palabra se destaca con un círculo o con flechas que la señalan. Nunca subrayado ni resaltador sólido detrás del texto.</li>
+    <li><b>Botón vs chip, y logos reales.</b> Botón rect radio 10px, chip pill outline; logos de clientes reales.</li>
     <li><b>Chips: solo texto.</b> El chip va en mayúsculas, sin punto delante y sin ícono adentro.</li>
-    <li><b>Espaciado en escala.</b> Margin, padding y gap salen de la escala base 4 de <code>tokens.json</code>, con un solo eje de alineación en una pieza escrita a mano.</li>
+    <li><b>Espaciado en escala.</b> Margin, padding y gap salen de la escala base 4 de <code>tokens.json</code>, con un solo eje de alineación.</li>
     <li><b>AI, en cualquier idioma.</b> Única excepción: el nombre propio <b>IA en Campo</b>. El detalle está en el checklist verbal.</li>
-    <li><b>Wordmark correcto.</b> Variante según el lienzo, 211px de ancho y la posición que declara la plantilla, con las letterforms del asset canónico.</li>
   </ol>
-  <p class="note" style="margin-top:26px">El archivo agrega los extras por formato (slides, redes, logo, copy, merch, fotos de personas) y la aclaración de <a class="lk" href="ai-en-campo.html">IA en Campo</a>, que tiene manual propio y rompe tres reglas del core a propósito. Y una regla de proceso: si una entrega falla tres o más puntos, no la corrijas de a parches; pedí que la rehaga desde un brief más específico.</p>
+  <p class="note" style="margin-top:26px">El archivo agrega los extras por formato (logo, redes, copy) y la aclaración de <a class="lk" href="ai-en-campo.html">IA en Campo</a>, que tiene manual propio y rompe tres reglas del core a propósito. Y una regla de proceso: si una entrega falla tres o más puntos, no la corrijas de a parches; pedí que la rehaga desde un brief más específico.</p>
 
   <h3 id="checklist-verbal" style="margin-top:56px">Checklist verbal: cualquier texto de Magoya</h3>
   <p class="lead" style="margin-bottom:26px">Los chequeos visuales miran la pieza; estos miran el texto. Son las ocho preguntas del control antes de entregar de la Guía editorial (§9). Si la última da “queda algo por confirmar”, el texto sale como borrador pendiente de revisión, con lo que falta señalado. La versión completa, con cómo se verifica, cuándo falla y la fuente de cada punto, es <a class="lk" href=".ai/checklist-verbal.md">.ai/checklist-verbal.md</a>, también cargada en el proyecto.</p>
@@ -411,52 +413,24 @@ Pedido: lo que necesitás, en una o dos líneas.</pre>
   <div class="inner">
   <span class="kicker">Pedidos</span>
   <h2>El mismo pedido, flojo y bien escrito</h2>
-  <p class="lead">Un pedido flojo obliga a la AI a inventar: formato, tono, color, jerarquía. Un pedido bien escrito cierra esas decisiones de antemano, y lo que vuelve se puede usar. Tres ejemplos para escribir dentro del proyecto. Las cifras quedan pendientes hasta contar con datos aprobados en <a class="lk" href="ai/facts.json">facts.json</a>.</p>
+  <p class="lead">Un pedido flojo obliga a la AI a inventar: formato, tono, color, jerarquía. Un pedido bien escrito cierra esas decisiones de antemano, y lo que vuelve se puede usar. Un ejemplo para escribir dentro del proyecto. Las cifras quedan pendientes hasta contar con datos aprobados en <a class="lk" href="ai/facts.json">facts.json</a>.</p>
 
   <div class="pair">
     <div class="col weak">
       <span class="h">Flojo</span>
-      <p class="q">Hacé un posteo para LinkedIn sobre un caso de éxito con un cliente. Que quede lindo y moderno.</p>
+      <p class="q">Fijate si este texto está bien para la marca.</p>
     </div>
     <div class="col strong">
       <span class="h">Bien especificado</span>
-      <p class="q">Pieza de feed 1:1 (1080×1080) para LinkedIn de Magoya, receta dark: fondo negro #161616, dato en lima #A2FF00 al ~70% del ancho, personaje plano recortado por el borde derecho, wordmark crema abajo-izquierda.
-Dato: [PENDIENTE: reducción del ciclo de reporte, con unidad, período y base de comparación aprobados en facts.json]. Marcar la pieza BORRADOR y agregar PEDIDO A HUMANOS hasta recibir validación. Sin nombrar al cliente.
-Copy en inglés (idioma principal de LinkedIn), territorio Uso, pruebas y no adjetivos, sin emojis. Máximo tres niveles tipográficos. Devolveme HTML+CSS usando var() de tokens.css.</p>
+      <p class="q">Revisá este texto para la web de Magoya (en inglés; audiencia: gerentes de producto en empresas del agro) contra el checklist verbal.
+Devolveme una lista de observaciones, no una versión nueva: cada una con la regla que rompe y una alternativa.
+Marcá toda cifra que no esté en facts.json como [PENDIENTE] y todo cliente nombrado sin autorización registrada.
+[pegar el texto]</p>
     </div>
-    <div class="chg"><b>Qué cambió:</b> formato y medida exactos, una de las tres recetas de feed en vez de “lindo”, el espacio para un dato aprobado sin inventar resultados, el cliente sin nombrar, la dosis única de lima definida, y la salida pedida en código con tokens, no una descripción que después hay que interpretar.</div>
+    <div class="chg"><b>Qué cambió:</b> “bien” pasó a ser un criterio: el checklist verbal, con idioma y audiencia definidos. Se pidió observar y no reescribir, para que el texto aprobado no se toque, y se dejaron marcadas de antemano las cifras y los clientes que la AI no puede validar.</div>
   </div>
 
-  <div class="pair">
-    <div class="col weak">
-      <span class="h">Flojo</span>
-      <p class="q">Armame un slide con las métricas del proyecto. Poné los números destacados con colores.</p>
-    </div>
-    <div class="col strong">
-      <span class="h">Bien especificado</span>
-      <p class="q">Slide de métricas 1920×1080 para el deck comercial, lienzo sage #EEF2EC, margen interior 7%.
-Tres cifras: [PENDIENTE: reducción del tiempo de carga] · [PENDIENTE: plazo al primer release] · [PENDIENTE: equipos embebidos]. Usar solo datos aprobados en facts.json; hasta entonces, marcar BORRADOR y agregar PEDIDO A HUMANOS.
-Cifras en Manrope 800, tracking −3%, negro #161616; un solo golpe de lima en la cifra principal (subrayado, no bloque de resaltado). Kicker en MAYÚSCULAS con tracking +12%. Sin iconos decorativos, sin sombras.
-Título en inglés, tono neutral, sin frases grandilocuentes.</p>
-    </div>
-    <div class="chg"><b>Qué cambió:</b> “colores” pasó a ser una regla: un golpe de lima, subrayado y no resaltador. Se fijaron lienzo, margen del sistema de slides, escala tipográfica y los espacios para cifras aprobadas. Y se cerró el idioma y el tono, que es donde la AI suele irse de registro.</div>
-  </div>
-
-  <div class="pair">
-    <div class="col weak">
-      <span class="h">Flojo</span>
-      <p class="q">Necesito un one-pager de Magoya para mandarle a un prospecto. Usá la info de la web.</p>
-    </div>
-    <div class="col strong">
-      <span class="h">Bien especificado</span>
-      <p class="q">One-pager A4 vertical para un prospecto de agroinsumos en Brasil 🇧🇷, derivado del one-pager madre de pieces.html. No inventes una plantilla nueva.
-Estructura: wordmark verde arriba-izquierda (20% del ancho), hero con la definición “Hands-on software and AI consulting firm for agribusiness.”, los tres territorios (uso, integración, hands-on) en una fila, dos casos con datos de facts.json (clientes sin nombrar salvo autorización registrada), pie con filete verde digital y avatar m.
-Copy en inglés, 90 palabras por bloque como techo. Sin fotos de personas si no te paso los archivos. Neutros ~75%, un solo acento lima en el CTA.</p>
-    </div>
-    <div class="chg"><b>Qué cambió:</b> se ancló a una plantilla que ya existe en vez de dejar que invente una, se listaron los bloques en orden, se puso techo de palabras y se bloqueó de antemano el error típico: fotos, logos o casos que la AI no tiene y termina fabricando.</div>
-  </div>
-
-  <p class="note">Patrón de los tres: <b>formato y medida · receta o plantilla del sistema · el contenido real · la dosis de color · idioma, territorio y tono · el formato de salida</b>. Seis líneas y la primera entrega ya sirve.</p>
+  <p class="note">Patrón: <b>formato y canal · audiencia · el contenido real · las reglas que aplican · idioma, territorio y tono · el formato de salida</b>. Seis líneas y la primera entrega ya sirve.</p>
   </div>
 </section>
 
@@ -470,12 +444,12 @@ Copy en inglés, 90 palabras por bloque como techo. Sin fotos de personas si no 
     <div class="dd">
       <span class="h">Hacer: puede resolverlo sola</span>
       <ul>
-        <li><b>Variaciones de layout</b> sobre una receta que ya existe: mover jerarquía, probar tres versiones del mismo slide, adaptar 1:1 a 9:16.</li>
+        <li><b>Variaciones de layout</b> sobre algo ya aprobado: mover jerarquía o probar tres versiones de lo mismo.</li>
         <li><b>Copy en inglés y traducciones</b> con la voz de marca: los cuatro rasgos, el vocabulario de <a class="lk" href="lenguaje.html">lenguaje</a> y el glosario de <code>vocabulary.json</code>.</li>
         <li><b>Código con tokens</b>: HTML, CSS o React que consume <code>var(--token)</code> de <code>tokens.css</code>, sin un hex suelto.</li>
         <li><b>Revisión contra el manual</b>: pasarle una pieza y pedirle los chequeos visuales y el checklist verbal de <a class="lk" href="#validar">validar</a>.</li>
         <li><b>Trabajo de volumen</b>: nombres de archivo, alts, metadata, tablas de assets, versiones cortas y largas de un mismo texto.</li>
-        <li><b>Estructura de contenido</b>: ordenar un deck, resumir un caso, proponer titulares alternativos.</li>
+        <li><b>Estructura de contenido</b>: ordenar una propuesta, resumir un caso, proponer titulares alternativos.</li>
       </ul>
     </div>
     <div class="dd avoid">
@@ -483,14 +457,13 @@ Copy en inglés, 90 palabras por bloque como techo. Sin fotos de personas si no 
       <ul>
         <li><b>Inventar colores.</b> La paleta está cerrada. Un verde “parecido” es un verde que no es de Magoya.</li>
         <li><b>Dibujar o reconstruir el logo.</b> El wordmark y los avatares son archivos: se referencian desde la <a class="lk" href="library.html">librería</a>, no se generan.</li>
-        <li><b>Pedir fotos o ilustraciones generadas.</b> Claude no genera fotos ni ilustraciones: arma diagramas y visuales en HTML o SVG. Las personas van con fotos reales en B&amp;N.</li>
-        <li><b>Crear plantillas nuevas de cero</b> en vez de usar las de <a class="lk" href="slides.html">slides</a>, <a class="lk" href="pieces.html">comerciales</a> o Magoya Studio. Si falta una plantilla, se diseña; no se improvisa por prompt.</li>
+        <li><b>Pedir fotos generadas.</b> Claude no genera fotos: arma diagramas y visuales en HTML o SVG. Las personas van con fotos reales, a color.</li>
         <li><b>Decidir reglas de marca.</b> Si el manual no lo dice, la respuesta no es “que lo resuelva la AI”: se pregunta y se agrega al manual.</li>
         <li><b>Poner logos de clientes que no existen</b> o placeholders. Los logos son siempre reales, y solo de clientes con autorización.</li>
       </ul>
     </div>
   </div>
-  <p class="note" style="margin-top:28px">Cuando el pedido cae del lado derecho, el camino es otro: <a class="lk" href="library.html">librería de assets</a> para archivos reales, <a class="lk" href="slides.html">slides</a> y <a class="lk" href="pieces.html">comerciales</a> para plantillas, y Magoya Studio para producir piezas de redes con receta guardada.</p>
+  <p class="note" style="margin-top:28px">Cuando el pedido cae del lado derecho, el camino es otro: <a class="lk" href="library.html">Recursos</a> para archivos reales. Las piezas de IA en Campo se producen en Magoya Studio.</p>
   <div style="margin-top:30px;display:flex;gap:10px;flex-wrap:wrap">
     <span class="pill pill-green">La AI propone</span><span class="pill">La marca aprueba</span>
   </div>
@@ -530,7 +503,7 @@ Copy en inglés, 90 palabras por bloque como techo. Sin fotos de personas si no 
       <h4>Los archivos del sitio</h4>
       <ol class="howto">
         <li>Los archivos machine-readable siguen publicados en brand.magoya.com: de ahí salen las versiones que se suben al proyecto.</li>
-        <li>Con Web search activo, Claude lee desde el sitio lo que no está en el knowledge: plantillas, assets y el índice <code>llms.txt</code>.</li>
+        <li>Con Web search activo, Claude lee desde el sitio lo que no está en el knowledge: assets, constraints y el índice <code>llms.txt</code>.</li>
         <li>Que estén públicos no habilita otras herramientas para el trabajo del equipo: el camino oficial es el proyecto.</li>
       </ol>
     </div>
@@ -570,7 +543,7 @@ Copy en inglés, 90 palabras por bloque como techo. Sin fotos de personas si no 
   </table>
   </div>
 
-  <p class="note" style="margin-top:24px">Lo que Claude lee del sitio con Web search, sin cargarlo al knowledge: <a class="lk" href="llms.txt">llms.txt</a> (el índice), <a class="lk" href="plantillas.html">las 41 plantillas</a> con su <a class="lk" href="ai/selector.json">selector</a> de 31 filas, <a class="lk" href="ai/assets.json">assets.json</a> (239 assets con URL directa), <a class="lk" href="ai/constraints.json">constraints.json</a> y <a class="lk" href="llms-full.txt">llms-full.txt</a> (casi todo en un solo archivo). Assets binarios (logos, fotos, iconos) están en la <a class="lk" href="library.html">librería de assets</a>.</p>
+  <p class="note" style="margin-top:24px">Lo que Claude lee del sitio con Web search, sin cargarlo al knowledge: <a class="lk" href="llms.txt">llms.txt</a> (el índice), <a class="lk" href="ai/assets.json">assets.json</a> (202 assets con URL directa), <a class="lk" href="ai/constraints.json">constraints.json</a> y <a class="lk" href="llms-full.txt">llms-full.txt</a> (casi todo en un solo archivo). Assets binarios (logos, fotos, iconos) están en <a class="lk" href="library.html">Recursos</a>.</p>
   <p class="note" style="margin-top:12px">Si una ruta que empieza con punto no se puede bajar desde el sitio, usá el mirror crudo del repo: <code>https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/…</code>, el mismo archivo sin pasar por GitHub Pages.</p>
   </div>
 </section>
@@ -688,5 +661,6 @@ Copy en inglés, 90 palabras por bloque como techo. Sin fotos de personas si no 
   });
 })();
 </script>
+<script src="nav.js"></script>
 </body>
 </html>
