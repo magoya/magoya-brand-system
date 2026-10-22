@@ -211,10 +211,11 @@
 </head>
 <body>
 <div class="wrap">
-<nav class="mg-topbar">
-  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
-  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><span class="navdiv"></span><a href="brand-book.html" class="on">Identidad visual</a><a href="piezas.html">Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub">IA en Campo</a><a href="ai.html">Integrar con AI</a>
-  <div class="mg-subnav"><span class="lbl">Identidad visual</span><a href="brand-book.html">Manual visual</a><a href="icons.html" class="on">Librería de íconos</a></div>
+<nav class="mg-topbar" aria-label="Navegación principal">
+<a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · inicio"></a>
+<a href="index.html">Inicio</a>
+<details class="nav-group"><summary>Conocer la marca</summary><div><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><a href="brand-book.html">Identidad visual</a></div></details>
+<a href="library.html" class="on">Recursos</a><a href="ai.html">Integrar con AI</a><a href="ai-en-campo.html" class="program-link">IA en Campo ↗</a>
 </nav>
 
 <nav class="side" id="side-auto">
@@ -257,7 +258,7 @@
           <span class="uico hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-ai"/></svg></span>
         </div>
       </div></div>
-      <p class="ucap">Grandes y en fila, <b>uno solo en lima</b> — el destacado. Sobre oscuro van en crema. Nunca junto a personajes ilustrados.</p>
+      <p class="ucap">Grandes y en fila, <b>uno solo en lima</b> — el destacado. Sobre oscuro van en crema.</p>
     </div>
     <div class="ucard">
       <span class="uk">En un documento o web</span>
@@ -277,7 +278,6 @@
       <li>Uno solo destacado: lima sobre oscuro, verde #009145 sobre claro.</li></ul></div>
     <div class="dd avoid"><span class="h">Evitar</span><ul>
       <li>Íconos decorativos que no agregan significado.</li>
-      <li>Mezclar íconos con personajes ilustrados en la misma pieza.</li>
       <li>Rellenos sólidos, 3D, sombras, o dos tamaños en la misma fila.</li></ul></div>
   </div>
 </div>
@@ -532,5 +532,6 @@ document.getElementById('sel-all').addEventListener('click', function(){
   });
 })();
 </script>
+<script src="nav.js"></script>
 </body>
 </html>

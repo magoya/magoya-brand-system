@@ -109,24 +109,8 @@
     position:absolute;left:18px;bottom:14px;z-index:2;color:var(--cream-50);
     font-weight:var(--weight-bold);font-size:14px;
   }
-  .bw{filter:grayscale(1) contrast(1.05)}
 
-  /* ---------- banner LinkedIn: panel sólido con lockup + foto limpia (sin scrim sobre el print de la remera) ---------- */
-  .lnkbn{aspect-ratio:4/1;border-radius:var(--radius-lg);overflow:hidden;position:relative;display:flex;background:var(--ink-950)}
-  .lnkbn .panel{width:36%;flex-shrink:0;display:flex;flex-direction:column;justify-content:center;padding:24px 30px 24px 37px;color:var(--cream-50)}
-  .lnkbn .panel img{width:130px}
-  .lnkbn .panel div{font-size:14px;color:var(--cream-200);margin-top:8px}
-  .lnkbn .pw2{flex:1;min-width:0;overflow:hidden}
-  .lnkbn .pw2 img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05) blur(1.2px);transform:scale(1.04)}
-  .lnkbn .rule{position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--emerald-500)}
-  .accent-bar{position:absolute;left:18px;bottom:44px;z-index:2;width:52px;height:8px;background:var(--lime-500);border-radius:4px}
 
-  /* ---------- illustration ---------- */
-  .illu-card{background:var(--sage-50);border-radius:var(--radius-lg);padding:26px;display:flex;align-items:center;justify-content:center;min-height:240px}
-  .illu-card img{max-height:220px}
-  .motif-card{background:var(--white);border:1px solid var(--color-hairline);border-radius:var(--radius-lg);padding:26px;display:flex;align-items:center;justify-content:center;min-height:200px}
-  .motif-card img{max-height:170px}
-  .motif-dark{background:var(--green-950);border:none}
 
   td.si{color:var(--emerald-700);font-weight:800;font-size:15px}
   td.no{color:var(--danger-500);font-weight:800;font-size:15px}
@@ -236,7 +220,6 @@
   .quote-card .q p{font-size:15px;font-weight:var(--weight-semibold);line-height:1.45}
   .quote-card .q .who{margin-top:14px;font-size:13px;color:var(--gray-600)}
   .quote-card .q .who b{display:block;color:var(--ink-900)}
-  .underline-lime{border-bottom:6px solid var(--lime-500);padding-bottom:2px}
 
   .stat{background:var(--white);border:1px solid var(--color-hairline);border-radius:var(--radius-lg);
         padding:30px 28px;position:relative;overflow:hidden;display:flex;flex-direction:column}
@@ -391,7 +374,6 @@
   .pcard2{border:1px solid var(--color-hairline);border-radius:var(--radius-lg);overflow:hidden;background:var(--white)}
   .pcard2 .pw{position:relative;overflow:hidden;isolation:isolate;will-change:transform;-webkit-transform:translateZ(0);transform:translateZ(0)}
   .pcard2 .pw img{width:100%;height:280px;object-fit:cover;display:block}
-  .pcard2 .pw img.bw{filter:grayscale(1) contrast(1.05)}
   .pcard2 .pw.overlay::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,33,23,.18),rgba(12,33,23,.62))}
   .pcard2 .lbl{position:absolute;left:18px;bottom:14px;z-index:2;color:var(--cream-50);font-weight:700;font-size:14px}
   .pcard2 figcaption{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;border-top:1px solid var(--color-hairline)}

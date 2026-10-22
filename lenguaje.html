@@ -15,9 +15,11 @@
 </head>
 <body>
 
-<nav class="mg-topbar">
-  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
-  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html" class="on">Lenguaje</a><a href="aplicacion.html">Aplicación</a><span class="navdiv"></span><a href="brand-book.html">Identidad visual</a><a href="piezas.html">Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub">IA en Campo</a><a href="ai.html">Integrar con AI</a>
+<nav class="mg-topbar" aria-label="Navegación principal">
+<a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · inicio"></a>
+<a href="index.html">Inicio</a>
+<details class="nav-group on"><summary>Conocer la marca</summary><div><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html" class="on" aria-current="page">Lenguaje</a><a href="aplicacion.html">Aplicación</a><a href="brand-book.html">Identidad visual</a></div></details>
+<a href="library.html">Recursos</a><a href="ai.html">Integrar con AI</a><a href="ai-en-campo.html" class="program-link">IA en Campo ↗</a>
 </nav>
 
 <nav class="side" id="dock">
@@ -271,5 +273,6 @@
 </footer>
 
 <script src="manual.js"></script>
+<script src="nav.js"></script>
 </body>
 </html>

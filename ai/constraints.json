@@ -1,6 +1,6 @@
 {
- "que_es": "Constraints duros de la marca: mínimos, máximos, distancias y disposiciones que NO requieren criterio de diseño — se cumplen o la pieza está mal. Complementa a tokens.json (valores) y BRAND.md (doctrina). Nada de esto se adapta ni se asume: si un valor no está acá ni en tokens.json, preguntá antes de inventar.",
- "version": "1.0 · 2026-08-11",
+ "que_es": "Constraints duros de la marca: mínimos, máximos, distancias y disposiciones que NO requieren criterio de diseño: se cumplen o la pieza está mal. Complementa a tokens.json (valores) y BRAND.md (doctrina). Nada de esto se adapta ni se asume: si un valor no está acá ni en tokens.json, preguntá antes de inventar.",
+ "version": "1.1 · 2026-10-22",
  "logo": {
   "tamano_minimo": {
    "pantalla": "90px de ancho",
@@ -8,11 +8,6 @@
    "por_debajo": "usar el avatar 'm', nunca el wordmark achicado"
   },
   "clearspace": "la altura de la letra 'm' del propio wordmark, en los 4 lados — nada entra en esa zona",
-  "en_slides_interiores": {
-   "ancho": "11% del ancho del lienzo (211px en 1920)",
-   "posicion": "x 7.5% · y 3.2% (arriba-izquierda)",
-   "variante": "cream sobre fondo oscuro, black sobre claro"
-  },
   "prohibido": [
    "estirar",
    "rotar",
@@ -21,41 +16,13 @@
    "redibujar (usar SIEMPRE el SVG del manifiesto)"
   ]
  },
- "slides_1920x1080": {
-  "margen_interior": "7% del ancho (134px) en los 4 lados — ningún texto lo cruza; solo fotos a sangre, paño al corte y filetes",
-  "escala_tipografica_pt": {
-   "display_hero": 126,
-   "display": 84,
-   "titulo": 56,
-   "cuerpo_grande": 42,
-   "conversion": "1pt = 1.333px"
-  },
-  "display_ancho_maximo": "85% del ancho del lienzo; el display de apertura ~70%",
-  "numero_de_pagina": {
-   "posicion": "x 76.5% · y 3.5%, alineado a la derecha",
-   "formato": "dos dígitos (07)"
-  },
-  "golpes_de_lima": "como máximo UNO por slide (CTA o dato o fila destacada — nunca dos), y CERO es válido: el acento es un techo, no una cuota. 19 de las 41 plantillas oficiales no llevan lima.",
-  "fondos_permitidos": [
-   "#FFFFFF",
-   "sage #EEF2EC",
-   "#133825 solo en apertura/cierre/citas"
-  ],
-  "margen_7_vs_eje_7_5": "No se contradicen y conviene saber por qué: 7% (134px) es el margen MÍNIMO que nada puede cruzar; 7.5% (144px) es el eje de trabajo donde las plantillas alinean el contenido. O sea 134 es el piso legal y 144 es dónde apoya la grilla. Si construís desde cero, usá 144 y cumplís los dos."
+ "color": {
+  "regla": "El Verde Magoya #133825 es el verde protagonista. El lima #A2FF00 se usa solo para acentos, detalles, resaltar o CTA, y nunca como texto sobre claro.",
+  "proporciones": "pendientes de definir: ver pendiente_de_definir. No se aplican porcentajes."
  },
- "redes": {
-  "feed": {
-   "lienzo": "1080×1080",
-   "display_y_cifras": "≈70% del ancho máximo"
-  },
-  "story": {
-   "lienzo": "1080×1920",
-   "zona_segura": "96px arriba y abajo — nada de texto ni logo ahí"
-  },
-  "ai_en_campo_madre": {
-   "lienzo": "1080×1350 (4:5)",
-   "regla": "ver manual anexo ai-en-campo.html — hereda estos constraints salvo sus 3 rupturas"
-  }
+ "ai_en_campo_madre": {
+  "lienzo": "1080×1350 (4:5)",
+  "regla": "ver manual anexo ai-en-campo.html — hereda estos constraints salvo sus 3 rupturas"
  },
  "espaciado_y_alineacion": {
   "referencia": "tokens.json → spacing.rules y components (escala base-4, paddings canónicos de botón 13/26 y chip 6/15)",
@@ -70,22 +37,16 @@
  "texto": {
   "niveles_maximos_por_pieza": 3,
   "ancho_maximo_de_parrafo": "≈66 caracteres por línea (74 para notas al pie); si una línea pasa eso, la caja está mal usada",
-  "en_plantillas": "el límite real por slot está en ai/templates/index.json (max_caracteres_aprox y max_lineas) — si el texto no entra, se acorta el TEXTO, nunca la fuente",
   "kickers": "MAYÚSCULAS, tracking +0.12em",
   "labels_de_boton": "sentence case",
   "nomenclatura_ia": "SIEMPRE 'AI' para nombrar la inteligencia artificial, en cualquier idioma del texto ('Software y AI', 'capacidades de AI', 'Integrar con AI'). Única excepción: el nombre propio del programa 'IA en Campo', que se escribe siempre así, en cualquier idioma, y nunca 'AI en Campo'. Fuente: Magoya Brand Playbook, oct 2026, slide 50. Los nombres de archivo y las URLs del sistema siguen en 'ai-' (ai-en-campo.html, /ai/): eso NO se copia al texto de la pieza.",
   "reglas_verbales": "el resto de las reglas de texto (definición, vocabulario de marca, frases prohibidas, glosario ES · EN · PT) está en vocabulary.json y .ai/verbal/ — se valida con .ai/checklist-verbal.md. Territorios 50/30/20 y diales por país son guías de planificación y referencia orientativa, no chequeos por texto (guía editorial V2, §4)"
  },
- "verificacion": "los 17 chequeos de .ai/checklist.md y, si la pieza tiene texto, .ai/checklist-verbal.md — este archivo agrega los números; los checklists dicen cómo auditarlos",
+ "verificacion": "los chequeos de .ai/checklist.md y, si hay texto, .ai/checklist-verbal.md: este archivo agrega los números; los checklists dicen cómo auditarlos",
  "pendiente_de_definir": [
-  "mínimos tipográficos para web/app (px por nivel): el mínimo legible de cada nivel. OJO: la escala SÍ existe — tokens.json tiene typography.scale en rem (xs→7xl) para web y slideScale en pt para slides. Lo que falta es el piso en px, no la escala",
+  "proporciones de uso del color: la proporción por porcentajes anterior quedó sin efecto (feedback del equipo, 22 oct 2026) y todavía no hay una nueva",
+  "mínimos tipográficos para web/app (px por nivel): el mínimo legible de cada nivel. La escala existe (typography.scale en rem, de xs a 7xl, en tokens.json); lo que falta es el piso en px",
   "clearspace numérico de los avatares (hoy solo el wordmark lo tiene)",
-  "margen mínimo de piezas impresas (one-pager/flyer) en mm"
- ],
- "proporcion_75_25": {
-  "unidad": "el deck completo, NO la slide",
-  "por_que": "la portada oficial M1 es una foto tapada al ~70% por scrim verde profundo: medida por slide, la propia portada de la marca falla su propia regla. Medida sobre el deck, cierra.",
-  "como_se_mide": "sumá el área de fondo oscuro/verde de todas las slides y dividí por el área total del deck. Apertura y cierre en verde pleno son la excepción esperada, no el default",
-  "en_piezas_sueltas": "una pieza que no es parte de un deck sí se mide sola"
- }
+  "margen mínimo de piezas impresas en mm"
+ ]
 }

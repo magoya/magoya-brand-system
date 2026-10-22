@@ -1,24 +1,26 @@
-/* Navegación compartida del Brand System v2.0
-   Estructura del Brand Playbook (oct 2026, slide 67):
-   0 Inicio · A–D capa verbal · E–F capa visual · G–H programa y AI.
-   Se carga después del <style> de cada página para pisar el topbar viejo. */
+/* Navegación compartida del sistema de marca.
+   Una sola barra igual en todas las páginas: Inicio · Conocer la marca (menú) ·
+   Recursos · Integrar con AI · IA en Campo. Se carga después del <style> de cada
+   página para pisar los topbars viejos. */
 
-.mg-topbar{gap:2px;column-gap:2px}
-.mg-topbar .brandmark{display:inline-flex;align-items:center;padding:0;margin-right:10px;background:none}
+.mg-topbar{display:flex;align-items:center;gap:6px;flex-wrap:nowrap;padding:12px 28px}
+.mg-topbar .brandmark{display:inline-flex;align-items:center;padding:0;margin-right:14px;background:none}
 .mg-topbar .brandmark:hover{background:none}
-.mg-topbar a.cl,.mg-topbar a.cl2{margin-left:0}
-.mg-topbar .navdiv{display:inline-block;width:1px;height:18px;background:var(--cream-300);opacity:.25;margin:0 10px}
+.mg-topbar .brandmark img{height:30px;margin:0}
 .mg-topbar a{white-space:nowrap}
-.mg-topbar a i{font-style:normal;font-weight:800;font-size:10.5px;letter-spacing:.04em;color:var(--emerald-500);margin-right:6px;opacity:.9}
-.mg-topbar a.on i{color:var(--lime-500)}
+.mg-topbar .navdiv,.mg-topbar .mg-subnav{display:none}
 
-/* IA en Campo: programa presentado por Magoya, se anuncia con su verde pleno */
-.mg-topbar a.sub{background:var(--emerald-500);color:var(--green-950);font-weight:800}
-.mg-topbar a.sub i{color:var(--green-950)}
-.mg-topbar a.sub:hover{background:var(--lime-500);color:var(--green-950)}
-.mg-topbar a.sub.on{box-shadow:inset 0 0 0 2px var(--cream-50)}
+/* menú "Conocer la marca" */
+.nav-group{position:relative;color:var(--cream-300);font-size:13px;font-weight:600}
+.nav-group summary{cursor:pointer;list-style:none;padding:6px 10px;border-radius:8px}
+.nav-group summary::-webkit-details-marker{display:none}
+.nav-group summary::after{content:"";display:inline-block;width:6px;height:6px;margin-left:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.nav-group[open] summary::after{transform:translateY(1px) rotate(-135deg)}
+.nav-group summary:hover,.nav-group.on summary{background:var(--green-800);color:var(--cream-50)}
+.nav-group>div{position:absolute;top:36px;left:0;z-index:130;background:var(--green-950);padding:10px;min-width:200px;
+  box-shadow:0 8px 20px rgba(0,0,0,.2);border-radius:10px;display:flex;flex-direction:column;gap:2px}
+.nav-group a{display:block}
 
-/* Segunda fila: páginas dentro de E y de F */
-.mg-topbar .mg-subnav{flex-basis:100%;display:flex;align-items:center;gap:2px;flex-wrap:wrap;margin-top:8px;padding-top:8px;border-top:1px solid rgba(246,241,235,.12)}
-.mg-topbar .mg-subnav .lbl{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-400);margin-right:10px}
-.mg-topbar .mg-subnav a{font-size:12.5px;padding:4px 10px}
+/* IA en Campo: programa presentado por Magoya, va al final y separado */
+.mg-topbar a.program-link{margin-left:auto;opacity:.85}
+.mg-topbar a.program-link:hover{opacity:1}

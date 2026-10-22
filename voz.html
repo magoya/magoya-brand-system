@@ -15,9 +15,11 @@
 </head>
 <body>
 
-<nav class="mg-topbar">
-  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
-  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html">Estrategia</a><a href="voz.html" class="on">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><span class="navdiv"></span><a href="brand-book.html">Identidad visual</a><a href="piezas.html">Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub">IA en Campo</a><a href="ai.html">Integrar con AI</a>
+<nav class="mg-topbar" aria-label="Navegación principal">
+<a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · inicio"></a>
+<a href="index.html">Inicio</a>
+<details class="nav-group on"><summary>Conocer la marca</summary><div><a href="estrategia.html">Estrategia</a><a href="voz.html" class="on" aria-current="page">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><a href="brand-book.html">Identidad visual</a></div></details>
+<a href="library.html">Recursos</a><a href="ai.html">Integrar con AI</a><a href="ai-en-campo.html" class="program-link">IA en Campo ↗</a>
 </nav>
 
 <nav class="side" id="dock">
@@ -329,27 +331,26 @@
 <section id="archienemigos">
   <div class="inner">
   <span class="kicker">Contra qué lucha Magoya</span>
-  <h2>Doce archienemigos declarados.</h2>
+  <h2>Once archienemigos declarados.</h2>
   <p class="lead">Nos sirven como punto de partida para escribir los puntos de vista de la marca.</p>
   <div class="grid g2" style="max-width:1180px">
     <table class="tbl compact">
       <tbody>
         <tr><td style="width:7%"><span class="num">01</span></td><td>Medir el éxito en el lanzamiento y no en el uso.</td></tr>
         <tr><td style="width:7%"><span class="num">02</span></td><td>Proponer la misma solución para todos.</td></tr>
-        <tr><td style="width:7%"><span class="num">03</span></td><td>Entregar un producto y no acompañar su implementación.</td></tr>
-        <tr><td style="width:7%"><span class="num">04</span></td><td>Resolver sin la convicción de que va a ser útil.</td></tr>
-        <tr><td style="width:7%"><span class="num">05</span></td><td>El “ya sé cómo resolverlo” antes de entender el problema.</td></tr>
-        <tr><td style="width:7%"><span class="num">06</span></td><td>Reinventar la rueda, o decir que todo lo que el cliente tiene no sirve.</td></tr>
+        <tr><td style="width:7%"><span class="num">03</span></td><td>Resolver sin la convicción de que va a ser útil.</td></tr>
+        <tr><td style="width:7%"><span class="num">04</span></td><td>El “ya sé cómo resolverlo” antes de entender el problema.</td></tr>
+        <tr><td style="width:7%"><span class="num">05</span></td><td>Reinventar la rueda, o decir que todo lo que el cliente tiene no sirve.</td></tr>
       </tbody>
     </table>
     <table class="tbl compact">
       <tbody>
-        <tr><td style="width:7%"><span class="num">07</span></td><td>La sobrepromesa y las soluciones mágicas.</td></tr>
-        <tr><td style="width:7%"><span class="num">08</span></td><td>Equipos que no miden. Consultoras que no hacen.</td></tr>
-        <tr><td style="width:7%"><span class="num">09</span></td><td>Culpar al usuario cuando la tecnología no se adapta a él.</td></tr>
-        <tr><td style="width:7%"><span class="num">10</span></td><td>La soberbia: “Ya sé todo”.</td></tr>
-        <tr><td style="width:7%"><span class="num">11</span></td><td>Enamorarse de un producto que no resuelve un problema real.</td></tr>
-        <tr><td style="width:7%"><span class="num">12</span></td><td>Hacer desde cero cuando se puede redefinir lo que existe. Patear todo y tener que desarmar para empezar.</td></tr>
+        <tr><td style="width:7%"><span class="num">06</span></td><td>La sobrepromesa y las soluciones mágicas.</td></tr>
+        <tr><td style="width:7%"><span class="num">07</span></td><td>Equipos que no miden. Consultoras que no hacen.</td></tr>
+        <tr><td style="width:7%"><span class="num">08</span></td><td>Culpar al usuario cuando la tecnología no se adapta a él.</td></tr>
+        <tr><td style="width:7%"><span class="num">09</span></td><td>La soberbia: “Ya sé todo”.</td></tr>
+        <tr><td style="width:7%"><span class="num">10</span></td><td>Enamorarse de un producto que no resuelve un problema real.</td></tr>
+        <tr><td style="width:7%"><span class="num">11</span></td><td>Hacer desde cero cuando se puede redefinir lo que existe. Patear todo y tener que desarmar para empezar.</td></tr>
       </tbody>
     </table>
   </div>
@@ -394,5 +395,6 @@
 </footer>
 
 <script src="manual.js"></script>
+<script src="nav.js"></script>
 </body>
 </html>

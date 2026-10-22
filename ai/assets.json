@@ -2,7 +2,7 @@
  "que_es": "Manifiesto completo de assets del brand system de Magoya. Cada URL es pública y fetcheable sin auth. Antes de usar cualquier asset, leer BRAND.md (reglas) y tokens.json (valores).",
  "doctrina": "https://brand.magoya.com/BRAND.md",
  "tokens": "https://brand.magoya.com/tokens.json",
- "total_archivos": 239,
+ "total_archivos": 202,
  "iconos_sistema": [
   {
    "nombre": "sprout",
@@ -298,25 +298,16 @@
  "carpetas": [
   {
    "carpeta": "assets",
-   "descripcion": "Raíz: wordmarks del logo y motivo de semicírculos",
-   "reglas": "El wordmark es LA firma de la marca. Nunca redibujarlo: usar el SVG tal cual. Variantes por fondo: cream sobre oscuro, dark sobre claro.",
+   "descripcion": "Raíz: wordmarks del logo y marcas a mano (círculo y flecha)",
+   "reglas": "El wordmark es LA firma de la marca. Nunca redibujarlo: usar el SVG tal cual. Variantes por fondo: cream sobre oscuro, dark sobre claro. Las marcas a mano resaltan una palabra o un dato con un círculo o una flecha; nunca subrayado.",
    "archivos": [
-    "https://brand.magoya.com/assets/badge-envivo.svg",
-    "https://brand.magoya.com/assets/doodle-blob.svg",
-    "https://brand.magoya.com/assets/doodle-dots.svg",
-    "https://brand.magoya.com/assets/doodle-loop.svg",
-    "https://brand.magoya.com/assets/doodle-sparkle.svg",
     "https://brand.magoya.com/assets/flourish-arrow.svg",
     "https://brand.magoya.com/assets/flourish-circle.svg",
-    "https://brand.magoya.com/assets/flourish-underline.svg",
     "https://brand.magoya.com/assets/magoya-wordmark-animado.svg",
     "https://brand.magoya.com/assets/magoya-wordmark-black.svg",
-    "https://brand.magoya.com/assets/magoya-wordmark-cream-prod.svg",
     "https://brand.magoya.com/assets/magoya-wordmark-cream.svg",
     "https://brand.magoya.com/assets/magoya-wordmark-deep.svg",
-    "https://brand.magoya.com/assets/magoya-wordmark-green.svg",
-    "https://brand.magoya.com/assets/motif-estratos.svg",
-    "https://brand.magoya.com/assets/motif-semis.svg"
+    "https://brand.magoya.com/assets/magoya-wordmark-green.svg"
    ]
   },
   {
@@ -332,17 +323,13 @@
   },
   {
    "carpeta": "assets/downloads",
-   "descripcion": "Entregables listos: firma de email animada/estática, membrete",
-   "reglas": "La firma de email lleva SIEMPRE el wordmark, nunca los avatares.",
+   "descripcion": "Descargas: membrete de documentos (header y footer) y colecciones .zip",
    "archivos": [
     "https://brand.magoya.com/assets/downloads/doc-footer.svg",
     "https://brand.magoya.com/assets/downloads/doc-header.svg",
     "https://brand.magoya.com/assets/downloads/magoya-ai-en-campo.zip",
-    "https://brand.magoya.com/assets/downloads/magoya-firma-animada.gif",
-    "https://brand.magoya.com/assets/downloads/magoya-firma-estatica.png",
     "https://brand.magoya.com/assets/downloads/magoya-fotos.zip",
     "https://brand.magoya.com/assets/downloads/magoya-iconos.zip",
-    "https://brand.magoya.com/assets/downloads/magoya-ilustracion.zip",
     "https://brand.magoya.com/assets/downloads/magoya-logo-kit.zip",
     "https://brand.magoya.com/assets/downloads/magoya-logos-clientes.zip",
     "https://brand.magoya.com/assets/downloads/magoya-manrope.zip",
@@ -372,7 +359,7 @@
   {
    "carpeta": "assets/icons",
    "descripcion": "Los 58 íconos de línea del sistema (export de icons.html)",
-   "reglas": "Trazo 2px redondeado, grid 24×24, stroke=currentColor (recoloreables). ATENCION: embebido como <img> currentColor renderiza NEGRO — inlinear el SVG y setear color por CSS, o reemplazar currentColor por el hex. Sobre oscuro: crema #F6F1EB con UNO destacado en lima. Sobre claro: #161616, el destacado va #009145.",
+   "reglas": "Trazo 2px redondeado, grid 24×24, stroke=currentColor (recoloreables). ATENCION: embebido como <img> currentColor renderiza NEGRO: inlinear el SVG y setear color por CSS, o reemplazar currentColor por el hex. Sobre oscuro: crema #F6F1EB con UNO destacado en lima. Sobre claro: #161616, el destacado va #009145.",
    "archivos": [
     "https://brand.magoya.com/assets/icons/ai.svg",
     "https://brand.magoya.com/assets/icons/arrow.svg",
@@ -435,35 +422,19 @@
    ]
   },
   {
-   "carpeta": "assets/illus",
-   "descripcion": "Personajes ilustrados y caminos",
-   "reglas": "Personajes planos sin rostro, paleta cerrada, zapatillas verdes. Siempre recortados por un borde, lado opuesto al texto. Nunca sobre foto ni junto a un ícono.",
-   "archivos": [
-    "https://brand.magoya.com/assets/illus/camino-esquina.svg",
-    "https://brand.magoya.com/assets/illus/camino-grande.svg",
-    "https://brand.magoya.com/assets/illus/camino-zigzag.svg",
-    "https://brand.magoya.com/assets/illus/char-chart-duo.svg",
-    "https://brand.magoya.com/assets/illus/char-experts-talking.svg",
-    "https://brand.magoya.com/assets/illus/char-jumping.svg",
-    "https://brand.magoya.com/assets/illus/char-laptop.svg"
-   ]
-  },
-  {
    "carpeta": "assets/logos",
-   "descripcion": "Wordmarks propios en variantes",
-   "reglas": "Ver reglas del logo en BRAND.md sección 2.",
+   "descripcion": "Logos de cuentas objetivo, sueltos en la raíz de logos/",
+   "reglas": "Mismo trato que los de cliente: siempre reales, en gris.",
    "archivos": [
     "https://brand.magoya.com/assets/logos/basf.svg",
     "https://brand.magoya.com/assets/logos/bayer.svg",
-    "https://brand.magoya.com/assets/logos/corteva.svg",
-    "https://brand.magoya.com/assets/logos/john-deere.svg",
-    "https://brand.magoya.com/assets/logos/syngenta.svg"
+    "https://brand.magoya.com/assets/logos/john-deere.svg"
    ]
   },
   {
    "carpeta": "assets/logos/clients",
    "descripcion": "Logos REALES de clientes",
-   "reglas": "Los únicos logos permitidos en un logo wall. OJO: los SVG son a COLOR y traen la imagen embebida como raster dentro de un <pattern>, asi que NO se pasan a gris cambiando fill ni recolorando paths: hay que aplicar un filtro (CSS filter:grayscale(1) o un feColorMatrix). El sistema los exige en escala de grises y con tamano optico parejo — el archivo no viene asi. Una pieza real los puso a color sin darse cuenta.",
+   "reglas": "Los únicos logos permitidos en un logo wall. OJO: los SVG son a COLOR y traen la imagen embebida como raster dentro de un <pattern>, así que NO se pasan a gris cambiando fill ni recoloreando paths: hay que aplicar un filtro (CSS filter:grayscale(1) o un feColorMatrix). El sistema los exige en escala de grises y con tamaño óptico parejo; el archivo no viene así.",
    "archivos": [
     "https://brand.magoya.com/assets/logos/clients/agro-sustentable.svg",
     "https://brand.magoya.com/assets/logos/clients/apeel-sciences.svg",
@@ -507,40 +478,23 @@
   },
   {
    "carpeta": "assets/photos",
-   "descripcion": "Fotografía real del equipo y de campo",
-   "reglas": "Personas SIEMPRE en B&N + un acento de color. Foto aérea con scrim verde profundo. Nunca stock.",
+   "descripcion": "Fotografía real: aérea de campo y personas",
+   "reglas": "Aérea de campo: color natural con overlay verde profundo para fondos con texto, siempre enfoque cenital. Personas: siempre a color, sin ningún detalle encima, mejor en espacios abiertos. Nunca stock.",
    "archivos": [
     "https://brand.magoya.com/assets/photos/ai-campo-silueta.jpg",
     "https://brand.magoya.com/assets/photos/ai-campo-silueta.png",
-    "https://brand.magoya.com/assets/photos/cami-agtech-bw.jpg",
     "https://brand.magoya.com/assets/photos/field-bali.jpg",
-    "https://brand.magoya.com/assets/photos/field-corn.jpg",
     "https://brand.magoya.com/assets/photos/field-mosaic-16x9.jpg",
     "https://brand.magoya.com/assets/photos/field-rows.jpg",
     "https://brand.magoya.com/assets/photos/field-terraces.jpg",
-    "https://brand.magoya.com/assets/photos/founder-bw.png",
-    "https://brand.magoya.com/assets/photos/leo-dopacio-bw.jpg",
-    "https://brand.magoya.com/assets/photos/merch-buzo.jpg",
-    "https://brand.magoya.com/assets/photos/pieza-ai-campo-real.jpg",
-    "https://brand.magoya.com/assets/photos/varu-baldi-bw.jpg",
-    "https://brand.magoya.com/assets/photos/varu-ceo-bw.jpg",
     "https://brand.magoya.com/assets/photos/varu-ceo-color.jpg"
    ]
   },
   {
-   "carpeta": "assets/photos/merch",
-   "descripcion": "Fotos reales de merch",
-   "reglas": "Verde profundo + crema, bordado discreto.",
-   "archivos": [
-    "https://brand.magoya.com/assets/photos/merch/LEEME.txt"
-   ]
-  },
-  {
    "carpeta": "assets/pieces",
-   "descripcion": "Piezas reales exportadas (referencia de calidad)",
-   "reglas": "fecha-marcada-ig-portrait es LA pieza canónica de IA en Campo (formato madre 4:5).",
+   "descripcion": "Piezas publicadas de IA en Campo",
+   "reglas": "Referencia del manual de IA en Campo (ai-en-campo.html). fecha-marcada-ig-portrait es LA pieza canónica de IA en Campo (formato madre 4:5).",
    "archivos": [
-    "https://brand.magoya.com/assets/pieces/fecha-marcada-ig-portrait.jpg",
     "https://brand.magoya.com/assets/pieces/fecha-marcada-ig-portrait.svg",
     "https://brand.magoya.com/assets/pieces/fecha-marcada.jpg",
     "https://brand.magoya.com/assets/pieces/impacto-pregunta.jpg",
@@ -550,7 +504,7 @@
   {
    "carpeta": "assets/studio",
    "descripcion": "Kit del programa IA en Campo + logos de terceros",
-   "reglas": "Los doodles/flourishes del Studio son SOLO para piezas de IA en Campo, no para Magoya core.",
+   "reglas": "Los doodles y flourishes del Studio son SOLO para piezas de IA en Campo, no para Magoya core.",
    "archivos": [
     "https://brand.magoya.com/assets/studio/badge-envivo.svg",
     "https://brand.magoya.com/assets/studio/doodle-blob.svg",
@@ -561,19 +515,7 @@
     "https://brand.magoya.com/assets/studio/flourish-circle.svg",
     "https://brand.magoya.com/assets/studio/flourish-navarrow.svg",
     "https://brand.magoya.com/assets/studio/flourish-underline.svg",
-    "https://brand.magoya.com/assets/studio/magoya-avatar.svg",
-    "https://brand.magoya.com/assets/studio/magoya-isotipo-verde.svg",
-    "https://brand.magoya.com/assets/studio/magoya-trama.svg",
     "https://brand.magoya.com/assets/studio/mark-ai-campo.svg"
-   ]
-  },
-  {
-   "carpeta": "assets/studio/devices",
-   "descripcion": "Mockups de dispositivos",
-   "archivos": [
-    "https://brand.magoya.com/assets/studio/devices/laptop.svg",
-    "https://brand.magoya.com/assets/studio/devices/phone.svg",
-    "https://brand.magoya.com/assets/studio/devices/tablet.svg"
    ]
   },
   {

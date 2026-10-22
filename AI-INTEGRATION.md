@@ -1,8 +1,8 @@
-# Cómo darle el manual de Magoya a una IA
+# Cómo darle el manual de Magoya a una AI
 
 > **Equipo de Magoya:** esta guía por herramienta quedó como referencia técnica. El trabajo de marca del equipo se hace en el proyecto oficial de Claude "Magoya · Marca"; nadie configura su propia herramienta. Ver [ai.html](ai.html).
 
-Guía de setup, herramienta por herramienta. El objetivo es que cualquier IA que use el equipo respete el manual sin que haya que recordárselo en cada prompt.
+Guía de setup, herramienta por herramienta. El objetivo es que cualquier AI que use el equipo respete el manual sin que haya que recordárselo en cada prompt.
 
 **Fuente de verdad:** [`BRAND.md`](BRAND.md) (doctrina) · [`tokens.json`](tokens.json) (valores exactos con roles) · [`tokens.css`](tokens.css) (custom properties, 4 temas). Todo lo demás de este repo es presentación.
 
@@ -10,10 +10,10 @@ Guía de setup, herramienta por herramienta. El objetivo es que cualquier IA que
 
 | Archivo | Qué es | Cuándo se usa |
 |---|---|---|
-| [`llms.txt`](llms.txt) | Índice según la convención [llmstxt.org](https://llmstxt.org/): resumen del sistema, las 10 reglas que más se rompen, y links absolutos a cada recurso con una línea de descripción | Cuando la IA puede navegar. Le pegás una URL y entiende el sistema entero |
-| [`.ai/brand-prompt.md`](.ai/brand-prompt.md) | Prompt de sistema canónico, autocontenido (~500 palabras) | Cuando la IA **no** puede navegar ni leer archivos: lo pegás y ya |
+| [`llms.txt`](llms.txt) | Índice según la convención [llmstxt.org](https://llmstxt.org/): resumen del sistema, las 10 reglas que más se rompen, y links absolutos a cada recurso con una línea de descripción | Cuando la AI puede navegar. Le pegás una URL y entiende el sistema entero |
+| [`.ai/brand-prompt.md`](.ai/brand-prompt.md) | Prompt de sistema canónico, autocontenido (~500 palabras) | Cuando la AI **no** puede navegar ni leer archivos: lo pegás y ya |
 | [`.ai/brand-prompt-short.md`](.ai/brand-prompt-short.md) | Versión de ~120 palabras | Chat suelto, un solo pedido |
-| [`.ai/checklist.md`](.ai/checklist.md) | 15 chequeos verificables | Antes de publicar cualquier cosa que devolvió una IA |
+| [`.ai/checklist.md`](.ai/checklist.md) | 17 chequeos verificables (visuales) | Antes de publicar cualquier cosa que devolvió una AI |
 | [`.ai/presets/`](.ai/presets/) | Un archivo por herramienta, listo para copiar sin editar | Setup inicial |
 
 ---
@@ -106,8 +106,8 @@ Qué esperar: buen copy y buen HTML/CSS. Si generás imágenes, el modelo de ima
 
 Tiene sentido, y el diseño sería directo con los tres primitivos de MCP:
 
-- **Resources** (contexto read-only direccionable por URI): `magoya://brand/doctrine` → `BRAND.md`, `magoya://tokens` → `tokens.json`, `magoya://tokens/css` → `tokens.css`, `magoya://assets/{nombre}` → los SVG de wordmarks, avatares, motivos y personajes.
-- **Tools**: `validate_piece(html_or_svg)` que corra la checklist programáticamente (hex fuera de paleta, conteo de golpes de lima, emojis, gradientes, cantidad de recursos gráficos) y devuelva las violaciones; `get_token(path)` para consultas puntuales; `list_client_logos()` para que ninguna IA vuelva a inventar un logo.
+- **Resources** (contexto read-only direccionable por URI): `magoya://brand/doctrine` → `BRAND.md`, `magoya://tokens` → `tokens.json`, `magoya://tokens/css` → `tokens.css`, `magoya://assets/{nombre}` → los SVG de wordmarks, avatares e íconos.
+- **Tools**: `validate_piece(html_or_svg)` que corra la checklist programáticamente (hex fuera de paleta, uso del lima, emojis, gradientes) y devuelva las violaciones; `get_token(path)` para consultas puntuales; `list_client_logos()` para que ninguna AI vuelva a inventar un logo.
 - **Prompts**: `magoya_system_prompt` (el contenido de `.ai/brand-prompt.md`) y `review_piece` (la checklist como plantilla de revisión).
 
 **Cuándo vale la pena:** cuando el equipo empiece a generar piezas en volumen y la validación manual sea el cuello de botella — el valor real está en `validate_piece`, que convierte la checklist en algo determinístico. Hasta entonces, `llms.txt` + los presets cubren el 90% con cero mantenimiento.
@@ -116,7 +116,7 @@ Tiene sentido, y el diseño sería directo con los tres primitivos de MCP:
 
 ## Troubleshooting
 
-### La IA inventa colores
+### La AI inventa colores
 
 Síntoma: aparece un verde "parecido" (`#2ECC71`, `#4CAF50`), un naranja, o un hex que no está en `tokens.json`.
 
@@ -125,7 +125,7 @@ Síntoma: aparece un verde "parecido" (`#2ECC71`, `#4CAF50`), un naranja, o un h
 3. En código, exigí tokens en vez de hex: *"usá solo `var(--…)` de `tokens.css`; si no hay token para algo, decímelo"*.
 4. Corré el punto 1 de [`.ai/checklist.md`](.ai/checklist.md): extraé todos los hex de la salida y comparalos contra `tokens.json`.
 
-### La IA mete emojis
+### La AI mete emojis
 
 Es el fallo más terco: los modelos los usan por defecto en bullets, títulos y labels.
 
@@ -133,28 +133,27 @@ Es el fallo más terco: los modelos los usan por defecto en bullets, títulos y 
 2. Si insiste, agregá una instrucción de salida explícita: *"antes de responder, revisá tu texto y borrá todo emoji que no sea 👈 👉 👇 apuntando a un CTA o una bandera de país"*. Los modelos cumplen mucho mejor una instrucción de auto-revisión que una prohibición suelta.
 3. En Claude Code, si tiene que ser inviolable, un [hook `PreToolUse`](https://code.claude.com/docs/en/hooks-guide) que rechace escrituras con emojis es enforcement real; el archivo de instrucciones es solo contexto.
 
-### La IA mete gradientes, glass o 3D
+### La AI mete gradientes, glass o 3D
 
 Es el default estético de casi todos los modelos entrenados con landings genéricas.
 
-1. Nombrá la prohibición en positivo: *"color plano; el único gradiente permitido en toda la marca es el scrim verde profundo sobre foto aérea: `linear-gradient(180deg, rgba(12,33,23,.55), rgba(12,33,23,.86))`"*.
+1. Nombrá la prohibición en positivo: *"color plano; el único gradiente permitido en toda la marca es el overlay verde profundo sobre foto aérea: `linear-gradient(180deg, rgba(12,33,23,.55), rgba(12,33,23,.86))`"*.
 2. En código, pedí un grep de la salida: *"buscá `gradient`, `backdrop-filter` y `box-shadow` con brillo en lo que escribiste y quitalos"*.
-3. Si la pieza igual "se ve hecha por IA", el problema suele ser otro: simetría perfecta, 3 o más recursos gráficos y todo centrado. Aplicá el punto 10 de la checklist (máximo 2 recursos) y la jerarquía de cuatro planos: lienzo · textura · sujeto · voz, un recurso por plano.
 
-### La IA vuelve a recursos retirados
+### La AI vuelve a recursos retirados
 
-Síntoma: aparece el **puzzle**, naranja o amarillo, personajes con rostro o monoline, o motivos de líneas (caminos concéntricos, estratos).
+Síntoma: aparece el **puzzle**, naranja o amarillo, ilustración, o una foto de persona en blanco y negro.
 
 1. Es memoria del brand viejo, no del manual: alguien la alimentó con material 2017-2024 o con la web anterior. Revisá qué archivos hay en el knowledge y borrá lo viejo.
-2. Enunciá el reemplazo, no solo la prohibición: el puzzle se reemplaza narrativamente por el **crecimiento / los semicírculos**; los acentos son verdes o lima, nunca naranja ni amarillo.
+2. Enunciá el reemplazo, no solo la prohibición: los acentos son lima o verde, nunca naranja ni amarillo; las personas van siempre a color; Magoya no usa ilustración.
 3. Si es una pieza heredada que hay que actualizar, decilo de entrada: *"esta pieza es del brand viejo; rehacela con el manual actual"*.
-4. Cuidado especial con las **fotos de merch y los logos de clientes**: la regla es foto o render real y logos reales de `assets/logos/clients/`. Si falta el asset, la IA tiene que decirlo, no dibujarlo.
+4. Cuidado especial con las **fotos y los logos de clientes**: la regla es foto real y logos reales de `assets/logos/clients/`. Si falta el asset, la AI tiene que decirlo, no dibujarlo.
 
-### La IA mezcla "IA en campo" con el core
+### La AI mezcla "IA en Campo" con el core
 
-`ai-en-campo.html` es una **marca anexa con manual propio** que rompe tres reglas del core a propósito: lienzo verde digital `#00DE68` pleno, placa negra de dato clave, y doodles del Studio. Si aparece un fondo verde digital pleno en una pieza institucional, la IA cruzó los manuales. Decile explícitamente en qué marca estás trabajando antes de pedir la pieza.
+`ai-en-campo.html` es una **marca anexa con manual propio** que rompe tres reglas del core a propósito: lienzo verde digital `#00DE68` pleno, placa negra de dato clave, y doodles del Studio. Si aparece un fondo verde digital pleno en una pieza institucional, la AI cruzó los manuales. Decile explícitamente en qué marca estás trabajando antes de pedir la pieza.
 
-### La IA cumple al principio y se olvida a los 20 mensajes
+### La AI cumple al principio y se olvida a los 20 mensajes
 
 1. En conversaciones largas, las instrucciones de sistema pesan menos que los últimos mensajes. Volvé a pegar [`.ai/brand-prompt-short.md`](.ai/brand-prompt-short.md) o pedí *"corré la checklist sobre esto"*.
 2. En Claude Code, el `CLAUDE.md` de la raíz del proyecto se re-inyecta después de `/compact`; las instrucciones dadas solo en el chat, no. Si una corrección importa, va al archivo.

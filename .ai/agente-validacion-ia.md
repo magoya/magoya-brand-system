@@ -7,7 +7,7 @@ editalo y la próxima corrida usa la versión nueva. El registro de cada corrida
 La pregunta que el agente tiene que poder contestar cada semana, con evidencia:
 
 > Si alguien que no sabe de diseño le pasa un link de `brand.magoya.com` a la AI que tenga a mano
-> y le pide una pieza, ¿sale bien la primera vez, sin que esa persona tenga que adaptar ni asumir nada?
+> y le pide un contenido, ¿sale bien la primera vez, sin que esa persona tenga que adaptar ni asumir nada?
 
 Un "sí" no se declara: se prueba a ciegas y se puntúa contra el checklist.
 
@@ -16,19 +16,20 @@ Un "sí" no se declara: se prueba a ciegas y se puntúa contra el checklist.
 ## Bloque 1 — Validación determinística
 
 ```bash
-cd /Users/facu/Claude/brand-system && python3 ai/validar.py --red
+# desde la raíz del repo
+python3 ai/validar.py --red
 ```
 
-Chequea sin criterio humano: referencias cruzadas selector ↔ plantillas, slots sin límite de texto,
-cifras de ejemplo que se puedan entregar como reales, drift entre la capa publicada y sus fuentes,
-URLs que no resuelven, cobertura de las familias de restricción, nomenclatura AI (regla del Brand Playbook, slide 50) y peso de las
-entradas. **Exit code 1 = hay fallas.**
+Chequea sin criterio humano: drift entre la capa publicada y sus fuentes, URLs que no resuelven,
+conteo de assets consistente entre entradas, cobertura de las familias de restricción, nomenclatura
+AI (regla del Brand Playbook, slide 50), colores fuera de rango, geometría única del wordmark y peso
+de las entradas. **Exit code 1 = hay fallas.**
 
 Reglas de actuación:
 
-- **Falla mecánica** (link roto, drift, referencia que no cierra, cifra sin `[XX]`, la sigla en español en vez de AI
-  en el copy, o "IA en Campo" mal escrito): arreglala y commiteala. Son bugs, no decisiones.
-- **Hueco** (`pendiente_de_definir`, dato sin aprobar, slot sin nota): **NO lo llenes**. Va a la
+- **Falla mecánica** (link roto, drift, conteo desparejo, la sigla en español en vez de AI en el
+  copy, o "IA en Campo" mal escrito): arreglala y commiteala. Son bugs, no decisiones.
+- **Hueco** (`pendiente_de_definir`, dato sin aprobar): **NO lo llenes**. Va a la
   sección "Necesita tu decisión" del ledger, con la pregunta concreta y por qué importa.
 - Si el validador se rompe por un cambio de estructura, arreglá el validador y decilo.
 
@@ -44,12 +45,12 @@ toda fuente que usen, para poder descartar la corrida si tocaron el repo.
 
 | # | Entrada | Pedido |
 |---|---|---|
-| 1 | `https://brand.magoya.com/ai/claude.md` | un deck de 5 slides para presentarle a un cliente nuevo del agro qué hace Magoya |
+| 1 | `https://brand.magoya.com/ai/claude.md` | un mail para presentarle a un cliente nuevo del agro qué hace Magoya |
 | 2 | `https://brand.magoya.com/llms-full.txt` | un post de LinkedIn anunciando una capacidad concreta del equipo |
 | 3 | `https://brand.magoya.com/ai/gemini.md` | un carrusel 4:5 de **IA en Campo** para productores |
 
 Después, **un cuarto subagente crítico que no vio cómo se generó nada** puntúa cada salida contra
-los 17 chequeos de [`checklist.md`](checklist.md), contra [`checklist-verbal.md`](checklist-verbal.md) y contra `ai/constraints.json`. Y mide la métrica
+[`checklist-verbal.md`](checklist-verbal.md), contra los chequeos de [`checklist.md`](checklist.md) que apliquen y contra `ai/constraints.json`. Y mide la métrica
 primaria: **qué porcentaje de los títulos de contenido son aserciones** (sujeto + verbo +
 afirmación) y no etiquetas de tema. Línea de base 17% sobre una propuesta real; objetivo ≥80%. Para cada pieza:
 chequeos que pasan, cuáles fallan y **por qué falló** — ¿la regla no estaba escrita, estaba escrita
@@ -58,11 +59,9 @@ pero enterrada, o estaba clara y la AI la ignoró?
 Esa última columna es el producto real del bloque: distingue un hueco del spec de un problema de
 fetch de un límite del modelo. Solo el primero se arregla acá.
 
-Rotá el pedido cada corrida (una landing, un one-pager comercial, un banner de LinkedIn, un carrusel)
-para no optimizar contra un solo caso. Ya se usaron: deck ×2 (2026-08-24); one-pager A4 · landing ·
-carrusel 4:5 (2026-08-31); deck · post de LinkedIn · tabla de precios (2026-09-07). Se puede repetir
-un pedido a propósito cuando la parte del sistema que ejercita es nueva — el deck se repitió porque
-`ai/decks/` tenía cinco días— pero decilo en el ledger.
+Rotá el pedido cada corrida (un texto de landing, un post, una propuesta, un carrusel de IA en
+Campo) para no optimizar contra un solo caso. Se puede repetir un pedido a propósito cuando la parte
+del sistema que ejercita es nueva, pero decilo en el ledger.
 
 **Tres instrucciones que la corrida del 2026-09-07 mostró que hacen falta, textuales:**
 
@@ -109,7 +108,7 @@ Agregá una entrada arriba en [`VALIDACION-IA.md`](VALIDACION-IA.md) con este fo
 ## AAAA-MM-DD
 
 **Validador:** N fallas · N huecos · N ok
-**Prueba a ciegas:** pieza 1 — X/16 · pieza 2 — X/16 · pieza 3 — X/16
+**Prueba a ciegas:** pedido 1: X/N · pedido 2: X/N · pedido 3: X/N
 **Arreglado y commiteado:** …
 **Necesita tu decisión:** …  (la pregunta concreta, nunca un valor inventado)
 **Del mundo afuera:** …  (solo lo que cambie algo, con link)
@@ -122,7 +121,7 @@ decidido en `tokens.json`, `constraints.json` o `BRAND.md`.
 ## Cierre
 
 Un párrafo, en criollo, con lo que hay que saber. Si no hay nada accionable, decilo en una línea:
-_"Validador limpio, prueba a ciegas 16/16/15, nada nuevo afuera."_ No infles el reporte.
+_"Validador limpio, prueba a ciegas sin fallas, nada nuevo afuera."_ No infles el reporte.
 
 ---
 
@@ -130,10 +129,9 @@ _"Validador limpio, prueba a ciegas 16/16/15, nada nuevo afuera."_ No infles el 
 
 El aprendizaje más caro de la primera auditoría: `validar.py` daba **0 fallas** y había **16
 contradicciones reales** entre documentos oficiales. El validador cruza estructura (¿resuelven los
-links, tienen límite los slots) y no consistencia entre reglas escritas en prosa en archivos
-distintos. Cuando el crítico marque un chequeo como fallado, preguntate siempre si el que está mal
-es la pieza o **el chequeo**: 37 de 41 plantillas fallaban el límite de 3 niveles tipográficos, y la
-que estaba mal era la regla. `ai/precedencia.json` dice quién gana; si una contradicción nueva no
+links, cierra el conteo) y no consistencia entre reglas escritas en prosa en archivos distintos.
+Cuando el crítico marque un chequeo como fallado, preguntate siempre si el que está mal es la pieza
+o **el chequeo**. `ai/precedencia.json` dice quién gana; si una contradicción nueva no
 entra en esa ley, va al ledger como decisión pendiente.
 
 ## Lo que este agente NO hace

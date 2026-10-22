@@ -273,9 +273,11 @@
 </head>
 <body>
 
-<nav class="mg-topbar">
-  <a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya"></a>
-  <a href="index.html">Inicio</a><span class="navdiv"></span><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><span class="navdiv"></span><a href="brand-book.html">Identidad visual</a><a href="piezas.html">Piezas y plantillas</a><span class="navdiv"></span><a href="ai-en-campo.html" class="sub on">IA en Campo</a><a href="ai.html">Integrar con AI</a>
+<nav class="mg-topbar" aria-label="Navegación principal">
+<a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · inicio"></a>
+<a href="index.html">Inicio</a>
+<details class="nav-group"><summary>Conocer la marca</summary><div><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><a href="brand-book.html">Identidad visual</a></div></details>
+<a href="library.html">Recursos</a><a href="ai.html">Integrar con AI</a><a href="ai-en-campo.html" class="program-link on" aria-current="page">IA en Campo ↗</a>
 </nav>
 
 <nav class="side">
@@ -567,7 +569,7 @@
   <span class="kick">8 · Reglas</span>
   <h2>Qué rompe y qué no</h2>
   <div class="rule-list" style="margin-top:16px">
-    <div class="rule"><b class="do"></b><span>Fondo verde digital #00DE68 pleno — la excepción documentada al 75/25 del core.</span></div>
+    <div class="rule"><b class="do"></b><span>Fondo verde digital #00DE68 pleno: es propio del programa; en Magoya el verde protagonista es el Verde Magoya.</span></div>
     <div class="rule"><b class="do"></b><span>Placa negra con crema para el dato clave — una por pieza.</span></div>
     <div class="rule"><b class="do"></b><span>Ruido SOLO con los assets del Studio (<code>assets/studio/</code>): 2–4 por pieza, ±5–15°, en las esquinas.</span></div>
     <div class="rule"><b class="do"></b><span>Display y cifras al ~70% del ancho de la pieza. En redes, grande o nada.</span></div>
@@ -721,5 +723,6 @@
   });
 })();
 </script>
+<script src="nav.js"></script>
 </body>
 </html>

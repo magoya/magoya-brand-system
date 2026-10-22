@@ -39,18 +39,18 @@ Si el proyecto importa `tokens.css`, usá siempre las custom properties (`var(--
 | Token | Hex | Rol |
 |---|---|---|
 | `--ink-900` | `#161616` | Texto, titulares, cards dark |
-| `--green-900` | `#133825` | Fondos oscuros, overlays, texto sobre claro |
-| `--emerald-500` | `#00DE68` | Identidad: wordmark, avatares, micro-acentos, ropa de personajes y data-viz. Como texto SOLO sobre oscuro |
+| `--green-900` | `#133825` | **Verde Magoya, el verde protagonista.** Fondos oscuros, overlays, texto sobre claro |
+| `--emerald-500` | `#00DE68` | Identidad: wordmark, avatares, micro-acentos y data-viz. Como texto SOLO sobre oscuro |
 | `--emerald-700` | `#009145` | Verde texto sobre blanco — solo ≥24px bold |
-| `--lime-500` | `#A2FF00` | CTA, display, motivo. Dosis única. NUNCA texto sobre claro |
+| `--lime-500` | `#A2FF00` | Solo acentos, detalles, resaltar o CTA. NUNCA texto sobre claro |
 | `--lime-600` | `#8BDB00` | Hover de lima |
 | `--cream-100` | `#ECE3DB` | Texto sobre verde profundo |
-| `--sage-50` | `#EEF2EC` | Superficie clara de slides |
+| `--sage-50` | `#EEF2EC` | Superficie clara |
 | — | `#6E756D` | Captions sobre claro (mínimo accesible) |
 
-Temas disponibles vía `data-theme`: `default` (verde profundo), `light` (crema), `paper` (editorial), `studio` (blanco + negro + lima, el de slides y marketing).
+Temas disponibles vía `data-theme`: `default` (verde profundo), `light` (crema), `paper` (editorial), `studio` (blanco + negro + lima, marketing).
 
-Balance por pantalla o pieza: neutros ≈75%, verdes ≈25%, un solo movimiento verde dominante. Nunca 100% negra ni 100% verde.
+Proporciones de uso entre colores: pendientes de definir. No apliques porcentajes ni inventes una proporción.
 
 ## Tipografía
 
@@ -70,13 +70,13 @@ Máximo 3 niveles tipográficos por vista. Labels de botón en sentence case, nu
 ## Prohibiciones absolutas
 
 - **Sin emojis** en UI, copy, títulos, labels ni comentarios de cara al usuario. Únicas excepciones: manitos que señalan (👈 👉 👇) apuntando a un CTA, y banderas de países para geografía.
-- **Sin `linear-gradient` / `radial-gradient`**, sin glassmorphism, sin `backdrop-filter` decorativo, sin sombras de brillo, sin 3D. Único gradiente permitido: el scrim verde profundo sobre foto aérea, `linear-gradient(180deg, rgba(12,33,23,.55), rgba(12,33,23,.86))`.
-- Sin bloque resaltador sólido detrás de texto: resaltá con color o con subrayado lima.
-- Sin colores fuera de `tokens.json`. Cero naranja, cero amarillo (excepción única: `#FFC67B` como piel de personaje ilustrado).
-- Sin la metáfora del puzzle, sin motivos de líneas (caminos concéntricos, estratos), sin personajes con rostro, monoline o stock.
+- **Sin `linear-gradient` / `radial-gradient`**, sin glassmorphism, sin `backdrop-filter` decorativo, sin sombras de brillo, sin 3D. Único gradiente permitido: el overlay verde profundo sobre foto aérea, `linear-gradient(180deg, rgba(12,33,23,.55), rgba(12,33,23,.86))`.
+- Para resaltar una palabra: un círculo que la rodea o flechas que la señalan. Nunca subrayado ni bloque resaltador sólido detrás del texto.
+- Sin colores fuera de `tokens.json`. Cero naranja, cero amarillo.
+- Sin la metáfora del puzzle.
+- **Sin ilustración**: Magoya no usa ilustración.
+- **Fotografía**: aérea de campo en color natural, con overlay verde profundo para fondos con texto, siempre cenital. Personas siempre a color, sin ningún detalle encima (ni barra ni acento verde), mejor en espacios abiertos.
 - Logos de clientes siempre reales desde `assets/logos/clients/`, en gris y grilla pareja — jamás placeholders ni SVG inventados.
-- El motivo de semicírculos va siempre al corte: nace de un borde del contenedor o de detrás de un objeto, nunca cortado flotando (usá `overflow:hidden` y posicionalo pegado a un borde).
-- Máximo 2 recursos gráficos por pieza además de la tipografía. No conviven: dos fotos, foto + personaje, foto aérea + paño de semicírculos, personaje + ícono.
 - El monograma "m" circular es funcional (favicon, app icon): no lo metas como sello decorativo dentro de cards.
 
 ## Copy en UI
