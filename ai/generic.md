@@ -30,7 +30,7 @@ https://brand.magoya.com/tokens.json          <- valores exactos
 https://brand.magoya.com/tokens.css           <- tokens como CSS custom properties
 https://brand.magoya.com/ai/facts.json        <- datos REALES de la empresa (cifras, clientes, equipo)
 https://brand.magoya.com/ai/constraints.json  <- mínimos, clearspace, safe areas
-https://brand.magoya.com/ai/assets.json       <- los 202 assets con URL directa
+https://brand.magoya.com/ai/assets.json       <- los 236 assets con URL directa
 https://brand.magoya.com/ai/metodo.md         <- método de trabajo (idea, títulos, pasadas)
 https://brand.magoya.com/ai/precedencia.json  <- quién gana cuando dos reglas chocan + contrato de entrega
 https://brand.magoya.com/.ai/checklist.md     <- chequeos visuales
