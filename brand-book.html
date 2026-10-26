@@ -32,6 +32,8 @@
   main{margin-left:64px;padding-top:44px}
   section{padding:88px 0}
   section > .inner{max-width:1284px;margin:0 auto 0 0;padding:0 32px}   /* anclado al inicio del contenido, nunca centrado */
+  /* el panel de descarga es fijo abajo a la derecha (268px + 22px): el contenido le deja ese lugar libre */
+  @media (min-width:881px){section > .inner{max-width:min(1284px, calc(100vw - 380px))}}
   .kicker{
     display:inline-block;font-size:12px;font-weight:var(--weight-extra);
     letter-spacing:var(--tracking-wide);text-transform:uppercase;
@@ -189,7 +191,7 @@
   .hiring .mail::after{content:" →"}
 
   /* mosaico de cards — las cards siempre encastran, nunca sueltas */
-  .mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:185px;gap:16px;max-width:980px}
+  .mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(185px,auto);gap:16px;max-width:980px}
   .mosaic .hiring{grid-row:span 2;max-width:none;min-height:0;padding:26px}
   .mosaic .quote-card{grid-column:span 2;max-width:none;height:100%;overflow:hidden}
   .mosaic .quote-card img{height:100%}
@@ -201,6 +203,8 @@
     overflow:hidden;display:grid;grid-template-columns:200px 1fr;max-width:560px;
   }
   .quote-card img{width:100%;height:100%;object-fit:cover}
+  .quote-card.no-img{grid-template-columns:1fr}
+  .quote-card.no-img .q{height:100%}
   .quote-card .q{padding:24px}
   .quote-card .q p{font-size:15px;font-weight:var(--weight-semibold);line-height:1.45}
   .quote-card .q .who{margin-top:14px;font-size:13px;color:var(--gray-600)}
@@ -757,11 +761,11 @@
       <p>UX/UI Designer · Agronomist</p>
       <div class="foot">
         <a class="mail" href="mailto:people@magoya.com" style="text-decoration:none">people@magoya.com</a></div></div>
-    <div class="quote-card">
-      <img src="assets/photos/varu-ceo-color.jpg" alt="Varina Baldi, Founder &amp; CEO" style="object-position:center 20%">
+    <!-- estructura de testimonio: la cita y la atribución salen del cliente real, nunca se inventan -->
+    <div class="quote-card no-img">
       <div class="q">
-        <p>“Magoya’s expertise in UX, digital ag platform development, and agronomic know-how made our transformation possible.”</p>
-        <div class="who"><b>Varina Baldi</b>Founder &amp; CEO</div></div></div>
+        <p>“La cita va textual, tal como la dijo el cliente, en su idioma.”</p>
+        <div class="who"><b>Nombre Apellido</b>Cargo · Empresa cliente</div></div></div>
     <div class="stat"><div class="n">95%</div><div class="d">De nuestros clientes es promotor de Magoya</div><div class="src">Brand Playbook · oct 2026</div></div>
     <div class="stat on-dark"><div class="n">5+</div><div class="d">Años de relación promedio</div><div class="src">Promedio de cartera</div></div></div>
 

@@ -29,6 +29,23 @@ Fuente: presentación de feedback del equipo (6 slides) con tres carpetas de Dri
 | 5 | Sumar templates de redes; ¿editable, Figma o PNG de referencia?; mencionar que se respeta la paleta en posteos con foto y vectoriales | **LISTO** con 8 de 9 | `library.html#redes`: 8 posteos PNG 1080×1350 + `magoya-redes.zip`. Se eligió PNG de referencia porque es el material que existe; la opción editable queda en B13. Regla de paleta en Recursos, Reglas de oro, `BRAND.md` y `tokens.json`. Falta `Posteo_3` (B12) |
 | 6 | Template de deck institucional; mencionar que la base está en Claude y se comparte el Artifact para editar | **LISTO** | `library.html#deck`: 6 slides de muestra + `assets/deck/deck-base-magoya.pdf` (14 slides) y el texto del Artifact. El link del Artifact no está en la cuenta de Facu: pendiente (B11) |
 
+### Validación del 26 oct: banco de fotos, ilustración, elementos visuales y contenedores
+
+Revisado con capturas a 1440 px y una prueba automática de superposición a 1280, 1440, 1680 y 1920 px.
+
+| Área | Hallazgo | Estado |
+|---|---|---|
+| Banco de fotos | Las 4 aéreas son cenitales y las 3 de personas, a color. El ZIP tiene 7 fotos y coincide con lo publicado | OK |
+| Banco de fotos | `varu-ceo-color.jpg` mide 400×400: chica para un banco de fotos | **PENDIENTE**: falta la original en alta |
+| Inicio · Fotografía | Usaba la foto de Varu de 400 px estirada, con el título y una sombra encima de la persona | **CORREGIDO**: aérea + persona; el título va en su franja, nada encima de la foto |
+| Ilustración | No hay ilustración ni motivos en las páginas del core. Los doodles son del kit de IA en Campo | OK |
+| Inicio · Color | Hueco vacío y lima del mismo tamaño que los verdes | **CORREGIDO**: las muestras siguen la proporción (Verde Magoya la mayor, lima la menor) y llenan la tarjeta |
+| Inicio · Iconografía y Reglas de oro | Media tarjeta vacía; Reglas usaba líneas grises de relleno | **CORREGIDO**: grilla de 8 íconos reales; reglas con texto real |
+| Inicio · IA en Campo | La pieza se cortaba a la derecha | **CORREGIDO**: pieza completa. Sigue diciendo "con IA" (pendiente de reexportar del Studio) |
+| Identidad visual · Cards | La card de cita mostraba a Varu con una cita de cliente sin fuente ("made our transformation possible") | **CORREGIDO**: queda como estructura (cita y atribución de ejemplo, sin foto) |
+| Identidad visual · Cards | Los números 95% y 5+ se salían de su card | **CORREGIDO**: las filas del mosaico crecen con el contenido |
+| Identidad visual · Panel de descarga | El panel fijo tapaba fotos y botones "bajar" entre 1280 y 1440 px | **CORREGIDO**: el contenido le deja el lugar; cero superposiciones en los 4 anchos |
+
 ## Ronda de feedback · 22 de octubre de 2026 ("Brand System Online - Magoya")
 
 Fuente: presentación de feedback del equipo (9 slides), más dos decisiones de Facu en chat: Recursos mantiene los logos de clientes y el membrete, y la firma de email se va.
