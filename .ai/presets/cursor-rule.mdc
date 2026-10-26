@@ -42,7 +42,7 @@ Si el proyecto importa `tokens.css`, usá siempre las custom properties (`var(--
 | `--green-900` | `#133825` | **Verde Magoya, el verde protagonista.** Fondos oscuros, overlays, texto sobre claro |
 | `--emerald-500` | `#00DE68` | Identidad: wordmark, avatares, micro-acentos y data-viz. Como texto SOLO sobre oscuro |
 | `--emerald-700` | `#009145` | Verde texto sobre blanco — solo ≥24px bold |
-| `--lime-500` | `#A2FF00` | Solo acentos, detalles, resaltar o CTA. NUNCA texto sobre claro |
+| `--lime-500` | `#A2FF00` | Poca superficie: solo acentos, detalles o CTA. NUNCA texto sobre claro. La frase clave de un titular sobre oscuro va en Verde digital #00DE68 |
 | `--lime-600` | `#8BDB00` | Hover de lima |
 | `--cream-100` | `#ECE3DB` | Texto sobre verde profundo |
 | `--sage-50` | `#EEF2EC` | Superficie clara |
@@ -50,7 +50,7 @@ Si el proyecto importa `tokens.css`, usá siempre las custom properties (`var(--
 
 Temas disponibles vía `data-theme`: `default` (verde profundo), `light` (crema), `paper` (editorial), `studio` (blanco + negro + lima, marketing).
 
-Proporciones de uso entre colores: pendientes de definir. No apliques porcentajes ni inventes una proporción.
+Proporciones de uso entre colores: el Verde Magoya ocupa la mayor superficie y el lima mucha menos; los porcentajes exactos no están definidos. No apliques porcentajes ni inventes una proporción numérica.
 
 ## Tipografía
 
@@ -71,7 +71,7 @@ Máximo 3 niveles tipográficos por vista. Labels de botón en sentence case, nu
 
 - **Sin emojis** en UI, copy, títulos, labels ni comentarios de cara al usuario. Únicas excepciones: manitos que señalan (👈 👉 👇) apuntando a un CTA, y banderas de países para geografía.
 - **Sin `linear-gradient` / `radial-gradient`**, sin glassmorphism, sin `backdrop-filter` decorativo, sin sombras de brillo, sin 3D. Único gradiente permitido: el overlay verde profundo sobre foto aérea, `linear-gradient(180deg, rgba(12,33,23,.55), rgba(12,33,23,.86))`.
-- Para resaltar una palabra: un círculo que la rodea o flechas que la señalan. Nunca subrayado ni bloque resaltador sólido detrás del texto.
+- Círculo que rodea una palabra o flechas que la señalan: solo en piezas de redes. En piezas institucionales se resalta con color (Verde digital #00DE68 sobre oscuro). Nunca subrayado ni bloque resaltador sólido detrás del texto.
 - Sin colores fuera de `tokens.json`. Cero naranja, cero amarillo.
 - Sin la metáfora del puzzle.
 - **Sin ilustración**: Magoya no usa ilustración.

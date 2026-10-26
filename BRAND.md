@@ -40,17 +40,17 @@
 | Color | HEX | Pantone (aprox.) | Rol |
 |---|---|---|---|
 | Verde Magoya | `#133825` | PMS 553 | **El verde protagonista de Magoya**: fondos, overlays, superficies oscuras, texto sobre claro |
-| Verde digital | `#00DE68` | PMS 3282 | Identidad: wordmark, avatares, micro-acentos y data-viz. Como texto SOLO sobre oscuro |
-| Lima | `#A2FF00` | PMS 382 2X | **Solo acentos, detalles, resaltar o CTA.** Nunca texto sobre blanco |
+| Verde digital | `#00DE68` | PMS 3282 | Identidad: wordmark, avatares, micro-acentos y data-viz. **Resalta la frase clave de un titular sobre fondo oscuro.** Como texto SOLO sobre oscuro |
+| Lima | `#A2FF00` | PMS 382 2X | **Poca superficie: solo acentos, detalles o CTA.** Nunca texto sobre blanco |
 | Crema Magoya | `#ECE3DB` | PMS Warm Gray 2 | Neutro cálido; texto sobre verde profundo |
 | Sage | `#EEF2EC` | PMS Cool Gray 1 | Superficie clara |
 | Negro Magoya | `#161616` | PMS Black 5 2X | Texto, titulares, cards dark |
 
 Los Pantone son el **match más cercano por distancia RGB** contra la librería Solid Coated (no existe una conversión exacta hex→Pantone): confirmar contra el libro físico antes de mandar a producción.
 
-**Regla de color.** Ahora que el lima es uno de los colores de la paleta de IA en Campo, Magoya potencia el **Verde Magoya `#133825`** como su verde protagonista y deja el **lima** para acentos, detalles, resaltar o CTA.
+**Regla de color.** Ahora que el lima es uno de los colores de la paleta de IA en Campo, Magoya potencia el **Verde Magoya `#133825`** como su verde protagonista y deja el **lima** para acentos, detalles o CTA, con **mucha menos proporción** que el Verde Magoya. Para resaltar la frase clave de un titular sobre fondo oscuro se usa el **Verde digital `#00DE68`**, no el lima (ejemplo: "Software and AI **for agribusiness.**"). Respetá la paleta en todas las piezas, tanto en los posteos con foto como en los más vectoriales.
 
-**Proporciones de uso: pendientes de definir.** La proporción por porcentajes que regía antes quedó sin efecto y todavía no hay una nueva. No apliques porcentajes ni inventes una proporción.
+**Proporciones de uso.** El Verde Magoya ocupa la mayor superficie y el lima mucha menos. Los porcentajes exactos todavía no están definidos: no apliques porcentajes ni inventes una proporción numérica.
 
 **Accesibilidad (no negociable):** lima nunca como texto sobre claro (1.25:1). Verde sobre blanco como texto = `#009145` y solo ≥24px bold. `#00DE68` como texto solo sobre fondos oscuros. Captions sobre claro: mínimo `#6E756D`.
 
@@ -60,13 +60,13 @@ Los Pantone son el **match más cercano por distancia RGB** contra la librería 
 
 Reglas: **3 niveles tipográficos** por pieza; el peso hace la jerarquía; labels de botón en sentence case. **Emojis: nunca en títulos**; solo se permiten manitos que señalan (👈 👉 👇) para dirigir a un CTA y banderas de países para geografía, ningún otro.
 
-**Resaltar una palabra:** con un **círculo** que la rodea o con **flechas** que la señalan. Nunca subrayado y nunca un bloque resaltador sólido detrás del texto. Las marcas a mano (`assets/flourish-circle.svg`, `assets/flourish-arrow.svg`) van en **verde digital `#00DE68` sobre claro / lima sobre oscuro** (nunca en negro: contra el texto no resaltan), una sola por pieza y siempre sobre texto compuesto, nunca sueltas como adorno. El círculo marca una palabra, una fecha o un dato puntual; la flecha también puede señalar el CTA: nace del texto y su punta cae sobre el botón.
+**Resaltar una palabra.** En **piezas institucionales** (deck, documentos, web) la frase clave se resalta con color: **Verde digital `#00DE68` sobre fondo oscuro**, sin círculos ni flechas. El **círculo** que rodea la palabra o las **flechas** que la señalan son **solo para piezas de redes**, dibujados con la miscelánea nueva (referencia: `assets/social/posteo-4.png`). Nunca subrayado y nunca un bloque resaltador sólido detrás del texto. Las marcas van a mano y en el color del texto de la pieza, como en el posteo de referencia (`assets/flourish-circle.svg` y `assets/flourish-arrow.svg` quedan como base hasta tener los vectores de la miscelánea nueva), una sola por pieza y siempre sobre texto compuesto, nunca sueltas como adorno. El círculo marca una palabra, una fecha o un dato puntual; la flecha también puede señalar el CTA: nace del texto y su punta cae sobre el botón.
 
 ## 5. Fotografía
 
 Dos familias fotográficas, cada una con su regla:
 - **Aérea de campo**: color natural, con **overlay verde profundo** (scrim 55–86%) para fondos con texto. **Siempre enfoque cenital.** El scrim es el único gradiente permitido.
-- **Personas**: gente real del equipo, **siempre a color** y mejor **en espacios abiertos**. Sin ningún detalle encima: ni barra, ni acento verde, ni overlay. Luz natural, gesto genuino.
+- **Personas**: gente real del equipo, **siempre a color** (3 fotos aprobadas: `varu-ceo-color.jpg`, `equipo-campo-planta.jpg`, `equipo-campo-remera.jpg`) y mejor **en espacios abiertos**. Sin ningún detalle encima: ni barra, ni acento verde, ni overlay. Luz natural, gesto genuino.
 - ✗ Stock corporativo posado, oficinas genéricas. ✗ Fotos de personas en blanco y negro o con un detalle de color encima. ✗ Fotos de campo que no sean cenitales.
 
 ## 6. Iconografía
@@ -85,18 +85,20 @@ Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. *
 
 ## 8. Papelería & corporativo
 
+- **Posteos de redes**: 8 posteos de referencia en PNG 1080×1350 (`assets/social/`, ZIP `assets/downloads/magoya-redes.zip`). Son referencias, no archivos editables. Respetan la paleta tanto con foto como en versión vectorial.
+- **Template de deck** (institucional): PDF de referencia de 14 slides en `assets/deck/deck-base-magoya.pdf`. La base está armada en Claude como Artifact; se comparte el Artifact y se edita desde ahí.
 - **Membrete A4**: wordmark verde arriba-izq (20% del ancho), pie con filete verde digital + avatar m. Header y footer vectoriales listos: `assets/downloads/doc-header.svg` · `doc-footer.svg`.
 - Docs: wordmark esquina sup-izq ≤1/5 del ancho; Manrope o Arial; nunca logo como marca de agua.
 
 ## 9. Reglas de oro (resumen ejecutable)
 
-1. El Verde Magoya `#133825` es el verde protagonista. Las proporciones de uso están pendientes de definir: no apliques porcentajes.
-2. Lima solo para acentos, detalles, resaltar o CTA.
-3. Verde digital `#00DE68` = identidad (logo/avatares); lima ≠ logo.
+1. El Verde Magoya `#133825` es el verde protagonista y ocupa la mayor superficie. Los porcentajes exactos no están definidos: no apliques porcentajes.
+2. Lima en poca superficie: solo acentos, detalles o CTA.
+3. Verde digital `#00DE68` = identidad (logo/avatares) y resaltado de la frase clave en titulares sobre oscuro; lima ≠ logo.
 4. Personas siempre a color, sin ningún detalle encima, mejor en espacios abiertos. Aérea de campo siempre cenital. Magoya no usa ilustración.
 5. Logos de clientes SIEMPRE reales, jamás placeholders.
 6. Todo redondeado, como el wordmark. Botón rect 10px, chip pill outline.
-7. Para resaltar una palabra: círculo o flechas. Nunca subrayado.
+7. Círculo o flechas para resaltar: solo en redes. En piezas institucionales, color. Nunca subrayado.
 8. El monograma "m" no va en cards.
 9. **Emojis prohibidos**: la única excepción son las manitos que señalan (👈 👉 👇) hacia un CTA y las banderas de países para geografía. Nunca en títulos.
 10. ✗ Pieza 100% negra o 100% verde (siempre equilibrio) · ✗ Resaltador sólido tras texto · ✗ gradientes glossy/3D/estética AI · ✗ puzzle (metáfora del brand viejo) · ✗ naranja/amarillo del brand viejo.
@@ -128,4 +130,4 @@ Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.a
 
 ---
 
-*Pendientes de contenido: proporciones de uso del color; fotos a color del equipo (hoy solo hay una, de Varu); logos vectoriales de ProducePay/HabiTerre/IntelinAir; validación de Staff Augmentation; unificación del email de contacto (hoy conviven `people@` e `info@`).*
+*Pendientes de contenido: porcentajes exactos de uso del color; archivos vectoriales de la miscelánea nueva de redes (círculo y flechas); link al Artifact base del deck; logos vectoriales de ProducePay/HabiTerre/IntelinAir; validación de Staff Augmentation; unificación del email de contacto (hoy conviven `people@` e `info@`).*

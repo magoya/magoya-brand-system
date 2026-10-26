@@ -1,7 +1,7 @@
 # Magoya Brand System · Roadmap maestro
 
 > Única lista de pendientes y decisiones del sistema. Si algo no está acá, no existe.
-> **Última actualización:** 2026-10-22 (feedback del equipo "Brand System Online - Magoya") · **Live:** https://brand.magoya.com/ · **Repo:** `magoya/magoya-brand-system` (público)
+> **Última actualización:** 2026-10-26 (segunda ronda de feedback "Brand System Online - Magoya") · **Live:** https://brand.magoya.com/ · **Repo:** `magoya/magoya-brand-system` (público)
 > **Proyecto hermano:** Magoya Studio → facundo-web.github.io/magoya-studio (produce las piezas de IA en Campo)
 > El detalle de cada pedido de feedback, con su evidencia, vive en [`AUDITORIA-FEEDBACK.md`](AUDITORIA-FEEDBACK.md).
 
@@ -20,7 +20,18 @@ Criterio de aceptación transversal: ninguna sección se considera terminada si 
 
 ---
 
-## 1. Qué cambió el 22 de octubre de 2026
+## 1. Qué cambió el 26 de octubre de 2026
+
+Fuente: segunda ronda de la presentación de feedback del equipo (6 slides, con carpetas de fotos, posteos y deck).
+
+- **Resaltado en titulares:** la frase clave sobre fondo oscuro va en **Verde digital `#00DE68`**, no en lima ("Software and AI **for agribusiness.**").
+- **Proporción:** el lima tiene mucha menos proporción que el Verde Magoya. Se muestra con el ancho de los bloques, sin porcentajes.
+- **Círculo y flechas:** solo en piezas de redes, con la miscelánea nueva. En piezas institucionales se resalta con color.
+- **Fotografía:** dos fotos nuevas de personas a color en el campo (`equipo-campo-planta.jpg`, `equipo-campo-remera.jpg`).
+- **Posteos de redes:** 8 posteos de referencia en PNG en Recursos, con la regla de respetar la paleta en posteos con foto y vectoriales.
+- **Template de deck:** el deck base institucional (PDF de 14 slides) en Recursos, con la nota de que la base está en Claude como Artifact.
+
+## 1b. Qué cambió el 22 de octubre de 2026
 
 Fuente: presentación de feedback del equipo y respuestas de Facu.
 
@@ -39,9 +50,13 @@ Fuente: presentación de feedback del equipo y respuestas de Facu.
 
 | # | Qué | Desbloquea |
 |---|---|---|
-| **B1** | Definir las **proporciones de uso del color** con el Verde Magoya como protagonista. Hasta entonces, la regla es cualitativa y ningún archivo publica porcentajes | **Varu** + diseño |
-| **B2** | Fotos **a color** del equipo, en espacios abiertos. Hoy la única es la de Varu (`assets/photos/varu-ceo-color.jpg`) | **Facu** (sesión de fotos) |
-| **B3** | Sumar, cuando estén listos, el **estilo de feed-placas** y el **Deck**. No se suman ahora | **equipo** |
+| **B1** | Definir los **porcentajes exactos de uso del color**. La relación ya está (Verde Magoya mucho, lima poco); falta el número, y hasta entonces ningún archivo publica porcentajes | **Varu** + diseño |
+| **B2** | ~~Fotos a color del equipo~~ Hecho el 26 oct: hay 3 (Varu + 2 del equipo en el campo). Sumar más si se eligen otras de la carpeta de la jornada a campo | **equipo** |
+| **B3** | ~~Feed-placas y Deck~~ Hecho el 26 oct: 8 posteos de referencia y el deck base en Recursos | — |
+| **B10** | Vectores (SVG) de la **miscelánea nueva** de redes: círculo y flechas a mano. Hoy se muestran en el posteo de referencia y los SVG viejos quedan como base | **diseño** |
+| **B11** | Link del **Artifact base del deck** en Claude, para ponerlo en Recursos | **Facu** |
+| **B12** | Sumar el **Posteo_3** de la carpeta de redes (no se pudo bajar en esta ronda) | nadie |
+| **B13** | Decidir si los posteos se comparten también editables (Figma) además del PNG de referencia | **equipo** |
 | **B4** | Conseguir en vector los logos de clientes faltantes: **ProducePay**, **HabiTerre**, **IntelinAir** | **Facu** (pedir a los clientes o al diseñador) |
 | **B5** | Unificar el contacto (hoy conviven `people@magoya.com` e `info@magoya.com`) | **Varu** |
 | **B6** | Rol vigente de Camila López Colmano ("AgTech Expert" está a confirmar) | **Facu** |
@@ -73,12 +88,12 @@ Las decisiones abiertas de la capa para AI (capacidades en `facts.json`, marcado
 |---|---|---|
 | Verde Magoya | `#133825` | **El verde protagonista de Magoya**: fondos oscuros, overlays, texto sobre claro |
 | Verde digital | `#00DE68` | Identidad (logo/avatares) y data-viz. Como texto **solo sobre oscuro** |
-| Lima | `#A2FF00` | **Solo acentos, detalles, resaltar o CTA.** Nunca texto sobre blanco (1.25:1) |
+| Lima | `#A2FF00` | **Poca superficie: solo acentos, detalles o CTA.** Nunca texto sobre blanco (1.25:1) |
 | Crema Magoya | `#ECE3DB` | Neutro cálido; texto sobre verde profundo |
 | Sage | `#EEF2EC` | Superficie clara |
 | Negro Magoya | `#161616` | Texto, titulares, cards dark |
 
-- **Proporciones de uso: pendientes de definir** (B1). No se aplican porcentajes.
+- **Proporciones de uso:** el Verde Magoya ocupa la mayor superficie y el lima mucha menos. Los porcentajes exactos están pendientes (B1) y no se aplican.
 - Verde sobre blanco como texto = `#009145` y solo ≥24px bold. Captions sobre claro: mínimo `#6E756D`. **Accesibilidad no negociable.**
 - Lima ≠ logo. El wordmark usa una de sus cuatro variantes (verde, crema, negro, verde profundo) según el fondo.
 
@@ -88,7 +103,7 @@ Las decisiones abiertas de la capa para AI (capacidades en `facts.json`, marcado
 |---|---|
 | Fotografía | Aérea de campo en color natural, con **overlay verde profundo 55–86%** cuando lleva texto (el único gradiente permitido), **siempre cenital**. **Personas siempre a color**, sin ningún detalle encima, mejor en espacios abiertos |
 | Ilustración | **No hay.** Magoya no usa ilustración |
-| Resaltar | Un **círculo** que rodea la palabra o **flechas** que la señalan. Verde digital sobre claro / lima sobre oscuro, nunca negro. **Nunca subrayado** y **nunca** bloque resaltador sólido detrás de palabras |
+| Resaltar | Institucional (deck, documentos, web): la frase clave en **Verde digital sobre oscuro**. Redes: un **círculo** que rodea la palabra o **flechas** que la señalan, a mano y en el color del texto. **Nunca subrayado** y **nunca** bloque resaltador sólido detrás de palabras |
 | Iconografía | Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. Lima solo en el ícono destacado (uno por pieza). Nunca relleno sólido ni 3D. Completar volumen con Lucide |
 | Botón ≠ chip | **Botón** = rectángulo radio 10px, fondo sólido. **Chip** = pill outline (borde y texto del mismo color, fondo transparente). Nunca chip sólido ni botón pill |
 | Tipografía en pieza | Máximo **3 niveles por pieza**. El peso hace la jerarquía |

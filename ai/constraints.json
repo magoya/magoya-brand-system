@@ -17,8 +17,8 @@
   ]
  },
  "color": {
-  "regla": "El Verde Magoya #133825 es el verde protagonista. El lima #A2FF00 se usa solo para acentos, detalles, resaltar o CTA, y nunca como texto sobre claro.",
-  "proporciones": "pendientes de definir: ver pendiente_de_definir. No se aplican porcentajes."
+  "regla": "El Verde Magoya #133825 es el verde protagonista. El lima #A2FF00 se usa en poca superficie, solo para acentos, detalles o CTA, y nunca como texto sobre claro; la frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68.",
+  "proporciones": "el Verde Magoya ocupa la mayor superficie y el lima mucha menos; los porcentajes exactos están en pendiente_de_definir y no se aplican."
  },
  "ai_en_campo_madre": {
   "lienzo": "1080×1350 (4:5)",
@@ -44,7 +44,7 @@
  },
  "verificacion": "los chequeos de .ai/checklist.md y, si hay texto, .ai/checklist-verbal.md: este archivo agrega los números; los checklists dicen cómo auditarlos",
  "pendiente_de_definir": [
-  "proporciones de uso del color: la proporción por porcentajes anterior quedó sin efecto (feedback del equipo, 22 oct 2026) y todavía no hay una nueva",
+  "porcentajes exactos de uso del color: la relación ya está (el Verde Magoya ocupa la mayor superficie y el lima mucha menos, feedback del 26 oct 2026), falta el número",
   "mínimos tipográficos para web/app (px por nivel): el mínimo legible de cada nivel. La escala existe (typography.scale en rem, de xs a 7xl, en tokens.json); lo que falta es el piso en px",
   "clearspace numérico de los avatares (hoy solo el wordmark lo tiene)",
   "margen mínimo de piezas impresas en mm"
