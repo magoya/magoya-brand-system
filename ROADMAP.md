@@ -37,7 +37,7 @@ Fuente: presentación de feedback del equipo y respuestas de Facu.
 
 - **Navegación única** en todas las páginas: Inicio · Conocer la marca (Estrategia, Voz, Lenguaje, Aplicación, Identidad visual) · Recursos · Integrar con AI · IA en Campo.
 - **Se retiraron del sistema** las piezas editables y todo lo que servía para armarlas (páginas, plantillas, módulos, generadores y validadores asociados). Se descarga solo lo que está en Recursos.
-- **Recursos** (`library.html`): logo kit, Manrope, paleta (tokens), íconos, logos de clientes, membrete de documentos, fotos aéreas cenitales y el kit de IA en Campo.
+- **Recursos** (`library.html`): logo kit, Manrope, paleta (tokens), íconos, logos de clientes, membrete de documentos, fotos aéreas cenitales y de personas, posteos de redes y el deck base (referencias en PNG y PDF) y el kit de IA en Campo.
 - **Color:** el Verde Magoya `#133825` es el verde protagonista; el lima `#A2FF00` es solo para acentos, detalles, resaltar o CTA. La proporción por porcentajes quedó sin efecto.
 - **Fotografía:** aérea de campo en color natural, con overlay verde profundo para fondos con texto, siempre cenital. Personas siempre a color, sin ningún detalle encima, mejor en espacios abiertos.
 - **Sin ilustración.** Para resaltar una palabra: círculo o flechas, nunca subrayado.
@@ -125,7 +125,7 @@ Las decisiones abiertas de la capa para AI (capacidades en `facts.json`, marcado
 
 | Descartado | Por qué |
 |---|---|
-| **Piezas editables** | Decisión del equipo (22 oct 2026): se descargan tipografías, elementos y paleta, no piezas hechas o para editar |
+| **Piezas editables** | Decisión del equipo (22 oct 2026): se descargan tipografías, elementos y paleta, no piezas para editar. Desde el 26 oct hay posteos y un deck como **referencias** (PNG y PDF), no como archivos editables (ver B13) |
 | **Ilustración** | "Ilustración no tenemos" (feedback del 22 oct 2026) |
 | **Motivos gráficos decorativos** | Retirados con la ilustración |
 | **Fotos de personas en blanco y negro o con acento de color encima** | Las personas van siempre a color y sin detalle |

@@ -20,7 +20,7 @@ Todas las páginas comparten la misma barra de navegación (`nav.css` + `nav.js`
 | Lenguaje | [`lenguaje.html`](lenguaje.html) | Estilo y lenguaje, expresión verbal (los siete principios), vocabulario de marca, AI (no IA), glosario ES/EN/PT, cómo suena Magoya, reglas de oro verbales |
 | Aplicación | [`aplicacion.html`](aplicacion.html) | Capas de la marca, voceros y territorios, canales e idioma, focos de contenido y producción |
 | Identidad visual | [`brand-book.html`](brand-book.html) · [`icons.html`](icons.html) | Logo, color, tipografía, fotografía, iconografía, componentes, reglas de oro visuales · librería de 58 íconos |
-| Recursos | [`library.html`](library.html) · [`logos.html`](logos.html) | Lo que se descarga: logo kit, Manrope, paleta (tokens), íconos, logos de clientes, membrete de documentos, fotos aéreas cenitales y el kit de IA en Campo |
+| Recursos | [`library.html`](library.html) · [`logos.html`](logos.html) | Lo que se descarga: logo kit, Manrope, paleta (tokens), íconos, logos de clientes, membrete de documentos, fotos aéreas cenitales y de personas, posteos de redes y el deck base (referencias en PNG y PDF) y el kit de IA en Campo |
 | IA en Campo | [`ai-en-campo.html`](ai-en-campo.html) | Sub-manual del programa presentado por Magoya: lockup, voz y piezas |
 | Integrar con AI | [`ai.html`](ai.html) | El proyecto de Claude "Magoya · Marca": cómo se usa, cómo se valida lo que devuelve y cómo se administra |
 
