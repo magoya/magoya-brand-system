@@ -20,7 +20,7 @@ Todas las páginas comparten la misma barra de navegación (`nav.css` + `nav.js`
 | Lenguaje | [`lenguaje.html`](lenguaje.html) | Estilo y lenguaje, expresión verbal (los siete principios), vocabulario de marca, AI (no IA), glosario ES/EN/PT, cómo suena Magoya, reglas de oro verbales |
 | Aplicación | [`aplicacion.html`](aplicacion.html) | Capas de la marca, voceros y territorios, canales e idioma, focos de contenido y producción |
 | Identidad visual | [`brand-book.html`](brand-book.html) · [`icons.html`](icons.html) | Logo, color, tipografía, fotografía, iconografía, componentes, reglas de oro visuales · librería de 58 íconos |
-| Recursos | [`library.html`](library.html) · [`logos.html`](logos.html) | Lo que se descarga: logo kit, Manrope, paleta (tokens), íconos, logos de clientes, membrete de documentos, fotos aéreas cenitales y el kit de IA en Campo |
+| Recursos | [`library.html`](library.html) · [`logos.html`](logos.html) | Lo que se descarga: logo kit, Manrope, paleta (tokens), íconos, logos de clientes, membrete de documentos, fotos aéreas cenitales y de personas, posteos de redes y el deck base (referencias en PNG y PDF) y el kit de IA en Campo |
 | IA en Campo | [`ai-en-campo.html`](ai-en-campo.html) | Sub-manual del programa presentado por Magoya: lockup, voz y piezas |
 | Integrar con AI | [`ai.html`](ai.html) | El proyecto de Claude "Magoya · Marca": cómo se usa, cómo se valida lo que devuelve y cómo se administra |
 
@@ -36,7 +36,7 @@ Si sos una AI escribiendo o revisando contenido para Magoya, leé **en este orde
 4. [`llms.txt`](llms.txt) — el resumen corto y estable de la marca para agentes.
 5. [`.ai/`](.ai) — prompts listos para pegar (`brand-prompt.md`, `brand-prompt-short.md`), los checklists de validación (`checklist.md` visual, `checklist-verbal.md` de texto) y presets por herramienta (`.ai/presets/`). La guía de uso está en [`ai.html`](ai.html).
 
-Reglas mínimas si solo vas a leer una cosa: Manrope; el Verde Magoya `#133825` es el verde protagonista; lima `#A2FF00` solo para acentos, detalles, resaltar o CTA, y nunca como texto sobre blanco; las proporciones de uso entre colores están pendientes de definir (no apliques porcentajes); logo/avatares = `#00DE68`; fotos aéreas cenitales con overlay verde profundo si llevan texto; personas siempre a color, sin ningún detalle encima; no hay ilustración; para resaltar una palabra, círculo o flechas, nunca subrayado; emojis prohibidos salvo manitos que señalan y banderas; el monograma "m" no va en cards; nada de gradientes glossy, puzzle, naranja ni amarillo.
+Reglas mínimas si solo vas a leer una cosa: Manrope; el Verde Magoya `#133825` es el verde protagonista; lima `#A2FF00` solo para acentos, detalles o CTA (la frase clave sobre oscuro va en Verde digital #00DE68), y nunca como texto sobre blanco; el Verde Magoya ocupa la mayor superficie y el lima mucha menos (sin porcentajes definidos); logo/avatares = `#00DE68`; fotos aéreas cenitales con overlay verde profundo si llevan texto; personas siempre a color, sin ningún detalle encima; no hay ilustración; círculo o flechas para resaltar solo en redes (en piezas institucionales, color), nunca subrayado; emojis prohibidos salvo manitos que señalan y banderas; el monograma "m" no va en cards; nada de gradientes glossy, puzzle, naranja ni amarillo.
 
 ## Assets
 
@@ -48,7 +48,9 @@ assets/
 ├── favicon/          # favicon.svg + favicon-{16,32,180,512}.png
 ├── flourish-{circle,arrow}.svg   # marcas a mano: círculo y flecha para resaltar
 ├── icons/            # los 58 íconos del sistema (export de icons.html)
-├── photos/           # aéreas cenitales + retrato a color + silueta de IA en Campo
+├── photos/           # aéreas cenitales + personas a color + silueta de IA en Campo
+├── social/           # posteos de redes de referencia (PNG 1080×1350)
+├── deck/             # deck base institucional (PDF + previews)
 ├── pieces/           # capturas de piezas publicadas de IA en Campo
 ├── logos/clients/    # clientes reales
 ├── logos/partners/   # partners tecnológicos

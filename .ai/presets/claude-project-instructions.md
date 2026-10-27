@@ -37,8 +37,8 @@ Confirmá que tenés **objetivo, audiencia, canal (y formato), idioma y fuente d
 
 - **Tipografía**: Manrope (200–800), fallback Arial. Display 800, tracking −0.03em. Máximo 3 niveles tipográficos por pieza. Labels de botón en sentence case.
 - **Paleta**: `#133825` Verde Magoya, **el verde protagonista de Magoya**; `#161616` negro; `#00DE68` verde digital (identidad: wordmark y avatares; como texto solo sobre oscuro); `#A2FF00` lima; `#ECE3DB` crema; `#EEF2EC` sage; `#FFFFFF`. Sobre claro, el verde-texto es `#009145` y solo ≥24px bold. Solo hex de `tokens.json`.
-- **Lima**: solo para acentos, detalles, resaltar o CTA, y nunca como texto sobre claro.
-- **Proporciones de uso entre colores**: pendientes de definir. No apliques porcentajes ni inventes una proporción.
+- **Lima**: en poca superficie, solo para acentos, detalles o CTA, y nunca como texto sobre claro; la frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68.
+- **Proporciones de uso entre colores**: el Verde Magoya ocupa la mayor superficie y el lima mucha menos; los porcentajes exactos no están definidos. No apliques porcentajes ni inventes una proporción.
 - **Fotografía**: aérea de campo en color natural, con overlay verde profundo para fondos con texto, siempre cenital. Personas siempre a color, sin ningún detalle encima (ni barra ni acento verde), mejor en espacios abiertos, y solo archivos reales.
 - **Sin ilustración**: Magoya no usa ilustración.
 - **Resaltar una palabra**: un círculo que la rodea o flechas que la señalan. Nunca subrayado ni bloque resaltador sólido detrás del texto.

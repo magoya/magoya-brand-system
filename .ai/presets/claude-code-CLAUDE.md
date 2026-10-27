@@ -42,12 +42,12 @@ Si el proyecto importa `tokens.css`, usá custom properties (`var(--color-text)`
 | `#133825` | `--green-900` | **Verde Magoya, el verde protagonista.** Fondos oscuros, overlays, texto sobre claro |
 | `#00DE68` | `--emerald-500` | Identidad: wordmark, avatares, micro-acentos y data-viz. Como texto **solo sobre oscuro** |
 | `#009145` | `--emerald-700` | Verde texto sobre blanco, y solo a ≥24px bold |
-| `#A2FF00` | `--lime-500` | Solo acentos, detalles, resaltar o CTA. **Nunca texto sobre claro.** Hover `#8BDB00` |
+| `#A2FF00` | `--lime-500` | Poca superficie: solo acentos, detalles o CTA. **Nunca texto sobre claro.** La frase clave de un titular sobre oscuro va en Verde digital #00DE68. Hover `#8BDB00` |
 | `#ECE3DB` | `--cream-100` | Texto sobre verde profundo |
 | `#EEF2EC` | `--sage-50` | Superficie clara |
 | `#6E756D` | — | Captions sobre claro (mínimo accesible) |
 
-Proporciones de uso entre colores: pendientes de definir. No apliques porcentajes ni inventes una proporción. No uses hex que no estén en `tokens.json`. Cero naranja y cero amarillo.
+Proporciones de uso entre colores: el Verde Magoya ocupa la mayor superficie y el lima mucha menos; los porcentajes exactos no están definidos. No apliques porcentajes ni inventes una proporción numérica. No uses hex que no estén en `tokens.json`. Cero naranja y cero amarillo.
 
 ## Tipografía
 
@@ -65,13 +65,13 @@ Proporciones de uso entre colores: pendientes de definir. No apliques porcentaje
 
 - **Sin emojis** en UI, copy, títulos, labels ni mensajes de commit de cara al usuario. Únicas excepciones: manitos que señalan (👈 👉 👇) apuntando a un CTA, y banderas de países para geografía.
 - **Sin gradientes** (`linear-gradient`, `radial-gradient`), sin glassmorphism, sin `backdrop-filter` decorativo, sin sombras de brillo, sin 3D. Único gradiente permitido: overlay verde profundo sobre foto aérea, `linear-gradient(180deg, rgba(12,33,23,.55), rgba(12,33,23,.86))`.
-- Para resaltar una palabra: un círculo que la rodea o flechas que la señalan. Nunca subrayado ni bloque resaltador sólido detrás del texto.
+- Círculo que rodea una palabra o flechas que la señalan: solo en piezas de redes. En piezas institucionales (deck, documentos, web) se resalta con color: Verde digital #00DE68 sobre oscuro. Nunca subrayado ni bloque resaltador sólido detrás del texto.
 - Logos de clientes siempre reales desde `assets/logos/clients/` — jamás placeholders ni SVG inventados.
 - Sin la metáfora del puzzle.
 - **Sin ilustración**: Magoya no usa ilustración.
 - **Fotografía**: aérea de campo en color natural, con overlay verde profundo para fondos con texto, siempre cenital. Personas siempre a color, sin ningún detalle encima (ni barra ni acento verde), mejor en espacios abiertos.
 - El monograma "m" circular es funcional (favicon, app icon): no es un sello decorativo dentro de cards.
-- Lima solo para acentos, detalles, resaltar o CTA.
+- Lima en poca superficie: solo acentos, detalles o CTA. La frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68.
 
 ## Copy
 

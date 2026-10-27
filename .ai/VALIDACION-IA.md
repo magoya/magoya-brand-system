@@ -16,8 +16,8 @@ decisiones que todavía aplican.
 1. **Proporciones de uso del color.** La proporción por porcentajes quedó sin efecto con el feedback
    del equipo del 22 de octubre y todavía no hay una nueva. Está declarada en
    `ai/constraints.json` (`pendiente_de_definir`).
-2. **Fotos a color del equipo.** La única foto de persona disponible es la de Varina Baldi, a color.
-   Faltan las del resto del equipo.
+2. **Fotos a color del equipo.** Hay tres: la de Varina Baldi y dos del equipo en el campo (26 oct 2026).
+   Sumar más si el equipo elige otras.
 3. **`facts.json` no tiene un campo de capacidades.** Un pedido del tipo "anunciá una capacidad
    concreta del equipo" no tiene de dónde responder qué capacidades hay: el archivo tiene empresa,
    cifras, clientes y equipo. ¿Qué capacidades se pueden anunciar?

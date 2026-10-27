@@ -15,13 +15,13 @@ Si vas a generar contenido, código o copy para Magoya, leé `BRAND.md`, `tokens
 Y las diez reglas visuales que más se rompen, para tenerlas antes de abrir cualquier link:
 
 1. Tipografía **Manrope** (variable 200–800), fallback Arial. Display peso 800, tracking −0.03em. Máximo 3 niveles tipográficos por pieza.
-2. El **Verde Magoya #133825** es el verde protagonista de Magoya. Las proporciones de uso entre colores están **pendientes de definir**: no apliques porcentajes ni inventes una proporción.
-3. Lima **#A2FF00** solo para **acentos, detalles, resaltar o CTA**. **Nunca como texto sobre fondo claro** (1.25:1).
+2. El **Verde Magoya #133825** es el verde protagonista de Magoya y ocupa la mayor superficie; el lima, mucha menos. Los porcentajes exactos **no están definidos**: no apliques porcentajes ni inventes una proporción numérica.
+3. Lima **#A2FF00** en poca superficie: solo **acentos, detalles o CTA**. **Nunca como texto sobre fondo claro** (1.25:1). La frase clave de un titular sobre fondo oscuro se resalta con **Verde digital #00DE68**.
 4. Verde digital **#00DE68** = identidad (wordmark y avatares). Como texto solo sobre fondo oscuro; sobre blanco se usa **#009145** y solo ≥24px bold. Lima ≠ logo.
 5. **Sin emojis** en títulos ni en cualquier texto. La única excepción son las manitos que señalan (👈 👉 👇) hacia un CTA y las banderas de países.
 6. **Sin gradientes** glossy, 3D ni estética "hecha por AI". El único gradiente permitido es el overlay verde profundo 55–86% sobre foto aérea.
 7. **Fotografía, dos familias.** Aérea de campo: color natural con overlay verde profundo para fondos con texto, siempre enfoque cenital. Personas: siempre a color, sin ningún detalle encima (ni barra ni acento verde), mejor en espacios abiertos.
-8. **Magoya no usa ilustración.** Para resaltar una palabra: un círculo que la rodea o flechas que la señalan. Nunca subrayado y nunca un bloque resaltador sólido detrás del texto.
+8. **Magoya no usa ilustración.** Círculo o flechas para resaltar una palabra: **solo en piezas de redes**. En piezas institucionales (deck, documentos, web) se resalta con color. Nunca subrayado y nunca un bloque resaltador sólido detrás del texto.
 9. **Chips solo texto y espaciado en escala**: el chip (pill outline) nunca lleva punto/bullet delante del texto ni ícono adentro; todo margin/padding/gap sale de la escala base-4 (4/8/12/16/24/32/48/64/96) con un solo eje de alineación por pieza. Specs en `components` y `spacing.rules` de `tokens.json`.
 10. Fuera de la marca: la metáfora del **puzzle**, el **naranja** y el **amarillo** del brand viejo, y los logos de clientes falsos o placeholder.
 
@@ -44,7 +44,7 @@ Y las diez reglas visuales que más se rompen, para tenerlas antes de abrir cual
 - [tokens.json](https://brand.magoya.com/tokens.json): todos los valores exactos con su rol y sus reglas de accesibilidad: paleta completa, regla de uso del color, escala tipográfica, espaciado, radios, layouts de export y las rutas de assets.
 - [tokens.css](https://brand.magoya.com/tokens.css): los mismos tokens como CSS custom properties en dos capas (primitivos y semánticos) con 4 temas: `default` (verde profundo), `light` (crema), `paper` (editorial) y `studio` (blanco + negro + lima, marketing). Usar esto al escribir código.
 - [README.md](https://brand.magoya.com/README.md): mapa del repositorio, orden de lectura recomendado y árbol de la carpeta `assets/`.
-- [ai/assets.json](https://brand.magoya.com/ai/assets.json): manifiesto de TODOS los assets (202 archivos) con URL directa y regla de uso por carpeta: wordmarks, avatares, los 58 íconos del sistema como SVGs individuales (`assets/icons/`), fotos, logos reales de clientes y stack. Pages no lista directorios: este manifiesto es la única forma de enumerar los assets.
+- [ai/assets.json](https://brand.magoya.com/ai/assets.json): manifiesto de TODOS los assets (236 archivos) con URL directa y regla de uso por carpeta: wordmarks, avatares, los 58 íconos del sistema como SVGs individuales (`assets/icons/`), fotos, logos reales de clientes y stack. Pages no lista directorios: este manifiesto es la única forma de enumerar los assets.
 - [llms-full.txt](https://brand.magoya.com/llms-full.txt): TODO el sistema en un solo fetch (doctrina + capa verbal + guía editorial + constraints + precedencia + método + checklists). Empezá acá si tus fetches encadenados fallan o truncan.
 - [ai/facts.json](https://brand.magoya.com/ai/facts.json): los datos REALES de la compañía (cifras aprobadas, clientes y equipo nombrables). Lo que no esté acá se pide, no se inventa.
 - [ai/constraints.json](https://brand.magoya.com/ai/constraints.json): mínimos de logo, clearspace, safe areas, límites de texto: los números que nadie tiene que asumir.
@@ -76,7 +76,7 @@ Y las diez reglas visuales que más se rompen, para tenerlas antes de abrir cual
 
 ## Optional
 
-- [library.html](https://brand.magoya.com/library.html): Recursos, todo lo que se descarga: logo kit (wordmark y avatares), tipografía Manrope, paleta (tokens), íconos, logos de clientes, membrete de documentos, fotos aéreas cenitales y el kit de IA en Campo.
+- [library.html](https://brand.magoya.com/library.html): Recursos, todo lo que se descarga: logo kit (wordmark y avatares), tipografía Manrope, paleta (tokens), íconos, logos de clientes, membrete de documentos, fotos aéreas cenitales y de personas, posteos de redes y el deck base (referencias en PNG y PDF) y el kit de IA en Campo.
 - [logos.html](https://brand.magoya.com/logos.html): logos reales de clientes y del stack tecnológico — los únicos que se pueden usar en un logo wall.
 - [ai-en-campo.html](https://brand.magoya.com/ai-en-campo.html): IA en Campo, marca de programa presentada por Magoya, con manual propio. **No es parte del core**: rompe tres reglas a propósito (lienzo verde digital pleno, placa negra de dato clave, doodles del Studio). No aplicar sus reglas a piezas de Magoya.
 - [ROADMAP.md](https://brand.magoya.com/ROADMAP.md): estado del sistema y pendientes de contenido.
