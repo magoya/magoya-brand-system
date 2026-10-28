@@ -61,8 +61,8 @@ Máximo 3 niveles tipográficos por vista. Labels de botón en sentence case, nu
 
 ## Componentes
 
-- **Botón**: `border-radius:10px` (`--radius-btn`), fondo sólido. Tres niveles: primario lima con texto `#161616`, secundario verde profundo con texto crema, terciario outline. **Un solo primario por pantalla.**
-- **Chip**: pill (`border-radius:999px`) con `background:transparent` y borde + texto del mismo color. Nunca chip con fondo sólido, nunca botón pill.
+- **Botón**: CTA = pill de radio 44px en Verde digital o lima, con la flecha en un círculo Verde Magoya (`assets/components/cta.svg`), uno por pieza. Botones secundario (verde profundo) y terciario (outline): rectángulo de radio 10px. Box = radio 12px, cualquier color de la marca menos lima, una sola imagen en el rectángulo claro y el texto sobre el pleno (`assets/components/box.svg`). Chip = pill outline, nunca sólido.
+- **Chip**: pill (`border-radius:999px`) con `background:transparent` y borde + texto del mismo color. Nunca chip con fondo sólido. La única pill sólida es el CTA.
 - **Focus**: `box-shadow: 0 0 0 3px rgba(0,222,104,.45)` — sin blur. Nunca `outline:none` sin reemplazo.
 - Radios generales: 6 / 12 / 20 / 28 / 999px. Espaciado base 4px, escala 4-8-12-16-24-32-48-64-96.
 - Iconos: SVG inline, `stroke-width:2`, `stroke-linecap:round`, `stroke-linejoin:round`, `viewBox="0 0 24 24"`, `stroke="currentColor"`, `fill="none"`. Nunca rellenos sólidos ni 3D.
@@ -71,7 +71,7 @@ Máximo 3 niveles tipográficos por vista. Labels de botón en sentence case, nu
 
 - **Sin emojis** en UI, copy, títulos, labels ni comentarios de cara al usuario. Únicas excepciones: manitos que señalan (👈 👉 👇) apuntando a un CTA, y banderas de países para geografía.
 - **Sin `linear-gradient` / `radial-gradient`**, sin glassmorphism, sin `backdrop-filter` decorativo, sin sombras de brillo, sin 3D. Único gradiente permitido: el overlay verde profundo sobre foto aérea, `linear-gradient(180deg, rgba(12,33,23,.55), rgba(12,33,23,.86))`.
-- Círculo que rodea una palabra o flechas que la señalan: solo en piezas de redes. En piezas institucionales se resalta con color (Verde digital #00DE68 sobre oscuro). Nunca subrayado ni bloque resaltador sólido detrás del texto.
+- Para resaltar en un titular hay dos formas: color (Verde digital #00DE68 sobre fondo oscuro) o el círculo gestual de la miscelánea nueva (`assets/marks/circle1.svg`, `circle2.svg`). Flechas, círculos, X y ✓ (`assets/marks/`): lima para detalles, acentos o resaltar una palabra; Verde digital; o Verde Magoya cuando el fondo contrasta (por ejemplo sobre Verde digital). Nunca subrayado ni bloque resaltador sólido detrás del texto.
 - Sin colores fuera de `tokens.json`. Cero naranja, cero amarillo.
 - Sin la metáfora del puzzle.
 - **Sin ilustración**: Magoya no usa ilustración.

@@ -1,7 +1,7 @@
 # Magoya Brand System · Roadmap maestro
 
 > Única lista de pendientes y decisiones del sistema. Si algo no está acá, no existe.
-> **Última actualización:** 2026-10-26 (segunda ronda de feedback "Brand System Online - Magoya") · **Live:** https://brand.magoya.com/ · **Repo:** `magoya/magoya-brand-system` (público)
+> **Última actualización:** 2026-10-28 (tercera versión del feedback "Brand System Online - Magoya") · **Live:** https://brand.magoya.com/ · **Repo:** `magoya/magoya-brand-system` (público)
 > **Proyecto hermano:** Magoya Studio → facundo-web.github.io/magoya-studio (produce las piezas de IA en Campo)
 > El detalle de cada pedido de feedback, con su evidencia, vive en [`AUDITORIA-FEEDBACK.md`](AUDITORIA-FEEDBACK.md).
 
@@ -19,6 +19,13 @@ Criterio de aceptación transversal: ninguna sección se considera terminada si 
 - Todo lo que una persona podría necesitar copiar (prompt, token, snippet, archivo) está a un click.
 
 ---
+
+## 0. Qué cambió el 28 de octubre de 2026
+
+- **Resaltado:** en titulares vale el color (Verde digital sobre oscuro) o el círculo gestual nuevo. Ya no es "solo redes".
+- **Miscelánea gestual:** 6 flechas, 2 círculos, 2 X y 2 ✓ en `assets/marks/`, en lima, Verde digital o Verde Magoya según el fondo.
+- **CTA:** pill de radio 44px en Verde digital o lima, con flecha. **Box:** radio 12px, cualquier color menos lima.
+- **Fotos:** 5 de personas. **Decks:** uno de uso interno (PDF) y uno con clientes (solo previews).
 
 ## 1. Qué cambió el 26 de octubre de 2026
 
@@ -57,6 +64,11 @@ Fuente: presentación de feedback del equipo y respuestas de Facu.
 | **B11** | Link del **Artifact base del deck** en Claude, para ponerlo en Recursos | **Facu** |
 | **B12** | Sumar el **Posteo_3** de la carpeta de redes (no se pudo bajar en esta ronda) | nadie |
 | **B13** | Decidir si los posteos se comparten también editables (Figma) además del PNG de referencia | **equipo** |
+| **B14** | Decidir si los decks se editan desde el Artifact de Claude (propuesta de Ayelén) o desde el design system con estos ejemplos | **Facu**, Ayelén y Martina |
+| **B15** | Revisar entre los tres la web de identidad visual de IA en Campo y decidir dónde se publica | **Facu**, Martina y Ayelén |
+| **B16** | Confirmar el verde de los recursos nuevos: vienen en #003922, el Verde Magoya oficial es #133825 | **diseño** |
+| **B17** | Decidir si los botones secundario y terciario pasan también a pill de 44px como el CTA | **diseño** |
+| **B18** | Sumar las fotos de la sesión nueva en la oficina | **Sophie** |
 | **B4** | Conseguir en vector los logos de clientes faltantes: **ProducePay**, **HabiTerre**, **IntelinAir** | **Facu** (pedir a los clientes o al diseñador) |
 | **B5** | Unificar el contacto (hoy conviven `people@magoya.com` e `info@magoya.com`) | **Varu** |
 | **B6** | Rol vigente de Camila López Colmano ("AgTech Expert" está a confirmar) | **Facu** |

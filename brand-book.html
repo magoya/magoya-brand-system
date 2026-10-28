@@ -325,6 +325,30 @@
   .hl-ref{display:grid;grid-template-columns:repeat(2,minmax(0,280px));gap:24px;margin:8px 0 6px}
   .hl-ref img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-lg);display:block}
   .hl-ref figcaption{font-size:var(--text-sm);color:var(--gray-600);margin-top:8px;line-height:1.45}
+  /* CTA: pill 44px, verde digital o lima, flecha en círculo Verde Magoya */
+  .cta{display:inline-flex;align-items:center;gap:12px;padding:6px 24px 6px 6px;border-radius:44px;background:var(--emerald-500);color:var(--green-900);font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;transition:filter .15s}
+  .cta:hover{filter:brightness(.94)}
+  .cta .ic{width:36px;height:36px;border-radius:50%;background:var(--green-900);color:var(--emerald-500);display:flex;align-items:center;justify-content:center}
+  .cta .ic svg{width:20px;height:20px}
+  .cta-lime{background:var(--lime-500)}
+  .cta-lime .ic{color:var(--lime-500)}
+  /* Box: radio 12px, texto en el pleno, una imagen en el rectángulo claro */
+  .box-row{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;margin:6px 0 4px}
+  .box{width:170px;height:212px;border-radius:12px;padding:8px;display:flex;flex-direction:column}
+  .box b{display:block;padding:8px 6px 0;font-size:15px;line-height:1.2;min-height:70px}
+  .box-img{flex:1;border-radius:12px;overflow:hidden;background:var(--white)}
+  .box-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .box-src{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+  /* miscelánea gestual: los SVG se tiñen por máscara, así un mismo archivo sirve en lima, verde digital o Verde Magoya */
+  .mk{display:inline-block;-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center}
+  .hl-demo{background:var(--green-900);color:var(--cream-50);border-radius:var(--radius-lg);padding:30px 34px;max-width:620px;margin:6px 0 10px}
+  .hl-demo .type-hero{font-size:2.4rem;line-height:1.12}
+  .hl-word{position:relative;display:inline-block;z-index:0}
+  .hl-word .mk{position:absolute;left:-12%;top:-26%;width:124%;height:152%;z-index:-1;background:var(--lime-500)}
+  .mk-rows{display:flex;flex-direction:column;gap:10px;max-width:940px;margin:6px 0 18px}
+  .mk-row{display:flex;align-items:center;flex-wrap:wrap;gap:14px 18px;border-radius:var(--radius-lg);padding:16px 20px}
+  .mk-row .mk{width:46px;height:40px}
+  .mk-lab{flex-basis:100%;font-size:12px;font-weight:700}
 
   /* ---------- fichas de foto con descarga ---------- */
   .pcard2{border:1px solid var(--color-hairline);border-radius:var(--radius-lg);overflow:hidden;background:var(--white)}
@@ -534,7 +558,7 @@
   <div class="grid g4">
     <div class="sw"><div class="chip" style="background:var(--green-900)"></div><div class="meta"><b>Verde Magoya</b><span>#133825 · PMS 553</span><i>Verde protagonista de Magoya. Fondos oscuros, overlays, texto sobre claro.</i></div></div>
     <div class="sw"><div class="chip" style="background:var(--emerald-500)"></div><div class="meta"><b>Verde digital</b><span>#00DE68 · PMS 3282</span><i>Identidad: wordmark, avatares, micro-acentos. Resalta la frase clave de un titular sobre fondo oscuro. Chips, soporte y data-viz. Como texto, solo sobre fondos oscuros.</i></div></div>
-    <div class="sw"><div class="chip" style="background:var(--lime-500)"></div><div class="meta"><b>Lima energía</b><span>#A2FF00 · PMS 382 2X</span><i>Poca superficie: solo acentos, detalles o CTA.</i></div></div>
+    <div class="sw"><div class="chip" style="background:var(--lime-500)"></div><div class="meta"><b>Lima energía</b><span>#A2FF00 · PMS 382 2X</span><i>Poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea.</i></div></div>
     <div class="sw"><div class="chip" style="background:var(--cream-100)"></div><div class="meta"><b>Crema Magoya</b><span>#ECE3DB · PMS Warm Gray 2</span><i>Neutro cálido firma. Texto sobre verde profundo.</i></div></div>
     <div class="sw"><div class="chip" style="background:var(--sage-50)"></div><div class="meta"><b>Sage</b><span>#EEF2EC · PMS Cool Gray 1</span><i>Superficie clara.</i></div></div>
     <div class="sw"><div class="chip" style="background:var(--ink-900)"></div><div class="meta"><b>Negro Magoya</b><span>#161616 · PMS Black 5 2X</span><i>Texto y titulares. Cards dark (hiring).</i></div></div>
@@ -609,13 +633,22 @@
   <p class="note" style="max-width:720px;margin-bottom:14px">Regla de composición: <b>máximo 3 niveles tipográficos por pieza</b> (ej: kicker + display + body). El peso hace la jerarquía, no el tamaño solo: 800 para lo que grita, 400 para lo que explica. Fallback cuando Manrope no está disponible (docs, mails): <b>Arial</b>.</p>
 
   <h3>Resaltado en titulares</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px"><b>En piezas institucionales</b> (deck, documentos, web), la frase clave se resalta con color: <b>Verde digital #00DE68 sobre fondo oscuro</b>, como en “Software and AI <span style="background:var(--green-900);color:var(--emerald-500);padding:0 5px;border-radius:4px;font-weight:700">for agribusiness.</span>”. Sin círculos ni flechas. Nunca subrayado y nunca un bloque de resaltador sólido detrás del texto.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px">Hay dos formas de resaltar la frase o la palabra clave de un titular. <b>Con color:</b> Verde digital #00DE68 sobre fondo oscuro, como en “Software and AI <span style="background:var(--green-900);color:var(--emerald-500);padding:0 5px;border-radius:4px;font-weight:700">for agribusiness.</span>”. <b>Con un círculo:</b> el círculo gestual de la miscelánea nueva alrededor de la palabra. El círculo es más propio de IA en Campo, así que en Magoya se usa con medida y siempre con este trazo, no con el anterior. Nunca subrayado y nunca un bloque de resaltador sólido detrás del texto.</p>
+  <div class="hl-demo">
+    <div class="type-hero">We are local<br>where <span class="hl-word">you are<span class="mk" aria-hidden="true" style="-webkit-mask-image:url(assets/marks/circle1.svg);mask-image:url(assets/marks/circle1.svg)"></span></span></div>
+  </div>
 
-  <h3>Círculo y flechas: solo en redes</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px">Un <b>círculo o flechas que señalan la palabra</b> se usan únicamente en piezas para redes sociales, nunca en piezas institucionales. Se dibujan con la miscelánea nueva, a mano y en el color del texto. Así se ven en los posteos:</p>
+  <h3>Flechas, círculos, X y ✓</h3>
+  <p class="note" style="max-width:720px;margin-bottom:16px">La miscelánea gestual: 6 flechas, 2 círculos, 2 X y 2 ✓, dibujados a mano. <b>El color depende del uso y del fondo:</b> lima para detalles, acentos o para resaltar una palabra; Verde digital; o Verde Magoya cuando el fondo contrasta, por ejemplo sobre un fondo Verde digital. Se descargan en <a href="library.html#resaltar" style="color:var(--emerald-700);font-weight:600">Recursos</a>.</p>
+  <div class="mk-rows">
+    <div class="mk-row" style="background:var(--green-900)"><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/circle1.svg);mask-image:url(assets/marks/circle1.svg)" title="circle1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/circle2.svg);mask-image:url(assets/marks/circle2.svg)" title="circle2"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow1.svg);mask-image:url(assets/marks/arrow1.svg)" title="arrow1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow2.svg);mask-image:url(assets/marks/arrow2.svg)" title="arrow2"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow3.svg);mask-image:url(assets/marks/arrow3.svg)" title="arrow3"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow4.svg);mask-image:url(assets/marks/arrow4.svg)" title="arrow4"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow5.svg);mask-image:url(assets/marks/arrow5.svg)" title="arrow5"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow6.svg);mask-image:url(assets/marks/arrow6.svg)" title="arrow6"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/cross1.svg);mask-image:url(assets/marks/cross1.svg)" title="cross1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/cross2.svg);mask-image:url(assets/marks/cross2.svg)" title="cross2"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/check1.svg);mask-image:url(assets/marks/check1.svg)" title="check1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/check2.svg);mask-image:url(assets/marks/check2.svg)" title="check2"></span><span class="mk-lab" style="color:var(--cream-50)">Lima · detalles, acentos o resaltar una palabra</span></div>
+    <div class="mk-row" style="background:var(--ink-900)"><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/circle1.svg);mask-image:url(assets/marks/circle1.svg)" title="circle1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/circle2.svg);mask-image:url(assets/marks/circle2.svg)" title="circle2"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow1.svg);mask-image:url(assets/marks/arrow1.svg)" title="arrow1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow2.svg);mask-image:url(assets/marks/arrow2.svg)" title="arrow2"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow3.svg);mask-image:url(assets/marks/arrow3.svg)" title="arrow3"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow4.svg);mask-image:url(assets/marks/arrow4.svg)" title="arrow4"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow5.svg);mask-image:url(assets/marks/arrow5.svg)" title="arrow5"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow6.svg);mask-image:url(assets/marks/arrow6.svg)" title="arrow6"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/cross1.svg);mask-image:url(assets/marks/cross1.svg)" title="cross1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/cross2.svg);mask-image:url(assets/marks/cross2.svg)" title="cross2"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/check1.svg);mask-image:url(assets/marks/check1.svg)" title="check1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/check2.svg);mask-image:url(assets/marks/check2.svg)" title="check2"></span><span class="mk-lab" style="color:var(--cream-50)">Verde digital</span></div>
+    <div class="mk-row" style="background:var(--emerald-500)"><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/circle1.svg);mask-image:url(assets/marks/circle1.svg)" title="circle1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/circle2.svg);mask-image:url(assets/marks/circle2.svg)" title="circle2"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow1.svg);mask-image:url(assets/marks/arrow1.svg)" title="arrow1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow2.svg);mask-image:url(assets/marks/arrow2.svg)" title="arrow2"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow3.svg);mask-image:url(assets/marks/arrow3.svg)" title="arrow3"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow4.svg);mask-image:url(assets/marks/arrow4.svg)" title="arrow4"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow5.svg);mask-image:url(assets/marks/arrow5.svg)" title="arrow5"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow6.svg);mask-image:url(assets/marks/arrow6.svg)" title="arrow6"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/cross1.svg);mask-image:url(assets/marks/cross1.svg)" title="cross1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/cross2.svg);mask-image:url(assets/marks/cross2.svg)" title="cross2"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/check1.svg);mask-image:url(assets/marks/check1.svg)" title="check1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/check2.svg);mask-image:url(assets/marks/check2.svg)" title="check2"></span><span class="mk-lab" style="color:var(--green-900)">Verde Magoya · cuando el fondo contrasta, como el Verde digital</span></div>
+  </div>
   <div class="hl-ref">
-    <figure><img src="assets/social/posteo-4-preview.jpg" alt="Posteo con círculo y flechas a mano señalando “where you are”" loading="lazy"><figcaption>Círculo alrededor de la frase y flechas que la señalan.</figcaption></figure>
+    <figure><img src="assets/social/posteo-4-preview.jpg" alt="Posteo con círculo y flechas a mano señalando “where you are”" loading="lazy"><figcaption>En uso: círculo alrededor de la frase y flechas que la señalan.</figcaption></figure>
     <figure><img src="assets/social/posteo-2-preview.jpg" alt="Posteo sobre Verde Magoya con la frase “where you are” en verde digital" loading="lazy"><figcaption>La misma idea resuelta solo con color, sobre Verde Magoya.</figcaption></figure>
+  </div>
   </div></div>
 </section>
 
@@ -638,7 +671,10 @@
     <figure class="pcard2"><div class="pw"><img src="assets/photos/varu-ceo-color.jpg" alt="Varina Baldi, Founder &amp; CEO" style="object-position:center 20%"></div><figcaption><span class="sp">Varu · Founder &amp; CEO · JPG · 17 KB · 400×400</span><a href="assets/photos/varu-ceo-color.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
     <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-planta.jpg" alt="Integrante del equipo Magoya mirando una planta en el campo" style="object-position:center 25%" loading="lazy"></div><figcaption><span class="sp">Equipo en el campo · JPG · 275 KB · 1150×2048</span><a href="assets/photos/equipo-campo-planta.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
     <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-remera.jpg" alt="Integrante del equipo Magoya con remera verde en el campo" style="object-position:center 30%" loading="lazy"></div><figcaption><span class="sp">Equipo en el campo · JPG · 173 KB · 2048×1150</span><a href="assets/photos/equipo-campo-remera.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
+    <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-espalda.jpg" alt="Integrante del equipo de espaldas con la remera negra de Magoya en el campo" style="object-position:center 35%" loading="lazy"></div><figcaption><span class="sp">Equipo en el campo · JPG · 254 KB · 2048×1150</span><a href="assets/photos/equipo-campo-espalda.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
+    <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-remera-verde.jpg" alt="Integrantes del equipo en el campo, uno con la remera verde de Magoya" style="object-position:center 40%" loading="lazy"></div><figcaption><span class="sp">Equipo en el campo · JPG · 235 KB · 2048×1150</span><a href="assets/photos/equipo-campo-remera-verde.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
   </div>
+  <p class="note" style="max-width:720px">El banco va a sumar más fotos del equipo: hay una sesión nueva en la oficina en camino.</p>
 
   <h3>Reglas de fotografía</h3>
   <p class="note" style="max-width:720px;margin-bottom:14px">Aplican a las dos familias de arriba: aérea y personas.</p>
@@ -694,15 +730,23 @@
 <section id="componentes" style="background:var(--paper-50)">
   <div class="inner">
   <span class="kicker">Componentes</span>
-  <h2>Botones, chips & cards</h2>
-  <p class="lead">Todo redondeado — como el logo. El CTA primario es lima; el institucional, verde profundo. Los chips categorizan; las cards muestran gente, datos y quotes.</p>
+  <h2>CTA, botones, box, chips & cards</h2>
+  <p class="lead">Todo redondeado, como el logo. El CTA es una pill Verde digital o lima con flecha; el botón institucional, verde profundo. El box ordena texto e imagen. Los chips categorizan; las cards muestran gente, datos y quotes.</p>
 
-  <h3>Botones — tres niveles</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px">Un solo <b>primario</b> por pantalla o pieza. El resto acompaña. Todos son rectángulos con radio 10px (nunca pill) y todos tienen hover.</p>
+  <h3>CTA</h3>
+  <p class="note" style="max-width:720px;margin-bottom:16px">El CTA es la acción que queremos: contacto, inscripción, descarga. Uno por pieza. Es una <b>pill de radio 44px</b> en <b>Verde digital o lima</b> (por ser CTA, es uno de los usos permitidos del lima), con la flecha en un círculo Verde Magoya.</p>
+  <div class="comp-canvas" style="gap:22px;align-items:center">
+    <a class="cta"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>Contact us</a>
+    <a class="cta cta-lime"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>Contact us</a>
+    <span style="display:inline-flex;align-items:center;gap:10px"><img src="assets/components/cta.svg" alt="CTA, archivo original" style="height:44px"><span class="cap" style="margin:0">Archivo original · <a href="assets/components/cta.svg" download style="color:var(--emerald-700);font-weight:600">bajar SVG</a></span></span></div>
+  <div class="comp-canvas" style="background:var(--green-950);gap:22px;margin-top:12px">
+    <a class="cta"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>Contact us</a>
+    <a class="cta cta-lime"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>Contact us</a>
+    <span class="cap" style="margin:0;color:var(--cream-300)">Sobre oscuro el CTA no cambia.</span></div>
+
+  <h3 style="margin-top:30px">Botones</h3>
+  <p class="note" style="max-width:720px;margin-bottom:16px">Acompañan al CTA. Son rectángulos con radio 10px y todos tienen hover.</p>
   <div class="comp-canvas" style="gap:26px;align-items:flex-start">
-    <div>
-      <button class="btn btn-1">Contact us</button>
-      <p class="cap" style="max-width:180px"><b>Primario</b> · lima<br>La acción que queremos. Uno por pieza: contacto, inscripción, descarga.</p></div>
     <div>
       <button class="btn btn-2">See our work</button>
       <p class="cap" style="max-width:180px"><b>Secundario</b> · verde profundo<br>Alternativa válida al primario: ver casos, agendar, seguir leyendo.</p></div>
@@ -713,30 +757,28 @@
   <div class="grid g2" style="gap:14px">
     <div>
       <div class="comp-canvas" style="gap:12px;min-height:104px;align-content:center">
-        <button class="btn btn-1">Contact us</button>
         <button class="btn btn-2">See our work</button>
         <button class="btn btn-3">Learn more</button></div>
-      <p class="cap"><b>Sobre claro</b> → primario <b>lima</b> con texto negro · secundario <b>verde profundo</b> con texto crema · terciario <b>outline verde profundo</b>.</p></div>
+      <p class="cap"><b>Sobre claro</b> → secundario <b>verde profundo</b> con texto crema · terciario <b>outline verde profundo</b>.</p></div>
     <div>
       <div class="comp-canvas on-dark-btns" style="background:var(--green-950);gap:12px;min-height:104px;align-content:center">
-        <button class="btn btn-1">Contact us</button>
         <button class="btn btn-2">See our work</button>
         <button class="btn btn-3">Learn more</button></div>
-      <p class="cap"><b>Sobre oscuro</b> → el primario <b>no cambia</b> (lima); secundario y terciario invierten a <b>crema</b> — sólido y outline respectivamente.</p></div></div>
+      <p class="cap"><b>Sobre oscuro</b> → secundario y terciario invierten a <b>crema</b>, sólido y outline respectivamente.</p></div></div>
   <div class="dodont">
     <div class="dd">
       <span class="h">Hacer</span>
       <ul>
-      <li>Un primario por pieza · label en sentence case · hover siempre definido.</li>
+      <li>Un CTA por pieza · label en sentence case · hover siempre definido.</li>
       </ul></div>
     <div class="dd avoid">
       <span class="h">Evitar</span>
       <ul>
-      <li>Dos primarios compitiendo, botones pill (eso es chip), o botones sin estado hover.</li>
+      <li>Dos CTA compitiendo, un CTA en otro color que Verde digital o lima, botones sin estado hover.</li>
       </ul></div></div>
 
   <h3>Chips / pills</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px"><b>Botón ≠ chip.</b> El botón es un rectángulo de radio 10px con fondo sólido — es acción. El chip es una <b>pill outline</b>: borde y texto del mismo color, fondo transparente — es etiqueta, y lleva <b>solo texto</b>: nunca un punto/bullet delante ni un ícono adentro (la pill ya delimita; el punto es ruido). Nunca un chip con fondo sólido ni un botón pill.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px"><b>CTA y botón ≠ chip.</b> El CTA es una pill sólida con flecha y el botón un rectángulo de radio 10px: los dos son acción. El chip es una <b>pill outline</b>: borde y texto del mismo color, fondo transparente — es etiqueta, y lleva <b>solo texto</b>: nunca un punto/bullet delante ni un ícono adentro (la pill ya delimita; el punto es ruido). Nunca un chip con fondo sólido.</p>
   <div class="grid g2" style="gap:14px">
     <div>
       <div class="comp-canvas" style="min-height:132px;align-content:flex-start">
@@ -749,6 +791,29 @@
         <span class="pill pill-cream">Hands-on</span>
         <span class="pill" style="color:var(--lime-500);border-color:var(--lime-500)">Hiring</span></div>
       <p class="cap"><b>Sobre oscuro</b> (verde profundo, negro) → borde y texto en <b>crema #ECE3DB</b> (default) o <b>lima #A2FF00</b> para el chip destacado — uno solo por pieza.</p></div></div>
+
+  <h3>Box</h3>
+  <p class="note" style="max-width:720px;margin-bottom:16px">Contenedor para combinar texto e imagen. <b>Radio de esquina 12px.</b> Puede ir en cualquier color de la marca <b>menos lima</b>, que es solo para acentos. En el rectángulo claro va <b>solo una imagen</b>; el texto va sobre el pleno de color.</p>
+  <div class="box-row">
+    <div class="box" style="background:var(--green-900);color:var(--cream-50)"><b>Domain fluency</b><div class="box-img"><img src="assets/photos/equipo-campo-planta.jpg" alt="" loading="lazy"></div></div>
+    <div class="box" style="background:var(--emerald-500);color:var(--green-900)"><b>Hands on</b><div class="box-img"><img src="assets/photos/equipo-campo-remera.jpg" alt="" loading="lazy"></div></div>
+    <div class="box" style="background:var(--cream-100);color:var(--green-900)"><b>Local teams</b><div class="box-img"><img src="assets/photos/field-rows.jpg" alt="" loading="lazy"></div></div>
+    <div class="box" style="background:var(--ink-900);color:var(--cream-50)"><b>Outcome driven</b><div class="box-img"><img src="assets/photos/field-terraces.jpg" alt="" loading="lazy"></div></div>
+    <div class="box-src"><img src="assets/components/box.svg" alt="Box, archivo original" style="height:150px"><span class="cap">Archivo original · <a href="assets/components/box.svg" download style="color:var(--emerald-700);font-weight:600">bajar SVG</a></span></div>
+  </div>
+  <div class="dodont">
+    <div class="dd">
+      <span class="h">Hacer</span>
+      <ul>
+      <li>Texto sobre el pleno de color; una sola imagen en el rectángulo claro.</li>
+      <li>Colores de la marca: Verde Magoya, Verde digital, crema, negro o blanco.</li>
+      </ul></div>
+    <div class="dd avoid">
+      <span class="h">Evitar</span>
+      <ul>
+      <li>Box en lima.</li>
+      <li>Texto dentro del rectángulo de la imagen, o más de una imagen.</li>
+      </ul></div></div>
 
   <h3>Cards — siempre en mosaico</h3>
   <p class="note" style="max-width:720px;margin-bottom:16px">Las cards nunca van sueltas: viven <b>encastradas en mosaico</b> — misma grilla, mismos aires, alturas que calzan. El contacto dentro de una card dark es un <b>link en lima</b>, no un botón (los botones viven fuera de las cards). <b>El monograma “m” circular no va en cards:</b> el avatar es identidad de canal (favicon, perfil, pie de papelería) y dentro de una card suma un segundo logo que compite con el wordmark. En una card, la marca es el wordmark.</p>
@@ -791,9 +856,10 @@
       <span class="h">Hacer</span>
       <ul>
       <li><b>El negro construye, el verde hace crecer</b>: el Verde Magoya #133825 es el verde protagonista, con un solo movimiento verde dominante por pieza.</li>
-      <li>Lima #A2FF00 en poca superficie: solo acentos, detalles o CTA.</li>
+      <li>Lima #A2FF00 en poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea gestual.</li>
       <li>Verde digital #00DE68 = identidad (logo, avatares) y resaltado de la frase clave en titulares sobre fondo oscuro. Lima ≠ logo.</li>
       <li>Respetar la paleta en todas las piezas, tanto en los posteos con foto como en los más vectoriales.</li>
+      <li>Usar los recursos (CTA, box, flechas, círculos, X y ✓) con sus reglas de color y radio.</li>
       <li>Personas reales, siempre a color y sin ningún detalle encima.</li>
       <li>Logos de clientes SIEMPRE reales — jamás placeholders.</li>
       <li>Todo redondeado: pills, cards, radios generosos — como el wordmark.</li>
@@ -802,7 +868,8 @@
       <span class="h">Evitar</span>
       <ul>
       <li><b>Emojis</b> en títulos o en cualquier texto — salvo manitos que señalan y banderas de países.</li>
-      <li>Resaltador sólido o subrayado. Círculos y flechas solo en piezas de redes, nunca en piezas institucionales.</li>
+      <li>Resaltador sólido o subrayado. Para resaltar con un trazo, solo la miscelánea gestual nueva.</li>
+      <li>Box o fondos grandes en lima: el lima es solo para acentos.</li>
       <li>Gradientes glossy, 3D, simetría perfecta, estética “hecha por AI”.</li>
       <li>Pieza 100% negra o 100% verde. Siempre equilibrio.</li>
       <li>La metáfora del <b>puzzle</b> (brand viejo) queda retirada en todas las piezas.</li>
@@ -831,7 +898,7 @@
     logo:         ['Logo kit',                  '4 wordmarks + 4 avatares · SVG · 10 KB', 'assets/downloads/magoya-logo-kit.zip', 'bajar logo kit'],
     color:        ['Tokens de color',           'Tokens y guía editorial · 31 KB', 'assets/downloads/magoya-tokens.zip', 'bajar tokens'],
     tipografia:   ['Manrope variable',          'TTF 200–800 + licencia OFL · 70 KB', 'assets/downloads/magoya-manrope.zip', 'bajar fuente'],
-    fotografia:   ['Banco de fotos',            '3 aéreas cenitales + 1 recorte 16:9 + 3 fotos de personas · 6.3 MB', 'assets/downloads/magoya-fotos.zip', 'bajar fotos'],
+    fotografia:   ['Banco de fotos',            '3 aéreas cenitales + 1 recorte 16:9 + 5 fotos de personas · 7.0 MB', 'assets/downloads/magoya-fotos.zip', 'bajar fotos'],
     iconografia:  ['Set de íconos',             '16 agro + 10 AI + 13 redes · SVG · 20 KB', 'assets/downloads/magoya-iconos.zip', 'bajar íconos'],
     reglas:       ['Manual completo',           'Doctrina, tokens y guía editorial · 31 KB', 'assets/downloads/magoya-tokens.zip', 'bajar manual']
   };

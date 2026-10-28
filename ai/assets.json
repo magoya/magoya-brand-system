@@ -2,7 +2,7 @@
  "que_es": "Manifiesto completo de assets del brand system de Magoya. Cada URL es pública y fetcheable sin auth. Antes de usar cualquier asset, leer BRAND.md (reglas) y tokens.json (valores).",
  "doctrina": "https://brand.magoya.com/BRAND.md",
  "tokens": "https://brand.magoya.com/tokens.json",
- "total_archivos": 236,
+ "total_archivos": 247,
  "iconos_sistema": [
   {
    "nombre": "sprout",
@@ -301,8 +301,6 @@
    "descripcion": "Raíz: wordmarks del logo y marcas a mano (círculo y flecha)",
    "reglas": "El wordmark es LA firma de la marca. Nunca redibujarlo: usar el SVG tal cual. Variantes por fondo: cream sobre oscuro, dark sobre claro. Las marcas a mano resaltan una palabra o un dato con un círculo o una flecha; nunca subrayado.",
    "archivos": [
-    "https://brand.magoya.com/assets/flourish-arrow.svg",
-    "https://brand.magoya.com/assets/flourish-circle.svg",
     "https://brand.magoya.com/assets/magoya-wordmark-animado.svg",
     "https://brand.magoya.com/assets/magoya-wordmark-black.svg",
     "https://brand.magoya.com/assets/magoya-wordmark-cream.svg",
@@ -322,24 +320,28 @@
    ]
   },
   {
+   "carpeta": "assets/components",
+   "descripcion": "",
+   "archivos": [
+    "https://brand.magoya.com/assets/components/box.svg",
+    "https://brand.magoya.com/assets/components/cta.svg"
+   ]
+  },
+  {
    "carpeta": "assets/deck",
    "descripcion": "",
    "archivos": [
-    "https://brand.magoya.com/assets/deck/deck-base-magoya.pdf",
-    "https://brand.magoya.com/assets/deck/slide-01.jpg",
-    "https://brand.magoya.com/assets/deck/slide-02.jpg",
-    "https://brand.magoya.com/assets/deck/slide-03.jpg",
-    "https://brand.magoya.com/assets/deck/slide-04.jpg",
-    "https://brand.magoya.com/assets/deck/slide-05.jpg",
-    "https://brand.magoya.com/assets/deck/slide-06.jpg",
-    "https://brand.magoya.com/assets/deck/slide-07.jpg",
-    "https://brand.magoya.com/assets/deck/slide-08.jpg",
-    "https://brand.magoya.com/assets/deck/slide-09.jpg",
-    "https://brand.magoya.com/assets/deck/slide-10.jpg",
-    "https://brand.magoya.com/assets/deck/slide-11.jpg",
-    "https://brand.magoya.com/assets/deck/slide-12.jpg",
-    "https://brand.magoya.com/assets/deck/slide-13.jpg",
-    "https://brand.magoya.com/assets/deck/slide-14.jpg"
+    "https://brand.magoya.com/assets/deck/clientes-01.jpg",
+    "https://brand.magoya.com/assets/deck/clientes-02.jpg",
+    "https://brand.magoya.com/assets/deck/clientes-07.jpg",
+    "https://brand.magoya.com/assets/deck/clientes-08.jpg",
+    "https://brand.magoya.com/assets/deck/interno-01.jpg",
+    "https://brand.magoya.com/assets/deck/interno-03.jpg",
+    "https://brand.magoya.com/assets/deck/interno-04.jpg",
+    "https://brand.magoya.com/assets/deck/interno-06.jpg",
+    "https://brand.magoya.com/assets/deck/interno-08.jpg",
+    "https://brand.magoya.com/assets/deck/interno-13.jpg",
+    "https://brand.magoya.com/assets/deck/magoya-interno.pdf"
    ]
   },
   {
@@ -354,6 +356,7 @@
     "https://brand.magoya.com/assets/downloads/magoya-logo-kit.zip",
     "https://brand.magoya.com/assets/downloads/magoya-logos-clientes.zip",
     "https://brand.magoya.com/assets/downloads/magoya-manrope.zip",
+    "https://brand.magoya.com/assets/downloads/magoya-recursos-graficos.zip",
     "https://brand.magoya.com/assets/downloads/magoya-redes.zip",
     "https://brand.magoya.com/assets/downloads/magoya-tokens.zip"
    ]
@@ -499,13 +502,33 @@
    ]
   },
   {
+   "carpeta": "assets/marks",
+   "descripcion": "",
+   "archivos": [
+    "https://brand.magoya.com/assets/marks/arrow1.svg",
+    "https://brand.magoya.com/assets/marks/arrow2.svg",
+    "https://brand.magoya.com/assets/marks/arrow3.svg",
+    "https://brand.magoya.com/assets/marks/arrow4.svg",
+    "https://brand.magoya.com/assets/marks/arrow5.svg",
+    "https://brand.magoya.com/assets/marks/arrow6.svg",
+    "https://brand.magoya.com/assets/marks/check1.svg",
+    "https://brand.magoya.com/assets/marks/check2.svg",
+    "https://brand.magoya.com/assets/marks/circle1.svg",
+    "https://brand.magoya.com/assets/marks/circle2.svg",
+    "https://brand.magoya.com/assets/marks/cross1.svg",
+    "https://brand.magoya.com/assets/marks/cross2.svg"
+   ]
+  },
+  {
    "carpeta": "assets/photos",
    "descripcion": "Fotografía real: aérea de campo y personas",
    "reglas": "Aérea de campo: color natural con overlay verde profundo para fondos con texto, siempre enfoque cenital. Personas: siempre a color, sin ningún detalle encima, mejor en espacios abiertos. Nunca stock.",
    "archivos": [
     "https://brand.magoya.com/assets/photos/ai-campo-silueta.jpg",
     "https://brand.magoya.com/assets/photos/ai-campo-silueta.png",
+    "https://brand.magoya.com/assets/photos/equipo-campo-espalda.jpg",
     "https://brand.magoya.com/assets/photos/equipo-campo-planta.jpg",
+    "https://brand.magoya.com/assets/photos/equipo-campo-remera-verde.jpg",
     "https://brand.magoya.com/assets/photos/equipo-campo-remera.jpg",
     "https://brand.magoya.com/assets/photos/field-bali.jpg",
     "https://brand.magoya.com/assets/photos/field-mosaic-16x9.jpg",

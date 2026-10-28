@@ -55,8 +55,8 @@ Proporciones de uso entre colores: el Verde Magoya ocupa la mayor superficie y e
 
 ## Componentes
 
-- **Botón**: `border-radius:10px`, fondo sólido, un solo primario (lima con texto `#161616`) por pantalla. Secundario verde profundo con texto crema; terciario outline.
-- **Chip**: `border-radius:999px`, `background:transparent`, borde y texto del mismo color. Nunca chip sólido, nunca botón pill.
+- **Botón**: CTA = pill de radio 44px en Verde digital o lima, con la flecha en un círculo Verde Magoya (`assets/components/cta.svg`), uno por pieza. Botones secundario (verde profundo) y terciario (outline): rectángulo de radio 10px. Box = radio 12px, cualquier color de la marca menos lima, una sola imagen en el rectángulo claro y el texto sobre el pleno (`assets/components/box.svg`). Chip = pill outline, nunca sólido.
+- **Chip**: `border-radius:999px`, `background:transparent`, borde y texto del mismo color. Nunca chip sólido. La única pill sólida es el CTA.
 - **Focus**: `box-shadow: 0 0 0 3px rgba(0,222,104,.45)` sin blur. Nunca `outline:none` sin reemplazo.
 - Radios 6 / 12 / 20 / 28 / 999px. Espaciado base 4px, escala 4-8-12-16-24-32-48-64-96.
 - Iconos SVG inline: `stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"`. Nunca rellenos sólidos ni 3D.
@@ -65,13 +65,13 @@ Proporciones de uso entre colores: el Verde Magoya ocupa la mayor superficie y e
 
 - **Sin emojis** en UI, copy, títulos, labels ni mensajes de commit de cara al usuario. Únicas excepciones: manitos que señalan (👈 👉 👇) apuntando a un CTA, y banderas de países para geografía.
 - **Sin gradientes** (`linear-gradient`, `radial-gradient`), sin glassmorphism, sin `backdrop-filter` decorativo, sin sombras de brillo, sin 3D. Único gradiente permitido: overlay verde profundo sobre foto aérea, `linear-gradient(180deg, rgba(12,33,23,.55), rgba(12,33,23,.86))`.
-- Círculo que rodea una palabra o flechas que la señalan: solo en piezas de redes. En piezas institucionales (deck, documentos, web) se resalta con color: Verde digital #00DE68 sobre oscuro. Nunca subrayado ni bloque resaltador sólido detrás del texto.
+- Para resaltar en un titular hay dos formas: color (Verde digital #00DE68 sobre fondo oscuro) o el círculo gestual de la miscelánea nueva (`assets/marks/circle1.svg`, `circle2.svg`). Flechas, círculos, X y ✓ (`assets/marks/`): lima para detalles, acentos o resaltar una palabra; Verde digital; o Verde Magoya cuando el fondo contrasta (por ejemplo sobre Verde digital). Nunca subrayado ni bloque resaltador sólido detrás del texto.
 - Logos de clientes siempre reales desde `assets/logos/clients/` — jamás placeholders ni SVG inventados.
 - Sin la metáfora del puzzle.
 - **Sin ilustración**: Magoya no usa ilustración.
 - **Fotografía**: aérea de campo en color natural, con overlay verde profundo para fondos con texto, siempre cenital. Personas siempre a color, sin ningún detalle encima (ni barra ni acento verde), mejor en espacios abiertos.
 - El monograma "m" circular es funcional (favicon, app icon): no es un sello decorativo dentro de cards.
-- Lima en poca superficie: solo acentos, detalles o CTA. La frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68.
+- Lima en poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea gestual. La frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68.
 
 ## Copy
 

@@ -29,7 +29,7 @@ Tus archivos de Knowledge (`BRAND.md`, `tokens.json`, `vocabulary.json`) son la 
 - `#161616` negro — texto, titulares, cards dark
 - `#133825` Verde Magoya — **el verde protagonista**: fondos oscuros, overlays, texto sobre claro
 - `#00DE68` verde digital — identidad: wordmark, avatares, micro-acentos, resaltado de la frase clave en titulares sobre oscuro y data-viz
-- `#A2FF00` lima — poca superficie: solo acentos, detalles o CTA (la frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68)
+- `#A2FF00` lima — poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea gestual (la frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68)
 - `#ECE3DB` crema — texto sobre verde profundo
 - `#EEF2EC` sage y `#FFFFFF` — superficies claras
 - Derivados: hover lima `#8BDB00`, hover verde `#00B856`, verde-texto-sobre-blanco `#009145`, captions sobre claro `#6E756D`, focus ring `rgba(0,222,104,.45)` sin blur
@@ -40,13 +40,13 @@ Tus archivos de Knowledge (`BRAND.md`, `tokens.json`, `vocabulary.json`) son la 
 
 - **Emojis: ninguno**, ni en títulos ni en cuerpo ni en bullets. Únicas excepciones: manitos que señalan (👈 👉 👇) apuntando a un CTA, y banderas de países para geografía.
 - Lima nunca como texto sobre fondo claro. `#00DE68` como texto solo sobre oscuro; sobre blanco usar `#009145` y solo ≥24px bold. El wordmark nunca en lima.
-- Lima en poca superficie: solo acentos, detalles o CTA. La frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68.
+- Lima en poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea gestual. La frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68.
 - **Sin ilustración**: Magoya no usa ilustración.
-- Botón = rectángulo radio 10px con fondo sólido; chip = pill outline (borde y texto del mismo color, fondo transparente). Nunca chip sólido ni botón pill.
+- CTA = pill de radio 44px en Verde digital o lima, con la flecha en un círculo Verde Magoya (`assets/components/cta.svg`), uno por pieza. Botones secundario (verde profundo) y terciario (outline): rectángulo de radio 10px. Box = radio 12px, cualquier color de la marca menos lima, una sola imagen en el rectángulo claro y el texto sobre el pleno (`assets/components/box.svg`). Chip = pill outline, nunca sólido.
 - El monograma "m" circular es funcional (favicon, app icon, canales corporativos, pie de membrete): no es un sello decorativo dentro de cards.
 - Logos de clientes siempre reales, en gris, grilla pareja — jamás placeholders ni inventados.
 - Sin gradientes glossy, 3D ni estética "hecha por AI". Único gradiente permitido: overlay verde profundo 55–86% sobre foto aérea con texto encima.
-- Círculo que rodea una palabra o flechas que la señalan: solo en piezas de redes. En piezas institucionales (deck, documentos, web) se resalta con color: Verde digital #00DE68 sobre oscuro. Nunca subrayado ni bloque resaltador sólido detrás del texto. Sin **puzzle**, sin **naranja** ni **amarillo**.
+- Para resaltar en un titular hay dos formas: color (Verde digital #00DE68 sobre fondo oscuro) o el círculo gestual de la miscelánea nueva (`assets/marks/circle1.svg`, `circle2.svg`). Flechas, círculos, X y ✓ (`assets/marks/`): lima para detalles, acentos o resaltar una palabra; Verde digital; o Verde Magoya cuando el fondo contrasta (por ejemplo sobre Verde digital). Nunca subrayado ni bloque resaltador sólido detrás del texto.
 - **Fotografía**: aérea de campo en color natural, con overlay verde profundo para fondos con texto, siempre cenital. Personas siempre a color, sin ningún detalle encima (ni barra ni acento verde), mejor en espacios abiertos. Nunca stock posado.
 - Iconos de línea 2px redondeada, grid 24×24, `currentColor`, nunca rellenos ni 3D; lima solo en un ícono por pieza.
 
