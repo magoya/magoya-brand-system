@@ -92,6 +92,12 @@
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;align-items:center}
   .chip{font-size:10px;font-weight:var(--weight-extra);letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;border:1.5px solid currentColor}
   .btn{font-size:12.5px;font-weight:var(--weight-bold);padding:9px 16px;border-radius:var(--radius-btn);background:var(--lime-500);color:var(--ink-900);border:none}
+  /* CTA: pill 44px verde digital o lima con flecha en círculo Verde Magoya */
+  .cta{display:inline-flex;align-items:center;gap:8px;padding:4px 14px 4px 4px;border-radius:var(--radius-cta,44px);background:var(--emerald-500);color:var(--green-900);font-size:12.5px;font-weight:var(--weight-bold);white-space:nowrap}
+  .cta .ic{width:24px;height:24px;border-radius:50%;background:var(--green-900);color:var(--emerald-500);display:flex;align-items:center;justify-content:center}
+  .cta .ic svg{width:14px;height:14px}
+  .cta.lime{background:var(--lime-500)}
+  .cta.lime .ic{color:var(--lime-500)}
   .logos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:auto}
   .logos span{display:flex;align-items:center;justify-content:center;background:var(--white);border-radius:10px;padding:14px;height:78px}
   .logos img{height:36px;width:100%;object-fit:contain;filter:grayscale(1);opacity:.8}
@@ -290,7 +296,7 @@
           <span style="background:var(--white);box-shadow:inset 0 0 0 1px var(--color-hairline);grid-column:span 2"><b style="color:var(--ink-900)">FFF</b></span>
         </div>
         <div style="display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid var(--color-hairline)">
-          <button class="btn">Contact us</button>
+          <span class="cta"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>Contact us</span>
           <span class="chip" style="color:var(--green-900)">Case study</span>
         </div>
       </div>
@@ -304,7 +310,7 @@
         <div style="margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px">
           <div style="background:var(--white);border-radius:10px;border:1px solid var(--color-hairline);padding:11px;display:flex;flex-direction:column;gap:8px;justify-content:center">
             <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap">
-              <button class="btn">Contact us</button>
+              <span class="cta lime"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>Contact us</span>
               <button class="btn" style="background:transparent;border:1.5px solid var(--green-900);color:var(--green-900)">See our work</button>
             </div>
             <div class="chips" style="margin-top:0">

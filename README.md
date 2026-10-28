@@ -36,7 +36,7 @@ Si sos una AI escribiendo o revisando contenido para Magoya, leé **en este orde
 4. [`llms.txt`](llms.txt) — el resumen corto y estable de la marca para agentes.
 5. [`.ai/`](.ai) — prompts listos para pegar (`brand-prompt.md`, `brand-prompt-short.md`), los checklists de validación (`checklist.md` visual, `checklist-verbal.md` de texto) y presets por herramienta (`.ai/presets/`). La guía de uso está en [`ai.html`](ai.html).
 
-Reglas mínimas si solo vas a leer una cosa: Manrope; el Verde Magoya `#133825` es el verde protagonista; lima `#A2FF00` solo para acentos, detalles o CTA (la frase clave sobre oscuro va en Verde digital #00DE68), y nunca como texto sobre blanco; el Verde Magoya ocupa la mayor superficie y el lima mucha menos (sin porcentajes definidos); logo/avatares = `#00DE68`; fotos aéreas cenitales con overlay verde profundo si llevan texto; personas siempre a color, sin ningún detalle encima; no hay ilustración; círculo o flechas para resaltar solo en redes (en piezas institucionales, color), nunca subrayado; emojis prohibidos salvo manitos que señalan y banderas; el monograma "m" no va en cards; nada de gradientes glossy, puzzle, naranja ni amarillo.
+Reglas mínimas si solo vas a leer una cosa: Manrope; el Verde Magoya `#133825` es el verde protagonista; lima `#A2FF00` en poca superficie: acentos, detalles, CTA o resaltar una palabra (la frase clave sobre oscuro va en Verde digital #00DE68), y nunca como texto sobre blanco; el Verde Magoya ocupa la mayor superficie y el lima mucha menos (sin porcentajes definidos); logo/avatares = `#00DE68`; fotos aéreas cenitales con overlay verde profundo si llevan texto; personas siempre a color, sin ningún detalle encima; no hay ilustración; para resaltar, color o el círculo gestual nuevo, nunca subrayado; emojis prohibidos salvo manitos que señalan y banderas; el monograma "m" no va en cards; nada de gradientes glossy, puzzle, naranja ni amarillo.
 
 ## Assets
 
@@ -46,7 +46,8 @@ assets/
 ├── magoya-wordmark-animado.svg   # versión animada para web
 ├── avatars/          # go · o · cara · m (vectoriales)
 ├── favicon/          # favicon.svg + favicon-{16,32,180,512}.png
-├── flourish-{circle,arrow}.svg   # marcas a mano: círculo y flecha para resaltar
+├── marks/            # miscelánea gestual: 6 flechas, 2 círculos, 2 X y 2 ✓
+├── components/       # CTA (pill 44px) y box (radio 12px)
 ├── icons/            # los 58 íconos del sistema (export de icons.html)
 ├── photos/           # aéreas cenitales + personas a color + silueta de IA en Campo
 ├── social/           # posteos de redes de referencia (PNG 1080×1350)

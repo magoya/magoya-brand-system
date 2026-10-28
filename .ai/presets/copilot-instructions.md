@@ -27,7 +27,7 @@ Si el proyecto importa `tokens.css`, usá las custom properties (`var(--color-te
 - `#133825` Verde Magoya — **el verde protagonista**: fondos oscuros, overlays, texto sobre claro
 - `#00DE68` verde digital — identidad (wordmark, avatares, micro-acentos) y data-viz. Como texto **solo sobre fondo oscuro**
 - `#009145` — verde texto sobre blanco, y solo a ≥24px bold
-- `#A2FF00` lima — poca superficie: solo acentos, detalles o CTA (la frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68). **Nunca como texto sobre fondo claro.** Hover `#8BDB00`
+- `#A2FF00` lima — poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea gestual (la frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68). **Nunca como texto sobre fondo claro.** Hover `#8BDB00`
 - `#ECE3DB` crema — texto sobre verde profundo
 - `#EEF2EC` sage / `#FFFFFF` — superficies claras
 - `#6E756D` — captions sobre claro (mínimo accesible)
@@ -42,8 +42,8 @@ Máximo 3 niveles tipográficos por vista. Labels de botón en sentence case, nu
 
 ## Componentes
 
-- **Botón**: `border-radius:10px`, fondo sólido. Un solo primario (lima con texto `#161616`) por pantalla; secundario verde profundo con texto crema; terciario outline.
-- **Chip**: `border-radius:999px`, `background:transparent`, borde y texto del mismo color. Nunca chip sólido, nunca botón pill.
+- **Botón**: CTA = pill de radio 44px en Verde digital o lima, con la flecha en un círculo Verde Magoya (`assets/components/cta.svg`), uno por pieza. Botones secundario (verde profundo) y terciario (outline): rectángulo de radio 10px. Box = radio 12px, cualquier color de la marca menos lima, una sola imagen en el rectángulo claro y el texto sobre el pleno (`assets/components/box.svg`). Chip = pill outline, nunca sólido.
+- **Chip**: `border-radius:999px`, `background:transparent`, borde y texto del mismo color. Nunca chip sólido. La única pill sólida es el CTA.
 - **Focus**: `box-shadow: 0 0 0 3px rgba(0,222,104,.45)` sin blur. No dejes `outline:none` sin reemplazo.
 - Radios 6/12/20/28/999px. Espaciado base 4px (4-8-12-16-24-32-48-64-96).
 - Iconos SVG inline: `stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"`. Nunca rellenos sólidos ni 3D.
@@ -52,7 +52,7 @@ Máximo 3 niveles tipográficos por vista. Labels de botón en sentence case, nu
 
 - **Sin emojis** en UI, copy, títulos ni labels. Únicas excepciones: manitos que señalan (👈 👉 👇) apuntando a un CTA, y banderas de países para geografía.
 - **Sin gradientes** (`linear-gradient`, `radial-gradient`), sin glassmorphism, sin `backdrop-filter` decorativo, sin sombras de brillo, sin 3D. Único gradiente permitido: overlay verde profundo sobre foto aérea, `linear-gradient(180deg, rgba(12,33,23,.55), rgba(12,33,23,.86))`.
-- Círculo que rodea una palabra o flechas que la señalan: solo en piezas de redes. En piezas institucionales (deck, documentos, web) se resalta con color: Verde digital #00DE68 sobre oscuro. Nunca subrayado ni bloque resaltador sólido detrás del texto.
+- Para resaltar en un titular hay dos formas: color (Verde digital #00DE68 sobre fondo oscuro) o el círculo gestual de la miscelánea nueva (`assets/marks/circle1.svg`, `circle2.svg`). Flechas, círculos, X y ✓ (`assets/marks/`): lima para detalles, acentos o resaltar una palabra; Verde digital; o Verde Magoya cuando el fondo contrasta (por ejemplo sobre Verde digital). Nunca subrayado ni bloque resaltador sólido detrás del texto.
 - Sin logos de clientes inventados o placeholder: van los reales de `assets/logos/clients/`, en gris y grilla pareja.
 - Sin la metáfora del puzzle.
 - **Sin ilustración**: Magoya no usa ilustración.

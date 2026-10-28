@@ -41,7 +41,7 @@
 |---|---|---|---|
 | Verde Magoya | `#133825` | PMS 553 | **El verde protagonista de Magoya**: fondos, overlays, superficies oscuras, texto sobre claro |
 | Verde digital | `#00DE68` | PMS 3282 | Identidad: wordmark, avatares, micro-acentos y data-viz. **Resalta la frase clave de un titular sobre fondo oscuro.** Como texto SOLO sobre oscuro |
-| Lima | `#A2FF00` | PMS 382 2X | **Poca superficie: solo acentos, detalles o CTA.** Nunca texto sobre blanco |
+| Lima | `#A2FF00` | PMS 382 2X | **Poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea gestual.** Nunca texto sobre blanco |
 | Crema Magoya | `#ECE3DB` | PMS Warm Gray 2 | Neutro cálido; texto sobre verde profundo |
 | Sage | `#EEF2EC` | PMS Cool Gray 1 | Superficie clara |
 | Negro Magoya | `#161616` | PMS Black 5 2X | Texto, titulares, cards dark |
@@ -60,13 +60,13 @@ Los Pantone son el **match más cercano por distancia RGB** contra la librería 
 
 Reglas: **3 niveles tipográficos** por pieza; el peso hace la jerarquía; labels de botón en sentence case. **Emojis: nunca en títulos**; solo se permiten manitos que señalan (👈 👉 👇) para dirigir a un CTA y banderas de países para geografía, ningún otro.
 
-**Resaltar una palabra.** En **piezas institucionales** (deck, documentos, web) la frase clave se resalta con color: **Verde digital `#00DE68` sobre fondo oscuro**, sin círculos ni flechas. El **círculo** que rodea la palabra o las **flechas** que la señalan son **solo para piezas de redes**, dibujados con la miscelánea nueva (referencia: `assets/social/posteo-4.png`). Nunca subrayado y nunca un bloque resaltador sólido detrás del texto. Las marcas van a mano y en el color del texto de la pieza, como en el posteo de referencia (`assets/flourish-circle.svg` y `assets/flourish-arrow.svg` quedan como base hasta tener los vectores de la miscelánea nueva), una sola por pieza y siempre sobre texto compuesto, nunca sueltas como adorno. El círculo marca una palabra, una fecha o un dato puntual; la flecha también puede señalar el CTA: nace del texto y su punta cae sobre el botón.
+**Resaltar una palabra.** Para resaltar en un titular hay dos formas: color (Verde digital #00DE68 sobre fondo oscuro) o el círculo gestual de la miscelánea nueva (`assets/marks/circle1.svg`, `circle2.svg`). Flechas, círculos, X y ✓ (`assets/marks/`): lima para detalles, acentos o resaltar una palabra; Verde digital; o Verde Magoya cuando el fondo contrasta (por ejemplo sobre Verde digital). Nunca subrayado ni bloque resaltador sólido detrás del texto. El círculo es más propio de IA en Campo: en Magoya se usa con medida y siempre con el trazo gestual nuevo. Los archivos vienen en verde oscuro (#003922): se recolorean según la regla de arriba.
 
 ## 5. Fotografía
 
 Dos familias fotográficas, cada una con su regla:
 - **Aérea de campo**: color natural, con **overlay verde profundo** (scrim 55–86%) para fondos con texto. **Siempre enfoque cenital.** El scrim es el único gradiente permitido.
-- **Personas**: gente real del equipo, **siempre a color** (3 fotos aprobadas: `varu-ceo-color.jpg`, `equipo-campo-planta.jpg`, `equipo-campo-remera.jpg`) y mejor **en espacios abiertos**. Sin ningún detalle encima: ni barra, ni acento verde, ni overlay. Luz natural, gesto genuino.
+- **Personas**: gente real del equipo, **siempre a color** (5 fotos aprobadas: `varu-ceo-color.jpg`, `equipo-campo-planta.jpg`, `equipo-campo-remera.jpg`, `equipo-campo-espalda.jpg`, `equipo-campo-remera-verde.jpg`; el banco suma más con la sesión nueva) y mejor **en espacios abiertos**. Sin ningún detalle encima: ni barra, ni acento verde, ni overlay. Luz natural, gesto genuino.
 - ✗ Stock corporativo posado, oficinas genéricas. ✗ Fotos de personas en blanco y negro o con un detalle de color encima. ✗ Fotos de campo que no sean cenitales.
 
 ## 6. Iconografía
@@ -75,7 +75,7 @@ Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. *
 
 ## 7. Componentes
 
-- **Botón ≠ chip.** Botón: rectángulo radio 10px, fondo sólido (lima = CTA primario, negro, verde profundo, ghost). Chip: **pill outline**, borde y texto del mismo color, fondo transparente. Nunca chip sólido ni botón pill. **El chip lleva SOLO texto** (uppercase, tracking .1em): nunca un punto/bullet delante, nunca un ícono adentro. La pill ya delimita, el punto es ruido (acuerdo explícito del equipo).
+- **CTA, botón, box y chip.** CTA = pill de radio 44px en Verde digital o lima, con la flecha en un círculo Verde Magoya (`assets/components/cta.svg`), uno por pieza. Botones secundario (verde profundo) y terciario (outline): rectángulo de radio 10px. Box = radio 12px, cualquier color de la marca menos lima, una sola imagen en el rectángulo claro y el texto sobre el pleno (`assets/components/box.svg`). Chip = pill outline, nunca sólido.
 - **Espaciado sistematizado.** Todo margin/padding/gap sale de la escala base-4 de `tokens.json` (4/8/12/16/24/32/48/64/96), nunca valores arbitrarios. Aire entre bloques ≥24; dentro de un componente 8–16. Paddings canónicos: botón 13px/26px, chip 6px/15px (spec completa en `components` de `tokens.json`).
 - **Alineación.** Una pieza tiene UN eje principal (por defecto, izquierda): todos los bloques de texto arrancan ahí. Los elementos de una fila comparten centro vertical y un gap único (8 o 12). Padding interno simétrico, nunca 4 valores distintos.
 - Estados: hover (lima→`#8BDB00`, resto brightness), focus ring `rgba(0,222,104,.45)` sin blur.
@@ -85,20 +85,20 @@ Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. *
 
 ## 8. Papelería & corporativo
 
-- **Posteos de redes**: 8 posteos de referencia en PNG 1080×1350 (`assets/social/`, ZIP `assets/downloads/magoya-redes.zip`). Son referencias, no archivos editables. Respetan la paleta tanto con foto como en versión vectorial.
-- **Template de deck** (institucional): PDF de referencia de 14 slides en `assets/deck/deck-base-magoya.pdf`. La base está armada en Claude como Artifact; se comparte el Artifact y se edita desde ahí.
+- **Posteos de redes**: 8 posteos de referencia en PNG 1080×1350 (`assets/social/`, ZIP `assets/downloads/magoya-redes.zip`). Son referencias, no archivos editables. Respetan la paleta tanto con foto como en versión vectorial, y cuando usan los recursos (CTA, box, flechas, círculos, X y ✓) siguen sus reglas.
+- **Templates de deck**: dos bases. *Uso interno* (índice, carátulas e internas): PDF de 17 slides en `assets/deck/magoya-interno.pdf`. *Uso con clientes* (más institucional): solo previews en `assets/deck/clientes-*.jpg`; el PDF completo no se publica porque incluye condiciones de cada cliente. Las bases también están armadas en Claude.
 - **Membrete A4**: wordmark verde arriba-izq (20% del ancho), pie con filete verde digital + avatar m. Header y footer vectoriales listos: `assets/downloads/doc-header.svg` · `doc-footer.svg`.
 - Docs: wordmark esquina sup-izq ≤1/5 del ancho; Manrope o Arial; nunca logo como marca de agua.
 
 ## 9. Reglas de oro (resumen ejecutable)
 
 1. El Verde Magoya `#133825` es el verde protagonista y ocupa la mayor superficie. Los porcentajes exactos no están definidos: no apliques porcentajes.
-2. Lima en poca superficie: solo acentos, detalles o CTA.
+2. Lima en poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea gestual.
 3. Verde digital `#00DE68` = identidad (logo/avatares) y resaltado de la frase clave en titulares sobre oscuro; lima ≠ logo.
 4. Personas siempre a color, sin ningún detalle encima, mejor en espacios abiertos. Aérea de campo siempre cenital. Magoya no usa ilustración.
 5. Logos de clientes SIEMPRE reales, jamás placeholders.
-6. Todo redondeado, como el wordmark. Botón rect 10px, chip pill outline.
-7. Círculo o flechas para resaltar: solo en redes. En piezas institucionales, color. Nunca subrayado.
+6. Todo redondeado, como el wordmark. CTA pill 44px (Verde digital o lima), botón rect 10px, box radio 12px (nunca lima), chip pill outline.
+7. Resaltar: color (Verde digital sobre oscuro) o el círculo gestual nuevo. Flechas, círculos, X y ✓ en lima, Verde digital o Verde Magoya según el fondo. Nunca subrayado.
 8. El monograma "m" no va en cards.
 9. **Emojis prohibidos**: la única excepción son las manitos que señalan (👈 👉 👇) hacia un CTA y las banderas de países para geografía. Nunca en títulos.
 10. ✗ Pieza 100% negra o 100% verde (siempre equilibrio) · ✗ Resaltador sólido tras texto · ✗ gradientes glossy/3D/estética AI · ✗ puzzle (metáfora del brand viejo) · ✗ naranja/amarillo del brand viejo.

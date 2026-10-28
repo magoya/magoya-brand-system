@@ -29,6 +29,22 @@ Fuente: presentación de feedback del equipo (6 slides) con tres carpetas de Dri
 | 5 | Sumar templates de redes; ¿editable, Figma o PNG de referencia?; mencionar que se respeta la paleta en posteos con foto y vectoriales | **LISTO** con 8 de 9 | `library.html#redes`: 8 posteos PNG 1080×1350 + `magoya-redes.zip`. Se eligió PNG de referencia porque es el material que existe; la opción editable queda en B13. Regla de paleta en Recursos, Reglas de oro, `BRAND.md` y `tokens.json`. Falta `Posteo_3` (B12) |
 | 6 | Template de deck institucional; mencionar que la base está en Claude y se comparte el Artifact para editar | **LISTO** | `library.html#deck`: 6 slides de muestra + `assets/deck/deck-base-magoya.pdf` (14 slides) y el texto del Artifact. El link del Artifact no está en la cuenta de Facu: pendiente (B11) |
 
+## Ronda de feedback · 28 de octubre de 2026 (tercera versión de "Brand System Online - Magoya")
+
+Fuente: la presentación actualizada (10 slides), con la carpeta de Recursos (14 SVG), las fotos de la jornada a campo, la carpeta de decks (uso interno y uso con clientes) y dos comentarios de Ayelén Iñigo.
+
+| # | Feedback | Estado | Evidencia |
+|---|---|---|---|
+| 1 | El círculo es un recurso más de IA en Campo, pero en Magoya se puede usar en títulos con el círculo gestual nuevo | **LISTO** | `brand-book.html` → "Resaltado en titulares": color o círculo gestual, con ejemplo. Se sacó "solo en redes" de todo el sistema (BRAND, tokens, llms, presets, checklist) |
+| 2 | Fotos: sumar algunas más para descargar | **LISTO** con lo que hay | +2 fotos de la slide (`equipo-campo-espalda.jpg`, `equipo-campo-remera-verde.jpg`): 5 personas en el brand book, Recursos, ZIP (7.0 MB) y tokens. Nota de que viene una sesión nueva (comentario de Ayelén: hay que generar más imágenes) |
+| 3 | Recursos: box (colores de marca menos lima, radio 12px, imagen sola en el rectángulo, texto en el pleno) | **LISTO** | Componente Box en `brand-book.html#componentes` con 4 colores, Hacer/Evitar y archivo original; `assets/components/box.svg`; `tokens.json` `components.box`, `radius.box`; `--radius-box` |
+| 4 | CTA: verde digital o lima, radio 44px | **LISTO** | Componente CTA (pill con flecha) en el brand book y en las tarjetas de Inicio; `assets/components/cta.svg`; `components.cta`, `radius.cta`, `--radius-cta`. El primario lima rectangular se reemplazó por el CTA; secundario y terciario siguen rectangulares (ver pregunta abierta) |
+| 5 | Flechas, círculos, X y ✓: color según uso (lima, Verde digital, Verde Magoya si el fondo contrasta) | **LISTO** | 12 SVG en `assets/marks/` (idénticos byte a byte a Drive), muestra en los 3 colores en el brand book, descargas sueltas y `magoya-recursos-graficos.zip`. Se retiraron `assets/flourish-circle.svg` y `flourish-arrow.svg` |
+| 6 | Piezas RRSS: además de la paleta, usar los recursos con sus reglas | **LISTO** | Texto en `library.html#redes`, Reglas de oro, `BRAND.md` §8 |
+| 7 | Deck: uno de uso interno y uno institucional para clientes | **LISTO** con una reserva | Recursos muestra los dos. Interno: 6 previews + PDF (`magoya-interno.pdf`, reemplaza a `deck-base-magoya.pdf`). Clientes: 4 previews genéricas y sin PDF, porque incluye "Working with Magoya at BASF" con condiciones comerciales y el repo es público |
+| 8 | Comentario de Ayelén: usar el Artifact porque el design system "libera demasiado" | **ABIERTO** | Es una decisión entre Ayelén, Martina y Facu. El sitio dice que las bases también están en Claude, sin elegir el flujo |
+| 9 | Web de IA en Campo (identidad visual) y "Subir brand online IA" | **ABIERTO** | La slide propone revisarla entre los tres antes de subirla. No se publicó |
+
 ### Validación del 26 oct: banco de fotos, ilustración, elementos visuales y contenedores
 
 Revisado con capturas a 1440 px y una prueba automática de superposición a 1280, 1440, 1680 y 1920 px.

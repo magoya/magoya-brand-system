@@ -152,7 +152,9 @@
   /* Radios: la marca es redondeada (logo, pills) */
   --radius-sm: 6px; --radius-md: 12px; --radius-lg: 20px;
   --radius-xl: 28px; --radius-full: 999px;
-  --radius-btn: 10px;  /* botones: rectángulo con radio leve (≠ chips, que son pill outline) */
+  --radius-btn: 10px;  /* botones secundario y terciario: rectángulo con radio leve (≠ chips, que son pill outline) */
+  --radius-cta: 44px;  /* CTA: pill sólida Verde digital o lima, la única pill sólida */
+  --radius-box: 12px;  /* box: texto sobre el pleno, una imagen en el rectángulo claro */
 
   /* Sombras */
   --shadow-sm: 0 1px 2px rgba(0,0,0,.3);

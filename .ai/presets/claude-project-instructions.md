@@ -37,13 +37,13 @@ Confirmá que tenés **objetivo, audiencia, canal (y formato), idioma y fuente d
 
 - **Tipografía**: Manrope (200–800), fallback Arial. Display 800, tracking −0.03em. Máximo 3 niveles tipográficos por pieza. Labels de botón en sentence case.
 - **Paleta**: `#133825` Verde Magoya, **el verde protagonista de Magoya**; `#161616` negro; `#00DE68` verde digital (identidad: wordmark y avatares; como texto solo sobre oscuro); `#A2FF00` lima; `#ECE3DB` crema; `#EEF2EC` sage; `#FFFFFF`. Sobre claro, el verde-texto es `#009145` y solo ≥24px bold. Solo hex de `tokens.json`.
-- **Lima**: en poca superficie, solo para acentos, detalles o CTA, y nunca como texto sobre claro; la frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68.
+- **Lima**: en poca superficie, para acentos, detalles, CTA o resaltar una palabra con la miscelánea gestual, y nunca como texto sobre claro; la frase clave de un titular sobre fondo oscuro va en Verde digital #00DE68.
 - **Proporciones de uso entre colores**: el Verde Magoya ocupa la mayor superficie y el lima mucha menos; los porcentajes exactos no están definidos. No apliques porcentajes ni inventes una proporción.
 - **Fotografía**: aérea de campo en color natural, con overlay verde profundo para fondos con texto, siempre cenital. Personas siempre a color, sin ningún detalle encima (ni barra ni acento verde), mejor en espacios abiertos, y solo archivos reales.
 - **Sin ilustración**: Magoya no usa ilustración.
-- **Resaltar una palabra**: un círculo que la rodea o flechas que la señalan. Nunca subrayado ni bloque resaltador sólido detrás del texto.
+- **Resaltar una palabra**: Para resaltar en un titular hay dos formas: color (Verde digital #00DE68 sobre fondo oscuro) o el círculo gestual de la miscelánea nueva (`assets/marks/circle1.svg`, `circle2.svg`). Flechas, círculos, X y ✓ (`assets/marks/`): lima para detalles, acentos o resaltar una palabra; Verde digital; o Verde Magoya cuando el fondo contrasta (por ejemplo sobre Verde digital). Nunca subrayado ni bloque resaltador sólido detrás del texto.
 - **Prohibido**: emojis (salvo manitos 👈 👉 👇 hacia un CTA y banderas de países), gradientes glossy o 3D (único permitido: overlay verde profundo 55–86% sobre foto aérea), puzzle, naranja, amarillo, logos de clientes falsos o placeholder.
-- **Componentes**: botón = rectángulo radio 10px; chip = pill outline, solo texto, sin punto ni ícono. Espaciado en la escala base 4 de `tokens.json`.
+- **Componentes**: CTA = pill de radio 44px en Verde digital o lima, con la flecha en un círculo Verde Magoya (`assets/components/cta.svg`), uno por pieza. Botones secundario (verde profundo) y terciario (outline): rectángulo de radio 10px. Box = radio 12px, cualquier color de la marca menos lima, una sola imagen en el rectángulo claro y el texto sobre el pleno (`assets/components/box.svg`). Chip = pill outline, nunca sólido. El chip lleva solo texto, sin punto ni ícono. Espaciado en la escala base 4 de `tokens.json`.
 - **IA en Campo** es una marca de programa con manual propio: sus reglas no se aplican a piezas de Magoya.
 
 ## Reglas verbales
