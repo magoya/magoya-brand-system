@@ -17,9 +17,9 @@ Un link por herramienta. Cada entrada se versiona por separado: cuando una AI ga
 
 - `BRAND.md` — doctrina completa: resumen de la capa verbal y la capa visual.
 - `.ai/verbal/guia-editorial.md` — Guía editorial V2 ("Manual voz y tono MAGOYA V2", octubre 2026): fuente de la voz, el estilo, el vocabulario y la adaptación editorial. Su Parte II son las instrucciones operativas para agentes de AI (fuentes, generación, validación humana, control antes de entregar).
-- `vocabulary.json` y `.ai/verbal/` (estrategia, voz, lenguaje, aplicación) — capa verbal del Magoya Brand Playbook (octubre 2026), fuente de la identidad, el posicionamiento, la oferta, los espacios y el Método Magoya. Páginas: `estrategia.html`, `voz.html`, `lenguaje.html`, `aplicacion.html`.
+- `vocabulary.json` y `.ai/verbal/` (estrategia, voz, lenguaje, aplicación) — capa verbal del Magoya Brand Voice Playbook (octubre de 2026), fuente de la identidad, el posicionamiento, la oferta, los espacios y el Método Magoya. Páginas: `estrategia.html`, `voz.html`, `lenguaje.html`, `aplicacion.html`, y su edición en inglés en `en/` (https://brand.magoya.com/en/), que sale de la edición en inglés del playbook.
 - `tokens.json` / `tokens.css` — valores exactos con roles.
-- `ai/assets.json` — manifiesto de los 202 assets con URL directa y regla de uso (incluye los 58 íconos del sistema como SVGs individuales en `assets/icons/`).
+- `ai/assets.json` — manifiesto de los 230 assets con URL directa y regla de uso (incluye los 58 íconos del sistema como SVGs individuales en `assets/icons/`).
 - `ai/facts.json` — datos reales y aprobados de la empresa.
 - `ai/metodo.md` — método de trabajo para escribir y revisar contenido: la idea antes del texto, títulos-aserción, pasadas de copy, diseño y crítica.
 - `.ai/checklist.md` — chequeos visuales antes de entregar.

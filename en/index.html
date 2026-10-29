@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en" data-theme="studio">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/favicon-180.png">
+<title>Home · Magoya brand system</title>
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--color-canvas-meta);color:var(--ink-900);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{text-decoration:none;color:inherit}
+
+  .mg-topbar{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;gap:2px;flex-wrap:wrap;background:var(--green-950);padding:10px 24px;box-shadow:0 4px 18px rgba(0,0,0,.16)}
+  .mg-topbar img{height:34px;margin-right:18px}
+  .mg-topbar a{color:var(--cream-300);font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px}
+  .mg-topbar a:hover,.mg-topbar a.on{background:var(--green-800);color:var(--cream-50)}
+  .mg-topbar a.cl{margin-left:16px}
+  .mg-topbar a.cl2{margin-left:10px}
+  .mg-topbar .navdiv{width:1px;height:18px;background:var(--cream-300);opacity:.25;margin:0 14px 0 20px}
+  @media (max-width:880px){ .mg-topbar .navdiv{display:none} }
+
+  .wrap{max-width:1420px;margin:0 auto 0 64px;padding:88px 32px 80px}
+
+  /* ---------- cabecera ---------- */
+  .head{display:grid;grid-template-columns:1.25fr 1fr;gap:34px;align-items:end;margin-bottom:26px}
+  .head h1{font-size:clamp(2.6rem,5.4vw,4.6rem);font-weight:var(--weight-extra);letter-spacing:-0.035em;line-height:.98}
+  .head h1 em{font-style:normal;color:var(--emerald-700)}
+  .head p{color:var(--gray-600);font-size:1.05rem;max-width:52ch;margin-top:16px}
+  .meta{display:flex;gap:26px;flex-wrap:wrap;justify-content:flex-end}
+  .meta div b{display:block;font-size:1.9rem;font-weight:var(--weight-extra);letter-spacing:-0.03em;line-height:1}
+  .meta div span{font-size:11.5px;color:var(--gray-600);font-family:var(--font-mono)}
+
+  /* ---------- mosaico por pilares: bento de tamaños mixtos, sin huecos (grid-auto-flow:dense) ---------- */
+  .board{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;grid-auto-flow:dense;gap:14px}
+  .b1{grid-column:span 2;grid-row:span 2}
+  .b2{grid-column:span 2;grid-row:span 1}
+  .b3{grid-column:span 1;grid-row:span 2}
+  .b4{grid-column:span 1;grid-row:span 1}
+  .c{position:relative;display:block;width:100%;height:100%;border-radius:16px;overflow:hidden;
+     background:var(--white);border:1px solid var(--color-hairline);
+     transition:transform .22s cubic-bezier(.22,1,.36,1),box-shadow .22s}
+  .c:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.13);z-index:3}
+  .c .lb{position:absolute;left:0;right:0;bottom:0;z-index:4;padding:20px 16px 13px;
+     background:linear-gradient(180deg,transparent 0%,rgba(8,8,8,.42) 30%,rgba(8,8,8,.88) 100%);color:var(--cream-50);
+     opacity:0;transform:translateY(6px);transition:opacity .2s,transform .2s}
+  .c:hover .lb{opacity:1;transform:none}
+  .c .lb b{display:block;font-size:13.5px;font-weight:var(--weight-bold);text-shadow:0 1px 4px rgba(0,0,0,.55)}
+  .c .lb span{font-size:11.5px;color:var(--cream-300);text-shadow:0 1px 3px rgba(0,0,0,.5)}
+  .c .lb b::after{content:" →"}
+  .fill{width:100%;height:100%;object-fit:cover}
+  .pad{position:absolute;inset:0;padding:18px;width:100%;height:100%;display:flex;flex-direction:column}
+  .k{font-size:9.5px;font-weight:var(--weight-extra);letter-spacing:.16em;text-transform:uppercase;color:var(--gray-600)}
+  .ch{display:flex;align-items:center;gap:9px;flex-shrink:0}
+  .ch svg{width:19px;height:19px;flex-shrink:0;color:var(--emerald-700)}
+  .ch b{font-size:14.5px;font-weight:var(--weight-extra);letter-spacing:-0.01em}
+  .dark .ch svg,.deep .ch svg,.black .ch svg{color:var(--lime-500)}
+  .dark .ch,.deep .ch,.black .ch{color:var(--cream-50)}
+  .emerald .ch{color:var(--green-900)}
+  .emerald .ch svg{color:var(--green-900)}
+  .chov{position:absolute;top:0;left:0;right:0;z-index:3;padding:14px 16px 26px;color:var(--cream-50);
+    background:linear-gradient(180deg,rgba(8,8,8,.55) 0%,transparent 100%)}
+  .chov svg{color:var(--lime-500)}
+  .dark{background:var(--green-950);border:none;color:var(--cream-50)}
+  .dark .k{color:#8FA396}
+  .deep{background:var(--green-900);border:none;color:var(--cream-50)}
+  .cream{background:var(--cream-100);border:none}
+  .sage{background:var(--sage-50);border:none}
+  .black{background:var(--ink-950);border:none;color:var(--cream-50)}
+  .emerald{background:var(--emerald-500);border:none;color:var(--ink-900)}
+
+  /* piezas internas */
+  .sw{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:auto}
+  .sw span{aspect-ratio:1;border-radius:8px;display:block;position:relative}
+  .sw-prop{flex:1;margin-top:10px;grid-auto-rows:1fr;min-height:0}
+  .sw-prop span{aspect-ratio:auto}
+  .sw span b{position:absolute;left:5px;bottom:4px;font-family:var(--font-mono);font-weight:600;font-size:8.5px;letter-spacing:-0.01em;color:var(--cream-50)}
+  .aa{font-size:clamp(3rem,7vw,5.4rem);font-weight:var(--weight-extra);letter-spacing:-0.05em;line-height:.82;margin-top:auto}
+  .aa small{display:block;font-size:11.5px;font-weight:var(--weight-regular);letter-spacing:0;color:var(--gray-600);margin-top:10px;font-family:var(--font-mono)}
+  .ico{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:auto}
+  .icm{display:block;width:100%;aspect-ratio:1;background:var(--ink-900);
+    -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:contain;mask-size:contain}
+  .dark .icm{background:var(--cream-50)}
+  .dark .icm.hl{background:var(--lime-500)}
+  .num{font-size:clamp(2.6rem,5vw,4.2rem);font-weight:var(--weight-extra);letter-spacing:-0.045em;line-height:.85;margin-top:auto}
+  .num i{font-style:normal;color:var(--lime-500)}
+  .num small{display:block;font-size:12px;font-weight:var(--weight-semibold);letter-spacing:0;margin-top:12px;padding-top:10px;border-top:2px solid currentColor;opacity:.8}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;align-items:center}
+  .chip{font-size:10px;font-weight:var(--weight-extra);letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;border:1.5px solid currentColor}
+  .btn{font-size:12.5px;font-weight:var(--weight-bold);padding:9px 16px;border-radius:var(--radius-btn);background:var(--lime-500);color:var(--ink-900);border:none}
+  /* CTA: pill 44px verde digital o lima con flecha en círculo Verde Magoya */
+  .cta{display:inline-flex;align-items:center;gap:8px;padding:4px 14px 4px 4px;border-radius:var(--radius-cta,44px);background:var(--emerald-500);color:var(--green-900);font-size:12.5px;font-weight:var(--weight-bold);white-space:nowrap}
+  .cta .ic{width:24px;height:24px;border-radius:50%;background:var(--green-900);color:var(--emerald-500);display:flex;align-items:center;justify-content:center}
+  .cta .ic svg{width:14px;height:14px}
+  .cta.lime{background:var(--lime-500)}
+  .cta.lime .ic{color:var(--lime-500)}
+  .logos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:auto}
+  .logos span{display:flex;align-items:center;justify-content:center;background:var(--white);border-radius:10px;padding:14px;height:78px}
+  .logos img{height:36px;width:100%;object-fit:contain;filter:grayscale(1);opacity:.8}
+  .stack{display:flex;gap:10px;margin-top:auto;align-items:center;flex-wrap:wrap}
+  .stack span{display:flex;align-items:center;justify-content:center;background:var(--white);border-radius:10px;width:52px;height:52px}
+  .stack img{height:28px;width:28px;object-fit:contain}
+  .hero-t{font-size:clamp(1.5rem,2.5vw,2.3rem);font-weight:var(--weight-extra);letter-spacing:-0.03em;line-height:1.02;margin-top:auto}
+  .hero-t em{font-style:normal;color:var(--emerald-500)}
+  .ph{position:absolute;inset:0}
+  .scrim::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,33,23,.35),rgba(12,33,23,.85))}
+  .rel{position:relative;z-index:2;display:flex;flex-direction:column;height:100%;padding:18px;width:100%}
+  .avs{display:flex;gap:10px;margin-top:auto}
+  .avs img{width:100%;max-width:56px}
+
+  footer{max-width:1420px;margin:0 auto;padding:0 28px 60px;color:var(--gray-600);font-size:13px}
+  footer a{color:var(--emerald-700);font-weight:600}
+
+  @media (max-width:1100px){ .board{grid-template-columns:repeat(3,1fr)} }
+  @media (max-width:880px){
+    /* una sola fila que scrollea, como los chips del rail: la barra apilaba
+       4 o 5 filas y medía 130 a 162px segun la pagina */
+    .mg-topbar{position:static;padding:10px 14px;flex-wrap:nowrap;overflow-x:auto;
+               -webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .mg-topbar::-webkit-scrollbar{display:none}
+    .mg-topbar > *{flex:0 0 auto}
+    .wrap{padding:20px 16px 60px}
+    .head{grid-template-columns:1fr;gap:18px;align-items:start}
+    .meta{justify-content:flex-start}
+    .board{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+    .c .lb{opacity:1;transform:none}
+  }
+  @media (max-width:560px){
+    .board{grid-template-columns:1fr;grid-auto-rows:auto}
+    .board .c{grid-column:1/-1 !important;grid-row:auto !important;aspect-ratio:4/5}
+  }
+
+  /* ---------- alto real del topbar: se reserva, nunca tapa contenido ---------- */
+  :root{--topbar-h:70px}
+  body{padding-top:var(--topbar-h)}
+  [id]{scroll-margin-top:calc(var(--topbar-h) + 22px)}
+
+  /* en mobile el topbar deja de ser fixed: no reserva alto y no se apila
+     (en icons.html la media query estaba ANTES de la regla base y no aplicaba) */
+  @media (max-width:880px){
+    .mg-topbar{position:static;padding:10px 14px}
+    /* URLs largas en <code>: sin esto empujan el ancho del documento */
+    code{overflow-wrap:anywhere}
+  }
+
+  /* ---------- alto real del topbar: se reserva, nunca tapa contenido ---------- */
+  :root{--topbar-h:70px}
+  body{padding-top:var(--topbar-h)}
+  [id]{scroll-margin-top:calc(var(--topbar-h) + 22px)}
+
+  /* ---------- topbar: mismo alto en todas las paginas ---------- */
+  /* el <img> inline dejaba hueco de baseline debajo del lockup y el alto de la
+     barra salia 54, 66 o 70 segun la pagina. Con display:block el lockup mide
+     siempre 34 + 12 de padding, asi que la barra mide 66 en todas. */
+  .mg-topbar{align-items:center}
+  .mg-topbar img{display:block}
+  .mg-topbar .brandmark{display:inline-flex;align-items:center;padding:6px 10px}
+
+  @media (max-width:880px){
+    /* una sola sangria en mobile: el texto arranca a 20px en todas las paginas
+       (venia de 14, 16, 18, 22 o 32 segun donde estuviera el padding) */
+    .wrap{margin-left:0;margin-right:0;padding-left:20px;padding-right:20px}
+    main{margin-left:0}
+    .hero-in,.inner,.hero > .inner,section > .inner,footer > *,footer > div{padding-left:20px;padding-right:20px}
+    body{padding-left:0;padding-right:0}
+  }
+
+  /* ---------- topbar v1.2 (en v2.0 la nav vive en nav.css) ---------- */
+  /* los margenes .cl (16px) y .cl2 (10px) hacian que cada par de items tuviera
+     una separacion distinta. Ahora todos los items pares estan a la misma
+     distancia y el unico corte estructural es el divisor antes del grupo de AI. */
+  .mg-topbar a.cl,.mg-topbar a.cl2{margin-left:0}
+  .mg-topbar .navdiv{margin:0 12px}
+  /* IA en Campo: programa presentado por Magoya, el verde ES el fondo */
+  .mg-topbar a.sub{background:var(--emerald-500);color:var(--green-950);font-weight:800}
+  .mg-topbar a.sub:hover{background:var(--lime-500);color:var(--green-950)}
+  .mg-topbar a.sub.on{box-shadow:inset 0 0 0 2px var(--cream-50)}
+
+  /* ---------- v2.0: mapa de las 9 partes, precedencia, versiones ---------- */
+  .map{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:8px 0 14px}
+  .map .p0{grid-column:1/-1;display:flex;gap:14px;align-items:baseline;background:var(--white);border:1px solid var(--color-hairline);border-radius:14px;padding:14px 18px;font-size:14.5px;color:var(--gray-800)}
+  .map .p0 b{font-weight:var(--weight-extra);color:var(--ink-900)}
+  .map a.part{display:flex;flex-direction:column;gap:8px;border-radius:14px;padding:18px 18px 16px;min-height:178px;transition:transform .2s cubic-bezier(.22,1,.36,1),box-shadow .2s}
+  .map a.part:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.12)}
+  .map a.part b{font-size:19px;font-weight:var(--weight-extra);letter-spacing:-0.01em}
+  .map a.part span{font-size:13px;line-height:1.45}
+  .map a.part small{margin-top:auto;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+  .map a.verbal{background:var(--ink-900);color:var(--cream-50)}
+  .map a.verbal span{color:var(--cream-300)} .map a.verbal small{color:var(--lime-500)}
+  .map a.visual{background:var(--white);border:1px solid var(--ink-900);color:var(--ink-900)}
+  .map a.visual span{color:var(--gray-600)} .map a.visual small{color:var(--ink-900)}
+  .map a.mixta{background:var(--sage-50);border:1px solid var(--color-hairline);color:var(--ink-900)}
+  .map a.mixta span{color:var(--gray-600)} .map a.mixta small{color:var(--emerald-700)}
+  .facts{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:12px;margin-bottom:44px}
+  .facts > div{background:var(--white);border:1px solid var(--color-hairline);border-radius:14px;padding:18px 20px}
+  .facts h3{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald-700);margin-bottom:10px}
+  .facts p,.facts li{font-size:13.5px;line-height:1.5;color:var(--gray-800)}
+  .facts ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+  .facts a{color:var(--emerald-700);font-weight:700}
+  .facts code{font-family:var(--font-mono);font-size:12px}
+  .boardhead{display:flex;align-items:baseline;gap:14px;margin:6px 0 14px}
+  .boardhead h2{font-size:1.5rem;font-weight:var(--weight-extra);letter-spacing:-0.02em}
+  .boardhead span{font-size:13px;color:var(--gray-600)}
+</style>
+<link rel="stylesheet" href="../nav.css">
+<style>
+/* Propuesta local: portada por tareas. No aplicada al sitio publicado. */
+.wrap{max-width:1320px;margin:0 auto;padding-top:62px}.head{align-items:center;margin-bottom:42px;gap:60px}.head h1{max-width:880px}.head p{line-height:1.6;max-width:62ch}.mg-topbar{padding:12px 28px;flex-wrap:nowrap;gap:8px}.mg-topbar .navdiv{display:none}.program-link{margin-left:auto;opacity:.8}.resource-state{justify-self:end;border-left:1px solid var(--color-hairline);padding-left:28px;min-width:220px}.resource-state>span{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-600)}.resource-state>b{display:block;margin:10px 0 6px;font-size:22px}.resource-state p{font-size:12px;margin:0 0 14px}.resource-state a{font-size:12px;font-weight:700;color:var(--emerald-700)}.task-heading{display:flex;align-items:baseline;gap:18px;margin-bottom:18px}.task-heading h2{font-size:26px;letter-spacing:-.03em}.task-heading>span{font-size:13px;color:var(--gray-600)}.task-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.task-card{padding:24px;background:var(--white);border:1px solid var(--color-hairline);border-radius:14px;display:flex;flex-direction:column;min-height:260px;transition:transform .18s}.task-card:hover{transform:translateY(-3px)}.task-card>span{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-600)}.task-card h3{font-size:24px;line-height:1.12;letter-spacing:-.03em;margin:20px 0 12px}.task-card p{font-size:13px;line-height:1.6;color:var(--gray-600);margin-bottom:24px}.task-card>b{font-size:13px;margin-top:auto}.task-primary{background:var(--ink-900);color:var(--cream-50);border-color:var(--ink-900)}.task-primary>span,.task-primary p{color:var(--cream-300)}.task-primary>b{background:var(--lime-500);color:var(--ink-900);padding:10px 14px;border-radius:var(--radius-btn);align-self:flex-start}.reference-map,.source-details{border-bottom:1px solid var(--color-hairline);padding:20px 0}.reference-map{margin-top:24px}.source-details{margin-bottom:38px}.reference-map>summary,.source-details>summary{cursor:pointer;font-size:14px;font-weight:700}.reference-map>summary>span{font-weight:400;font-size:12px;color:var(--gray-600);margin-left:16px}.map{margin-top:22px}.facts{margin-top:22px;margin-bottom:12px}.nav-group{position:relative;color:var(--cream-300);font-size:13px;font-weight:600}.nav-group summary{cursor:pointer;padding:6px 10px}.nav-group>div{position:absolute;top:35px;left:0;background:var(--green-950);padding:12px;min-width:190px;box-shadow:0 8px 20px #0003;border-radius:8px}.nav-group a{display:block}.task-card:focus-visible,summary:focus-visible{outline:3px solid var(--emerald-700);outline-offset:4px}
+@media(max-width:1000px){.task-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.head{gap:28px}.program-link{margin-left:0}.mg-topbar{overflow:visible;flex-wrap:wrap}.nav-group>div{z-index:130}}
+@media(max-width:600px){.wrap{padding:28px 20px 60px}.head{grid-template-columns:1fr;margin-bottom:28px}.resource-state{justify-self:start;padding-left:16px}.task-grid{grid-template-columns:1fr}.task-card{min-height:210px}.task-heading{display:block}.task-heading>span{display:block;margin-top:6px}.reference-map>summary>span{display:block;margin:8px 0 0}.mg-topbar{padding:10px 14px;gap:3px}.mg-topbar img{height:25px}.mg-topbar a,.nav-group{font-size:12px}.mg-topbar .brandmark{width:100%;margin-bottom:4px}.facts{grid-template-columns:1fr}.map{grid-template-columns:1fr}.head h1{font-size:2.35rem!important}}
+/* secciones del playbook en la portada: Cómo usar este sistema (p. 2) y Gobernanza (p. 61) */
+.pb-sec{margin:34px 0 44px}.pb-sec .facts{margin:0}
+.pb-sec .lede{font-size:1.15rem;font-weight:var(--weight-extra);letter-spacing:-0.015em;line-height:1.3;color:var(--ink-900);margin:0 0 18px;max-width:46ch}
+.pb-sec .srcline{margin-top:12px;font-size:12px;font-family:var(--font-mono);color:var(--gray-600)}
+.gov{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--color-hairline);border-radius:14px;overflow:hidden}
+.gov th{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald-700);text-align:left;padding:14px 20px;border-bottom:1px solid var(--color-hairline)}
+.gov td{font-size:13.5px;line-height:1.5;color:var(--gray-800);padding:14px 20px;border-bottom:1px solid var(--color-hairline);vertical-align:top}
+.gov td:first-child{font-weight:700;color:var(--ink-900);width:24%}.gov td:last-child{width:24%}
+.gov tr:last-child td{border-bottom:0}
+/* mapa de capítulos: 7 partes en 4 columnas, Identidad visual ocupa dos para cerrar la fila */
+.map a.part.wide{grid-column:span 2}@media(max-width:600px){.map a.part.wide{grid-column:auto}}
+</style>
+<style>
+/* edición EN: portada simple, sin moodboard */
+.task-grid.en-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.task-card .es-tag{display:inline-block;margin-left:6px;padding:2px 7px;border:1px solid currentColor;border-radius:999px;font-size:9.5px;letter-spacing:.08em}
+@media(max-width:1000px){.task-grid.en-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<link rel="alternate" hreflang="es" href="https://brand.magoya.com/">
+<link rel="alternate" hreflang="en" href="https://brand.magoya.com/en/">
+</head>
+<body>
+
+<nav class="mg-topbar" aria-label="Main navigation">
+<a class="brandmark" href="index.html"><img src="../assets/magoya-wordmark-cream.svg" alt="Magoya · home"></a>
+<a href="index.html" class="on" aria-current="page">Home</a>
+<details class="nav-group"><summary>The brand</summary><div><a href="estrategia.html">Strategy</a><a href="voz.html">Voice</a><a href="lenguaje.html">Language</a><a href="aplicacion.html">Voices and channels</a><a href="../brand-book.html" hreflang="es">Visual identity (Spanish)</a></div></details>
+<a href="../library.html" hreflang="es">Resources (Spanish)</a><a href="ai.html">Working with AI</a><a href="../ai-en-campo/" class="program-link">IA en Campo ↗</a>
+<a class="lang" href="../index.html" hreflang="es" lang="es" title="Edición en español">ES</a>
+</nav>
+
+<div class="wrap">
+
+  <div class="head">
+    <div>
+      <span class="k" style="color:var(--emerald-700)">Magoya brand · English edition · October 2026</span>
+      <h1 style="font-size:clamp(2.3rem,4.2vw,3.7rem)">Magoya brand system <em>in English.</em></h1>
+      <p>Strategy, voice, language, and channels, written natively in English. Find the rules and the words for what you’re about to write.</p>
+    </div>
+    <div class="resource-state"><span>Current source</span><b>Brand Voice Playbook</b><p>English edition, October 2026</p><a href="#como-usar">How to use this edition →</a></div>
+  </div>
+
+  <section class="pb-sec" id="como-usar" aria-labelledby="como-usar-t">
+    <div class="task-heading"><h2 id="como-usar-t">How to use this edition</h2></div>
+    <p class="lede">Same meaning in both languages. Native wording in each.</p>
+    <div class="facts">
+      <div>
+        <h3>Source hierarchy</h3>
+        <p>The Spanish playbook is the source of truth for strategy, positioning, offer, and method. This edition sets how it’s said in English. Facts about projects come only from approved team sources.</p>
+      </div>
+      <div>
+        <h3>Alignment rule</h3>
+        <p>English is written natively, never translated line by line. Any future change is recorded in the separate alignment log, with the Spanish line and the English line, and needs team approval.</p>
+      </div>
+      <div>
+        <h3>Labels</h3>
+        <ul>
+          <li><b>Principle:</b> how we think.</li>
+          <li><b>Recommendation:</b> good practice; use judgment.</li>
+          <li><b>Mandatory:</b> no exceptions without written approval.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="srcline">Source: Magoya Brand Voice Playbook, English edition · October 2026 · p. 2</p>
+  </section>
+
+  <section class="task-entry" aria-labelledby="pages-t"><div class="task-heading"><h2 id="pages-t">Brand pages</h2><span>Pick where to start.</span></div>
+  <div class="task-grid en-grid">
+    <a class="task-card task-primary" href="estrategia.html"><span>The brand</span><h3>Strategy</h3><p>Naming Magoya, the offer, positioning territories, audiences, and the Magoya Method.</p><b>Open Strategy →</b></a>
+    <a class="task-card" href="voz.html"><span>The brand</span><h3>Voice</h3><p>Personality, our stance, banned phrases, and the five dials.</p><b>Open Voice →</b></a>
+    <a class="task-card" href="lenguaje.html"><span>The brand</span><h3>Language</h3><p>Verbal principles, writing in English, banned vocabulary, and who’s who.</p><b>Open Language →</b></a>
+    <a class="task-card" href="aplicacion.html"><span>The brand</span><h3>Voices and channels</h3><p>Brand architecture, spokespeople, channels and language, and evidence rules.</p><b>Open Voices and channels →</b></a>
+    <a class="task-card" href="ai.html"><span>Tools</span><h3>Working with AI</h3><p>Instructions for AI agents, plus a link to the Spanish setup guide and files.</p><b>Open Working with AI →</b></a>
+    <a class="task-card" href="../brand-book.html" hreflang="es"><span>The brand <i class="es-tag" style="font-style:normal">Spanish</i></span><h3>Visual identity</h3><p>Logo, color, typography, photography, and icons. Available in Spanish only.</p><b>Open in Spanish →</b></a>
+    <a class="task-card" href="../library.html" hreflang="es"><span>Assets <i class="es-tag" style="font-style:normal">Spanish</i></span><h3>Resources</h3><p>Logos, fonts, icons, and photos to download. Available in Spanish only.</p><b>Open in Spanish →</b></a>
+  </div></section>
+
+  <section class="pb-sec" id="gobernanza" aria-labelledby="gobernanza-t" style="margin-top:56px">
+    <div class="task-heading"><h2 id="gobernanza-t">Governance</h2></div>
+    <p class="lede">Who keeps both languages aligned</p>
+    <table class="gov">
+      <thead><tr><th scope="col">What</th><th scope="col">How it works</th><th scope="col">Who</th></tr></thead>
+      <tbody>
+        <tr><td>Document owner</td><td>Approves any content change (vocabulary, rules, traits) in both languages.</td><td>To be defined</td></tr>
+        <tr><td>Change to vocabulary or a rule</td><td>Proposed, reviewed with affected spokespeople, approved before publishing.</td><td>Document owner</td></tr>
+        <tr><td>One-off exception</td><td>Documented as an exception; the general rule doesn’t change.</td><td>Spokesperson + owner</td></tr>
+        <tr><td>Currency review</td><td>Check that vocabulary, dials, figures, and examples are still true.</td><td>To be defined: quarterly or every six months</td></tr>
+        <tr><td>Canonical version</td><td>The playbook rules until it’s published on brand.magoya.com.</td><td>Document owner</td></tr>
+      </tbody>
+    </table>
+    <p class="srcline">Source: Magoya Brand Voice Playbook, English edition · October 2026 · p. 63</p>
+  </section>
+</div>
+
+<footer>
+  Magoya brand system · Source: Magoya Brand Voice Playbook, English edition (October 2026).
+</footer>
+
+<script>
+/* --topbar-h: el topbar es fixed y hace flex-wrap, asi que su alto real cambia
+   con el ancho de la ventana. Se mide y se publica como variable CSS. */
+(function(){
+  var tb = document.querySelector('.mg-topbar');
+  if(!tb) return;
+  function set(){
+    var fijo = getComputedStyle(tb).position === 'fixed';
+    document.documentElement.style.setProperty(
+      '--topbar-h', fijo ? Math.round(tb.getBoundingClientRect().height) + 'px' : '0px');
+  }
+  set();
+  window.addEventListener('resize', set);
+  window.addEventListener('load', set);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(set);
+})();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

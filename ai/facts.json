@@ -1,8 +1,8 @@
 {
  "que_es": "Datos REALES y aprobados de Magoya. Regla absoluta: lo que no está acá NO existe como dato real; si falta un dato, se le pide al usuario y lo valida una persona del equipo de Magoya (ver validacion).",
- "version": "1.3 · 2026-10-22",
+ "version": "1.4 · 2026-10-29",
  "validacion": {
-  "que_es": "Contrato de validación humana de la Guía editorial de Magoya (\"Manual voz y tono MAGOYA V2\", octubre de 2026), §2 (Métricas y resultados, Casos y confidencialidad) y §8 (Validación humana y permisos). Rige para todo lo que entra a este archivo y para toda cifra que una pieza comunique como real.",
+  "que_es": "Contrato de validación humana. Sale de las Reglas de evidencia del Magoya Brand Voice Playbook (octubre de 2026, p. 59; edición en inglés, p. 61) y de la Guía editorial de Magoya (\"Manual voz y tono MAGOYA V2\", octubre de 2026), §2 (Métricas y resultados, Casos y confidencialidad) y §8 (Validación humana y permisos). Rige para todo lo que entra a este archivo y para toda cifra que una pieza comunique como real.",
   "quien_valida": "Una persona del equipo de Magoya valida toda métrica o resultado nuevo antes de que se comunique como real. La cifra tiene que ser aportada y validada explícitamente por alguien del equipo: la AI no puede inventar, estimar ni completar números, aunque el cliente sea anónimo. Si falta validación, se solicita.",
   "campos_a_registrar": [
    "fuente",
@@ -13,39 +13,56 @@
   ],
   "campos_nota": "Se registran cuando sea posible (guía §8). Al comunicar la cifra, incluir unidad, alcance, período y base de comparación cuando corresponda (guía §2). Las entradas actuales de cifras_aprobadas registran solo la fuente: los demás campos se completan cuando una persona los confirme, no los completa la AI.",
   "clientes": "Por defecto no se nombran clientes ni se divulga información identificable. Para usar el nombre, el logo, una cita o una historia identificable de un cliente se exige autorización expresa del responsable correspondiente; los casos conjuntos son excepciones aprobadas. La anonimización no autoriza inventar resultados ni publicar información confidencial (guía §2, §7 y §8).",
-  "afirmaciones_institucionales": "Las afirmaciones institucionales ya aprobadas en el playbook (por ejemplo, \"95% de nuestros clientes es promotor de Magoya\" o \"más de nueve años resolviendo problemas exclusivamente en el agro\") pueden reutilizarse dentro de su contexto y vigencia. Si dependen de números variables, como años de experiencia, equipos o índices de satisfacción, se confirma su actualización cuando corresponda (guía §8). Ver también derivados_del_tiempo.",
-  "lo_que_la_ai_puede_hacer": "Proponer textos, estructuras, hipótesis de trabajo y ejemplos señalizados como ficticios. No puede convertirlos por sí misma en datos corporativos oficiales. Los números hipotéticos solo se admiten rotulados como ejemplos ficticios (guía §2 y §8)."
+  "afirmaciones_institucionales": "Las afirmaciones institucionales ya aprobadas en el playbook (por ejemplo, \"El 95% de nuestros clientes es promotor de Magoya\" o \"más de nueve años resolviendo problemas exclusivamente en el sector\") pueden reutilizarse dentro de su contexto y vigencia. Si dependen de números variables, como años de experiencia, equipos o índices de satisfacción, se confirma su actualización cuando corresponda (guía §8; playbook p. 60: \"Confirmar que los números variables estén actualizados\"). Ver también derivados_del_tiempo.",
+  "lo_que_la_ai_puede_hacer": "Proponer textos, estructuras, hipótesis de trabajo y ejemplos señalizados como ficticios. No puede convertirlos por sí misma en datos corporativos oficiales. Los números hipotéticos solo se admiten rotulados como ejemplos ficticios (guía §2 y §8).",
+  "reglas_de_evidencia_playbook": {
+   "fuente": "Magoya Brand Voice Playbook, oct 2026, p. 59 · obligatorio",
+   "partir_de_evidencia": "Observaciones, experiencias, datos, razonamiento o fuentes confiables. Análisis, hipótesis y tendencias sirven si se identifican como tales.",
+   "relato_de_casos": "Contexto observado → problema o hipótesis → intervención → resultado o aprendizaje. Sin medición aprobada, solo consecuencias que el equipo pueda confirmar.",
+   "generalizaciones": "No presentar intuiciones como hechos del sector. Indicar el alcance. No inventar cantidades de proyectos, períodos ni porcentajes.",
+   "metricas": "Validadas por alguien de Magoya, con unidad, alcance, período y base de comparación. La AI no inventa, estima ni completa números.",
+   "clientes": "No nombrarlos ni hacerlos identificables, tampoco por descarte, sin autorización expresa.",
+   "capacidades": "Explicar qué capacidad se gana, qué proceso mejora y qué valor se genera. No reducir el relato a recortes de personas."
+  }
  },
  "empresa": {
   "nombre": "Magoya",
-  "que_hace": "Consultora hands-on en software y AI para empresas del agro. (EN: Magoya is a hands-on software and AI consulting firm for agribusiness.) Fuente: Magoya Brand Playbook, oct 2026, slide 4.",
-  "tagline": "Software and AI for agribusiness (Brand Playbook, slide 57)",
+  "que_hace": "Consultora hands-on en software y AI para empresas del agro. (EN: Magoya is a hands-on software and AI consulting firm for agribusiness.) Fuente: Magoya Brand Voice Playbook, oct 2026, p. 4 (edición en inglés, p. 4).",
+  "tagline": "Software and AI for agribusiness (Magoya Brand Voice Playbook, pp. 4 y 51; siempre en inglés, edición en inglés p. 53)",
   "activa_desde": 2017,
+  "diferenciales": [
+   "01 Fluidez en agro · Domain fluency",
+   "02 Tres empresas en una · Three companies in one",
+   "03 Hands-on · Hands-on",
+   "04 Orientados al resultado · Outcome-driven",
+   "05 Equipos locales, experiencia global · Local teams, global experience"
+  ],
+  "diferenciales_fuente": "Magoya Brand Voice Playbook, oct 2026, p. 9 (edición en inglés, p. 9). Cinco, en este orden.",
   "pilares": [
    "Perspectiva ante todo · Perspective first",
    "Articular para hacer que pase · Connect the pieces",
    "Pensamiento iterativo · Move and learn",
    "Enseñar a pescar · Capability stays"
   ],
-  "pilares_fuente": "Brand Playbook, oct 2026, slide 27. Reemplaza a Clarity / Confidence / Commitment, que no están en el playbook.",
-  "ia_en_campo": "IA en Campo: marca de programa presentada por Magoya, no marca de Magoya. AI aplicada al día operativo del campo, para el usuario final; sistema de marca propio en ai-en-campo/ (Brand Playbook, slides 33 y 59). Por ahora solo disponible en Argentina (slide 23)."
+  "pilares_fuente": "Magoya Brand Voice Playbook, oct 2026, p. 28 (edición en inglés, p. 29). Reemplaza a Clarity / Confidence / Commitment, que no están en el playbook.",
+  "ia_en_campo": "IA en Campo: marca de programa presentada por Magoya, no marca de Magoya ni línea de negocio. AI aplicada al día operativo del campo, para el usuario final; se escribe \"IA en Campo, presentado por Magoya\"; sistema de marca propio en ai-en-campo/ (Magoya Brand Voice Playbook, p. 54; razón para creer 12, p. 22). La edición en inglés agrega en la razón 12: \"For now, it runs only in Argentina.\" (p. 22); la edición en español no lo dice."
  },
  "cifras_aprobadas": [
   {
-   "cifra": "95% de nuestros clientes es promotor de Magoya · la relación promedio supera los 5 años",
-   "cifra_en": "95% of our clients are Magoya promoters, and our average relationship lasts more than 5 years",
-   "fuente": "Brand Playbook, oct 2026, razón para creer 10 (slides 21 y 23)"
+   "cifra": "El 95% de nuestros clientes es promotor de Magoya y la relación promedio supera los 5 años",
+   "cifra_en": "Ninety-five percent of our clients are Magoya promoters, and the average relationship lasts more than five years.",
+   "fuente": "Magoya Brand Voice Playbook, oct 2026, razón para creer 10 (pp. 22 y 25; edición en inglés, p. 22)"
   },
   {
-   "cifra": "más de nueve años resolviendo problemas exclusivamente en el agro",
-   "cifra_en": "nine-plus years solving problems only in this sector",
-   "fuente": "Brand Playbook, oct 2026, slide 8",
+   "cifra": "más de nueve años resolviendo problemas exclusivamente en el sector",
+   "cifra_en": "For more than nine years we’ve worked only in agriculture",
+   "fuente": "Magoya Brand Voice Playbook, oct 2026, diferencial 01, p. 9 (edición en inglés, p. 9)",
    "uso": "envejece: ver derivados_del_tiempo"
   },
   {
    "cifra": "equipos propios en Argentina, Brasil y Estados Unidos",
-   "cifra_en": "our own teams in Argentina, Brazil and the United States",
-   "fuente": "Brand Playbook, oct 2026, slides 8, 12 y 21"
+   "cifra_en": "Our own teams in Argentina, Brazil, and the United States",
+   "fuente": "Magoya Brand Voice Playbook, oct 2026, diferencial 05 (p. 9) y razón para creer 11 (p. 22); edición en inglés, pp. 9 y 22"
   },
   {
    "cifra": "17 clientes reales",
@@ -74,17 +91,17 @@
    "Camila López Colmano — figura como AgTech Expert, a confirmar",
    "Leo Dopacio — sin rol registrado"
   ],
-  "nota": "\"AgTech Expert\" figura como rol de Camila López Colmano en el sistema, pero \"agtech\" figura en el vocabulario a evitar del Brand Playbook (slide 48); la Guía editorial V2 (§3) lo evita como categoría identitaria de Magoya y pide evaluar cada palabra por función y contexto. Confirmar con ella el título vigente antes de usarlo.",
+  "nota": "\"AgTech Expert\" figura como rol de Camila López Colmano en el sistema, pero \"agtech\" está en el vocabulario vetado (obligatorio) del Magoya Brand Voice Playbook (p. 45; edición en inglés, p. 47). Confirmar con ella el título vigente antes de usarlo.",
   "fotos": "Fotos de personas a color disponibles: assets/photos/varu-ceo-color.jpg (Varina Baldi, Founder & CEO), assets/photos/equipo-campo-planta.jpg y assets/photos/equipo-campo-remera.jpg (equipo en el campo, sin nombre asignado). No se reemplazan con placeholders ni se les inventa nombre."
  },
  "pendiente_de_aprobar": [
   {
    "cifra": "95% de retención de clientes",
-   "estado": "CONTRADICE al Brand Playbook: la cifra aprobada es \"95% de nuestros clientes es promotor de Magoya\" (slides 21 y 23), no retención. No usar como retención; ver cifras_aprobadas."
+   "estado": "CONTRADICE al playbook: la cifra aprobada es \"El 95% de nuestros clientes es promotor de Magoya\" (Magoya Brand Voice Playbook, pp. 22 y 25), no retención. No usar como retención; ver cifras_aprobadas."
   },
   {
    "cifra": "del 12% al 36% de uso con un cliente",
-   "estado": "aparece como ejemplo en el Brand Playbook (slide 54). Métrica de UN caso: solo usable con el caso correcto y confirmación"
+   "estado": "aparece como ejemplo en el posteo modelo del Magoya Brand Voice Playbook (p. 50). Métrica de UN caso, pendiente de validación del equipo: solo usable con el caso correcto y confirmación"
   },
   {
    "cifra": "15 retailers / 44 growers en 2 meses",
@@ -92,7 +109,7 @@
   },
   {
    "dato": "cantidad de proyectos entregados, tamaño del equipo",
-   "estado": "sin fuente aprobada — pedir siempre. Los mercados activos (Argentina, Brasil, Estados Unidos) ya salen del Brand Playbook: ver cifras_aprobadas."
+   "estado": "sin fuente aprobada — pedir siempre (las reglas de evidencia del playbook, p. 59, prohíben inventar cantidades de proyectos, períodos o porcentajes). Los mercados activos (Argentina, Brasil, Estados Unidos) ya salen del playbook: ver cifras_aprobadas."
   }
  ],
  "derivados_del_tiempo": {

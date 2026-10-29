@@ -2,95 +2,557 @@
  "meta": {
   "brand": "Magoya",
   "file": "vocabulary.json",
-  "description": "Vocabulario de marca de Magoya en JSON: vocabulario a evitar, frases que la marca evita, regla AI, glosario por mercado, definición y tagline. Hermano verbal de tokens.json.",
-  "source": "Datos: Magoya Brand Playbook, octubre de 2026 (slides 4, 41, 48-52 y 57). Cómo se usa el vocabulario: Guía editorial de Magoya, \"Manual voz y tono MAGOYA V2\", octubre de 2026 (.ai/verbal/guia-editorial.md, §3). Para las denominaciones aprobadas y las traducciones prevalece el playbook; para la voz, el estilo y el uso del vocabulario prevalece la guía.",
-  "related": ["lenguaje.html", ".ai/verbal/lenguaje.md", ".ai/verbal/guia-editorial.md", ".ai/checklist-verbal.md"],
-  "updated": "2026-10-19"
+  "description": "Vocabulario de marca de Magoya en JSON: vocabulario vetado, frases prohibidas, regla AI, glosario por mercado, definición y tagline. Hermano verbal de tokens.json.",
+  "source": "Magoya Brand Voice Playbook, octubre de 2026: edición en español (pp. 4, 34, 37, 45-48 y 51-52) y edición en inglés (pp. 4, 35, 38, 46-50 y 53). Los números de página son del PDF de cada edición. El español es la fuente de verdad; los campos *_en y en_rules salen de la edición en inglés, redactada de forma nativa (no son traducciones del español).",
+  "related": [
+   "lenguaje.html",
+   "en/lenguaje.html",
+   ".ai/verbal/lenguaje.md",
+   ".ai/verbal/guia-editorial.md",
+   ".ai/checklist-verbal.md",
+   "BRAND.md"
+  ],
+  "updated": "2026-10-29",
+  "nota_para_mantenedores": "No es una regla (punto a confirmar 1 del brief del 29 oct 2026). El playbook marca el vocabulario vetado como OBLIGATORIO y este archivo lo refleja. La nota de la Guía editorial V2 (§3, Vocabulario de marca) dice: \"Evitar etiquetas reductoras para definirnos, como «software factory», «dev shop», «agtech» como categoría identitaria, «custom» como promesa central o «transformación digital» como definición. No son palabras universalmente vetadas: evaluar su función y contexto. Mantener las denominaciones aprobadas en el playbook y las traducciones validadas por mercado.\" y que «tecnología» puede emplearse fuera de la definición o el tagline. El playbook (p. 2) dice además que la Guía manda sobre vocabulario. Las dos reglas no conviven: lo decide el dueño del documento."
  },
- "rule": "Las etiquetas de \"vetoed\" no son palabras universalmente vetadas. Hay que evitar etiquetas reductoras para definir a Magoya (por ejemplo \"software factory\", \"dev shop\", \"agtech\" como categoría identitaria, \"custom\" como promesa central o \"transformación digital\" como definición), y evaluar cada palabra por su función y su contexto. Mantener las denominaciones aprobadas en el playbook y las traducciones validadas por mercado. Fuente: Guía editorial V2, §3 (Vocabulario de marca).",
+ "rule": "Vocabulario vetado · obligatorio (playbook, pp. 45-46; edición en inglés, pp. 47-48): Magoya no usa estas palabras. Obligatorio quiere decir sin excepciones salvo aprobación por escrito (playbook, p. 2). Mantener las denominaciones aprobadas en el playbook y las traducciones validadas por mercado.",
  "definition": {
   "es": "Magoya es una consultora hands-on en software y AI para empresas del agro.",
   "en": "Magoya is a hands-on software and AI consulting firm for agribusiness.",
   "rules": [
-    "\"Estrategia y ejecución\" no se usa para definir a Magoya: lo reemplaza hands-on.",
-    "No usamos la palabra \"tecnología\" para reemplazar a \"software y AI\" en la definición o el tagline; en otros contextos puede emplearse (Guía editorial V2, §3)."
-   ],
-  "slide": 4
+   "«Estrategia y ejecución» no se usa para definir a Magoya: lo reemplaza hands-on.",
+   "«Tecnología» no reemplaza a «software y AI»."
+  ],
+  "en_rules": [
+   "“Hands-on” replaces “strategy and execution” in any definition of Magoya.",
+   "“Technology” never replaces “software and AI.”",
+   "“Consulting firm,” never “consultancy,” “consultant” or “agency.”"
+  ],
+  "page": 4,
+  "page_en": 4
  },
  "one_liner": {
   "es": "Consultora hands-on en software y AI para empresas del agro.",
   "en": "Hands-on software and AI consulting firm for agribusiness.",
-  "slide": 4
+  "page": 4,
+  "page_en": 4
  },
  "tagline": {
-  "text": "Software and AI for agribusiness",
-  "base_no_negociable": "Software + AI + agro / agribusiness.",
-  "se_puede_soltar": "\"Consultora\" y \"hands-on\": se dicen inmediatamente después, en la firma o en la presentación.",
-  "slides": [56, 57]
+  "text": "Software and AI for agribusiness.",
+  "always_english": "El tagline va siempre en inglés, en cualquier idioma (edición en inglés, pp. 4 y 53).",
+  "base_no_negociable": "Software + AI + agro / agribusiness. Sin eso la marca queda demasiado ambigua y pierde el nicho.",
+  "se_puede_soltar": "«Consultora» y «hands-on». Se dicen inmediatamente después, en la firma o en la presentación. El tagline no tiene que decir todo.",
+  "pages": [
+   51,
+   52
+  ],
+  "pages_en": [
+   53,
+   54
+  ]
  },
- "how_to_read": "La clave \"vetoed\" conserva el nombre que le da el playbook (slides 48-49), pero se lee según \"rule\": son palabras a evitar, sobre todo al definir a Magoya, no un veto universal. \"why\" explica el riesgo y \"use_instead\" da la alternativa preferida. \"forbidden_phrases\" son las frases prohibidas del playbook (slide 41); la guía editorial V2 no las flexibiliza.",
+ "how_to_read": "\"vetoed\" es el vocabulario vetado del playbook (obligatorio): \"why\" explica el riesgo y \"use_instead\" da qué escribir en su lugar. \"vetoed_en\" son las filas de la edición en inglés, que suma algunas que el español no tiene. \"forbidden_phrases\" son las frases prohibidas del playbook (obligatorio). \"glossary\" es el quién es quién por mercado.",
  "vetoed": [
-   {"term": "agtech", "why": "No es como Magoya se describe. Suena a startup de producto, no a consultora.", "use_instead": ["consultora hands-on", "hands-on consultant"], "slide": 48},
-   {"term": "digital (solo)", "why": "Suena viejo, de otra época. Con contexto puede aparecer: «digital product development» es aceptable. Nunca como descriptor de marca ni como claim.", "use_instead": ["software", "software product", "software development"], "slide": 48},
-   {"term": "transformación digital", "why": "Concepto sobrevendido. La transformación digital ya ocurrió, en mejor o peor forma, en cualquier empresa: usarlo suena a que todavía no pasó.", "use_instead": ["Hablamos de resultados y de lo que se resuelve concretamente."], "slide": 48},
-   {"term": "custom", "why": "Es una palabra que dispara \"build from scratch\" en el comprador enterprise: suena caro, lento, riesgoso.", "use_instead": ["Si lo tenemos que usar, decimos \"diseñado para resolver el desafío\"."], "slide": 48},
-   {"term": "software factory", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
-   {"term": "dev shop", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
-   {"term": "agencia", "why": "Reduce a Magoya a un ejecutor sin estrategia.", "use_instead": ["consultora hands-on"], "slide": 48},
-   {"term": "tecnología (sola)", "why": "Es un concepto demasiado amplio que en agro incluye maquinaria, biológicos e IoT.", "use_instead": ["software", "software y AI"], "context": "No sustituye a \"software y AI\" en la definición o el tagline de Magoya; en otros contextos puede emplearse (Guía editorial V2, §3).", "slide": 48},
-   {"term": "ayudar", "why": "Implica una relación asimétrica, de quien sabe hacia quien no sabe. Magoya hace con el otro, no por el otro.", "use_instead": ["trabajar con", "colaborar", "hacer junto a", "acompañar"], "slide": 48},
-   {"term": "adopción (como sinónimo de uso)", "why": "Magoya define \"uso\" como el todo: adopción, uso frecuente y recurrencia.", "use_instead": ["uso", "y que la adopción quede como sub-etapa"], "slide": 49},
-   {"term": "DIPI", "why": "El nombre interno que se le daba a la metodología. Era sólo el Discovery dentro del método.", "use_instead": ["Método Magoya (para el proceso completo)", "Discovery (para la primera fase)"], "slide": 49},
-   {"term": "building blocks", "why": "Sugiere que Magoya reutiliza componentes de un cliente en otro, lo que abre un conflicto de propiedad intelectual.", "use_instead": [], "note": "Sin reemplazo definido.", "slide": 49}
-  ],
+  {
+   "term": "agtech",
+   "why": "No es como Magoya se describe. Suena a startup de producto, no a consultora.",
+   "use_instead": [
+    "consultora hands-on"
+   ],
+   "page": 45
+  },
+  {
+   "term": "digital (solo)",
+   "why": "Suena viejo. Con contexto puede aparecer («digital product development»), nunca como descriptor de marca ni como claim.",
+   "use_instead": [
+    "software",
+    "producto de software",
+    "desarrollo de software"
+   ],
+   "page": 45
+  },
+  {
+   "term": "transformación digital",
+   "why": "Concepto sobrevendido. Ya ocurrió en cualquier empresa: usarlo suena a que todavía no pasó.",
+   "use_instead": [
+    "resultados y lo que se resuelve concretamente"
+   ],
+   "page": 45
+  },
+  {
+   "term": "custom",
+   "why": "Dispara «build from scratch» en el comprador enterprise: suena caro, lento, riesgoso.",
+   "use_instead": [
+    "«diseñado para resolver el desafío»"
+   ],
+   "page": 45
+  },
+  {
+   "term": "software factory · dev shop · agencia",
+   "why": "Los tres reducen a Magoya a un ejecutor sin estrategia.",
+   "use_instead": [
+    "consultora hands-on"
+   ],
+   "page": 45
+  },
+  {
+   "term": "tecnología (sola)",
+   "why": "Es demasiado amplio: en agro incluye maquinaria, biológicos e IoT.",
+   "use_instead": [
+    "software"
+   ],
+   "page": 45
+  },
+  {
+   "term": "ayudar",
+   "why": "Implica una relación asimétrica, de quien sabe hacia quien no sabe. Magoya hace con el otro, no por el otro.",
+   "use_instead": [
+    "trabajar con",
+    "colaborar",
+    "hacer junto a",
+    "acompañar"
+   ],
+   "page": 45
+  },
+  {
+   "term": "adopción (como sinónimo de uso)",
+   "why": "Magoya define «uso» como el todo: adopción, uso frecuente y recurrencia.",
+   "use_instead": [
+    "uso, y que la adopción quede como sub-etapa"
+   ],
+   "page": 46
+  },
+  {
+   "term": "DIPI",
+   "why": "Nombre interno que se le daba a la metodología. Era sólo el Discovery dentro del método.",
+   "use_instead": [
+    "Método Magoya para el proceso completo",
+    "Discovery para la primera fase"
+   ],
+   "page": 46
+  },
+  {
+   "term": "building blocks",
+   "why": "Sugiere que Magoya reutiliza componentes de un cliente en otro, lo que abre un conflicto de propiedad intelectual.",
+   "use_instead": [],
+   "note": "sin reemplazo definido",
+   "page": 46
+  },
+  {
+   "term": "usar lo que ya tenés",
+   "why": "No es como planteamos la integración.",
+   "use_instead": [
+    "construir sobre lo que ya existe"
+   ],
+   "page": 46
+  }
+ ],
+ "vetoed_en": [
+  {
+   "term": "agtech (to define us)",
+   "why": "Sounds like a product startup, not a consulting firm.",
+   "use_instead": [
+    "hands-on software and AI consulting firm"
+   ],
+   "page": 47
+  },
+  {
+   "term": "digital (alone)",
+   "why": "Dated. “Digital product development” is fine in context, never as a brand descriptor.",
+   "use_instead": [
+    "software",
+    "software product",
+    "software development"
+   ],
+   "page": 47
+  },
+  {
+   "term": "digital transformation, transform",
+   "why": "Oversold. It already happened in every company; using it suggests it hasn’t.",
+   "use_instead": [
+    "what we concretely solve and the result"
+   ],
+   "page": 47
+  },
+  {
+   "term": "custom",
+   "why": "Triggers “build from scratch” for enterprise buyers: expensive, slow, risky.",
+   "use_instead": [
+    "designed to solve the challenge"
+   ],
+   "page": 47
+  },
+  {
+   "term": "software factory, dev shop, agency",
+   "why": "All three reduce us to an executor without strategy.",
+   "use_instead": [
+    "hands-on consulting firm"
+   ],
+   "page": 47
+  },
+  {
+   "term": "technology (alone)",
+   "why": "Too broad: in ag it includes machinery, biologicals, and IoT.",
+   "use_instead": [
+    "software",
+    "software and AI"
+   ],
+   "page": 47
+  },
+  {
+   "term": "help, helping",
+   "why": "Implies the one who knows helping the one who doesn’t. We work with people, not for them.",
+   "use_instead": [
+    "work with",
+    "partner with",
+    "work alongside",
+    "support"
+   ],
+   "page": 48
+  },
+  {
+   "term": "adoption (as a synonym for usage)",
+   "why": "Usage is the whole: adoption, frequent use, and recurrence.",
+   "use_instead": [
+    "usage, with adoption as one stage"
+   ],
+   "page": 48
+  },
+  {
+   "term": "DIPI",
+   "why": "Old internal name; it was only Discovery.",
+   "use_instead": [
+    "Magoya Method",
+    "Discovery"
+   ],
+   "page": 48
+  },
+  {
+   "term": "building blocks",
+   "why": "Suggests reusing one client’s components for another: an IP conflict.",
+   "use_instead": [],
+   "note": "no set replacement",
+   "page": 48
+  },
+  {
+   "term": "end-to-end, innovative solutions, disruption",
+   "why": "Generic and dated.",
+   "use_instead": [
+    "what we built, for whom, and what it solved"
+   ],
+   "page": 48
+  },
+  {
+   "term": "use what you already have",
+   "why": "Not how we frame integration.",
+   "use_instead": [
+    "build on what already exists"
+   ],
+   "page": 48
+  }
+ ],
  "not_vetoed": [
-   {"term": "soluciones · solutions", "rule": "Usar con criterio, y nunca combinado con adjetivos genéricos como \"integrales\" o \"innovadoras\".", "slide": 49},
-   {"term": "framework · metodología", "rule": "No vetados. \"Método\" es la palabra preferida, pero framework es aceptable en contextos técnicos.", "slide": 49},
-   {"term": "adopción, en su contexto correcto", "rule": "No vetada si se usa para nombrar específicamente el paso de adopción dentro del arco de uso.", "slide": 49}
-  ],
+  {
+   "term": "soluciones · solutions",
+   "rule": "Con criterio, nunca con adjetivos genéricos como «integrales» o «innovadoras».",
+   "page": 46
+  },
+  {
+   "term": "framework · metodología",
+   "rule": "«Método» es la preferida; framework es aceptable en contextos técnicos.",
+   "page": 46
+  },
+  {
+   "term": "adopción, en su contexto correcto",
+   "rule": "No vetada en su sentido exacto: el momento en que alguien pasa de no usuario a usuario.",
+   "page": 46
+  }
+ ],
  "ai_rule": {
   "use": "AI",
-  "rule": "Usamos AI, en inglés, para nombrar la inteligencia artificial en general, en cualquier idioma del texto. Es la forma que la marca adoptó para actualizar su propuesta: hacemos \"Software y AI\".",
+  "rule": "IA o AI: usamos AI, en inglés, en cualquier idioma del texto: hacemos «software y AI».",
   "do_not_write": "IA (como sigla de inteligencia artificial)",
   "exception": {
    "name": "IA en Campo",
-   "rule": "Es un nombre propio, el nombre del programa, y se escribe siempre así, en español, en cualquier idioma del texto que lo rodee.",
+   "rule": "Es el nombre del programa y se escribe siempre así.",
    "never": "AI en Campo"
   },
-  "slide": 50
+  "rule_en": "Always “AI,” in every language. Only exception: IA en Campo, the program’s name.",
+  "page": 46,
+  "page_en": 48
  },
  "glossary": [
-   {"who": "El que produce", "es": "Productor", "en": "Farmer · Grower · Producer", "pt": "Produtor · Agricultor", "slide": 51},
-   {"who": "El que produce · cultivos de alto valor", "es": "Productor frutihortícola", "en": "Farmer · Grower · Producer", "pt": "Produtor · Horticultor", "slide": 51},
-   {"who": "El que produce · ganadería", "es": "Productor ganadero", "en": "Rancher", "pt": "Pecuarista", "slide": 51},
-   {"who": "El que produce · fruticultura", "es": "Productor frutihortícola", "en": "Orchard farmer", "pt": "Fruticultor", "slide": 51},
-   {"who": "El técnico", "es": "Asesor · agrónomo", "en": "Advisor · Agronomist", "pt": "Agrônomo · consultor agronômico · engenheiro agrônomo · engenheiro agrícola", "slide": 51},
-   {"who": "El canal", "es": "Distribuidor", "en": "Dealer", "pt": "Distribuidor", "note": "\"Distribuidor\" en Argentina es dealer en inglés, no \"distributor\".", "slide": 51},
-   {"who": "El canal · contacto con el productor", "es": "Distribuidor · comercio de insumos agrícolas", "en": "Retailer", "pt": "Revenda · revendedor · loja de insumos agrícolas", "note": "\"Retailer\" es el que tiene contacto con el productor, que es otra figura.", "slide": 51},
-   {"who": "El canal · alimentos", "es": "Mayorista", "en": "Wholesaler", "pt": "Atacadista", "slide": 51},
-   {"who": "El canal · maquinaria", "es": "Concesionario · concesionaria", "en": "Dealer · dealership", "pt": "Concessionária · revenda de máquinas", "slide": 51},
-   {"who": "El canal · cooperativas", "es": "Cooperativa", "en": "Cooperative", "pt": "Cooperativa", "slide": 51},
-   {"who": "Quien usa el producto", "es": "Usuario", "en": "User", "pt": "Usuário", "slide": 52},
-   {"who": "El equipo del productor", "es": "Operador · analista digital · gestor o gerente · productor o dueño", "en": "Operator · digital analyst · manager · farmer or owner", "pt": "Operador · analista digital · gestor ou gerente · produtor ou proprietário", "slide": 52},
-   {"who": "El equipo del cliente", "es": "Representante de ventas (RV) · soporte técnico · asesor", "en": "Commercial · tech support · advisor", "pt": "Representante técnico de vendas (RTV) · assistente técnico de vendas (AT) · assistência ou suporte técnico", "slide": 52},
-   {"who": "El sector", "es": "Agro · sector agropecuario · agronegocio", "en": "Agriculture · Ag", "pt": "Agro · agropecuário · agronegócio", "note": "\"Agribusiness\" nombra al cliente, no al sector: en inglés el sector es agriculture o ag. En Brasil \"agricultor\" convive con \"produtor\" para el que produce.", "slide": 52},
-   {"who": "El cliente · insumos", "es": "Empresa de insumos para el agro", "en": "Ag input company", "pt": "Empresa de insumos agrícolas", "slide": 52},
-   {"who": "El cliente · maquinaria", "es": "Empresa de maquinaria", "en": "OEM company", "pt": "Empresa de máquinas ou maquinário", "slide": 52},
-   {"who": "El cliente · semillas", "es": "Semillera", "en": "Seed company", "pt": "Empresa de sementes", "slide": 52},
-   {"who": "Tipos de cultivo", "es": "Extensivos · intensivos (la división de primer nivel)", "en": "Row crops (extensivos) · specialty crops o fresh crops (intensivos: tomate, pimiento, pepino, almendra, cítricos)", "pt": null, "note": "El inglés no usa la división extensivos/intensivos. El playbook no da el término en portugués.", "slide": 52}
-  ],
+  {
+   "who": "El que produce",
+   "es": "Productor",
+   "en": "farmer · grower · producer",
+   "pt": "Produtor · Agricultor",
+   "en_us_edicion_en": "farmer, grower, producer",
+   "page": 47,
+   "page_en": 49
+  },
+  {
+   "who": "· cultivos de alto valor",
+   "es": "Productor frutihortícola",
+   "en": "farmer · grower · producer",
+   "pt": "Produtor · Horticultor",
+   "en_us_edicion_en": "farmer, grower, producer",
+   "page": 47,
+   "page_en": 49
+  },
+  {
+   "who": "· ganadería",
+   "es": "Productor ganadero",
+   "en": "rancher",
+   "pt": "Pecuarista",
+   "en_us_edicion_en": "rancher",
+   "page": 47,
+   "page_en": 49
+  },
+  {
+   "who": "· fruticultura",
+   "es": "Productor frutihortícola",
+   "en": "fruit grower",
+   "pt": "Fruticultor",
+   "en_us_edicion_en": "fruit grower, orchard grower",
+   "note_en": "Replaces “orchard farmer”",
+   "page": 47,
+   "page_en": 49
+  },
+  {
+   "who": "El técnico",
+   "es": "Asesor · agrónomo",
+   "en": "advisor · agronomist",
+   "pt": "Agrônomo · consultor agronômico · engenheiro agrônomo",
+   "en_us_edicion_en": "advisor, agronomist",
+   "page": 47,
+   "page_en": 49
+  },
+  {
+   "who": "El canal",
+   "es": "Distribuidor",
+   "en": "dealer",
+   "pt": "Distribuidor",
+   "en_us_edicion_en": "dealer",
+   "note_en": "Never “distributor”",
+   "page": 47,
+   "page_en": 49
+  },
+  {
+   "who": "· contacto con el productor",
+   "es": "Distribuidor · comercio de insumos",
+   "en": "retailer",
+   "pt": "Revenda · loja de insumos agrícolas",
+   "en_us_edicion_en": "retailer",
+   "note_en": "A different role from dealer",
+   "page": 47,
+   "page_en": 49
+  },
+  {
+   "who": "· alimentos",
+   "es": "Mayorista",
+   "en": "wholesaler",
+   "pt": "Atacadista",
+   "en_us_edicion_en": "wholesaler",
+   "page": 47,
+   "page_en": 49
+  },
+  {
+   "who": "· maquinaria",
+   "es": "Concesionario",
+   "en": "dealer · dealership",
+   "pt": "Concessionária · revenda de máquinas",
+   "en_us_edicion_en": "dealer, dealership",
+   "page": 47,
+   "page_en": 49
+  },
+  {
+   "who": "· cooperativas",
+   "es": "Cooperativa",
+   "en": "cooperative",
+   "pt": "Cooperativa",
+   "en_us_edicion_en": "cooperative, co-op",
+   "page": 47,
+   "page_en": 49
+  },
+  {
+   "who": "Quien usa el producto",
+   "es": "Usuario",
+   "en": "user",
+   "pt": "Usuário",
+   "en_us_edicion_en": "user",
+   "page": 48,
+   "page_en": 50
+  },
+  {
+   "who": "El equipo del productor",
+   "es": "Operador · analista digital · gestor o gerente · productor o dueño",
+   "en": "operator · digital analyst · manager · farmer or owner",
+   "pt": "Operador · analista digital · gestor ou gerente · produtor ou proprietário",
+   "en_us_edicion_en": "operator, digital analyst, manager, farmer or owner",
+   "page": 48,
+   "page_en": 50
+  },
+  {
+   "who": "El equipo del cliente",
+   "es": "Representante de ventas (RV) · soporte técnico · asesor",
+   "en": "sales rep · tech support · advisor",
+   "pt": "RTV · AT · assistência ou suporte técnico",
+   "en_us_edicion_en": "sales rep, tech support, advisor",
+   "note_en": "Replaces “commercial”",
+   "page": 48,
+   "page_en": 50
+  },
+  {
+   "who": "El sector",
+   "es": "Agro · sector agropecuario · agronegocio",
+   "en": "agriculture · ag",
+   "pt": "Agro · agropecuário · agronegócio",
+   "en_us_edicion_en": "agriculture, ag, the industry",
+   "note_en": "“Agribusiness” names the client, never the sector",
+   "page": 48,
+   "page_en": 50
+  },
+  {
+   "who": "El cliente · insumos",
+   "es": "Empresa de insumos para el agro",
+   "en": "ag input company",
+   "pt": "Empresa de insumos agrícolas",
+   "en_us_edicion_en": "ag input company",
+   "page": 48,
+   "page_en": 50
+  },
+  {
+   "who": "El cliente · maquinaria",
+   "es": "Empresa de maquinaria",
+   "en": "OEM",
+   "pt": "Empresa de máquinas ou maquinário",
+   "en_us_edicion_en": "OEM",
+   "note_en": "Replaces “OEM company”",
+   "page": 48,
+   "page_en": 50
+  },
+  {
+   "who": "El cliente · semillas",
+   "es": "Semillera",
+   "en": "seed company",
+   "pt": "Empresa de sementes",
+   "en_us_edicion_en": "seed company",
+   "page": 48,
+   "page_en": 50
+  },
+  {
+   "who": "Tipos de cultivo",
+   "es": "Extensivos · intensivos",
+   "en": "row crops · specialty o fresh crops",
+   "pt": null,
+   "en_us_edicion_en": "row crops · specialty or fresh crops",
+   "note_en": "No extensive/intensive split in English",
+   "note": "El playbook no da el término en portugués.",
+   "page": 48,
+   "page_en": 50
+  }
+ ],
+ "glossary_notes": {
+  "es": "Importante: «agribusiness» nombra al cliente, no al sector: en inglés el sector es agriculture o ag. Tipos de cultivo: en español, extensivos e intensivos; en inglés, row crops y specialty o fresh crops.",
+  "page": 48,
+  "en_columns": "La columna \"en\" es la del playbook en español (p. 47-48, columna EN · Estados Unidos). La columna \"en_us_edicion_en\" y \"note_en\" salen del glosario de la edición en inglés (pp. 49-50), que manda para textos en inglés."
+ },
  "forbidden_phrases": [
-   {"phrase": "Lo que tenés no sirve", "why": "Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe.", "slide": 41},
-   {"phrase": "Hay que hacerlo todo de nuevo", "why": "Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe.", "slide": 41},
-   {"phrase": "Sólo nosotros podemos resolverlo", "why": "Decir eso es soberbia. Magoya no compite con altanería ni destruyendo a los demás.", "slide": 41},
-   {"phrase": "Esto se hace así", "why": "No creemos en las verdades únicas, sin contexto. La marca no tiene fórmulas o recetas estándar.", "slide": 41},
-   {"phrase": "Transformamos", "why": "Si bien nuestro propósito es ambicioso, usamos la palabra \"transformar\" de manera interna, no queremos sobreprometer impacto. Además, la palabra transformación arrastra peso del concepto de \"transformación digital\" que está quemado.", "slide": 41},
-   {"phrase": "Esta tecnología es fácil de aplicar", "why": "Es el mito del mago, nuestro archienemigo central. Nada de soluciones mágicas porque achican el trabajo propio y suenan a quien no conoce el agro.", "slide": 41},
-   {"phrase": "Estos problemas son fáciles de resolver", "why": "Es el mito del mago, nuestro archienemigo central. Nada de soluciones mágicas porque achican el trabajo propio y suenan a quien no conoce el agro.", "slide": 41},
-   {"phrase": "El problema es del cliente o del usuario", "why": "Magoya no culpa a otros y propone la solución. Nunca señala culpables.", "slide": 41}
-  ],
- "forbidden_phrases_note": "La slide 41 las presenta como \"siete frases\"; textualmente enumera estos ocho enunciados en seis filas. Se evitan todos.",
+  {
+   "phrase": "Lo que tenés no sirve",
+   "why": "Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe.",
+   "why_en": "Contradicts our respect for what’s been achieved and our rule of building on what exists.",
+   "page": 37,
+   "page_en": 38
+  },
+  {
+   "phrase": "Hay que hacerlo todo de nuevo",
+   "why": "Contradice nuestro respeto por lo logrado y nuestra regla de partir de lo que ya existe.",
+   "why_en": "Contradicts our respect for what’s been achieved and our rule of building on what exists.",
+   "page": 37,
+   "page_en": 38
+  },
+  {
+   "phrase": "Sólo nosotros podemos resolverlo",
+   "why": "Es soberbia. Magoya no compite con altanería ni destruyendo a los demás.",
+   "why_en": "That’s arrogance. Magoya doesn’t compete by putting others down.",
+   "page": 37,
+   "page_en": 38
+  },
+  {
+   "phrase": "Esto se hace así",
+   "why": "No creemos en las verdades únicas, sin contexto. La marca no tiene fórmulas o recetas estándar.",
+   "why_en": "We don’t believe in one truth without context. The brand has no standard recipes.",
+   "page": 37,
+   "page_en": 38
+  },
+  {
+   "phrase": "Transformamos",
+   "why": "Usamos «transformar» de manera interna: no queremos sobreprometer impacto, y arrastra el peso de «transformación digital», que está quemado.",
+   "why_en": "“Transform” stays internal so we don’t overpromise impact. It also drags in “digital transformation,” which is worn out.",
+   "page": 37,
+   "page_en": 38
+  },
+  {
+   "phrase": "Esta tecnología es fácil de aplicar",
+   "why": "Es el mito del mago, nuestro archienemigo central. Las soluciones mágicas achican el trabajo propio y suenan a quien no conoce el agro.",
+   "why_en": "Quick-fix thinking. Easy answers shrink our own work and sound like someone who doesn’t know agriculture.",
+   "page": 37,
+   "page_en": 38
+  },
+  {
+   "phrase": "Estos problemas son fáciles de resolver",
+   "why": "Es el mito del mago, nuestro archienemigo central. Las soluciones mágicas achican el trabajo propio y suenan a quien no conoce el agro.",
+   "why_en": "Quick-fix thinking. Easy answers shrink our own work and sound like someone who doesn’t know agriculture.",
+   "page": 37,
+   "page_en": 38
+  },
+  {
+   "phrase": "El problema es del cliente o del usuario",
+   "why": "Magoya no culpa a otros y propone la solución. Nunca señala culpables.",
+   "why_en": "Magoya doesn’t point fingers. It proposes the solution.",
+   "page": 37,
+   "page_en": 38
+  }
+ ],
+ "forbidden_phrases_en": [
+  "“What you have doesn’t work.”",
+  "“We need to redo everything.”",
+  "“Only we can solve this.”",
+  "“This is how it’s done.”",
+  "“We transform.”",
+  "“This technology is easy to apply.”",
+  "“These problems are easy to solve.”",
+  "“The problem is the client’s” or “the user’s.”"
+ ],
+ "forbidden_phrases_note": "Lo que Magoya no dice · obligatorio (p. 37; edición en inglés, p. 38): seis filas, con ocho enunciados. Se evitan todos.",
  "translations": [
-   {"es": "Responsable (rasgo de personalidad)", "en": "Accountable", "not": "responsible", "why": "Accountable es hacerse cargo del resultado.", "slide": 30}
+  {
+   "es": "Responsable (rasgo de personalidad)",
+   "en": "Accountable",
+   "not": "responsible",
+   "why": "Accountable es hacerse cargo del resultado.",
+   "mandatory": true,
+   "page": 34,
+   "page_en": 35
+  }
+ ],
+ "writing_in_english": {
+  "source": "Magoya Brand Voice Playbook, English edition, p. 46 · Write natively, never translate",
+  "rules": [
+   "Lead with the point. US executives read two lines and decide. Conclusion, ask, or finding first.",
+   "Active voice and “we.” “We built the integration.” Passive voice makes us sound absent.",
+   "Contractions on LinkedIn, the website, and email. Fewer in proposals and SOWs.",
+   "One qualifier is enough. “Our read is” carries conviction with openness. Don’t stack softeners.",
+   "Serial comma, always. “Strategy, design and development, and adoption and usage.”",
+   "US spelling and formats (mandatory for US content): organization, analyze; October 21, 2026; 36%; $2M.",
+   "Use vs. usage. “Usage” names the territory, metric, and loop. “Use” is the verb and plain-sentence word.",
+   "Client, customer, user. Our companies are clients; their buyers are customers; people in their products are users.",
+   "No “the space” for the sector. Say agriculture, ag, or the industry. “Space” is for our three spaces.",
+   "No Spanish carry-overs: “not X, but Y,” “an agriculture where,” stacked “with” clauses, em dashes.",
+   "Plain words. Use, not leverage. Clear, not seamless. No cutting-edge, world-class, robust, unlock, empower, holistic.",
+   "Sentence-case headings. Never Title Case."
   ]
+ }
 }

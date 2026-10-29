@@ -1,6 +1,6 @@
 # Checklist de validación visual: piezas, código o copy generados por AI
 
-Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar. Si alguno falla, corregí y volvé a correr la lista completa. **Si hay texto, corré también `.ai/checklist-verbal.md`** (capa verbal del Brand Playbook y la Guía editorial V2, oct 2026).
+Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar. Si alguno falla, corregí y volvé a correr la lista completa. **Si hay texto, corré también `.ai/checklist-verbal.md`** (capa verbal del Magoya Brand Voice Playbook y la Guía editorial V2, oct 2026).
 
 > **Quién manda cuando dos reglas se contradicen.** Si un chequeo de esta lista contradice a `tokens.json` o a `BRAND.md`, el que está mal es el chequeo: reportalo, no fuerces la pieza. El orden completo está en `ai/precedencia.json`.
 
@@ -22,7 +22,7 @@ Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar
 | 14 | **Botón vs. chip, y logos reales** | Revisá radios y logos | Un botón secundario es pill, un CTA no es pill Verde digital o lima de radio 44px, un box es lima, o un chip tiene fondo sólido, o hay logos de clientes inventados o placeholder |
 | 15 | **Chips: solo texto, sin punto** | Mirá cada chip/pill de la pieza | Un chip lleva un punto/bullet (•) delante del texto, un ícono adentro, o texto en sentence case: el chip es SOLO texto uppercase; la pill ya delimita, el punto es ruido |
 | 16 | **Espaciado en escala y un eje** | Extraé los margin/padding/gap y compará contra la escala base-4 de `tokens.json`; mirá el eje de alineación | Hay valores fuera de la escala (5, 10, 14, 18…), bloques a menos de 24 de aire entre sí, más de un eje de alineación, filas cuyos elementos no comparten centro vertical, o paddings con 4 valores distintos |
-| 17 | **AI, en cualquier idioma** | Buscá la sigla de inteligencia artificial en todo el copy. La regla verbal completa está en `.ai/checklist-verbal.md` (chequeo 2) | El copy no escribe **AI** para nombrar la inteligencia artificial, en cualquier idioma del texto. Única excepción: el nombre propio **IA en Campo**, que se escribe siempre así (nunca "AI en Campo"). Regla del Brand Playbook, oct 2026, slide 50 |
+| 17 | **AI, en cualquier idioma** | Buscá la sigla de inteligencia artificial en todo el copy. La regla verbal completa está en `.ai/checklist-verbal.md` (chequeo 2) | El copy no escribe **AI** para nombrar la inteligencia artificial, en cualquier idioma del texto. Única excepción: el nombre propio **IA en Campo**, que se escribe siempre así (nunca "AI en Campo"). Regla del Magoya Brand Voice Playbook, oct 2026, p. 46 (edición en inglés, p. 48) |
 
 ## Extras según el formato
 

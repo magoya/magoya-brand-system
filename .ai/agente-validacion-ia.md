@@ -22,7 +22,7 @@ python3 ai/validar.py --red
 
 Chequea sin criterio humano: drift entre la capa publicada y sus fuentes, URLs que no resuelven,
 conteo de assets consistente entre entradas, cobertura de las familias de restricción, nomenclatura
-AI (regla del Brand Playbook, slide 50), colores fuera de rango, geometría única del wordmark y peso
+AI (regla del Brand Voice Playbook, p. 46), colores fuera de rango, geometría única del wordmark y peso
 de las entradas. **Exit code 1 = hay fallas.**
 
 Reglas de actuación:

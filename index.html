@@ -212,9 +212,20 @@
 .wrap{max-width:1320px;margin:0 auto;padding-top:62px}.head{align-items:center;margin-bottom:42px;gap:60px}.head h1{max-width:880px}.head p{line-height:1.6;max-width:62ch}.mg-topbar{padding:12px 28px;flex-wrap:nowrap;gap:8px}.mg-topbar .navdiv{display:none}.program-link{margin-left:auto;opacity:.8}.resource-state{justify-self:end;border-left:1px solid var(--color-hairline);padding-left:28px;min-width:220px}.resource-state>span{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-600)}.resource-state>b{display:block;margin:10px 0 6px;font-size:22px}.resource-state p{font-size:12px;margin:0 0 14px}.resource-state a{font-size:12px;font-weight:700;color:var(--emerald-700)}.task-heading{display:flex;align-items:baseline;gap:18px;margin-bottom:18px}.task-heading h2{font-size:26px;letter-spacing:-.03em}.task-heading>span{font-size:13px;color:var(--gray-600)}.task-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.task-card{padding:24px;background:var(--white);border:1px solid var(--color-hairline);border-radius:14px;display:flex;flex-direction:column;min-height:260px;transition:transform .18s}.task-card:hover{transform:translateY(-3px)}.task-card>span{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray-600)}.task-card h3{font-size:24px;line-height:1.12;letter-spacing:-.03em;margin:20px 0 12px}.task-card p{font-size:13px;line-height:1.6;color:var(--gray-600);margin-bottom:24px}.task-card>b{font-size:13px;margin-top:auto}.task-primary{background:var(--ink-900);color:var(--cream-50);border-color:var(--ink-900)}.task-primary>span,.task-primary p{color:var(--cream-300)}.task-primary>b{background:var(--lime-500);color:var(--ink-900);padding:10px 14px;border-radius:var(--radius-btn);align-self:flex-start}.reference-map,.source-details{border-bottom:1px solid var(--color-hairline);padding:20px 0}.reference-map{margin-top:24px}.source-details{margin-bottom:38px}.reference-map>summary,.source-details>summary{cursor:pointer;font-size:14px;font-weight:700}.reference-map>summary>span{font-weight:400;font-size:12px;color:var(--gray-600);margin-left:16px}.map{margin-top:22px}.facts{margin-top:22px;margin-bottom:12px}.nav-group{position:relative;color:var(--cream-300);font-size:13px;font-weight:600}.nav-group summary{cursor:pointer;padding:6px 10px}.nav-group>div{position:absolute;top:35px;left:0;background:var(--green-950);padding:12px;min-width:190px;box-shadow:0 8px 20px #0003;border-radius:8px}.nav-group a{display:block}.task-card:focus-visible,summary:focus-visible{outline:3px solid var(--emerald-700);outline-offset:4px}
 @media(max-width:1000px){.task-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.head{gap:28px}.program-link{margin-left:0}.mg-topbar{overflow:visible;flex-wrap:wrap}.nav-group>div{z-index:130}}
 @media(max-width:600px){.wrap{padding:28px 20px 60px}.head{grid-template-columns:1fr;margin-bottom:28px}.resource-state{justify-self:start;padding-left:16px}.task-grid{grid-template-columns:1fr}.task-card{min-height:210px}.task-heading{display:block}.task-heading>span{display:block;margin-top:6px}.reference-map>summary>span{display:block;margin:8px 0 0}.mg-topbar{padding:10px 14px;gap:3px}.mg-topbar img{height:25px}.mg-topbar a,.nav-group{font-size:12px}.mg-topbar .brandmark{width:100%;margin-bottom:4px}.facts{grid-template-columns:1fr}.map{grid-template-columns:1fr}.head h1{font-size:2.35rem!important}}
+/* secciones del playbook en la portada: Cómo usar este sistema (p. 2) y Gobernanza (p. 61) */
+.pb-sec{margin:34px 0 44px}.pb-sec .facts{margin:0}
+.pb-sec .lede{font-size:1.15rem;font-weight:var(--weight-extra);letter-spacing:-0.015em;line-height:1.3;color:var(--ink-900);margin:0 0 18px;max-width:46ch}
+.pb-sec .srcline{margin-top:12px;font-size:12px;font-family:var(--font-mono);color:var(--gray-600)}
+.gov{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--color-hairline);border-radius:14px;overflow:hidden}
+.gov th{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald-700);text-align:left;padding:14px 20px;border-bottom:1px solid var(--color-hairline)}
+.gov td{font-size:13.5px;line-height:1.5;color:var(--gray-800);padding:14px 20px;border-bottom:1px solid var(--color-hairline);vertical-align:top}
+.gov td:first-child{font-weight:700;color:var(--ink-900);width:24%}.gov td:last-child{width:24%}
+.gov tr:last-child td{border-bottom:0}
 /* mapa de capítulos: 7 partes en 4 columnas, Identidad visual ocupa dos para cerrar la fila */
 .map a.part.wide{grid-column:span 2}@media(max-width:600px){.map a.part.wide{grid-column:auto}}
 </style>
+<link rel="alternate" hreflang="es" href="https://brand.magoya.com/">
+<link rel="alternate" hreflang="en" href="https://brand.magoya.com/en/">
 </head>
 <body>
 
@@ -223,6 +234,7 @@
 <a href="index.html" class="on" aria-current="page">Inicio</a>
 <details class="nav-group"><summary>Conocer la marca</summary><div><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><a href="brand-book.html">Identidad visual</a></div></details>
 <a href="library.html">Recursos</a><a href="ai.html">Integrar con AI</a><a href="ai-en-campo/" class="program-link">IA en Campo ↗</a>
+<a class="lang" href="en/index.html" hreflang="en" lang="en" title="English edition">EN</a>
 </nav>
 
 <div class="wrap">
@@ -255,14 +267,38 @@
   </div>
 
   </details>
+  <section class="pb-sec" id="como-usar" aria-labelledby="como-usar-t">
+    <div class="task-heading"><h2 id="como-usar-t">Cómo usar este documento</h2></div>
+    <p class="lede">El mismo significado en los dos idiomas. Redacción nativa en cada uno.</p>
+    <div class="facts">
+      <div>
+        <h3>Jerarquía de fuentes</h3>
+        <p>Este playbook es la fuente de verdad de estrategia, posicionamiento, oferta y método. La Guía editorial de voz y tono V2 manda sobre voz, estilo y vocabulario. Casos y cifras salen solo de fuentes aprobadas del equipo.</p>
+      </div>
+      <div>
+        <h3>Regla de alineación</h3>
+        <p>La versión en inglés se escribe de forma nativa, nunca como traducción línea por línea. Cada cambio futuro se registra en el log de alineación, con la frase en español y en inglés, y necesita aprobación.</p>
+      </div>
+      <div>
+        <h3>Etiquetas</h3>
+        <ul>
+          <li><b>Principio:</b> cómo pensamos.</li>
+          <li><b>Recomendación:</b> buena práctica; usar criterio.</li>
+          <li><b>Obligatorio:</b> sin excepciones salvo aprobación por escrito.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="srcline">Fuente: Magoya Brand Voice Playbook · octubre de 2026 · p. 2</p>
+  </section>
   <details class="source-details" id="fuentes"><summary>Fuentes y uso con AI</summary>
   <div class="facts">
     <div>
       <h3>Qué documento manda</h3>
       <ul>
-        <li>Estrategia y aplicación salen del <b>Magoya Brand Playbook</b> (octubre de 2026). Si el sitio difiere de su fuente (playbook o guía editorial), gana la fuente y se corrige el sitio.</li>
-        <li>La voz y el tono aplicados salen de la <b>Guía editorial de voz y tono</b>: manda sobre voz, estilo, vocabulario y adaptación. Identidad, posicionamiento, oferta y método siguen en el playbook.</li>
-        <li>Casos, cifras y clientes salen de fuentes internas aprobadas, con validación humana.</li>
+        <li>Estrategia, posicionamiento, oferta, método y aplicación salen del <b>Magoya Brand Voice Playbook</b> (octubre de 2026). Si el sitio difiere de su fuente (playbook o guía editorial), gana la fuente y se corrige el sitio.</li>
+        <li>La voz y el tono aplicados salen de la <b>Guía editorial de voz y tono V2</b>: manda sobre voz, estilo, vocabulario y adaptación. Identidad, posicionamiento, oferta y método siguen en el playbook.</li>
+        <li>Casos, cifras y clientes salen solo de fuentes aprobadas del equipo, con validación humana.</li>
+        <li>Jerarquía completa, regla de alineación y etiquetas: <a href="#como-usar">Cómo usar este sistema</a>.</li>
         <li>Si dos fuentes se contradicen, no se arma una síntesis: se señala y se pide definición.</li>
         <li>Lo verbal y estratégico de la versión anterior (Esencia, La voz) quedó reemplazado por estrategia, voz y lenguaje.</li>
         <li>Identidad visual actualizada con el feedback del equipo del 22 y el 26 de octubre de 2026: color, fotografía, reglas de oro, posteos de redes y deck.</li>
@@ -340,7 +376,7 @@
         <span class="ch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 11h16M4 15.5h11M4 20h7"/></svg><b>Tipografía</b></span>
         <span style="margin-top:auto;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-600)">Case Study · Our Footprint</span>
         <div style="margin-top:6px;font-size:clamp(1.3rem,2.6vw,2.1rem);font-weight:var(--weight-extra);letter-spacing:-0.03em;line-height:1.08">Software and AI for <span style="color:var(--emerald-700)">agribusiness</span>.</div>
-        <p style="margin:8px 0 0;font-size:12px;color:var(--gray-600);line-height:1.45;max-width:420px">Hands-on software and AI consulting firm for agribusiness. Our own teams in the US, Brazil and Argentina.</p>
+        <p style="margin:8px 0 0;font-size:12px;color:var(--gray-600);line-height:1.45;max-width:420px">Hands-on software and AI consulting firm for agribusiness. Our own teams in the US, Brazil, and Argentina.</p>
       </div>
       <span class="lb"><b>Manrope, una sola familia</b><span>13 usos definidos, del hero al caption — acá van tres</span></span>
     </a>
@@ -464,6 +500,22 @@
     </a>
 
   </div>
+
+  <section class="pb-sec" id="gobernanza" aria-labelledby="gobernanza-t" style="margin-top:56px">
+    <div class="task-heading"><h2 id="gobernanza-t">Gobernanza del playbook</h2></div>
+    <p class="lede">Quién mantiene alineados los dos idiomas</p>
+    <table class="gov">
+      <thead><tr><th scope="col">Qué</th><th scope="col">Cómo funciona</th><th scope="col">Quién</th></tr></thead>
+      <tbody>
+        <tr><td>Dueño del documento</td><td>Aprueba cualquier cambio de contenido (vocabulario, reglas, rasgos), en los dos idiomas.</td><td>A definir</td></tr>
+        <tr><td>Cambio al vocabulario o a una regla</td><td>Se propone, se revisa con los voceros que afecta y se aprueba antes de publicarse.</td><td>Dueño del documento</td></tr>
+        <tr><td>Excepción puntual</td><td>Un vocero necesita romper una regla para un caso concreto: se documenta como excepción y no cambia la regla general.</td><td>Vocero + dueño del documento</td></tr>
+        <tr><td>Revisión de vigencia</td><td>Chequeo de que el vocabulario, los diales, las cifras y los ejemplos siguen siendo ciertos.</td><td>A definir: trimestral o semestral</td></tr>
+        <tr><td>Versión canónica</td><td>Este documento manda hasta que se publique en brand.magoya.com.</td><td>Dueño del documento</td></tr>
+      </tbody>
+    </table>
+    <p class="srcline">Fuente: Magoya Brand Voice Playbook · octubre de 2026 · p. 61</p>
+  </section>
 </div>
 
 <footer>

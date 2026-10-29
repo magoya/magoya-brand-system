@@ -1,6 +1,6 @@
 {
  "que_es": "Constraints duros de la marca: mínimos, máximos, distancias y disposiciones que NO requieren criterio de diseño: se cumplen o la pieza está mal. Complementa a tokens.json (valores) y BRAND.md (doctrina). Nada de esto se adapta ni se asume: si un valor no está acá ni en tokens.json, preguntá antes de inventar.",
- "version": "1.1 · 2026-10-22",
+ "version": "1.2 · 2026-10-29",
  "logo": {
   "tamano_minimo": {
    "pantalla": "90px de ancho",
@@ -39,8 +39,32 @@
   "ancho_maximo_de_parrafo": "≈66 caracteres por línea (74 para notas al pie); si una línea pasa eso, la caja está mal usada",
   "kickers": "MAYÚSCULAS, tracking +0.12em",
   "labels_de_boton": "sentence case",
-  "nomenclatura_ia": "SIEMPRE 'AI' para nombrar la inteligencia artificial, en cualquier idioma del texto ('Software y AI', 'capacidades de AI', 'Integrar con AI'). Única excepción: el nombre propio del programa 'IA en Campo', que se escribe siempre así, en cualquier idioma, y nunca 'AI en Campo'. Fuente: Magoya Brand Playbook, oct 2026, slide 50. Los nombres de archivo y las URLs del sistema siguen en 'ai-' (ai-en-campo.html, /ai/): eso NO se copia al texto de la pieza.",
-  "reglas_verbales": "el resto de las reglas de texto (definición, vocabulario de marca, frases prohibidas, glosario ES · EN · PT) está en vocabulary.json y .ai/verbal/ — se valida con .ai/checklist-verbal.md. Territorios 50/30/20 y diales por país son guías de planificación y referencia orientativa, no chequeos por texto (guía editorial V2, §4)"
+  "nomenclatura_ia": "SIEMPRE 'AI' para nombrar la inteligencia artificial, en cualquier idioma del texto ('Software y AI', 'capacidades de AI', 'Integrar con AI'). Única excepción: el nombre propio del programa 'IA en Campo', que se escribe siempre así, en cualquier idioma, y nunca 'AI en Campo'. Fuente: Magoya Brand Voice Playbook, octubre de 2026, p. 46 (edición en inglés, p. 48). Los nombres de archivo y las URLs del sistema siguen en 'ai-' (ai-en-campo.html, /ai/): eso NO se copia al texto de la pieza.",
+  "vocabulario_vetado": {
+   "peso": "obligatorio (Magoya Brand Voice Playbook, octubre de 2026, pp. 45–46; edición en inglés, pp. 47–48)",
+   "no_escribir_es": [
+    "agtech",
+    "digital (solo)",
+    "transformación digital",
+    "custom",
+    "software factory · dev shop · agencia",
+    "tecnología (sola)",
+    "ayudar",
+    "adopción (como sinónimo de uso)",
+    "DIPI",
+    "building blocks",
+    "usar lo que ya tenés"
+   ],
+   "no_escribir_en_suma": [
+    "digital transformation, transform",
+    "help, helping",
+    "end-to-end, innovative solutions, disruption"
+   ],
+   "no_quedaron_vetados": "«soluciones» (con criterio, nunca con adjetivos genéricos como «integrales» o «innovadoras»), «framework» y «metodología» («método» es la preferida), «adopción» en su contexto correcto",
+   "reemplazos": "el porqué y qué escribir en su lugar de cada fila están en vocabulary.json y .ai/verbal/lenguaje.md §2",
+   "nota_para_mantenedores": "No es una regla (punto a confirmar 1): la Guía editorial V2 (§3) dice que estas etiquetas \"No son palabras universalmente vetadas: evaluar su función y contexto\" y que «tecnología» puede usarse fuera de la definición o el tagline; el playbook (p. 2) dice que la Guía manda sobre vocabulario. Contradicción abierta hasta que decida el dueño del documento; mientras tanto se aplica la lista y el choque se señala. Ver ai/precedencia.json → jerarquia_de_fuentes.nota_para_mantenedores."
+  },
+  "reglas_verbales": "el resto de las reglas de texto (definición, frases prohibidas, glosario ES · EN · PT, reglas de evidencia) está en vocabulary.json y .ai/verbal/ — se valida con .ai/checklist-verbal.md. Territorios 50/30/20 y diales por país son guías de planificación y referencia orientativa, no chequeos por texto (guía editorial V2, §4)"
  },
  "verificacion": "los chequeos de .ai/checklist.md y, si hay texto, .ai/checklist-verbal.md: este archivo agrega los números; los checklists dicen cómo auditarlos",
  "pendiente_de_definir": [

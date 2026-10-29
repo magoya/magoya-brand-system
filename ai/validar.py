@@ -85,7 +85,7 @@ def check_cobertura():
         ok.append('constraints.json cubre las 7 familias de restricción (espacios, logo, color, texto, nomenclatura)')
 
 
-# ─── 4. AI, no la sigla en español (Brand Playbook oct 2026, slide 50) ──────
+# ─── 4. AI, no la sigla en español (Brand Voice Playbook oct 2026, p. 46) ─
 # Regla: se escribe AI en cualquier idioma del texto. Única excepción: el nombre propio
 # "IA en Campo", que se escribe siempre así (nunca "AI en Campo" ni con minúscula).
 # No cuentan: nombres de archivo (VALIDACION-IA.md, agente-validacion-ia.md).
@@ -94,6 +94,7 @@ ENUNCIA_REGLA = ('la sigla en español', 'Buscá la palabra suelta `IA`', '"do_n
                  'IA (como sigla', 'nunca "AI en Campo"', "nunca 'AI en Campo'", 'Nunca "AI en Campo"',
                  'nunca “AI en Campo”', 'o con minúscula', 'con minúscula', '"never": "AI en Campo"',
                  'Nunca <span class="no">“AI en Campo”',
+                 'Nunca <span class="no">«AI en Campo»',
                  # el lockup de IA en Campo parte el nombre en dos renglones: "IA" / "en Campo"
                  'class="l1">IA<span class="mk">', 'altura de "IA"', 'derecha de "IA"',
                  '<td><span class="no">“AI en Campo”</span></td>')

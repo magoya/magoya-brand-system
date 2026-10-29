@@ -1,20 +1,30 @@
 {
  "que_es": "Ley de precedencia: qué documento gana cuando dos reglas oficiales de este sistema se contradicen. Existe para que ninguna AI ni ninguna persona tenga que elegir. Si encontrás una contradicción, aplicá esta ley, entregá como borrador pendiente de revisión y reportá la contradicción, pero no la resuelvas por criterio propio.",
- "version": "1.3 · 2026-10-22",
+ "version": "1.4 · 2026-10-29",
  "por_que_existe": "Una auditoría a ciegas encontró contradicciones entre documentos oficiales del sistema: reglas incompatibles entre sí y números distintos en dos archivos. Mientras existan, la AI tiene que decidir, y decidir es exactamente lo que este sistema promete que nadie tenga que hacer.",
  "capas": {
-  "capa_verbal": "Estrategia, Voz, Lenguaje y Aplicación se reparten entre dos fuentes (ver jerarquia_de_fuentes): la identidad, el posicionamiento, los territorios, la propuesta de valor, la oferta, los espacios de actuación y el Método Magoya salen del Magoya Brand Playbook (octubre de 2026); la voz, el estilo, el vocabulario y la adaptación editorial salen de la Guía editorial de Magoya, \"Manual voz y tono MAGOYA V2\" (octubre de 2026), en .ai/verbal/guia-editorial.md. Si un archivo del sistema (estrategia.html, voz.html, lenguaje.html, aplicacion.html, .ai/verbal/, vocabulary.json, .ai/checklist-verbal.md) difiere de la fuente que le corresponde, gana la fuente y el archivo se corrige.",
+  "capa_verbal": "Estrategia, Voz, Lenguaje y Aplicación se reparten entre dos fuentes (ver jerarquia_de_fuentes): la identidad, el posicionamiento, los territorios, la propuesta de valor, la oferta, los espacios de actuación y el Método Magoya salen del Magoya Brand Voice Playbook (octubre de 2026, edición en español); cómo se dice en inglés sale de la edición en inglés del mismo playbook, redactada de forma nativa; la voz, el estilo, el vocabulario y la adaptación editorial salen de la Guía editorial de Magoya, \"Manual voz y tono MAGOYA V2\" (octubre de 2026), en .ai/verbal/guia-editorial.md. Si un archivo del sistema (estrategia.html, voz.html, lenguaje.html, aplicacion.html y su edición en/, .ai/verbal/, vocabulary.json, .ai/checklist-verbal.md) difiere de la fuente que le corresponde, gana la fuente y el archivo se corrige.",
   "capa_visual": "La Identidad visual (brand-book.html, BRAND.md, tokens.json) se actualizó con el feedback del equipo del 22 de octubre de 2026. Para la capa visual rige el orden de abajo.",
   "ia_en_campo_e_integrar_con_ai": "IA en Campo tiene sistema de marca propio (ai-en-campo/). Integrar con AI (ai.html) no es fuente: deriva de las capas anteriores.",
-  "regla_de_texto": "En el texto de un entregable, las reglas de identidad (definición, AI, espacios, método, denominaciones y traducciones) vienen del playbook, y las de voz, estilo, vocabulario y adaptación vienen de la guía editorial; las dos se validan con .ai/checklist-verbal.md. Bajo la guía, el vocabulario del playbook no es un veto universal (se evalúa por función y contexto) y el 50/30/20 es una guía de planificación de contenidos, no un chequeo por texto."
+  "regla_de_texto": "En el texto de un entregable, las reglas de identidad (definición, AI, espacios, método, denominaciones y traducciones) vienen del playbook, y las de voz, estilo y adaptación vienen de la guía editorial; las dos se validan con .ai/checklist-verbal.md. El vocabulario vetado del playbook (pp. 45–46; edición en inglés, pp. 47–48) está marcado como obligatorio y se aplica como tal (ver nota_para_mantenedores). El 50/30/20 y el 70/30 son guías de planificación de contenidos, no chequeos por texto (guía editorial §4)."
  },
  "jerarquia_de_fuentes": {
-  "que_es": "Qué fuente responde qué, para el contenido. Sale de la Guía editorial V2, §6 (Fuentes autorizadas y responsabilidades). No reemplaza al orden de abajo, que resuelve choques entre archivos del sistema para la capa visual y la entrega.",
+  "que_es": "Qué fuente responde qué, para el contenido. Sale de la página 2 del Magoya Brand Voice Playbook (octubre de 2026; edición en inglés, p. 2) y de la Guía editorial V2, §6 (Fuentes autorizadas y responsabilidades). No reemplaza al orden de abajo, que resuelve choques entre archivos del sistema para la capa visual y la entrega.",
+  "playbook_p2": {
+   "jerarquia": "Este playbook es la fuente de verdad de estrategia, posicionamiento, oferta y método. La Guía editorial de voz y tono V2 manda sobre voz, estilo y vocabulario. Casos y cifras salen solo de fuentes aprobadas del equipo.",
+   "regla_de_alineacion": "La versión en inglés se escribe de forma nativa, nunca como traducción línea por línea. Cada cambio futuro se registra en el log de alineación (ALINEACION.md), con la frase en español y en inglés, y necesita aprobación.",
+   "etiquetas": {
+    "principio": "cómo pensamos",
+    "recomendacion": "buena práctica; usar criterio",
+    "obligatorio": "sin excepciones salvo aprobación por escrito"
+   },
+   "edicion_en_ingles": "La edición en inglés define cómo se dice en inglés; la española es la fuente de verdad de estrategia, posicionamiento, oferta y método. Un texto en inglés sale de la edición en inglés y del glosario, nunca de traducir el español (edición en inglés, pp. 2 y 62)."
+  },
   "niveles": [
    {
     "n": 1,
-    "fuente": "Magoya Brand Playbook (.ai/verbal/estrategia.md)",
-    "responde": "identidad, posicionamiento, territorios, propuesta de valor, oferta, espacios de actuación y Método Magoya"
+    "fuente": "Magoya Brand Voice Playbook, octubre de 2026 (.ai/verbal/estrategia.md, voz.md, lenguaje.md y aplicacion.md; edición en inglés para textos en inglés)",
+    "responde": "estrategia, posicionamiento, oferta y método: identidad, territorios, propuesta de valor, oferta, espacios de actuación y Método Magoya"
    },
    {
     "n": 2,
@@ -23,7 +33,7 @@
    },
    {
     "n": 3,
-    "fuente": "fuentes internas aprobadas y vigentes, con validación humana (ai/facts.json)",
+    "fuente": "fuentes aprobadas del equipo, vigentes y con validación humana (ai/facts.json)",
     "responde": "casos, resultados, métricas, clientes, testimonios y datos comerciales"
    },
    {
@@ -33,11 +43,12 @@
     "limite": "el brief no puede redefinir la identidad ni autorizar cifras no validadas"
    }
   ],
-  "reglas_obligatorias": "Las reglas marcadas [OBLIGATORIO] en la guía prevalecen sobre las recomendaciones estilísticas, sin reemplazar la estrategia del playbook (guía, propósito y jerarquía de fuentes)."
+  "reglas_obligatorias": "Las reglas marcadas [OBLIGATORIO] en la guía prevalecen sobre las recomendaciones estilísticas, sin reemplazar la estrategia del playbook (guía, propósito y jerarquía de fuentes).",
+  "nota_para_mantenedores": "No es una regla (punto a confirmar 1 del brief del 29 oct 2026). El playbook nuevo marca el vocabulario vetado como OBLIGATORIO y veta «tecnología» sola; este sistema lo aplica así. La Guía editorial V2 (§3, Vocabulario de marca) dice que esas etiquetas reductoras \"No son palabras universalmente vetadas: evaluar su función y contexto\" y que «tecnología» puede emplearse fuera de la definición o el tagline. Y la propia p. 2 del playbook dice que la Guía manda sobre vocabulario. Las dos reglas no conviven: lo decide el dueño del documento. Hasta entonces, si un texto choca con esto, se señala en el bloque PEDIDO A HUMANOS (p. 60: señalarlo, no resolverlo en silencio)."
  },
  "conflictos_entre_fuentes": {
-  "regla": "Si las fuentes se contradicen, o el brief contradice una regla obligatoria, no se inventa una síntesis ni se resuelve en silencio: se señala la discrepancia, se propone una salida y se pide definición a una persona (guía, propósito y §7).",
-  "como_se_entrega": "El entregable sale como borrador identificable como pendiente de revisión, con el conflicto escrito en el bloque PEDIDO A HUMANOS (las dos fuentes y qué dice cada una). Lo mismo si el pedido involucra decisiones, riesgos o cifras relevantes: no se asume autorización de publicación (guía §7).",
+  "regla": "Si las fuentes se contradicen, o el brief contradice una regla obligatoria, no se inventa una síntesis ni se resuelve en silencio: se señala la discrepancia, se propone una salida y se pide definición a una persona (playbook p. 60: \"Ante fuentes o reglas en conflicto: señalarlo, no resolverlo en silencio\"; guía, propósito y §7).",
+  "como_se_entrega": "El entregable sale como borrador identificable como pendiente de revisión, con el conflicto escrito en el bloque PEDIDO A HUMANOS (las dos fuentes y qué dice cada una). Lo mismo si el pedido involucra decisiones, riesgos o cifras relevantes: se entregan como borrador pendiente de revisión y no se asume autorización de publicación (playbook p. 60; guía §7).",
   "relacion_con_el_orden": "El orden de abajo sigue rigiendo para choques entre archivos del sistema (facts, tokens, constraints, doctrina, checklists). Aplicarlo no exime de señalar el choque: ver como_reportar_una_contradiccion."
  },
  "orden": [

@@ -265,8 +265,22 @@
   .mg-topbar a.sub{background:var(--emerald-500);color:var(--green-950);font-weight:800}
   .mg-topbar a.sub:hover{background:var(--lime-500);color:var(--green-950)}
   .mg-topbar a.sub.on{box-shadow:inset 0 0 0 2px var(--cream-50)}
+  /* ---------- instrucciones para agentes de AI (playbook p. 60) ---------- */
+  .agents{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1160px}
+  .agents .box{border-radius:var(--radius-lg);padding:28px 30px}
+  .agents .rules{background:var(--white);border:1px solid var(--color-hairline)}
+  .agents .ctrl{background:var(--green-950);color:var(--cream-50)}
+  .agents h4{font-size:1.15rem;font-weight:800;letter-spacing:-.015em;margin-bottom:14px}
+  .agents ol,.agents ul{padding-left:22px;font-size:14.5px;line-height:1.55}
+  .agents li{padding:3px 0}
+  .agents .rules li{color:var(--ink-900)}
+  .agents .ctrl li{color:var(--cream-100)}
+  .srcline{margin-top:22px;font-size:12.5px;font-family:var(--font-mono);color:var(--gray-600)}
+  @media (max-width:880px){ .agents{grid-template-columns:1fr} }
 </style>
 <link rel="stylesheet" href="nav.css">
+<link rel="alternate" hreflang="es" href="https://brand.magoya.com/ai.html">
+<link rel="alternate" hreflang="en" href="https://brand.magoya.com/en/ai.html">
 </head>
 <body>
 
@@ -275,6 +289,7 @@
 <a href="index.html">Inicio</a>
 <details class="nav-group"><summary>Conocer la marca</summary><div><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><a href="brand-book.html">Identidad visual</a></div></details>
 <a href="library.html">Recursos</a><a href="ai.html" class="on" aria-current="page">Integrar con AI</a><a href="ai-en-campo/" class="program-link">IA en Campo ↗</a>
+<a class="lang" href="en/ai.html" hreflang="en" lang="en" title="English edition">EN</a>
 </nav>
 
 <nav class="side" id="dock">
@@ -282,6 +297,7 @@
   <a href="#usar"><span>Cómo usarlo</span></a>
   <a href="#validar"><span>Validar</span></a>
   <a href="#checklist-verbal"><span>Checklist verbal</span></a>
+  <a href="#agentes"><span>Agentes de AI</span></a>
   <a href="#ejemplos"><span>Pedidos bien y mal</span></a>
   <a href="#limites"><span>Límites</span></a>
   <a href="#administrar"><span>Administrar</span></a>
@@ -294,7 +310,7 @@
   <div class="inner">
     <span class="k">Sistema de marca · AI</span>
     <h1>Un solo proyecto<br>para trabajar <em>la marca</em> con AI.</h1>
-    <p>En Magoya, el trabajo de marca con AI pasa por un único lugar: el proyecto oficial de Claude <b>Magoya · Marca</b>, que ayuda a escribir y revisar contenido on-brand con las reglas y los recursos de la marca, con las mismas instrucciones y los mismos archivos para todo el equipo. Nadie configura su propia herramienta. Abrís un chat en el proyecto, le das un brief y revisás lo que devuelve con los checklists.</p>
+    <p>En Magoya, el trabajo de marca con AI pasa por un único lugar: el proyecto oficial de Claude <b>Magoya · Marca</b>, para escribir y revisar contenido on-brand con las reglas y los recursos de la marca, con las mismas instrucciones y los mismos archivos para todo el equipo. Nadie configura su propia herramienta. Abrís un chat en el proyecto, le das un brief y revisás lo que devuelve con los checklists.</p>
   </div>
 </header>
 
@@ -312,7 +328,7 @@
     <div class="stat"><div class="n">Verificable</div><div class="d">Lo que devuelve se chequea contra dos listas concretas, visual y verbal, antes de usarlo. La AI propone, la marca aprueba.</div></div>
   </div>
   <p class="note" style="margin-top:26px"><b>Otras herramientas no están soportadas</b> para el trabajo del equipo con la marca: ni ChatGPT, ni Gemini, ni Cursor o Copilot, ni un chat suelto con un prompt pegado. Si necesitás algo que el proyecto no resuelve, pedíselo a quien lo administra.</p>
-  <p class="note" style="margin-top:12px">Regla de fondo: <b>la AI acelera decisiones ya tomadas</b>; no toma decisiones de marca. En identidad y oferta manda el Magoya Brand Playbook (<a class="lk" href="estrategia.html">estrategia</a>, <a class="lk" href="voz.html">voz</a>, <a class="lk" href="lenguaje.html">lenguaje</a> y <a class="lk" href="aplicacion.html">aplicación</a>); en voz, estilo y vocabulario, la Guía editorial (<a class="lk" href=".ai/verbal/guia-editorial.md">guia-editorial.md</a>); en lo visual, el <a class="lk" href="brand-book.html">brand book</a> y <a class="lk" href="BRAND.md">BRAND.md</a>.</p>
+  <p class="note" style="margin-top:12px">Regla de fondo: <b>la AI acelera decisiones ya tomadas</b>; no toma decisiones de marca. En identidad y oferta manda el Magoya Brand Voice Playbook (<a class="lk" href="estrategia.html">estrategia</a>, <a class="lk" href="voz.html">voz</a>, <a class="lk" href="lenguaje.html">lenguaje</a> y <a class="lk" href="aplicacion.html">aplicación</a>); en voz, estilo y vocabulario, la Guía editorial (<a class="lk" href=".ai/verbal/guia-editorial.md">guia-editorial.md</a>); en lo visual, el <a class="lk" href="brand-book.html">brand book</a> y <a class="lk" href="BRAND.md">BRAND.md</a>.</p>
   </div>
 </section>
 
@@ -393,23 +409,59 @@ Pedido: lo que necesitás, en una o dos líneas.</pre>
     <li><b>Audiencia, canal e idioma.</b> Nivel técnico, tono e idioma adaptados. Los diales por país son orientativos; un contenido técnico no se simplifica artificialmente. <span style="white-space:nowrap">(guía §4)</span></li>
     <li><b>Lo que falta, señalado.</b> Lo que queda por confirmar se dice explícitamente, y un conflicto entre fuentes se señala con una salida propuesta, no se resuelve en silencio. <span style="white-space:nowrap">(guía §7, §9)</span></li>
   </ol>
-  <p class="note" style="margin-top:26px;margin-bottom:18px">Y ocho chequeos del Brand Playbook que la guía mantiene, porque son denominaciones y traducciones aprobadas:</p>
+  <p class="note" style="margin-top:26px;margin-bottom:18px">Y diez chequeos del Brand Voice Playbook que la guía mantiene, porque son denominaciones y traducciones aprobadas:</p>
   <ol class="check" id="checklist-verbal-playbook">
-    <li><b>Definición hands-on.</b> Consultora hands-on en software y AI para empresas del agro; tagline <i>Software and AI for agribusiness</i>. Ni “estrategia y ejecución”, ni “tecnología” en vez de “software y AI”, ni una etiqueta reductora como definición. Fuera de la definición, cada palabra se evalúa por contexto. <span style="white-space:nowrap">(slide 4, 57 · guía §3)</span></li>
-    <li><b>AI, en cualquier idioma.</b> La sigla en español no se usa para la inteligencia artificial. Única excepción: el nombre propio <b>IA en Campo</b>, siempre así; nunca “AI en Campo”. <span style="white-space:nowrap">(slide 50)</span></li>
-    <li><b>Uso antes que adopción.</b> La adopción es el paso de no usuario a usuario: una parte del uso, no su sinónimo. <span style="white-space:nowrap">(slide 13, 31, 49)</span></li>
-    <li><b>Espacios y Método Magoya.</b> Estrategia, Diseño y desarrollo, Adopción y uso; el método atraviesa los tres. <span style="white-space:nowrap">(slide 10, 24–25)</span></li>
-    <li><b>Responsable → Accountable.</b> En inglés el rasgo es <i>accountable</i>, no <i>responsible</i>. <span style="white-space:nowrap">(slide 30)</span></li>
-    <li><b>Distribuidor → dealer.</b> En inglés va <i>dealer</i>, no <i>distributor</i>. <i>Retailer</i> es otra figura. <span style="white-space:nowrap">(slide 51)</span></li>
-    <li><b>Agribusiness es el cliente.</b> No el sector: en inglés el sector es <i>agriculture</i> o <i>ag</i>. <span style="white-space:nowrap">(slide 52)</span></li>
-    <li><b>Ninguna frase prohibida.</b> Las frases de “lo que Magoya no dice” del playbook (“Transformamos”, “Esto se hace así”, “El problema es del cliente o del usuario” y las demás) no se usan; la guía no las flexibiliza. <span style="white-space:nowrap">(slide 41)</span></li>
-  </ol>
-  <p class="note" style="margin-top:26px">Nota de planificación: Uso 50% · Integración 30% · Hands-on 20% (slide 37) y el 70/30 de cada vocero (slide 60) se miran sobre un calendario o una campaña, no se fuerzan en cada texto (guía §4).</p>
+    <li><b>Definición hands-on.</b> Consultora hands-on en software y AI para empresas del agro; tagline <i>Software and AI for agribusiness</i>. Ni “estrategia y ejecución”, ni “tecnología” en vez de “software y AI”, ni una etiqueta reductora como definición. Fuera de la definición, cada palabra se evalúa por contexto. <span style="white-space:nowrap">(p. 4, 51–52 · guía §3)</span></li>
+    <li><b>AI, en cualquier idioma.</b> La sigla en español no se usa para la inteligencia artificial. Única excepción: el nombre propio <b>IA en Campo</b>, siempre así; nunca “AI en Campo”. <span style="white-space:nowrap">(p. 46)</span></li>
+    <li><b>Uso antes que adopción.</b> La adopción es el paso de no usuario a usuario: una parte del uso, no su sinónimo. <span style="white-space:nowrap">(pp. 15–16, 46)</span></li>
+    <li><b>Espacios y Método Magoya.</b> Estrategia, Diseño y desarrollo, Adopción y uso; el método atraviesa los tres. <span style="white-space:nowrap">(pp. 11, 26)</span></li>
+    <li><b>Responsable → Accountable.</b> En inglés el rasgo es <i>accountable</i>, no <i>responsible</i>. <span style="white-space:nowrap">(p. 34)</span></li>
+    <li><b>Distribuidor → dealer.</b> En inglés va <i>dealer</i>, no <i>distributor</i>. <i>Retailer</i> es otra figura. <span style="white-space:nowrap">(p. 47)</span></li>
+    <li><b>Agribusiness es el cliente.</b> No el sector: en inglés el sector es <i>agriculture</i> o <i>ag</i>. <span style="white-space:nowrap">(p. 48)</span></li>
+    <li><b>Ninguna frase prohibida.</b> Las frases de “lo que Magoya no dice” del playbook (“Transformamos”, “Esto se hace así”, “El problema es del cliente o del usuario” y las demás) no se usan; la guía no las flexibiliza. <span style="white-space:nowrap">(p. 37)</span></li>
+      <li><b>Vocabulario vetado (obligatorio).</b> agtech, digital (solo), transformación digital, custom, software factory, dev shop, agencia, tecnología (sola), ayudar, adopción como sinónimo de uso, DIPI, building blocks y «usar lo que ya tenés», cada una con su reemplazo en <code>vocabulary.json</code>. <span style="white-space:nowrap">(pp. 45–46)</span></li>
+    <li><b>Escribir en inglés: nativo, nunca traducido.</b> Conclusión primero, voz activa, serial comma, US spelling, títulos en sentence case y sin calcos del español. <span style="white-space:nowrap">(edición en inglés, p. 46)</span></li>
+</ol>
+  <p class="note" style="margin-top:26px">Nota de planificación: Uso 50% · Integración 30% · Hands-on 20% (p. 14) y el 70/30 de cada vocero (p. 54) se miran sobre un calendario o una campaña, no se fuerzan en cada texto (guía §4).</p>
+  </div>
+</section>
+
+<!-- ================= INSTRUCCIONES PARA AGENTES DE AI ================= -->
+<section id="agentes" style="background:var(--sage-50)">
+  <div class="inner">
+  <span class="kicker">Instrucciones para agentes de AI</span>
+  <h2>Antes de redactar y antes de entregar</h2>
+  <div class="agents">
+    <div class="box rules">
+      <h4>Reglas de generación</h4>
+      <ol>
+        <li>Identificar objetivo, audiencia, canal, idioma, fuente y restricciones de confidencialidad. Si falta algo indispensable, preguntar.</li>
+        <li>No inventar hechos, cifras, resultados, citas, clientes, fechas ni experiencias.</li>
+        <li>Diferenciar hecho validado, interpretación, hipótesis y ejemplo.</li>
+        <li>Ante fuentes o reglas en conflicto: señalarlo, no resolverlo en silencio.</li>
+        <li>Decisiones, riesgos o cifras relevantes: entregar como borrador pendiente de revisión.</li>
+        <li>Confirmar que los números variables estén actualizados.</li>
+      </ol>
+    </div>
+    <div class="box ctrl">
+      <h4>Control antes de entregar</h4>
+      <ul>
+        <li>Responde al brief y respeta el posicionamiento.</li>
+        <li>Constructivo, sin soberbia, con un punto de vista útil.</li>
+        <li>Toda cifra real tiene validación humana.</li>
+        <li>Usa bien «uso», «adopción», los espacios y el Método Magoya.</li>
+        <li>Sin palabras vetadas; «AI» e «IA en Campo» correctos.</li>
+        <li>Nivel técnico, tono e idioma adaptados a la audiencia y al canal.</li>
+        <li>Lo pendiente queda señalado.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="srcline">Fuente: Magoya Brand Voice Playbook · octubre de 2026 · p. 60</div>
   </div>
 </section>
 
 <!-- ================= PEDIDOS ================= -->
-<section id="ejemplos" style="background:var(--sage-50)">
+<section id="ejemplos">
   <div class="inner">
   <span class="kicker">Pedidos</span>
   <h2>El mismo pedido, flojo y bien escrito</h2>
@@ -435,7 +487,7 @@ Marcá toda cifra que no esté en facts.json como [PENDIENTE] y todo cliente nom
 </section>
 
 <!-- ================= LÍMITES ================= -->
-<section id="limites">
+<section id="limites" style="background:var(--sage-50)">
   <div class="inner">
   <span class="kicker">Límites</span>
   <h2>Qué resuelve sola y qué no</h2>
@@ -445,7 +497,7 @@ Marcá toda cifra que no esté en facts.json como [PENDIENTE] y todo cliente nom
       <span class="h">Hacer: puede resolverlo sola</span>
       <ul>
         <li><b>Variaciones de layout</b> sobre algo ya aprobado: mover jerarquía o probar tres versiones de lo mismo.</li>
-        <li><b>Copy en inglés y traducciones</b> con la voz de marca: los cuatro rasgos, el vocabulario de <a class="lk" href="lenguaje.html">lenguaje</a> y el glosario de <code>vocabulary.json</code>.</li>
+        <li><b>Copy en inglés</b> con la voz de marca: los cuatro rasgos, el vocabulario de <a class="lk" href="lenguaje.html">lenguaje</a> y el glosario de <code>vocabulary.json</code>.</li>
         <li><b>Código con tokens</b>: HTML, CSS o React que consume <code>var(--token)</code> de <code>tokens.css</code>, sin un hex suelto.</li>
         <li><b>Revisión contra el manual</b>: pasarle una pieza y pedirle los chequeos visuales y el checklist verbal de <a class="lk" href="#validar">validar</a>.</li>
         <li><b>Trabajo de volumen</b>: nombres de archivo, alts, metadata, tablas de assets, versiones cortas y largas de un mismo texto.</li>
@@ -471,7 +523,7 @@ Marcá toda cifra que no esté en facts.json como [PENDIENTE] y todo cliente nom
 </section>
 
 <!-- ================= ADMINISTRAR ================= -->
-<section id="administrar" style="background:var(--sage-50)">
+<section id="administrar">
   <div class="inner">
   <span class="kicker">Administración</span>
   <h2>Para quien administra el proyecto</h2>
@@ -519,7 +571,7 @@ Marcá toda cifra que no esté en facts.json como [PENDIENTE] y todo cliente nom
 </section>
 
 <!-- ================= ARCHIVOS ================= -->
-<section id="archivos">
+<section id="archivos" style="background:var(--sage-50)">
   <div class="inner">
   <span class="kicker">Referencia</span>
   <h2>Los archivos del proyecto</h2>
@@ -534,16 +586,16 @@ Marcá toda cifra que no esté en facts.json como [PENDIENTE] y todo cliente nom
       <tr><td><code>tokens.json</code></td><td>Tokens de diseño con roles: color, tipografía, espaciado, radios.<span class="u">https://brand.magoya.com/tokens.json</span></td><td><a class="get" href="tokens.json" download>bajar</a></td></tr>
       <tr><td><code>tokens.css</code></td><td>Los mismos tokens como variables CSS, con los cuatro temas.<span class="u">https://brand.magoya.com/tokens.css</span></td><td><a class="get" href="tokens.css" download>bajar</a></td></tr>
       <tr><td><code>.ai/verbal/guia-editorial.md</code></td><td>La Guía editorial: fuente de la voz, el tono, el estilo y el vocabulario. Su Parte II son instrucciones para agentes de AI.<span class="u">https://brand.magoya.com/.ai/verbal/guia-editorial.md</span></td><td><a class="get" href=".ai/verbal/guia-editorial.md" download>bajar</a></td></tr>
-      <tr><td><code>vocabulary.json</code></td><td>Vocabulario de marca: lo que se evita y su reemplazo (no es un veto universal), frases que la marca evita, regla AI y glosario ES · EN · PT.<span class="u">https://brand.magoya.com/vocabulary.json</span></td><td><a class="get" href="vocabulary.json" download>bajar</a></td></tr>
-      <tr><td><code>.ai/verbal/estrategia.md</code>, <code>voz.md</code>, <code>lenguaje.md</code>, <code>aplicacion.md</code></td><td>El Magoya Brand Playbook en Markdown: identidad, posicionamiento, oferta, método, rasgos, diales, voceros y canales.<span class="u">https://brand.magoya.com/.ai/verbal/</span></td><td><a class="get" href=".ai/verbal/estrategia.md" download>estrategia</a></td></tr>
+      <tr><td><code>vocabulary.json</code></td><td>Vocabulario de marca: vocabulario vetado (obligatorio) y su reemplazo, frases prohibidas, regla AI y glosario ES · EN · PT.<span class="u">https://brand.magoya.com/vocabulary.json</span></td><td><a class="get" href="vocabulary.json" download>bajar</a></td></tr>
+      <tr><td><code>.ai/verbal/estrategia.md</code>, <code>voz.md</code>, <code>lenguaje.md</code>, <code>aplicacion.md</code></td><td>El Magoya Brand Voice Playbook en Markdown: identidad, posicionamiento, oferta, método, rasgos, diales, voceros y canales.<span class="u">https://brand.magoya.com/.ai/verbal/</span></td><td><a class="get" href=".ai/verbal/estrategia.md" download>estrategia</a></td></tr>
       <tr><td><code>ai/facts.json</code></td><td>Cifras aprobadas y el contrato de validación. Lo que no está acá sale como pendiente.<span class="u">https://brand.magoya.com/ai/facts.json</span></td><td><a class="get" href="ai/facts.json" download>bajar</a></td></tr>
       <tr><td><code>.ai/checklist.md</code></td><td>Los diecisiete chequeos visuales, con cómo se verifica cada uno.<span class="u">https://brand.magoya.com/.ai/checklist.md</span></td><td><a class="get" href=".ai/checklist.md" download>bajar</a></td></tr>
-      <tr><td><code>.ai/checklist-verbal.md</code></td><td>El checklist de texto: las ocho preguntas de la guía y los ocho chequeos del playbook, cada uno con su fuente.<span class="u">https://brand.magoya.com/.ai/checklist-verbal.md</span></td><td><a class="get" href=".ai/checklist-verbal.md" download>bajar</a></td></tr>
+      <tr><td><code>.ai/checklist-verbal.md</code></td><td>El checklist de texto: las ocho preguntas de la guía y los diez chequeos del playbook, cada uno con su fuente.<span class="u">https://brand.magoya.com/.ai/checklist-verbal.md</span></td><td><a class="get" href=".ai/checklist-verbal.md" download>bajar</a></td></tr>
     </tbody>
   </table>
   </div>
 
-  <p class="note" style="margin-top:24px">Lo que Claude lee del sitio con Web search, sin cargarlo al knowledge: <a class="lk" href="llms.txt">llms.txt</a> (el índice), <a class="lk" href="ai/assets.json">assets.json</a> (202 assets con URL directa), <a class="lk" href="ai/constraints.json">constraints.json</a> y <a class="lk" href="llms-full.txt">llms-full.txt</a> (casi todo en un solo archivo). Assets binarios (logos, fotos, iconos) están en <a class="lk" href="library.html">Recursos</a>.</p>
+  <p class="note" style="margin-top:24px">Lo que Claude lee del sitio con Web search, sin cargarlo al knowledge: <a class="lk" href="llms.txt">llms.txt</a> (el índice), <a class="lk" href="ai/assets.json">assets.json</a> (230 assets con URL directa), <a class="lk" href="ai/constraints.json">constraints.json</a> y <a class="lk" href="llms-full.txt">llms-full.txt</a> (casi todo en un solo archivo). Assets binarios (logos, fotos, iconos) están en <a class="lk" href="library.html">Recursos</a>.</p>
   <p class="note" style="margin-top:12px">Si una ruta que empieza con punto no se puede bajar desde el sitio, usá el mirror crudo del repo: <code>https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/…</code>, el mismo archivo sin pasar por GitHub Pages.</p>
   </div>
 </section>

@@ -29,6 +29,22 @@ Fuente: presentación de feedback del equipo (6 slides) con tres carpetas de Dri
 | 5 | Sumar templates de redes; ¿editable, Figma o PNG de referencia?; mencionar que se respeta la paleta en posteos con foto y vectoriales | **LISTO** con 8 de 9 | `library.html#redes`: 8 posteos PNG 1080×1350 + `magoya-redes.zip`. Se eligió PNG de referencia porque es el material que existe; la opción editable queda en B13. Regla de paleta en Recursos, Reglas de oro, `BRAND.md` y `tokens.json`. Falta `Posteo_3` (B12) |
 | 6 | Template de deck institucional; mencionar que la base está en Claude y se comparte el Artifact para editar | **LISTO** | `library.html#deck`: 6 slides de muestra + `assets/deck/deck-base-magoya.pdf` (14 slides) y el texto del Artifact. El link del Artifact no está en la cuenta de Facu: pendiente (B11) |
 
+## Brand Voice Playbook ES + EN · 29 de octubre de 2026 (brief de Ayelén)
+
+Pedido: reemplazar con el playbook ES todo lo que en el sitio sale del playbook y crear la edición EN completa con el playbook EN. Rama `playbook-oct-es-en`, **sin publicar**: el brief pide resolver antes los puntos a confirmar 1, 3 y 4.
+
+| Pedido | Estado | Evidencia |
+|---|---|---|
+| Edición ES desde el playbook ES | **LISTO** | Estrategia, Voz, Lenguaje, Aplicación, Integrar con AI e Inicio, con línea de fuente por página del PDF. Checklist de QA del brief verificado por script: territorio 3, diferencial 05, Usage Loop, razón 09, 12 archienemigos, 6 frases, Riesgo sin clientes, 11 filas vetadas, glosario, sin «diecisiete deployments», sin «Slide NN» |
+| Edición EN nueva (`en/`) | **LISTO** | 6 páginas con el texto literal del playbook EN, mismos `id`, `hreflang` y selector ES/EN que conserva la sección. Writing in English en Lenguaje. Perspective/Momentum, black-box approach, Courage, Staff augmentation, «For now, it runs only in Argentina.» |
+| Secciones nuevas | **LISTO** | Cómo usar este documento y Gobernanza (Inicio), Reglas de evidencia (`aplicacion.html#evidencia`, Voz enlaza), Instrucciones para agentes de AI (`ai.html#agentes`) |
+| Archivos para AI | **LISTO** | BRAND.md §1, llms.txt (versión 1.3), brand-prompts, checklists, vocabulary.json, facts.json, presets, `.ai/verbal/*.md`, precedencia y constraints. validar.py: solo la falla preexistente del wordmark |
+| Correcciones de Identidad visual | **LISTO** salvo la cita de Apeel | Subtítulo (EN p. 8), cuerpo con boilerplate corto (EN p. 13), «Strategy», «Hands-on», «Outcome-driven», fuentes del 95% y 5+ años a p. 22. La cita de Apeel espera autorización (punto 11) |
+| Log de alineación | **LISTO** | `ALINEACION.md`, con los textos de interfaz EN como pendientes de aprobación |
+| Revisión adversarial | **LISTO** | 4 revisores independientes (Estrategia; Voz y Aplicación; Lenguaje, Inicio y AI; consistencia cruzada). El texto del playbook coincide; se corrigieron 30+ hallazgos de estructura, atribución y texto agregado |
+
+Decisiones abiertas (bloquean publicar): 1 vocabulario obligatorio vs. «con criterio» de la Guía; 3 Identidad visual en inglés (hoy la nav EN lleva a la página en español); 4 fila Varina en Arquitectura. También abiertos: 5 Talento/Staff augmentation, 6 «solo en Argentina» en ES, 7 «en mi opinión», 8 bloques viejos de Método, 9 versión canónica, 10 dueño del documento, 11 cita de Apeel, 12 cifra 12%→36%.
+
 ## IA en Campo · 29 de octubre de 2026 (slide 9 del deck de Martina)
 
 Pedido: aplicar en el brand el sistema de marca de IA en Campo que armó Martina (carpeta de Drive `ia-en-campo-web`).

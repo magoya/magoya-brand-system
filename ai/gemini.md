@@ -2,7 +2,7 @@
 
 > **Equipo de Magoya:** para el trabajo de marca, el camino oficial es el proyecto de Claude "Magoya · Marca" (https://brand.magoya.com/ai.html). Esta entrada queda como punto de lectura para cualquier AI.
 
-**Versión 1.9 · 2026-10-22** · Punto de entrada de la marca Magoya para Gemini. Se versiona por separado de las otras AIs (changelog al pie).
+**Versión 1.10 · 2026-10-29** · Punto de entrada de la marca Magoya para Gemini. Se versiona por separado de las otras AIs (changelog al pie).
 
 > **AVISO PARA EL MODELO QUE LEE ESTO: no resumas este archivo — necesitás las URLs literales.** Si tu herramienta de fetch te devolvió un resumen sin links, volvé a pedir el contenido completo, o hacé UN fetch de `https://brand.magoya.com/llms-full.txt` que trae todo el sistema en un solo archivo.
 Si sos un modelo leyendo esto: seguí el flujo de abajo, todas las URLs son públicas.
@@ -10,10 +10,10 @@ Si sos un modelo leyendo esto: seguí el flujo de abajo, todas las URLs son púb
 ## Flujo (en este orden)
 
 1. **Doctrina** → https://brand.magoya.com/BRAND.md · todas las reglas de la marca. Si solo vas a leer un archivo, es este.
-   **Texto** (si hay copy) → https://brand.magoya.com/.ai/verbal/guia-editorial.md, https://brand.magoya.com/vocabulary.json y https://brand.magoya.com/.ai/checklist-verbal.md. La identidad, los territorios, la oferta, los espacios y el Método Magoya salen del Magoya Brand Playbook (octubre 2026): Magoya es una consultora hands-on en software y AI para empresas del agro; se escribe AI en cualquier idioma (única excepción: el nombre propio IA en Campo). La voz, el estilo y el vocabulario salen de la Guía editorial V2, cuya Parte II son instrucciones operativas para agentes de AI: no inventar hechos ni cifras (toda métrica real la valida alguien del equipo), no nombrar clientes por defecto, distinguir hecho, interpretación, hipótesis y ejemplo, entregar como borrador pendiente de revisión cuando hay decisiones, riesgos o cifras, y señalar los conflictos entre fuentes en vez de resolverlos. El vocabulario a evitar no es un veto universal y el 50/30/20 planifica contenidos, no se chequea por texto. Detalle en https://brand.magoya.com/.ai/verbal/ (guia-editorial.md, estrategia.md, voz.md, lenguaje.md, aplicacion.md).
+   **Texto** (si hay copy) → https://brand.magoya.com/.ai/verbal/guia-editorial.md, https://brand.magoya.com/vocabulary.json y https://brand.magoya.com/.ai/checklist-verbal.md. La identidad, los territorios, la oferta, los espacios y el Método Magoya salen del Magoya Brand Voice Playbook (octubre de 2026): Magoya es una consultora hands-on en software y AI para empresas del agro; se escribe AI en cualquier idioma (única excepción: el nombre propio IA en Campo). La voz, el estilo y el vocabulario salen de la Guía editorial V2, cuya Parte II son instrucciones operativas para agentes de AI: no inventar hechos ni cifras (toda métrica real la valida alguien del equipo), no nombrar clientes por defecto, distinguir hecho, interpretación, hipótesis y ejemplo, entregar como borrador pendiente de revisión cuando hay decisiones, riesgos o cifras, y señalar los conflictos entre fuentes en vez de resolverlos. El vocabulario vetado del playbook es obligatorio (pp. 45–46) y el 50/30/20 planifica contenidos, no se chequea por texto. Para textos en inglés manda la edición en inglés del playbook, redactada de forma nativa (nunca se traduce desde el español): https://brand.magoya.com/en/. Detalle en https://brand.magoya.com/.ai/verbal/ (guia-editorial.md, estrategia.md, voz.md, lenguaje.md, aplicacion.md).
 2. **Valores exactos** → https://brand.magoya.com/tokens.json · paleta con roles, regla de uso del color, escala tipográfica, espaciado, radios y accesibilidad.
 3. **Tokens CSS** (si vas a escribir código) → https://brand.magoya.com/tokens.css · usá las custom properties, nunca hex sueltos.
-4. **Assets** → https://brand.magoya.com/ai/assets.json · manifiesto de TODOS los archivos (202): wordmarks, avatares, 58 íconos, fotos, logos reales de clientes; cada uno con URL directa y su regla de uso. Los SVGs se leen como texto: el wordmark se usa tal cual, jamás se redibuja.
+4. **Assets** → https://brand.magoya.com/ai/assets.json · manifiesto de TODOS los archivos (230): wordmarks, avatares, 58 íconos, fotos, logos reales de clientes; cada uno con URL directa y su regla de uso. Los SVGs se leen como texto: el wordmark se usa tal cual, jamás se redibuja.
 5. **Datos reales de la empresa** → https://brand.magoya.com/ai/facts.json · cifras aprobadas y equipo nombrable. Los clientes se nombran solo con autorización expresa (guía editorial V2, §8); si no está registrada, va a PEDIDO A HUMANOS. Si el dato no está acá, se le pide al usuario, y toda cifra real la valida una persona del equipo (contrato en `validacion`).
 6. **Constraints duros** → https://brand.magoya.com/ai/constraints.json · mínimos de logo, clearspace, safe areas, límites de texto. Nada se asume: si un valor no está ahí ni en tokens.json, se pregunta.
 7. **Método de trabajo** → https://brand.magoya.com/ai/metodo.md · la idea antes del texto, títulos-aserción, y pasadas de copy, diseño y crítica antes de entregar (secuenciales si no tenés subagentes).
@@ -35,12 +35,12 @@ https://brand.magoya.com/ai/metodo.md         <- método de trabajo (idea, títu
 https://brand.magoya.com/ai/precedencia.json  <- quién gana cuando dos reglas chocan + contrato de entrega
 https://brand.magoya.com/.ai/checklist.md     <- chequeos visuales
 https://brand.magoya.com/.ai/verbal/guia-editorial.md <- voz y tono + instrucciones operativas para AI (Guía editorial V2)
-https://brand.magoya.com/vocabulary.json     <- vocabulario a evitar (no veto universal), frases, regla AI, glosario ES/EN/PT
+https://brand.magoya.com/vocabulary.json     <- vocabulario vetado (obligatorio), frases, regla AI, glosario ES/EN/PT
 https://brand.magoya.com/.ai/checklist-verbal.md  <- checklist de texto: las 8 preguntas de la guía + chequeos del playbook
 https://brand.magoya.com/.ai/verbal/estrategia.md <- definición, territorios, razones para creer, tagline
 https://brand.magoya.com/.ai/verbal/voz.md        <- rasgos, diales por país, énfasis por audiencia
-https://brand.magoya.com/.ai/verbal/lenguaje.md   <- vocabulario a evitar, regla AI, glosario
-https://brand.magoya.com/.ai/verbal/aplicacion.md <- voceros, canales, idioma
+https://brand.magoya.com/.ai/verbal/lenguaje.md   <- expresión verbal, vocabulario vetado, regla AI, glosario, writing in English
+https://brand.magoya.com/.ai/verbal/aplicacion.md <- voceros, canales, idioma, reglas de evidencia, instrucciones para agentes
 ```
 
 **Las dos reglas que más se rompen en este flujo:** (1) los datos reales están en `facts.json` y lo que no esté ahí se pide, nunca se inventa; (2) el wordmark y los íconos se usan tal cual desde `assets.json`, nunca se redibujan.
@@ -70,6 +70,8 @@ arrancar, el cuerpo cuando la tarea coincide).
 - **Hoy Magoya no publica una skill.** Empaquetarla es una decisión abierta en el ledger.
 
 ## Changelog
+
+- **1.10** (2026-10-29): Magoya Brand Voice Playbook (octubre de 2026, ediciones en español y en inglés): el vocabulario vetado pasa a obligatorio, como lo marca el playbook (la contradicción con la Guía V2 queda como nota para mantenedores en `precedencia.json`); se suma la edición en inglés del sitio (https://brand.magoya.com/en/) para textos en inglés; el manifiesto tiene 230 assets.
 
 - **1.9** (2026-10-22): el flujo queda para escribir y revisar contenido con las reglas y los recursos de la marca. La capa visual sigue el feedback del 22 de octubre: el Verde Magoya #133825 es el verde protagonista, el lima es solo para acentos, detalles, resaltar o CTA, las proporciones de uso quedan pendientes de definir, las personas van siempre a color y sin detalle encima, y no hay ilustración. El validador pasa a `validar.py --entrega`.
 

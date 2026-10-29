@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en" data-theme="studio">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/favicon-180.png">
+<title>Working with AI · Magoya brand system</title>
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-body);background:var(--white);color:var(--ink-900);line-height:var(--leading-normal);-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+
+  /* ---------- topbar ---------- */
+  .mg-topbar{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;gap:2px;flex-wrap:wrap;background:var(--green-950);padding:10px 24px;box-shadow:0 4px 18px rgba(0,0,0,.16)}
+  .mg-topbar img{height:34px;margin-right:18px}
+  .mg-topbar a{color:var(--cream-300);text-decoration:none;font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px}
+  .mg-topbar a:hover,.mg-topbar a.on{background:var(--green-800);color:var(--cream-50)}
+  .mg-topbar a.cl{margin-left:16px}
+  .mg-topbar a.cl2{margin-left:10px}
+  .mg-topbar .navdiv{width:1px;height:18px;background:var(--cream-300);opacity:.25;margin:0 14px 0 20px}
+  @media (max-width:880px){ .mg-topbar .navdiv{display:none} }
+
+  /* ---------- dock lateral ---------- */
+
+  /* ---------- layout ---------- */
+  main{margin-left:64px;padding-top:44px}
+  section{padding:88px 0}
+  section > .inner{max-width:1284px;margin:0 auto 0 0;padding:0 32px}
+  .hero{margin-left:64px;margin-top:44px;background:var(--green-950);color:var(--cream-50);padding:70px 0 60px;position:relative}
+  .hero > .inner{max-width:1284px;margin:0 auto 0 0;padding:0 32px}
+  .hero .k{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--lime-500);border:1.5px solid rgba(162,255,0,.45);padding:6px 14px;border-radius:999px}
+  .hero h1{font-weight:800;font-size:clamp(2.6rem,5.6vw,4.6rem);letter-spacing:var(--tracking-tight);line-height:1.02;margin:20px 0 16px}
+  .hero h1 em{font-style:normal;color:var(--emerald-500)}
+  .hero p{color:var(--cream-200);font-size:1.12rem;max-width:64ch}
+
+  .kicker{display:inline-block;font-size:12px;font-weight:800;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--green-900);background:transparent;border:1.5px solid var(--green-900);padding:5px 13px;border-radius:var(--radius-full);margin-bottom:18px}
+  h2{font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800;letter-spacing:var(--tracking-tight);line-height:var(--leading-tight);margin-bottom:14px}
+  h3{font-size:var(--text-xl);font-weight:700;margin:40px 0 14px}
+  .lead{font-size:var(--text-lg);color:var(--gray-600);max-width:66ch;margin-bottom:38px}
+  .note{font-size:var(--text-sm);color:var(--gray-600);max-width:74ch}
+  .grid{display:grid;gap:20px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media (max-width:1100px){.g3{grid-template-columns:repeat(2,1fr)}}
+
+  /* ---------- cards de concepto (mismo lenguaje que .stat del brand book) ---------- */
+  .stat{background:var(--white);border:1px solid var(--color-hairline);border-radius:var(--radius-lg);padding:28px 26px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+  .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--emerald-500)}
+  .stat .n{font-size:clamp(24px,2.6vw,31px);font-weight:800;letter-spacing:var(--tracking-tight);line-height:1.08;color:var(--emerald-700)}
+  .stat .d{font-size:14.5px;color:var(--gray-600);margin-top:12px}
+
+  /* ---------- bloque de código copiable ---------- */
+  .code{background:var(--green-950);border-radius:16px;padding:20px 22px 22px;max-width:1000px;color:var(--cream-50)}
+  .code .bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(246,241,235,.14)}
+  .code .fn{font-family:var(--font-mono);font-size:11px;color:var(--sage-400);letter-spacing:.02em}
+  .code pre{font-family:var(--font-mono);font-size:12.5px;line-height:1.7;white-space:pre-wrap;word-break:break-word;color:var(--cream-100);max-height:460px;overflow:auto}
+  .btn-copy{background:var(--lime-500);color:var(--ink-900);border:none;border-radius:var(--radius-btn);font-family:var(--font-body);font-weight:700;font-size:13.5px;padding:10px 20px;cursor:pointer;transition:background .15s}
+  .btn-copy:hover{background:var(--lime-600)}
+  .btn-copy:focus-visible{outline:none;box-shadow:var(--shadow-focus)}
+  .btn-copy.done{background:var(--emerald-500)}
+  .btn-copy.sm{padding:7px 12px;font-size:12px}
+  .btn-copy.sm.ghost{background:transparent;border:1.5px solid var(--emerald-700);color:var(--emerald-700)}
+  .btn-copy.sm.ghost:hover{background:var(--emerald-700);color:var(--white)}
+  .btn-copy.sm.ghost.done{background:var(--emerald-500);border-color:var(--emerald-500);color:var(--ink-900)}
+  .steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1160px;margin-top:6px}
+  .steps4 div{border-top:3px solid var(--emerald-500);padding-top:12px;font-size:13.5px;line-height:1.55;color:var(--gray-600)}
+  .steps4 b{display:block;color:var(--ink-900);font-size:14.5px;margin-bottom:6px}
+  @media (max-width:1100px){.steps4{grid-template-columns:repeat(2,1fr)}}
+  /* nota de pendiente: visible, sin parecer error */
+  .pending{max-width:1000px;margin:30px 0 8px;border:1.5px dashed var(--ink-900);border-radius:var(--radius-lg);padding:16px 20px;background:var(--white)}
+  .pending .h{display:block;font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-900);margin-bottom:6px}
+  .pending p{font-size:var(--text-sm);color:var(--gray-600);max-width:80ch}
+
+  /* ---------- cards de herramienta ---------- */
+  .tool{background:var(--white);border:1px solid var(--color-hairline);border-radius:var(--radius-lg);padding:26px 24px;display:flex;flex-direction:column}
+  .tool .lbl{font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--emerald-700)}
+  .tool h4{font-size:1.15rem;font-weight:800;letter-spacing:-.015em;margin:8px 0 10px}
+  .tool .what{font-size:13px;color:var(--gray-600);border-top:1px solid var(--color-hairline);border-bottom:1px solid var(--color-hairline);padding:11px 0;margin-bottom:12px}
+  .tool .what b{color:var(--ink-900)}
+  ol.howto{list-style:none;counter-reset:h}
+  ol.howto li{counter-increment:h;position:relative;padding:9px 0 9px 32px;font-size:13.5px;line-height:1.5;border-bottom:1px solid var(--color-hairline)}
+  ol.howto li:last-child{border-bottom:none}
+  ol.howto li::before{content:counter(h);position:absolute;left:0;top:10px;width:21px;height:21px;border-radius:50%;background:var(--green-900);color:var(--cream-50);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  ol.howto li code,td code,p code,li code{font-family:var(--font-mono);font-size:.92em;font-weight:700;background:var(--sage-50);padding:1px 5px;border-radius:5px}
+
+  /* ---------- tabla de archivos ---------- */
+  .table-scroll{overflow-x:auto;max-width:1160px}
+  .table-scroll table{min-width:860px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{text-align:left;font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-600);border-bottom:2px solid var(--ink-900);padding:0 16px 11px 0}
+  td{padding:15px 16px 15px 0;border-bottom:1px solid var(--color-hairline);vertical-align:top;color:var(--gray-600)}
+  td:first-child{color:var(--ink-900)}
+  td .u{display:block;font-family:var(--font-mono);font-size:10.5px;color:var(--gray-600);word-break:break-all;margin-top:6px}
+  td a.get{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;color:var(--emerald-700);text-decoration:none;border:1.5px solid var(--emerald-700);padding:4px 11px;border-radius:999px;white-space:nowrap}
+  td a.get:hover{background:var(--emerald-700);color:var(--white)}
+
+  /* ---------- checklist de validación ---------- */
+  .check{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;max-width:1100px;counter-reset:c}
+  .check li{counter-increment:c;position:relative;padding:13px 0 13px 34px;border-bottom:1px solid var(--color-hairline);font-size:13.5px;line-height:1.5;color:var(--gray-600)}
+  .check li b{color:var(--ink-900)}
+  .check li::before{content:"";position:absolute;left:0;top:16px;width:16px;height:16px;border:2px solid var(--emerald-500);border-radius:5px}
+  .check li::after{content:counter(c);position:absolute;left:0;top:16px;width:16px;height:16px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:var(--emerald-700)}
+
+  /* ---------- pares de pedidos ---------- */
+  .pair{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--color-hairline);border-radius:var(--radius-lg);overflow:hidden;max-width:1160px;margin-bottom:20px;background:var(--white)}
+  .pair > .col{padding:24px}
+  .pair .weak{background:var(--gray-100);border-right:1px solid var(--color-hairline)}
+  .pair .h{display:block;font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;padding-top:10px;border-top:3px solid var(--ink-900)}
+  .pair .strong .h{border-top-color:var(--emerald-500);color:var(--emerald-700)}
+  .pair .q{font-family:var(--font-mono);font-size:12.5px;line-height:1.7;white-space:pre-wrap;color:var(--ink-900)}
+  .pair .weak .q{color:var(--gray-600)}
+  .pair .chg{grid-column:1/-1;border-top:1px solid var(--color-hairline);background:var(--sage-50);padding:15px 24px;font-size:13px;color:var(--gray-600)}
+  .pair .chg b{color:var(--ink-900)}
+
+  /* ---------- Hacer / Evitar (sin tildes ni cruces) ---------- */
+  .dodont{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:1000px;margin:28px 0 6px}
+  .dd{border-top:3px solid var(--emerald-500);padding-top:14px}
+  .dd.avoid{border-top-color:var(--ink-900)}
+  .dd .h{font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--emerald-700);margin-bottom:12px;display:block}
+  .dd.avoid .h{color:var(--ink-900)}
+  .dd ul{list-style:none;display:flex;flex-direction:column}
+  .dd li{font-size:var(--text-sm);line-height:1.5;padding:10px 0;border-bottom:1px solid var(--color-hairline);color:var(--gray-600)}
+  .dd li:last-child{border-bottom:none}
+  .dd li b{color:var(--ink-900)}
+
+  .pill{display:inline-block;background:transparent;color:var(--green-900);border:1.5px solid var(--green-900);font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 15px;border-radius:var(--radius-full)}
+  .pill-green{color:var(--emerald-700);border-color:var(--emerald-700)}
+
+  footer{margin-left:64px;background:var(--green-950);color:var(--cream-300);padding:40px 0;font-size:13px}
+  footer > div{max-width:1284px;margin:0 auto 0 0;padding:0 64px}
+  footer a{color:var(--lime-500)}
+
+  /* links de prosa: visibles sin ser foco */
+  .lk{color:inherit;text-decoration:none;border-bottom:1.5px solid var(--emerald-500);padding-bottom:1px}
+  .lk:hover{background:var(--emerald-500);color:var(--ink-900);border-bottom-color:transparent}
+  a:focus-visible{outline:none;box-shadow:var(--shadow-focus)}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:880px){
+    /* una sola fila que scrollea, como los chips del rail: la barra apilaba
+       4 o 5 filas y medía 130 a 162px segun la pagina */
+    .mg-topbar{position:static;padding:10px 14px;flex-wrap:nowrap;overflow-x:auto;
+               -webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .mg-topbar::-webkit-scrollbar{display:none}
+    .mg-topbar > *{flex:0 0 auto}
+    main{padding-top:0}
+    main,.hero,footer{margin-left:0}
+    .hero{margin-top:0;padding:44px 0 40px}
+    .hero > .inner,section > .inner,footer > div{padding:0 22px}
+    section{padding:52px 0}
+    .g2,.g3,.steps4,.check,.dodont{grid-template-columns:1fr}
+    .code{padding:16px}
+    .code pre{font-size:12px}
+    .pair{grid-template-columns:1fr}
+    .pair .weak{border-right:none;border-bottom:1px solid var(--color-hairline)}
+    .pair .chg{padding:14px 20px}
+  }
+
+  /* ---------- rail de puntos: navegacion de secciones ---------- */
+  /* El punto ES la pill: al entrar al rail se ensancha hasta que entra el texto,
+     asi que el texto siempre es parte del link y se puede clickear.
+     En reposo la caja mide 44px fijos: nunca empuja ni pisa el contenido.
+     --w  (ancho final de cada pill) y --s (escala tipo dock) las calcula el script. */
+  .side{position:fixed;left:10px;z-index:110;
+        top:50%;transform:translateY(-50%);   /* centrado vertical: el centro del rail es
+                                                 la referencia fija en toda la web */
+        display:flex;flex-direction:column;align-items:flex-start;
+        gap:4px;padding:12px 0;width:44px;background:transparent}
+  .side:hover{width:var(--wmax,240px)}   /* el hover no se pierde al moverse entre pills */
+  .side .lbl,.side .v{display:none}
+  .side:not(:has(a)){display:none}
+
+  .side a{position:relative;display:block;width:44px;height:30px;   /* alto fijo: el paso entre puntos nunca cambia */
+          text-decoration:none;transform:scale(var(--s,1));transform-origin:left center;
+          transition:transform .16s cubic-bezier(.22,1,.36,1)}
+  .side:hover a{width:var(--w,180px)}
+
+  /* el punto que se convierte en pill */
+  .side a::before{content:"";position:absolute;left:17px;top:50%;
+                  width:10px;height:10px;margin-top:-5px;border-radius:999px;
+                  background:var(--sage-400);opacity:.45;
+                  transition:width .34s cubic-bezier(.22,1,.36,1),height .26s ease,
+                             margin-top .26s ease,left .26s ease,
+                             background .22s,opacity .22s,box-shadow .22s}
+  .side:hover a::before{left:10px;width:var(--w,180px);height:24px;margin-top:-12px;
+                        background:var(--green-900);opacity:1;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+  .side a.act::before{background:var(--lime-500);opacity:1;width:13px;height:13px;margin-top:-6.5px;left:15px}
+  .side:hover a.act::before{background:var(--lime-500);width:var(--w,180px);height:24px;margin-top:-12px;left:10px}
+  .side a.anx::before{background:transparent;box-shadow:inset 0 0 0 2px var(--lime-500);opacity:1}
+  .side:hover a.anx::before{background:var(--green-900);box-shadow:0 8px 22px rgba(0,0,0,.28)}
+
+  /* el texto entra cuando la pill ya tiene ancho */
+  .side a span{position:absolute;left:24px;top:50%;transform:translateY(-50%);
+               white-space:nowrap;opacity:0;pointer-events:none;
+               font-size:12.5px;font-weight:700;line-height:1;color:var(--cream-50);
+               transition:opacity .14s ease}
+  .side:hover a span{opacity:1;transition-delay:.16s}
+  .side:hover a.act span{color:var(--green-950)}
+  .side:hover a.anx span{color:var(--lime-500)}
+  @media (max-height:620px){ .side{gap:2px;padding:8px 0} .side a{height:26px} }
+  @media (prefers-reduced-motion:reduce){
+    .side a,.side a::before,.side a span{transition-duration:.01ms}
+    .side a{transform:none}
+  }
+
+  /* ---------- alto real del topbar: se reserva, nunca tapa contenido ---------- */
+  /* el topbar es fixed y hace flex-wrap: su alto cambia por pagina y por ancho.
+     Lo mide el script del final y lo escribe en --topbar-h. */
+  :root{--topbar-h:70px}
+  body{padding-top:var(--topbar-h)}
+  main{padding-top:0}
+  .hero{margin-top:0}
+  [id]{scroll-margin-top:calc(var(--topbar-h) + 22px)}
+
+  @media (max-width:880px){
+    .side,.side:hover{position:static;transform:none;flex-direction:row;flex-wrap:nowrap;
+          overflow-x:auto;width:auto;gap:6px;padding:10px 14px;
+          background:var(--green-900);align-items:center}
+    .side a,.side:hover a{width:auto;height:auto;flex:0 0 auto;transform:none;
+          padding:8px 13px;border-radius:999px;background:var(--green-800);
+          font-size:12.5px;line-height:1}   /* sin esto el chip hereda el line-height de la pagina y mide distinto en cada una */
+    .side a::before,.side:hover a::before{display:none}   /* chips sin punto delante: acuerdo del sistema */
+    .side a span,.side:hover a span{position:static;transform:none;opacity:1;
+          color:var(--cream-50);transition:none}
+    .side a.act,.side:hover a.act{background:var(--lime-500)}
+    .side a.act span,.side:hover a.act span{color:var(--green-950)}
+  }
+
+  @media (max-width:880px){
+    /* en mobile el topbar deja de ser fixed: no reserva alto ni se apila
+       (en icons.html la media query estaba ANTES de la regla base y no aplicaba) */
+    .mg-topbar{position:static;padding:10px 14px}
+    /* URLs largas en <code>: sin esto empujan el ancho del documento */
+    code{overflow-wrap:anywhere}
+  }
+
+  /* ---------- topbar: mismo alto en todas las paginas ---------- */
+  /* el <img> inline dejaba hueco de baseline debajo del lockup y el alto de la
+     barra salia 54, 66 o 70 segun la pagina. Con display:block el lockup mide
+     siempre 34 + 12 de padding, asi que la barra mide 66 en todas. */
+  .mg-topbar{align-items:center}
+  .mg-topbar img{display:block}
+  .mg-topbar .brandmark{display:inline-flex;align-items:center;padding:6px 10px}
+
+  @media (max-width:880px){
+    /* una sola sangria en mobile: el texto arranca a 20px en todas las paginas
+       (venia de 14, 16, 18, 22 o 32 segun donde estuviera el padding) */
+    .wrap{margin-left:0;margin-right:0;padding-left:20px;padding-right:20px}
+    main{margin-left:0}
+    .hero-in,.inner,.hero > .inner,section > .inner,footer > *,footer > div{padding-left:20px;padding-right:20px}
+  }
+
+  /* ---------- topbar: espacios iguales y el grupo de AI al final ---------- */
+  /* los margenes .cl (16px) y .cl2 (10px) hacian que cada par de items tuviera
+     una separacion distinta. Ahora todos los items pares estan a la misma
+     distancia y el unico corte estructural es el divisor antes del grupo de AI. */
+  .mg-topbar a.cl,.mg-topbar a.cl2{margin-left:0}
+  .mg-topbar .navdiv{margin:0 12px}
+  /* IA en Campo es programa presentado por Magoya: se anuncia con su propia ley, el verde ES el fondo */
+  .mg-topbar a.sub{background:var(--emerald-500);color:var(--green-950);font-weight:800}
+  .mg-topbar a.sub:hover{background:var(--lime-500);color:var(--green-950)}
+  .mg-topbar a.sub.on{box-shadow:inset 0 0 0 2px var(--cream-50)}
+  /* ---------- instrucciones para agentes de AI (playbook p. 60) ---------- */
+  .agents{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1160px}
+  .agents .box{border-radius:var(--radius-lg);padding:28px 30px}
+  .agents .rules{background:var(--white);border:1px solid var(--color-hairline)}
+  .agents .ctrl{background:var(--green-950);color:var(--cream-50)}
+  .agents h4{font-size:1.15rem;font-weight:800;letter-spacing:-.015em;margin-bottom:14px}
+  .agents ol,.agents ul{padding-left:22px;font-size:14.5px;line-height:1.55}
+  .agents li{padding:3px 0}
+  .agents .rules li{color:var(--ink-900)}
+  .agents .ctrl li{color:var(--cream-100)}
+  .srcline{margin-top:22px;font-size:12.5px;font-family:var(--font-mono);color:var(--gray-600)}
+  @media (max-width:880px){ .agents{grid-template-columns:1fr} }
+</style>
+<link rel="stylesheet" href="../nav.css">
+<link rel="alternate" hreflang="es" href="https://brand.magoya.com/ai.html">
+<link rel="alternate" hreflang="en" href="https://brand.magoya.com/en/ai.html">
+</head>
+<body>
+
+<nav class="mg-topbar" aria-label="Main navigation">
+<a class="brandmark" href="index.html"><img src="../assets/magoya-wordmark-cream.svg" alt="Magoya · home"></a>
+<a href="index.html">Home</a>
+<details class="nav-group"><summary>The brand</summary><div><a href="estrategia.html">Strategy</a><a href="voz.html">Voice</a><a href="lenguaje.html">Language</a><a href="aplicacion.html">Voices and channels</a><a href="../brand-book.html" hreflang="es">Visual identity (Spanish)</a></div></details>
+<a href="../library.html" hreflang="es">Resources (Spanish)</a><a href="ai.html" class="on" aria-current="page">Working with AI</a><a href="../ai-en-campo/" class="program-link">IA en Campo ↗</a>
+<a class="lang" href="../ai.html" hreflang="es" lang="es" title="Edición en español">ES</a>
+</nav>
+
+<nav class="side" id="dock">
+  <a href="#agentes"><span>AI agents</span></a>
+  <a href="#proyecto"><span>Setup and files</span></a>
+  <span class="v">WORKING WITH AI</span>
+</nav>
+
+<header class="hero">
+  <div class="inner">
+    <span class="k">Brand system · AI</span>
+    <h1>Working with AI</h1>
+    <p>The rules any AI agent follows when it writes for Magoya, from the English edition of the Magoya Brand Voice Playbook.</p>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= INSTRUCTIONS FOR AI AGENTS ================= -->
+<section id="agentes">
+  <div class="inner">
+  <span class="kicker">Instructions for AI agents</span>
+  <h2>Before writing, and before delivering</h2>
+  <div class="agents">
+    <div class="box rules">
+      <h4>Instructions</h4>
+      <ol>
+        <li>Identify goal, audience, channel, language, source, and confidentiality limits. Missing something essential? Ask.</li>
+        <li>Don’t invent facts, figures, results, quotes, clients, dates, or experiences.</li>
+        <li>Separate fact, interpretation, hypothesis, and example.</li>
+        <li>Spanish input: rebuild it for an English reader, via the glossary.</li>
+        <li>Conflicting sources or rules: flag it, don’t resolve it silently.</li>
+        <li>Decisions, risks, or material figures: deliver as a draft for review.</li>
+        <li>Confirm changing numbers are current.</li>
+      </ol>
+    </div>
+    <div class="box ctrl">
+      <h4>Checklist before delivering</h4>
+      <ul>
+        <li>Answers the brief; respects the positioning.</li>
+        <li>Constructive, not arrogant, with a useful view.</li>
+        <li>Every real figure has a human validation.</li>
+        <li>Usage, adoption, the three spaces, and the method used correctly.</li>
+        <li>No banned words; “AI” and “IA en Campo” correct.</li>
+        <li>Native English: active voice, US spelling, serial comma, no jargon.</li>
+        <li>Anything pending is flagged.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="srcline">Source: Magoya Brand Voice Playbook, English edition · October 2026 · p. 62</div>
+  </div>
+</section>
+
+<!-- ================= SETUP AND FILES (SPANISH) ================= -->
+<section id="proyecto" style="background:var(--sage-50)">
+  <div class="inner">
+  <span class="kicker">Setup and files</span>
+  <h2>Documented in Spanish</h2>
+  <p class="lead">The Claude project setup, the brief, the checks, and the files are documented in Spanish.</p>
+  <p class="note"><a class="lk" href="../ai.html" hreflang="es">Open the Spanish edition</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div>Magoya brand system · Source: Magoya Brand Voice Playbook, English edition (October 2026).</div>
+</footer>
+
+<script>
+/* ---------- scroll-spy del dock (mismo mecanismo que el brand book) ---------- */
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.side a[href^="#"]'));
+  var targets=links.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); });
+  function mark(idx){ links.forEach(function(a,i){ a.classList.remove('act','near');
+    if(i===idx)a.classList.add('act'); else if(Math.abs(i-idx)===1)a.classList.add('near'); }); }
+  function update(){
+    var y=window.scrollY+window.innerHeight*0.3, best=0;
+    targets.forEach(function(t,i){ if(t && t.getBoundingClientRect().top+window.scrollY<=y) best=i; });
+    mark(best);
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+</script>
+<script>
+/* --topbar-h: el topbar es fixed y hace flex-wrap, asi que su alto real cambia
+   con el ancho de la ventana. Se mide y se publica como variable CSS. */
+(function(){
+  var tb = document.querySelector('.mg-topbar');
+  if(!tb) return;
+  function set(){
+    var fijo = getComputedStyle(tb).position === 'fixed';
+    document.documentElement.style.setProperty(
+      '--topbar-h', fijo ? Math.round(tb.getBoundingClientRect().height) + 'px' : '0px');
+  }
+  set();
+  window.addEventListener('resize', set);
+  window.addEventListener('load', set);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(set);
+})();
+</script>
+<script>
+/* rail: ancho de cada pill + magnificacion tipo dock */
+(function(){
+  var side = document.querySelector('.side');
+  if(!side) return;
+  var links = [].slice.call(side.querySelectorAll('a'));
+  if(!links.length) return;
+
+  /* --w: cuanto tiene que ensancharse el punto para que entre su texto */
+  function medir(){
+    var max = 0;
+    links.forEach(function(a){
+      var sp = a.querySelector('span');
+      if(!sp) return;
+      var w = Math.ceil(sp.getBoundingClientRect().width) + 38;   /* 24 izq + 14 der */
+      a.style.setProperty('--w', w + 'px');
+      if(w > max) max = w;
+    });
+    side.style.setProperty('--wmax', (max + 10) + 'px');
+  }
+  medir();
+  window.addEventListener('resize', medir);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(medir);
+
+  /* --s: la pill mas cercana al cursor crece y arrastra a las vecinas.
+     Los centros se leen de offsetTop (layout), no de getBoundingClientRect,
+     porque ese ya viene con la escala aplicada y se realimentaria. */
+  var raf = null, cy = 0;
+  function pintar(){
+    raf = null;
+    links.forEach(function(a){
+      var d = Math.abs(cy - (a.offsetTop + a.offsetHeight / 2));
+      a.style.setProperty('--s', (1 + 0.26 * Math.exp(-(d * d) / 2704)).toFixed(3));
+    });
+  }
+  side.addEventListener('mousemove', function(e){
+    cy = e.clientY - side.getBoundingClientRect().top;
+    if (raf === null) raf = requestAnimationFrame(pintar);
+  });
+  side.addEventListener('mouseleave', function(){
+    links.forEach(function(a){ a.style.setProperty('--s', '1'); });
+  });
+})();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
