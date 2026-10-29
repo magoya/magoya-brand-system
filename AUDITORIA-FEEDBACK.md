@@ -45,7 +45,9 @@ Pedido: reemplazar con el playbook ES todo lo que en el sitio sale del playbook 
 
 **Punto 1 RESUELTO (Facu, 29 oct):** las entradas del vocabulario vetado son obligatorias tal como las define cada fila; lo que no está en la lista se evalúa por función y contexto (Guía §3). Aplicado en lenguaje.html, ai.html, BRAND.md, vocabulary.json, precedencia, constraints, checklist-verbal y .ai/verbal/lenguaje.md.
 
-Decisiones abiertas (bloquean publicar): 3 Identidad visual en inglés (hoy la nav EN lleva a la página en español); 4 fila Varina en Arquitectura. También abiertos: 5 Talento/Staff augmentation, 6 «solo en Argentina» en ES, 7 «en mi opinión», 8 bloques viejos de Método, 9 versión canónica, 10 dueño del documento, 11 cita de Apeel, 12 cifra 12%→36%.
+**Punto 3 RESUELTO (Facu, 29 oct):** lo visual no se duplica en `en/`: Identidad visual, Recursos, Íconos y Logos son una sola página con botón ES/EN (`?lang=en`). Se traduce lo que explica (qué es y criterios de uso), nunca nombres de íconos, logos, archivos ni descargas. La voz y el tono sí van separados por idioma. El inglés de esas páginas no sale del playbook: queda para aprobar en el log de alineación.
+
+Decisiones abiertas (bloquean publicar): 4 fila Varina en Arquitectura. También abiertos: 5 Talento/Staff augmentation, 6 «solo en Argentina» en ES, 7 «en mi opinión», 8 bloques viejos de Método, 9 versión canónica, 10 dueño del documento, 11 cita de Apeel, 12 cifra 12%→36%.
 
 ## IA en Campo · 29 de octubre de 2026 (slide 9 del deck de Martina)
 
