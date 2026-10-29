@@ -65,7 +65,7 @@ Fuente: presentación de feedback del equipo y respuestas de Facu.
 | **B12** | Sumar el **Posteo_3** de la carpeta de redes (no se pudo bajar en esta ronda) | nadie |
 | **B13** | Decidir si los posteos se comparten también editables (Figma) además del PNG de referencia | **equipo** |
 | **B14** | Decidir si los decks se editan desde el Artifact de Claude (propuesta de Ayelén) o desde el design system con estos ejemplos | **Facu**, Ayelén y Martina |
-| **B15** | Revisar entre los tres la web de identidad visual de IA en Campo y decidir dónde se publica | **Facu**, Martina y Ayelén |
+| **B15** | ~~Revisar la web de identidad visual de IA en Campo y decidir dónde se publica~~ Aplicada el 29 oct en `ai-en-campo/`. Queda: cerrar los pendientes que marca el manual (componentes, colores a confirmar, lima, miniatura con la sigla en español, logo con placa en alta) y decidir si se borran los archivos de la identidad anterior | **Facu**, Martina y Ayelén |
 | **B16** | Confirmar el verde de los recursos nuevos: vienen en #003922, el Verde Magoya oficial es #133825 | **diseño** |
 | **B17** | Decidir si los botones secundario y terciario pasan también a pill de 44px como el CTA | **diseño** |
 | **B18** | Sumar las fotos de la sesión nueva en la oficina | **Sophie** |

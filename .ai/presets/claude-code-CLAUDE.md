@@ -89,4 +89,4 @@ Identidad, posicionamiento, territorios, oferta, espacios y Método Magoya salen
 
 Corré la checklist: https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist.md (y si hay texto, también https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist-verbal.md) : reportá en una línea los hex usados, el uso del lima y las fotos.
 
-IA en Campo es una marca de programa presentada por Magoya, con manual propio (`ai-en-campo.html`): sus reglas nunca se aplican a piezas de Magoya core.
+IA en Campo es una marca de programa presentada por Magoya, con sistema de marca propio (`ai-en-campo/`): sus reglas nunca se aplican a piezas de Magoya core.

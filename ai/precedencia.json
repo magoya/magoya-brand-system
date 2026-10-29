@@ -5,7 +5,7 @@
  "capas": {
   "capa_verbal": "Estrategia, Voz, Lenguaje y Aplicación se reparten entre dos fuentes (ver jerarquia_de_fuentes): la identidad, el posicionamiento, los territorios, la propuesta de valor, la oferta, los espacios de actuación y el Método Magoya salen del Magoya Brand Playbook (octubre de 2026); la voz, el estilo, el vocabulario y la adaptación editorial salen de la Guía editorial de Magoya, \"Manual voz y tono MAGOYA V2\" (octubre de 2026), en .ai/verbal/guia-editorial.md. Si un archivo del sistema (estrategia.html, voz.html, lenguaje.html, aplicacion.html, .ai/verbal/, vocabulary.json, .ai/checklist-verbal.md) difiere de la fuente que le corresponde, gana la fuente y el archivo se corrige.",
   "capa_visual": "La Identidad visual (brand-book.html, BRAND.md, tokens.json) se actualizó con el feedback del equipo del 22 de octubre de 2026. Para la capa visual rige el orden de abajo.",
-  "ia_en_campo_e_integrar_con_ai": "IA en Campo tiene manual propio (ai-en-campo.html). Integrar con AI (ai.html) no es fuente: deriva de las capas anteriores.",
+  "ia_en_campo_e_integrar_con_ai": "IA en Campo tiene sistema de marca propio (ai-en-campo/). Integrar con AI (ai.html) no es fuente: deriva de las capas anteriores.",
   "regla_de_texto": "En el texto de un entregable, las reglas de identidad (definición, AI, espacios, método, denominaciones y traducciones) vienen del playbook, y las de voz, estilo, vocabulario y adaptación vienen de la guía editorial; las dos se validan con .ai/checklist-verbal.md. Bajo la guía, el vocabulario del playbook no es un veto universal (se evalúa por función y contexto) y el 50/30/20 es una guía de planificación de contenidos, no un chequeo por texto."
  },
  "jerarquia_de_fuentes": {

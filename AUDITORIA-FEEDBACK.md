@@ -29,6 +29,20 @@ Fuente: presentación de feedback del equipo (6 slides) con tres carpetas de Dri
 | 5 | Sumar templates de redes; ¿editable, Figma o PNG de referencia?; mencionar que se respeta la paleta en posteos con foto y vectoriales | **LISTO** con 8 de 9 | `library.html#redes`: 8 posteos PNG 1080×1350 + `magoya-redes.zip`. Se eligió PNG de referencia porque es el material que existe; la opción editable queda en B13. Regla de paleta en Recursos, Reglas de oro, `BRAND.md` y `tokens.json`. Falta `Posteo_3` (B12) |
 | 6 | Template de deck institucional; mencionar que la base está en Claude y se comparte el Artifact para editar | **LISTO** | `library.html#deck`: 6 slides de muestra + `assets/deck/deck-base-magoya.pdf` (14 slides) y el texto del Artifact. El link del Artifact no está en la cuenta de Facu: pendiente (B11) |
 
+## IA en Campo · 29 de octubre de 2026 (slide 9 del deck de Martina)
+
+Pedido: aplicar en el brand el sistema de marca de IA en Campo que armó Martina (carpeta de Drive `ia-en-campo-web`).
+
+| Pedido | Estado | Evidencia |
+|---|---|---|
+| Publicar el sistema de marca de IA en Campo dentro del brand | **LISTO** | `ai-en-campo/` = el sitio de Martina tal cual (12 secciones, Plus Jakarta Sans alojada, 16 íconos SVG, 7 ZIP). Único cambio: link "← Brand System Magoya" en su barra. Chequeo headless a 1440 px: 41 imágenes cargan, 29 links de descarga responden 200, Plus Jakarta Sans cargada, 0 errores de consola |
+| Que no se rompa ningún link viejo | **LISTO** | `ai-en-campo.html` redirige a `ai-en-campo/` conservando el `#ancla` (probado con `#paleta`). Los links de las 10 páginas apuntan directo a `ai-en-campo/` |
+| Que la doctrina deje de describir la identidad anterior | **LISTO** | BRAND.md §10 reescrito (paleta con violeta #B700FF, Plus Jakarta + Helvetica, íconos pixelados, personaje, esquinas cortadas); llms.txt, checklist, AI-INTEGRATION, facts/constraints/precedencia, tokens.json, README y generate.py actualizados. Verde pleno, placa negra, doodles y lockup anterior quedan como identidad retirada |
+| Portada y Recursos | **LISTO** | Card de la portada con la story de IA en Campo; en `library.html` la ficha del kit viejo pasa a "ia-en-campo · 7 ZIP" y la pagecard a "IA en Campo →" |
+| Indexación | **LISTO (decisión de Martina)** | El sitio conserva `noindex,nofollow`, como lo entregó |
+
+Pendientes que marca el propio manual (no los cambié): componentes como primera propuesta; colores de caption, link y check "a confirmar"; el verde #009145 del ícono destacado sobre claro no está en la paleta; alinear lima #80FF00 con el de Magoya; una miniatura de YouTube usa la sigla en español en lugar de AI; logo con placa en baja resolución; la hoja de poses del personaje no se descarga. Los archivos de la identidad anterior (`assets/studio/` doodles, `assets/pieces/`, `magoya-ai-en-campo.zip`) siguen en el repo sin enlace de portada: falta decidir si se borran.
+
 ## Ronda de feedback · 28 de octubre de 2026 (tercera versión de "Brand System Online - Magoya")
 
 Fuente: la presentación actualizada (10 slides), con la carpeta de Recursos (14 SVG), las fotos de la jornada a campo, la carpeta de decks (uso interno y uso con clientes) y dos comentarios de Ayelén Iñigo.

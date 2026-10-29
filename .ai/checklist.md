@@ -31,4 +31,4 @@ Diecisiete chequeos verificables. Todos tienen que dar **sí** antes de publicar
 
 ## Si la pieza es de "IA en Campo"
 
-Es una **marca de programa presentada por Magoya, con manual propio** (`ai-en-campo.html`), no el core. Ahí sí valen el lienzo verde digital `#00DE68` pleno, la placa negra de dato clave y los doodles del Studio (2–4 por pieza, ±5–15°). Nada de eso es válido en una pieza de Magoya core, y nada del core aplica tal cual a IA en Campo.
+Es una **marca de programa presentada por Magoya, con sistema de marca propio** (`ai-en-campo/`), no el core. Ahí valen el violeta eléctrico `#B700FF`, Plus Jakarta Sans + Helvetica, el bloque lima para la frase clave, los íconos pixelados, el personaje y las esquinas cortadas. Nada de eso es válido en una pieza de Magoya core, y nada del core aplica tal cual a IA en Campo. El verde pleno, la placa negra y los doodles del Studio eran la identidad anterior: ya no se usan.

@@ -22,7 +22,7 @@
  },
  "ai_en_campo_madre": {
   "lienzo": "1080×1350 (4:5)",
-  "regla": "ver manual anexo ai-en-campo.html — hereda estos constraints salvo sus 3 rupturas"
+  "regla": "ver el sistema de marca propio en ai-en-campo/ — paleta, tipografía y componentes propios; no hereda los del core"
  },
  "espaciado_y_alineacion": {
   "referencia": "tokens.json → spacing.rules y components (escala base-4, paddings canónicos de botón 13/26 y chip 6/15)",

@@ -20,8 +20,8 @@ Todas las páginas comparten la misma barra de navegación (`nav.css` + `nav.js`
 | Lenguaje | [`lenguaje.html`](lenguaje.html) | Estilo y lenguaje, expresión verbal (los siete principios), vocabulario de marca, AI (no IA), glosario ES/EN/PT, cómo suena Magoya, reglas de oro verbales |
 | Aplicación | [`aplicacion.html`](aplicacion.html) | Capas de la marca, voceros y territorios, canales e idioma, focos de contenido y producción |
 | Identidad visual | [`brand-book.html`](brand-book.html) · [`icons.html`](icons.html) | Logo, color, tipografía, fotografía, iconografía, componentes, reglas de oro visuales · librería de 58 íconos |
-| Recursos | [`library.html`](library.html) · [`logos.html`](logos.html) | Lo que se descarga: logo kit, Manrope, paleta (tokens), íconos, logos de clientes, membrete de documentos, fotos aéreas cenitales y de personas, posteos de redes y el deck base (referencias en PNG y PDF) y el kit de IA en Campo |
-| IA en Campo | [`ai-en-campo.html`](ai-en-campo.html) | Sub-manual del programa presentado por Magoya: lockup, voz y piezas |
+| Recursos | [`library.html`](library.html) · [`logos.html`](logos.html) | Lo que se descarga: logo kit, Manrope, paleta (tokens), íconos, logos de clientes, membrete de documentos, fotos aéreas cenitales y de personas, posteos de redes y el deck base (referencias en PNG y PDF) y el kit anterior de IA en Campo |
+| IA en Campo | [`ai-en-campo/`](ai-en-campo/) | Sistema de marca propio del programa presentado por Magoya (sitio aparte, octubre 2026): esencia, logo, paleta, tipografía, imágenes, íconos, piezas, YouTube, personaje, componentes y recursos. `ai-en-campo.html` redirige ahí |
 | Integrar con AI | [`ai.html`](ai.html) | El proyecto de Claude "Magoya · Marca": cómo se usa, cómo se valida lo que devuelve y cómo se administra |
 
 Estilos compartidos: `manual.css` (base del manual, extraída del brand book), `playbook.css` (componentes de la capa verbal), `nav.css` y `nav.js` (navegación). `manual.js` maneja el índice lateral y el alto del topbar.
@@ -52,11 +52,11 @@ assets/
 ├── photos/           # aéreas cenitales + personas a color + silueta de IA en Campo
 ├── social/           # posteos de redes de referencia (PNG 1080×1350)
 ├── deck/             # deck base institucional (PDF + previews)
-├── pieces/           # capturas de piezas publicadas de IA en Campo
+├── pieces/           # capturas de piezas de la identidad anterior de IA en Campo (retirada)
 ├── logos/clients/    # clientes reales
 ├── logos/partners/   # partners tecnológicos
 ├── logos/*.svg       # logos de cuentas objetivo
-├── studio/           # espejo de los archivos de Magoya Studio (IA en Campo): iconos agro/AI/redes,
+├── studio/           # espejo de Magoya Studio: iconos agro/AI/redes y, de la identidad anterior de IA en Campo,
 │                     # doodles, flourishes, badge EN VIVO, mockups de dispositivo,
 │                     # mark-ai-campo.svg (mark a mano del lockup "IA en Campo · por Magoya")
 ├── downloads/        # ZIPs por sección + doc-header/footer (membrete)
@@ -68,7 +68,7 @@ La lista completa y vigente, con URL directa y regla de uso por carpeta, está e
 
 **`assets/refs/` es material fuente, no un asset del sistema.** Son los exports originales del diseñador (~25 MB) que sirvieron de referencia de trazado. No se enlazan desde ninguna página, no se distribuyen y no tienen ficha en `library.html`. Si algo de ahí tiene que poder usarse, primero se produce como asset aprobado y se le hace su ficha.
 
-**Fuentes de las piezas de "IA en Campo"**: `assets/photos/ai-campo-silueta.{jpg,png}` es la silueta recortada que usa Magoya Studio, y `assets/pieces/` son capturas de piezas ya publicadas que el manual de IA en Campo muestra como referencia. Son insumos de producción del Studio, no assets de descarga.
+**Fuentes de las piezas de "IA en Campo"**: `assets/photos/ai-campo-silueta.{jpg,png}` es la silueta recortada que usa Magoya Studio, y `assets/pieces/` son capturas de piezas de la identidad anterior de IA en Campo (retirada; el sistema vigente está en `ai-en-campo/`). Son insumos de producción del Studio, no assets de descarga.
 
 ## Documentos de trabajo
 
