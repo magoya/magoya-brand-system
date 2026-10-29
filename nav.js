@@ -1,4 +1,4 @@
-/* Idioma en la misma página (brand-book.html): ?lang=en la lee en inglés.
+/* Idioma en la misma página (brand-book, library, icons, logos): ?lang=en la lee en inglés.
    El <head> de la página ya lo marca antes de pintar; esto lo repite por si falta,
    y cambia los atributos que no se pueden duplicar con data-l (alt, title, aria-label). */
 (function(){
@@ -19,7 +19,7 @@
 })();
 
 /* Selector ES / EN: lleva a la misma sección en el otro idioma (las dos ediciones comparten los id).
-   En una página con data-lang-toggle (brand-book.html) alterna ?lang=en en la misma página.
+   En una página con data-lang-toggle (brand-book, library, icons, logos) alterna ?lang=en en la misma página.
    En los dos casos conserva el #hash. */
 (function(){
   var l = document.querySelector('.mg-topbar a.lang');

@@ -29,6 +29,6 @@
 .mg-topbar a.lang{margin-left:12px;padding:5px 9px;border:1px solid rgba(246,241,235,.35);border-radius:6px;font-size:12px;font-weight:700;letter-spacing:.06em}
 .mg-topbar a.lang:hover{border-color:var(--cream-50)}
 
-/* idioma en la misma página (brand-book.html?lang=en): se ve solo el texto del idioma activo */
+/* idioma en la misma página (brand-book, library, icons y logos con ?lang=en): se ve solo el texto del idioma activo */
 html:not([data-lang="en"]) [data-l="en"]{display:none!important}
 html[data-lang="en"] [data-l="es"]{display:none!important}

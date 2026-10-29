@@ -1,13 +1,18 @@
 <!doctype html>
-<html lang="es" data-theme="studio">
+<html lang="es" data-theme="studio" data-lang="es">
 <head>
 <meta charset="utf-8">
+<script>/* idioma antes de pintar: ?lang=en lee la misma página en inglés (sin parpadeo) */
+if(/[?&]lang=en(&|$)/.test(location.search)){document.documentElement.setAttribute('data-lang','en');document.documentElement.lang='en';}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
 <title>Magoya · Librería de iconos</title>
+<script>if(document.documentElement.getAttribute('data-lang')==='en')document.title='Magoya · Icon library';</script>
+<link rel="alternate" hreflang="es" href="https://brand.magoya.com/icons.html">
+<link rel="alternate" hreflang="en" href="https://brand.magoya.com/icons.html?lang=en">
 <link rel="stylesheet" href="tokens.css">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -211,82 +216,93 @@
 </head>
 <body>
 <div class="wrap">
-<nav class="mg-topbar" aria-label="Navegación principal">
-<a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · inicio"></a>
-<a href="index.html">Inicio</a>
-<details class="nav-group"><summary>Conocer la marca</summary><div><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><a href="brand-book.html">Identidad visual</a></div></details>
-<a href="library.html" class="on">Recursos</a><a href="ai.html">Integrar con AI</a><a href="ai-en-campo/" class="program-link">IA en Campo ↗</a>
-<a class="lang" href="en/index.html" hreflang="en" lang="en" title="English edition">EN</a>
+<nav class="mg-topbar" aria-label="Navegación principal" data-en-aria-label="Main navigation">
+<a class="brandmark" href="index.html" data-l="es"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · inicio"></a>
+<a class="brandmark" href="en/index.html" data-l="en"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · home"></a>
+<a href="index.html" data-l="es">Inicio</a>
+<a href="en/index.html" data-l="en">Home</a>
+<details class="nav-group"><summary><span data-l="es">Conocer la marca</span><span data-l="en">The brand</span></summary><div><a href="estrategia.html" data-l="es">Estrategia</a><a href="voz.html" data-l="es">Voz</a><a href="lenguaje.html" data-l="es">Lenguaje</a><a href="aplicacion.html" data-l="es">Aplicación</a><a href="brand-book.html" data-l="es">Identidad visual</a><a href="en/estrategia.html" data-l="en">Strategy</a><a href="en/voz.html" data-l="en">Voice</a><a href="en/lenguaje.html" data-l="en">Language</a><a href="en/aplicacion.html" data-l="en">Voices and channels</a><a href="brand-book.html?lang=en" data-l="en">Visual identity</a></div></details>
+<a href="library.html" class="on" data-l="es">Recursos</a><a href="ai.html" data-l="es">Integrar con AI</a>
+<a href="library.html?lang=en" class="on" data-l="en">Resources</a><a href="en/ai.html" data-l="en">Working with AI</a>
+<a href="ai-en-campo/" class="program-link">IA en Campo ↗</a>
+<a class="lang" href="icons.html?lang=en" data-lang-toggle><span data-l="es" lang="en" title="Read this page in English">EN</span><span data-l="en" lang="es" title="Leer esta página en español">ES</span></a>
 </nav>
 
 <nav class="side" id="side-auto">
   <span class="v">BRAND SYSTEM</span>
 </nav>
 
-  <p class="crumb"><a href="brand-book.html">Identidad visual</a> › Librería de iconos</p>
+  <p class="crumb" data-l="es"><a href="brand-book.html">Identidad visual</a> › Librería de iconos</p>
+  <p class="crumb" data-l="en"><a href="brand-book.html?lang=en">Visual identity</a> › Icon library</p>
 
-  <span class="eyebrow">Magoya · Iconos</span>
-  <h1>Librería de iconos</h1>
-  <p class="lead">58 iconos de línea con el ADN del wordmark: trazo 2px, terminaciones y esquinas redondeadas, tamaño óptico 24px. Monocromos y recoloreables (usan <code>currentColor</code>). Click en un icono para copiar su SVG.</p>
-  <p style="font-size:13.5px;color:var(--gray-600);margin-bottom:10px"><b>Click</b> en un ícono lo copia como <b>imagen PNG</b> (pegalo directo en Docs, Slides, Figma o un mail). Los botones <code style="font-family:var(--font-mono);font-size:11px">PNG</code> / <code style="font-family:var(--font-mono);font-size:11px">SVG</code> lo descargan. <b>⌘/Ctrl + click</b> selecciona varios y <button id="sel-all" style="font-size:12px;font-weight:700;border:1.5px solid var(--emerald-700);color:var(--emerald-700);background:transparent;border-radius:999px;padding:3px 11px;cursor:pointer">seleccionar todos</button></p>
-  <p class="spec-line">stroke: 2px · linecap: round · linejoin: round · grid: 24×24 · color: #161616 sobre claro · #F6F1EB sobre oscuro · lima solo el destacado</p>
+  <span class="eyebrow"><span data-l="es">Magoya · Iconos</span><span data-l="en">Magoya · Icons</span></span>
+  <h1><span data-l="es">Librería de iconos</span><span data-l="en">Icon library</span></h1>
+  <p class="lead" data-l="es">58 iconos de línea con el ADN del wordmark: trazo 2px, terminaciones y esquinas redondeadas, tamaño óptico 24px. Monocromos y recoloreables (usan <code>currentColor</code>). Click en un icono para copiarlo.</p>
+  <p class="lead" data-l="en">58 line icons with the wordmark’s DNA: 2px stroke, rounded ends and corners, and a 24px optical size. They’re single color and easy to recolor (they use <code>currentColor</code>). Click an icon to copy it.</p>
+  <p style="font-size:13.5px;color:var(--gray-600);margin-bottom:10px"><span data-l="es"><b>Click</b> en un ícono lo copia como <b>imagen PNG</b> (pegalo directo en Docs, Slides, Figma o un mail). Los botones <code style="font-family:var(--font-mono);font-size:11px">PNG</code> / <code style="font-family:var(--font-mono);font-size:11px">SVG</code> lo descargan. <b>⌘/Ctrl + click</b> selecciona varios y</span><span data-l="en"><b>Click</b> an icon to copy it as a <b>PNG image</b> you can paste straight into Docs, Slides, Figma, or an email. The <code style="font-family:var(--font-mono);font-size:11px">PNG</code> and <code style="font-family:var(--font-mono);font-size:11px">SVG</code> buttons download it. <b>⌘/Ctrl + click</b> selects several, or</span> <button id="sel-all" style="font-size:12px;font-weight:700;border:1.5px solid var(--emerald-700);color:var(--emerald-700);background:transparent;border-radius:999px;padding:3px 11px;cursor:pointer"><span data-l="es">seleccionar todos</span><span data-l="en">select all</span></button></p>
+  <p class="spec-line" data-l="es">stroke: 2px · linecap: round · linejoin: round · grid: 24×24 · color: #161616 sobre claro · #F6F1EB sobre oscuro · lima solo el destacado</p>
+  <p class="spec-line" data-l="en">stroke: 2px · linecap: round · linejoin: round · grid: 24×24 · color: #161616 on light · #F6F1EB on dark · lime only for the highlighted icon</p>
 
   <div id="cats"></div>
 
   <div class="dark-demo" id="darkdemo">
-    <p style="order:-1;font-weight:700;color:var(--cream-50)">Sobre oscuro: crema — y lima únicamente para el icono destacado de la pieza.</p></div>
+    <p style="order:-1;font-weight:700;color:var(--cream-50)" data-l="es">Sobre oscuro: crema — y lima únicamente para el icono destacado de la pieza.</p><p style="order:-1;font-weight:700;color:var(--cream-50)" data-l="en">On dark: cream, with lime only for the piece’s highlighted icon.</p></div>
 
-  <h2 style="margin-top:54px">Dónde va cada ícono</h2>
-  <p class="sub" style="max-width:70ch;margin-bottom:18px">Tres contextos, tres tamaños, tres teñidos. Si el ícono no aporta significado al lado del texto, no va: <b>si decora nadie lo mira, si explica todos lo leen</b>.</p>
+  <h2 style="margin-top:54px"><span data-l="es">Dónde va cada ícono</span><span data-l="en">Where each icon goes</span></h2>
+  <p class="sub" style="max-width:70ch;margin-bottom:18px" data-l="es">Tres contextos, tres tamaños, tres teñidos. Si el ícono no aporta significado al lado del texto, no va: <b>si decora nadie lo mira, si explica todos lo leen</b>.</p>
+  <p class="sub" style="max-width:70ch;margin-bottom:18px" data-l="en">Three contexts, three sizes, three tints. If an icon doesn’t add meaning next to the text, leave it out. <b>If it decorates, no one looks at it. If it explains, everyone reads it.</b></p>
   <div class="usegrid">
     <div class="ucard">
-      <span class="uk">En un slide</span>
+      <span class="uk"><span data-l="es">En un slide</span><span data-l="en">On a slide</span></span>
       <div class="ustage"><div class="uslide"><div class="ucards">
-        <div class="uc"><span class="udot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-sprout"/></svg></span><b>Project Based</b><p>Equipo dedicado de punta a punta.</p></div>
-        <div class="uc"><span class="udot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-chart-bars"/></svg></span><b>Team Extension</b><p>Nos sumamos a tu proceso.</p></div>
-        <div class="uc"><span class="udot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-briefcase"/></svg></span><b>Staff Augmentation</b><p>Talento senior bajo tu gestión.</p></div>
+        <div class="uc"><span class="udot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-sprout"/></svg></span><b>Project Based</b><p><span data-l="es">Equipo dedicado de punta a punta.</span><span data-l="en">A dedicated team from start to finish.</span></p></div>
+        <div class="uc"><span class="udot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-chart-bars"/></svg></span><b>Team Extension</b><p><span data-l="es">Nos sumamos a tu proceso.</span><span data-l="en">We join your process.</span></p></div>
+        <div class="uc"><span class="udot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-briefcase"/></svg></span><b>Staff Augmentation</b><p><span data-l="es">Talento senior bajo tu gestión.</span><span data-l="en">Senior talent you manage.</span></p></div>
       </div></div></div>
-      <p class="ucap"><b>Chip negro circular</b>, ícono crema al 55% del chip, uno por card. El ícono dice de qué habla la card — nunca el mismo en dos cards.</p>
+      <p class="ucap" data-l="es"><b>Chip negro circular</b>, ícono crema al 55% del chip, uno por card. El ícono dice de qué habla la card — nunca el mismo en dos cards.</p>
+      <p class="ucap" data-l="en"><b>Round black chip</b> with a cream icon at 55% of the chip, one per card. The icon says what the card is about, and two cards never share the same icon.</p>
     </div>
     <div class="ucard">
-      <span class="uk">En una pieza de redes</span>
+      <span class="uk"><span data-l="es">En una pieza de redes</span><span data-l="en">In a social media piece</span></span>
       <div class="ustage"><div class="upiece">
         <span class="ulabel">IA en Campo</span>
-        <div class="ubig">Tu lote,<br>en datos</div>
+        <div class="ubig"><span data-l="es">Tu lote,<br>en datos</span><span data-l="en">Your field,<br>in data</span></div>
         <div class="urow">
           <span class="uico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-satellite"/></svg></span>
           <span class="uico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-sensor"/></svg></span>
           <span class="uico hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-ai"/></svg></span>
         </div>
       </div></div>
-      <p class="ucap">Grandes y en fila, <b>uno solo en lima</b> — el destacado. Sobre oscuro van en crema.</p>
+      <p class="ucap" data-l="es">Grandes y en fila, <b>uno solo en lima</b> — el destacado. Sobre oscuro van en crema.</p>
+      <p class="ucap" data-l="en">Large and in a row, with <b>only one in lime</b>: the highlighted icon. On dark, they’re cream.</p>
     </div>
     <div class="ucard">
-      <span class="uk">En un documento o web</span>
+      <span class="uk"><span data-l="es">En un documento o web</span><span data-l="en">In a document or on the web</span></span>
       <div class="ustage"><div class="udoc">
-        <div class="uli"><span class="usm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span><span>Discovery con usuarios reales del lote</span></div>
-        <div class="uli"><span class="usm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span><span>Prototipo validado antes de escribir código</span></div>
-        <div class="uli"><span class="usm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span><span>Métricas de adopción en cada campaña</span></div>
+        <div class="uli"><span class="usm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span><span data-l="es">Discovery con usuarios reales del lote</span><span data-l="en">Discovery with real users in the field</span></div>
+        <div class="uli"><span class="usm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span><span data-l="es">Prototipo validado antes de escribir código</span><span data-l="en">A prototype validated before any code</span></div>
+        <div class="uli"><span class="usm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-check"/></svg></span><span data-l="es">Métricas de adopción en cada campaña</span><span data-l="en">Adoption metrics every season</span></div>
       </div></div>
-      <p class="ucap">Chicos (16–20px), alineados a la primera línea, en <b>verde #009145</b>. Como viñeta funcional: mismo ícono repetido, ahí sí.</p>
+      <p class="ucap" data-l="es">Chicos (16–20px), alineados a la primera línea, en <b>verde #009145</b>. Como viñeta funcional: mismo ícono repetido, ahí sí.</p>
+      <p class="ucap" data-l="en">Small (16–20px), aligned to the first line, in <b>green #009145</b>. As a functional bullet, the same icon can repeat.</p>
     </div>
   </div>
 
   <div class="dodont" style="margin-top:28px;max-width:940px">
-    <div class="dd"><span class="h">Hacer</span><ul>
-      <li>Un ícono por idea, y que <b>represente</b> el concepto del título.</li>
-      <li>Mismo trazo (2px) y mismo tamaño óptico en toda la pieza.</li>
-      <li>Uno solo destacado: lima sobre oscuro, verde #009145 sobre claro.</li></ul></div>
-    <div class="dd avoid"><span class="h">Evitar</span><ul>
-      <li>Íconos decorativos que no agregan significado.</li>
-      <li>Rellenos sólidos, 3D, sombras, o dos tamaños en la misma fila.</li></ul></div>
+    <div class="dd"><span class="h"><span data-l="es">Hacer</span><span data-l="en">Do</span></span><ul>
+      <li><span data-l="es">Un ícono por idea, y que <b>represente</b> el concepto del título.</span><span data-l="en">One icon per idea, one that <b>represents</b> the concept in the title.</span></li>
+      <li><span data-l="es">Mismo trazo (2px) y mismo tamaño óptico en toda la pieza.</span><span data-l="en">The same stroke (2px) and the same optical size across the piece.</span></li>
+      <li><span data-l="es">Uno solo destacado: lima sobre oscuro, verde #009145 sobre claro.</span><span data-l="en">Only one highlighted icon: lime on dark, green #009145 on light.</span></li></ul></div>
+    <div class="dd avoid"><span class="h"><span data-l="es">Evitar</span><span data-l="en">Avoid</span></span><ul>
+      <li><span data-l="es">Íconos decorativos que no agregan significado.</span><span data-l="en">Decorative icons that add no meaning.</span></li>
+      <li><span data-l="es">Rellenos sólidos, 3D, sombras, o dos tamaños en la misma fila.</span><span data-l="en">Solid fills, 3D, shadows, or two sizes in the same row.</span></li></ul></div>
   </div>
 </div>
 <div class="toast" id="toast">listo</div>
 <div class="selbar" id="selbar">
-  <b><span id="selcount">0</span> seleccionados</b>
-  <button id="dl-sel">Descargar PNG</button>
-  <button class="ghost" id="clear-sel">Limpiar</button>
+  <b><span id="selcount">0</span> <span data-l="es">seleccionados</span><span data-l="en">selected</span></b>
+  <button id="dl-sel"><span data-l="es">Descargar PNG</span><span data-l="en">Download PNG</span></button>
+  <button class="ghost" id="clear-sel"><span data-l="es">Limpiar</span><span data-l="en">Clear</span></button>
 </div>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" id="defs">
@@ -367,14 +383,45 @@ const CATS = [
   ["Comunicación & redes", "social, contacto, contenido", ["chat","mail","phone","video","share","heart","at","hashtag","bell","play"]],
   ["Sistema / UI", "acciones y estados de interfaz", ["check","x","arrow","download","plus","star","pin","info"]],
 ];
+/* idioma: con ?lang=en se leen el nombre y la bajada en inglés. Los id (#cat-...) salen
+   siempre del nombre en español, así un link con #hash sirve en los dos idiomas.
+   Los nombres de los íconos no se traducen: son el nombre del archivo. */
+const EN = document.documentElement.getAttribute('data-lang') === 'en';
+const CATS_EN = {
+  "Agro": ["Agro", "the field without clichés: sprout, soil, weather, machinery"],
+  "Producto & UX": ["Product and UX", "screens, flows, research, settings"],
+  "Datos & AI": ["Data and AI", "charts, databases, artificial intelligence, remote sensing"],
+  "Plataforma & código": ["Platform and code", "cloud, integrations, architecture"],
+  "Negocio": ["Business", "goals, growth, partnership, security"],
+  "Comunicación & redes": ["Communication and social media", "social, contact, content"],
+  "Sistema / UI": ["System and UI", "interface actions and states"],
+};
+const T = EN ? {
+  tip: 'Click: copy as PNG · ⌘/Ctrl+click: select',
+  svgDone: n => n + '.svg downloaded',
+  pngDone: n => n + '.png downloaded (512px)',
+  copied: n => n + ' copied as an image. Paste it anywhere.',
+  blocked: n => 'Copying isn’t allowed here, so ' + n + '.png was downloaded',
+  dlOnly: n => n + '.png downloaded',
+  many: k => 'Downloading ' + k + ' PNG files…'
+} : {
+  tip: 'Click: copiar como PNG · ⌘/Ctrl+click: seleccionar',
+  svgDone: n => n + '.svg descargado',
+  pngDone: n => n + '.png descargado (512px)',
+  copied: n => n + ' copiado como imagen — pegalo donde quieras',
+  blocked: n => 'copiado no permitido: descargué ' + n + '.png',
+  dlOnly: n => 'descargado ' + n + '.png',
+  many: k => 'descargando ' + k + ' PNG…'
+};
 const cats = document.getElementById('cats');
 const slug = t => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const sideAuto = document.getElementById('side-auto');
 CATS.forEach(([name, sub, icons])=>{
-  if (sideAuto) sideAuto.insertAdjacentHTML('beforeend', `<a href="#cat-${slug(name)}"><span>${name}</span></a>`);
-  cats.insertAdjacentHTML('beforeend', `<h2 id="cat-${slug(name)}">${name}</h2><p class="sub">${sub}</p>
+  const [label, desc] = EN && CATS_EN[name] ? CATS_EN[name] : [name, sub];
+  if (sideAuto) sideAuto.insertAdjacentHTML('beforeend', `<a href="#cat-${slug(name)}"><span>${label}</span></a>`);
+  cats.insertAdjacentHTML('beforeend', `<h2 id="cat-${slug(name)}">${label}</h2><p class="sub">${desc}</p>
     <div class="grid">${icons.map(i=>`
-      <div class="ic" data-icon="${i}" title="Click: copiar como PNG · ⌘/Ctrl+click: seleccionar">
+      <div class="ic" data-icon="${i}" title="${T.tip}">
         <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-${i}"/></svg>
         <span>${i}</span>
         <div class="acts"><button data-a="png">PNG</button><button data-a="svg">SVG</button></div></div>`).join('')}</div>`);
@@ -409,8 +456,8 @@ document.addEventListener('click', function(e){
   var name=card.dataset.icon;
   if(btn){
     e.stopPropagation();
-    if(btn.dataset.a==='svg'){ dl(new Blob([svgText(name)],{type:'image/svg+xml'}), name+'.svg'); toast(name+'.svg descargado'); }
-    else { toPngBlob(name, 512, function(b){ dl(b, name+'.png'); toast(name+'.png descargado (512px)'); }); }
+    if(btn.dataset.a==='svg'){ dl(new Blob([svgText(name)],{type:'image/svg+xml'}), name+'.svg'); toast(T.svgDone(name)); }
+    else { toPngBlob(name, 512, function(b){ dl(b, name+'.png'); toast(T.pngDone(name)); }); }
     return;
   }
   if(e.metaKey||e.ctrlKey||e.shiftKey){ card.classList.toggle('sel'); updateBar(); return; }
@@ -418,9 +465,9 @@ document.addEventListener('click', function(e){
   toPngBlob(name, 512, function(b){
     if(navigator.clipboard && window.ClipboardItem){
       navigator.clipboard.write([new ClipboardItem({'image/png': b})])
-        .then(function(){ toast(name+' copiado como imagen — pegalo donde quieras'); })
-        .catch(function(){ dl(b, name+'.png'); toast('copiado no permitido: descargué '+name+'.png'); });
-    } else { dl(b, name+'.png'); toast('descargado '+name+'.png'); }
+        .then(function(){ toast(T.copied(name)); })
+        .catch(function(){ dl(b, name+'.png'); toast(T.blocked(name)); });
+    } else { dl(b, name+'.png'); toast(T.dlOnly(name)); }
   });
 });
 
@@ -433,7 +480,7 @@ function updateBar(){
 document.getElementById('dl-sel').addEventListener('click', function(){
   var sel=[].slice.call(document.querySelectorAll('.ic.sel'));
   sel.forEach(function(c,i){ setTimeout(function(){ toPngBlob(c.dataset.icon, 512, function(b){ dl(b, c.dataset.icon+'.png'); }); }, i*180); });
-  toast('descargando '+sel.length+' PNG…');
+  toast(T.many(sel.length));
 });
 document.getElementById('clear-sel').addEventListener('click', function(){
   document.querySelectorAll('.ic.sel').forEach(function(c){c.classList.remove('sel');}); updateBar();
@@ -501,7 +548,8 @@ document.getElementById('sel-all').addEventListener('click', function(){
   function medir(){
     var max = 0;
     links.forEach(function(a){
-      var sp = a.querySelector('span');
+      /* el span del idioma activo (el otro está en display:none y mide 0) */
+      var sp = [].filter.call(a.querySelectorAll('span'), function(s){ return s.getClientRects().length; })[0];
       if(!sp) return;
       var w = Math.ceil(sp.getBoundingClientRect().width) + 38;   /* 24 izq + 14 der */
       a.style.setProperty('--w', w + 'px');
