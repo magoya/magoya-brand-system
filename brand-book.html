@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="studio">
+<html lang="es" data-theme="studio" data-lang="es">
 <head>
 <meta charset="UTF-8">
+<script>/* idioma antes de pintar: ?lang=en lee la misma página en inglés (sin parpadeo) */
+if(/[?&]lang=en(&|$)/.test(location.search)){document.documentElement.setAttribute('data-lang','en');document.documentElement.lang='en';}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
 <title>Identidad visual · Magoya Sistema de marca</title>
+<script>if(document.documentElement.getAttribute('data-lang')==='en')document.title='Visual identity · Magoya brand system';</script>
+<link rel="alternate" hreflang="es" href="https://brand.magoya.com/brand-book.html">
+<link rel="alternate" hreflang="en" href="https://brand.magoya.com/brand-book.html?lang=en">
 <link rel="stylesheet" href="tokens.css">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -471,31 +476,37 @@
 </head>
 <body>
 
-<nav class="mg-topbar" aria-label="Navegación principal">
-<a class="brandmark" href="index.html"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · inicio"></a>
-<a href="index.html">Inicio</a>
-<details class="nav-group on"><summary>Conocer la marca</summary><div><a href="estrategia.html">Estrategia</a><a href="voz.html">Voz</a><a href="lenguaje.html">Lenguaje</a><a href="aplicacion.html">Aplicación</a><a href="brand-book.html" class="on" aria-current="page">Identidad visual</a></div></details>
-<a href="library.html">Recursos</a><a href="ai.html">Integrar con AI</a><a href="ai-en-campo/" class="program-link">IA en Campo ↗</a>
-<a class="lang" href="en/index.html" hreflang="en" lang="en" title="English edition">EN</a>
+<nav class="mg-topbar" aria-label="Navegación principal" data-en-aria-label="Main navigation">
+<a class="brandmark" href="index.html" data-l="es"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · inicio"></a>
+<a class="brandmark" href="en/index.html" data-l="en"><img src="assets/magoya-wordmark-cream.svg" alt="Magoya · home"></a>
+<a href="index.html" data-l="es">Inicio</a>
+<a href="en/index.html" data-l="en">Home</a>
+<details class="nav-group on"><summary><span data-l="es">Conocer la marca</span><span data-l="en">The brand</span></summary><div><a href="estrategia.html" data-l="es">Estrategia</a><a href="voz.html" data-l="es">Voz</a><a href="lenguaje.html" data-l="es">Lenguaje</a><a href="aplicacion.html" data-l="es">Aplicación</a><a href="brand-book.html" class="on" aria-current="page" data-l="es">Identidad visual</a><a href="en/estrategia.html" data-l="en">Strategy</a><a href="en/voz.html" data-l="en">Voice</a><a href="en/lenguaje.html" data-l="en">Language</a><a href="en/aplicacion.html" data-l="en">Voices and channels</a><a href="brand-book.html?lang=en" class="on" aria-current="page" data-l="en">Visual identity</a></div></details>
+<a href="library.html" data-l="es">Recursos</a><a href="ai.html" data-l="es">Integrar con AI</a>
+<a href="library.html" hreflang="es" data-l="en">Resources (Spanish)</a><a href="en/ai.html" data-l="en">Working with AI</a>
+<a href="ai-en-campo/" class="program-link">IA en Campo ↗</a>
+<a class="lang" href="brand-book.html?lang=en" data-lang-toggle><span data-l="es" lang="en" title="Read this page in English">EN</span><span data-l="en" lang="es" title="Leer esta página en español">ES</span></a>
 </nav>
 
 <nav class="side" id="dock">
-  <a href="#logo"><span>Logo &amp; avatares</span></a>
-  <a href="#color"><span>Color</span></a>
-  <a href="#tipografia"><span>Tipografía</span></a>
-  <a href="#fotografia"><span>Fotografía</span></a>
-  <a href="#iconografia"><span>Iconografía</span></a>
-  <a href="#componentes"><span>Componentes</span></a>
-  <a href="#reglas"><span>Reglas de oro visuales</span></a>
+  <a href="#logo"><span data-l="es">Logo &amp; avatares</span><span data-l="en">Logo and avatars</span></a>
+  <a href="#color"><span data-l="es">Color</span><span data-l="en">Color</span></a>
+  <a href="#tipografia"><span data-l="es">Tipografía</span><span data-l="en">Typography</span></a>
+  <a href="#fotografia"><span data-l="es">Fotografía</span><span data-l="en">Photography</span></a>
+  <a href="#iconografia"><span data-l="es">Iconografía</span><span data-l="en">Icons</span></a>
+  <a href="#componentes"><span data-l="es">Componentes</span><span data-l="en">Components</span></a>
+  <a href="#reglas"><span data-l="es">Reglas de oro visuales</span><span data-l="en">Visual golden rules</span></a>
 </nav>
 
 <header class="hero">
-  <span class="tag">Sistema de marca</span>
+  <span class="tag"><span data-l="es">Sistema de marca</span><span data-l="en">Brand system</span></span>
   <div class="hero-in">
     <img class="wm" src="assets/magoya-wordmark-cream.svg" alt="Magoya">
     <h1>Software and AI<br><em>for agribusiness.</em></h1>
-    <p>Identidad visual. Logo, color, tipografía, fotografía, íconos y componentes de Magoya.</p>
-    <p style="font-size:14px;color:var(--sage-400);margin-top:12px">Actualizada con el feedback del equipo: color, fotografía y reglas de oro. Magoya no usa ilustración ni motivos. Quedan pendientes los porcentajes exactos de color. La estrategia, la voz y el lenguaje están en Conocer la marca.</p></div>
+    <p data-l="es">Identidad visual. Logo, color, tipografía, fotografía, íconos y componentes de Magoya.</p>
+    <p data-l="en">Visual identity. Magoya’s logo, color, typography, photography, icons, and components.</p>
+    <p style="font-size:14px;color:var(--sage-400);margin-top:12px" data-l="es">Actualizada con el feedback del equipo: color, fotografía y reglas de oro. Magoya no usa ilustración ni motivos. Quedan pendientes los porcentajes exactos de color. La estrategia, la voz y el lenguaje están en Conocer la marca.</p>
+    <p style="font-size:14px;color:var(--sage-400);margin-top:12px" data-l="en">Updated with team feedback on color, photography, and golden rules. Magoya doesn’t use illustration or patterns. Exact color percentages are still pending. Strategy, voice, and language live under The brand.</p></div>
 </header>
 
 <main>
@@ -503,49 +514,51 @@
 <!-- ================= 02 LOGO ================= -->
 <section id="logo" style="background:var(--paper-50)">
   <div class="inner">
-  <span class="kicker">Logo & avatares</span>
-  <h2>Logo & avatares</h2>
-  <p class="lead">El wordmark redondeado es la firma. Los avatares — extraídos de las letras del wordmark — son el sistema de identidad secundario para redes, favicons y aplicaciones chicas.</p>
+  <span class="kicker"><span data-l="es">Logo & avatares</span><span data-l="en">Logo and avatars</span></span>
+  <h2><span data-l="es">Logo & avatares</span><span data-l="en">Logo and avatars</span></h2>
+  <p class="lead" data-l="es">El wordmark redondeado es la firma. Los avatares — extraídos de las letras del wordmark — son el sistema de identidad secundario para redes, favicons y aplicaciones chicas.</p>
+  <p class="lead" data-l="en">The rounded wordmark is our signature. The avatars come from the letters of the wordmark and make up the secondary identity system for social media, favicons, and small applications.</p>
 
   <div class="grid g2">
     <div>
-      <div class="logocard lc-green"><img src="assets/magoya-wordmark-green.svg" alt="Wordmark verde digital"></div>
-      <p class="cap">Principal · verde digital #00DE68 sobre blanco</p></div>
+      <div class="logocard lc-green"><img src="assets/magoya-wordmark-green.svg" alt="Wordmark verde digital" data-en-alt="Wordmark in Digital Green"></div>
+      <p class="cap"><span data-l="es">Principal · verde digital #00DE68 sobre blanco</span><span data-l="en">Primary · Digital Green #00DE68 on white</span></p></div>
     <div>
-      <div class="logocard lc-deep"><img src="assets/magoya-wordmark-cream.svg" alt="Wordmark crema sobre verde"></div>
-      <p class="cap">Institucional · crema sobre Verde Magoya #133825</p></div>
+      <div class="logocard lc-deep"><img src="assets/magoya-wordmark-cream.svg" alt="Wordmark crema sobre verde" data-en-alt="Cream wordmark on green"></div>
+      <p class="cap"><span data-l="es">Institucional · crema sobre Verde Magoya #133825</span><span data-l="en">Institutional · cream on Magoya Green #133825</span></p></div>
     <div>
-      <div class="logocard lc-black"><img src="assets/magoya-wordmark-black.svg" alt="Wordmark negro"></div>
-      <p class="cap">Neutra · negro #161616 sobre blanco</p></div>
+      <div class="logocard lc-black"><img src="assets/magoya-wordmark-black.svg" alt="Wordmark negro" data-en-alt="Black wordmark"></div>
+      <p class="cap"><span data-l="es">Neutra · negro #161616 sobre blanco</span><span data-l="en">Neutral · black #161616 on white</span></p></div>
     <div>
-      <div class="logocard lc-cream"><img src="assets/magoya-wordmark-deep.svg" alt="Wordmark verde profundo sobre crema"></div>
-      <p class="cap">Cálida · verde profundo sobre Crema #ECE3DB</p></div></div>
+      <div class="logocard lc-cream"><img src="assets/magoya-wordmark-deep.svg" alt="Wordmark verde profundo sobre crema" data-en-alt="Magoya Green wordmark on cream"></div>
+      <p class="cap"><span data-l="es">Cálida · verde profundo sobre Crema #ECE3DB</span><span data-l="en">Warm · Magoya Green on Magoya Cream #ECE3DB</span></p></div></div>
 
-  <h3>Avatares</h3>
+  <h3><span data-l="es">Avatares</span><span data-l="en">Avatars</span></h3>
   <div class="avatar-row">
     <img src="assets/avatars/avatar-go.svg" alt="Avatar go">
     <img src="assets/avatars/avatar-o.svg" alt="Avatar o">
-    <img src="assets/avatars/avatar-face.svg" alt="Avatar cara">
+    <img src="assets/avatars/avatar-face.svg" alt="Avatar cara" data-en-alt="Face avatar">
     <img src="assets/avatars/avatar-m.svg" alt="Avatar m"></div>
-  <p class="cap" style="max-width:640px">Siempre círculo verde digital #00DE68 con marca blanca. La <b>cara</b> es el avatar de personalidad (redes sociales, comunidad); la <b>m</b> es el monograma funcional (favicon, app icon). No inventar avatares nuevos ni cambiar los colores.</p>
+  <p class="cap" style="max-width:640px" data-l="es">Siempre círculo verde digital #00DE68 con marca blanca. La <b>cara</b> es el avatar de personalidad (redes sociales, comunidad); la <b>m</b> es el monograma funcional (favicon, app icon). No inventar avatares nuevos ni cambiar los colores.</p>
+  <p class="cap" style="max-width:640px" data-l="en">Always a Digital Green #00DE68 circle with a white mark. The <b>face</b> is the personality avatar (social media, community). The <b>m</b> is the functional monogram (favicon, app icon). Don’t create new avatars or change their colors.</p>
 
-  <h3>Reglas & especificaciones</h3>
+  <h3><span data-l="es">Reglas & especificaciones</span><span data-l="en">Rules and specs</span></h3>
   <div class="dodont">
     <div class="dd">
-      <span class="h">Hacer</span>
+      <span class="h"><span data-l="es">Hacer</span><span data-l="en">Do</span></span>
       <ul>
-      <li>Aire mínimo alrededor del wordmark: la altura de la “m” en todos los lados.</li>
-      <li>Tamaño mínimo: 90px de ancho en pantalla · 24mm en impreso. Menos que eso → usar el avatar “m”.</li>
-      <li>Sobre foto: wordmark crema o blanco, siempre con overlay verde profundo.</li>
-      <li>Colores permitidos del wordmark: verde digital, negro, crema, verde profundo, blanco.</li>
+      <li><span data-l="es">Aire mínimo alrededor del wordmark: la altura de la “m” en todos los lados.</span><span data-l="en">Minimum clear space around the wordmark: the height of the “m” on every side.</span></li>
+      <li><span data-l="es">Tamaño mínimo: 90px de ancho en pantalla · 24mm en impreso. Menos que eso → usar el avatar “m”.</span><span data-l="en">Minimum size: 90px wide on screen · 24mm in print. Any smaller → use the “m” avatar.</span></li>
+      <li><span data-l="es">Sobre foto: wordmark crema o blanco, siempre con overlay verde profundo.</span><span data-l="en">On a photo: cream or white wordmark, always with a Magoya Green overlay.</span></li>
+      <li><span data-l="es">Colores permitidos del wordmark: verde digital, negro, crema, verde profundo, blanco.</span><span data-l="en">Approved wordmark colors: Digital Green, black, cream, Magoya Green, and white.</span></li>
       </ul></div>
     <div class="dd avoid">
-      <span class="h">Evitar</span>
+      <span class="h"><span data-l="es">Evitar</span><span data-l="en">Avoid</span></span>
       <ul>
-      <li>No estirar, rotar, inclinar, agregar sombras, contornos ni degradados.</li>
-      <li>No usar el wordmark en lima #A2FF00 — el lima es energía, no identidad.</li>
-      <li>No recolorear los avatares ni ponerlos sobre fondos que compitan (lima sobre verde digital, etc.).</li>
-      <li>No reconstruir el wordmark con otra tipografía ni alterar el espaciado entre letras.</li>
+      <li><span data-l="es">No estirar, rotar, inclinar, agregar sombras, contornos ni degradados.</span><span data-l="en">Stretching, rotating, or skewing it, or adding shadows, outlines, or gradients.</span></li>
+      <li><span data-l="es">No usar el wordmark en lima #A2FF00 — el lima es energía, no identidad.</span><span data-l="en">The wordmark in Energy Lime #A2FF00. Lime is energy, and the wordmark is identity.</span></li>
+      <li><span data-l="es">No recolorear los avatares ni ponerlos sobre fondos que compitan (lima sobre verde digital, etc.).</span><span data-l="en">Recoloring the avatars or placing them on competing backgrounds (lime on Digital Green, for example).</span></li>
+      <li><span data-l="es">No reconstruir el wordmark con otra tipografía ni alterar el espaciado entre letras.</span><span data-l="en">Rebuilding the wordmark in another typeface or changing its letter spacing.</span></li>
       </ul></div></div></div>
 </section>
 
@@ -553,102 +566,112 @@
 <section id="color">
   <div class="inner">
   <span class="kicker">Color</span>
-  <h2>El negro construye.<br>El verde hace crecer.</h2>
-  <p class="lead">Tres verdes con roles distintos y neutros cálidos. <b>El Verde Magoya #133825 es el verde protagonista de Magoya.</b> Para resaltar una frase en un titular sobre fondo oscuro se usa el <b>Verde digital #00DE68</b>. El lima #A2FF00 ahora también es uno de los colores de IA en Campo, así que en Magoya ocupa poca superficie: solo acentos, detalles o CTA. Nunca una pieza 100% negra ni 100% verde.</p>
+  <h2><span data-l="es">El negro construye.<br>El verde hace crecer.</span><span data-l="en">Black builds.<br>Green grows.</span></h2>
+  <p class="lead" data-l="es">Tres verdes con roles distintos y neutros cálidos. <b>El Verde Magoya #133825 es el verde protagonista de Magoya.</b> Para resaltar una frase en un titular sobre fondo oscuro se usa el <b>Verde digital #00DE68</b>. El lima #A2FF00 ahora también es uno de los colores de IA en Campo, así que en Magoya ocupa poca superficie: solo acentos, detalles o CTA. Nunca una pieza 100% negra ni 100% verde.</p>
+  <p class="lead" data-l="en">Three greens with different roles, plus warm neutrals. <b>Magoya Green #133825 is our lead green.</b> To highlight a phrase in a headline on a dark background, use <b>Digital Green #00DE68</b>. Energy Lime #A2FF00 is now also one of the IA en Campo colors, so at Magoya it covers very little surface: accents, details, or CTAs only. A piece is never 100% black or 100% green.</p>
 
   <div class="grid g4">
-    <div class="sw"><div class="chip" style="background:var(--green-900)"></div><div class="meta"><b>Verde Magoya</b><span>#133825 · PMS 553</span><i>Verde protagonista de Magoya. Fondos oscuros, overlays, texto sobre claro.</i></div></div>
-    <div class="sw"><div class="chip" style="background:var(--emerald-500)"></div><div class="meta"><b>Verde digital</b><span>#00DE68 · PMS 3282</span><i>Identidad: wordmark, avatares, micro-acentos. Resalta la frase clave de un titular sobre fondo oscuro. Chips, soporte y data-viz. Como texto, solo sobre fondos oscuros.</i></div></div>
-    <div class="sw"><div class="chip" style="background:var(--lime-500)"></div><div class="meta"><b>Lima energía</b><span>#A2FF00 · PMS 382 2X</span><i>Poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea.</i></div></div>
-    <div class="sw"><div class="chip" style="background:var(--cream-100)"></div><div class="meta"><b>Crema Magoya</b><span>#ECE3DB · PMS Warm Gray 2</span><i>Neutro cálido firma. Texto sobre verde profundo.</i></div></div>
-    <div class="sw"><div class="chip" style="background:var(--sage-50)"></div><div class="meta"><b>Sage</b><span>#EEF2EC · PMS Cool Gray 1</span><i>Superficie clara.</i></div></div>
-    <div class="sw"><div class="chip" style="background:var(--ink-900)"></div><div class="meta"><b>Negro Magoya</b><span>#161616 · PMS Black 5 2X</span><i>Texto y titulares. Cards dark (hiring).</i></div></div>
-    <div class="sw"><div class="chip" style="background:var(--white);border-bottom:1px solid var(--color-hairline)"></div><div class="meta"><b>Blanco</b><span>#FFFFFF · papel</span><i>Lienzo principal del tema studio.</i></div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--green-900)"></div><div class="meta"><b data-l="es">Verde Magoya</b><b data-l="en">Magoya Green</b><span>#133825 · PMS 553</span><i data-l="es">Verde protagonista de Magoya. Fondos oscuros, overlays, texto sobre claro.</i><i data-l="en">Magoya’s lead green. Dark backgrounds, overlays, and text on light.</i></div></div>
+    <div class="sw"><div class="chip" style="background:var(--emerald-500)"></div><div class="meta"><b data-l="es">Verde digital</b><b data-l="en">Digital Green</b><span>#00DE68 · PMS 3282</span><i data-l="es">Identidad: wordmark, avatares, micro-acentos. Resalta la frase clave de un titular sobre fondo oscuro. Chips, soporte y data-viz. Como texto, solo sobre fondos oscuros.</i><i data-l="en">Identity: wordmark, avatars, and micro-accents. Highlights the key phrase of a headline on a dark background. Chips, support, and data viz. As text, only on dark backgrounds.</i></div></div>
+    <div class="sw"><div class="chip" style="background:var(--lime-500)"></div><div class="meta"><b data-l="es">Lima energía</b><b data-l="en">Energy Lime</b><span>#A2FF00 · PMS 382 2X</span><i data-l="es">Poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea.</i><i data-l="en">Small surfaces only: accents, details, CTAs, or a word highlighted with the hand-drawn marks.</i></div></div>
+    <div class="sw"><div class="chip" style="background:var(--cream-100)"></div><div class="meta"><b data-l="es">Crema Magoya</b><b data-l="en">Magoya Cream</b><span>#ECE3DB · PMS Warm Gray 2</span><i data-l="es">Neutro cálido firma. Texto sobre verde profundo.</i><i data-l="en">Our signature warm neutral. Text on Magoya Green.</i></div></div>
+    <div class="sw"><div class="chip" style="background:var(--sage-50)"></div><div class="meta"><b>Sage</b><span>#EEF2EC · PMS Cool Gray 1</span><i data-l="es">Superficie clara.</i><i data-l="en">Light surface.</i></div></div>
+    <div class="sw"><div class="chip" style="background:var(--ink-900)"></div><div class="meta"><b data-l="es">Negro Magoya</b><b data-l="en">Magoya Black</b><span>#161616 · PMS Black 5 2X</span><i data-l="es">Texto y titulares. Cards dark (hiring).</i><i data-l="en">Text and headlines. Dark cards (hiring).</i></div></div>
+    <div class="sw"><div class="chip" style="background:var(--white);border-bottom:1px solid var(--color-hairline)"></div><div class="meta"><b data-l="es">Blanco</b><b data-l="en">White</b><span>#FFFFFF · <span data-l="es">papel</span><span data-l="en">paper</span></span><i data-l="es">Lienzo principal del tema studio.</i><i data-l="en">Main canvas of the studio theme.</i></div></div></div>
 
-  <h3>Proporción de uso</h3>
+  <h3><span data-l="es">Proporción de uso</span><span data-l="en">Proportion of use</span></h3>
   <div class="prop">
     <div class="pc pc-main">
       <span class="bar" style="background:var(--green-900)"></span>
-      <span class="h">Verde Magoya #133825</span>
-      <p>Es el verde protagonista de Magoya: se potencia su uso y ocupa la mayor superficie.</p></div>
+      <span class="h"><span data-l="es">Verde Magoya</span><span data-l="en">Magoya Green</span> #133825</span>
+      <p data-l="es">Es el verde protagonista de Magoya: se potencia su uso y ocupa la mayor superficie.</p>
+      <p data-l="en">Magoya’s lead green. Use it generously: it covers the most surface.</p></div>
     <div class="pc pc-min">
       <span class="bar" style="background:var(--lime-500)"></span>
-      <span class="h">Lima #A2FF00</span>
-      <p>Mucha menos proporción: solo acentos, detalles o CTA.</p></div></div>
-  <p class="note" style="max-width:720px">El ancho de cada bloque muestra la relación entre los dos colores, no un porcentaje. Los porcentajes exactos todavía no están definidos.</p>
+      <span class="h"><span data-l="es">Lima</span><span data-l="en">Energy Lime</span> #A2FF00</span>
+      <p data-l="es">Mucha menos proporción: solo acentos, detalles o CTA.</p>
+      <p data-l="en">A much smaller share: accents, details, or CTAs only.</p></div></div>
+  <p class="note" style="max-width:720px" data-l="es">El ancho de cada bloque muestra la relación entre los dos colores, no un porcentaje. Los porcentajes exactos todavía no están definidos.</p>
+  <p class="note" style="max-width:720px" data-l="en">The width of each block shows how the two colors relate to each other. It isn’t a percentage: exact percentages are still to be defined.</p>
 
-  <h3>Valores para producción</h3>
+  <h3><span data-l="es">Valores para producción</span><span data-l="en">Production values</span></h3>
   <div class="table-scroll">
   <table style="width:100%;max-width:880px;border-collapse:collapse;font-size:13.5px">
     <thead><tr style="text-align:left;border-bottom:2px solid var(--ink-900)">
-      <th style="padding:10px 8px">Color</th><th>HEX</th><th>RGB</th><th>CMYK (orientativo)</th><th>Pantone (aprox.)</th><th>Rol</th></tr></thead>
+      <th style="padding:10px 8px">Color</th><th>HEX</th><th>RGB</th><th><span data-l="es">CMYK (orientativo)</span><span data-l="en">CMYK (approximate)</span></th><th><span data-l="es">Pantone (aprox.)</span><span data-l="en">Pantone (closest match)</span></th><th><span data-l="es">Rol</span><span data-l="en">Role</span></th></tr></thead>
     <tbody>
-      <tr style="border-bottom:1px solid var(--color-hairline)"><td style="padding:10px 8px"><span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:var(--green-900);vertical-align:-2px"></span> Verde Magoya</td><td style="font-family:var(--font-mono)">#133825</td><td>19 · 56 · 37</td><td>77 · 39 · 74 · 63</td><td style="font-family:var(--font-mono)">PMS 553</td><td>Verde protagonista</td></tr>
-      <tr style="border-bottom:1px solid var(--color-hairline)"><td style="padding:10px 8px"><span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:var(--emerald-500);vertical-align:-2px"></span> Verde digital</td><td style="font-family:var(--font-mono)">#00DE68</td><td>0 · 222 · 104</td><td>71 · 0 · 77 · 0</td><td style="font-family:var(--font-mono)">PMS 3282</td><td>Identidad / logo / resaltar en titulares sobre oscuro</td></tr>
-      <tr style="border-bottom:1px solid var(--color-hairline)"><td style="padding:10px 8px"><span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:var(--lime-500);vertical-align:-2px"></span> Lima energía</td><td style="font-family:var(--font-mono)">#A2FF00</td><td>162 · 255 · 0</td><td>43 · 0 · 100 · 0</td><td style="font-family:var(--font-mono)">PMS 382 2X</td><td>Acentos, detalles o CTA, en poca superficie</td></tr>
-      <tr style="border-bottom:1px solid var(--color-hairline)"><td style="padding:10px 8px"><span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:var(--cream-100);border:1px solid var(--color-hairline);vertical-align:-2px"></span> Crema Magoya</td><td style="font-family:var(--font-mono)">#ECE3DB</td><td>236 · 227 · 219</td><td>7 · 9 · 13 · 0</td><td style="font-family:var(--font-mono)">PMS Warm Gray 2</td><td>Neutro cálido</td></tr>
-      <tr><td style="padding:10px 8px"><span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:var(--ink-900);vertical-align:-2px"></span> Negro Magoya</td><td style="font-family:var(--font-mono)">#161616</td><td>22 · 22 · 22</td><td>0 · 0 · 0 · 91</td><td style="font-family:var(--font-mono)">PMS Black 5 2X</td><td>Texto / dark cards</td></tr>
+      <tr style="border-bottom:1px solid var(--color-hairline)"><td style="padding:10px 8px"><span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:var(--green-900);vertical-align:-2px"></span> <span data-l="es">Verde Magoya</span><span data-l="en">Magoya Green</span></td><td style="font-family:var(--font-mono)">#133825</td><td>19 · 56 · 37</td><td>77 · 39 · 74 · 63</td><td style="font-family:var(--font-mono)">PMS 553</td><td><span data-l="es">Verde protagonista</span><span data-l="en">Lead green</span></td></tr>
+      <tr style="border-bottom:1px solid var(--color-hairline)"><td style="padding:10px 8px"><span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:var(--emerald-500);vertical-align:-2px"></span> <span data-l="es">Verde digital</span><span data-l="en">Digital Green</span></td><td style="font-family:var(--font-mono)">#00DE68</td><td>0 · 222 · 104</td><td>71 · 0 · 77 · 0</td><td style="font-family:var(--font-mono)">PMS 3282</td><td><span data-l="es">Identidad / logo / resaltar en titulares sobre oscuro</span><span data-l="en">Identity, logo, and headline highlights on dark</span></td></tr>
+      <tr style="border-bottom:1px solid var(--color-hairline)"><td style="padding:10px 8px"><span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:var(--lime-500);vertical-align:-2px"></span> <span data-l="es">Lima energía</span><span data-l="en">Energy Lime</span></td><td style="font-family:var(--font-mono)">#A2FF00</td><td>162 · 255 · 0</td><td>43 · 0 · 100 · 0</td><td style="font-family:var(--font-mono)">PMS 382 2X</td><td><span data-l="es">Acentos, detalles o CTA, en poca superficie</span><span data-l="en">Accents, details, or CTAs, on small surfaces</span></td></tr>
+      <tr style="border-bottom:1px solid var(--color-hairline)"><td style="padding:10px 8px"><span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:var(--cream-100);border:1px solid var(--color-hairline);vertical-align:-2px"></span> <span data-l="es">Crema Magoya</span><span data-l="en">Magoya Cream</span></td><td style="font-family:var(--font-mono)">#ECE3DB</td><td>236 · 227 · 219</td><td>7 · 9 · 13 · 0</td><td style="font-family:var(--font-mono)">PMS Warm Gray 2</td><td><span data-l="es">Neutro cálido</span><span data-l="en">Warm neutral</span></td></tr>
+      <tr><td style="padding:10px 8px"><span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:var(--ink-900);vertical-align:-2px"></span> <span data-l="es">Negro Magoya</span><span data-l="en">Magoya Black</span></td><td style="font-family:var(--font-mono)">#161616</td><td>22 · 22 · 22</td><td>0 · 0 · 0 · 91</td><td style="font-family:var(--font-mono)">PMS Black 5 2X</td><td><span data-l="es">Texto / dark cards</span><span data-l="en">Text and dark cards</span></td></tr>
     </tbody>
   </table></div>
-  <p class="note" style="margin-top:10px">Para imprenta crítica validar CMYK con prueba de color: el lima y el verde digital son colores de pantalla; en papel esperar pérdida de saturación. <b>Los Pantone son el match más cercano por distancia RGB</b> contra la librería Solid Coated (no hay conversión exacta hex→Pantone) — confirmar contra el libro físico antes de mandar a producción.</p>
+  <p class="note" style="margin-top:10px" data-l="es">Para imprenta crítica validar CMYK con prueba de color: el lima y el verde digital son colores de pantalla; en papel esperar pérdida de saturación. <b>Los Pantone son el match más cercano por distancia RGB</b> contra la librería Solid Coated (no hay conversión exacta hex→Pantone) — confirmar contra el libro físico antes de mandar a producción.</p>
+  <p class="note" style="margin-top:10px" data-l="en">For critical print jobs, check CMYK with a color proof. Energy Lime and Digital Green are screen colors, so expect them to lose saturation on paper. <b>The Pantone values are the closest match by RGB distance</b> against the Solid Coated library, since there’s no exact hex-to-Pantone conversion. Confirm them against the physical guide before sending anything to production.</p>
 
-  <h3>Combinaciones</h3>
+  <h3><span data-l="es">Combinaciones</span><span data-l="en">Combinations</span></h3>
   <div class="dodont">
     <div class="dd">
-      <span class="h">Hacer</span>
+      <span class="h"><span data-l="es">Hacer</span><span data-l="en">Do</span></span>
       <ul>
-      <li>Crema sobre verde profundo · negro sobre blanco/sage · negro sobre lima · lima sobre negro/verde profundo · verde #009145 sobre blanco solo texto grande.</li>
+      <li><span data-l="es">Crema sobre verde profundo · negro sobre blanco/sage · negro sobre lima · lima sobre negro/verde profundo · verde #009145 sobre blanco solo texto grande.</span><span data-l="en">Cream on Magoya Green · black on white or sage · black on lime · lime on black or Magoya Green · green #009145 on white, large text only.</span></li>
       </ul></div>
     <div class="dd avoid">
-      <span class="h">Evitar</span>
+      <span class="h"><span data-l="es">Evitar</span><span data-l="en">Avoid</span></span>
       <ul>
-      <li>Lima sobre blanco como texto (1.25:1, no accesible) · verde digital #00DE68 como texto sobre claro · verde sobre verde sin contraste.</li>
+      <li><span data-l="es">Lima sobre blanco como texto (1.25:1, no accesible) · verde digital #00DE68 como texto sobre claro · verde sobre verde sin contraste.</span><span data-l="en">Lime text on white (1.25:1, not accessible) · Digital Green #00DE68 text on light backgrounds · green on green without contrast.</span></li>
       </ul></div></div></div>
 </section>
 
 <!-- ================= 04 TIPOGRAFÍA ================= -->
 <section id="tipografia" style="background:var(--sage-50)">
   <div class="inner">
-  <span class="kicker">Tipografía</span>
-  <h2>Manrope. Una sola familia.</h2>
-  <p class="lead">Variable 200–800, self-hosted. Display ExtraBold con tracking apretado (−3%) para titulares; Regular para cuerpo. Los kickers van en MAYÚSCULAS con tracking amplio, en pill o solos.</p>
+  <span class="kicker"><span data-l="es">Tipografía</span><span data-l="en">Typography</span></span>
+  <h2><span data-l="es">Manrope. Una sola familia.</span><span data-l="en">Manrope. One family.</span></h2>
+  <p class="lead" data-l="es">Variable 200–800, self-hosted. Display ExtraBold con tracking apretado (−3%) para titulares; Regular para cuerpo. Los kickers van en MAYÚSCULAS con tracking amplio, en pill o solos.</p>
+  <p class="lead" data-l="en">Variable 200–800, self-hosted. Display ExtraBold with tight tracking (−3%) for headlines and Regular for body text. Kickers are set in ALL CAPS with wide tracking, inside a pill or on their own.</p>
 
   <div class="spec"><span class="lab">Display hero · 800 · −3%</span><div class="type-hero" style="font-size:clamp(3rem,6vw,5.6rem)">A product succeeds when it gets used and delivers value.</div></div>
   <div class="spec"><span class="lab">Display · 800</span><div class="type-hero" style="font-size:clamp(2.2rem,4vw,3.6rem)">Software and AI for agribusiness</div></div>
-  <div class="spec"><span class="lab">Título · 700</span><div style="font-size:1.95rem;font-weight:700;letter-spacing:-0.02em">We execute what we propose.</div></div>
-  <div class="spec"><span class="lab">Subtítulo · 600</span><div style="font-size:1.25rem;font-weight:600">We work with agribusinesses to solve their business challenges with software, AI, and agricultural expertise.</div></div>
-  <div class="spec"><span class="lab">Cuerpo · 400</span><div style="font-size:1rem;max-width:560px">Magoya is a hands-on software and AI consulting firm for agribusiness. We work with companies that see software and AI as central to their business: we understand the problem with them, build the solution, and stay until the product is adopted and used in the field. We have our own product, engineering, and agronomy teams in the US, Brazil, and Argentina.</div></div>
+  <div class="spec"><span class="lab"><span data-l="es">Título</span><span data-l="en">Title</span> · 700</span><div style="font-size:1.95rem;font-weight:700;letter-spacing:-0.02em">We execute what we propose.</div></div>
+  <div class="spec"><span class="lab"><span data-l="es">Subtítulo</span><span data-l="en">Subtitle</span> · 600</span><div style="font-size:1.25rem;font-weight:600">We work with agribusinesses to solve their business challenges with software, AI, and agricultural expertise.</div></div>
+  <div class="spec"><span class="lab"><span data-l="es">Cuerpo</span><span data-l="en">Body</span> · 400</span><div style="font-size:1rem;max-width:560px">Magoya is a hands-on software and AI consulting firm for agribusiness. We work with companies that see software and AI as central to their business: we understand the problem with them, build the solution, and stay until the product is adopted and used in the field. We have our own product, engineering, and agronomy teams in the US, Brazil, and Argentina.</div></div>
   <div class="spec"><span class="lab">Kicker · 800 · +12%</span><div style="font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase">Strategy · Case study · Our footprint</div></div>
-  <div class="spec"><span class="lab">Título de card · 700</span><div style="font-size:1.35rem;font-weight:700;letter-spacing:-0.01em">Domain expertise</div></div>
-  <div class="spec"><span class="lab">Número / stat · 800 · −3%</span><div style="font-size:3.4rem;font-weight:800;letter-spacing:-0.03em;line-height:1">95% <span style="font-size:1rem;font-weight:400;color:var(--gray-600);letter-spacing:0">of our clients are Magoya promoters — la bajada del número va en Body</span></div></div>
-  <div class="spec"><span class="lab">Quote · 600 · itálica no</span><div style="font-size:1.3rem;font-weight:600;line-height:1.45;max-width:520px">“Hard to tell the difference between an Apeel employee and a Magoya employee.”<span style="display:block;font-size:.85rem;font-weight:400;color:var(--gray-600);margin-top:8px">Nombre Apellido — atribución en Body small</span></div></div>
-  <div class="spec"><span class="lab">Caption · 400</span><div style="font-size:.8rem;color:var(--gray-600)">Créditos, fuentes de datos, notas al pie. Nunca menos de 11px / #6E756D mínimo sobre blanco.</div></div>
-  <div class="spec"><span class="lab">Link · 600 · subrayado</span><div style="font-size:1rem"><a href="#tipografia" style="color:var(--emerald-700);font-weight:600">magoya.com/case-studies</a> — verde #009145, siempre subrayado en cuerpo de texto</div></div>
-  <div class="spec"><span class="lab">Lista · 400 + check</span><div style="font-size:1rem;line-height:1.6"><span style="color:var(--emerald-700);font-weight:800"></span> Bullets con check verde para beneficios · <b style="font-weight:700">1 2 3</b> números 800 para procesos · nunca viñetas genéricas (•)</div></div>
-  <div class="spec"><span class="lab">Label de botón · 700</span><div style="font-size:.95rem;font-weight:700">Contact us · Start a discovery → · sentence case, nunca MAYÚSCULAS</div></div>
+  <div class="spec"><span class="lab"><span data-l="es">Título de card</span><span data-l="en">Card title</span> · 700</span><div style="font-size:1.35rem;font-weight:700;letter-spacing:-0.01em">Domain expertise</div></div>
+  <div class="spec"><span class="lab"><span data-l="es">Número / stat</span><span data-l="en">Number / stat</span> · 800 · −3%</span><div style="font-size:3.4rem;font-weight:800;letter-spacing:-0.03em;line-height:1">95% <span style="font-size:1rem;font-weight:400;color:var(--gray-600);letter-spacing:0">of our clients are Magoya promoters<span data-l="es"> — la bajada del número va en Body</span><span data-l="en"> · the line under the number is set in Body</span></span></div></div>
+  <div class="spec"><span class="lab">Quote · 600 · <span data-l="es">itálica no</span><span data-l="en">no italics</span></span><div style="font-size:1.3rem;font-weight:600;line-height:1.45;max-width:520px">“Hard to tell the difference between an Apeel employee and a Magoya employee.”<span style="display:block;font-size:.85rem;font-weight:400;color:var(--gray-600);margin-top:8px"><span data-l="es">Nombre Apellido — atribución en Body small</span><span data-l="en">First and last name · attribution in Body small</span></span></div></div>
+  <div class="spec"><span class="lab">Caption · 400</span><div style="font-size:.8rem;color:var(--gray-600)"><span data-l="es">Créditos, fuentes de datos, notas al pie. Nunca menos de 11px / #6E756D mínimo sobre blanco.</span><span data-l="en">Credits, data sources, and footnotes. Never smaller than 11px, and #6E756D at the lightest on white.</span></div></div>
+  <div class="spec"><span class="lab">Link · 600 · <span data-l="es">subrayado</span><span data-l="en">underlined</span></span><div style="font-size:1rem"><a href="#tipografia" style="color:var(--emerald-700);font-weight:600">magoya.com/case-studies</a><span data-l="es"> — verde #009145, siempre subrayado en cuerpo de texto</span><span data-l="en"> · green #009145, always underlined in body text</span></div></div>
+  <div class="spec"><span class="lab"><span data-l="es">Lista</span><span data-l="en">List</span> · 400 + check</span><div style="font-size:1rem;line-height:1.6"><span style="color:var(--emerald-700);font-weight:800"></span> <span data-l="es">Bullets con check verde para beneficios · <b style="font-weight:700">1 2 3</b> números 800 para procesos · nunca viñetas genéricas (•)</span><span data-l="en">Green check bullets for benefits · <b style="font-weight:700">1 2 3</b> numbers in 800 for processes · never generic bullets (•)</span></div></div>
+  <div class="spec"><span class="lab"><span data-l="es">Label de botón</span><span data-l="en">Button label</span> · 700</span><div style="font-size:.95rem;font-weight:700">Contact us · Start a discovery → · sentence case, <span data-l="es">nunca MAYÚSCULAS</span><span data-l="en">never ALL CAPS</span></div></div>
 
   <h3>Emojis</h3>
-  <p class="note" style="max-width:720px"><b>Nunca en títulos.</b> Se permiten únicamente dos familias: <b>manitos que señalan</b> (👈 👉 👇) para dirigir a un CTA, y <b>banderas de países</b> para ubicar geografía. Ningún otro emoji entra al sistema — ni en titulares, ni en cuerpo, ni en slides.</p>
+  <p class="note" style="max-width:720px" data-l="es"><b>Nunca en títulos.</b> Se permiten únicamente dos familias: <b>manitos que señalan</b> (👈 👉 👇) para dirigir a un CTA, y <b>banderas de países</b> para ubicar geografía. Ningún otro emoji entra al sistema — ni en titulares, ni en cuerpo, ni en slides.</p>
+  <p class="note" style="max-width:720px" data-l="en"><b>Never in titles.</b> Only two families are allowed: <b>pointing hands</b> (👈 👉 👇) to direct readers to a CTA, and <b>country flags</b> to show geography. No other emoji enters the system, whether in headlines, body text, or slides.</p>
 
-  <h3>Jerarquía aplicada</h3>
-  <p class="note" style="max-width:720px;margin-bottom:14px">Regla de composición: <b>máximo 3 niveles tipográficos por pieza</b> (ej: kicker + display + body). El peso hace la jerarquía, no el tamaño solo: 800 para lo que grita, 400 para lo que explica. Fallback cuando Manrope no está disponible (docs, mails): <b>Arial</b>.</p>
+  <h3><span data-l="es">Jerarquía aplicada</span><span data-l="en">Hierarchy in practice</span></h3>
+  <p class="note" style="max-width:720px;margin-bottom:14px" data-l="es">Regla de composición: <b>máximo 3 niveles tipográficos por pieza</b> (ej: kicker + display + body). El peso hace la jerarquía, no el tamaño solo: 800 para lo que grita, 400 para lo que explica. Fallback cuando Manrope no está disponible (docs, mails): <b>Arial</b>.</p>
+  <p class="note" style="max-width:720px;margin-bottom:14px" data-l="en">Composition rule: <b>3 type levels per piece at most</b> (for example, kicker + display + body). Weight sets the hierarchy more than size does: 800 for what shouts, 400 for what explains. When Manrope isn’t available (docs, email), fall back to <b>Arial</b>.</p>
 
-  <h3>Resaltado en titulares</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px">Hay dos formas de resaltar la frase o la palabra clave de un titular. <b>Con color:</b> Verde digital #00DE68 sobre fondo oscuro, como en “Software and AI <span style="background:var(--green-900);color:var(--emerald-500);padding:0 5px;border-radius:4px;font-weight:700">for agribusiness.</span>”. <b>Con un círculo:</b> el círculo gestual de la miscelánea nueva alrededor de la palabra. El círculo es más propio de IA en Campo, así que en Magoya se usa con medida y siempre con este trazo, no con el anterior. Nunca subrayado y nunca un bloque de resaltador sólido detrás del texto.</p>
+  <h3><span data-l="es">Resaltado en titulares</span><span data-l="en">Highlights in headlines</span></h3>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="es">Hay dos formas de resaltar la frase o la palabra clave de un titular. <b>Con color:</b> Verde digital #00DE68 sobre fondo oscuro, como en “Software and AI <span style="background:var(--green-900);color:var(--emerald-500);padding:0 5px;border-radius:4px;font-weight:700">for agribusiness.</span>”. <b>Con un círculo:</b> el círculo gestual de la miscelánea nueva alrededor de la palabra. El círculo es más propio de IA en Campo, así que en Magoya se usa con medida y siempre con este trazo, no con el anterior. Nunca subrayado y nunca un bloque de resaltador sólido detrás del texto.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="en">There are two ways to highlight the key phrase or word in a headline. <b>With color:</b> Digital Green #00DE68 on a dark background, as in “Software and AI <span style="background:var(--green-900);color:var(--emerald-500);padding:0 5px;border-radius:4px;font-weight:700">for agribusiness.</span>” <b>With a circle:</b> the hand-drawn circle from the new set of marks, around the word. The circle belongs more to IA en Campo, so Magoya uses it sparingly and always with this stroke (the old one is retired). Never underline, and never put a solid highlighter block behind the text.</p>
   <div class="hl-demo">
     <div class="type-hero">We are local<br>where <span class="hl-word">you are<span class="mk" aria-hidden="true" style="-webkit-mask-image:url(assets/marks/circle1.svg);mask-image:url(assets/marks/circle1.svg)"></span></span></div>
   </div>
 
-  <h3>Flechas, círculos, X y ✓</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px">La miscelánea gestual: 6 flechas, 2 círculos, 2 X y 2 ✓, dibujados a mano. <b>El color depende del uso y del fondo:</b> lima para detalles, acentos o para resaltar una palabra; Verde digital; o Verde Magoya cuando el fondo contrasta, por ejemplo sobre un fondo Verde digital. Se descargan en <a href="library.html#resaltar" style="color:var(--emerald-700);font-weight:600">Recursos</a>.</p>
+  <h3><span data-l="es">Flechas, círculos, X y ✓</span><span data-l="en">Arrows, circles, X marks, and ✓</span></h3>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="es">La miscelánea gestual: 6 flechas, 2 círculos, 2 X y 2 ✓, dibujados a mano. <b>El color depende del uso y del fondo:</b> lima para detalles, acentos o para resaltar una palabra; Verde digital; o Verde Magoya cuando el fondo contrasta, por ejemplo sobre un fondo Verde digital. Se descargan en <a href="library.html#resaltar" style="color:var(--emerald-700);font-weight:600">Recursos</a>.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="en">The hand-drawn marks: 6 arrows, 2 circles, 2 X marks, and 2 ✓, all drawn by hand. <b>Color depends on use and background:</b> lime for details, accents, or a highlighted word; Digital Green; or Magoya Green when the background calls for contrast, for example on Digital Green. Download them from <a href="library.html#resaltar" hreflang="es" style="color:var(--emerald-700);font-weight:600">Resources (Spanish)</a>.</p>
   <div class="mk-rows">
-    <div class="mk-row" style="background:var(--green-900)"><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/circle1.svg);mask-image:url(assets/marks/circle1.svg)" title="circle1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/circle2.svg);mask-image:url(assets/marks/circle2.svg)" title="circle2"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow1.svg);mask-image:url(assets/marks/arrow1.svg)" title="arrow1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow2.svg);mask-image:url(assets/marks/arrow2.svg)" title="arrow2"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow3.svg);mask-image:url(assets/marks/arrow3.svg)" title="arrow3"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow4.svg);mask-image:url(assets/marks/arrow4.svg)" title="arrow4"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow5.svg);mask-image:url(assets/marks/arrow5.svg)" title="arrow5"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow6.svg);mask-image:url(assets/marks/arrow6.svg)" title="arrow6"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/cross1.svg);mask-image:url(assets/marks/cross1.svg)" title="cross1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/cross2.svg);mask-image:url(assets/marks/cross2.svg)" title="cross2"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/check1.svg);mask-image:url(assets/marks/check1.svg)" title="check1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/check2.svg);mask-image:url(assets/marks/check2.svg)" title="check2"></span><span class="mk-lab" style="color:var(--cream-50)">Lima · detalles, acentos o resaltar una palabra</span></div>
-    <div class="mk-row" style="background:var(--ink-900)"><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/circle1.svg);mask-image:url(assets/marks/circle1.svg)" title="circle1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/circle2.svg);mask-image:url(assets/marks/circle2.svg)" title="circle2"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow1.svg);mask-image:url(assets/marks/arrow1.svg)" title="arrow1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow2.svg);mask-image:url(assets/marks/arrow2.svg)" title="arrow2"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow3.svg);mask-image:url(assets/marks/arrow3.svg)" title="arrow3"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow4.svg);mask-image:url(assets/marks/arrow4.svg)" title="arrow4"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow5.svg);mask-image:url(assets/marks/arrow5.svg)" title="arrow5"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow6.svg);mask-image:url(assets/marks/arrow6.svg)" title="arrow6"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/cross1.svg);mask-image:url(assets/marks/cross1.svg)" title="cross1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/cross2.svg);mask-image:url(assets/marks/cross2.svg)" title="cross2"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/check1.svg);mask-image:url(assets/marks/check1.svg)" title="check1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/check2.svg);mask-image:url(assets/marks/check2.svg)" title="check2"></span><span class="mk-lab" style="color:var(--cream-50)">Verde digital</span></div>
-    <div class="mk-row" style="background:var(--emerald-500)"><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/circle1.svg);mask-image:url(assets/marks/circle1.svg)" title="circle1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/circle2.svg);mask-image:url(assets/marks/circle2.svg)" title="circle2"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow1.svg);mask-image:url(assets/marks/arrow1.svg)" title="arrow1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow2.svg);mask-image:url(assets/marks/arrow2.svg)" title="arrow2"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow3.svg);mask-image:url(assets/marks/arrow3.svg)" title="arrow3"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow4.svg);mask-image:url(assets/marks/arrow4.svg)" title="arrow4"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow5.svg);mask-image:url(assets/marks/arrow5.svg)" title="arrow5"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow6.svg);mask-image:url(assets/marks/arrow6.svg)" title="arrow6"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/cross1.svg);mask-image:url(assets/marks/cross1.svg)" title="cross1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/cross2.svg);mask-image:url(assets/marks/cross2.svg)" title="cross2"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/check1.svg);mask-image:url(assets/marks/check1.svg)" title="check1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/check2.svg);mask-image:url(assets/marks/check2.svg)" title="check2"></span><span class="mk-lab" style="color:var(--green-900)">Verde Magoya · cuando el fondo contrasta, como el Verde digital</span></div>
+    <div class="mk-row" style="background:var(--green-900)"><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/circle1.svg);mask-image:url(assets/marks/circle1.svg)" title="circle1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/circle2.svg);mask-image:url(assets/marks/circle2.svg)" title="circle2"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow1.svg);mask-image:url(assets/marks/arrow1.svg)" title="arrow1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow2.svg);mask-image:url(assets/marks/arrow2.svg)" title="arrow2"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow3.svg);mask-image:url(assets/marks/arrow3.svg)" title="arrow3"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow4.svg);mask-image:url(assets/marks/arrow4.svg)" title="arrow4"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow5.svg);mask-image:url(assets/marks/arrow5.svg)" title="arrow5"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/arrow6.svg);mask-image:url(assets/marks/arrow6.svg)" title="arrow6"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/cross1.svg);mask-image:url(assets/marks/cross1.svg)" title="cross1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/cross2.svg);mask-image:url(assets/marks/cross2.svg)" title="cross2"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/check1.svg);mask-image:url(assets/marks/check1.svg)" title="check1"></span><span class="mk" style="background:var(--lime-500);-webkit-mask-image:url(assets/marks/check2.svg);mask-image:url(assets/marks/check2.svg)" title="check2"></span><span class="mk-lab" style="color:var(--cream-50)"><span data-l="es">Lima · detalles, acentos o resaltar una palabra</span><span data-l="en">Energy Lime · details, accents, or a highlighted word</span></span></div>
+    <div class="mk-row" style="background:var(--ink-900)"><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/circle1.svg);mask-image:url(assets/marks/circle1.svg)" title="circle1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/circle2.svg);mask-image:url(assets/marks/circle2.svg)" title="circle2"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow1.svg);mask-image:url(assets/marks/arrow1.svg)" title="arrow1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow2.svg);mask-image:url(assets/marks/arrow2.svg)" title="arrow2"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow3.svg);mask-image:url(assets/marks/arrow3.svg)" title="arrow3"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow4.svg);mask-image:url(assets/marks/arrow4.svg)" title="arrow4"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow5.svg);mask-image:url(assets/marks/arrow5.svg)" title="arrow5"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/arrow6.svg);mask-image:url(assets/marks/arrow6.svg)" title="arrow6"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/cross1.svg);mask-image:url(assets/marks/cross1.svg)" title="cross1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/cross2.svg);mask-image:url(assets/marks/cross2.svg)" title="cross2"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/check1.svg);mask-image:url(assets/marks/check1.svg)" title="check1"></span><span class="mk" style="background:var(--emerald-500);-webkit-mask-image:url(assets/marks/check2.svg);mask-image:url(assets/marks/check2.svg)" title="check2"></span><span class="mk-lab" style="color:var(--cream-50)"><span data-l="es">Verde digital</span><span data-l="en">Digital Green</span></span></div>
+    <div class="mk-row" style="background:var(--emerald-500)"><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/circle1.svg);mask-image:url(assets/marks/circle1.svg)" title="circle1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/circle2.svg);mask-image:url(assets/marks/circle2.svg)" title="circle2"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow1.svg);mask-image:url(assets/marks/arrow1.svg)" title="arrow1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow2.svg);mask-image:url(assets/marks/arrow2.svg)" title="arrow2"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow3.svg);mask-image:url(assets/marks/arrow3.svg)" title="arrow3"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow4.svg);mask-image:url(assets/marks/arrow4.svg)" title="arrow4"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow5.svg);mask-image:url(assets/marks/arrow5.svg)" title="arrow5"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/arrow6.svg);mask-image:url(assets/marks/arrow6.svg)" title="arrow6"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/cross1.svg);mask-image:url(assets/marks/cross1.svg)" title="cross1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/cross2.svg);mask-image:url(assets/marks/cross2.svg)" title="cross2"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/check1.svg);mask-image:url(assets/marks/check1.svg)" title="check1"></span><span class="mk" style="background:var(--green-900);-webkit-mask-image:url(assets/marks/check2.svg);mask-image:url(assets/marks/check2.svg)" title="check2"></span><span class="mk-lab" style="color:var(--green-900)"><span data-l="es">Verde Magoya · cuando el fondo contrasta, como el Verde digital</span><span data-l="en">Magoya Green · when the background calls for contrast, like Digital Green</span></span></div>
   </div>
   <div class="hl-ref">
-    <figure><img src="assets/social/posteo-4-preview.jpg" alt="Posteo con círculo y flechas a mano señalando “where you are”" loading="lazy"><figcaption>En uso: círculo alrededor de la frase y flechas que la señalan.</figcaption></figure>
-    <figure><img src="assets/social/posteo-2-preview.jpg" alt="Posteo sobre Verde Magoya con la frase “where you are” en verde digital" loading="lazy"><figcaption>La misma idea resuelta solo con color, sobre Verde Magoya.</figcaption></figure>
+    <figure><img src="assets/social/posteo-4-preview.jpg" alt="Posteo con círculo y flechas a mano señalando “where you are”" data-en-alt="Post with a hand-drawn circle and arrows pointing at “where you are”" loading="lazy"><figcaption><span data-l="es">En uso: círculo alrededor de la frase y flechas que la señalan.</span><span data-l="en">In use: a circle around the phrase and arrows pointing at it.</span></figcaption></figure>
+    <figure><img src="assets/social/posteo-2-preview.jpg" alt="Posteo sobre Verde Magoya con la frase “where you are” en verde digital" data-en-alt="Post on Magoya Green with the phrase “where you are” in Digital Green" loading="lazy"><figcaption><span data-l="es">La misma idea resuelta solo con color, sobre Verde Magoya.</span><span data-l="en">The same idea done with color alone, on Magoya Green.</span></figcaption></figure>
   </div>
   </div></div>
 </section>
@@ -656,59 +679,66 @@
 <!-- ================= 05 FOTOGRAFÍA ================= -->
 <section id="fotografia">
   <div class="inner">
-  <span class="kicker">Fotografía</span>
-  <h2>El campo desde arriba.<br>Las personas a color.</h2>
-  <p class="lead">Dos familias fotográficas, cada una con su regla. Aérea de campo: color natural con overlay verde profundo para fondos con texto. Siempre enfoque cenital. Personas: siempre a color y en espacios abiertos mejor.</p>
+  <span class="kicker"><span data-l="es">Fotografía</span><span data-l="en">Photography</span></span>
+  <h2><span data-l="es">El campo desde arriba.<br>Las personas a color.</span><span data-l="en">The field from above.<br>People in color.</span></h2>
+  <p class="lead" data-l="es">Dos familias fotográficas, cada una con su regla. Aérea de campo: color natural con overlay verde profundo para fondos con texto. Siempre enfoque cenital. Personas: siempre a color y en espacios abiertos mejor.</p>
+  <p class="lead" data-l="en">Two photo families, each with its own rule. Aerial field shots: natural color, with a Magoya Green overlay when they sit behind text, and always shot straight down. People: always in color, ideally outdoors.</p>
 
   <div class="grid g3">
-    <figure class="pcard2"><div class="pw overlay"><img src="assets/photos/field-rows.jpg" alt="Aérea · hileras"><span class="lbl">Aérea · hileras</span></div><figcaption><span class="sp">JPG · 2.2 MB · 2400×1799</span><a href="assets/photos/field-rows.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
-    <figure class="pcard2"><div class="pw overlay"><img src="assets/photos/field-terraces.jpg" alt="Aérea · terrazas"><span class="lbl">Aérea · terrazas</span></div><figcaption><span class="sp">JPG · 2.0 MB · 2400×1598</span><a href="assets/photos/field-terraces.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
-    <figure class="pcard2"><div class="pw overlay"><img src="assets/photos/field-bali.jpg" alt="Aérea · mosaico"><span class="lbl">Aérea · mosaico</span></div><figcaption><span class="sp">JPG · 845 KB · 2400×1352</span><a href="assets/photos/field-bali.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
+    <figure class="pcard2"><div class="pw overlay"><img src="assets/photos/field-rows.jpg" alt="Aérea · hileras" data-en-alt="Aerial · rows"><span class="lbl"><span data-l="es">Aérea · hileras</span><span data-l="en">Aerial · rows</span></span></div><figcaption><span class="sp">JPG · 2.2 MB · 2400×1799</span><a href="assets/photos/field-rows.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span data-l="es">bajar</span><span data-l="en">download</span></a></figcaption></figure>
+    <figure class="pcard2"><div class="pw overlay"><img src="assets/photos/field-terraces.jpg" alt="Aérea · terrazas" data-en-alt="Aerial · terraces"><span class="lbl"><span data-l="es">Aérea · terrazas</span><span data-l="en">Aerial · terraces</span></span></div><figcaption><span class="sp">JPG · 2.0 MB · 2400×1598</span><a href="assets/photos/field-terraces.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span data-l="es">bajar</span><span data-l="en">download</span></a></figcaption></figure>
+    <figure class="pcard2"><div class="pw overlay"><img src="assets/photos/field-bali.jpg" alt="Aérea · mosaico" data-en-alt="Aerial · patchwork"><span class="lbl"><span data-l="es">Aérea · mosaico</span><span data-l="en">Aerial · patchwork</span></span></div><figcaption><span class="sp">JPG · 845 KB · 2400×1352</span><a href="assets/photos/field-bali.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span data-l="es">bajar</span><span data-l="en">download</span></a></figcaption></figure>
   </div>
 
-  <h3>Personas a color, sin nada encima</h3>
-  <p class="note" style="max-width:720px;margin-bottom:14px">Las personas van siempre a color, sin ningún detalle encima (ni barras ni acentos de color) y mejor en espacios abiertos.</p>
+  <h3><span data-l="es">Personas a color, sin nada encima</span><span data-l="en">People in color, with nothing on top</span></h3>
+  <p class="note" style="max-width:720px;margin-bottom:14px" data-l="es">Las personas van siempre a color, sin ningún detalle encima (ni barras ni acentos de color) y mejor en espacios abiertos.</p>
+  <p class="note" style="max-width:720px;margin-bottom:14px" data-l="en">People always appear in color, with no details on top (no bars or color accents), ideally outdoors.</p>
   <div class="grid g3">
-    <figure class="pcard2"><div class="pw"><img src="assets/photos/varu-ceo-color.jpg" alt="Varina Baldi, Founder &amp; CEO" style="object-position:center 20%"></div><figcaption><span class="sp">Varu · Founder &amp; CEO · JPG · 17 KB · 400×400</span><a href="assets/photos/varu-ceo-color.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
-    <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-planta.jpg" alt="Integrante del equipo Magoya mirando una planta en el campo" style="object-position:center 25%" loading="lazy"></div><figcaption><span class="sp">Equipo en el campo · JPG · 275 KB · 1150×2048</span><a href="assets/photos/equipo-campo-planta.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
-    <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-remera.jpg" alt="Integrante del equipo Magoya con remera verde en el campo" style="object-position:center 30%" loading="lazy"></div><figcaption><span class="sp">Equipo en el campo · JPG · 173 KB · 2048×1150</span><a href="assets/photos/equipo-campo-remera.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
-    <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-espalda.jpg" alt="Integrante del equipo de espaldas con la remera negra de Magoya en el campo" style="object-position:center 35%" loading="lazy"></div><figcaption><span class="sp">Equipo en el campo · JPG · 254 KB · 2048×1150</span><a href="assets/photos/equipo-campo-espalda.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
-    <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-remera-verde.jpg" alt="Integrantes del equipo en el campo, uno con la remera verde de Magoya" style="object-position:center 40%" loading="lazy"></div><figcaption><span class="sp">Equipo en el campo · JPG · 235 KB · 2048×1150</span><a href="assets/photos/equipo-campo-remera-verde.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>bajar</a></figcaption></figure>
+    <figure class="pcard2"><div class="pw"><img src="assets/photos/varu-ceo-color.jpg" alt="Varina Baldi, Founder &amp; CEO" style="object-position:center 20%"></div><figcaption><span class="sp">Varu · Founder &amp; CEO · JPG · 17 KB · 400×400</span><a href="assets/photos/varu-ceo-color.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span data-l="es">bajar</span><span data-l="en">download</span></a></figcaption></figure>
+    <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-planta.jpg" alt="Integrante del equipo Magoya mirando una planta en el campo" data-en-alt="Magoya team member looking at a plant in the field" style="object-position:center 25%" loading="lazy"></div><figcaption><span class="sp"><span data-l="es">Equipo en el campo</span><span data-l="en">Team in the field</span> · JPG · 275 KB · 1150×2048</span><a href="assets/photos/equipo-campo-planta.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span data-l="es">bajar</span><span data-l="en">download</span></a></figcaption></figure>
+    <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-remera.jpg" alt="Integrante del equipo Magoya con remera verde en el campo" data-en-alt="Magoya team member in a green T-shirt in the field" style="object-position:center 30%" loading="lazy"></div><figcaption><span class="sp"><span data-l="es">Equipo en el campo</span><span data-l="en">Team in the field</span> · JPG · 173 KB · 2048×1150</span><a href="assets/photos/equipo-campo-remera.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span data-l="es">bajar</span><span data-l="en">download</span></a></figcaption></figure>
+    <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-espalda.jpg" alt="Integrante del equipo de espaldas con la remera negra de Magoya en el campo" data-en-alt="Team member seen from behind in a black Magoya T-shirt in the field" style="object-position:center 35%" loading="lazy"></div><figcaption><span class="sp"><span data-l="es">Equipo en el campo</span><span data-l="en">Team in the field</span> · JPG · 254 KB · 2048×1150</span><a href="assets/photos/equipo-campo-espalda.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span data-l="es">bajar</span><span data-l="en">download</span></a></figcaption></figure>
+    <figure class="pcard2"><div class="pw"><img src="assets/photos/equipo-campo-remera-verde.jpg" alt="Integrantes del equipo en el campo, uno con la remera verde de Magoya" data-en-alt="Team members in the field, one in a green Magoya T-shirt" style="object-position:center 40%" loading="lazy"></div><figcaption><span class="sp"><span data-l="es">Equipo en el campo</span><span data-l="en">Team in the field</span> · JPG · 235 KB · 2048×1150</span><a href="assets/photos/equipo-campo-remera-verde.jpg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span data-l="es">bajar</span><span data-l="en">download</span></a></figcaption></figure>
   </div>
-  <p class="note" style="max-width:720px">El banco va a sumar más fotos del equipo: hay una sesión nueva en la oficina en camino.</p>
+  <p class="note" style="max-width:720px" data-l="es">El banco va a sumar más fotos del equipo: hay una sesión nueva en la oficina en camino.</p>
+  <p class="note" style="max-width:720px" data-l="en">More team photos are coming to the library: a new office shoot is on the way.</p>
 
-  <h3>Reglas de fotografía</h3>
-  <p class="note" style="max-width:720px;margin-bottom:14px">Aplican a las dos familias de arriba: aérea y personas.</p>
+  <h3><span data-l="es">Reglas de fotografía</span><span data-l="en">Photography rules</span></h3>
+  <p class="note" style="max-width:720px;margin-bottom:14px" data-l="es">Aplican a las dos familias de arriba: aérea y personas.</p>
+  <p class="note" style="max-width:720px;margin-bottom:14px" data-l="en">They apply to both families above: aerial and people.</p>
   <div class="dodont">
     <div class="dd">
-      <span class="h">Hacer</span>
+      <span class="h"><span data-l="es">Hacer</span><span data-l="en">Do</span></span>
       <ul>
-      <li>Aérea de campo siempre con enfoque cenital.</li>
-      <li>Gente real del equipo, remera Magoya, luz natural, gesto genuino.</li>
-      <li>Personas siempre a color, mejor en espacios abiertos.</li>
-      <li>Overlay verde profundo (55–86%) cuando hay texto encima de foto aérea.</li>
+      <li><span data-l="es">Aérea de campo siempre con enfoque cenital.</span><span data-l="en">Aerial field shots always taken straight down.</span></li>
+      <li><span data-l="es">Gente real del equipo, remera Magoya, luz natural, gesto genuino.</span><span data-l="en">Real team members, Magoya T-shirts, natural light, and genuine expressions.</span></li>
+      <li><span data-l="es">Personas siempre a color, mejor en espacios abiertos.</span><span data-l="en">People always in color, ideally outdoors.</span></li>
+      <li><span data-l="es">Overlay verde profundo (55–86%) cuando hay texto encima de foto aérea.</span><span data-l="en">A Magoya Green overlay (55–86%) when text sits on an aerial photo.</span></li>
       </ul></div>
     <div class="dd avoid">
-      <span class="h">Evitar</span>
+      <span class="h"><span data-l="es">Evitar</span><span data-l="en">Avoid</span></span>
       <ul>
-      <li>Nada de stock corporativo posado, apretones de mano, oficinas genéricas.</li>
-      <li>Barras, acentos de color o cualquier detalle encima de una foto de personas.</li>
+      <li><span data-l="es">Nada de stock corporativo posado, apretones de mano, oficinas genéricas.</span><span data-l="en">Posed corporate stock photos, handshakes, and generic offices.</span></li>
+      <li><span data-l="es">Barras, acentos de color o cualquier detalle encima de una foto de personas.</span><span data-l="en">Bars, color accents, or any other detail on top of a photo of people.</span></li>
       </ul></div></div></div>
 </section>
 
 <!-- ================= 08 ICONOGRAFÍA ================= -->
 <section id="iconografia">
   <div class="inner">
-  <span class="kicker">Iconografía</span>
-  <h2>Íconos de línea redondeada</h2>
-  <p class="lead">Trazo 2px, terminaciones y esquinas redondeadas — el mismo ADN del wordmark. Monocromos y recoloreables: negro sobre claro, crema sobre oscuro, <b>lima solo el ícono destacado de la pieza</b>. Nunca rellenos sólidos ni 3D.</p>
+  <span class="kicker"><span data-l="es">Iconografía</span><span data-l="en">Icons</span></span>
+  <h2><span data-l="es">Íconos de línea redondeada</span><span data-l="en">Rounded line icons</span></h2>
+  <p class="lead" data-l="es">Trazo 2px, terminaciones y esquinas redondeadas — el mismo ADN del wordmark. Monocromos y recoloreables: negro sobre claro, crema sobre oscuro, <b>lima solo el ícono destacado de la pieza</b>. Nunca rellenos sólidos ni 3D.</p>
+  <p class="lead" data-l="en">A 2px stroke with rounded ends and corners, the same DNA as the wordmark. Single-color and recolorable: black on light, cream on dark, and <b>lime only for the one featured icon in a piece</b>. Never solid fills or 3D.</p>
 
-  <h3>Set agro — el corazón del sistema (16 íconos)</h3>
+  <h3><span data-l="es">Set agro — el corazón del sistema (16 íconos)</span><span data-l="en">Agro set: the core of the system (16 icons)</span></h3>
   <div class="ic-grid"><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/alerta-lote.svg);mask-image:url(assets/studio/icons/agro/alerta-lote.svg)"></span><span class="icn">alerta-lote</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/chat-ia.svg);mask-image:url(assets/studio/icons/agro/chat-ia.svg)"></span><span class="icn">chat-ia</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/dron.svg);mask-image:url(assets/studio/icons/agro/dron.svg)"></span><span class="icn">dron</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/escaneo.svg);mask-image:url(assets/studio/icons/agro/escaneo.svg)"></span><span class="icn">escaneo</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/gota.svg);mask-image:url(assets/studio/icons/agro/gota.svg)"></span><span class="icn">gota</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/grafico.svg);mask-image:url(assets/studio/icons/agro/grafico.svg)"></span><span class="icn">grafico</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/hoja.svg);mask-image:url(assets/studio/icons/agro/hoja.svg)"></span><span class="icn">hoja</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/lote.svg);mask-image:url(assets/studio/icons/agro/lote.svg)"></span><span class="icn">lote</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/mapa-pin.svg);mask-image:url(assets/studio/icons/agro/mapa-pin.svg)"></span><span class="icn">mapa-pin</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/nube-lluvia.svg);mask-image:url(assets/studio/icons/agro/nube-lluvia.svg)"></span><span class="icn">nube-lluvia</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/reloj-campana.svg);mask-image:url(assets/studio/icons/agro/reloj-campana.svg)"></span><span class="icn">reloj-campana</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/satelite.svg);mask-image:url(assets/studio/icons/agro/satelite.svg)"></span><span class="icn">satelite</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/semilla.svg);mask-image:url(assets/studio/icons/agro/semilla.svg)"></span><span class="icn">semilla</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/sensor.svg);mask-image:url(assets/studio/icons/agro/sensor.svg)"></span><span class="icn">sensor</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/sol.svg);mask-image:url(assets/studio/icons/agro/sol.svg)"></span><span class="icn">sol</span></div><div><span class="icm" style="-webkit-mask-image:url(assets/studio/icons/agro/tractor.svg);mask-image:url(assets/studio/icons/agro/tractor.svg)"></span><span class="icn">tractor</span></div></div>
-  <p class="cap">Los mismos archivos que usa Magoya Studio (<code style="font-family:var(--font-mono);font-size:11.5px">assets/studio/icons/agro/</code>) — una sola fuente para manual, piezas y producto.</p>
+  <p class="cap" data-l="es">Los mismos archivos que usa Magoya Studio (<code style="font-family:var(--font-mono);font-size:11.5px">assets/studio/icons/agro/</code>) — una sola fuente para manual, piezas y producto.</p>
+  <p class="cap" data-l="en">The same files Magoya Studio uses (<code style="font-family:var(--font-mono);font-size:11.5px">assets/studio/icons/agro/</code>): one source for the guidelines, pieces, and product.</p>
 
-  <h3>Sobre claro y sobre oscuro</h3>
-  <p class="note" style="max-width:720px;margin-bottom:14px">Mismo set, dos teñidos. <b>El ícono destacado cambia de color según el fondo:</b> sobre oscuro va en <b>lima #A2FF00</b>; sobre claro, en <b>verde #009145</b> — el lima sobre blanco no resalta (1.25:1). Uno destacado por pieza.</p>
+  <h3><span data-l="es">Sobre claro y sobre oscuro</span><span data-l="en">On light and on dark</span></h3>
+  <p class="note" style="max-width:720px;margin-bottom:14px" data-l="es">Mismo set, dos teñidos. <b>El ícono destacado cambia de color según el fondo:</b> sobre oscuro va en <b>lima #A2FF00</b>; sobre claro, en <b>verde #009145</b> — el lima sobre blanco no resalta (1.25:1). Uno destacado por pieza.</p>
+  <p class="note" style="max-width:720px;margin-bottom:14px" data-l="en">One set, two tints. <b>The featured icon changes color with the background:</b> <b>Energy Lime #A2FF00</b> on dark and <b>green #009145</b> on light, since lime doesn’t stand out on white (1.25:1). One featured icon per piece.</p>
   <div class="grid g2">
     <div class="comp-canvas" style="background:var(--white);border:1px solid var(--color-hairline);justify-content:space-between;flex-wrap:nowrap">
       <span class="icm big" style="-webkit-mask-image:url(assets/studio/icons/agro/hoja.svg);mask-image:url(assets/studio/icons/agro/hoja.svg)"></span>
@@ -724,100 +754,107 @@
       <span class="icm big on-dark" style="-webkit-mask-image:url(assets/studio/icons/agro/gota.svg);mask-image:url(assets/studio/icons/agro/gota.svg)"></span>
       <span class="icm big on-dark" style="-webkit-mask-image:url(assets/studio/icons/agro/sol.svg);mask-image:url(assets/studio/icons/agro/sol.svg)"></span>
       <span class="icm big on-dark" style="-webkit-mask-image:url(assets/studio/icons/agro/dron.svg);mask-image:url(assets/studio/icons/agro/dron.svg)"></span></div></div>
-  <p class="cap" style="max-width:680px">Además del set agro hay <b>58 íconos generales</b> en 7 categorías (producto & UX, datos & AI, plataforma, negocio, comunicación & redes, sistema) en <a href="icons.html" style="color:var(--emerald-700);font-weight:600">la librería de íconos</a>, y los logos de <b>AI</b> (OpenAI, Claude, Gemini…) y <b>redes</b> en <code style="font-family:var(--font-mono);font-size:11.5px">assets/studio/icons/</code>.</p></div>
+  <p class="cap" style="max-width:680px" data-l="es">Además del set agro hay <b>58 íconos generales</b> en 7 categorías (producto & UX, datos & AI, plataforma, negocio, comunicación & redes, sistema) en <a href="icons.html" style="color:var(--emerald-700);font-weight:600">la librería de íconos</a>, y los logos de <b>AI</b> (OpenAI, Claude, Gemini…) y <b>redes</b> en <code style="font-family:var(--font-mono);font-size:11.5px">assets/studio/icons/</code>.</p>
+  <p class="cap" style="max-width:680px" data-l="en">Beyond the agro set, there are <b>58 general icons</b> in 7 categories (product and UX, data and AI, platform, business, communication and social media, and system) in <a href="icons.html" hreflang="es" style="color:var(--emerald-700);font-weight:600">the icon library (Spanish)</a>, plus <b>AI</b> logos (OpenAI, Claude, Gemini, and more) and <b>social media</b> logos in <code style="font-family:var(--font-mono);font-size:11.5px">assets/studio/icons/</code>.</p></div>
 </section>
 
 <!-- ================= 09 COMPONENTES ================= -->
 <section id="componentes" style="background:var(--paper-50)">
   <div class="inner">
-  <span class="kicker">Componentes</span>
-  <h2>CTA, botones, box, chips & cards</h2>
-  <p class="lead">Todo redondeado, como el logo. El CTA es una pill Verde digital o lima con flecha; el botón institucional, verde profundo. El box ordena texto e imagen. Los chips categorizan; las cards muestran gente, datos y quotes.</p>
+  <span class="kicker"><span data-l="es">Componentes</span><span data-l="en">Components</span></span>
+  <h2><span data-l="es">CTA, botones, box, chips & cards</span><span data-l="en">CTAs, buttons, boxes, chips, and cards</span></h2>
+  <p class="lead" data-l="es">Todo redondeado, como el logo. El CTA es una pill Verde digital o lima con flecha; el botón institucional, verde profundo. El box ordena texto e imagen. Los chips categorizan; las cards muestran gente, datos y quotes.</p>
+  <p class="lead" data-l="en">Everything is rounded, like the logo. The CTA is a Digital Green or lime pill with an arrow, and the institutional button is Magoya Green. The box pairs text with an image. Chips label things, and cards show people, data, and quotes.</p>
 
   <h3>CTA</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px">El CTA es la acción que queremos: contacto, inscripción, descarga. Uno por pieza. Es una <b>pill de radio 44px</b> en <b>Verde digital o lima</b> (por ser CTA, es uno de los usos permitidos del lima), con la flecha en un círculo Verde Magoya.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="es">El CTA es la acción que queremos: contacto, inscripción, descarga. Uno por pieza. Es una <b>pill de radio 44px</b> en <b>Verde digital o lima</b> (por ser CTA, es uno de los usos permitidos del lima), con la flecha en un círculo Verde Magoya.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="en">The CTA is the action we want: contact, sign-up, or download. One per piece. It’s a <b>pill with a 44px radius</b> in <b>Digital Green or lime</b> (as a CTA, it’s one of the approved uses of lime), with the arrow in a Magoya Green circle.</p>
   <div class="comp-canvas" style="gap:22px;align-items:center">
     <a class="cta"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>Contact us</a>
     <a class="cta cta-lime"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>Contact us</a>
-    <span style="display:inline-flex;align-items:center;gap:10px"><img src="assets/components/cta.svg" alt="CTA, archivo original" style="height:44px"><span class="cap" style="margin:0">Archivo original · <a href="assets/components/cta.svg" download style="color:var(--emerald-700);font-weight:600">bajar SVG</a></span></span></div>
+    <span style="display:inline-flex;align-items:center;gap:10px"><img src="assets/components/cta.svg" alt="CTA, archivo original" data-en-alt="CTA, original file" style="height:44px"><span class="cap" style="margin:0"><span data-l="es">Archivo original</span><span data-l="en">Original file</span> · <a href="assets/components/cta.svg" download style="color:var(--emerald-700);font-weight:600"><span data-l="es">bajar SVG</span><span data-l="en">download SVG</span></a></span></span></div>
   <div class="comp-canvas" style="background:var(--green-950);gap:22px;margin-top:12px">
     <a class="cta"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>Contact us</a>
     <a class="cta cta-lime"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>Contact us</a>
-    <span class="cap" style="margin:0;color:var(--cream-300)">Sobre oscuro el CTA no cambia.</span></div>
+    <span class="cap" style="margin:0;color:var(--cream-300)"><span data-l="es">Sobre oscuro el CTA no cambia.</span><span data-l="en">On dark, the CTA stays the same.</span></span></div>
 
-  <h3 style="margin-top:30px">Botones</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px">Acompañan al CTA. Son rectángulos con radio 10px y todos tienen hover.</p>
+  <h3 style="margin-top:30px"><span data-l="es">Botones</span><span data-l="en">Buttons</span></h3>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="es">Acompañan al CTA. Son rectángulos con radio 10px y todos tienen hover.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="en">They support the CTA. They’re rectangles with a 10px radius, and every one has a hover state.</p>
   <div class="comp-canvas" style="gap:26px;align-items:flex-start">
     <div>
       <button class="btn btn-2">See our work</button>
-      <p class="cap" style="max-width:180px"><b>Secundario</b> · verde profundo<br>Alternativa válida al primario: ver casos, agendar, seguir leyendo.</p></div>
+      <p class="cap" style="max-width:180px" data-l="es"><b>Secundario</b> · verde profundo<br>Alternativa válida al primario: ver casos, agendar, seguir leyendo.</p><p class="cap" style="max-width:180px" data-l="en"><b>Secondary</b> · Magoya Green<br>A valid alternative to the primary: see cases, book a meeting, keep reading.</p></div>
     <div>
       <button class="btn btn-3">Learn more</button>
-      <p class="cap" style="max-width:180px"><b>Terciario</b> · outline<br>Acción de bajo compromiso o secundaria en cards: saber más, ver detalle.</p></div></div>
-  <h3 style="margin-top:30px">Sobre claro y sobre oscuro</h3>
+      <p class="cap" style="max-width:180px" data-l="es"><b>Terciario</b> · outline<br>Acción de bajo compromiso o secundaria en cards: saber más, ver detalle.</p><p class="cap" style="max-width:180px" data-l="en"><b>Tertiary</b> · outline<br>A low-commitment action, or a secondary one in cards: learn more, see details.</p></div></div>
+  <h3 style="margin-top:30px"><span data-l="es">Sobre claro y sobre oscuro</span><span data-l="en">On light and on dark</span></h3>
   <div class="grid g2" style="gap:14px">
     <div>
       <div class="comp-canvas" style="gap:12px;min-height:104px;align-content:center">
         <button class="btn btn-2">See our work</button>
         <button class="btn btn-3">Learn more</button></div>
-      <p class="cap"><b>Sobre claro</b> → secundario <b>verde profundo</b> con texto crema · terciario <b>outline verde profundo</b>.</p></div>
+      <p class="cap" data-l="es"><b>Sobre claro</b> → secundario <b>verde profundo</b> con texto crema · terciario <b>outline verde profundo</b>.</p><p class="cap" data-l="en"><b>On light</b> → secondary in <b>Magoya Green</b> with cream text · tertiary as a <b>Magoya Green outline</b>.</p></div>
     <div>
       <div class="comp-canvas on-dark-btns" style="background:var(--green-950);gap:12px;min-height:104px;align-content:center">
         <button class="btn btn-2">See our work</button>
         <button class="btn btn-3">Learn more</button></div>
-      <p class="cap"><b>Sobre oscuro</b> → secundario y terciario invierten a <b>crema</b>, sólido y outline respectivamente.</p></div></div>
+      <p class="cap" data-l="es"><b>Sobre oscuro</b> → secundario y terciario invierten a <b>crema</b>, sólido y outline respectivamente.</p><p class="cap" data-l="en"><b>On dark</b> → secondary and tertiary flip to <b>cream</b>, solid and outline respectively.</p></div></div>
   <div class="dodont">
     <div class="dd">
-      <span class="h">Hacer</span>
+      <span class="h"><span data-l="es">Hacer</span><span data-l="en">Do</span></span>
       <ul>
-      <li>Un CTA por pieza · label en sentence case · hover siempre definido.</li>
+      <li><span data-l="es">Un CTA por pieza · label en sentence case · hover siempre definido.</span><span data-l="en">One CTA per piece · sentence-case label · a defined hover state, always.</span></li>
       </ul></div>
     <div class="dd avoid">
-      <span class="h">Evitar</span>
+      <span class="h"><span data-l="es">Evitar</span><span data-l="en">Avoid</span></span>
       <ul>
-      <li>Dos CTA compitiendo, un CTA en otro color que Verde digital o lima, botones sin estado hover.</li>
+      <li><span data-l="es">Dos CTA compitiendo, un CTA en otro color que Verde digital o lima, botones sin estado hover.</span><span data-l="en">Two competing CTAs, a CTA in any color other than Digital Green or lime, and buttons without a hover state.</span></li>
       </ul></div></div>
 
   <h3>Chips / pills</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px"><b>CTA y botón ≠ chip.</b> El CTA es una pill sólida con flecha y el botón un rectángulo de radio 10px: los dos son acción. El chip es una <b>pill outline</b>: borde y texto del mismo color, fondo transparente — es etiqueta, y lleva <b>solo texto</b>: nunca un punto/bullet delante ni un ícono adentro (la pill ya delimita; el punto es ruido). Nunca un chip con fondo sólido.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="es"><b>CTA y botón ≠ chip.</b> El CTA es una pill sólida con flecha y el botón un rectángulo de radio 10px: los dos son acción. El chip es una <b>pill outline</b>: borde y texto del mismo color, fondo transparente — es etiqueta, y lleva <b>solo texto</b>: nunca un punto/bullet delante ni un ícono adentro (la pill ya delimita; el punto es ruido). Nunca un chip con fondo sólido.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="en"><b>CTA and button ≠ chip.</b> The CTA is a solid pill with an arrow, and the button is a rectangle with a 10px radius. Both are actions. The chip is an <b>outline pill</b> with border and text in the same color on a transparent background. It’s a label, and it carries <b>text only</b>: never a dot or bullet in front, and never an icon inside (the pill already sets the boundary, so a dot is noise). A chip never has a solid fill.</p>
   <div class="grid g2" style="gap:14px">
     <div>
       <div class="comp-canvas" style="min-height:132px;align-content:flex-start">
         <span class="pill">Our footprint</span>
         <span class="pill pill-green">Case study</span>
         <span class="pill pill-dark">Strategy</span></div>
-      <p class="cap"><b>Sobre claro</b> (blanco, sage, crema) → borde y texto en <b>verde profundo #133825</b> (default), <b>verde #009145</b> para categoría destacada, o <b>negro #161616</b> para etiqueta neutra.</p></div>
+      <p class="cap" data-l="es"><b>Sobre claro</b> (blanco, sage, crema) → borde y texto en <b>verde profundo #133825</b> (default), <b>verde #009145</b> para categoría destacada, o <b>negro #161616</b> para etiqueta neutra.</p><p class="cap" data-l="en"><b>On light</b> (white, sage, cream) → border and text in <b>Magoya Green #133825</b> (default), <b>green #009145</b> for a featured category, or <b>black #161616</b> for a neutral label.</p></div>
     <div>
       <div class="comp-canvas" style="background:var(--green-950);min-height:132px;align-content:flex-start">
         <span class="pill pill-cream">Hands-on</span>
         <span class="pill" style="color:var(--lime-500);border-color:var(--lime-500)">Hiring</span></div>
-      <p class="cap"><b>Sobre oscuro</b> (verde profundo, negro) → borde y texto en <b>crema #ECE3DB</b> (default) o <b>lima #A2FF00</b> para el chip destacado — uno solo por pieza.</p></div></div>
+      <p class="cap" data-l="es"><b>Sobre oscuro</b> (verde profundo, negro) → borde y texto en <b>crema #ECE3DB</b> (default) o <b>lima #A2FF00</b> para el chip destacado — uno solo por pieza.</p><p class="cap" data-l="en"><b>On dark</b> (Magoya Green, black) → border and text in <b>cream #ECE3DB</b> (default) or <b>Energy Lime #A2FF00</b> for the featured chip, only one per piece.</p></div></div>
 
   <h3>Box</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px">Contenedor para combinar texto e imagen. <b>Radio de esquina 12px.</b> Puede ir en cualquier color de la marca <b>menos lima</b>, que es solo para acentos. En el rectángulo claro va <b>solo una imagen</b>; el texto va sobre el pleno de color.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="es">Contenedor para combinar texto e imagen. <b>Radio de esquina 12px.</b> Puede ir en cualquier color de la marca <b>menos lima</b>, que es solo para acentos. En el rectángulo claro va <b>solo una imagen</b>; el texto va sobre el pleno de color.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="en">A container that pairs text with an image. <b>12px corner radius.</b> It can use any brand color <b>except lime</b>, which is for accents only. The light rectangle holds <b>a single image</b>, and the text sits on the solid color.</p>
   <div class="box-row">
     <div class="box" style="background:var(--green-900);color:var(--cream-50)"><b>Domain fluency</b><div class="box-img"><img src="assets/photos/equipo-campo-planta.jpg" alt="" loading="lazy"></div></div>
     <div class="box" style="background:var(--emerald-500);color:var(--green-900)"><b>Hands-on</b><div class="box-img"><img src="assets/photos/equipo-campo-remera.jpg" alt="" loading="lazy"></div></div>
     <div class="box" style="background:var(--cream-100);color:var(--green-900)"><b>Local teams</b><div class="box-img"><img src="assets/photos/field-rows.jpg" alt="" loading="lazy"></div></div>
     <div class="box" style="background:var(--ink-900);color:var(--cream-50)"><b>Outcome-driven</b><div class="box-img"><img src="assets/photos/field-terraces.jpg" alt="" loading="lazy"></div></div>
-    <div class="box-src"><img src="assets/components/box.svg" alt="Box, archivo original" style="height:150px"><span class="cap">Archivo original · <a href="assets/components/box.svg" download style="color:var(--emerald-700);font-weight:600">bajar SVG</a></span></div>
+    <div class="box-src"><img src="assets/components/box.svg" alt="Box, archivo original" data-en-alt="Box, original file" style="height:150px"><span class="cap"><span data-l="es">Archivo original</span><span data-l="en">Original file</span> · <a href="assets/components/box.svg" download style="color:var(--emerald-700);font-weight:600"><span data-l="es">bajar SVG</span><span data-l="en">download SVG</span></a></span></div>
   </div>
   <div class="dodont">
     <div class="dd">
-      <span class="h">Hacer</span>
+      <span class="h"><span data-l="es">Hacer</span><span data-l="en">Do</span></span>
       <ul>
-      <li>Texto sobre el pleno de color; una sola imagen en el rectángulo claro.</li>
-      <li>Colores de la marca: Verde Magoya, Verde digital, crema, negro o blanco.</li>
+      <li><span data-l="es">Texto sobre el pleno de color; una sola imagen en el rectángulo claro.</span><span data-l="en">Text on the solid color, and a single image in the light rectangle.</span></li>
+      <li><span data-l="es">Colores de la marca: Verde Magoya, Verde digital, crema, negro o blanco.</span><span data-l="en">Brand colors: Magoya Green, Digital Green, cream, black, or white.</span></li>
       </ul></div>
     <div class="dd avoid">
-      <span class="h">Evitar</span>
+      <span class="h"><span data-l="es">Evitar</span><span data-l="en">Avoid</span></span>
       <ul>
-      <li>Box en lima.</li>
-      <li>Texto dentro del rectángulo de la imagen, o más de una imagen.</li>
+      <li><span data-l="es">Box en lima.</span><span data-l="en">A lime box.</span></li>
+      <li><span data-l="es">Texto dentro del rectángulo de la imagen, o más de una imagen.</span><span data-l="en">Text inside the image rectangle, or more than one image.</span></li>
       </ul></div></div>
 
-  <h3>Cards — siempre en mosaico</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px">Las cards nunca van sueltas: viven <b>encastradas en mosaico</b> — misma grilla, mismos aires, alturas que calzan. El contacto dentro de una card dark es un <b>link en lima</b>, no un botón (los botones viven fuera de las cards). <b>El monograma “m” circular no va en cards:</b> el avatar es identidad de canal (favicon, perfil, pie de papelería) y dentro de una card suma un segundo logo que compite con el wordmark. En una card, la marca es el wordmark.</p>
+  <h3><span data-l="es">Cards — siempre en mosaico</span><span data-l="en">Cards: always in a mosaic</span></h3>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="es">Las cards nunca van sueltas: viven <b>encastradas en mosaico</b> — misma grilla, mismos aires, alturas que calzan. El contacto dentro de una card dark es un <b>link en lima</b>, no un botón (los botones viven fuera de las cards). <b>El monograma “m” circular no va en cards:</b> el avatar es identidad de canal (favicon, perfil, pie de papelería) y dentro de una card suma un segundo logo que compite con el wordmark. En una card, la marca es el wordmark.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="en">Cards never stand alone. They <b>fit together in a mosaic</b>, with the same grid, the same spacing, and heights that line up. Contact info inside a dark card is a <b>lime link</b>. Buttons live outside cards. <b>The circular “m” monogram doesn’t go in cards:</b> the avatar is channel identity (favicon, profile, stationery footer), and inside a card it adds a second logo that competes with the wordmark. In a card, the brand is the wordmark.</p>
   <div class="mosaic">
     <div class="hiring">
       <div class="top">
@@ -830,13 +867,15 @@
     <!-- estructura de testimonio: la cita y la atribución salen del cliente real, nunca se inventan -->
     <div class="quote-card no-img">
       <div class="q">
-        <p>“La cita va textual, tal como la dijo el cliente, en su idioma.”</p>
-        <div class="who"><b>Nombre Apellido</b>Cargo · Empresa cliente</div></div></div>
-    <div class="stat"><div class="n">95%</div><div class="d">De nuestros clientes es promotor de Magoya</div><div class="src">Magoya Brand Voice Playbook · p. 22</div></div>
-    <div class="stat on-dark"><div class="n">5+</div><div class="d">Años de relación promedio</div><div class="src">Magoya Brand Voice Playbook · p. 22</div></div></div>
+        <p data-l="es">“La cita va textual, tal como la dijo el cliente, en su idioma.”</p>
+        <p data-l="en">“The quote runs word for word, as the client said it, in their own language.”</p>
+        <div class="who"><b data-l="es">Nombre Apellido</b><b data-l="en">First and last name</b><span data-l="es">Cargo · Empresa cliente</span><span data-l="en">Title · Client company</span></div></div></div>
+    <div class="stat"><div class="n">95%</div><div class="d"><span data-l="es">De nuestros clientes es promotor de Magoya</span><span data-l="en">of our clients are Magoya promoters</span></div><div class="src">Magoya Brand Voice Playbook<span data-l="es"></span><span data-l="en">, English edition</span> · p. 22</div></div>
+    <div class="stat on-dark"><div class="n">5+</div><div class="d"><span data-l="es">Años de relación promedio</span><span data-l="en">years of average client relationship</span></div><div class="src">Magoya Brand Voice Playbook<span data-l="es"></span><span data-l="en">, English edition</span> · p. 22</div></div></div>
 
-  <h3>Logo wall — Who we build with</h3>
-  <p class="note" style="max-width:720px;margin-bottom:16px">Siempre logos reales, en grilla pareja sobre blanco o sage, en gris para no competir con la pieza. Set completo en <a href="logos.html" style="color:var(--emerald-700)">logos de clientes & stack</a>.</p>
+  <h3>Logo wall<span data-l="es"> — Who we build with</span><span data-l="en">: Who we build with</span></h3>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="es">Siempre logos reales, en grilla pareja sobre blanco o sage, en gris para no competir con la pieza. Set completo en <a href="logos.html" style="color:var(--emerald-700)">logos de clientes & stack</a>.</p>
+  <p class="note" style="max-width:720px;margin-bottom:16px" data-l="en">Always real logos, in an even grid on white or sage, in gray so they don’t compete with the piece. The full set is in <a href="logos.html" hreflang="es" style="color:var(--emerald-700)">client and stack logos (Spanish)</a>.</p>
   <div class="comp-canvas" style="background:var(--white);border:1px solid var(--color-hairline);display:grid;grid-template-columns:repeat(6,1fr);gap:26px;align-items:center">
     <img src="assets/logos/clients/apeel-sciences.svg" alt="Apeel Sciences" style="height:34px;object-fit:contain;filter:grayscale(1);opacity:.75">
     <img src="assets/logos/clients/bunge.svg" alt="Bunge" style="height:34px;object-fit:contain;filter:grayscale(1);opacity:.75">
@@ -849,53 +888,62 @@
 <!-- ================= 13 REGLAS ================= -->
 <section id="reglas">
   <div class="inner">
-  <span class="kicker">Reglas de oro visuales</span>
-  <h2>Lo que nunca se negocia</h2>
-  <p class="lead">Las reglas visuales. Las reglas sobre cómo escribimos están en <a href="lenguaje.html#reglas">Lenguaje</a> y en el <a href="ai.html">checklist verbal</a>.</p>
+  <span class="kicker"><span data-l="es">Reglas de oro visuales</span><span data-l="en">Visual golden rules</span></span>
+  <h2><span data-l="es">Lo que nunca se negocia</span><span data-l="en">What we never compromise on</span></h2>
+  <p class="lead" data-l="es">Las reglas visuales. Las reglas sobre cómo escribimos están en <a href="lenguaje.html#reglas">Lenguaje</a> y en el <a href="ai.html">checklist verbal</a>.</p>
+  <p class="lead" data-l="en">The visual rules. The rules on how we write are in <a href="en/lenguaje.html#reglas">Language</a> and in <a href="en/ai.html">Working with AI</a>.</p>
   <div class="dodont">
     <div class="dd">
-      <span class="h">Hacer</span>
+      <span class="h"><span data-l="es">Hacer</span><span data-l="en">Do</span></span>
       <ul>
-      <li><b>El negro construye, el verde hace crecer</b>: el Verde Magoya #133825 es el verde protagonista, con un solo movimiento verde dominante por pieza.</li>
-      <li>Lima #A2FF00 en poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea gestual.</li>
-      <li>Verde digital #00DE68 = identidad (logo, avatares) y resaltado de la frase clave en titulares sobre fondo oscuro. Lima ≠ logo.</li>
-      <li>Respetar la paleta en todas las piezas, tanto en los posteos con foto como en los más vectoriales.</li>
-      <li>Usar los recursos (CTA, box, flechas, círculos, X y ✓) con sus reglas de color y radio.</li>
-      <li>Personas reales, siempre a color y sin ningún detalle encima.</li>
-      <li>Logos de clientes SIEMPRE reales — jamás placeholders.</li>
-      <li>Todo redondeado: pills, cards, radios generosos — como el wordmark.</li>
+      <li><span data-l="es"><b>El negro construye, el verde hace crecer</b>: el Verde Magoya #133825 es el verde protagonista, con un solo movimiento verde dominante por pieza.</span><span data-l="en"><b>Black builds, green grows</b>: Magoya Green #133825 is the lead green, with a single dominant green move per piece.</span></li>
+      <li><span data-l="es">Lima #A2FF00 en poca superficie: acentos, detalles, CTA o resaltar una palabra con la miscelánea gestual.</span><span data-l="en">Energy Lime #A2FF00 on small surfaces: accents, details, CTAs, or a word highlighted with the hand-drawn marks.</span></li>
+      <li><span data-l="es">Verde digital #00DE68 = identidad (logo, avatares) y resaltado de la frase clave en titulares sobre fondo oscuro. Lima ≠ logo.</span><span data-l="en">Digital Green #00DE68 = identity (logo, avatars) and the highlight for the key phrase in headlines on dark backgrounds. Lime ≠ logo.</span></li>
+      <li><span data-l="es">Respetar la paleta en todas las piezas, tanto en los posteos con foto como en los más vectoriales.</span><span data-l="en">Stick to the palette in every piece, in photo posts and in vector-based ones alike.</span></li>
+      <li><span data-l="es">Usar los recursos (CTA, box, flechas, círculos, X y ✓) con sus reglas de color y radio.</span><span data-l="en">Use the brand elements (CTA, box, arrows, circles, X marks, and ✓) with their color and radius rules.</span></li>
+      <li><span data-l="es">Personas reales, siempre a color y sin ningún detalle encima.</span><span data-l="en">Real people, always in color, with no details on top.</span></li>
+      <li><span data-l="es">Logos de clientes SIEMPRE reales — jamás placeholders.</span><span data-l="en">Client logos are ALWAYS real. Never placeholders.</span></li>
+      <li><span data-l="es">Todo redondeado: pills, cards, radios generosos — como el wordmark.</span><span data-l="en">Everything rounded, like the wordmark: pills, cards, and generous radii.</span></li>
       </ul></div>
     <div class="dd avoid">
-      <span class="h">Evitar</span>
+      <span class="h"><span data-l="es">Evitar</span><span data-l="en">Avoid</span></span>
       <ul>
-      <li><b>Emojis</b> en títulos o en cualquier texto — salvo manitos que señalan y banderas de países.</li>
-      <li>Resaltador sólido o subrayado. Para resaltar con un trazo, solo la miscelánea gestual nueva.</li>
-      <li>Box o fondos grandes en lima: el lima es solo para acentos.</li>
-      <li>Gradientes glossy, 3D, simetría perfecta, estética “hecha por AI”.</li>
-      <li>Pieza 100% negra o 100% verde. Siempre equilibrio.</li>
-      <li>La metáfora del <b>puzzle</b> (brand viejo) queda retirada en todas las piezas.</li>
-      <li>Naranja y amarillo del brand viejo — fuera de la paleta. Los acentos son verdes o lima.</li>
-      <li>El monograma “m” circular <b>dentro de una card</b> — el avatar es identidad de canal, no marca de pieza.</li>
+      <li><span data-l="es"><b>Emojis</b> en títulos o en cualquier texto — salvo manitos que señalan y banderas de países.</span><span data-l="en"><b>Emojis</b> in titles or any other text, except pointing hands and country flags.</span></li>
+      <li><span data-l="es">Resaltador sólido o subrayado. Para resaltar con un trazo, solo la miscelánea gestual nueva.</span><span data-l="en">Solid highlighter blocks or underlines. To highlight with a stroke, use only the new hand-drawn marks.</span></li>
+      <li><span data-l="es">Box o fondos grandes en lima: el lima es solo para acentos.</span><span data-l="en">Lime boxes or large lime backgrounds. Lime is for accents only.</span></li>
+      <li><span data-l="es">Gradientes glossy, 3D, simetría perfecta, estética “hecha por AI”.</span><span data-l="en">Glossy gradients, 3D, perfect symmetry, and a “made by AI” look.</span></li>
+      <li><span data-l="es">Pieza 100% negra o 100% verde. Siempre equilibrio.</span><span data-l="en">A piece that’s 100% black or 100% green. Always keep a balance.</span></li>
+      <li><span data-l="es">La metáfora del <b>puzzle</b> (brand viejo) queda retirada en todas las piezas.</span><span data-l="en">The <b>puzzle</b> metaphor from the old brand. It’s retired from every piece.</span></li>
+      <li><span data-l="es">Naranja y amarillo del brand viejo — fuera de la paleta. Los acentos son verdes o lima.</span><span data-l="en">Orange and yellow from the old brand. They’re out of the palette, and accents are green or lime.</span></li>
+      <li><span data-l="es">El monograma “m” circular <b>dentro de una card</b> — el avatar es identidad de canal, no marca de pieza.</span><span data-l="en">The circular “m” monogram <b>inside a card</b>. The avatar is channel identity and doesn’t brand individual pieces.</span></li>
       </ul></div></div></div>
 </section>
 
 </main>
 
 <footer>
-  <div>Magoya Sistema de marca · Identidad visual</div>
+  <div><span data-l="es">Magoya Sistema de marca · Identidad visual</span><span data-l="en">Magoya brand system · Visual identity</span></div>
 </footer>
 
 <aside class="dlpanel" id="dlpanel" aria-live="polite">
-  <span class="lbl">Descargables de esta sección</span>
+  <span class="lbl"><span data-l="es">Descargables de esta sección</span><span data-l="en">Downloads for this section</span></span>
   <div class="ttl" id="dl-ttl">—</div>
   <div class="meta" id="dl-meta"></div>
   <a id="dl-link" href="#" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg><span id="dl-label">bajar</span></a>
-  <a class="all" href="library.html">Ver todos los recursos →</a>
+  <a class="all" href="library.html"><span data-l="es">Ver todos los recursos →</span><span data-l="en">All resources (Spanish) →</span></a>
 </aside>
 
 <script>
 (function(){
-  var MAP = {
+  var EN = document.documentElement.getAttribute('data-lang') === 'en';
+  var MAP = EN ? {
+    logo:         ['Logo kit',                  '4 wordmarks + 4 avatars · SVG · 10 KB', 'assets/downloads/magoya-logo-kit.zip', 'download logo kit'],
+    color:        ['Color tokens',              'Tokens and editorial guide · 31 KB', 'assets/downloads/magoya-tokens.zip', 'download tokens'],
+    tipografia:   ['Manrope variable',          'TTF 200–800 + OFL license · 70 KB', 'assets/downloads/magoya-manrope.zip', 'download font'],
+    fotografia:   ['Photo library',             '3 top-down aerials + 1 16:9 crop + 5 photos of people · 7.0 MB', 'assets/downloads/magoya-fotos.zip', 'download photos'],
+    iconografia:  ['Icon set',                  '16 agro + 10 AI + 13 social · SVG · 20 KB', 'assets/downloads/magoya-iconos.zip', 'download icons'],
+    reglas:       ['Full guidelines',           'Principles, tokens, and editorial guide · 31 KB', 'assets/downloads/magoya-tokens.zip', 'download guidelines']
+  } : {
     logo:         ['Logo kit',                  '4 wordmarks + 4 avatares · SVG · 10 KB', 'assets/downloads/magoya-logo-kit.zip', 'bajar logo kit'],
     color:        ['Tokens de color',           'Tokens y guía editorial · 31 KB', 'assets/downloads/magoya-tokens.zip', 'bajar tokens'],
     tipografia:   ['Manrope variable',          'TTF 200–800 + licencia OFL · 70 KB', 'assets/downloads/magoya-manrope.zip', 'bajar fuente'],
@@ -909,8 +957,8 @@
   var lblEl=document.querySelector('.dlpanel .lbl');
   function fill(d,id){
     t.textContent=d[0]; m.textContent=d[1]; a.href=d[2]; lb.textContent=d[3];
-    var navLink=document.querySelector('.side a[href="#'+id+'"]');
-    lblEl.textContent=navLink? navLink.textContent+' · descarga' : 'Descargables de esta sección';
+    var navLink=document.querySelector('.side a[href="#'+id+'"] [data-l="'+(EN?'en':'es')+'"]');
+    lblEl.textContent=navLink? navLink.textContent+(EN?' · download':' · descarga') : (EN?'Downloads for this section':'Descargables de esta sección');
   }
   function show(id){
     if(id===current) return;                        // misma seccion: no re-animar
@@ -996,7 +1044,8 @@
   function medir(){
     var max = 0;
     links.forEach(function(a){
-      var sp = a.querySelector('span');
+      /* el span del idioma activo (el otro está en display:none y mide 0) */
+      var sp = [].filter.call(a.querySelectorAll('span'), function(s){ return s.getClientRects().length; })[0];
       if(!sp) return;
       var w = Math.ceil(sp.getBoundingClientRect().width) + 38;   /* 24 izq + 14 der */
       a.style.setProperty('--w', w + 'px');
