@@ -13,7 +13,7 @@
    "BRAND.md"
   ],
   "updated": "2026-10-29",
-  "nota_para_mantenedores": "No es una regla (punto a confirmar 1 del brief del 29 oct 2026). El playbook marca el vocabulario vetado como OBLIGATORIO y este archivo lo refleja. La nota de la Guía editorial V2 (§3, Vocabulario de marca) dice: \"Evitar etiquetas reductoras para definirnos, como «software factory», «dev shop», «agtech» como categoría identitaria, «custom» como promesa central o «transformación digital» como definición. No son palabras universalmente vetadas: evaluar su función y contexto. Mantener las denominaciones aprobadas en el playbook y las traducciones validadas por mercado.\" y que «tecnología» puede emplearse fuera de la definición o el tagline. El playbook (p. 2) dice además que la Guía manda sobre vocabulario. Las dos reglas no conviven: lo decide el dueño del documento."
+  "nota_vocabulario": "Decisión del 29 oct 2026 (Facu, punto a confirmar 1 del brief): las entradas del vocabulario vetado del playbook (pp. 45–46; edición en inglés, pp. 47–48) son obligatorias tal como las define cada fila, por ejemplo «tecnología» sola, «digital» solo o «adopción» como sinónimo de uso. Lo que no está en la lista se evalúa por su función y contexto, como dice la Guía editorial V2 (§3). Así se lee la jerarquía de la p. 2: la Guía manda sobre el vocabulario en general y el playbook fija esta lista."
  },
  "rule": "Vocabulario vetado · obligatorio (playbook, pp. 45-46; edición en inglés, pp. 47-48): Magoya no usa estas palabras. Obligatorio quiere decir sin excepciones salvo aprobación por escrito (playbook, p. 2). Mantener las denominaciones aprobadas en el playbook y las traducciones validadas por mercado.",
  "definition": {

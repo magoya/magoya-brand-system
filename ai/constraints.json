@@ -62,7 +62,7 @@
    ],
    "no_quedaron_vetados": "«soluciones» (con criterio, nunca con adjetivos genéricos como «integrales» o «innovadoras»), «framework» y «metodología» («método» es la preferida), «adopción» en su contexto correcto",
    "reemplazos": "el porqué y qué escribir en su lugar de cada fila están en vocabulary.json y .ai/verbal/lenguaje.md §2",
-   "nota_para_mantenedores": "No es una regla (punto a confirmar 1): la Guía editorial V2 (§3) dice que estas etiquetas \"No son palabras universalmente vetadas: evaluar su función y contexto\" y que «tecnología» puede usarse fuera de la definición o el tagline; el playbook (p. 2) dice que la Guía manda sobre vocabulario. Contradicción abierta hasta que decida el dueño del documento; mientras tanto se aplica la lista y el choque se señala. Ver ai/precedencia.json → jerarquia_de_fuentes.nota_para_mantenedores."
+   "nota_vocabulario": "Decisión del 29 oct 2026 (Facu, punto a confirmar 1 del brief): las entradas del vocabulario vetado del playbook (pp. 45–46; edición en inglés, pp. 47–48) son obligatorias tal como las define cada fila, por ejemplo «tecnología» sola, «digital» solo o «adopción» como sinónimo de uso. Lo que no está en la lista se evalúa por su función y contexto, como dice la Guía editorial V2 (§3). Así se lee la jerarquía de la p. 2: la Guía manda sobre el vocabulario en general y el playbook fija esta lista."
   },
   "reglas_verbales": "el resto de las reglas de texto (definición, frases prohibidas, glosario ES · EN · PT, reglas de evidencia) está en vocabulary.json y .ai/verbal/ — se valida con .ai/checklist-verbal.md. Territorios 50/30/20 y diales por país son guías de planificación y referencia orientativa, no chequeos por texto (guía editorial V2, §4)"
  },

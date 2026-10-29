@@ -43,7 +43,9 @@ Pedido: reemplazar con el playbook ES todo lo que en el sitio sale del playbook 
 | Log de alineación | **LISTO** | `ALINEACION.md`, con los textos de interfaz EN como pendientes de aprobación |
 | Revisión adversarial | **LISTO** | 4 revisores independientes (Estrategia; Voz y Aplicación; Lenguaje, Inicio y AI; consistencia cruzada). El texto del playbook coincide; se corrigieron 30+ hallazgos de estructura, atribución y texto agregado |
 
-Decisiones abiertas (bloquean publicar): 1 vocabulario obligatorio vs. «con criterio» de la Guía; 3 Identidad visual en inglés (hoy la nav EN lleva a la página en español); 4 fila Varina en Arquitectura. También abiertos: 5 Talento/Staff augmentation, 6 «solo en Argentina» en ES, 7 «en mi opinión», 8 bloques viejos de Método, 9 versión canónica, 10 dueño del documento, 11 cita de Apeel, 12 cifra 12%→36%.
+**Punto 1 RESUELTO (Facu, 29 oct):** las entradas del vocabulario vetado son obligatorias tal como las define cada fila; lo que no está en la lista se evalúa por función y contexto (Guía §3). Aplicado en lenguaje.html, ai.html, BRAND.md, vocabulary.json, precedencia, constraints, checklist-verbal y .ai/verbal/lenguaje.md.
+
+Decisiones abiertas (bloquean publicar): 3 Identidad visual en inglés (hoy la nav EN lleva a la página en español); 4 fila Varina en Arquitectura. También abiertos: 5 Talento/Staff augmentation, 6 «solo en Argentina» en ES, 7 «en mi opinión», 8 bloques viejos de Método, 9 versión canónica, 10 dueño del documento, 11 cita de Apeel, 12 cifra 12%→36%.
 
 ## IA en Campo · 29 de octubre de 2026 (slide 9 del deck de Martina)
 
