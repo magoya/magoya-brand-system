@@ -151,7 +151,7 @@ Síntoma: aparece el **puzzle**, naranja o amarillo, ilustración, o una foto de
 
 ### La AI mezcla "IA en Campo" con el core
 
-`ai-en-campo.html` es una **marca anexa con manual propio** que rompe tres reglas del core a propósito: lienzo verde digital `#00DE68` pleno, placa negra de dato clave, y doodles del Studio. Si aparece un fondo verde digital pleno en una pieza institucional, la AI cruzó los manuales. Decile explícitamente en qué marca estás trabajando antes de pedir la pieza.
+`ai-en-campo/` es una **marca anexa con sistema de marca propio**: paleta propia (verde profundo #003922, lima #80FF00, violeta eléctrico #B700FF, blanco, negro), Plus Jakarta Sans + Helvetica, íconos pixelados, personaje y componentes con esquinas cortadas. Si aparece violeta, Plus Jakarta Sans o una esquina cortada en una pieza institucional, la AI cruzó los manuales. Decile explícitamente en qué marca estás trabajando antes de pedir la pieza.
 
 ### La AI cumple al principio y se olvida a los 20 mensajes
 

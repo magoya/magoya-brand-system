@@ -539,8 +539,8 @@
   },
   {
    "carpeta": "assets/pieces",
-   "descripcion": "Piezas publicadas de IA en Campo",
-   "reglas": "Referencia del manual de IA en Campo (ai-en-campo.html). fecha-marcada-ig-portrait es LA pieza canónica de IA en Campo (formato madre 4:5).",
+   "descripcion": "Piezas de la identidad ANTERIOR de IA en Campo (retirada)",
+   "reglas": "No usar en piezas nuevas: el sistema vigente de IA en Campo está en ai-en-campo/ (violeta #B700FF, Plus Jakarta Sans, esquinas cortadas).",
    "archivos": [
     "https://brand.magoya.com/assets/pieces/fecha-marcada-ig-portrait.svg",
     "https://brand.magoya.com/assets/pieces/fecha-marcada.jpg",
@@ -572,8 +572,8 @@
   },
   {
    "carpeta": "assets/studio",
-   "descripcion": "Kit del programa IA en Campo + logos de terceros",
-   "reglas": "Los doodles y flourishes del Studio son SOLO para piezas de IA en Campo, no para Magoya core.",
+   "descripcion": "Logos de terceros + kit de la identidad ANTERIOR de IA en Campo",
+   "reglas": "Los doodles, flourishes, badge y mark del lockup anterior están retirados: no usar en piezas nuevas. El sistema vigente de IA en Campo está en ai-en-campo/.",
    "archivos": [
     "https://brand.magoya.com/assets/studio/badge-envivo.svg",
     "https://brand.magoya.com/assets/studio/doodle-blob.svg",

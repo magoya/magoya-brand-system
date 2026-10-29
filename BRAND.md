@@ -106,11 +106,29 @@ Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. *
 
 ## 10. IA en Campo (manual propio)
 
-**No es una sección de este brand: es una marca de programa presentada por Magoya, con su propio manual** (`ai-en-campo.html`). Programa abierto de AI aplicada al agro (carruseles, reels, webinars). Mismo ADN (Manrope, verdes oficiales) pero **rompe tres reglas del core a propósito**: (1) lienzo **verde digital pleno #00DE68** como fondo dominante; (2) **placa negra** #161616 con texto crema para el dato clave — permitida acá como lenguaje sticker; (3) **ruido con los assets del Studio** (`assets/studio/`): doodles (sparkle, dots, blob, loop), flourishes (arrow, navarrow, circle, underline), badge EN VIVO y logos oficiales de AI/redes — 2–4 por pieza, ±5–15°, en las esquinas, teñidos en verde digital o lima (nunca un color propio: la sub-marca no usa terracota ni ningún acento fuera de la paleta core). Texto secundario verde profundo; display negro. Formato madre: **carrusel retrato 4:5 (1080×1350)** — no el cuadrado 1080×1080, que Instagram dejó de privilegiar para carruseles. Arco narrativo de 4–6 slides (duda real → herramienta → prueba → paso siguiente), sin numerar las slides (el swipe ya lo comunica); **ritmo de color del arco: verde pleno en la primera y la última slide, crema Magoya en las del medio** — todo verde se lee como una sola pieza repetida, no como un recorrido.
+**No es una sección de este brand: es una marca de programa presentada por Magoya, con su propio sistema de marca** (`ai-en-campo/`, octubre 2026). Programa abierto de AI aplicada al agro: carruseles, reels, webinars y capacitaciones abiertas, por ahora solo en Argentina. Magoya habla de AI desde el lado de quien la construye; IA en Campo, desde el lado de quien la usa. **Cuándo NO:** propuestas comerciales, casos de cliente formales, deck de ventas, sitio: eso es core Magoya.
 
-**Logo del programa:** lockup **"IA en Campo · por Magoya"** (hasta que exista el lockup con "presentado por Magoya") abajo-izquierda — reemplaza al wordmark de Magoya solo en piezas de esta línea. Se compone con Manrope viva (800, tracking −2%), nunca como imagen. Lleva un mark a mano (`assets/studio/mark-ai-campo.svg`, mismo lenguaje de las marcas a mano del core) pegado a la derecha de "IA", a ~65% de su altura — **ese mark existe únicamente en este tamaño**: agrandado y suelto en una esquina como estallido cómic queda fuera del sistema. Negro `#161616` sobre lienzo claro, crema `#ECE3DB` sobre placa negra; nunca lima ni verde digital en el lockup — el color lo pone el fondo, no el logo. "por Magoya" siempre en `font-mono`, mayúsculas, más chico: es la firma, no el título.
+**Logo.** Signo ‹ia + leyenda EN CAMPO, en tres versiones: con placa, simple y con "Una iniciativa de Magoya" (`ai-en-campo/assets/descargas/logos.zip`). La minúscula es solo del logo: en texto se escribe siempre **IA en Campo**.
 
-Las piezas se producen SIEMPRE desde plantillas del Studio y su receta queda guardada en un `.magoya.json` (template, scheme, accent, anchor, rule, silueta, objetos con x/y/scale/rotation) — esa es la fuente para reproducirlas, no el ojo. Producción en Magoya Studio (30+ plantillas, 13 formatos de red). Nada de esto vuelve al core.
+**Paleta (alto contraste, llamativa a propósito).** Comparte con Magoya la base (verde profundo `#003922`, verde lima `#80FF00`, negro `#161616`); sale el verde pleno y el crema; entran **violeta eléctrico `#B700FF`** y **blanco `#FFFFFF`**. El violeta es el acento y marca todo lo que es AI y el contenido de IA en Campo News. Combinaciones: frase clave texto oscuro sobre lima · título blanco sobre negro · botón blanco sobre violeta.
+
+**Tipografía.** Par propio, distinto del de Magoya: **Plus Jakarta Sans** (variable 200–800, OFL) para títulos y bajadas; **Helvetica** para texto largo y pies (fallback Arial). Título 800 con tracking −3% (~14% del ancho en un posteo de 1080 px), bajada 500 Medium (~6,5%). Máximo 3 niveles por pieza; nunca una tercera familia; cuerpo nunca menos de 11 px.
+
+**Resaltado.** Una sola frase por título, en MAYÚSCULAS, sobre bloque verde lima con texto oscuro (puede ir levemente inclinado). Emojis: nunca en títulos; solo la manito que señala (👈 👉 👇) para dirigir al botón.
+
+**Imágenes.** Lo humano del campo, de cerca: planos cortos, nítidos, color natural, verdes vivos. La foto trae lo humano; lo gráfico trae la AI.
+
+**Íconos.** 16 íconos pixelados (siguen el lenguaje del logo), monocromos: negro sobre claro, blanco sobre oscuro; uno destacado por pieza (lima sobre oscuro).
+
+**Personaje.** Tiene la forma de las fichas de herramientas (ChatGPT, Gemini): es la ficha de IA en Campo que cobró vida. Mueve la mirada y pone la emoción; no explica. Siempre interactúa con algo y va anclado a un borde (10–15% del ancho), una aparición por pieza (en carruseles, portada y cierre como máximo), mira hacia lo importante y nunca tapa datos. No va en piezas con personas reales ni donde el dato tiene que leerse serio.
+
+**Componentes.** Todo toma la forma de la placa del logo: **esquinas cortadas en diagonal**. Botones en tres niveles (primario violeta, secundario lima, terciario outline), label en minúscula salvo la primera letra, un solo primario por pieza, hover con sombra sólida tipo píxel; sobre violeta, el primario pasa a lima. Chips: etiqueta rectangular sólida, MAYÚSCULAS, sin punto ni ícono, sin hover. Cards en mosaico con esquina cortada: lima para preguntas del lote, violeta para IA en Campo News, verde profundo para webinars y citas. Nada de esto vuelve al core.
+
+**Formatos.** Piezas para redes que hacen decir "a ver" (no buscan un feed uniforme) y miniaturas de YouTube 16:9 con la frase clave en bloque lima sobre fondo oscuro verde y violeta.
+
+**Pendientes que marca el propio manual:** componentes como primera propuesta; colores de caption, link y check "a confirmar"; el verde `#009145` del ícono destacado sobre claro no está en la paleta; alinear el lima `#80FF00` con el de Magoya; una miniatura de YouTube usa la sigla en español en lugar de AI; el logo con placa necesita versión en alta o SVG.
+
+**Identidad anterior (retirada).** El lienzo verde digital pleno, la placa negra con texto crema, el lockup "IA en Campo · por Magoya" en Manrope y los doodles/flourishes del Studio (`assets/studio/`, `assets/pieces/`) eran la identidad previa del programa: no se usan en piezas nuevas.
 
 ## Mapa de archivos del sistema
 
@@ -121,7 +139,7 @@ Las piezas se producen SIEMPRE desde plantillas del Studio y su receta queda gua
 | `library.html` | Recursos: ficha + descarga de cada asset aprobado |
 | `icons.html` | 58 iconos copiables |
 | `logos.html` | Logos de clientes y stack tecnológico |
-| `ai-en-campo.html` | Manual completo de IA en Campo |
+| `ai-en-campo/` | Sistema de marca de IA en Campo (sitio propio, octubre 2026) |
 | `ai.html` | Integrar con AI: cómo cargar esta marca en una herramienta de AI y cómo validar el resultado |
 
 Capa machine-readable: `llms.txt` (resumen estable), `.ai/brand-prompt.md` y `.ai/brand-prompt-short.md` (prompts para pegar), `.ai/checklist.md` (validación visual), `.ai/checklist-verbal.md` (validación de texto), `.ai/verbal/` y `vocabulary.json` (capa verbal) y `.ai/presets/` (uno por herramienta). **Todos derivan de este archivo: si una regla cambia acá, hay que propagarla ahí.**

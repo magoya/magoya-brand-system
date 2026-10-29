@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M685.58,583.67v-29.11h-29.11v-29.11h-29.11v-29.11h-29.12v-29.12h-29.11v-29.11h-29.11v-29.11h-29.11v-29.11h-29.11v-29.11h-29.12v-29.12h-29.11v-29.11h-29.11v-29.11h-29.11v494.96h58.23v-29.11h29.11v-29.11h29.12v-29.11h29.11v58.23h29.11v58.23h29.11v29.11h58.23v-29.11h29.11v-58.23h-29.11v-58.23h-29.12v-29.11h116.46v-58.23h-29.11Z"/>
+  <g>
+    <rect x="365.31" y="263.41" width="29.11" height="494.96"/>
+    <rect x="394.42" y="292.52" width="29.11" height="29.11"/>
+    <rect x="423.54" y="321.64" width="29.11" height="29.12"/>
+    <rect x="452.65" y="350.75" width="29.12" height="29.11"/>
+    <rect x="481.77" y="379.87" width="29.11" height="29.11"/>
+    <rect x="510.89" y="408.98" width="29.11" height="29.11"/>
+    <rect x="540" y="438.1" width="29.11" height="29.11"/>
+    <rect x="569.11" y="467.21" width="29.11" height="29.12"/>
+    <rect x="598.23" y="496.33" width="29.12" height="29.11"/>
+    <rect x="627.35" y="525.44" width="29.11" height="29.11"/>
+    <rect x="656.46" y="554.56" width="29.11" height="29.11"/>
+    <rect x="685.58" y="583.67" width="29.11" height="29.11"/>
+    <rect x="569.11" y="612.79" width="145.58" height="29.12"/>
+    <rect x="569.11" y="641.9" width="29.11" height="29.11"/>
+    <rect x="481.77" y="641.9" width="29.11" height="29.11"/>
+    <rect x="510.89" y="671.02" width="29.11" height="58.23"/>
+    <rect x="540" y="729.25" width="29.11" height="58.23"/>
+    <rect x="569.11" y="787.48" width="58.23" height="29.11"/>
+    <rect x="598.23" y="671.02" width="29.12" height="58.23"/>
+    <rect x="627.35" y="729.25" width="29.11" height="58.23"/>
+    <rect x="452.65" y="671.02" width="29.12" height="29.11"/>
+    <rect x="423.54" y="700.13" width="29.11" height="29.11"/>
+    <rect x="394.42" y="729.25" width="29.11" height="29.11"/>
+  </g>
+</svg>
