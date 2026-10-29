@@ -44,7 +44,7 @@ Y las diez reglas visuales que más se rompen, para tenerlas antes de abrir cual
 - [tokens.json](https://brand.magoya.com/tokens.json): todos los valores exactos con su rol y sus reglas de accesibilidad: paleta completa, regla de uso del color, escala tipográfica, espaciado, radios, layouts de export y las rutas de assets.
 - [tokens.css](https://brand.magoya.com/tokens.css): los mismos tokens como CSS custom properties en dos capas (primitivos y semánticos) con 4 temas: `default` (verde profundo), `light` (crema), `paper` (editorial) y `studio` (blanco + negro + lima, marketing). Usar esto al escribir código.
 - [README.md](https://brand.magoya.com/README.md): mapa del repositorio, orden de lectura recomendado y árbol de la carpeta `assets/`.
-- [ai/assets.json](https://brand.magoya.com/ai/assets.json): manifiesto de TODOS los assets (247 archivos) con URL directa y regla de uso por carpeta: wordmarks, avatares, los 58 íconos del sistema como SVGs individuales (`assets/icons/`), fotos, logos reales de clientes y stack. Pages no lista directorios: este manifiesto es la única forma de enumerar los assets.
+- [ai/assets.json](https://brand.magoya.com/ai/assets.json): manifiesto de TODOS los assets (230 archivos) con URL directa y regla de uso por carpeta: wordmarks, avatares, los 58 íconos del sistema como SVGs individuales (`assets/icons/`), fotos, logos reales de clientes y stack. Pages no lista directorios: este manifiesto es la única forma de enumerar los assets.
 - [llms-full.txt](https://brand.magoya.com/llms-full.txt): TODO el sistema en un solo fetch (doctrina + capa verbal + guía editorial + constraints + precedencia + método + checklists). Empezá acá si tus fetches encadenados fallan o truncan.
 - [ai/facts.json](https://brand.magoya.com/ai/facts.json): los datos REALES de la compañía (cifras aprobadas, clientes y equipo nombrables). Lo que no esté acá se pide, no se inventa.
 - [ai/constraints.json](https://brand.magoya.com/ai/constraints.json): mínimos de logo, clearspace, safe areas, límites de texto: los números que nadie tiene que asumir.
@@ -215,7 +215,7 @@ Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. *
 
 **Pendientes que marca el propio manual:** componentes como primera propuesta; colores de caption, link y check "a confirmar"; el verde `#009145` del ícono destacado sobre claro no está en la paleta; alinear el lima `#80FF00` con el de Magoya; una miniatura de YouTube usa la sigla en español en lugar de AI; el logo con placa necesita versión en alta o SVG.
 
-**Identidad anterior (retirada).** El lienzo verde digital pleno, la placa negra con texto crema, el lockup "IA en Campo · por Magoya" en Manrope y los doodles/flourishes del Studio (`assets/studio/`, `assets/pieces/`) eran la identidad previa del programa: no se usan en piezas nuevas.
+**Identidad anterior (retirada).** El lienzo verde digital pleno, la placa negra con texto crema, el lockup "IA en Campo · por Magoya" en Manrope y los doodles/flourishes del Studio eran la identidad previa del programa: se retiraron del repo el 29 oct 2026 y no se usan en piezas nuevas.
 
 ## Mapa de archivos del sistema
 

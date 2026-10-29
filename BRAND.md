@@ -128,7 +128,7 @@ Línea 2px, terminaciones y esquinas redondeadas, grid 24×24, `currentColor`. *
 
 **Pendientes que marca el propio manual:** componentes como primera propuesta; colores de caption, link y check "a confirmar"; el verde `#009145` del ícono destacado sobre claro no está en la paleta; alinear el lima `#80FF00` con el de Magoya; una miniatura de YouTube usa la sigla en español en lugar de AI; el logo con placa necesita versión en alta o SVG.
 
-**Identidad anterior (retirada).** El lienzo verde digital pleno, la placa negra con texto crema, el lockup "IA en Campo · por Magoya" en Manrope y los doodles/flourishes del Studio (`assets/studio/`, `assets/pieces/`) eran la identidad previa del programa: no se usan en piezas nuevas.
+**Identidad anterior (retirada).** El lienzo verde digital pleno, la placa negra con texto crema, el lockup "IA en Campo · por Magoya" en Manrope y los doodles/flourishes del Studio eran la identidad previa del programa: se retiraron del repo el 29 oct 2026 y no se usan en piezas nuevas.
 
 ## Mapa de archivos del sistema
 

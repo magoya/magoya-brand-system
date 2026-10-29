@@ -62,7 +62,7 @@ Identidad, posicionamiento, territorios, oferta, espacios y Método Magoya salen
 - Pruebas, no adjetivos. Idioma: el del brief; el inglés es el principal de web, LinkedIn e Instagram.
 - Detalle: https://brand.magoya.com/.ai/verbal/guia-editorial.md · https://brand.magoya.com/vocabulary.json · checklist de texto: https://brand.magoya.com/.ai/checklist-verbal.md
 
-IA en Campo es una **marca de programa presentada por Magoya, con manual propio**, no una sección de este brand: su lienzo verde digital pleno, su placa negra de dato clave y sus doodles no se usan nunca en piezas de Magoya core.
+IA en Campo es una **marca de programa presentada por Magoya, con sistema de marca propio** (brand.magoya.com/ai-en-campo/), no una sección de este brand: su violeta eléctrico, su Plus Jakarta Sans, sus íconos pixelados, su personaje y sus esquinas cortadas no se usan nunca en piezas de Magoya core.
 
 # Formato de salida
 

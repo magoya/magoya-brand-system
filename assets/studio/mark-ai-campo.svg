@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none">
-  <!-- Mark de "IA en Campo": el garabato a mano que va SOLO pegado al lockup del logo,
-       nunca como estallido decorativo grande suelto en una esquina (eso quedó afuera). -->
-  <g stroke="currentColor" stroke-width="9" stroke-linecap="round">
-    <path d="M30 4 L22 28"/>
-    <path d="M14 16 L34 22"/>
-    <path d="M12 34 L30 26"/>
-  </g>
-</svg>

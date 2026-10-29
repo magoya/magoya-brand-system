@@ -2,7 +2,7 @@
  "que_es": "Manifiesto completo de assets del brand system de Magoya. Cada URL es pública y fetcheable sin auth. Antes de usar cualquier asset, leer BRAND.md (reglas) y tokens.json (valores).",
  "doctrina": "https://brand.magoya.com/BRAND.md",
  "tokens": "https://brand.magoya.com/tokens.json",
- "total_archivos": 247,
+ "total_archivos": 230,
  "iconos_sistema": [
   {
    "nombre": "sprout",
@@ -350,7 +350,6 @@
    "archivos": [
     "https://brand.magoya.com/assets/downloads/doc-footer.svg",
     "https://brand.magoya.com/assets/downloads/doc-header.svg",
-    "https://brand.magoya.com/assets/downloads/magoya-ai-en-campo.zip",
     "https://brand.magoya.com/assets/downloads/magoya-fotos.zip",
     "https://brand.magoya.com/assets/downloads/magoya-iconos.zip",
     "https://brand.magoya.com/assets/downloads/magoya-logo-kit.zip",
@@ -524,8 +523,6 @@
    "descripcion": "Fotografía real: aérea de campo y personas",
    "reglas": "Aérea de campo: color natural con overlay verde profundo para fondos con texto, siempre enfoque cenital. Personas: siempre a color, sin ningún detalle encima, mejor en espacios abiertos. Nunca stock.",
    "archivos": [
-    "https://brand.magoya.com/assets/photos/ai-campo-silueta.jpg",
-    "https://brand.magoya.com/assets/photos/ai-campo-silueta.png",
     "https://brand.magoya.com/assets/photos/equipo-campo-espalda.jpg",
     "https://brand.magoya.com/assets/photos/equipo-campo-planta.jpg",
     "https://brand.magoya.com/assets/photos/equipo-campo-remera-verde.jpg",
@@ -535,17 +532,6 @@
     "https://brand.magoya.com/assets/photos/field-rows.jpg",
     "https://brand.magoya.com/assets/photos/field-terraces.jpg",
     "https://brand.magoya.com/assets/photos/varu-ceo-color.jpg"
-   ]
-  },
-  {
-   "carpeta": "assets/pieces",
-   "descripcion": "Piezas de la identidad ANTERIOR de IA en Campo (retirada)",
-   "reglas": "No usar en piezas nuevas: el sistema vigente de IA en Campo está en ai-en-campo/ (violeta #B700FF, Plus Jakarta Sans, esquinas cortadas).",
-   "archivos": [
-    "https://brand.magoya.com/assets/pieces/fecha-marcada-ig-portrait.svg",
-    "https://brand.magoya.com/assets/pieces/fecha-marcada.jpg",
-    "https://brand.magoya.com/assets/pieces/impacto-pregunta.jpg",
-    "https://brand.magoya.com/assets/pieces/mito-vs-realidad.jpg"
    ]
   },
   {
@@ -568,23 +554,6 @@
     "https://brand.magoya.com/assets/social/posteo-8.png",
     "https://brand.magoya.com/assets/social/posteo-9-preview.jpg",
     "https://brand.magoya.com/assets/social/posteo-9.png"
-   ]
-  },
-  {
-   "carpeta": "assets/studio",
-   "descripcion": "Logos de terceros + kit de la identidad ANTERIOR de IA en Campo",
-   "reglas": "Los doodles, flourishes, badge y mark del lockup anterior están retirados: no usar en piezas nuevas. El sistema vigente de IA en Campo está en ai-en-campo/.",
-   "archivos": [
-    "https://brand.magoya.com/assets/studio/badge-envivo.svg",
-    "https://brand.magoya.com/assets/studio/doodle-blob.svg",
-    "https://brand.magoya.com/assets/studio/doodle-dots.svg",
-    "https://brand.magoya.com/assets/studio/doodle-loop.svg",
-    "https://brand.magoya.com/assets/studio/doodle-sparkle.svg",
-    "https://brand.magoya.com/assets/studio/flourish-arrow.svg",
-    "https://brand.magoya.com/assets/studio/flourish-circle.svg",
-    "https://brand.magoya.com/assets/studio/flourish-navarrow.svg",
-    "https://brand.magoya.com/assets/studio/flourish-underline.svg",
-    "https://brand.magoya.com/assets/studio/mark-ai-campo.svg"
    ]
   },
   {

@@ -39,8 +39,6 @@ CATDOC = {
  'assets/font': ('Manrope variable (única tipografía)', 'Pesos 200–800. Display 800 tracking −3%. También en Google Fonts como "Manrope".'),
  'assets/font/manrope': ('Archivos de la fuente', ''),
  'assets/favicon': ('Favicons oficiales', 'Avatar m al corte, sin padding extra.'),
- 'assets/pieces': ('Piezas de la identidad ANTERIOR de IA en Campo (retirada)', 'No usar en piezas nuevas: el sistema vigente de IA en Campo está en ai-en-campo/ (violeta #B700FF, Plus Jakarta Sans, esquinas cortadas).'),
- 'assets/studio': ('Logos de terceros + kit de la identidad ANTERIOR de IA en Campo', 'Los doodles, flourishes, badge y mark del lockup anterior están retirados: no usar en piezas nuevas. El sistema vigente de IA en Campo está en ai-en-campo/.'),
  'assets/studio/icons/agro': ('Íconos agro del Studio', ''),
  'assets/studio/icons/ai': ('Logos oficiales de plataformas de AI', 'Usar la variante correcta según fondo (-black sobre claro).'),
  'assets/studio/icons/social': ('Logos oficiales de redes', 'Idem variantes por fondo.'),

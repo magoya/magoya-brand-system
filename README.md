@@ -49,16 +49,13 @@ assets/
 ├── marks/            # miscelánea gestual: 6 flechas, 2 círculos, 2 X y 2 ✓
 ├── components/       # CTA (pill 44px) y box (radio 12px)
 ├── icons/            # los 58 íconos del sistema (export de icons.html)
-├── photos/           # aéreas cenitales + personas a color + silueta de IA en Campo
+├── photos/           # aéreas cenitales + personas a color
 ├── social/           # posteos de redes de referencia (PNG 1080×1350)
 ├── deck/             # deck base institucional (PDF + previews)
-├── pieces/           # capturas de piezas de la identidad anterior de IA en Campo (retirada)
 ├── logos/clients/    # clientes reales
 ├── logos/partners/   # partners tecnológicos
 ├── logos/*.svg       # logos de cuentas objetivo
-├── studio/           # espejo de Magoya Studio: iconos agro/AI/redes y, de la identidad anterior de IA en Campo,
-│                     # doodles, flourishes, badge EN VIVO, mockups de dispositivo,
-│                     # mark-ai-campo.svg (mark a mano del lockup "IA en Campo · por Magoya")
+├── studio/icons/     # espejo de Magoya Studio: iconos agro, logos de AI y de redes
 ├── downloads/        # ZIPs por sección + doc-header/footer (membrete)
 ├── refs/             # MATERIAL FUENTE — no publicable, ver abajo
 └── font/manrope/     # Manrope variable 200–800 (OFL)
@@ -68,7 +65,7 @@ La lista completa y vigente, con URL directa y regla de uso por carpeta, está e
 
 **`assets/refs/` es material fuente, no un asset del sistema.** Son los exports originales del diseñador (~25 MB) que sirvieron de referencia de trazado. No se enlazan desde ninguna página, no se distribuyen y no tienen ficha en `library.html`. Si algo de ahí tiene que poder usarse, primero se produce como asset aprobado y se le hace su ficha.
 
-**Fuentes de las piezas de "IA en Campo"**: `assets/photos/ai-campo-silueta.{jpg,png}` es la silueta recortada que usa Magoya Studio, y `assets/pieces/` son capturas de piezas de la identidad anterior de IA en Campo (retirada; el sistema vigente está en `ai-en-campo/`). Son insumos de producción del Studio, no assets de descarga.
+**IA en Campo** tiene su propio sistema de marca y sus propios archivos en `ai-en-campo/` (fuera de `assets/`). Los archivos de su identidad anterior (doodles, piezas, silueta, kit .zip) se retiraron el 29 oct 2026.
 
 ## Documentos de trabajo
 
