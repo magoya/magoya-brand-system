@@ -47,7 +47,9 @@ Pedido: reemplazar con el playbook ES todo lo que en el sitio sale del playbook 
 
 **Punto 3 RESUELTO (Facu, 29 oct):** lo visual no se duplica en `en/`: Identidad visual, Recursos, Íconos y Logos son una sola página con botón ES/EN (`?lang=en`). Se traduce lo que explica (qué es y criterios de uso), nunca nombres de íconos, logos, archivos ni descargas. La voz y el tono sí van separados por idioma. El inglés de esas páginas no sale del playbook: queda para aprobar en el log de alineación.
 
-Decisiones abiertas (bloquean publicar): 4 fila Varina en Arquitectura. También abiertos: 5 Talento/Staff augmentation, 6 «solo en Argentina» en ES, 7 «en mi opinión», 8 bloques viejos de Método, 9 versión canónica, 10 dueño del documento, 11 cita de Apeel, 12 cifra 12%→36%.
+**Punto 4 RESUELTO (Facu, 30 oct):** la fila Varina Baldi sale de Arquitectura (estrategia.html, `.ai/verbal/estrategia.md` y `.ai/verbal/aplicacion.md`), tal como el playbook nuevo; se confirma con Varu. Varu sigue en la tabla de voceros (p. 55).
+
+Ningún punto bloquea publicar. Abiertos: 5 Talento/Staff augmentation, 6 «solo en Argentina» en ES, 7 «en mi opinión», 8 bloques viejos de Método, 9 versión canónica, 10 dueño del documento, 11 cita de Apeel, 12 cifra 12%→36%.
 
 ## IA en Campo · 29 de octubre de 2026 (slide 9 del deck de Martina)
 

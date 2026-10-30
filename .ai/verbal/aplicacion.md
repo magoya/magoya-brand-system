@@ -16,8 +16,6 @@ Magoya es marca madre y única marca comercial. Método Magoya y Usage Loop son 
 
 **Se escribe:** «IA en Campo, presentado por Magoya».
 
-La fila de Varina Baldi («la voz más generalista de la marca»; relación con Magoya: Magoya presenta) se mantiene en la arquitectura del sitio: ver `.ai/verbal/estrategia.md` §17.
-
 ## 2. Los voceros y sus territorios · Cada voz tiene un territorio claro (p. 55)
 
 | Vocero | Territorio primario | Ángulo | Audiencia y tono |

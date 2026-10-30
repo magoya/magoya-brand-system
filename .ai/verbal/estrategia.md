@@ -354,7 +354,6 @@ Magoya es marca madre y única marca comercial. Método Magoya y Usage Loop son 
 |---|---|---|---|
 | Magoya | Marca principal. Le habla a agribusiness (empresas del agro). Sale primero y construye el posicionamiento de consultora hands-on. | Los tres territorios, el Método Magoya y los puntos de vista de marca. | No le habla al productor ni al usuario final. No publica contenido educativo básico. |
 | Los voceros | Directores y expertos, desde sus cuentas personales y sobre territorios autorizados. | Territorio primario en un 70%, los otros dos en un 30%. Color, anécdotas y profundidad. | No reemplazan a la marca. No publican contenido institucional puro. |
-| Varina Baldi | La voz más generalista de la marca. | Relación con Magoya: Magoya presenta. | |
 | IA en Campo | Marca de programa presentada por Magoya, no marca de Magoya. No es una línea de negocio. | AI aplicada al día operativo del campo, para el usuario final. | No habla desde la cuenta de Magoya como si fuera contenido propio de la marca. |
 
 **Se escribe:** «IA en Campo, presentado por Magoya».

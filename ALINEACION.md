@@ -21,3 +21,4 @@ El Magoya Brand Voice Playbook (octubre de 2026) exige que cada cambio futuro se
 | 29 oct 2026 | Identidad visual · Cuerpo de ejemplo | — | Boilerplate corto EN (EN p. 13) | Pendiente |
 | 29 oct 2026 | Vocabulario vetado (punto a confirmar 1) | Las entradas del vocabulario vetado son obligatorias tal como las define cada fila; lo que no está en la lista se evalúa por su función y contexto (Guía §3). | The banned vocabulary entries are mandatory as each row defines them. Anything not on the list is judged by its function and context. | Facu |
 | 29 oct 2026 | Identidad visual, Recursos, Íconos y Logos | (texto ES de cada página) | Inglés nativo en la misma página, botón ES/EN (`?lang=en`); solo lo explicativo, no los nombres de assets | Pendiente |
+| 30 oct 2026 | Estrategia · Arquitectura de marca | Sale la fila «Varina Baldi», que venía del playbook anterior | (no existía en EN) | Facu; a confirmar con Varu |
