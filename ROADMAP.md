@@ -128,7 +128,7 @@ Las decisiones abiertas de la capa para AI (capacidades en `facts.json`, marcado
 |---|---|
 | Dos marcas, dos manuales | El core (`brand-book.html`) y **IA en Campo** (`ai-en-campo.html`) son **marcas separadas**. IA en Campo rompe 3 reglas del core **a propósito** (fondo verde digital pleno · placa negra con crema para el dato clave · ruido controlado de 2–4 doodles ±5–15°). **Nada de eso vuelve al core** |
 | Producción de IA en Campo | Sus piezas se producen en Magoya Studio y la receta queda en un `.magoya.json`: esa es la fuente para reproducir una pieza, no el ojo |
-| Capa para AI | `BRAND.md` (doctrina) + `tokens.json` (valores) + `tokens.css` (4 temas) + `llms.txt` / `llms-full.txt`. El equipo trabaja la marca en el proyecto de Claude "Magoya · Marca" (`ai.html`) |
+| Capa para AI | `BRAND.md` (doctrina) + `tokens.json` (valores) + `tokens.css` (4 temas) + `llms.txt` / `llms-full.txt`. La marca se consume desde cualquier AI (`ai.html`): por link, con archivos cargados o desde el repo. El proyecto de Claude "Magoya · Marca" es una opción, no la única (decisión de Facu, 17 nov 2026; reemplaza «un único proyecto oficial» del 19 oct). Los vectores propios se publican también como texto (`ai/vectores.md`) |
 | Material fuente | `assets/refs/` (25 MB del diseñador) **excluido del repo** vía `.gitignore` |
 
 ---

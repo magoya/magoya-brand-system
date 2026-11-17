@@ -6,7 +6,7 @@ Sistema de marca oficial de **Magoya**, consultora hands-on en software y AI par
 
 **Live:** https://brand.magoya.com/
 
-**Regla madre:** todo asset que se puede usar tiene que estar en el brand, con su ficha: qué es, cuándo se usa, cuándo no, y de dónde se baja.
+**Regla madre:** todo asset que se puede usar tiene que estar en el brand, con su ficha: qué es, cuándo se usa, cuándo no, y de dónde se baja. Y tiene que ser un archivo del sistema, con URL directa y entrada en `ai/assets.json`: lo que vive solo adentro de una página, un ZIP o un PDF, una AI no lo puede consumir.
 
 ## Para personas
 
@@ -22,19 +22,20 @@ Todas las páginas comparten la misma barra de navegación (`nav.css` + `nav.js`
 | Identidad visual | [`brand-book.html`](brand-book.html) · [`icons.html`](icons.html) | Logo, color, tipografía, fotografía, iconografía, componentes, reglas de oro visuales · librería de 58 íconos |
 | Recursos | [`library.html`](library.html) · [`logos.html`](logos.html) | Lo que se descarga: logo kit, Manrope, paleta (tokens), íconos, logos de clientes, membrete de documentos, fotos aéreas cenitales y de personas, posteos de redes y el deck base (referencias en PNG y PDF) y el kit anterior de IA en Campo |
 | IA en Campo | [`ai-en-campo/`](ai-en-campo/) | Sistema de marca propio del programa presentado por Magoya (sitio aparte, octubre 2026): esencia, logo, paleta, tipografía, imágenes, íconos, piezas, YouTube, personaje, componentes y recursos. `ai-en-campo.html` redirige ahí |
-| Integrar con AI | [`ai.html`](ai.html) | El proyecto de Claude "Magoya · Marca": cómo se usa, cómo se valida lo que devuelve y cómo se administra |
+| Integrar con AI | [`ai.html`](ai.html) | La página para personas: el mensaje para pegar en cualquier AI y los archivos para cargar cuando no abre links. Lo técnico lo lee la AI en [`ai/protocolo.md`](ai/protocolo.md) |
 
 Estilos compartidos: `manual.css` (base del manual, extraída del brand book), `playbook.css` (componentes de la capa verbal), `nav.css` y `nav.js` (navegación). `manual.js` maneja el índice lateral y el alto del topbar.
 
 ## Para AIs
 
-Si sos una AI escribiendo o revisando contenido para Magoya, leé **en este orden**:
+Si sos una AI escribiendo o revisando contenido para Magoya, tu punto de entrada es el protocolo de consumo, [`ai/protocolo.md`](ai/protocolo.md): seguilo en orden. Los archivos que usa son estos:
 
 1. [`BRAND.md`](BRAND.md) — la doctrina completa en Markdown (reglas, roles de color, prohibiciones). Sus reglas visuales espejan las del brand book visual.
 2. [`tokens.json`](tokens.json) — todos los valores exactos: paleta con roles y reglas de accesibilidad, regla de uso del color, tipografía, espaciado, radios, layouts de export y rutas de assets.
 3. [`tokens.css`](tokens.css) — los mismos tokens como custom properties CSS con 4 temas (`default` verde profundo, `light`, `paper`, `studio`).
 4. [`llms.txt`](llms.txt) — el resumen corto y estable de la marca para agentes.
-5. [`.ai/`](.ai) — prompts listos para pegar (`brand-prompt.md`, `brand-prompt-short.md`), los checklists de validación (`checklist.md` visual, `checklist-verbal.md` de texto) y presets por herramienta (`.ai/presets/`). La guía de uso está en [`ai.html`](ai.html).
+5. [`ai/vectores.md`](ai/vectores.md) — los vectores propios (wordmark, avatares, miscelánea, íconos) con su código SVG, como texto. Un `.svg` pedido por URL no le llega a una AI que lee por link; este archivo sí. Las fotos tienen su ficha en `ai/assets.json` (clave `fotos`).
+6. [`.ai/`](.ai) — prompts listos para pegar (`brand-prompt.md`, `brand-prompt-short.md`), los checklists de validación (`checklist.md` visual, `checklist-verbal.md` de texto) y presets por herramienta (`.ai/presets/`, incluido `AGENTS.md`). La guía de uso está en [`ai.html`](ai.html).
 
 Reglas mínimas si solo vas a leer una cosa: Manrope; el Verde Magoya `#133825` es el verde protagonista; lima `#A2FF00` en poca superficie: acentos, detalles, CTA o resaltar una palabra (la frase clave sobre oscuro va en Verde digital #00DE68), y nunca como texto sobre blanco; el Verde Magoya ocupa la mayor superficie y el lima mucha menos (sin porcentajes definidos); logo/avatares = `#00DE68`; fotos aéreas cenitales con overlay verde profundo si llevan texto; personas siempre a color, sin ningún detalle encima; no hay ilustración; para resaltar, color o el círculo gestual nuevo, nunca subrayado; emojis prohibidos salvo manitos que señalan y banderas; el monograma "m" no va en cards; nada de gradientes glossy, puzzle, naranja ni amarillo.
 
@@ -84,7 +85,7 @@ Sitio estático — no hay build. Servir la carpeta con cualquier server:
 python3 -m http.server 5501 --directory .
 ```
 
-`python3 ai/generate.py` regenera la capa para AI (íconos, `ai/assets.json`, `llms-full.txt`) y `python3 ai/validar.py` la valida.
+`python3 ai/generate.py` regenera la capa para AI (íconos, `ai/assets.json` con la ficha de cada foto, `ai/vectores.md`, el preset `AGENTS.md`, `llms-full.txt` y `ai/kit.zip`) y `python3 ai/validar.py` la valida.
 
 ---
 

@@ -2,6 +2,26 @@
  "que_es": "Manifiesto completo de assets del brand system de Magoya. Cada URL es pública y fetcheable sin auth. Antes de usar cualquier asset, leer BRAND.md (reglas) y tokens.json (valores).",
  "doctrina": "https://brand.magoya.com/BRAND.md",
  "tokens": "https://brand.magoya.com/tokens.json",
+ "como_se_consume": {
+  "regla": "Todo elemento de la marca es un archivo del sistema: tiene URL directa y figura en este manifiesto. Nada vive solo adentro de una página, un ZIP o un PDF.",
+  "por_que": "Una AI que lee por link recibe texto (Markdown, JSON, TXT). Un archivo de imagen (.svg, .jpg, .png) no le llega: probado el 17 de noviembre de 2026 con el fetch de Claude contra brand.magoya.com. El texto llega en cualquier herramienta.",
+  "vectores_de_la_marca": {
+   "como": "texto",
+   "donde": "https://brand.magoya.com/ai/vectores.md",
+   "detalle": "Wordmark, avatares, miscelánea gestual, componentes, favicon, los 58 íconos del sistema y los íconos agro, con su código SVG completo. Se pegan tal cual: nunca se redibujan."
+  },
+  "fotos": {
+   "como": "por URL, o como archivo cargado",
+   "donde": "la clave \"fotos\" de este manifiesto",
+   "detalle": "La AI no ve la foto por link: la elige por su ficha (familia, medidas, orientación, descripción) y la referencia por URL; la imagen la carga el navegador de quien abre la pieza. En una herramienta que trabaja con archivos cargados, la foto se sube como archivo."
+  },
+  "logos_de_terceros": {
+   "como": "por URL",
+   "donde": "las carpetas assets/logos y assets/studio/icons/ai y social",
+   "detalle": "Logos de clientes, partners, plataformas y redes: se referencian por URL, nunca se redibujan ni se inventan."
+  },
+  "descargas": "ZIP, PDF y fuentes son para personas. Una AI no los abre por link: lo que traen adentro también está publicado como archivo suelto."
+ },
  "total_archivos": 230,
  "iconos_sistema": [
   {
@@ -293,6 +313,106 @@
    "nombre": "info",
    "categoria": "Sistema / UI",
    "url": "https://brand.magoya.com/assets/icons/info.svg"
+  }
+ ],
+ "fotos": [
+  {
+   "archivo": "equipo-campo-espalda.jpg",
+   "url": "https://brand.magoya.com/assets/photos/equipo-campo-espalda.jpg",
+   "familia": "personas",
+   "ancho_px": 2048,
+   "alto_px": 1150,
+   "orientacion": "horizontal",
+   "peso_kb": 254,
+   "descripcion": "Integrante del equipo de espaldas con la remera negra de Magoya en el campo",
+   "description_en": "Team member seen from behind in the black Magoya T-shirt in the field"
+  },
+  {
+   "archivo": "equipo-campo-planta.jpg",
+   "url": "https://brand.magoya.com/assets/photos/equipo-campo-planta.jpg",
+   "familia": "personas",
+   "ancho_px": 1150,
+   "alto_px": 2048,
+   "orientacion": "vertical",
+   "peso_kb": 275,
+   "descripcion": "Integrante del equipo Magoya mirando una planta en el campo",
+   "description_en": "Magoya team member looking at a plant in the field"
+  },
+  {
+   "archivo": "equipo-campo-remera-verde.jpg",
+   "url": "https://brand.magoya.com/assets/photos/equipo-campo-remera-verde.jpg",
+   "familia": "personas",
+   "ancho_px": 2048,
+   "alto_px": 1150,
+   "orientacion": "horizontal",
+   "peso_kb": 235,
+   "descripcion": "Integrantes del equipo en el campo, uno con la remera verde de Magoya",
+   "description_en": "Team members in the field, one in the green Magoya T-shirt"
+  },
+  {
+   "archivo": "equipo-campo-remera.jpg",
+   "url": "https://brand.magoya.com/assets/photos/equipo-campo-remera.jpg",
+   "familia": "personas",
+   "ancho_px": 2048,
+   "alto_px": 1150,
+   "orientacion": "horizontal",
+   "peso_kb": 173,
+   "descripcion": "Integrante del equipo Magoya con remera verde en el campo",
+   "description_en": "Magoya team member in a green T-shirt in the field"
+  },
+  {
+   "archivo": "field-bali.jpg",
+   "url": "https://brand.magoya.com/assets/photos/field-bali.jpg",
+   "familia": "aérea de campo",
+   "ancho_px": 2400,
+   "alto_px": 1352,
+   "orientacion": "horizontal",
+   "peso_kb": 845,
+   "descripcion": "Mosaico Bali",
+   "description_en": "Field mosaic in Bali from above"
+  },
+  {
+   "archivo": "field-mosaic-16x9.jpg",
+   "url": "https://brand.magoya.com/assets/photos/field-mosaic-16x9.jpg",
+   "familia": "aérea de campo",
+   "ancho_px": 1600,
+   "alto_px": 900,
+   "orientacion": "horizontal",
+   "peso_kb": 841,
+   "descripcion": "Aérea · mosaico de lotes 16:9",
+   "description_en": "Aerial · field mosaic 16:9"
+  },
+  {
+   "archivo": "field-rows.jpg",
+   "url": "https://brand.magoya.com/assets/photos/field-rows.jpg",
+   "familia": "aérea de campo",
+   "ancho_px": 2400,
+   "alto_px": 1799,
+   "orientacion": "horizontal",
+   "peso_kb": 2222,
+   "descripcion": "Campo hileras",
+   "description_en": "Crop rows from above"
+  },
+  {
+   "archivo": "field-terraces.jpg",
+   "url": "https://brand.magoya.com/assets/photos/field-terraces.jpg",
+   "familia": "aérea de campo",
+   "ancho_px": 2400,
+   "alto_px": 1598,
+   "orientacion": "horizontal",
+   "peso_kb": 2039,
+   "descripcion": "Terrazas",
+   "description_en": "Terraced fields from above"
+  },
+  {
+   "archivo": "varu-ceo-color.jpg",
+   "url": "https://brand.magoya.com/assets/photos/varu-ceo-color.jpg",
+   "familia": "personas",
+   "ancho_px": 400,
+   "alto_px": 400,
+   "orientacion": "cuadrada",
+   "peso_kb": 16,
+   "descripcion": "Varina Baldi, Founder & CEO"
   }
  ],
  "carpetas": [

@@ -1,6 +1,6 @@
 # Cómo darle el manual de Magoya a una AI
 
-> **Equipo de Magoya:** esta guía por herramienta quedó como referencia técnica. El trabajo de marca del equipo se hace en el proyecto oficial de Claude "Magoya · Marca"; nadie configura su propia herramienta. Ver [ai.html](ai.html).
+> La marca de Magoya se consume desde cualquier AI. El protocolo que sigue la AI está en [ai/protocolo.md](ai/protocolo.md) y la página para personas en [ai.html](ai.html); esta guía es el detalle de setup, herramienta por herramienta. Los vectores propios (wordmark, avatares, íconos) están como texto en `ai/vectores.md`: un `.svg` pedido por URL no le llega a una AI que lee por link.
 
 Guía de setup, herramienta por herramienta. El objetivo es que cualquier AI que use el equipo respete el manual sin que haya que recordárselo en cada prompt.
 

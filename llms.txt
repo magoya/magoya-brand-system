@@ -2,9 +2,9 @@
 
 > Brand System oficial de **Magoya** — consultora hands-on en software y AI para empresas del agro (*Magoya is a hands-on software and AI consulting firm for agribusiness*). Tagline: **Software and AI for agribusiness**. Este sistema es la única fuente de verdad de la marca: una capa verbal (estrategia, voz, lenguaje y aplicación: la estrategia, el posicionamiento, la oferta y el método salen del Magoya Brand Voice Playbook de octubre de 2026, con edición en español y edición en inglés; la voz, el estilo y el vocabulario, de la Guía editorial V2 "Manual voz y tono MAGOYA V2") y una capa visual (paleta con roles, tipografía Manrope, fotografía, iconografía y componentes, actualizada con el feedback del equipo de octubre de 2026), publicadas en formato legible por personas (HTML) y por modelos (Markdown + JSON + CSS).
 
-**Versión del sistema: 1.3 · 29 de octubre de 2026.** Qué cambió: la capa verbal pasa al Magoya Brand Voice Playbook de octubre de 2026, en español (fuente de verdad) y en inglés (cómo se dice en inglés), y el sitio suma la edición en inglés en [/en/](https://brand.magoya.com/en/). La misma versión figura en el título de `BRAND.md` y en `meta.version` de `tokens.json`.
+**Versión del sistema: 1.4 · 17 de noviembre de 2026.** Qué cambió: la marca se consume desde cualquier AI (por link, con archivos cargados o desde el repo) y deja de haber un único proyecto oficial; los vectores propios se publican también como texto en `ai/vectores.md` y cada foto tiene su ficha en `ai/assets.json`. La versión 1.3 (29 de octubre de 2026) llevó la capa verbal al Magoya Brand Voice Playbook de octubre de 2026, en español (fuente de verdad) y en inglés (cómo se dice en inglés), y sumó la edición en inglés en [/en/](https://brand.magoya.com/en/). La misma versión figura en el título de `BRAND.md` y en `meta.version` de `tokens.json`.
 
-**Equipo de Magoya:** el trabajo de marca con AI se hace en el proyecto oficial de Claude **"Magoya · Marca"**, en la organización de Magoya en claude.ai, con las instrucciones y los archivos ya cargados. Otras herramientas no están soportadas para el trabajo del equipo con la marca. Cómo se usa y cómo se administra: [ai.html](https://brand.magoya.com/ai.html).
+**Si sos una AI, tu punto de entrada es el protocolo de consumo:** [ai/protocolo.md](https://brand.magoya.com/ai/protocolo.md). Define la primera respuesta, la regla de caché, el modo de lectura, qué archivos se leen según la tarea, cómo se consume cada tipo de asset, la instalación por herramienta, las fallas conocidas y el contrato de entrega. Informá siempre la versión del sistema que leíste (la línea de arriba): hay fetch que devuelven una copia vieja guardada en caché. La página para personas es [ai.html](https://brand.magoya.com/ai.html).
 
 Si vas a generar contenido, código o copy para Magoya, leé `BRAND.md`, `tokens.json` y `vocabulary.json`, y aplicá el prompt de sistema de `.ai/brand-prompt.md`. Si escribís texto, leé `.ai/verbal/guia-editorial.md` (su Parte II son instrucciones operativas para agentes de AI) y corré `.ai/checklist-verbal.md` antes de entregar. Las cinco reglas verbales que más se rompen:
 
@@ -59,18 +59,21 @@ Same meaning in both languages, native wording in each. El texto sale del playbo
 - [tokens.css](https://brand.magoya.com/tokens.css): los mismos tokens como CSS custom properties en dos capas (primitivos y semánticos) con 4 temas: `default` (verde profundo), `light` (crema), `paper` (editorial) y `studio` (blanco + negro + lima, marketing). Usar esto al escribir código.
 - [README.md](https://brand.magoya.com/README.md): mapa del repositorio, orden de lectura recomendado y árbol de la carpeta `assets/`.
 - [ai/assets.json](https://brand.magoya.com/ai/assets.json): manifiesto de TODOS los assets (230 archivos) con URL directa y regla de uso por carpeta: wordmarks, avatares, los 58 íconos del sistema como SVGs individuales (`assets/icons/`), fotos, logos reales de clientes y stack. Pages no lista directorios: este manifiesto es la única forma de enumerar los assets.
-- [llms-full.txt](https://brand.magoya.com/llms-full.txt): TODO el sistema en un solo fetch (doctrina + capa verbal + guía editorial + constraints + precedencia + método + checklists). Empezá acá si tus fetches encadenados fallan o truncan.
+- [ai/vectores.md](https://brand.magoya.com/ai/vectores.md): los vectores propios de la marca (wordmark, avatares, miscelánea gestual, componentes, favicon, los 58 íconos y los íconos agro) con su código SVG completo, como texto. Un `.svg` o una foto pedidos por su URL no le llegan a una AI que lee por link; este archivo sí. Para leer por link está partido en tres, más livianos: `ai/vectores/logo.md`, `ai/vectores/iconos.md` y `ai/vectores/miscelanea.md`. Las fotos se eligen por su ficha (clave `fotos` de `ai/assets.json`) y se referencian por URL.
+- [llms-full.txt](https://brand.magoya.com/llms-full.txt): casi todo el sistema en un solo archivo (doctrina + capa verbal + guía editorial + constraints + precedencia + método + checklists). Es para CARGAR como archivo: pesa unos 190 KB y un fetch por link lo corta (probado el 17 de noviembre de 2026). Por link, leé los archivos sueltos que indica el protocolo.
 - [ai/facts.json](https://brand.magoya.com/ai/facts.json): los datos REALES de la compañía (cifras aprobadas, clientes y equipo nombrables). Lo que no esté acá se pide, no se inventa.
 - [ai/constraints.json](https://brand.magoya.com/ai/constraints.json): mínimos de logo, clearspace, safe areas, límites de texto: los números que nadie tiene que asumir.
 
 ## Entrada por AI (un link por herramienta, versionadas por separado)
 
+- [ai/protocolo.md](https://brand.magoya.com/ai/protocolo.md): **el protocolo de consumo, común a todas.** Empezá acá.
 - [ai/chatgpt.md](https://brand.magoya.com/ai/chatgpt.md): ChatGPT (Custom GPT / Projects) — flujo por browsing, sin permisos.
 - [ai/claude.md](https://brand.magoya.com/ai/claude.md): Claude (claude.ai / Claude Code / API).
 - [ai/gemini.md](https://brand.magoya.com/ai/gemini.md): Gemini (app / AI Studio / Gems).
 - [ai/cursor.md](https://brand.magoya.com/ai/cursor.md): Cursor.
 - [ai/copilot.md](https://brand.magoya.com/ai/copilot.md): GitHub Copilot.
 - [ai/generic.md](https://brand.magoya.com/ai/generic.md): cualquier otra AI con browsing.
+- [.ai/presets/AGENTS.md](https://brand.magoya.com/.ai/presets/AGENTS.md): preset `AGENTS.md` para agentes que trabajan dentro de un repo (Codex, Cursor, Copilot, Gemini CLI y otros).
 
 ## Prompts y checklist listos para usar
 
@@ -80,8 +83,8 @@ Same meaning in both languages, native wording in each. El texto sale del playbo
 - [.ai/checklist-verbal.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist-verbal.md): checklist verbal — las 8 preguntas del control antes de entregar de la guía editorial (§9) y los chequeos del playbook que siguen vigentes (definición, AI, uso/adopción, espacios y método, Accountable, dealer, agribusiness), cada uno con su fuente; el 50/30/20 queda como nota de planificación. Se corre sobre cualquier texto de Magoya antes de entregarlo.
 - [ai/precedencia.json](https://brand.magoya.com/ai/precedencia.json): ley de precedencia — qué documento gana cuando dos reglas oficiales del sistema se contradicen, más el contrato de entrega (qué puede salir con un hueco adentro y qué no).
 - [ai/metodo.md](https://brand.magoya.com/ai/metodo.md): el método de trabajo para escribir y revisar contenido de Magoya: entender antes de escribir, y pasadas de copy, diseño y crítica antes de entregar.
-- [ai.html](https://brand.magoya.com/ai.html): Integrar con AI. El proyecto oficial de Claude "Magoya · Marca" que usa el equipo: cómo usarlo, checklists visual y verbal, límites y cómo se administra.
-- [AI-INTEGRATION.md](https://brand.magoya.com/AI-INTEGRATION.md): referencia técnica anterior, no es el camino del equipo (ver ai.html). Guía de setup por herramienta (Claude Projects, Claude Code, Claude Design, Custom GPT, Cursor, Copilot, chat genérico) con tabla de verificación y troubleshooting.
+- [ai.html](https://brand.magoya.com/ai.html): Integrar con AI, la página para personas: el mensaje para pegar en cualquier AI y los archivos para cargar cuando no abre links. Todo lo técnico está en `ai/protocolo.md`.
+- [AI-INTEGRATION.md](https://brand.magoya.com/AI-INTEGRATION.md): guía técnica de setup herramienta por herramienta (Claude Projects, Claude Code, Claude Design, Custom GPT, Cursor, Copilot, chat genérico) con tabla de verificación y troubleshooting. La versión corta es ai.html.
 
 ## Manual visual navegable
 

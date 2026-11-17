@@ -1,8 +1,10 @@
 # Magoya Brand — entrada para Claude (claude.ai / Claude Code / API)
 
-**Versión 2.1 · 2026-10-29** · Punto de entrada de la marca Magoya para Claude. Se versiona por separado de las otras AIs: cuando Claude gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
+**Versión 2.2 · 2026-11-17** · Punto de entrada de la marca Magoya para Claude. Se versiona por separado de las otras AIs: cuando Claude gane capacidades nuevas, esta entrada se actualiza sin tocar las demás (changelog al pie).
 
-> **Equipo de Magoya:** para el trabajo de marca, el camino oficial es el proyecto de Claude "Magoya · Marca" (https://brand.magoya.com/ai.html). Esta entrada queda como punto de lectura para cualquier AI.
+> **La marca de Magoya se consume desde cualquier AI.** Esta es una de las entradas y todas leen la misma fuente. El protocolo común (primera respuesta, modo de lectura, assets, instalación, fallas conocidas, contrato de entrega) es https://brand.magoya.com/ai/protocolo.md
+
+> **Si sos una AI:** decile a la persona qué versión y qué fecha de esta entrada leíste. Algunos fetch devuelven una copia vieja guardada en caché: si no es la última del changelog publicado, pedí esta misma URL agregándole `?v=` y la fecha de hoy.
 
 > **AVISO PARA EL MODELO QUE LEE ESTO: no resumas este archivo — necesitás las URLs literales.** Si tu herramienta de fetch te devolvió un resumen sin links, volvé a pedir el contenido completo, o hacé UN fetch de `https://brand.magoya.com/llms-full.txt` que trae todo el sistema en un solo archivo.
 Si sos Claude leyendo esto: seguí el flujo de abajo, todas las URLs son públicas y fetcheables sin auth.
@@ -13,7 +15,7 @@ Si sos Claude leyendo esto: seguí el flujo de abajo, todas las URLs son públic
    **Texto** (si hay copy) → https://brand.magoya.com/.ai/verbal/guia-editorial.md, https://brand.magoya.com/vocabulary.json y https://brand.magoya.com/.ai/checklist-verbal.md. La identidad, los territorios, la oferta, los espacios y el Método Magoya salen del Magoya Brand Voice Playbook (octubre de 2026): Magoya es una consultora hands-on en software y AI para empresas del agro; se escribe AI en cualquier idioma (única excepción: el nombre propio IA en Campo). La voz, el estilo y el vocabulario salen de la Guía editorial V2, cuya Parte II son instrucciones operativas para agentes de AI: no inventar hechos ni cifras (toda métrica real la valida alguien del equipo), no nombrar clientes por defecto, distinguir hecho, interpretación, hipótesis y ejemplo, entregar como borrador pendiente de revisión cuando hay decisiones, riesgos o cifras, y señalar los conflictos entre fuentes en vez de resolverlos. El vocabulario vetado del playbook es obligatorio (pp. 45–46) y el 50/30/20 planifica contenidos, no se chequea por texto. Para textos en inglés manda la edición en inglés del playbook, redactada de forma nativa (nunca se traduce desde el español): https://brand.magoya.com/en/. Detalle en https://brand.magoya.com/.ai/verbal/ (guia-editorial.md, estrategia.md, voz.md, lenguaje.md, aplicacion.md).
 2. **Valores exactos** → https://brand.magoya.com/tokens.json · paleta con roles, regla de uso del color, escala tipográfica, espaciado, radios y accesibilidad.
 3. **Tokens CSS** (si vas a escribir código) → https://brand.magoya.com/tokens.css · usá las custom properties, nunca hex sueltos.
-4. **Assets** → https://brand.magoya.com/ai/assets.json · manifiesto de TODOS los archivos (230): wordmarks, avatares, 58 íconos, fotos, logos reales de clientes; cada uno con URL directa y su regla de uso. Los SVGs se leen como texto: el wordmark se usa tal cual, jamás se redibuja.
+4. **Assets** → https://brand.magoya.com/ai/assets.json · manifiesto de TODOS los archivos (230): wordmarks, avatares, 58 íconos, fotos, logos reales de clientes; cada uno con URL directa y su regla de uso. Los vectores propios (wordmark, avatares, miscelánea gestual, íconos) están como texto en https://brand.magoya.com/ai/vectores.md (un `.svg` pedido por su URL puede no llegarte; ese archivo sí). El código se pega tal cual, jamás se redibuja. Las fotos no se leen por link: elegilas por su ficha (clave `fotos` del manifiesto) y referencialas por URL.
 5. **Datos reales de la empresa** → https://brand.magoya.com/ai/facts.json · cifras aprobadas y equipo nombrable. Los clientes se nombran solo con autorización expresa (guía editorial V2, §8); si no está registrada, va a PEDIDO A HUMANOS. Si el dato no está acá, se le pide al usuario, y toda cifra real la valida una persona del equipo (contrato en `validacion`).
 6. **Constraints duros** → https://brand.magoya.com/ai/constraints.json · mínimos de logo, clearspace, safe areas, límites de texto. Nada se asume: si un valor no está ahí ni en tokens.json, se pregunta.
 7. **Método de trabajo** → https://brand.magoya.com/ai/metodo.md · la idea antes del texto, títulos-aserción, y pasadas de copy, diseño y crítica antes de entregar (secuenciales si no tenés subagentes).
@@ -24,13 +26,14 @@ Si sos Claude leyendo esto: seguí el flujo de abajo, todas las URLs son públic
 ## URLs del flujo (lista plana: si tu fetch resumió lo de arriba, usá esta)
 
 ```
-https://brand.magoya.com/llms-full.txt        <- casi todo en un solo fetch (voz.md y lenguaje.md van aparte)
+https://brand.magoya.com/llms-full.txt        <- casi todo en un archivo, para CARGAR: por link un fetch lo corta (unos 190 KB)
 https://brand.magoya.com/BRAND.md             <- doctrina
 https://brand.magoya.com/tokens.json          <- valores exactos
 https://brand.magoya.com/tokens.css           <- tokens como CSS custom properties
 https://brand.magoya.com/ai/facts.json        <- datos REALES de la empresa (cifras, clientes, equipo)
 https://brand.magoya.com/ai/constraints.json  <- mínimos, clearspace, safe areas
-https://brand.magoya.com/ai/assets.json       <- los 230 assets con URL directa
+https://brand.magoya.com/ai/assets.json       <- los 230 assets con URL directa + la ficha de cada foto
+https://brand.magoya.com/ai/vectores.md       <- wordmark, avatares, miscelánea e íconos como TEXTO (un .svg por URL puede no llegar)
 https://brand.magoya.com/ai/metodo.md         <- método de trabajo (idea, títulos, pasadas)
 https://brand.magoya.com/ai/precedencia.json  <- quién gana cuando dos reglas chocan + contrato de entrega
 https://brand.magoya.com/.ai/checklist.md     <- chequeos visuales
@@ -47,13 +50,15 @@ https://brand.magoya.com/.ai/verbal/aplicacion.md <- voceros, canales, idioma, r
 
 ## Qué podés hacer al pie de la letra (hoy)
 
-- **Artifacts / HTML / componentes**: fidelidad total — embebé los SVGs reales (fetch + inline) y cargá Manrope desde Google Fonts.
+- **Artifacts / HTML / componentes**: fidelidad total — embebé los SVGs reales inline, tomados de `ai/vectores.md` y cargá Manrope desde Google Fonts.
 - **Claude Code**: cloná o fetcheá el repo directamente (`github.com/magoya/magoya-brand-system`) — ahí está todo el árbol de assets sin manifiesto de por medio. Preset listo: [claude-code-CLAUDE.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/presets/claude-code-CLAUDE.md).
 - **Imágenes**: Claude no genera fotos; arma diagramas y visuales en HTML y SVG ([ayuda de Claude](https://support.claude.com/en/articles/9002504)). Para piezas visuales la salida correcta es HTML/SVG con los assets reales, que es justamente donde la fidelidad es total.
 
 ## Setup (una sola vez, para humanos)
 
-- **Equipo de Magoya**: no hay setup individual. El trabajo de marca se hace en el proyecto oficial de Claude **"Magoya · Marca"**, en la organización de Magoya en claude.ai: pedís acceso a quien lo administra, abrís un chat dentro del proyecto y le das un brief (objetivo, audiencia, canal, idioma, fuente de datos). Otras herramientas no están soportadas para el trabajo del equipo con la marca. Detalle: https://brand.magoya.com/ai.html
+- **Un chat cualquiera**: pegá el link de esta entrada y pedile que siga el flujo. Con Web search activo lee todo desde el sitio.
+- **Un proyecto de Claude** (uno propio, o el del equipo: "Magoya · Marca"): las instrucciones y los archivos quedan cargados, así no depende del fetch. Es una opción, no el único camino.
+- **Design System de Claude**: los logos, los íconos y las fotos van como archivos del sistema, no como assets subidos aparte. Otro artifact puede leer y copiar los archivos de un design system; sus assets, no.
 - **Quien administra el proyecto**: las instrucciones del proyecto son el preset [claude-project-instructions.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/presets/claude-project-instructions.md) (lo que está debajo del separador) y el knowledge son los archivos que lista ese preset. Cuando cambia la marca, se reemplazan los archivos que cambiaron. Con Web search activo, Claude además puede leer esta entrada y el resto del sitio por URL.
 
 ## Agent Skills: el canal que le gana a la URL
@@ -72,6 +77,8 @@ entero en cada conversación.
   decisión abierta en el ledger (`.ai/VALIDACION-IA.md`), no la tomes por tu cuenta.
 
 ## Changelog
+
+- **2.2** (2026-11-17): la marca se consume desde cualquier AI: se retira «el proyecto de Claude es el único camino». Los vectores propios (wordmark, avatares, miscelánea, íconos) pasan a leerse como texto en `ai/vectores.md`, porque un `.svg` pedido por URL no le llega a una AI, y cada foto tiene su ficha en `ai/assets.json`. La entrada pide informar la versión leída: hay fetch que devuelven copias viejas.
 
 - **2.1** (2026-10-29): Magoya Brand Voice Playbook (octubre de 2026, ediciones en español y en inglés): el vocabulario vetado pasa a obligatorio, como lo marca el playbook (la contradicción con la Guía V2 queda como nota para mantenedores en `precedencia.json`); se suma la edición en inglés del sitio (https://brand.magoya.com/en/) para textos en inglés; el manifiesto tiene 230 assets.
 

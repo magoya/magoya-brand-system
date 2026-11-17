@@ -150,6 +150,7 @@ def check_links():
             urls |= set(re.findall(r'https://brand\.magoya\.com/[^\s)\]"\'<>,]+',
                                    io.open(j, encoding='utf-8').read()))
     urls = {u.rstrip('.,;`\'"*') for u in urls}
+    urls = {u.split('?')[0] for u in urls}   # ?v= es la regla de caché del protocolo: no cambia el archivo
     faltan_local = sorted(u for u in urls if not os.path.exists(u[len(BASE):]))
     if faltan_local:
         fallas.append('%d URLs publicadas no tienen archivo en el repo: %s'
@@ -370,8 +371,98 @@ def check_wordmark():
         ok.append('wordmark: %d variantes, todas la misma geometría'
                   % sum(len(x) for x in firmas.values()))
 
+# ─── 10. lo que una AI puede consumir: vectores en texto y fotos con ficha ───
+def check_consumo():
+    """Una AI que lee por link recibe texto, no imágenes (probado el 17 nov 2026: los .svg
+    y los .jpg de brand.magoya.com no llegan por fetch; los .md y .json, sí). Por eso cada
+    vector propio tiene que estar, idéntico, en ai/vectores.md, y cada foto tiene que tener
+    su ficha en assets.json. Si falta uno, esa parte de la marca no se puede consumir."""
+    if not os.path.exists('ai/vectores.md'):
+        fallas.append('falta ai/vectores.md: correr python3 ai/generate.py')
+        return
+    v = io.open('ai/vectores.md', encoding='utf-8').read()
+    propios = (glob.glob('assets/*wordmark*.svg') + glob.glob('assets/avatars/*.svg')
+               + glob.glob('assets/marks/*.svg') + glob.glob('assets/components/*.svg')
+               + glob.glob('assets/favicon/*.svg') + glob.glob('assets/icons/*.svg')
+               + glob.glob('assets/studio/icons/agro/*.svg'))
+    faltan = [f for f in sorted(propios)
+              if io.open(f, encoding='utf-8', errors='ignore').read().strip() not in v]
+    if faltan:
+        fallas.append('%d vectores propios no están (o están distintos) en ai/vectores.md, así que una AI '
+                      'no los puede leer; regenerar con ai/generate.py: %s' % (len(faltan), ', '.join(faltan[:8])))
+    else:
+        ok.append('consumo: los %d vectores propios están como texto en ai/vectores.md (%.0fKB)'
+                  % (len(propios), os.path.getsize('ai/vectores.md') / 1024))
+    con_raster = [f for f in sorted(propios)
+                  if 'base64' in io.open(f, encoding='utf-8', errors='ignore').read()]
+    if con_raster:
+        huecos.append('%d vectores propios traen una imagen embebida adentro del SVG: no son vector puro: %s'
+                      % (len(con_raster), ', '.join(con_raster[:6])))
+    fichas = {x.get('archivo'): x for x in cargar('ai/assets.json').get('fotos', [])}
+    reales = sorted(os.path.basename(f) for f in glob.glob('assets/photos/*') if not os.path.basename(f).startswith('.'))
+    sin = [f for f in reales if not (fichas.get(f) or {}).get('descripcion')]
+    if sin:
+        huecos.append('%d fotos no tienen ficha con descripción en assets.json (sale del alt de su ficha en '
+                      'library.html): una AI no las puede elegir sin verlas: %s' % (len(sin), ', '.join(sin)))
+    else:
+        ok.append('consumo: las %d fotos tienen ficha (medidas, orientación, descripción)' % len(reales))
+    # las tres partes de vectores (modo link) traen, entre todas, los mismos bloques que vectores.md
+    partes = ''.join(io.open(f, encoding='utf-8').read() for f in sorted(glob.glob('ai/vectores/*.md')))
+    faltan_p = [f for f in sorted(propios)
+                if io.open(f, encoding='utf-8', errors='ignore').read().strip() not in partes]
+    if faltan_p:
+        fallas.append('%d vectores propios no están en ai/vectores/*.md (lo que lee una AI por link): %s'
+                      % (len(faltan_p), ', '.join(faltan_p[:8])))
+    # modo link: ningún archivo que el protocolo manda a leer por URL puede pasar los 60 KB,
+    # porque un fetch de AI corta alrededor de los 100.000 caracteres (medido el 17 nov 2026)
+    prot = io.open('ai/protocolo.md', encoding='utf-8').read()
+    t31 = re.search(r'### 3\.1.*?### 3\.2', prot, re.S)
+    pesados = []
+    for u in sorted(set(re.findall(r'https://brand\.magoya\.com/([^\s|·)]+)', t31.group(0) if t31 else ''))):
+        if os.path.isfile(u) and os.path.getsize(u) > 60 * 1024:
+            pesados.append('%s (%dKB)' % (u, os.path.getsize(u) // 1024))
+    if pesados:
+        fallas.append('archivos del modo link que pasan los 60KB y un fetch puede cortar: %s' % ', '.join(pesados))
+    else:
+        ok.append('modo link: ningún archivo de la sección 3.1 del protocolo pasa los 60KB')
+    # el preset de Cursor tiene su gemelo en texto (el .mdc llega como binario por link)
+    if (not os.path.exists('.ai/presets/cursor-rule.mdc.txt')
+            or io.open('.ai/presets/cursor-rule.mdc.txt', 'rb').read() != io.open('.ai/presets/cursor-rule.mdc', 'rb').read()):
+        fallas.append('.ai/presets/cursor-rule.mdc.txt falta o difiere del .mdc: regenerar con ai/generate.py')
+    # la versión del sistema es UNA: es lo que la AI informa y lo que la persona compara
+    vs = {}
+    for f, rx in (('llms.txt', r'Versión del sistema:\s*(\d+\.\d+)'), ('ai/protocolo.md', r'Versión del sistema:\s*(\d+\.\d+)'), ('ai/protocolo.md ?v=', r'se le agrega `\?v=(\d+\.\d+)`'), ('ai.html mensaje', r'ai/protocolo\.md\?v=(\d+\.\d+)'),
+                  ('BRAND.md', r'^# Magoya · Brand System v(\d+\.\d+)'), ('tokens.json', r'"version":\s*"(\d+\.\d+)"')):
+        m = re.search(rx, io.open(f.split(' ')[0], encoding='utf-8').read(), re.M)
+        vs[f] = m.group(1) if m else 'sin versión'
+    if len(set(vs.values())) > 1:
+        fallas.append('la versión del sistema no es la misma en todos lados: %s'
+                      % ', '.join('%s=%s' % kv for kv in sorted(vs.items())))
+    else:
+        ok.append('versión del sistema: %s en llms.txt, el protocolo (título y regla de caché), el mensaje de ai.html, BRAND.md y tokens.json' % list(vs.values())[0])
+    # el kit para cargar trae los mismos bytes que los archivos publicados
+    if os.path.exists('ai/kit.zip'):
+        import zipfile
+        z = zipfile.ZipFile('ai/kit.zip')
+        lista = re.search(r'### 5\.2.*?```\n(.*?)```', io.open('ai/protocolo.md', encoding='utf-8').read(), re.S)
+        esperados = lista.group(1).split() if lista else []
+        viejos = [f for f in esperados if os.path.basename(f) not in z.namelist()
+                  or z.read(os.path.basename(f)) != io.open(f, 'rb').read()]
+        if viejos or len(esperados) != len(z.namelist()):
+            fallas.append('ai/kit.zip no coincide con la lista de la sección 5.2 de ai/protocolo.md; regenerar con '
+                          'ai/generate.py: %s' % ', '.join(viejos[:6]))
+        else:
+            ok.append('kit: ai/kit.zip trae los %d archivos de la sección 5.2, al día' % len(esperados))
+    else:
+        fallas.append('falta ai/kit.zip: correr python3 ai/generate.py')
+    if os.path.exists('.ai/presets/AGENTS.md'):
+        cuerpo = io.open('.ai/presets/copilot-instructions.md', encoding='utf-8').read().split('-->', 1)[1].strip()
+        if cuerpo not in io.open('.ai/presets/AGENTS.md', encoding='utf-8').read():
+            fallas.append('.ai/presets/AGENTS.md se despegó del preset de Copilot: regenerar con ai/generate.py')
+
+
 for fn in (check_pendientes, check_cobertura, check_nomenclatura, check_links,
-           check_peso, check_conteo_assets, check_color, check_wordmark, check_drift):
+           check_peso, check_conteo_assets, check_color, check_wordmark, check_consumo, check_drift):
     try:
         fn()
     except Exception as e:

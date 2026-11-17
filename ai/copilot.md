@@ -1,21 +1,24 @@
 # Magoya Brand — entrada para GitHub Copilot
 
-> **Equipo de Magoya:** para el trabajo de marca, el camino oficial es el proyecto de Claude "Magoya · Marca" (https://brand.magoya.com/ai.html). Esta entrada queda como punto de lectura para cualquier AI.
+> **La marca de Magoya se consume desde cualquier AI.** Esta es una de las entradas y todas leen la misma fuente. El protocolo común (primera respuesta, modo de lectura, assets, instalación, fallas conocidas, contrato de entrega) es https://brand.magoya.com/ai/protocolo.md
 
-**Versión 1.5 · 2026-10-29** · Punto de entrada de la marca Magoya para Copilot. Se versiona por separado de las otras AIs (changelog al pie).
+> **Si sos una AI:** decile a la persona qué versión y qué fecha de esta entrada leíste. Algunos fetch devuelven una copia vieja guardada en caché: si no es la última del changelog publicado, pedí esta misma URL agregándole `?v=` y la fecha de hoy.
+
+**Versión 1.6 · 2026-11-17** · Punto de entrada de la marca Magoya para Copilot. Se versiona por separado de las otras AIs (changelog al pie).
 
 ## Flujo (en este orden)
 
 1. **Instrucciones del repo**: guardá [copilot-instructions.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/presets/copilot-instructions.md) como `.github/copilot-instructions.md` en el proyecto donde trabajás. Si el repo ya tiene un `AGENTS.md` (Copilot lo lee desde agosto de 2025, igual que `CLAUDE.md`), pegá el preset ahí y no dupliques: un solo archivo de instrucciones, el que ya exista.
 2. **Tokens en el código**: bajá https://brand.magoya.com/tokens.css al proyecto — Copilot autocompleta con las custom properties que ve en el árbol.
 3. **Doctrina completa**: https://brand.magoya.com/BRAND.md (Copilot Chat puede leerla si se la pegás o si está en el workspace).
-4. **Assets**: https://brand.magoya.com/ai/assets.json — bajá al repo los SVGs que la UI necesite.
+4. **Assets**: https://brand.magoya.com/ai/assets.json — bajá al repo los SVGs que la UI necesite. Si solo podés pegar texto, el código de cada vector propio está en https://brand.magoya.com/ai/vectores.md.
 5. **Copy de la UI**: bajá al repo [guia-editorial.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/verbal/guia-editorial.md), https://brand.magoya.com/vocabulary.json y [checklist-verbal.md](https://raw.githubusercontent.com/magoya/magoya-brand-system/main/.ai/checklist-verbal.md) — la voz y el vocabulario salen de la Guía editorial V2 (sin cifras ni clientes inventados); la definición, el vocabulario vetado (obligatorio), AI en cualquier idioma (salvo el nombre propio IA en Campo) y el glosario ES/EN/PT, del Magoya Brand Voice Playbook (octubre de 2026). Copy en inglés: edición en inglés del playbook, https://brand.magoya.com/en/ (se escribe nativo, nunca traducido). El preset del punto 1 ya trae lo esencial.
 
 ## Qué podés hacer al pie de la letra (hoy)
 
 - **Autocompletado on-brand**: depende de que tokens.css y los assets estén EN el workspace — Copilot no navega URLs por sí solo. Poner una URL en el archivo de instrucciones **no** la hace leer: el texto entra al contexto, el link no se sigue. Por eso el flujo acá es "bajar al repo" en vez de "fetch en vivo", y es la diferencia con la entrada de Claude.
 - Verificación rápida: pedí un card oscuro en Copilot Chat — tiene que salir `#133825` o `#161616`, sin gradiente.
+- **`AGENTS.md`**: si el repo ya trabaja con ese archivo (lo leen Codex, Cursor, Copilot, Gemini CLI y otros agentes), el preset es https://brand.magoya.com/.ai/presets/AGENTS.md
 
 ## Agent Skills (verificado 2026-09-07)
 
@@ -30,6 +33,8 @@ Magoya no publica una skill**: el canal sigue siendo el preset de instrucciones 
 la advertencia de siempre: una URL escrita en un archivo de instrucciones **no se fetchea sola**.
 
 ## Changelog
+
+- **1.6** (2026-11-17): la marca se consume desde cualquier AI: se retira «el proyecto de Claude es el único camino». Los vectores propios (wordmark, avatares, miscelánea, íconos) pasan a leerse como texto en `ai/vectores.md`, porque un `.svg` pedido por URL no le llega a una AI, y cada foto tiene su ficha en `ai/assets.json`. La entrada pide informar la versión leída: hay fetch que devuelven copias viejas.
 
 - **1.5** (2026-10-29): Magoya Brand Voice Playbook (octubre de 2026, ediciones en español y en inglés): el vocabulario vetado pasa a obligatorio, como lo marca el playbook (la contradicción con la Guía V2 queda como nota para mantenedores en `precedencia.json`), y se suma la edición en inglés del sitio (https://brand.magoya.com/en/) para el copy en inglés.
 

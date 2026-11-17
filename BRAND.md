@@ -1,4 +1,4 @@
-# Magoya · Brand System v1.3
+# Magoya · Brand System v1.4
 
 > Manual de marca en Markdown, pensado para ser consumido por personas y por modelos de AI.
 > Tokens exactos en [`tokens.json`](tokens.json) y [`tokens.css`](tokens.css). Manual visual navegable en [`brand-book.html`](brand-book.html).
